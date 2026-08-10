@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finances &#8211; Let's Drone Out</title>
+<meta name="description" content="LDO's income and running costs, reconstructed from the producers' own spreadsheets and Patreon/AdSense payout records">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0a0a0a;
+    color: #eaeaea;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+  header img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #18c0f0;
+  }
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+  }
+  p.note {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  p.note code {
+    background: #161616;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    padding: 0.05rem 0.35rem;
+    font-size: 0.85em;
+    color: #cfcfcf;
+  }
+  h2.section {
+    color: #18c0f0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 2.5rem 0 1rem;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1px;
+    background: #1c1c1c;
+    border: 1px solid #1c1c1c;
+    border-radius: 6px;
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat {
+    background: #101010;
+    padding: 1.1rem 1.2rem;
+  }
+  .stat .figure {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #eaeaea;
+  }
+  .stat .figure small {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #888;
+  }
+  .stat .label {
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  p {
+    line-height: 1.7;
+    color: #d4d4d4;
+  }
+  .chart {
+    border: 1px solid #1c1c1c;
+    border-radius: 6px;
+    background: #101010;
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  .bar-row {
+    margin-bottom: 1.4rem;
+  }
+  .bar-row:last-child {
+    margin-bottom: 0.25rem;
+  }
+  .bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 0.35rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-label .yr {
+    color: #eaeaea;
+    font-weight: 600;
+  }
+  .bar {
+    display: flex;
+    height: 1.35rem;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #1a1a1a;
+  }
+  .bar span {
+    display: block;
+    height: 100%;
+  }
+  .bar span + span {
+    border-left: 2px solid #101010;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.3rem;
+    margin-top: 1.3rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid #1c1c1c;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  .legend .key {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .legend .swatch {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 2px;
+    flex: none;
+  }
+  .c-editing   { background: #3987e5; }
+  .c-domain    { background: #d95926; }
+  .c-website   { background: #199e70; }
+  .c-podcast   { background: #c98500; }
+  .c-recording { background: #d55181; }
+  .c-giveaway  { background: #008300; }
+  .c-other     { background: #9085e9; }
+  .c-patreon   { background: #3987e5; }
+  .c-adsense   { background: #e66767; }
+  .c-direct    { background-image: repeating-linear-gradient(45deg, #7a7a76 0, #7a7a76 4px, #57564f 4px, #57564f 8px); }
+
+  .bar-line .bar.big {
+    height: 2rem;
+  }
+
+  .line-chart {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .line-chart .grid {
+    stroke: #1e1e1e;
+    stroke-width: 1;
+  }
+  .line-chart .axis-label {
+    fill: #777;
+    font-size: 9px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .line-chart .series-income {
+    fill: none;
+    stroke: #3987e5;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .line-chart .series-expenditure {
+    fill: none;
+    stroke: #d95926;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 5 4;
+  }
+  .line-chart .series-balance {
+    fill: none;
+    stroke: #199e70;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 5 4;
+  }
+  .line-chart .marker {
+    fill: #101010;
+  }
+  .line-chart .marker-exp { stroke: #d95926; stroke-width: 2; }
+  .line-chart .marker-bal { stroke: #199e70; stroke-width: 2; }
+  .line-chart .marker-end {
+    fill: #18c0f0;
+    stroke: #101010;
+    stroke-width: 2;
+  }
+  .line-chart .callout-text {
+    fill: #ccc;
+    font-size: 9.5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .line-chart .callout-text.accent { fill: #18c0f0; font-weight: 600; }
+  .chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.3rem;
+    margin-top: 0.6rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1c1c1c;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  .chart-legend .key {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .chart-legend .swatch-line {
+    width: 1.1rem;
+    height: 0;
+    border-top-width: 2px;
+    border-top-style: solid;
+  }
+  .chart-block {
+    margin-top: 1rem;
+  }
+  .chart-block + .chart-block {
+    margin-top: 1.75rem;
+  }
+  .chart-block h3 {
+    margin: 0 0 0.4rem;
+    font-size: 0.9rem;
+    color: #eaeaea;
+  }
+
+  .axis-row, .bar-line {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .axis-row {
+    margin-bottom: 0.6rem;
+  }
+  .bar-tag {
+    font-size: 0.72rem;
+    color: #888;
+    text-align: right;
+  }
+  .axis-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #666;
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-track {
+    background-image: repeating-linear-gradient(to right, #1e1e1e 0, #1e1e1e 1px, transparent 1px, transparent 25%);
+  }
+  .year-block {
+    margin-top: 1.5rem;
+  }
+  .year-block:first-of-type {
+    margin-top: 0.3rem;
+  }
+  .year-heading {
+    margin-bottom: 0.4rem;
+  }
+  .year-heading .yr {
+    color: #eaeaea;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .bar-line .bar {
+    height: 1.15rem;
+    border-radius: 3px;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+  }
+  .bar-line + .bar-line {
+    margin-top: 0.3rem;
+  }
+  .income-fill {
+    display: block;
+    height: 100%;
+    background: #18c0f0;
+  }
+  .bar-note {
+    margin: 0.35rem 0 0 6.6rem;
+    font-size: 0.75rem;
+    color: #888;
+  }
+
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+  table.data th, table.data td {
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid #1c1c1c;
+    text-align: right;
+    white-space: nowrap;
+  }
+  table.data th:first-child, table.data td:first-child {
+    text-align: left;
+    color: #d4d4d4;
+  }
+  table.data th {
+    color: #777;
+    font-weight: normal;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  table.data tr.total td {
+    color: #eaeaea;
+    font-weight: 600;
+    border-top: 1px solid #333;
+  }
+  table.data caption {
+    caption-side: top;
+    text-align: left;
+    color: #999;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+  }
+  .wrap-table {
+    overflow-x: auto;
+  }
+  .callout {
+    border: 1px solid #1c1c1c;
+    border-left: 3px solid #18c0f0;
+    border-radius: 4px;
+    background: #101010;
+    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  .callout p {
+    margin: 0.3rem 0;
+  }
+  .fine {
+    color: #777;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .anchor {
+    margin-top: 2.5rem;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #131313, #101010);
+    padding: 1.5rem 1.75rem;
+    text-align: center;
+  }
+  .anchor .figure {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #18c0f0;
+    font-variant-numeric: tabular-nums;
+  }
+  .anchor .label {
+    color: #999;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+  a { color: #18c0f0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .back {
+    display: inline-block;
+    margin-top: 2.5rem;
+    color: #18c0f0;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Let's Drone Out logo">
+    <h1>Let's Drone Out</h1>
+  </header>
+  <main>
+    <p class="note">Reconstructed from the producers' own running-cost spreadsheets plus the Patreon/AdSense creator-payout records.</p>
+    <h2 class="section">Lifetime Income &amp; Expenditure</h2>
+    <p>Streamyard was used from 22 Aug 2019, but had been enshittified by 2025.</p>
+
+    <div class="chart chart-block">
+      <h3>Income &#8211; $16,081 total</h3>
+      <div class="bar-line">
+        <span class="bar-tag"></span>
+        <div class="bar-track"><div class="bar big">
+          <span class="c-patreon" style="width:64.58%" title="Patreon, transferred to bank: $10,385 (64.6%)"></span><span class="c-adsense" style="width:7.43%" title="AdSense, one lump payment: $1,196 (7.4%)"></span><span class="c-direct" style="width:27.99%" title="Direct payments (sponsors/listeners/hosts, implied): $4,501 (28.0%)"></span>
+        </div></div>
+      </div>
+      <div class="legend">
+        <span class="key"><span class="swatch c-patreon"></span>Patreon &#8211; $10,385</span>
+        <span class="key"><span class="swatch c-adsense"></span>AdSense &#8211; $1,196</span>
+        <span class="key"><span class="swatch c-direct"></span>Direct donations &#8211; $4,501</span>
+      </div>
+    </div>
+
+    <div class="chart chart-block">
+      <h3>Expenditure &#8211; $16,081 total</h3>
+      <div class="bar-line">
+        <span class="bar-tag"></span>
+        <div class="bar-track"><div class="bar big">
+          <span class="c-editing" style="width:60.43%" title="Editing: $9,718"></span><span class="c-recording" style="width:11.33%" title="Online recording: $1,822"></span><span class="c-other" style="width:9.58%" title="Licenses, Storage &amp; Kit: $1,541"></span><span class="c-website" style="width:7.59%" title="Website hosting: $1,221"></span><span class="c-podcast" style="width:6.93%" title="Podcast hosting: $1,115"></span><span class="c-giveaway" style="width:2.66%" title="Giveaways/SFX: $428"></span><span class="c-domain" style="width:1.47%" title="Web domain: $236"></span>
+        </div></div>
+      </div>
+      <div class="legend">
+        <span class="key"><span class="swatch c-editing"></span>Editing &#8211; $9,718</span>
+        <span class="key"><span class="swatch c-recording"></span>Online recording &#8211; $1,822</span>
+        <span class="key"><span class="swatch c-other"></span>Licenses &amp; Equipment &#8211; $1,541</span>
+        <span class="key"><span class="swatch c-website"></span>Website hosting &#8211; $1,221</span>
+        <span class="key"><span class="swatch c-podcast"></span>Podcast hosting &#8211; $1,115</span>
+        <span class="key"><span class="swatch c-giveaway"></span>Giveaways/SFX &#8211; $428</span>
+        <span class="key"><span class="swatch c-domain"></span>Web domain &#8211; $236</span>
+      </div>
+    </div>
+    <p class="fine"><strong>Licenses &amp; Equipment</strong> &#8211;: Patreon's own platform/processing fee, Google One (cloud storage for edits etc), occasionaly equipment replacement.</p>
+    <p class="fine">Editing started being paid 7 May 2016. Online recording (Streamyard) started being paid 22 Aug 2019 and ballooned in cost.</p>
+
+    <div class="chart chart-block">
+      <h3>Cash balance</h3>
+      <svg class="line-chart" viewBox="0 0 640 190" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Line chart of LDO's cash reserve, from $0 at the pilot episode in September 2015 to $0 again on 14 August 2025, dipping negative in early 2016 and peaking around $700 in 2017">
+        <line class="grid" x1="52" y1="166.0" x2="630" y2="166.0"></line>
+        <line class="grid" x1="52" y1="134.8" x2="630" y2="134.8"></line>
+        <line class="grid" x1="52" y1="103.6" x2="630" y2="103.6"></line>
+        <line class="grid" x1="52" y1="72.4" x2="630" y2="72.4"></line>
+        <line class="grid" x1="52" y1="41.2" x2="630" y2="41.2"></line>
+        <line class="grid" x1="52" y1="10" x2="630" y2="10"></line>
+        <text class="axis-label" x="0" y="169">&#8722;$200</text>
+        <text class="axis-label" x="14" y="138">$0</text>
+        <text class="axis-label" x="4" y="107">$200</text>
+        <text class="axis-label" x="4" y="75">$400</text>
+        <text class="axis-label" x="4" y="44">$600</text>
+        <text class="axis-label" x="4" y="13">$800</text>
+        <line class="grid" x1="80.4" y1="10" x2="80.4" y2="166"></line>
+        <line class="grid" x1="193.2" y1="10" x2="193.2" y2="166"></line>
+        <line class="grid" x1="305.9" y1="10" x2="305.9" y2="166"></line>
+        <line class="grid" x1="418.7" y1="10" x2="418.7" y2="166"></line>
+        <line class="grid" x1="531.4" y1="10" x2="531.4" y2="166"></line>
+        <text class="axis-label" x="74" y="182">2016</text>
+        <text class="axis-label" x="187" y="182">2018</text>
+        <text class="axis-label" x="300" y="182">2020</text>
+        <text class="axis-label" x="412" y="182">2022</text>
+        <text class="axis-label" x="525" y="182">2024</text>
+
+        <polyline class="series-balance" points="61.9,134.8 87.3,150.4 162.4,25.6 270.5,57.6 357.0,88.0 387.8,88.0 529.7,133.1 622.6,134.8"></polyline>
+
+        <circle class="marker marker-bal" cx="61.9" cy="134.8" r="3.5"><title>3 Sep 2015 (pilot episode): $0.00</title></circle>
+        <circle class="marker marker-bal" cx="87.3" cy="150.4" r="3.5"><title>~Feb 2016: &#8722;$100.00</title></circle>
+        <circle class="marker marker-bal" cx="162.4" cy="25.6" r="3.5"><title>~2017: $700.00</title></circle>
+        <circle class="marker marker-bal" cx="270.5" cy="57.6" r="3.5"><title>17 May 2019: $494.71</title></circle>
+        <circle class="marker marker-bal" cx="357.0" cy="88.0" r="3.5"><title>27 Nov 2020: $300.00</title></circle>
+        <circle class="marker marker-bal" cx="387.8" cy="88.0" r="3.5"><title>2021: $300.00</title></circle>
+        <circle class="marker marker-bal" cx="529.7" cy="133.1" r="3.5"><title>21 Dec 2023: $10.97</title></circle>
+        <circle class="marker-end" cx="622.6" cy="134.8" r="5"><title>14 Aug 2025: $0.00 &#8211; cash at bank/in hand hit zero</title></circle>
+
+        <text class="callout-text accent" x="535" y="120">$0 &#8211; 14 Aug 2025</text>
+      </svg>
+    </div>
+
+    <div class="callout">
+      <p><strong>Giveaways/SFX &#8211; superchat-funded fireworks</strong></p>
+      <p class="fine">The superchat tiers of fireworks, stickers and badges had giveaway costs: blue ($2) through magenta ($100) tiers, against unit costs for the on-air effects it funded &#8211; party poppers (&pound;0.13), mini sparklers (&pound;0.24), a cake fountain (&pound;0.44), a giant party popper (&pound;2.00), candles (&pound;0.16).</p>
+    </div>
+
+    <a class="back" href="index.html">&larr; Back</a>
+  </main>
+</body>
+</html>

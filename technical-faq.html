@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technical FAQ &#8211; Let's Drone Out</title>
+<meta name="description" content="What LDO's producers had to prep every guest for, back before Zoom and Teams made this second nature">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0a0a0a;
+    color: #eaeaea;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+  header img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #18c0f0;
+  }
+  main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+  }
+  p.note {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  p.note code {
+    background: #161616;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    padding: 0.05rem 0.35rem;
+    font-size: 0.85em;
+    color: #cfcfcf;
+  }
+  .doc {
+    margin-top: 2rem;
+    border: 1px solid #222;
+    border-radius: 6px;
+    background: #101010;
+    padding: 2rem 2.25rem;
+  }
+  .doc h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.4rem;
+    color: #eaeaea;
+  }
+  .doc .meta {
+    color: #777;
+    font-size: 0.85rem;
+    margin: 0 0 1.75rem;
+  }
+  .doc p {
+    line-height: 1.65;
+    margin: 0.4rem 0;
+    color: #d4d4d4;
+  }
+  .doc p.placeholder {
+    color: #666;
+    font-style: italic;
+  }
+  .doc ul {
+    margin: 0.4rem 0;
+    padding-left: 1.3rem;
+    line-height: 1.65;
+    color: #d4d4d4;
+  }
+  .doc ol.checklist {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: item;
+    margin: 0.75rem 0 0;
+  }
+  .doc ol.checklist > li {
+    counter-increment: item;
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #181818;
+  }
+  .doc ol.checklist > li::before {
+    content: counter(item) ".";
+    color: #555;
+    font-variant-numeric: tabular-nums;
+    flex: none;
+    width: 1.2rem;
+  }
+  .doc ol.checklist > li .box {
+    margin-left: auto;
+    flex: none;
+    color: #444;
+  }
+  .doc a {
+    color: #18c0f0;
+    text-decoration: none;
+  }
+  .doc a:hover {
+    text-decoration: underline;
+  }
+  .subhead {
+    color: #999;
+    font-size: 0.85rem;
+    margin: 0.5rem 0 0.75rem;
+  }
+  details {
+    margin-top: 0.5rem;
+    border-top: 1px solid #181818;
+    padding-top: 0.75rem;
+  }
+  details + details {
+    margin-top: 0;
+  }
+  summary {
+    cursor: pointer;
+    color: #cfcfcf;
+    font-weight: 600;
+    padding: 0.25rem 0;
+  }
+  summary::marker {
+    color: #18c0f0;
+  }
+  details[open] summary {
+    margin-bottom: 0.5rem;
+  }
+  .back {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #18c0f0;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Let's Drone Out logo">
+    <h1>Let's Drone Out</h1>
+  </header>
+  <main>
+    <p class="note">This is what the producers had to walk every guest through before each show, back in the years before Zoom and Teams had made webcams, headsets and home internet second nature to everyone. Reproduced as-is from the show-notes template, sent ahead of each episode so guests could prep rather than troubleshoot live on air.</p>
+
+    <article class="doc">
+      <h2>Technical FAQ</h2>
+      <p class="meta">from the weekly show-notes template</p>
+
+      <p>You can test your setup at any time using the sandbox link below. The link is for <strong>testing purposes only</strong> &#8211; the real show link was sent separately.</p>
+      <p><em>Test only</em> &#8211; <span class="placeholder">https://streamyard.com/&#8230;</span> &#8211; <em>test only</em></p>
+
+      <p class="subhead" style="margin-top:1.5rem;">Pre-broadcast checklist</p>
+      <p>Headline areas to have in order before joining &#8211; details on each below.</p>
+      <ol class="checklist">
+        <li>Details &#8211; timings understood, link and procedure clear <span class="box">&#9744;</span></li>
+        <li>Power &#8211; all fully charged, plugged in, trailing leads secure <span class="box">&#9744;</span></li>
+        <li>Internet &#8211; connected, low latency, low jitter <span class="box">&#9744;</span></li>
+        <li>Noise &#8211; speakers muted, phone on silent, 3D printer paused etc. <span class="box">&#9744;</span></li>
+        <li>Lighting &#8211; direct lights off, camera shielded from sunlight, face well lit <span class="box">&#9744;</span></li>
+        <li>Sound &#8211; headphones/earphones at a suitable level, correct device selected <span class="box">&#9744;</span></li>
+        <li>Mic &#8211; located and oriented correctly, connected, selected, levels checked <span class="box">&#9744;</span></li>
+        <li>Camera &#8211; located and oriented correctly, connected, selected, working <span class="box">&#9744;</span></li>
+        <li>Call / software &#8211; correct audio and video devices selected, levels good <span class="box">&#9744;</span></li>
+        <li>Showtime &#8211; join the call! <span class="box">&#9744;</span></li>
+      </ol>
+
+      <details>
+        <summary>Power</summary>
+        <ul>
+          <li>Make sure all devices are securely plugged in &#8211; e.g. loose kettle leads can work their way out mid-stream!</li>
+          <li>Keep trailing cables secured and out the way, so you don&#8217;t run over one with your chair, or snag a mic stand with a wild gesture.</li>
+          <li>Even on mains power, keeping devices charged buys you time to fix a problem if one comes up.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Internet</summary>
+        <ul>
+          <li>A wired ethernet connection is safest &#8211; but check ping, jitter and upload at different times of day.</li>
+          <li>WiFi can work, but a weaker signal is worse &#8211; walls and people between you and the access point hurt. Test it in the exact position/orientation you&#8217;ll use on the day, with as clear a line of sight as possible.</li>
+          <li><strong>Do not use 4G</strong> unless you&#8217;ve spoken to your provider specifically &#8211; a hotspot can work for short calls, but providers are likely to throttle or lock the SIM without a contract for extended high-speed upload.</li>
+        </ul>
+        <p>For all connections, make sure nothing else is competing for bandwidth while you stream &#8211; a family member&#8217;s smart TV, or a work PC backing up to a remote server.</p>
+        <p>For testing internet speed: <a href="https://www.structuredcommunications.co.uk/internet-solutions/speed-test/" target="_blank" rel="noopener">structuredcommunications.co.uk speed test</a></p>
+        <p>The important numbers:</p>
+        <ul>
+          <li>Ping &#8211; below 100ms, ideally below 50ms</li>
+          <li>Jitter &#8211; below 50ms, ideally below 30ms</li>
+          <li>Download &#8211; at least 2Mbps, ideally above 4Mbps</li>
+          <li>Upload &#8211; at least 2Mbps, ideally above 8Mbps</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Speakers</summary>
+        <ul>
+          <li>Headsets are simplest, unless you already have a good mic.</li>
+          <li>Headphones are more comfortable over long periods; earphones work fine too.</li>
+          <li>Wireless (e.g. bluetooth earbuds) risks running flat or dropping connection at the worst moment &#8211; but may beat whatever mic you&#8217;d use otherwise.</li>
+          <li>Echo-cancelling setups can be okay, but can noise-gate your speech &#8211; and more than one on the same call can cause unexpected problems.</li>
+        </ul>
+        <p>Have a backup device to hand, and know your devices&#8217; names so you can pick the right one from the list.</p>
+      </details>
+
+      <details>
+        <summary>Mic</summary>
+        <ul>
+          <li>Headsets are simplest, unless you already have a good mic you&#8217;re comfortable with.</li>
+          <li>Lav/lapel mics stay a consistent distance from your mouth, but can pick up noise if you fidget.</li>
+          <li>Desk mics can sound best, but need attention to distance/orientation &#8211; and pick up cable hum, desk shock, wind noise, plosives, sibilance.</li>
+          <li>Wireless devices risk running flat or dropping connection &#8211; fine if you respect their range and battery life.</li>
+          <li>Built-in laptop mics are an okay last resort, but echo cancellation can noise-gate your speech.</li>
+        </ul>
+        <p>Have a backup, practice switching devices, and check levels and position. Keep the room quiet &#8211; close the door to pets, warn the household, close windows, phone on vibrate <strong>not on a hard surface</strong>, TVs and hi-fis off.</p>
+      </details>
+
+      <details>
+        <summary>Camera</summary>
+        <ul>
+          <li>External USB webcams work best.</li>
+          <li>Some of the cheapest action cameras (not GoPros) work well as webcams via USB in PC Camera mode.</li>
+          <li>Smartphones can work well as external cameras &#8211; <a href="https://youtu.be/ebptyVvDtE8?t=571" target="_blank" rel="noopener">example</a>.</li>
+          <li>Integrated webcams can do a good job if you light yourself well &#8211; not your room!</li>
+        </ul>
+        <p>Aim for roughly even lighting so your face isn&#8217;t much darker or brighter than the background, no glare from direct lights, camera near eye level. Clean the lens.</p>
+      </details>
+
+      <details>
+        <summary>Call / Software</summary>
+        <ul>
+          <li>A broadcast-specific, browser-based call system &#8211; nothing to install or log in to.</li>
+          <li>Chrome or Firefox work best.</li>
+          <li>You&#8217;ll be asked for a display name &#8211; this is public, and usually how we&#8217;ll address you live.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Showtime</summary>
+        <ul>
+          <li>Don&#8217;t panic! If something goes wrong, stay calm, let us know, and we&#8217;ll help.</li>
+          <li>Live chat only works if you&#8217;re logged into YouTube.</li>
+          <li>Don&#8217;t open the stream link in another tab or on another device!</li>
+        </ul>
+      </details>
+    </article>
+
+    <a class="back" href="index.html">&larr; Back</a>
+  </main>
+</body>
+</html>
