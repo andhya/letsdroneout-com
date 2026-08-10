@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Finances &#8211; Let's Drone Out</title>
-<meta name="description" content="LDO's income and running costs, reconstructed from the producers' own spreadsheets and Patreon/AdSense payout records">
+<meta name="description" content="LDO's income and running costs, reconstructed from the producers' own spreadsheets and Patreon/YouTube payout records">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
 <style>
   body {
@@ -146,16 +146,19 @@
     border-radius: 2px;
     flex: none;
   }
-  .c-editing   { background: #3987e5; }
-  .c-domain    { background: #d95926; }
-  .c-website   { background: #199e70; }
-  .c-podcast   { background: #c98500; }
-  .c-recording { background: #d55181; }
-  .c-giveaway  { background: #008300; }
-  .c-other     { background: #9085e9; }
-  .c-patreon   { background: #3987e5; }
-  .c-adsense   { background: #e66767; }
-  .c-direct    { background-image: repeating-linear-gradient(45deg, #7a7a76 0, #7a7a76 4px, #57564f 4px, #57564f 8px); }
+  /* expenditure: carrot -> carrot cake (icing), in bar order */
+  .c-editing    { background: #f4791f; }
+  .c-recording  { background: #f58a3b; }
+  .c-other      { background: #f69b58; }
+  .c-website    { background: #f7ac74; }
+  .c-podcast    { background: #f7bd91; }
+  .c-giveaway   { background: #f8cead; }
+  .c-domain     { background: #f9dfca; }
+  .c-equipment  { background: #faf0e6; }
+  /* income: LDO cyan -> duck-egg blue, in bar order (largest to smallest) */
+  .c-patreon   { background: #18c0f0; }
+  .c-direct    { background: #74d4e9; }
+  .c-youtube   { background: #cfe8e2; }
 
   .bar-line .bar.big {
     height: 2rem;
@@ -399,22 +402,22 @@
     <h1>Let's Drone Out</h1>
   </header>
   <main>
-    <p class="note">Reconstructed from the producers' own running-cost spreadsheets plus the Patreon/AdSense creator-payout records.</p>
+    <p class="note">Reconstructed from the producers' own running-cost spreadsheets plus the Patreon/YouTube creator-payout records.</p>
     <h2 class="section">Lifetime Income &amp; Expenditure</h2>
-    <p>Streamyard was used from 22 Aug 2019, but had been enshittified by 2025.</p>
+    <p>Ultimately, finances were neither the driving nor the limiting factor of LDO - but are laid out here for all to see.</p>
 
     <div class="chart chart-block">
-      <h3>Income &#8211; $16,081 total</h3>
+      <h3>Net Income &#8211; $16,081 total</h3>
       <div class="bar-line">
         <span class="bar-tag"></span>
         <div class="bar-track"><div class="bar big">
-          <span class="c-patreon" style="width:64.58%" title="Patreon, transferred to bank: $10,385 (64.6%)"></span><span class="c-adsense" style="width:7.43%" title="AdSense, one lump payment: $1,196 (7.4%)"></span><span class="c-direct" style="width:27.99%" title="Direct payments (sponsors/listeners/hosts, implied): $4,501 (28.0%)"></span>
+          <span class="c-patreon" style="width:64.58%" title="Patreon, transferred to bank: $10,385 (64.6%)"></span><span class="c-direct" style="width:27.99%" title="Direct payments (sponsors/listeners/hosts, implied): $4,501 (28.0%)"></span><span class="c-youtube" style="width:7.43%" title="YouTube (AdSense), one lump payment: $1,196 (7.4%)"></span>
         </div></div>
       </div>
       <div class="legend">
         <span class="key"><span class="swatch c-patreon"></span>Patreon &#8211; $10,385</span>
-        <span class="key"><span class="swatch c-adsense"></span>AdSense &#8211; $1,196</span>
         <span class="key"><span class="swatch c-direct"></span>Direct donations &#8211; $4,501</span>
+        <span class="key"><span class="swatch c-youtube"></span>YouTube &#8211; $1,196</span>
       </div>
     </div>
 
@@ -423,20 +426,21 @@
       <div class="bar-line">
         <span class="bar-tag"></span>
         <div class="bar-track"><div class="bar big">
-          <span class="c-editing" style="width:60.43%" title="Editing: $9,718"></span><span class="c-recording" style="width:11.33%" title="Online recording: $1,822"></span><span class="c-other" style="width:9.58%" title="Licenses, Storage &amp; Kit: $1,541"></span><span class="c-website" style="width:7.59%" title="Website hosting: $1,221"></span><span class="c-podcast" style="width:6.93%" title="Podcast hosting: $1,115"></span><span class="c-giveaway" style="width:2.66%" title="Giveaways/SFX: $428"></span><span class="c-domain" style="width:1.47%" title="Web domain: $236"></span>
+          <span class="c-editing" style="width:60.43%" title="Editing: $9,718"></span><span class="c-recording" style="width:11.33%" title="Online recording: $1,822"></span><span class="c-other" style="width:9.02%" title="Licenses: $1,451"></span><span class="c-website" style="width:7.59%" title="Website hosting: $1,221"></span><span class="c-podcast" style="width:6.93%" title="Podcast hosting: $1,115"></span><span class="c-giveaway" style="width:2.66%" title="Giveaways/SFX: $428"></span><span class="c-domain" style="width:1.47%" title="Web domain: $236"></span><span class="c-equipment" style="width:0.56%" title="Equipment: $90"></span>
         </div></div>
       </div>
       <div class="legend">
         <span class="key"><span class="swatch c-editing"></span>Editing &#8211; $9,718</span>
         <span class="key"><span class="swatch c-recording"></span>Online recording &#8211; $1,822</span>
-        <span class="key"><span class="swatch c-other"></span>Licenses &amp; Equipment &#8211; $1,541</span>
+        <span class="key"><span class="swatch c-other"></span>Licenses &#8211; $1,451</span>
         <span class="key"><span class="swatch c-website"></span>Website hosting &#8211; $1,221</span>
         <span class="key"><span class="swatch c-podcast"></span>Podcast hosting &#8211; $1,115</span>
         <span class="key"><span class="swatch c-giveaway"></span>Giveaways/SFX &#8211; $428</span>
         <span class="key"><span class="swatch c-domain"></span>Web domain &#8211; $236</span>
+        <span class="key"><span class="swatch c-equipment"></span>Equipment &#8211; $90</span>
       </div>
     </div>
-    <p class="fine"><strong>Licenses &amp; Equipment</strong> &#8211;: Patreon's own platform/processing fee, Google One (cloud storage for edits etc), occasionaly equipment replacement.</p>
+    <p class="fine"><strong>Licenses</strong> &#8211; Patreon's own platform/processing fee, PayPal fees, AdSense fees, Google One (cloud storage for edits etc). <strong>Equipment</strong> is some recording gear from the early days.</p>
     <p class="fine">Editing started being paid 7 May 2016. Online recording (Streamyard) started being paid 22 Aug 2019 and ballooned in cost.</p>
 
     <div class="chart chart-block">
