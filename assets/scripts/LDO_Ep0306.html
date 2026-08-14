@@ -1,0 +1,1062 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0306—LDO Ep306 - Belrik &amp; the Protocols</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 306 ===
+Title: LDO Ep306 - Belrik &amp; the Protocols
+Recorded: 2021-07-08
+Hosts: Stephen &quot;Belrik&quot; Howell, Andrew &quot;Frank&quot; Hyams, Wayne &quot;CurryKitten&quot; Andrews, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): (none recorded)
+Total audience: 2,466
+Platforms: YouTube (https://www.youtube.com/watch?v=mXwoRhK7ZnE); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1084698172-letsdroneout-ldo-ep306-belrik-the-protocols.mp3)
+=====================================
+
+Belrik is https://youtube.com/user/ShinyVideoStuff
+
+[23.41] Curry: Hello and welcome back to another wonderful episode of Let&#x27;s Drone Out.
+[58.06] Jack: Tonight we are joined by our Lord of Master Andrew-Frank.
+[62.74] Jack: Good evening.
+[63.74] UNKNOWN: My little Tony.
+[65.74] UNKNOWN: Bonjour.
+[66.74] Jack: Everyone&#x27;s favourite curry kitten.
+[69.7] Jack: Hello.
+[70.94] Jack: The man with all the protocols, Stephen slash Bellrick.
+[75.78] Jack: Hello.
+[76.78] Jack: And I brighten till I fly.
+[80.3] Jack: Hello.
+[81.3] Jack: Welcome to the show.
+[82.3] UNKNOWN: Frank, did you line this one up?
+[84.78] Jack: Yeah, yeah.
+[85.78] Frank: So we&#x27;ve all been regurgitating stuff that we&#x27;ve heard about various bits of radio protocols
+[91.1] Frank: and technology and transmitters and things.
+[94.74] Frank: And we don&#x27;t know any about it ourselves because we haven&#x27;t had our hands on the stuff.
+[100.22] Frank: We&#x27;ve just been regurgitating what we&#x27;ve heard.
+[103.98] Frank: But Bellrick on the LDO Discord, link in the description below, has had his hands on
+[111.94] Frank: some of this technology and told us we&#x27;re idiots and that he knows better.
+[118.34] Frank: So we&#x27;ve got him on today to put us straight on some things that have been around.
+[125.78] Curry: Calling us idiots is always hilarious.
+[126.78] Curry: Always true of 90% of the population.
+[127.78] Curry: You guys aren&#x27;t idiots at all.
+[133.06] Stephen: But there are a couple of misconceptions that are thrown around.
+[138.54] Stephen: One of those misconceptions is about crossfire shots because crossfire shot isn&#x27;t really
+[143.98] Stephen: a protocol, right?
+[145.7] Stephen: Crossfire shot is a bug fix that allows the mixer to be in sync with your module.
+[152.98] Stephen: So it&#x27;s called crossfire shot due to a snappy bit of TBS marketing.
+[157.3] Stephen: And hey, as well, I&#x27;ve got all the tracer kit, some of them behind me, you can see I&#x27;ve
+[161.38] Stephen: lined up all the kind of low latency kit that I&#x27;ve set up.
+[165.22] Stephen: So these quads are all the ones I&#x27;ve set up with tracer and we&#x27;ve got ELRS there as well.
+[168.98] Stephen: I think the one on the end, the dead cap on mirrors.
+[174.1] Stephen: On that side, that&#x27;s actually SBUS fast-forward one with the DJI remote.
+[180.46] Stephen: But yeah, the idea was to get the mixer, which is the stuff that&#x27;s reading your gimbals,
+[187.02] Stephen: performing the calculations and outputting your radio channels, to get the data send
+[191.38] Stephen: of that in sync with the data receive of your TX.
+[197.54] Stephen: And previously, they were both just flailing around randomly in the air.
+[203.18] Stephen: And they&#x27;d link up and if you&#x27;re lucky, you&#x27;d get data sending on one side at the same time
+[208.58] Stephen: as the other one was receiving and your data would be of a predictable latency.
+[213.74] Stephen: But more often than not, one was ready to send when the other wasn&#x27;t ready to receive
+[218.48] Stephen: or the other one&#x27;s waiting to receive and the other one doesn&#x27;t have any data yet.
+[222.58] Stephen: And this causes jitter, which is in many ways far worse than latency because at least latency
+[227.98] Stephen: you can calculate for and you can work around.
+[231.06] Stephen: But jitter, if your commands are arriving, some sooner, some later, that really messes
+[238.14] Stephen: with any sort of filtering that you might want to do and you have to have a nice big
+[242.02] Stephen: lag to make up for the variable latency so you can process it out.
+[245.74] Stephen: So that just kind of causes problems for beta flight and everyone else.
+[251.22] Stephen: So the idea with Crossfire Shot or Mixer Sync, as it&#x27;s more properly known, is to pack it
+[258.54] Stephen: so that the mixer sends data when the module is ready to receive data and as fast as possible
+[265.18] Stephen: as well, remove some of the sort of latency that&#x27;s acceptable when you&#x27;re messing around
+[269.66] Stephen: with FrSky systems in the D8 era.
+[273.22] Stephen: That seemed great.
+[274.22] Stephen: Like, oh, we can do it in under 30 milliseconds, fine, don&#x27;t worry about it, it&#x27;s fine.
+[278.34] Stephen: But you move into an era where even FrSky is targeting like 15 milliseconds and all
+[283.94] Stephen: of a sudden some of those inconsistencies and wasted time in the code really makes a
+[291.14] Stephen: difference.
+[292.14] Stephen: So it&#x27;s tightening up that.
+[293.14] Stephen: And we see that going from V2 to now V3, they&#x27;ve taken that idea and tried to remove some of
+[298.78] Stephen: the useless functionality and remove jitter and latency even further.
+[302.7] Stephen: And also to give you an extra bit of precision, the V3 is going to take you from 10-bit values
+[309.32] Stephen: up to 11-bit values.
+[310.98] Stephen: So the sampling rate, if anyone remembers good old Nyquist theorem and all this crap,
+[316.98] Stephen: the sampling rate, the amount of resolution you give describes the number of possible
+[322.22] Stephen: levels.
+[323.26] Stephen: So you can sample as fast as you want, but if you&#x27;ve only got a certain number of steps
+[327.2] Stephen: you can go in, that&#x27;s going to introduce stepping in your response.
+[329.84] Stephen: And by the sound of it, there was actually a fair bit of averaging this out and moving
+[335.2] Stephen: it from one scale to another scale that was introducing a lot of fudge to the actual value
+[340.42] Stephen: of your gimbals as beta flight was reading them.
+[343.82] Stephen: So not only are they accelerating this and removing jitter, but they&#x27;re also adding some
+[348.32] Stephen: precision to the signal.
+[349.64] Stephen: So that range between 1,000 and 2,000 can be more cleanly read by beta flight than it
+[357.48] Stephen: was before when it was going through a little bit of fudging and losing some precision.
+[364.04] Frank: For us, our Williams, will we be able to feel any of this?
+[369.4] UNKNOWN: I definitely felt the latency change.
+[371.96] Stephen: You can feel some of it going from something like an XM plus to Tracer.
+[377.52] Stephen: That was noticeable, definitely.
+[380.32] Stephen: Especially the small stuff, if you fly micros like two and a half or three inch and you
+[384.6] Stephen: fly them near obstacles, you can definitely feel a difference.
+[387.84] Stephen: If you&#x27;re just cruising around, maybe not, but you take some quite aggressively set up
+[393.56] Stephen: a little two and a half inch quad and thrash it round to a couple of trees and you can
+[397.94] Stephen: definitely feel a difference.
+[399.44] UNKNOWN: It&#x27;s interesting because I really felt the difference going to crossfire prior to crossfire
+[406.2] Curry: shot over asbestos anyway.
+[408.32] Curry: I was going to ask, how are they doing the, I&#x27;m ready to receive, send me some packets.
+[413.64] Curry: Is it actually like a protocol that&#x27;s, because it sounds a bit like they were on UDP and
+[418.96] Curry: they&#x27;ve gone to TCP in networking terms, but is it just the fact that they&#x27;re like, OK,
+[423.6] Curry: I&#x27;m agreeing that you&#x27;re going to send stuff every X millisecond and I&#x27;m going to be ready
+[427.8] Curry: to receive every X milliseconds?
+[429.2] Curry: Or is it like a connection based protocol where it&#x27;s saying, ready, send me some stuff,
+[433.36] Curry: got that, send me the next stuff?
+[435.4] Curry: Well, it&#x27;s a single wire UART for EOLRS.
+[439.0] Stephen: I think R9 and other stuff is a regular two wire UART, but I need to, I would need to
+[446.64] Stephen: actually sit down and read the commits and I haven&#x27;t sat down and read the commits.
+[452.56] Stephen: If you want me to, I can do that and reply back in the chat.
+[455.88] Stephen: You&#x27;ve come here unprepared to answer my questions.
+[460.36] Stephen: I was busy soldering up some new receivers for EOLRS.
+[464.92] Stephen: I&#x27;ve got one with diversity there.
+[467.44] Stephen: So I think it&#x27;s just structure.
+[468.92] Stephen: Be careful, Gary&#x27;s got more questions about that as well, so, you know.
+[471.6] Frank: Oh, right, it&#x27;s just structure.
+[472.76] Stephen: I think there were two dissimilar systems that happened to work together and get by,
+[478.12] Stephen: but the fit and finish on either side was quite rough and they seem to have just tightened
+[482.24] Stephen: it up and have some kind of accepted definitions.
+[484.4] Stephen: I should go back and read, I&#x27;ll read the actual commits and I&#x27;ll get back to you.
+[488.6] Curry: No, it&#x27;s interesting because normally you would expect, although it&#x27;s a little bit haywire,
+[492.52] Curry: if something&#x27;s just like, here&#x27;s all my commands and every time it&#x27;s ready to read,
+[496.92] Curry: oh, here&#x27;s a command.
+[497.92] Curry: And if I&#x27;m missing stuff out in between, it doesn&#x27;t really matter because I haven&#x27;t got
+[501.84] Curry: the resolution to get that.
+[502.84] Curry: So I&#x27;ll just get the next command when I&#x27;m ready to read it and that&#x27;s generally OK.
+[506.92] Curry: So, yeah, it&#x27;s interesting that that was causing jitter for people because I mean, most
+[510.92] Curry: people would say when they went from using S bus over the crossfire, they instantly
+[516.04] Curry: noticed it&#x27;s like, I mean, for me, it was like a little bit weird.
+[519.04] Curry: It took me a little while to get used to it because it was so responsive on the sticks.
+[522.36] Curry: But if there&#x27;s yet another level of responsiveness, it&#x27;d be interesting.
+[527.08] Curry: I look forward to trying this.
+[530.48] Frank: Tony&#x27;s just muted himself.
+[532.64] Frank: I don&#x27;t know if that means he&#x27;s lost interest or what&#x27;s going on there.
+[539.8] UNKNOWN: He&#x27;s playing with a dog.
+[541.12] UNKNOWN: Dog come up on my lap.
+[542.32] Frank: I didn&#x27;t want to make noises because I&#x27;m going to have a stab at an analogy of what&#x27;s going
+[552.72] Frank: on here and tell me if this is far off.
+[560.12] UNKNOWN: So from what I understand, the computer in the in your transmitter, the body of your
+[567.96] Frank: transmitter reads the gimbals and sticks a message up on a whiteboard to say, he&#x27;s got
+[575.24] Frank: the stick at this position.
+[576.92] UNKNOWN: And then the computer in the transmitter module looks at that whiteboard and goes, that&#x27;s
+[584.12] Frank: what I need to tell the receiver to to pass on to the flight controller.
+[588.04] Frank: And then what we don&#x27;t say that that has now changed because the problem with that is that
+[597.64] Frank: you don&#x27;t know how long it&#x27;s been up on the whiteboard for.
+[600.6] Frank: You don&#x27;t know how long it&#x27;s going to be up until the next time it&#x27;s read.
+[604.52] Frank: It could just you could have one up there and you wipe it off before anyone&#x27;s read it and you
+[609.08] Frank: don&#x27;t know what&#x27;s going on.
+[609.88] Frank: So either they&#x27;re both agreeing how how often it&#x27;s going to be changed on the whiteboard or
+[618.32] Frank: they&#x27;re getting rid of the whiteboard and the two computers are actually just talking
+[623.08] Frank: directly to each other to say this is the number.
+[626.2] Frank: And so there&#x27;s no you get rid of the whiteboard, you get rid of the buffer and you just
+[631.16] Frank: directly passing stuff along.
+[633.68] UNKNOWN: Is that is that a reasonable analogy?
+[635.88] UNKNOWN: Yeah, pretty much.
+[637.12] Stephen: Pretty much.
+[638.36] UNKNOWN: Although the problem comes when you talk directly to each other, then you have to have extra
+[643.04] Curry: language to say, give me something.
+[645.92] Curry: OK, sent it.
+[647.32] Curry: Give me another one.
+[648.08] Curry: OK, sent it, which can be slower than just like here are some stuff.
+[652.84] Curry: Take take the next one you get.
+[654.12] Curry: That&#x27;s what I was interested in.
+[655.56] Curry: That&#x27;s a connection oriented protocol.
+[657.24] Stephen: So, yeah, you&#x27;re right.
+[658.36] Stephen: UDP versus TCP is the one that jumps to mind if you work with computers.
+[662.32] Stephen: That&#x27;s a connection oriented.
+[664.24] Stephen: But neither is not particularly fast protocol either.
+[666.88] Stephen: Right. It&#x27;s it&#x27;s just designed to make sure that stuff arrives.
+[673.36] Stephen: So what you generally do when you want to have something running fast is you&#x27;d have a sync
+[678.84] Stephen: signal and both sides acknowledge the existence of a clock like with pro audio gear.
+[683.52] Stephen: You&#x27;d have a shared clock signal between the two sides and you&#x27;d transmit and receive
+[688.16] Stephen: according to that shared clock.
+[689.76] Stephen: So I think it&#x27;s it&#x27;s more like a shared clock system than and have you got it yet?
+[694.84] Stephen: Yes, I&#x27;ve got it.
+[695.84] Stephen: All right. Another one&#x27;s coming up.
+[697.2] Stephen: OK, have you got it yet?
+[699.76] UNKNOWN: And Jack is wiggling some of us, I believe more like a guess how the old if I think of PPM, I
+[706.72] Curry: always think of like here is a little wig on an oscilloscope and then we leave a big gap to
+[711.68] Curry: indicate that&#x27;s the end and that is your sync signal.
+[714.52] Curry: It&#x27;s kind of just agreeing what is the sync going to be and targeting a higher rate of
+[722.24] Stephen: mixer updates as well.
+[723.68] Stephen: I don&#x27;t know what the mixer updates were before, but it also seems to have been agreed that
+[727.76] Stephen: 250 Hertz for OpenTX is is a good rate to send mixer updates.
+[733.56] Stephen: And I have a feeling although I was going to try and read the code, but I can&#x27;t really do that
+[737.32] Stephen: same time as being in the show.
+[739.36] Stephen: Multitask like that.
+[741.2] Stephen: You were soldering.
+[742.08] Stephen: You had plenty of time if he comes at you again, just say that you understand Linux and he&#x27;ll
+[749.6] Jack: get distracted by asking me a question about it.
+[753.96] UNKNOWN: So just by agreeing that the mixer should be sending updates more frequently, I think is a
+[758.88] Stephen: big part of it as well.
+[760.4] Stephen: The mixer doesn&#x27;t seem to have been targeting any specific update interval.
+[764.44] Stephen: OpenTX is now targeting 250 Hertz and interestingly, EdgeTX, which I think was thrown
+[769.88] Stephen: around as well.
+[770.92] Stephen: One of the things that they&#x27;re pushing for is a 500 Hertz or maybe even 1000 Hertz updates.
+[776.24] Stephen: And you see this with gaming mice, right?
+[778.12] Stephen: And I guess few of your gamers, I think Curry&#x27;s writing a game.
+[781.92] Stephen: So probably seen all the ridiculous gaming peripherals and polling rates that they do.
+[786.92] Stephen: So the idea is to be able to get those updates.
+[790.72] Stephen: Yeah, exactly.
+[791.48] UNKNOWN: Yeah.
+[792.48] Jack: My mouse has got onboard storage.
+[794.4] Jack: I don&#x27;t know why.
+[796.48] UNKNOWN: Is it to score all the pretty colors?
+[799.76] Frank: I don&#x27;t think I&#x27;m looking there.
+[801.32] UNKNOWN: Yeah, I don&#x27;t know.
+[804.88] UNKNOWN: And it&#x27;s got the speed.
+[805.72] Jack: So you can store your LED order that you want to fasten that.
+[809.76] Curry: No, like it stores the tracking motion and all that.
+[814.2] Jack: And I&#x27;ve got a really fast clicky button as well.
+[817.56] UNKNOWN: You can turn it into like a persistence of vision LED screen just by waving it about.
+[823.16] UNKNOWN: I don&#x27;t know.
+[823.64] Jack: Why does a mouse need onboard storage like black or white?
+[827.76] Jack: Why does a mouse need LEDs?
+[830.44] UNKNOWN: So you can see it in the dark when you&#x27;re draining your batteries.
+[837.48] Jack: And if you want to change, I guess.
+[840.68] Curry: But what do we want?
+[841.96] Curry: I can&#x27;t wait to see.
+[843.52] Jack: Tom, will you let me know if that gets in?
+[846.88] Jack: Stating.
+[848.84] Jack: That&#x27;s not going to stay in.
+[850.52] Jack: No.
+[851.44] Jack: So what do we need to try crossfire shot?
+[854.16] Curry: Because most of us have crossfire, don&#x27;t we?
+[856.64] Curry: Tony does.
+[857.32] Curry: Jad does.
+[857.84] Curry: I do.
+[860.16] Curry: I do not.
+[861.24] Curry: I&#x27;m afraid you know.
+[862.92] Stephen: The original one was coming out with all these crafty builds from TBS where they&#x27;ve
+[867.12] Stephen: done private builds of OpenTX, but it&#x27;s in main line OpenTX now.
+[872.36] Stephen: So if you&#x27;re on a recent OpenTX build, and I think now that 2.3.12 has come out, you
+[877.88] Stephen: should probably aim for that if you&#x27;ve got OpenTX.
+[880.36] Stephen: If you&#x27;re feeling a little bit funky and you&#x27;re running Express LRS, you might
+[883.64] Stephen: consider moving to EdgeTX because that&#x27;s going to unlock 500 hertz updates, which
+[889.4] Stephen: maybe you can&#x27;t feel it, but can&#x27;t hurt.
+[891.4] Curry: So you can make that move.
+[893.0] Curry: You&#x27;ve come up with two buzzwords we need to talk about in one sentence there.
+[896.96] Curry: Open LRS and Edge.
+[898.84] Curry: Nice segue.
+[901.24] Curry: Yeah.
+[901.72] Curry: So E LRS was this, Hey, everyone&#x27;s got all this FR SkyR 9 hardware around that they
+[909.52] Stephen: seem loath to actually do anything useful with, but it&#x27;s fairly easy to program.
+[914.72] Stephen: So people started, you know, trying to do an over the air protocol for that.
+[918.44] Stephen: And they did very successfully and they were able to crank out more performance
+[922.96] Stephen: than FR Sky ever got out of it.
+[926.4] Stephen: And that was very popular, but as with Crossfire and all these other 900 megahertz
+[933.56] Stephen: or 868 megahertz protocols, the antennas are massive.
+[938.4] Stephen: And so they took that over the air protocol and ran it on 2.4 gig as well.
+[943.32] Stephen: And that&#x27;s kind of where we are at the moment.
+[945.12] Stephen: You can get a variety of different transmitters.
+[948.52] Stephen: I&#x27;ve got a little tiny one on the tealight there.
+[952.56] Stephen: I&#x27;ve got a happy model one somewhere in a, in a deviation TX radio there as well.
+[959.48] Stephen: And you can get very, very cheap receivers for it.
+[963.0] Stephen: So instead of having to go to, you know, say, Oh, I&#x27;ve only got 15 quid for a
+[968.28] Stephen: receiver, or I guess I&#x27;ll have to go and get an FR Sky and you can take your 15
+[974.12] Stephen: quid or even 12 pounds and get something from ELRS that that&#x27;s going to completely
+[979.08] Stephen: whoop the pants off that old FR Sky receiver and probably out to Tracer as well.
+[985.4] Stephen: If you&#x27;re happy to jump through a few hoops, generally being learning a new
+[991.48] Stephen: configurator app, it&#x27;s not terribly hard.
+[995.52] Stephen: The EP series from happy model.
+[997.72] Stephen: I&#x27;d absolutely recommend because they&#x27;ve got built in wifi.
+[1001.24] Stephen: If you&#x27;ve done all this raspberry pie messing around and you&#x27;ve probably
+[1005.08] Stephen: encountered a espresso and they&#x27;re 8266 and ESP 32 chips, right?
+[1012.2] Stephen: And these are super cheap, super low end microcontrollers with integrated wifi.
+[1018.92] Stephen: Um, they&#x27;ve got a little bit flash, little tiny amount of RAM, but most
+[1022.72] Stephen: importantly, they&#x27;ve got wifi on them.
+[1024.28] Stephen: And so you can get something that is the size of something very small, which
+[1029.2] Stephen: I&#x27;ve probably got on a packet somewhere around the desk.
+[1031.32] Stephen: You can get something that&#x27;s a 10 mil on a side.
+[1034.44] UNKNOWN: And I know I&#x27;ve got one some here, but they&#x27;re so small.
+[1036.36] Stephen: I can&#x27;t tell which packets are empty and which aren&#x27;t just there.
+[1040.08] UNKNOWN: So this is not going to work on the camera.
+[1042.84] Stephen: You see that little dot in the middle of there next to my fingertip?
+[1045.64] Stephen: No, that is an ELRS, uh, EP receiver.
+[1050.6] Stephen: That&#x27;s an EP two and that&#x27;s got a UFL on it.
+[1053.48] Stephen: Right.
+[1053.84] Stephen: And that, that will run you about a tenner, maybe 12, given some shipping.
+[1058.92] Stephen: Um, and that, that gives you the full 2.4 gig range that you see everyone boasting
+[1063.88] Stephen: about, you know, get out to 30 kilometers if you want.
+[1067.32] Stephen: Um, but yeah, and it&#x27;s the size of my finger, my fingernail.
+[1072.12] Stephen: And they&#x27;ve also got one of these wifi boards on there as well.
+[1075.56] Stephen: So the entire back face of the chip is taken up with an ESP32, which if you
+[1083.6] Stephen: don&#x27;t connect to it in 20 seconds, automatically powers itself on and
+[1088.48] Stephen: starts hosting a wifi access point.
+[1091.6] UNKNOWN: And you go look, wow, exactly.
+[1093.84] Stephen: Yeah, this gets better.
+[1094.76] Stephen: You know, no, no farting around with cables and UARTs and soldering
+[1098.68] Stephen: in STM adapters or anything.
+[1101.36] Stephen: No JTAG or anything.
+[1102.64] Stephen: You just wait for the wifi access point to appear, log into it with, it&#x27;s
+[1107.28] Stephen: called express LRS RX and it&#x27;s got a password express LRS and it will host
+[1112.6] Stephen: the webpage and the webpage says, select your firmware file and click upload.
+[1118.84] UNKNOWN: And you do that and you wait and give it like 10 seconds to actually save all
+[1123.52] Stephen: that stuff to flash once it&#x27;s done the upload so that the right is complete.
+[1128.88] Stephen: And then you&#x27;re done.
+[1130.52] UNKNOWN: And it&#x27;ll reboot itself and your radio reconnect and boom, you&#x27;ve got your
+[1135.16] Stephen: new firmware version installed.
+[1136.44] Stephen: So it&#x27;s, it&#x27;s an absolute doddle to manage.
+[1138.56] Stephen: If you get one of the happy, the EP series, the PP, the tiny PPs, as they
+[1143.64] Stephen: were, definitely named, do not have wifi.
+[1148.12] Stephen: That&#x27;s got wifi.
+[1148.8] Stephen: It&#x27;s much easier.
+[1149.6] Stephen: Me and Tony are amused, but also, uh, scared because I don&#x27;t, I don&#x27;t think
+[1155.68] Jack: me and Tony can spell open LRS in order to.
+[1159.44] Jack: Express it again, access to the, what happens if you haven&#x27;t got wifi
+[1164.88] Jack: on your computer, are you screwed?
+[1166.64] Stephen: You can do beta flight pass-through.
+[1168.24] Stephen: So you get that thing hooked up onto a UART, um, just like you do for, uh,
+[1172.8] Stephen: Oh, okay.
+[1175.76] Stephen: Yeah.
+[1176.52] Stephen: Yes.
+[1176.96] Stephen: You can just use that configurator and it&#x27;ll treat it as a UART and upload.
+[1182.0] Stephen: I think you have to bridge.
+[1184.32] Curry: This is like Tony trying to bridge it with a piece of gaffer table.
+[1189.6] Curry: I haven&#x27;t got wifi on my computer.
+[1191.8] Jack: I don&#x27;t know.
+[1194.48] UNKNOWN: I own a Mac phone.
+[1196.64] Jack: I mean, I phone has wifi believe it or not.
+[1201.28] Jack: Yeah.
+[1203.36] UNKNOWN: Yeah.
+[1203.64] Jack: He&#x27;s got terrible file behavior.
+[1205.76] UNKNOWN: Um, what is the support?
+[1208.92] Jack: Like buy a USB wifi card.
+[1211.68] UNKNOWN: Yeah.
+[1213.6] UNKNOWN: Well, so what&#x27;s the support for if you&#x27;re a scumbag like curry works fine.
+[1217.64] Stephen: Um, so all this is written the same as the beta flight, I now have configurator
+[1223.48] Stephen: the same as the BL Heli S configurator.
+[1225.68] Stephen: It&#x27;s all just a node JS app, right?
+[1227.44] Stephen: So it runs on pretty much anything.
+[1230.0] UNKNOWN: I&#x27;ve run Ubuntu and that&#x27;s normally a complete pain in the butt to run things
+[1233.6] Stephen: on, right?
+[1233.96] Stephen: I&#x27;m that Linux guy and I&#x27;ve reported Linux bugs to curry for his game as well.
+[1237.72] Stephen: We&#x27;re testing on Linux.
+[1241.04] UNKNOWN: Of course he hasn&#x27;t because no one does.
+[1243.08] Stephen: That&#x27;s fine, but it doesn&#x27;t go with the wide monitor.
+[1246.64] UNKNOWN: Yeah.
+[1247.08] Stephen: Yeah.
+[1248.12] UNKNOWN: Sorry.
+[1249.16] Stephen: I&#x27;m the one person that tested on Linux.
+[1253.04] Stephen: Have you not tested it on Linux with an ultra wide monitor?
+[1256.84] Frank: I love, I love that you&#x27;re that guy.
+[1260.8] Jack: One user and get hub using Linux.
+[1263.48] Jack: Yeah.
+[1263.68] Jack: Does that mean we also have the, this doesn&#x27;t render properly try Vulcan.
+[1266.68] Curry: Oh, that&#x27;s okay now.
+[1268.28] Curry: Yeah.
+[1268.6] Curry: Yeah.
+[1268.92] Curry: Yeah.
+[1269.24] Curry: Just me.
+[1269.96] Curry: Yeah.
+[1270.32] Curry: But yeah, it was like, so, um, we need, we need some sort of module to use it, but
+[1277.32] UNKNOWN: what is it supported then with open TX is there like a, a, an open LRS option on
+[1285.7] Curry: external or are we using some sort of generic each end of the connection you&#x27;re
+[1291.26] Curry: using on a CRSF protocol, which is, um, you know, it&#x27;s a, it&#x27;s a, it&#x27;s a, it&#x27;s a
+[1297.18] Curry: each end of the connection you&#x27;re using on the CRSF protocol, which is documented
+[1302.86] Stephen: in a part of beta flight and it&#x27;s part of open TX and that&#x27;s a wire protocol.
+[1307.42] Stephen: Express LRS is the over the air protocol that joins those two wire
+[1311.22] Stephen: connections together, right?
+[1312.74] Stephen: So CRSF on the transmitter, CRSF on the receiver.
+[1317.42] Stephen: So all your telemetry and everything&#x27;s going over CRSF and on the open TX
+[1321.94] Stephen: side, all your, um, your module signals are using CRSF.
+[1325.22] Stephen: So no real updates required.
+[1327.82] Stephen: If you want to go configure your transmitter, you drop a Lua script on and
+[1332.06] Stephen: that&#x27;s going to let you set things like your output power.
+[1334.7] Stephen: It&#x27;s going to let you set the, uh, the packet rate, uh, and also enable
+[1339.74] Stephen: wifi update modes on the TX as well, because your TX can also run as a wifi
+[1343.98] Stephen: point, do the upgrade the same way I described.
+[1346.86] Frank: Wow.
+[1348.5] Frank: So on that point, given that so much effort has obviously been put into making
+[1352.42] Frank: it easy to update the firmware on these receivers and modules, how often are you
+[1359.82] Frank: updating the firmware on these things?
+[1362.18] Frank: Is it something where like every time you fly, you&#x27;re updating it?
+[1366.54] Frank: Um, there was one thing where I wanted, I wanted to get it working on a very
+[1373.46] Stephen: old radio who reaches behind him and grabs a particularly old radio.
+[1377.1] Stephen: Some of you may remember back in the days before we had open TX, we had
+[1381.06] Stephen: deviation TX, right?
+[1383.94] Stephen: And this is a T8 SGV2.
+[1387.18] Stephen: It&#x27;s not particularly shiny or new, but I like it.
+[1390.34] Stephen: And it&#x27;s small.
+[1391.82] Stephen: There&#x27;s no, it&#x27;s not broken or anything.
+[1393.34] Stephen: And I have in the back of that a project box with express LRS in it.
+[1399.66] Stephen: Um, again, nothing particularly fancy here.
+[1403.66] Stephen: I can&#x27;t run Lua scripts.
+[1405.46] Stephen: So that was a problem because I can configure all my settings for the
+[1410.1] Stephen: module and I, while I could plug in my tracer, my tracer module worked perfectly.
+[1416.18] Stephen: And you might think, why would tracer work?
+[1418.62] Stephen: This is an ancient radius.
+[1419.66] Stephen: Wasn&#x27;t around with tracer was a thing.
+[1421.7] Stephen: Well, because, um, TBS use this CRSF protocol and have kind of a fixed data
+[1429.5] Stephen: format, all their menus are actually generated on the module and not in the radio.
+[1435.34] Stephen: So the TBS Lua script is actually just like a menu driver and it asks the
+[1441.46] Stephen: module, what options have you got?
+[1443.46] Stephen: What are the allowed values for those options?
+[1445.46] Stephen: What order should I draw them in?
+[1446.66] Stephen: And it draws them like that, which is why you&#x27;ve got the TBS Lua script and the
+[1450.66] Stephen: TBS agent light script working just fine for any piece of TBS equipment, because
+[1455.62] Stephen: all they&#x27;re doing is reading the allowed values and the text strings to put in
+[1458.98] Stephen: them off the module and putting them on the screen.
+[1461.78] Stephen: And so TBS that works beautifully for Express LRS.
+[1465.1] Stephen: They didn&#x27;t do that.
+[1466.22] Stephen: They had their own funky little Lua system that had a hard coded set of
+[1470.82] Stephen: strings in the Lua script and a set of arrays it was poking through and all this
+[1476.34] Stephen: crap, but, but I worked with one of the guys, um, whose name, uh, stoned dog,
+[1483.54] Stephen: one of the helpful developers there.
+[1485.7] Stephen: Um, and we actually kicked the tires on a pull request that&#x27;s going in sometime
+[1489.82] Stephen: after 1.0 we&#x27;re on 1.0 RC nine right now.
+[1493.26] Stephen: So it&#x27;s not in right now, but I&#x27;m running a PR on this that I worked on where it
+[1498.34] Stephen: actually adopts exactly the same system that TBS uses.
+[1502.58] Stephen: So all the strings and the menus are driven from the module and are not
+[1507.78] Stephen: stored on the radio.
+[1509.18] Stephen: So any radio firmware would work.
+[1512.3] Stephen: You&#x27;d be able to run any crusty old radio.
+[1514.22] Stephen: So long as it works with crossfire, it would work with express LRS.
+[1518.98] Stephen: Um, and that was quite nice to get it working.
+[1521.18] Stephen: I must say that was, so that&#x27;s, that&#x27;s the occasion when I&#x27;ve been
+[1524.26] Stephen: doing lots of updates by and large.
+[1526.3] Stephen: No, since I think RC four had a big bug, they fixed, but anything after RC four
+[1531.38] Stephen: when RC nine now has been working pretty consistently for me.
+[1534.94] Stephen: I&#x27;m not a big long range guy though.
+[1540.1] UNKNOWN: What are the sort of enhancements that, um, open LRS has over express
+[1545.34] Curry: regular stuff, but also open LRS was a, an old open project.
+[1549.5] Curry: Yeah.
+[1549.78] Curry: Yeah.
+[1550.06] Curry: It was that predates it.
+[1551.18] Curry: I don&#x27;t think it&#x27;s actually, but it was a much older, I think four, three,
+[1554.7] Curry: three, six, yeah, express.
+[1556.22] Curry: So, um, I mean, specifically you&#x27;ve got range and latency over 2.4.
+[1560.78] Curry: What about, um, stuff like you mentioned our nine people flashing their old
+[1564.58] Curry: stuff because I think three, so I&#x27;ve lost interest.
+[1566.7] Curry: So that&#x27;s an obvious way to go.
+[1567.78] Curry: But what are the sort of in heart you&#x27;d have over the sort of
+[1570.74] Curry: vanilla R nine system?
+[1572.82] UNKNOWN: Well, you&#x27;ve got a much wider choice of our exes.
+[1575.42] Stephen: So you can have one of these tiny 10 mill on our side, our exes, or you
+[1579.5] Stephen: could have something that&#x27;s as much chunkier.
+[1582.02] Stephen: Um, here&#x27;s, here&#x27;s another one, for example, that&#x27;s similar in size
+[1586.22] Stephen: to like an old XM plus, but this guy, if you want to go long range can do
+[1591.3] Stephen: 100 milliwatt telemetry, not, you know, 100 milliwatt, what that&#x27;s normal.
+[1597.34] Stephen: Yeah.
+[1597.5] Stephen: On a TX it&#x27;s normal, but your telemetry connections normally like 10
+[1600.9] Stephen: milliwatt, 15 milliwatt, this does a hundred milliwatt telemetry, which
+[1604.34] Stephen: means you, your telemetry is just going to run for a very long time.
+[1608.38] Jack: Right.
+[1608.66] Jack: We, we, um, we do an audio podcast.
+[1611.46] Jack: So if you can say like, oh, so, okay.
+[1616.74] Jack: So you are seeing a, a anti-static bag that I&#x27;m holding up with a receiver,
+[1621.62] Stephen: which is roughly the same size as an XM plus, and this is a CEFR mini receiver.
+[1627.7] Stephen: That CEFR mini is running their own proprietary protocol, but I got an ST
+[1633.3] Stephen: link and, and messed around with that and flashed it and the CE while being the
+[1637.9] Stephen: same size as an XM plus or RXSR is capable of outputting that 100 milliwatt telemetry.
+[1646.3] Jack: I had an SSR on my desk somewhere, but no, no, you&#x27;re doing a fine job.
+[1650.82] Jack: It was just like, cause we, we were comparing sizes, you know, mini PB and
+[1654.9] Jack: work, like why use it, but you&#x27;ve got this massive choice of receivers and
+[1661.9] Stephen: you can go for super cheap and small, or you can go for something a bit
+[1664.58] Stephen: more expensive with diversity Dave&#x27;s story asking, if it&#x27;s not been asked,
+[1668.86] Stephen: what range can I expect from the ceramic antenna?
+[1671.74] Stephen: I read lots of posts from people on the discord in express LRS and they say,
+[1676.82] Stephen: Oh, I was flying 15 miles with this in the middle of effing nowhere in America
+[1683.42] Stephen: that might be entirely realistic where I fly in a, in a small crowded area, not
+[1689.9] Stephen: central London, but fairly close to the center of London.
+[1693.94] Stephen: There&#x27;s a lot of wifi noise and the area I fly has a lot of people running wifi
+[1698.26] Stephen: routers quite nearby, so it&#x27;s swapped.
+[1700.46] Stephen: I was getting fail safes on an XM plus at sort of 100, 200 meters.
+[1707.02] Stephen: And when I&#x27;m running at 50 milliwatt with a little ceramic antenna, and I&#x27;ve got
+[1714.02] Stephen: one buried in the worst place in the quad cocks of where I&#x27;ve jammed it into the guts
+[1721.14] Stephen: of something, uh, it&#x27;s in the front of this tiny two and a half inch at the front of
+[1728.22] Stephen: the, you can&#x27;t even see it&#x27;s the front of the stack.
+[1729.9] Stephen: It&#x27;s about there where my finger is.
+[1731.7] Stephen: There is a tiny EP two in there and it&#x27;s occluded by screws and a 3d printed
+[1739.06] Stephen: canopy and it&#x27;s sat right on top of the ESCs, which is, it&#x27;s all bad for signal.
+[1744.1] Stephen: Generally speaking, it&#x27;s far out flying the XM plus that used to have in there.
+[1748.3] Stephen: I&#x27;ve got down to a link quality of 30 at about 150 meters.
+[1755.02] Stephen: Just as I turned around, I had a blip where I think the battery and the
+[1758.1] Stephen: quad and everything was between the RX and myself.
+[1762.3] Stephen: Um, but the thing to mention is that it&#x27;s very tolerant of low link quality.
+[1766.94] Stephen: Whereas with FRS sky, you see that RSSI go down to an RSSI isn&#x27;t RSSI with FRS sky,
+[1773.46] Stephen: right?
+[1773.66] Stephen: So they&#x27;re in funky calculation.
+[1775.1] Stephen: They munch it and they say, ah, it&#x27;s the FRS sky magic number.
+[1778.82] Stephen: And you know, intuitively, like if your FRS sky magic number goes down below 40,
+[1783.1] Stephen: you&#x27;re in trouble, but it doesn&#x27;t necessarily mean the exact strength of
+[1787.74] Stephen: the signal and you have to kind of figure it out and you think, Oh yeah,
+[1790.1] Stephen: I&#x27;ve got from zero to a hundred, I&#x27;ll be okay.
+[1792.26] Stephen: Flying down to 10 and not and everything you get RX loss at like below 40
+[1796.3] Stephen: somewhere, but whereas this guy will go down to a link quality of, of 30 or
+[1801.42] Stephen: 25 and still be perfectly flyable.
+[1804.02] Stephen: And if you&#x27;re on 500 Hertz updates, that means that out of those 500 updates that
+[1808.86] Stephen: you&#x27;re expecting every second, you&#x27;re only getting 25 or 30% of those.
+[1813.38] Stephen: So your link quality is the percent of updates that you&#x27;ve received and you&#x27;d
+[1817.46] Stephen: expect obviously to receive a hundred percent of your updates.
+[1819.82] Stephen: But if you&#x27;re on maybe, I think intuitively, and I haven&#x27;t proven this, but I
+[1824.34] Stephen: think if you&#x27;re running a higher rate and you, you see a link quality of 30%,
+[1828.3] Stephen: it&#x27;s not necessarily so much to be worried about because you&#x27;re still at 25%
+[1833.38] Stephen: link quality, getting over a hundred updates a second through.
+[1836.54] Stephen: So, Hmm, sure.
+[1839.82] UNKNOWN: Yeah, that makes sense.
+[1840.78] Curry: Aside from, if you, if you have an R nine, I know you can flash those a happy
+[1846.98] Curry: model are doing some ready to buy receivers, be doing the PV content to me
+[1851.1] Curry: today about a module and receivers they&#x27;re bringing out.
+[1853.78] Curry: Is there anybody else that has them?
+[1856.14] UNKNOWN: There&#x27;s a Namino RC, a Chinese manufacturer, and they seem to be selling
+[1860.38] Stephen: mainly on the Chinese market, but they do have really fantastic looking TX with it
+[1864.74] Stephen: with a fan built in.
+[1865.7] Stephen: And I think they&#x27;ve got heat sinks on there as very high power output, not sure
+[1869.54] Stephen: you&#x27;d really need that unless you&#x27;re taking your wing and trying to reach
+[1872.66] Stephen: France, but, um, yeah, it outpaces DJI.
+[1877.62] Stephen: So say that DJI like on 700, this on 100 will, will outfly it.
+[1884.14] Stephen: So it&#x27;s not really a problem.
+[1887.66] Stephen: Um, other manufacturers, uh, there&#x27;s a lot of DIY stuff I recommend going
+[1892.18] Stephen: on the discord express LRS.
+[1894.62] Stephen: Most of their discussion happens on a discord discord.
+[1898.42] Stephen: You can find linked off their GitHub site and there&#x27;s a buy and sell listing.
+[1902.5] Stephen: And you can give your money to you, you know, your fellow FPV enthusiasts and
+[1907.06] Stephen: get them to make you a module.
+[1908.78] Stephen: And the module that I&#x27;ve been flying mainly on this one was made by a guy in
+[1913.82] Stephen: the UK who got the parts, uh, ordered a bunch of circuit boards, soldered them
+[1918.34] Stephen: up, you know, pocketed a few quid out of the deal and sent me it.
+[1922.02] Stephen: And he did 3d print as well as pretty nice 3d print.
+[1924.9] Stephen: Um, so yeah, I think it&#x27;s one of its values that we&#x27;re not really mentioning
+[1928.9] Stephen: is that is a community oriented project and people aren&#x27;t just, you know,
+[1933.14] Stephen: taking a bunch of money and, uh, and disappearing with it to buy new Mercedes
+[1937.5] Stephen: that it&#x27;s, you know, FPV enthusiasts helping FPV enthusiasts, which is nice to see.
+[1944.42] Jack: Yeah.
+[1946.58] UNKNOWN: Sorry.
+[1946.86] Curry: I was just gonna say, is there any, any problems from TBS because it&#x27;s using CRSF?
+[1951.86] Curry: I mean, they kind of open sourced, uh, audio, but they weren&#x27;t, it wasn&#x27;t
+[1957.38] Curry: like open sources, like buy a license from us, else we&#x27;re going to keep
+[1960.46] Curry: updating the protocol to cut you third parties out sort of thing.
+[1963.18] Stephen: So all it&#x27;s really doing is emulating the interfaces that already coded
+[1967.54] Stephen: into open TX and beta flight.
+[1969.82] Stephen: So those are all entirely open source implementations that have been released
+[1974.02] Stephen: to the community to support their hardware.
+[1977.02] Stephen: I dare say if they kicked up a big fuss about it, that the team would be able
+[1980.74] Stephen: to move to something new, but really I don&#x27;t think TBS would have a leg to stand
+[1986.26] Stephen: on and I don&#x27;t know, I don&#x27;t think it&#x27;s in anyone&#x27;s best interests to try
+[1990.46] Stephen: and infight to this degree, you know, if they&#x27;ve got a better product, then
+[1994.1] Stephen: let the product stand in its merits.
+[1995.7] Stephen: I don&#x27;t know.
+[1995.98] Stephen: Have you met Traki, he likes the drama a little bit.
+[1999.42] Stephen: He does like the drama, doesn&#x27;t he?
+[2000.9] Stephen: You know, I heard the podcast about the latest crossfire shot V3 thing, and
+[2004.54] Stephen: it was all very, uh, hyperbolic.
+[2008.34] Frank: This episode was recorded in front of a live online audience, downloaded and
+[2012.18] Frank: edited to make sense when it played audio only, censored to please the
+[2016.1] Frank: iTunes people hosted on the internet, forwarded through to your podcast
+[2019.14] Frank: provider, downloaded, playing on your device, and is now playing in your ears.
+[2023.5] Frank: All thanks to our Patreons.
+[2025.66] Frank: Consider joining them and you&#x27;ll also get other online benefits.
+[2029.02] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
+[2034.98] UNKNOWN: So Curry, what, what hardware have you got to run Express LRS?
+[2039.02] Frank: Cause you said you were planning on it.
+[2042.1] UNKNOWN: Yeah, I&#x27;ve, I&#x27;ve still got, um, cause I used to do a load of tests on, on
+[2045.86] Curry: R9 and I have to say I had a reasonable experience on R9, uh, a lot better than
+[2050.14] Curry: others, but one thing that free sky, uh, awful or, or what free sky do is
+[2055.94] Curry: literally just like lose interest in it.
+[2057.66] Curry: So it&#x27;s like, oh, it&#x27;s got this, it&#x27;s going to be amazing.
+[2060.5] Curry: I was like, well, here&#x27;s, here&#x27;s the bugs I found.
+[2062.86] Curry: Can you fix them?
+[2063.66] Curry: It&#x27;s like, well, we don&#x27;t talk about what bugs we fix or what we don&#x27;t fix.
+[2066.86] Curry: We&#x27;ll just have a release at some point.
+[2068.62] Curry: So I&#x27;ve got three or four quads, which have R9 on them.
+[2072.74] Curry: Um, and I&#x27;ve got, I think free R9 modules.
+[2076.34] Curry: So I got no problem in like flashing one of those and flashing some receivers,
+[2080.78] Curry: but I&#x27;ve also got one of these, uh, nano modules and receivers turning up from
+[2085.98] Curry: bigger FPV at some point.
+[2087.1] Curry: So I&#x27;ll certainly be testing it out, um, seeing how it goes, but yeah, I like the
+[2091.74] Curry: idea of having, um, I guess cause like free sky used to be like, we always love
+[2098.22] Curry: free sky and then it turned into some sort of big evil company at some point
+[2101.86] Curry: because it&#x27;s like, these are really nice receivers.
+[2103.94] Curry: They&#x27;re quite cheap and they go quite well.
+[2106.06] Curry: And then they&#x27;re like, Oh no, you have to update to this and it&#x27;s going to screw
+[2109.14] Curry: you all up and we&#x27;re going to stop those receivers cause we want to sell you this.
+[2112.58] Curry: So it&#x27;s nice to think about, here&#x27;s something that the community has developed
+[2117.22] Curry: and you can buy a big range of things.
+[2119.1] Curry: And it&#x27;s already working on a very well-established protocol.
+[2122.54] Curry: Right.
+[2122.9] Curry: Um, and it sounds really good.
+[2125.42] Curry: I mean, sometimes one of the problems with open source is, um, people can get very
+[2130.74] Curry: excited about doing this interesting development and it never gets documented
+[2135.06] Curry: very well because they&#x27;re all off doing very interesting things.
+[2137.98] Curry: But it sounds like from what I&#x27;m hearing that there&#x27;s a nice configurator and
+[2142.26] Curry: there&#x27;s Louis grips and it&#x27;s relatively easy to do.
+[2144.62] Curry: And it&#x27;s already operating on established things we&#x27;re already using.
+[2147.78] Curry: So I&#x27;m interested.
+[2150.14] Curry: Yeah, it&#x27;s, it&#x27;s nice to see that actually there&#x27;s communities interested
+[2154.78] Stephen: in keeping their old hardware running and not just putting it in a landfill.
+[2158.38] Stephen: I think that&#x27;s, it&#x27;s nice to see.
+[2160.14] Stephen: And there&#x27;s clearly money to be made.
+[2161.54] Stephen: Like beta flight has proven to manufacturers that there is a whole crap
+[2165.74] Stephen: ton of money to be made by selling stuff that works with open source firmware.
+[2170.78] UNKNOWN: The, in fact, if anything, not having to write the firmware frees you as a
+[2175.74] Stephen: board manufacturer to do what you do best and create a really good board and not
+[2180.46] Stephen: get bogged down in maintaining drivers and maintaining firmware, you&#x27;re just
+[2186.78] Stephen: able to go and say, this is how my board works.
+[2189.14] Stephen: Here&#x27;s a target definition, and then just get down to the business of
+[2192.66] Stephen: shipping as many boards as you can.
+[2196.96] UNKNOWN: Yeah.
+[2197.2] Frank: We&#x27;ll see who else picks that up.
+[2200.32] Frank: I mean, let&#x27;s, you know, season or two, I guess.
+[2204.48] Frank: I&#x27;m sure there will be some others eventually.
+[2207.08] Frank: I mean, even, you know, as we&#x27;ve seen with like the seriously pro and all
+[2211.0] Frank: stuff like that, like anytime there&#x27;s a well-defined system to start using,
+[2217.56] Frank: some manufacturers will start picking up and making more boards.
+[2220.52] Frank: And there&#x27;ll be a bit of a race at the bottom of who can produce most the
+[2224.64] Frank: cheapest that people are happy with.
+[2227.24] UNKNOWN: So, I mean, there will obviously be some kind of word of mouth.
+[2230.88] Frank: You know, if you find a system or at least a board that you like, then
+[2234.68] Frank: share it, let us know with, we&#x27;d like to hear and get stuff picked up a bit more.
+[2242.44] Frank: As son and dad FPV says now we need easy open HD FPV.
+[2247.24] Frank: Yeah.
+[2247.52] Frank: I mean, that&#x27;s, that&#x27;s the other thing is there&#x27;s, you know, that&#x27;s the other
+[2252.2] Frank: kind of open source project that Curry&#x27;s been the kind of, I&#x27;m, I&#x27;m waiting
+[2257.12] Frank: to see what it&#x27;d be really nice to hear what&#x27;s happening on that community.
+[2260.84] Stephen: Actually, I was tracking some of the open HD stuff around about December and I
+[2264.92] Stephen: invested in a couple of single board computers, which I hoped I was going to
+[2269.12] Stephen: be able to use and it sounded like one of the project members had some personal
+[2273.72] Stephen: problems or that they lost a couple of project members because development has
+[2278.08] Stephen: slowed greatly.
+[2279.04] Stephen: They were talking about releasing version three in December.
+[2282.24] Stephen: It&#x27;s still not out now.
+[2284.08] Stephen: If you look at the releases, it&#x27;s, it&#x27;s slowed a lot and I don&#x27;t wish to, I don&#x27;t
+[2288.2] Stephen: want to wish them badly because I think they&#x27;re doing an amazing project.
+[2290.84] Stephen: It&#x27;s really good.
+[2292.08] UNKNOWN: Um, but I hope that, you know, if anyone&#x27;s out there who knows how to write code
+[2297.04] Stephen: relating to, you know, HD video transmission or the ICs involved that, you
+[2301.08] Stephen: know, please get involved there.
+[2303.08] Stephen: I think they could use some people.
+[2305.88] UNKNOWN: Yeah.
+[2306.0] Curry: I think open HD are always going to be at a limit with the hardware they&#x27;re using
+[2311.28] Curry: because it&#x27;s like, it&#x27;s a raspberry pie and it&#x27;s running Linux and that is
+[2315.36] Curry: different than some F GPA that&#x27;s dedicated to doing encoding and decoding
+[2320.32] Curry: video, um, just on its single thing.
+[2323.4] Curry: But there&#x27;s, you know, there&#x27;s faster single board computers out there that
+[2327.04] Curry: can handle it better.
+[2329.2] UNKNOWN: Uh, like the jets and nano brings to brings the stuff down.
+[2332.0] Curry: But yeah, this is, this is the project I keep wanting to get back to, which I
+[2335.92] Curry: should be able to now because I finished writing some stuff for a while.
+[2338.6] Curry: So yeah, my next thing does return to open HD, see where I was and try and write
+[2343.52] Curry: a blog post about it because I forgot what I did.
+[2346.16] Curry: So I thought I now freeze out.
+[2348.64] Curry: I&#x27;ll flash that they, they, they did a bunch of releases.
+[2352.72] Curry: Yeah.
+[2352.96] Curry: And I know what you mean.
+[2353.88] Curry: Cause the guy I was talking to was one of the main developers as I tried to
+[2358.4] Curry: talk to him on telegram and he didn&#x27;t respond.
+[2360.16] Curry: I don&#x27;t know if that&#x27;s because he doesn&#x27;t like me anymore or he didn&#x27;t seem to be
+[2363.76] Curry: there, but he doesn&#x27;t seem to be in the discussions anymore.
+[2365.72] Curry: So he was very much a leading figure.
+[2368.24] Curry: So, uh, not quite sure what&#x27;s going on there, but yeah, I hope to get back to
+[2372.2] Curry: that and, and have a more of a play and document it a little bit more.
+[2376.36] Curry: Cause unfortunately, as I said, one of the open source issues is everybody wants to
+[2381.84] Curry: get in and write the exciting features, but it&#x27;s, if you look at it from the
+[2386.24] Curry: outside as a sort of a, a, a non, uh, like, like Jack and non Linux user, you&#x27;d
+[2392.96] Curry: be like, what&#x27;s this about?
+[2394.0] Curry: And how do I, how do I work it?
+[2395.8] Curry: That sort of thing.
+[2396.64] Curry: And then you&#x27;ve got people on the other side saying, well, it&#x27;s just Debbie and
+[2399.6] Stephen: running easy wifi broadcast.
+[2401.24] Stephen: Why are you even bothering?
+[2402.4] Stephen: Well, I could just roll my own version.
+[2404.52] Stephen: And so it&#x27;s, yeah, I&#x27;m unhelpful people on both extremes.
+[2407.76] Stephen: Um, one thing that did jump into my mind while you were talking Kerry was they&#x27;re
+[2411.48] Stephen: actually trying to crowdfund their own board.
+[2414.24] Stephen: I don&#x27;t know if you remember that, but open HD was in talks with, uh, I believe
+[2419.04] Stephen: all winner, I think, and they had this, uh, camera focused board, which had a very
+[2424.08] Stephen: fast image signal processor ISP on it.
+[2427.36] Stephen: And they were looking to leverage that for a custom board that was focused purely
+[2431.32] Stephen: on what open HD needed.
+[2433.04] Stephen: Um, that looked very interesting.
+[2434.96] Curry: Interesting.
+[2435.36] Curry: Cause that, that w I had a discussion.
+[2438.72] Curry: We, we tried to have one of the guys on the show and he kept canceling on us.
+[2441.96] Curry: So I asked him all the questions and that was one of the things that came up to get
+[2445.24] Curry: it to the sort of latency that DJI would, would be a custom board.
+[2449.2] Curry: I didn&#x27;t know they&#x27;d got as far as trying to crowdfund it.
+[2452.16] Stephen: Then we&#x27;ve got all the politics of DJI who kept up with that night.
+[2455.44] Stephen: People run cam producing a camera for them and then Cadex throwing their toys
+[2459.72] Stephen: out of the pram and saying, but we paid for the rights for that.
+[2462.56] UNKNOWN: What, why are you taking away our camera revenue?
+[2465.4] Stephen: While Cadex, meanwhile, they&#x27;re not making any cameras because they
+[2467.84] Stephen: can&#x27;t get the chips to make them.
+[2470.12] UNKNOWN: And so that&#x27;s, that&#x27;s why they&#x27;re, there&#x27;s like a new update where they&#x27;re
+[2473.16] Frank: like encrypting something so that it doesn&#x27;t work with any other cameras.
+[2477.32] UNKNOWN: Right.
+[2477.72] Stephen: They&#x27;re talking about requiring a specific chip on the camera, which it was, is the
+[2482.84] Stephen: most nonsensical of marketeering because in order to do that, they&#x27;ll actually be
+[2486.96] Stephen: blocking their own Cadex Nebula Nano, which doesn&#x27;t include that chip.
+[2491.16] Stephen: So the only way they&#x27;ll be able to do that is by destroying their own product line.
+[2496.4] Stephen: And yet they&#x27;re still like, yep, this is what we&#x27;re going to do.
+[2498.88] Stephen: Which is just, that is why you need open source.
+[2501.72] Stephen: I&#x27;ve also heard that they&#x27;re coming out with a new camera for the DJI HD system.
+[2507.76] Frank: That&#x27;s going to be like a starlight, you know, night vision, not the night vision,
+[2513.32] Frank: but low lux camera as well.
+[2517.44] Frank: So see what happens with that.
+[2519.08] Frank: If that&#x27;s any, cause I feel like having seen some of the footage
+[2522.36] Frank: from wings and wheels, it seems like that might have been useful.
+[2526.64] Stephen: Oh yeah.
+[2527.04] Stephen: The DJI cameras are really bad and low light.
+[2529.64] Stephen: I run DJI, I&#x27;m not a convert by all by any means.
+[2533.24] Stephen: Cause when you get to the smaller sizes or you want to fly in poor lighting,
+[2537.12] Stephen: DJI is just a grainy mess.
+[2539.24] UNKNOWN: Hmm.
+[2542.44] Frank: I mean, other kind of projects that we&#x27;ve seen sort of developing over the years.
+[2547.12] Frank: I mean, there&#x27;s the FPV combat system that is, is now on sale in the UK.
+[2552.12] Frank: The boards have arrived.
+[2553.76] Frank: That&#x27;s on sale.
+[2554.64] Frank: People are getting them.
+[2555.64] Frank: That&#x27;s good to see.
+[2557.32] Frank: Um, and again, I feel like that&#x27;s a similar sort of, I don&#x27;t think it is,
+[2562.96] Frank: it might not technically be open source, but to me, it&#x27;s got the same sort of
+[2567.28] Frank: feel because it&#x27;s had some developers put far too much effort into it and wait
+[2572.08] Frank: three years of developing a million features on it before actually
+[2576.88] Frank: releasing any hardware, but yeah, this is coming from enthusiasts.
+[2581.12] Curry: They&#x27;ve made the boards, they&#x27;re having to charge for them, but it&#x27;s very
+[2583.92] Curry: unlikely they&#x27;ll get their investment, certainly in time and effort, but
+[2588.2] Curry: they&#x27;re doing it cause it&#x27;s, it&#x27;s a cool system.
+[2590.44] Curry: It&#x27;s fun to do.
+[2591.56] UNKNOWN: Yeah, exactly.
+[2592.6] Frank: Um, I really want to get one, put it on something and fly with some people in
+[2599.96] Frank: the shoots, people down and probably get shot down more, but that&#x27;s the thing
+[2603.64] Frank: I want to do at some point.
+[2605.2] Frank: Um, we&#x27;ll see.
+[2608.92] Jack: I was talking to a mutual friend of ours about getting a sewing machine
+[2613.56] Jack: pedal and putting it in the trainer port so you can shoot me the foot.
+[2623.76] Curry: So, so the other protocol thing we&#x27;ve been hearing a lot about, and I
+[2627.8] Curry: don&#x27;t think any of us has touched is edge.
+[2630.64] Curry: This, uh, new radio.
+[2634.76] UNKNOWN: Well, it&#x27;s, it&#x27;s a radio firmware as well.
+[2638.08] Frank: Oh, you want the speed on this?
+[2641.76] Stephen: All right.
+[2642.28] Stephen: So this guy is also running edge TX, by the way.
+[2645.32] Stephen: It&#x27;s T like, um, so when&#x27;s, when&#x27;s open TX 2.4 arriving?
+[2654.06] UNKNOWN: Never, right.
+[2656.9] Stephen: How long have we been asking for open TX 2.4?
+[2660.14] Jack: But no, I never asked for updates.
+[2661.74] Jack: I just like to stay on the moon.
+[2665.26] Jack: Everything breaks and I read, I know the Louis scripts without
+[2669.62] Stephen: characterizing people too rudely.
+[2671.42] Stephen: And I, I don&#x27;t want to make sweeping judgments.
+[2673.58] Stephen: I&#x27;m not, I&#x27;m not an open TX.
+[2676.62] Stephen: However,
+[2680.78] Stephen: yeah.
+[2683.58] Jack: Any of these expressed by any of our guests in the show personal
+[2686.26] Jack: may not set it to views of others or other developers.
+[2691.78] UNKNOWN: Beautiful.
+[2692.74] Stephen: Um, so the open TX community includes a lot of enthusiasts to have been
+[2697.7] Stephen: using open TX since forever.
+[2699.62] Stephen: And they&#x27;re using it to fly aircraft line of sight.
+[2701.94] Stephen: They&#x27;re using it to fly things where the risk reward is, is this
+[2708.1] Stephen: my groceries knocking on the door?
+[2712.26] Stephen: I will finish this.
+[2713.86] Stephen: The risk reward is, is a very, very much higher than a freestyle
+[2717.78] Stephen: quad where you half expect to crash every time you put a pack in.
+[2721.98] UNKNOWN: And, and for those users, they do not want open TX implementing a
+[2728.38] Stephen: bunch of fancy protocols that they are not going to use, which may
+[2736.26] Stephen: influence code they&#x27;re already using and stop their mixes or that
+[2741.14] Stephen: incredibly complex switch combinations from working.
+[2745.34] UNKNOWN: And, and they, I think are effectively the break on open TX development.
+[2751.38] Stephen: If we look at this, there&#x27;s a focus from people who say too much risk.
+[2755.42] Stephen: And what edge TX has done is the same thing in a certain way, clean
+[2758.98] Stephen: flights and beta flight have done.
+[2760.82] Stephen: That is an example.
+[2762.22] Stephen: It&#x27;s not the only example because there was a lot of politics, obviously.
+[2766.06] Stephen: And in that with edge TX it&#x27;s had the blessing from the open TX developers
+[2770.58] Stephen: who effectively have said, okay, if you want to go and publish a nightly
+[2775.42] Stephen: build of open TX, we&#x27;re including all the features that we&#x27;re not ready
+[2779.06] Stephen: for yet, you can go and do that.
+[2781.62] Stephen: But please distance it from us and don&#x27;t in any way ruin the name of open TX.
+[2788.38] Stephen: And this is with full disclaimer because I&#x27;m not in on these private
+[2791.14] Stephen: conversations, but what edge TX does is take that open TX 2.4 code based
+[2796.18] Stephen: release it right now with all the patches on top of what&#x27;s currently in
+[2800.3] Stephen: 2.4 that you might want things like touch screen support for color radios.
+[2805.06] Stephen: Things like a hundred Hertz updates, things like, um, something coming
+[2810.26] Stephen: in very soon that converts the ancient save format of open TX to a text file
+[2814.5] Stephen: that you can actually edit as a human being instead of needing companion.
+[2818.54] Stephen: And it allows all of those things to be happening now, instead of waiting
+[2823.86] Stephen: for them to get to through the approval process of the socks and sandals brigade.
+[2833.62] Jack: But they paved the way for us and didn&#x27;t defend us when
+[2837.38] Jack: yeah, I&#x27;m not saying they&#x27;re bad people.
+[2838.9] Jack: It&#x27;s just a reflection of priorities, right?
+[2841.14] Stephen: Our priorities as, as quad pilots are probably going to crash, kind of
+[2845.86] Stephen: crash a little bit every time we land.
+[2848.06] Stephen: Um, you know, it&#x27;s, it&#x27;s not the same world for us.
+[2852.02] Stephen: And I think edge TX reflects that that we&#x27;d like to have something that
+[2855.14] Stephen: includes the latest features, lower latency, better performance.
+[2858.66] Stephen: And maybe if it bugs out and doesn&#x27;t show me my telemetry viewer perfectly,
+[2864.18] Stephen: or some of the functions of very complex switch functions don&#x27;t
+[2867.66] Stephen: work exactly the same, okay, whatever.
+[2870.82] Stephen: You know, it&#x27;s not going to ruin our day as much.
+[2872.98] Stephen: Um, if you have fly barless servo mixing doesn&#x27;t work, that&#x27;s not the end of the world.
+[2878.58] Frank: Um, so it&#x27;s, it&#x27;s maybe a kind of a reflection, like you say, almost that
+[2884.22] Frank: there&#x27;s enough of a community has built up that once the higher performance FPV
+[2891.38] Frank: stuff that, I mean, amongst other things that there&#x27;s enough of a community
+[2897.86] Frank: there to build another version.
+[2900.26] Frank: Um, and so it&#x27;s kind of, is it, is it literally a form where people are saying,
+[2904.14] Stephen: oh, but I&#x27;ve been using this special TBS build of open TX for, for two years.
+[2909.54] Stephen: What, what this was supposed to be a temporary fix.
+[2911.82] Stephen: Where&#x27;s the permanent fix?
+[2913.06] Stephen: And, and that question needed an answer sooner or later.
+[2916.06] Stephen: And so this is the answer.
+[2918.26] Jack: Is it safe to update to edge yet?
+[2920.62] Jack: Have they got an official release?
+[2922.22] Stephen: Um, if you&#x27;ve got a color radio, it&#x27;s a little bit more complex.
+[2925.38] Stephen: The general accepted wisdom is make sure to back up your models.
+[2929.86] Stephen: Just do the models back up and settings back up, save it somewhere.
+[2933.82] Stephen: I, I, you know, I saved it, it converted all my models just fine.
+[2937.98] Stephen: I think that the tea light for all intents and purposes is
+[2940.66] Stephen: equivalent to the older Taranis.
+[2942.66] Stephen: It&#x27;s got the same super low res screen and basic feature set.
+[2947.3] Stephen: And the first boot you do, it&#x27;s going to read the old models file,
+[2951.34] Stephen: convert it to a new models file and then reboot itself.
+[2955.22] Stephen: And so that first boot takes a wee bit longer and you need to be a bit patient.
+[2958.58] Stephen: And then obviously it&#x27;s going to give you the usual SD card warnings of, Hey, your
+[2962.26] Stephen: SD card version text doesn&#x27;t match the version that this firmware is.
+[2966.66] Stephen: And you can go and upgrade your SD card as well.
+[2968.94] Stephen: I think they&#x27;ve added that to the flasher.
+[2970.34] Stephen: So that&#x27;s a nice new feature.
+[2971.78] Stephen: They&#x27;ve got, instead of the old companion utility, they&#x27;ve
+[2974.42] Stephen: got a brand new flashing thing.
+[2976.22] Stephen: And it flashes over DFU the same as beta flight does.
+[2979.82] Stephen: So you just plug it in.
+[2980.82] Stephen: You don&#x27;t need to power on your radio.
+[2982.7] Stephen: You plug into DFU mode and you click flash, select the, the latest release
+[2988.54] Stephen: candidate from the dropdown, select your radio, click flash, and it&#x27;ll slowly
+[2992.74] Stephen: upgrade you and then you&#x27;ve got an SD card thing so you can just detach
+[2996.62] Stephen: the radio plug in again, select.
+[2998.42] Stephen: Yep, yep, yep, yep.
+[2999.94] Stephen: Mass storage mode.
+[3002.5] Stephen: And then do your SD card as well.
+[3004.46] Stephen: I think you can also just pop out the SD card and it recognises if you&#x27;ve
+[3007.58] Stephen: got it as a removable drive.
+[3009.14] Stephen: So they&#x27;ve, they&#x27;ve included that and they&#x27;ve, they&#x27;ve broken
+[3011.3] Stephen: out the voice packs as well.
+[3012.74] Stephen: So now you&#x27;ve got voice packs per language.
+[3014.94] Stephen: So it doesn&#x27;t need to include if you&#x27;re in English, they either have to
+[3018.42] Stephen: wait for Hungarian and Russian and German and everything to finish.
+[3023.34] UNKNOWN: Yeah, that is forever deleting that off people&#x27;s SD cards.
+[3027.58] Jack: And that was the worst part was, do you remember that Tony, where I
+[3031.42] Jack: literally snapped your old SD card in half.
+[3035.02] Jack: Because, you know, like those, those provide, the terrain is providing
+[3040.38] Jack: the one gig SD cards that was just slow as balls.
+[3050.82] UNKNOWN: The radios themselves, I think, because it&#x27;s running through that little
+[3054.26] Stephen: arm microcontroller, it really slows down the SD card, even if it&#x27;s a half
+[3057.74] Stephen: decent one.
+[3060.22] UNKNOWN: That makes sense.
+[3060.9] Curry: Well, this is, this is something else to try.
+[3062.54] Curry: It sounds fairly easy to update your radio and you can go back.
+[3068.02] UNKNOWN: Yeah, sorry.
+[3068.7] Stephen: Sorry for speaking of you, Curry.
+[3070.7] Curry: That&#x27;s right.
+[3071.14] Curry: No, I&#x27;ve got enough radios to try it on one and see if I like it.
+[3074.9] Curry: Then we&#x27;ll see if the others want to play.
+[3077.06] UNKNOWN: Yeah.
+[3078.7] Frank: I mean, the other thing is, while we&#x27;re here, you&#x27;ve been
+[3081.22] Frank: playing with Tracer, right?
+[3084.82] UNKNOWN: What?
+[3085.34] Stephen: Yeah, yeah, yes.
+[3086.34] Stephen: Some of these are still on Tracer.
+[3087.7] Stephen: I think this guy over here.
+[3089.94] Jack: Oh, please tell us what this guy over here is.
+[3093.98] Stephen: This guy over here is a little, I quite like these little toothpick, like way
+[3098.62] Stephen: too big to be a toothpick, toothpick frames.
+[3100.66] Stephen: This is a four inch twig mutant frame from Racer X, and it&#x27;s got a
+[3108.14] Stephen: Cadex Vista in there, the original chunky Vista camera, and it&#x27;s got Tracer.
+[3113.34] Stephen: Does it have foldable props or something?
+[3115.3] Stephen: Yeah, it&#x27;s got these new Gemfan F4019 foldable props, so I can just jam it in the bag.
+[3121.3] Stephen: It&#x27;s a nice, it&#x27;s a quad you can kind of just shove in a bag and take
+[3124.7] Stephen: anywhere, and it&#x27;s fairly robust.
+[3126.34] Stephen: It&#x27;s got like a, I think a three mil bottom plate that&#x27;s really chunky, and
+[3130.3] Stephen: it has almost no vibration because it&#x27;s got these built-in cross braces.
+[3133.62] Stephen: It&#x27;s lovely little machine to fly.
+[3135.62] Stephen: And it&#x27;s got a beta FPV 1505, I believe 3800 K, 3600 KV, which gives
+[3143.74] Stephen: it a fair bit of punch on 4S, and I run it with a 750 Marr GMB on there 4S.
+[3150.3] Stephen: Fly is an absolute treat, and I&#x27;ve got Tracer on there, which I&#x27;ll be, will be
+[3155.34] Stephen: replacing, but Tracer is, it&#x27;s been nice.
+[3159.42] Stephen: I can&#x27;t really complain about it.
+[3160.9] Stephen: The only thing I complain is that it takes a lot of power and causes my
+[3164.98] Stephen: tealight to potentially fry itself if I get too over enthusiastic, but I&#x27;m
+[3170.54] Stephen: going to put E LRS on this eventually, but this is kind of my take anywhere
+[3175.38] Stephen: ready to go quad.
+[3176.26] Stephen: So I&#x27;m being careful about it, but yeah, the Tracer setup was okay.
+[3181.02] Stephen: I would complain that that need to run, if you&#x27;re in a Linux user, run a
+[3186.22] Stephen: Windows VM is kind of a pain in the butt and the TBS software looks like
+[3189.82] Stephen: something from 1995, which is, gets my goat in this day and age when, you know,
+[3195.94] Stephen: iNav and Betaflight and BLHeliS and even like BlueJESC is like a one-man
+[3201.34] Stephen: project.
+[3201.82] Stephen: They&#x27;ve got excellent utilities and Tracer is just kind of a sore thumb with
+[3205.98] Stephen: its crossfire style utility, but it works fine.
+[3212.02] Stephen: It&#x27;s just a bit expensive.
+[3215.02] Stephen: It&#x27;s 30 quid a pop.
+[3216.22] Stephen: Those EP2s are 12 quid a pop in the UK or like a tenner if you buy a couple of
+[3222.54] Stephen: them on Ali and I don&#x27;t really want that on TBS software.
+[3228.58] UNKNOWN: Does Tracer, in terms of its usability and range, is that quite similar to E LRS on
+[3235.38] Curry: 2.4?
+[3235.9] Curry: Yeah, it&#x27;s a direct contender for sure.
+[3238.46] Curry: They both give you approximate.
+[3239.66] Curry: You might as well not spend as much and have the cheaper things.
+[3244.29] UNKNOWN: Yeah, this is what I got to.
+[3245.45] Stephen: Like I&#x27;ve got a selection of quads out there, but there&#x27;s another one, two, three,
+[3248.97] Stephen: four, five, six, seven, just under 20 on the wall over there and I was going to
+[3252.53] Stephen: upgrade them and it&#x27;s just, that&#x27;s not going to happen.
+[3256.17] Stephen: Not going to happen on Tracer.
+[3257.29] Stephen: I&#x27;m not going to sink 600 quid into Tracer.
+[3259.97] Stephen: I&#x27;m just not going to do it.
+[3262.21] UNKNOWN: So upgrading to, well, it&#x27;s been, you found it worthwhile because you obviously
+[3268.65] Frank: spent some money on it anyway.
+[3270.81] UNKNOWN: You&#x27;ve upgraded stuff, upgraded some stuff to Tracer.
+[3274.61] Frank: So it was obviously worth kind of some money, but you then found Express LRS and
+[3280.93] Frank: that&#x27;s given you sort of the same sort of feel.
+[3285.77] Stephen: There&#x27;s also the one we haven&#x27;t talked about, right?
+[3288.09] Stephen: So if you run DJI and I do on some of them where it makes sense in a weight
+[3293.37] Stephen: situation, you can also run S bus from DJI.
+[3296.73] Stephen: This guy&#x27;s running S bus from DJI, which means I have to use what I unfondly
+[3303.09] Stephen: call the effing ugly baked potato controller from DJI, which is awkward.
+[3311.37] Stephen: And takes ages to charge and you have to buy expensive DJI batteries and it just
+[3316.13] Stephen: weighs a ton and doesn&#x27;t have a screen on it and just annoys the hell out of me.
+[3321.29] Stephen: So you can do that and you run a special implementation of S bus.
+[3325.93] UNKNOWN: So it&#x27;s not S bus like you&#x27;d be familiar with from FOS guy days.
+[3329.61] Stephen: It&#x27;s fast S bus, which apparently is a 200 Hertz S bus, or maybe it&#x27;s not 200
+[3335.01] Stephen: Hertz, it&#x27;s 200 kilobit or something.
+[3336.61] Stephen: Anyway, they&#x27;ve effectively doubled either the board regular packet
+[3339.09] Stephen: rate to call it fast S bus.
+[3341.85] Stephen: And you can do that if you do DJI and you don&#x27;t need another RX, which is nice.
+[3346.17] Stephen: But at the same time, you have to use Mr.
+[3348.93] Stephen: giant baked potato controller over there with terrible ergonomics.
+[3353.17] Stephen: So, so this is kind of the third route, I guess, if you&#x27;re already DJI.
+[3357.05] Stephen: And I think that more than Tracer made me want to do E LRS because DJI
+[3363.05] Stephen: seemingly has no interest at all in the community.
+[3366.33] Stephen: Like you think Tracer, okay, yeah, they&#x27;re not.
+[3368.93] Stephen: That, you know, they&#x27;ve lots of hyperbole and they don&#x27;t really explain
+[3372.25] Stephen: what technologies inside their products.
+[3374.25] Stephen: They just do kind of market texture, as we call it in the enterprise world,
+[3377.49] Stephen: where you have a big, fancy diagram with lots of exclamation points on it.
+[3381.61] Stephen: And everything&#x27;s bombastic, but DJI, on the other hand, they&#x27;re never
+[3387.21] Stephen: going to make a module ever.
+[3390.09] UNKNOWN: It&#x27;s just, but, but you can have a nice lightweight ish solution yet you&#x27;re stuck.
+[3397.21] Stephen: Um, so I think the real thing that drove me to express LRS was I don&#x27;t want
+[3402.65] Stephen: to spend a lot of money on my DJI quads.
+[3404.69] Stephen: Can I have something that&#x27;s not the DJI controller that&#x27;s a regular
+[3408.53] Stephen: open TX radio, which works here without adding a ton of weight or cost to the quad?
+[3415.69] UNKNOWN: Sorry, that was a bit of a rant.
+[3417.25] UNKNOWN: Apologies.
+[3418.17] Frank: No, great.
+[3421.17] Frank: Yeah.
+[3421.57] Frank: I mean, yeah, well, that&#x27;s definitely made me thinking because, you know,
+[3425.49] Frank: I was saying a few weeks ago, like I&#x27;ve basically got everything on, uh,
+[3432.77] Frank: just old FR sky at the moment.
+[3435.21] Frank: Those receivers rapidly disappearing.
+[3439.73] Frank: I&#x27;m not going to go to access because that&#x27;s stupid.
+[3444.05] Frank: Uh, I don&#x27;t know what was thinking going Tracer, but maybe I will go express LRS.
+[3451.21] Frank: Um, I am, but do you know, well, I mean, I&#x27;ve got the, uh, Brady master take 16.
+[3460.25] Frank: Um, with the multi-particle module, I guess because it&#x27;s all faster and lower
+[3467.01] Frank: and stuff, that&#x27;s not going to be a multi-particle thing.
+[3469.33] Frank: That&#x27;s going to be a dedicated module for express LRS.
+[3472.57] Stephen: There is a PR for the, that&#x27;s a five in one module and that five in one module,
+[3478.53] Stephen: the five as opposed to the four and one module is everything else.
+[3481.21] Stephen: The five is a 900 megahertz chip and it&#x27;s an SX 1276, I believe.
+[3488.01] Stephen: Right.
+[3488.81] Stephen: So the SX, Cintex SX 1276 is the chip that makes all of this 900 megahertz stuff work.
+[3496.25] Stephen: Right.
+[3496.81] Stephen: It&#x27;s used over in our nine.
+[3499.09] Stephen: It&#x27;s used in all the E LRS, 900 megahertz.
+[3502.25] Stephen: When it goes to 2.4 gig, they use the Cintech SX 1280 is just a different
+[3506.69] Stephen: frequency domain, same feature.
+[3508.01] Stephen: So, um, so, so you can run that potentially.
+[3512.57] Stephen: And there is a PR.
+[3513.49] Stephen: If you look at the multi-particle module, there&#x27;s a PR that&#x27;s been waiting since
+[3517.21] Stephen: may that says we want to add express LRS to the five and one module, but they&#x27;re
+[3522.25] Stephen: waiting for it to hit one zero.
+[3523.89] Stephen: So you may get lucky.
+[3524.97] Stephen: And if you&#x27;re happy to run 900 megahertz equipment, you might find that support
+[3528.61] Stephen: lands soon on the other hand, you have a module bay and the happy model.
+[3533.41] Stephen: Um, ES 24 TX is only 30 quid.
+[3537.57] Stephen: So you could just spend 30 quid and kick the tires with the 2.4 gig stuff as well.
+[3543.53] Frank: Not a bad idea, is it?
+[3546.13] Frank: It looks nice.
+[3547.89] Frank: It&#x27;s out of stock at unmanned tech.
+[3550.01] Frank: If anyone in the chat knows where it&#x27;s in stock, let me know.
+[3553.33] Stephen: I picked up one for my man tech a while back.
+[3555.65] Stephen: Um, they will have more stock in there.
+[3557.49] Stephen: Definitely still producing them.
+[3559.17] Stephen: Or you can always just go to the discord and like people in the UK.
+[3562.81] Stephen: Um, I got one from fail safe FPV for the tea light.
+[3566.57] Stephen: And, uh, I&#x27;d say great customer service.
+[3569.29] Stephen: Great guy.
+[3570.05] Stephen: Um, it&#x27;s made me an internal tea light one as well.
+[3573.61] Stephen: So I&#x27;m actually going to put it inside the tea light casing this time and, and
+[3577.85] Stephen: make it just a complete stealth build, if you will.
+[3580.97] Stephen: So it&#x27;s going to have the four and one and also express LRS all inside the radio.
+[3586.49] UNKNOWN: Richard Boric reckons hobby RC.
+[3589.53] Frank: I will, I will have a look.
+[3593.61] UNKNOWN: It&#x27;s nice and cheap.
+[3598.12] UNKNOWN: It certainly seems to have no downsides currently.
+[3600.16] Curry: Wow.
+[3601.88] Curry: It sounds like we should try it.
+[3603.48] Stephen: If you&#x27;re someone, the only downside is if you&#x27;re totally scared and you want
+[3607.64] Stephen: customer service and tons of documentation, but everyone&#x27;s been super friendly.
+[3613.64] Stephen: Uh, go on their discord server and ask.
+[3615.6] Stephen: And there&#x27;s just legions of people ready to help you.
+[3618.16] Stephen: It&#x27;s really been a great experience.
+[3619.72] Stephen: I have to say.
+[3621.6] UNKNOWN: Hmm.
+[3622.88] UNKNOWN: Very good.
+[3624.92] Frank: Is Jack returning?
+[3626.12] Frank: Do we know?
+[3627.76] Frank: So probably very interesting Chad gentleman.
+[3637.52] Jack: He seemed to have adopted Frank from our ranks.
+[3642.68] Jack: Um, I&#x27;ve got my buddy Chris.
+[3645.8] Jack: He might, he might know some modules and stuff.
+[3648.96] Jack: He&#x27;s been running the open LRS.
+[3653.16] Jack: So maybe we could have a chat with him.
+[3655.4] Jack: It&#x27;s not open LRS.
+[3657.16] Jack: Express LRS, open LRS was this ancient system, which I think might have some
+[3665.72] Stephen: link, but no real tangible link to the project.
+[3668.48] Stephen: No, it&#x27;s not.
+[3672.88] Frank: Okay.
+[3674.08] Frank: Well, before we sign off, I just want to say thank you to a few people who have
+[3681.4] Frank: expressed some interest in LDO.
+[3684.12] Frank: No, uh, we haven&#x27;t worked out where, what, when, how, but there has been some
+[3690.6] Frank: interest, um, Ben Scarborough and who else did we have saying, uh, Bajarasi who I did
+[3701.24] Frank: see in the chat earlier, um, both sort of reached out and I think someone else as
+[3706.32] Frank: well, uh, said they&#x27;re interested in, in having a meetup, uh, somewhere at some
+[3711.88] Frank: point. So, uh, let me know if anyone else is interested, um, the more people that
+[3719.24] Frank: there are interested, the more likely I am to do something.
+[3722.16] Frank: So yeah, drop, drop us an email.
+[3727.52] Frank: Let&#x27;s join out at gmail.com.
+[3729.64] Frank: Messages on Instagram at let&#x27;s turn out.
+[3732.56] Frank: Send us a message on Facebook again, facebook.com slash let&#x27;s turn out or drop
+[3738.08] Frank: a comment after the show, uh, on, on one of the YouTube things.
+[3743.76] Frank: Uh, let us know.
+[3745.68] Frank: Uh, yeah, just stick as a thing, not on the stream so that it exists permanently
+[3751.44] Frank: and they&#x27;re far more likely to see it.
+[3753.6] Frank: Um, but yeah, we&#x27;ll, we&#x27;ll maybe try and sort something out.
+[3759.78] Jack: Thank you.
+[3760.42] Jack: You&#x27;ve been listening to lecture drone out a massive thank you to all our
+[3764.86] Jack: patrons and everyone who tunes in and watches and listens to us.
+[3770.02] Jack: Does the banner work this week?
+[3771.94] Jack: Frank, let&#x27;s find out.
+[3775.86] UNKNOWN: Or do we have to message, does it, will it work?
+[3779.7] Jack: Will it go all the way?
+[3781.78] Jack: Anyway, tonight you&#x27;ve been joined by, uh, Lord of master, head of LDO.
+[3787.94] Jack: No.
+[3788.58] Jack: Andrew says Frank, bye.
+[3791.3] Jack: Everyone&#x27;s favorite little munchkin.
+[3795.42] Jack: Bonjour.
+[3796.86] Jack: No, you knew it was everyone&#x27;s favorite.
+[3800.02] Jack: Currie kitten.
+[3801.82] UNKNOWN: Goodbye.
+[3803.14] Jack: And I&#x27;m sorry.
+[3804.66] Jack: I confused open LRS with express LRS.
+[3810.66] Stephen: Thank you so much guys.
+[3812.98] Stephen: And I will look out for you in the chat.
+[3815.82] Jack: Were you shouting at us when we don&#x27;t know anything, but you are very
+[3819.3] Jack: welcome to come back on an interview.
+[3820.66] Jack: Like, and I&#x27;ve been bright until I fly.
+[3823.42] Jack: Thank you.
+[3823.9] Jack: Good night.
+[3824.98] UNKNOWN: Bye.
+[3826.22] Curry: Bye.
+[3827.54] Curry: Telemetry loss.
+</pre></body></html>

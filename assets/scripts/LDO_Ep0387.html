@@ -1,0 +1,1560 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0387—LDO 387 - Task Saturated</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 387 ===
+Title: LDO 387 - Task Saturated
+Recorded: 2023-01-26
+Hosts: Stephen &quot;Belrik&quot; Howell, Wayne &quot;CurryKitten&quot; Andrews, Jack &quot;Brightontillifly&quot; Nash, Tony &quot;TheTonstar1&quot; Marchant, Andrew &quot;Frank&quot; Hyams
+Guest(s): (none recorded)
+Total audience: 1,526
+Platforms: YouTube (https://www.youtube.com/watch?v=KUQAGvo_R-0); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1434067567-letsdroneout-ldo-387-task-saturated.mp3)
+=====================================
+
+#LetsDroneOut #LDO #podcast #drone #mulitrotor #quadcopter #fatshark #impulseRC #ethix #brightontillifly #TeamBlackSheep #FPVUK #BLHeli #lipo #KISSULTRA #KissESC #esc #FlyDuino #JoshuaBardwell #Skitzo #Alien5 #MrSteele #FPVRacing #MiniAirShow #LondonFPV #UKFPV #betaflight #fpvdrones #FPVRacing #MiniQuad #podcast #fpvwing
+let&#x27;s drone out #BrightontillIfly #Fpv, #Drone, #Drone racing  #Quadcopter, #Gopro, #Drone,, #KissFc, #KissEsc&#x27;s #FPVwing #LondonFPV, Uk, #Easa #betaflight #brightontillifly  #FPV #FPVdrones #letsdroneout #interview, #Jack. Brighton fpv, #Naze32, #Help, #Fix #Bug #blhelli, #flyduno #Let&#x27;sdroneout, Alien 5, FPV, Drone, #MiniQuads #Turnigy #MiniQuad #Racing #FPVRacing #FPV #FPVBrighton #FPVUK #lipo#rottingdean #MiniAirshow, #FPV Crash
+
+[0.0] UNKNOWN: Hello! And you&#x27;re listening to Let&#x27;s Drone Out, a special thank you to our lovely patrons that helped donate so that we could pay the editor to remove the swear words and silly things we say. Massive thank you to...
+[14.0] Jack: Carlos Campos
+[16.0] Jack: Art Faulkner
+[18.0] Frank: Sam Dahmer
+[20.0] Frank: On with the show
+[22.0] Tony: Let&#x27;s Drone Out
+[52.16] Jack: Hello, you are listening to Let&#x27;s Drone Out
+[55.16] Jack: Tonight we are joined by everyone&#x27;s favourite curry kitten
+[58.16] UNKNOWN: Hello
+[60.16] UNKNOWN: Stephen
+[62.16] UNKNOWN: Hello
+[64.16] UNKNOWN: And I&#x27;m Bright To The Fly, hello
+[68.16] Jack: And we are joined by Free Sky&#x27;s Fan Club
+[73.16] UNKNOWN: Yeah, that&#x27;s in recognition of a joke that has finally come to fruition where the FR Sky Fan Club now has its own Discord server
+[81.16] Stephen: No way
+[83.16] UNKNOWN: Yes, yes it does
+[85.16] UNKNOWN: How many members?
+[87.16] Stephen: Including the FR Sky Pets Photo Contest
+[89.16] Stephen: How many have we got here?
+[91.16] UNKNOWN: Erm, 22 online at the moment
+[95.16] UNKNOWN: Wowzers
+[97.16] UNKNOWN: Send me an invite
+[99.16] UNKNOWN: Sure
+[101.16] Jack: Failsafe said he got kicked from his server
+[105.16] Curry: He gets kicked from all servers though, doesn&#x27;t he?
+[107.16] Curry: He got kicked from which server?
+[110.16] UNKNOWN: He got kicked from his own server
+[113.16] Stephen: Oh from that server, yeah boy
+[115.16] UNKNOWN: What a joke
+[117.16] UNKNOWN: Well yeah, that&#x27;s the idea
+[119.16] UNKNOWN: Does it need Discord for both of them, says Caroline, very good
+[123.16] UNKNOWN: It is, it is a joke server
+[125.16] UNKNOWN: You&#x27;re not allowed to tell anyone about any problems you have with FR Sky or you get banned
+[131.16] UNKNOWN: No talk with dissenters allowed at all
+[135.16] UNKNOWN: Apparently
+[136.16] Stephen: He&#x27;s got to talk about how R9 has a really nice red case and how great it is
+[141.16] UNKNOWN: Apparently I found out that erm
+[145.16] Jack: The Fox, Fox ear box
+[149.16] Jack: A JR module is really tight with the ghost module
+[155.16] UNKNOWN: Explain what you mean
+[157.16] UNKNOWN: Apparently if you try and put a ghost module in your Fox ear box
+[163.16] Jack: It&#x27;s a tight fit
+[165.16] Jack: What&#x27;s the Fox ear box?
+[168.16] UNKNOWN: Is it Radiomaster?
+[171.16] UNKNOWN: Didn&#x27;t I?
+[172.16] Jack: Yeah, you said Fox ear
+[174.16] Stephen: Yeah, my mistake
+[176.16] UNKNOWN: Yeah, right
+[178.16] UNKNOWN: Sorry, Radiomaster
+[180.16] Stephen: Well it&#x27;s better than it just falling out
+[182.16] UNKNOWN: We can test it
+[184.16] Jack: It&#x27;s apparently very very tight
+[187.16] UNKNOWN: Aww
+[189.16] Stephen: Well, if you&#x27;ve got a load of Radiomaster products
+[192.16] Stephen: You probably have a bit of their little lubricant as well
+[195.16] Stephen: You could use your Radiomaster lubricant to help slide in your module, couldn&#x27;t you?
+[200.16] Jack: Yeah, it looks like Jack Sticky Glue
+[204.16] UNKNOWN: Jack Sticky Lubricant
+[207.16] UNKNOWN: I can&#x27;t find it
+[210.6] UNKNOWN: Found the module
+[212.6] UNKNOWN: Surely the module&#x27;s harder to find
+[218.88] Curry: No, well I thought all the modules and radios were lined up in that little shelf
+[223.88] Curry: Maybe I&#x27;ve got the radio in my bag or something
+[228.88] UNKNOWN: Feel free, go find it
+[230.88] Stephen: I&#x27;m going to go find it
+[232.88] Curry: Because this sounds like a piece of useful stuff
+[236.88] Stephen: It&#x27;s journalism in action
+[238.88] Stephen: In action, let&#x27;s do it
+[240.88] Jack: Cole, where are you? Why aren&#x27;t you on?
+[243.88] UNKNOWN: Have you been checking the threads?
+[245.88] Stephen: Cole is recovering from quite a lot of travelling
+[249.88] Stephen: Yeah, I know
+[250.88] Stephen: Well, we have here for our audio listeners
+[252.88] Stephen: Curry has produced a Boxer radio
+[255.88] UNKNOWN: With fancy gameplay protect
+[256.88] Stephen: We have a ghost module
+[258.88] Stephen: Duh duh duh duh
+[259.88] UNKNOWN: It&#x27;s quite tight, yeah
+[264.06] UNKNOWN: Ooh, ooh, ooh
+[266.06] UNKNOWN: Public service connection
+[268.06] Jack: It does go in
+[270.06] Jack: It does go in
+[271.06] UNKNOWN: And it&#x27;s eating harder
+[273.06] Jack: Wiggle on the way out, yeah
+[275.06] UNKNOWN: Quite tight, yeah
+[277.06] Curry: I&#x27;ve often noticed there&#x27;s some issues
+[280.06] Curry: Depending on what module you&#x27;ve got
+[282.06] Curry: The actual TBS...
+[286.4] UNKNOWN: Help me out
+[287.4] Curry: Was the module?
+[288.4] Stephen: No, the module
+[289.4] Stephen: Crossfire, Tracer
+[290.4] Stephen: Crossfire
+[291.4] Curry: The Crossfire Micro
+[293.4] Curry: I always found very difficult to align to the pins
+[296.4] Curry: On the Taranis
+[297.4] Curry: The first time I did it, the pins managed to go somewhere else
+[300.4] Curry: Down the case
+[301.4] UNKNOWN: And didn&#x27;t go very well at all
+[303.4] Curry: Oh, that&#x27;s very bad
+[304.4] UNKNOWN: Whereas in the Free Sky Fanclub&#x27;s defence
+[307.4] Curry: The R9 module had these nice holes
+[310.4] Curry: That sort of got the pin and directed it down
+[312.4] Curry: So the R9 module was actually very good at connecting
+[315.4] Curry: Ahead of its time in many ways, including...
+[317.4] Curry: Ahead of its time in many ways
+[318.4] Curry: Completely shot to many other ways
+[320.4] Stephen: But, you know, swings and roundabouts
+[322.4] Stephen: It also included a cutting-edge poll about the favourite protocols
+[326.4] Stephen: That people wanted to use on FRSky
+[329.4] UNKNOWN: Where I think we actually have some interesting contenders
+[333.4] Stephen: That are taking the lead
+[335.4] Stephen: Including, I believe...
+[338.4] UNKNOWN: Where have we got...
+[340.4] UNKNOWN: Let&#x27;s check this
+[341.4] Stephen: So we&#x27;ve got sbus, fport, sport, fport2, sport2, gport, hport
+[346.4] Stephen: And jport 3.5
+[350.4] UNKNOWN: Yeah, of those
+[352.4] Stephen: Only a small minority actually exist
+[355.4] Stephen: But they are not necessarily the most popular protocols
+[359.4] UNKNOWN: Was that a case of mass banning anybody that voted for protocols that didn&#x27;t exist?
+[364.4] UNKNOWN: No, no, actually doing pretty well
+[368.4] Stephen: And jport 3.5, a protocol rumored to be so sophisticated
+[372.4] Stephen: That it&#x27;s only inverted half the time for compatibility reasons
+[375.4] Stephen: Is putting in strong innings
+[377.4] Stephen: This sounds a bit like whenever there&#x27;s a census
+[380.4] Curry: We find that the second most popular religion in the whole of the UK is Jedi
+[386.4] Curry: Because that&#x27;s what people write down
+[388.4] Curry: Well, if there&#x27;s one thing people...
+[390.4] Stephen: You know, Jedi is a renowned for
+[392.4] Stephen: It&#x27;s not shouting about things in case the Sith come after them
+[395.4] Stephen: So you can understand that
+[398.4] UNKNOWN: This is fair
+[399.4] Curry: They operate in the shadows
+[401.4] UNKNOWN: Unlike other witnesses
+[403.4] UNKNOWN: What&#x27;s been happening with you guys this week? Has anybody managed to go out?
+[406.4] Curry: I was not here for about five days
+[409.4] UNKNOWN: I did bravely go out
+[411.4] Stephen: I managed a bit of messing around
+[414.4] Stephen: And I flew a walk snail a bunch
+[416.4] Stephen: Because it&#x27;s been growing on me
+[418.4] Stephen: It seemed like a bit of a car crash to start with when it was first released
+[422.4] Stephen: But they seem to be putting out the updates thick and fast
+[425.4] Stephen: And I&#x27;ve been experimenting a bit with the onboard DVR
+[428.4] Stephen: And it looks like they&#x27;re actually making visible improvements
+[431.4] Stephen: It&#x27;s gone from sort of a murky, smeary, overly compressed mess
+[435.4] Stephen: To something that...
+[437.4] UNKNOWN: It&#x27;s not GoPro quality, but it&#x27;s much better DVR
+[440.4] Stephen: So I&#x27;m quite pleased with that
+[442.4] UNKNOWN: This is good
+[443.4] Curry: Well, you said you were having good success around the park
+[445.4] Curry: Much better than analog for going in and out the trees and that
+[448.4] Curry: And it didn&#x27;t drop off as much as DGI
+[451.4] UNKNOWN: As long as they&#x27;re constantly making improvements
+[453.4] Curry: It&#x27;s good
+[454.4] Curry: I&#x27;ve got the little dinky-doo 1S one in here
+[457.4] Stephen: And they claim four and a half watt output power
+[460.4] Stephen: Someone apparently tells me if you tie it on to four and a half volts
+[464.4] Stephen: It&#x27;s going to pull about two amps, which is a little bit dicey
+[468.4] UNKNOWN: So it might not be one to put on a five volt reg
+[471.4] Stephen: I put this on a five volt reg
+[473.4] Stephen: But I&#x27;ve got a two and a half amp five volt on here
+[476.4] Stephen: If you only have a one amp, it&#x27;s probably going to make things go boof
+[480.4] Stephen: And not be too good
+[482.4] Stephen: But, yeah, it&#x27;s behaved itself
+[485.4] Stephen: It&#x27;s quite fine
+[486.4] Stephen: It seems to do better than FRSky
+[487.4] Stephen: This is the 350 milliwatt 1S version
+[490.4] Stephen: Yeah, it&#x27;s...
+[491.4] Stephen: Sorry, better than DGI
+[493.4] Stephen: DGI at like one watt
+[495.4] Stephen: Seems to do about as well as this at 350
+[497.4] Stephen: So something&#x27;s going on there
+[500.4] UNKNOWN: Cool
+[502.4] UNKNOWN: Tony in the house
+[503.4] Curry: Well, Tony&#x27;s here
+[506.4] UNKNOWN: Sorry, I&#x27;m a bit late
+[509.4] Jack: Aren&#x27;t you meant to be like, you know, claiming that the injections don&#x27;t work
+[515.4] Jack: And the government&#x27;s listening and...
+[518.4] UNKNOWN: All of the above, Jack
+[520.4] Jack: All of the above
+[522.4] UNKNOWN: Pulling the nails out of your dog
+[524.4] Jack: There&#x27;s even doctors admitting that the injections don&#x27;t work anymore
+[528.4] Tony: So, yeah
+[529.4] UNKNOWN: Which injections, to be specific?
+[532.4] Tony: Can&#x27;t say it
+[533.4] UNKNOWN: We get taken off there
+[535.4] UNKNOWN: Do we?
+[536.4] UNKNOWN: Is that because they weren&#x27;t late, the truth come out?
+[539.4] UNKNOWN: It&#x27;s starting to unfold as we speak
+[542.4] Tony: Nanobots!
+[544.4] UNKNOWN: Let&#x27;s hope the nanobots don&#x27;t overrule your vocal chords and cause any outbursts
+[549.4] Stephen: Not yet
+[553.4] Tony: Tony likes to pretend he hasn&#x27;t had a Covid jab, but secretly he has
+[558.4] UNKNOWN: Yeah, right, like I&#x27;ll put that in me
+[560.4] UNKNOWN: Yeah
+[561.4] UNKNOWN: I got it for four days and got rid of it
+[563.4] Tony: Why would I need a Covid jab for that?
+[565.4] Tony: I&#x27;ll just use my health
+[568.4] Tony: And he hates old people
+[570.4] UNKNOWN: Yeah
+[571.4] UNKNOWN: Exactly
+[572.4] Tony: Oh yeah, it stopped the old people getting it, didn&#x27;t it?
+[575.4] Tony: Isn&#x27;t that just Tony doesn&#x27;t like to have anything inside him
+[578.4] Curry: And that&#x27;s why he&#x27;s still refusing a prostate exam
+[581.4] UNKNOWN: Exactly that
+[583.4] Tony: There was a really, really good looking Indian girl once in a hospital who wanted to do that to me
+[590.4] Tony: And I was like, nope
+[594.0] UNKNOWN: This has got right by Dale Nielsen, so I&#x27;ll turn it on
+[597.0] Tony: In case, in case...
+[599.0] Tony: Let&#x27;s change the subject, please
+[601.0] Jack: In case she does it and you actually enjoy it
+[603.0] Jack: There&#x27;s definitely some crossed wires there
+[605.0] Stephen: Confusing medical procedures with sexual activity there
+[609.0] UNKNOWN: The thing is, I mean, obviously Jack said loads of stuff off his bum
+[614.0] UNKNOWN: On a medical point of view, of course
+[616.0] Curry: And I&#x27;ve had multiple ones of these
+[618.0] Curry: And the first lady doctor that did it said, how does that feel?
+[623.0] Curry: And I didn&#x27;t know how to respond
+[624.0] Curry: I said, well, it&#x27;s a bit new and a bit different, if I&#x27;m honest
+[627.0] Curry: But it&#x27;s all right, carry on
+[631.0] UNKNOWN: Yeah, she was really pretty as well
+[634.0] Tony: What an idiot
+[635.0] Tony: Never mind
+[636.0] UNKNOWN: Oh well
+[637.0] Tony: There you go
+[638.0] Tony: Sorry about that
+[639.0] Tony: Who&#x27;s sitting on Jack&#x27;s bed?
+[641.0] UNKNOWN: No one
+[643.0] Tony: What&#x27;s Jack been building? Jack was waving round something with a bit of fresh soldering on it
+[649.0] Tony: That is something to do with you, my friend
+[652.0] Jack: Oh, well done
+[654.0] UNKNOWN: Yeah, so it&#x27;s almost there
+[658.0] Jack: I just kind of need to get round to finishing it off
+[662.0] Jack: Get the drill out
+[665.0] UNKNOWN: The drill?
+[667.0] UNKNOWN: Yeah, make some holes
+[669.0] UNKNOWN: Jesus
+[671.0] Jack: He builds quads differently to the way I do it
+[677.0] Stephen: There was a lot of chat last week about old equipment still with fail safety
+[681.0] Curry: Everyone&#x27;s still making old stuff and trying to make it fly, then
+[685.0] UNKNOWN: I think so
+[687.0] Jack: I have got
+[690.0] Jack: **** ESCs
+[692.0] UNKNOWN: No, I&#x27;ve got a full set
+[694.0] Jack: So if you want to get to it
+[697.0] Jack: And if you want to cough up a board can
+[700.0] UNKNOWN: I can get on it
+[703.0] UNKNOWN: Tail crap all the ESCs, what are they?
+[706.0] Jack: I think they&#x27;re plush, I don&#x27;t know
+[709.0] Jack: Martian McFly, are you here? Yeah, he is
+[712.0] UNKNOWN: Hello, he will let you know
+[714.0] Curry: Plush can run BL Heli, not BL Heli S or anything
+[718.0] Jack: No, I don&#x27;t think it does
+[721.0] UNKNOWN: Dampen light
+[723.0] Jack: No, it doesn&#x27;t
+[725.0] Curry: It doesn&#x27;t do much extra
+[727.0] UNKNOWN: Yeah, I was plush to any amp
+[730.0] Jack: There you go
+[731.0] UNKNOWN: But it&#x27;s a lot of fun to mess around trying to find the contact points to flash them for almost no gains at all
+[737.0] UNKNOWN: He&#x27;s broken out
+[739.0] Jack: You know, I could
+[741.0] UNKNOWN: You&#x27;re alright
+[742.0] Jack: I don&#x27;t think I can
+[745.0] UNKNOWN: I&#x27;m not too sure if I can actually get the
+[753.0] Jack: Arduino to like, you know, flash that and have it go into the mode
+[760.0] Jack: BL Heli is just originally BL Heli
+[764.0] Jack: And then BL Heli S then came out
+[769.0] Jack: And was a bit newer and did a few different things
+[774.0] Jack: And then 32 is the licensed 32 bit version of BL Heli
+[782.0] Jack: Yeah, it was BL Heli S like the sort of
+[787.0] Jack: It was a different processor, I think
+[790.0] UNKNOWN: Am I right in thinking that?
+[792.0] Jack: And it was
+[794.0] Curry: I don&#x27;t know, after ages ago when I managed to flash the original BL Heli then everything went crazy for Simon K
+[801.0] Curry: For that time and then it went, oh, BL Heli S is here
+[804.0] Curry: It&#x27;s like, oh my god, this is amazing
+[806.0] Curry: We got very excited for Jack to try and flash something that was made in the last couple of years
+[811.0] UNKNOWN: Let&#x27;s see what he feels like, wrenched out
+[814.0] Stephen: Wrenched bodily out of the early noughties into a recent era
+[819.0] UNKNOWN: Are we going to meet up and fly these drones at the same time, these old school ones?
+[827.0] UNKNOWN: Well, no, I mean like
+[830.0] UNKNOWN: Yeah, BL Heli S is the next generation of code following the base of BL Heli
+[835.0] Jack: BL Heli S is designed for superior performance in multi rows and uses hardware generated mode to PWM for smooth throttle and silent operation
+[848.0] Jack: All code uses dampened light mode
+[851.0] UNKNOWN: Yeah, see, whereas BL Heli was mainly for helicopters originally
+[858.0] UNKNOWN: No one would have guessed this mystery, clever naming
+[862.0] UNKNOWN: I was flashing stuff off of JESC today
+[866.0] Stephen: Anyone remember JESC?
+[869.0] UNKNOWN: Yes, this is the magical thing that got you extra flight time on small little quads
+[874.0] Curry: It actually worked quite well, I only remember doing one quad though
+[878.0] UNKNOWN: It was the first one to give you like 48 and 96k on those and it gave you RPM monitoring
+[884.0] Stephen: But I was just being too... my short attention span kicked in and I couldn&#x27;t resist the urge to put a stupid startup melody on one of my quads
+[896.28] UNKNOWN: I&#x27;ve got one on one of mine, I think
+[899.28] Tony: Jack put something, I can&#x27;t remember what he put on one
+[902.28] Tony: I&#x27;ve got so many quads and I haven&#x27;t played them for so long
+[905.28] Tony: One second
+[906.28] Tony: I can&#x27;t remember
+[908.28] Tony: I think it&#x27;s Back to the Future, maybe
+[911.28] Tony: What those little dah dah dah dah dah dah dah dah dah dah
+[914.28] Curry: Something like that
+[915.28] Curry: Something like that
+[916.28] Tony: Yeah
+[917.28] UNKNOWN: I&#x27;m pretty sure it was, I can&#x27;t remember now
+[920.28] UNKNOWN: Tell me if you can guess this one, Chaps
+[922.28] Stephen: Jack might have a better time guessing this one, we&#x27;ll see
+[934.17] UNKNOWN: Something&#x27;s gonna... I don&#x27;t know
+[937.17] Curry: I know the song
+[939.17] Tony: Yeah, so do I
+[940.17] Tony: It&#x27;s like hip-hop rap song, but I don&#x27;t know what it is
+[944.17] Tony: Everybody shout at Steven for plugging a quality with its props on
+[947.17] Curry: Because I get shouted at every time it happens
+[949.17] Curry: Damage!
+[950.17] UNKNOWN: Your finger&#x27;s gonna come off
+[952.17] UNKNOWN: X gonna give it to you, yeah, that takes the time
+[956.17] Tony: Yeah, I have like a little lead that I did here
+[959.17] Stephen: So it&#x27;s got one of those little barrel jacks to an XD30
+[964.17] UNKNOWN: I just have that on a laptop power transformer
+[967.17] Stephen: I know it can&#x27;t do too much damage because if I try and run the props at anything above
+[973.17] Stephen: idle speed, the ESC just resets, the voltage just nose dies
+[977.17] Stephen: and goes boop boop, and the whole thing resets
+[979.17] Stephen: So sort of the safety measure
+[981.17] Stephen: Apparently it&#x27;s no good explaining that it&#x27;s safe
+[984.17] UNKNOWN: People complain that you&#x27;re setting a bad example
+[987.17] UNKNOWN: Well, I just explained my bad example, they can deal with it
+[990.17] Stephen: There you go
+[992.17] UNKNOWN: Send your severed fingers to Brighten Till I Fly, Brighton
+[998.17] UNKNOWN: Jack&#x27;s got a microscope and a soldering iron eel, attempt to reattach it
+[1001.17] Curry: Sort it out, sort it out, be fine
+[1003.17] UNKNOWN: Bit of tape
+[1004.17] Stephen: It&#x27;s got loads of adhesives
+[1006.17] Stephen: That&#x27;s cool
+[1009.64] UNKNOWN: So, you must have bought something this week, Stephen
+[1012.64] Curry: Because it&#x27;s a week with days in it
+[1014.64] Curry: What?
+[1015.64] Stephen: No, no, I haven&#x27;t, no
+[1016.64] Stephen: What&#x27;s going on?
+[1017.64] Stephen: No
+[1019.64] UNKNOWN: Is she listening?
+[1021.64] UNKNOWN: I can&#x27;t see her in the background
+[1024.64] UNKNOWN: Actually, I&#x27;ve got a couple of frames
+[1026.64] Stephen: There you go
+[1029.64] Stephen: Yeah, I can&#x27;t find them
+[1034.36] Stephen: I got a little two and a half inch frame
+[1036.36] Stephen: I was going to do a little two and a half inch rebuild
+[1038.36] Stephen: Because I was enjoying these walks now and stuff so much
+[1040.36] Stephen: So, I might do one of these but digital
+[1044.36] UNKNOWN: We&#x27;ll see
+[1046.36] UNKNOWN: We shall see
+[1047.36] Curry: There was a phrase I heard while I was away
+[1050.36] Curry: And we were about to go on a shark cage dive
+[1053.36] Curry: And someone said, if I don&#x27;t make it back
+[1056.36] UNKNOWN: Tell my wife not to sell all my bike stuff
+[1059.36] Curry: For what I told her I paid for it
+[1061.36] Curry: Which seems to translate very well to FPV
+[1063.36] Curry: Everything
+[1064.36] Curry: It&#x27;s about 20 quid
+[1065.36] UNKNOWN: And that does it
+[1066.36] Curry: No, don&#x27;t sell it for 20 quid
+[1068.36] UNKNOWN: I&#x27;m in a chat
+[1069.36] Tony: I&#x27;m in a chat called the 20 quid
+[1071.36] Tony: It&#x27;s 28 in 20 quid
+[1074.36] Tony: You just have, in your will you have to have this
+[1076.36] Curry: Nominated contact who&#x27;s then responsible
+[1078.36] Curry: For selling off your 20 quid gear
+[1081.36] Curry: At more reasonable prices
+[1084.36] UNKNOWN: Yeah, so I got a little toothpick frame
+[1086.36] Stephen: And I found, I quite like the tiny trainer
+[1089.36] Stephen: But I thought it looked a bit boring in black
+[1092.36] UNKNOWN: And they didn&#x27;t have any of the other colors available
+[1094.36] Stephen: But I found on Ali there was a clone of it
+[1096.36] Stephen: That looked half decent
+[1097.36] Stephen: And came with all the body canopy
+[1099.36] Stephen: In like aquamarine
+[1101.36] Stephen: So I got one of those
+[1102.36] Stephen: Just for giggles
+[1103.36] Stephen: Because I had the HD0 for a while
+[1106.36] Stephen: If you could have HD0 you might as well put it in something that&#x27;s like a racing quad
+[1110.36] Stephen: Because it&#x27;s meant for that
+[1112.36] Stephen: So I just had it in a little toothpick for ages
+[1114.36] Stephen: I thought I&#x27;d put it in the tiny trainer
+[1115.36] Stephen: Do it properly
+[1117.36] UNKNOWN: As you&#x27;ve got HD0, have you used it for, I mean you haven&#x27;t got the
+[1121.36] Curry: The SuperDuke goggles
+[1123.36] Curry: No
+[1124.36] Stephen: It&#x27;s got the VRX, it&#x27;s got the old SharkBite VRX
+[1126.36] Stephen: I updated it this week so it&#x27;s got the fancy OS
+[1128.36] Stephen: Is that the old old one so it&#x27;s not like the new one that slots on
+[1132.36] Curry: Oh because I was interested to know what it&#x27;s like
+[1135.36] Curry: It&#x27;s the new old one
+[1136.36] Stephen: It&#x27;s not the one that&#x27;s a monitor
+[1138.36] UNKNOWN: But it&#x27;s the one that&#x27;s the thinner version with the white plastic on the front
+[1142.36] Stephen: And then after that they did one that was all black plastic
+[1145.36] Stephen: And was a bit thicker because they ran out the chips
+[1147.36] Stephen: For the thinner one
+[1149.36] Stephen: And then they did the goggles
+[1150.36] Stephen: So I&#x27;ve got the one with the white plastic bit on it
+[1154.36] UNKNOWN: So I was quite interested to know
+[1156.36] Curry: Although I guess you won&#x27;t know yet unless you get the latest and greatest in the goggles and stuff
+[1161.36] Curry: What&#x27;s it like if you fly it the same as like the walks now
+[1165.36] Curry: Where you&#x27;re going far out around the trees and stuff
+[1168.36] Curry: Because obviously it&#x27;s got more digital break up
+[1171.36] Curry: But is it flyable or is it too bad?
+[1174.36] Curry: It&#x27;s 200 milliwatt on that board
+[1177.36] Stephen: Because only the freestyle one does like one watt output power
+[1180.36] Stephen: And 200 milliwatt whenever I went behind trees it was breaking up
+[1184.36] Stephen: And I put a couple of decent omnis that I was getting good results with my analog stuff on there
+[1189.36] Stephen: And I had what I thought was a good omni on the
+[1193.36] Stephen: Yeah
+[1194.36] Stephen: I&#x27;ve got a decent omni on the quad itself
+[1197.36] Stephen: But it did break up an awful lot
+[1199.36] Stephen: It seemed to be more prone to interference
+[1202.36] UNKNOWN: Yeah
+[1203.36] Stephen: It&#x27;s not my favorite
+[1204.36] Stephen: But I thought I&#x27;d give it another shot because you know
+[1207.36] Stephen: I haven&#x27;t gone back to it in a couple of months
+[1211.36] UNKNOWN: Can&#x27;t even see it now
+[1212.36] Stephen: It&#x27;s kicking around here somewhere
+[1214.36] Stephen: They just updated it all
+[1215.36] Stephen: So yeah they&#x27;ve got the color OST
+[1217.36] Stephen: They&#x27;ve got you know the fancy little green battery elements that go green and amber red
+[1221.36] Stephen: And all that stuff now it looks a bit better
+[1224.36] Stephen: But because the goggles and
+[1227.36] Stephen: The goggles have a fancier video processor
+[1229.36] Stephen: And they can do transparency
+[1231.36] Stephen: And they can do a faster update rate
+[1233.36] Stephen: But the old VRX apparently if you run with the latest updates
+[1237.36] Stephen: Goes down to like three frames a second
+[1240.36] UNKNOWN: Which is
+[1242.36] UNKNOWN: Not the video but the OST
+[1244.36] Stephen: So you&#x27;ve got this you know super low latency video
+[1246.36] Stephen: But then all the OST elements only update
+[1249.36] Stephen: Yeah
+[1250.36] Stephen: Three hertz
+[1251.36] UNKNOWN: Well that&#x27;d be interesting I&#x27;m doing a full punch out wouldn&#x27;t it
+[1254.36] Curry: Because you&#x27;d be like my battery&#x27;s doing really well
+[1256.36] Curry: And then suddenly it&#x27;s like oh no
+[1257.36] Curry: My battery&#x27;s fine yeah
+[1258.36] Curry: It&#x27;s gone down to nine volts and it&#x27;s a success
+[1260.36] Curry: It won&#x27;t be everywhere
+[1263.36] UNKNOWN: I think someone&#x27;s getting a bit of a
+[1265.36] UNKNOWN: A curry kitten going on
+[1267.36] Tony: Someone wants you to move your
+[1269.36] Tony: Yeah camera up a bit
+[1271.36] UNKNOWN: Yeah it&#x27;s because they keep trying to scroll up
+[1273.36] Curry: To see the rest of your head
+[1275.36] UNKNOWN: It&#x27;s slightly off
+[1276.36] Curry: Yeah not missing anything folks
+[1278.36] Stephen: It&#x27;s just shiny
+[1279.36] Stephen: This is shiny
+[1280.36] Tony: How do you get it?
+[1281.36] Tony: We like to check it out
+[1282.36] Tony: If you want to I was just
+[1283.36] Stephen: Showing off my fancy t-shirt
+[1286.36] UNKNOWN: It looks like
+[1287.36] Tony: I can move it if you want
+[1288.36] Tony: In background to Mr Miyagi&#x27;s
+[1293.54] UNKNOWN: Daniel Sen&#x27;s Fight School
+[1297.52] UNKNOWN: Without the
+[1298.52] Tony: A little bit
+[1299.52] Tony: Plant them
+[1300.52] Stephen: More
+[1301.52] Tony: Miyagi though
+[1302.52] Stephen: What does Audio Gek say?
+[1304.52] UNKNOWN: Audio Gek up a bit
+[1306.52] Stephen: Down a bit
+[1307.52] Stephen: Down a bit
+[1308.52] Stephen: Up a bit
+[1309.52] UNKNOWN: I mean it&#x27;s just a massive
+[1310.52] Stephen: Headband and a shiny head
+[1311.52] Stephen: But you&#x27;re welcome
+[1313.52] Curry: Shiny happy people
+[1316.52] Tony: Excuse me for yawning
+[1317.52] Tony: Did anyone see Ken Heron&#x27;s video?
+[1319.52] Tony: You&#x27;re trying to fly the
+[1321.52] UNKNOWN: DJI whoop
+[1323.52] Tony: And every time he flew
+[1324.52] Tony: No
+[1325.52] Tony: He flew
+[1326.52] Tony: You literally have to plug your
+[1327.52] Tony: Phone in to the goggles
+[1328.52] Tony: To make it work
+[1329.52] UNKNOWN: Oh I saw it a little while ago
+[1331.52] Curry: Because he was talking about
+[1333.52] Curry: The use of
+[1335.52] UNKNOWN: What&#x27;s it called?
+[1336.52] Curry: Remote ID wasn&#x27;t it?
+[1337.52] Curry: And it says
+[1338.52] UNKNOWN: Plug into your phone
+[1339.52] Curry: Before you can take off
+[1340.52] Curry: And so let him arm it
+[1342.52] Curry: And then he&#x27;s like
+[1343.52] Curry: I&#x27;m going to unplug again
+[1344.52] Curry: And then it would sort of
+[1345.52] Curry: Turn itself off
+[1346.52] Curry: So he literally had to
+[1348.52] UNKNOWN: Put the phone in all the time
+[1350.52] UNKNOWN: Which looked really annoying
+[1352.52] UNKNOWN: Yeah because it&#x27;s dangling
+[1353.52] Tony: Like there
+[1355.52] Tony: Well I think you could
+[1356.52] Tony: Probably get a longer
+[1358.52] UNKNOWN: Longer wire
+[1359.52] Tony: And stick it on your lap
+[1360.52] Tony: But I mean
+[1362.52] UNKNOWN: Do you reckon that&#x27;s coming here?
+[1365.52] UNKNOWN: I hope not
+[1367.52] UNKNOWN: I mean to be fair
+[1369.52] UNKNOWN: Even if it did
+[1370.52] Curry: I don&#x27;t think it affects
+[1371.52] Curry: Any of ours
+[1372.52] Curry: Apart from
+[1373.52] UNKNOWN: Some of your
+[1374.52] Curry: Jobs Tony
+[1375.52] Curry: But then again
+[1376.52] Curry: You know you have to
+[1377.52] UNKNOWN: Rely on
+[1378.52] Curry: Following the rules
+[1379.52] Curry: Very stringently
+[1380.52] Curry: If you&#x27;re doing any
+[1381.52] Curry: It&#x27;s not so much of a problem
+[1382.52] Curry: But it&#x27;s just like
+[1383.52] Curry: Oh well I&#x27;m not going to put
+[1385.52] Curry: Remote ID on my self built quad
+[1386.52] Curry: Ha ha ha
+[1387.52] Curry: What are you going to do about it?
+[1389.52] UNKNOWN: Yeah
+[1390.52] Frank: I don&#x27;t know
+[1392.52] Curry: I really do think that
+[1393.52] Curry: The CAA and people like that
+[1395.52] Curry: Must have much better things
+[1397.52] Curry: To do with their time
+[1398.52] Curry: Rather than say oh
+[1399.52] Curry: Yeah
+[1400.52] Curry: We can&#x27;t see the fact that you&#x27;re
+[1402.52] Curry: It&#x27;s one of those things
+[1403.52] Curry: That&#x27;s like a political football
+[1404.52] Stephen: It&#x27;s really easy to
+[1405.52] Stephen: Drum up hysteria
+[1406.52] Stephen: And get it in the news
+[1407.52] Stephen: But it doesn&#x27;t really mean a lot
+[1410.52] UNKNOWN: Yeah it&#x27;s a bit
+[1411.52] Curry: It&#x27;s a bit like drone registration
+[1412.52] Curry: It&#x27;s like okay
+[1413.52] Curry: There&#x27;s drones getting
+[1414.52] Curry: You know
+[1415.52] Curry: Smuggling things into prison
+[1416.52] Curry: We need everyone to register
+[1417.52] Curry: So we can tell
+[1419.52] Curry: Who&#x27;s using their drones
+[1420.52] Curry: To smuggle things into prison
+[1421.52] Curry: It&#x27;s like okay
+[1422.52] Curry: Well that&#x27;s
+[1423.52] Curry: That&#x27;s what people bring
+[1424.52] Curry: Any piece of internet
+[1425.52] Curry: Regulation
+[1426.52] Stephen: You just go
+[1427.52] Stephen: Ohh vulnerable people are
+[1428.52] Stephen: Being hurt
+[1429.52] Stephen: Where?
+[1430.52] Stephen: Shh
+[1431.52] Stephen: Don&#x27;t ask us where
+[1432.52] Stephen: Just they&#x27;re being hurt somewhere
+[1433.52] Stephen: And that&#x27;s why we&#x27;re going to
+[1434.52] UNKNOWN: Like remove all these freedoms
+[1435.52] Stephen: Exactly
+[1436.52] UNKNOWN: It&#x27;s like
+[1437.52] Curry: It&#x27;s like the great
+[1438.52] Curry: It was
+[1439.52] Curry: Ohh we need registration
+[1440.52] Curry: I heard the bloke standing
+[1441.52] Curry: On the van
+[1442.52] Curry: Of course
+[1443.52] UNKNOWN: What done it?
+[1444.52] Curry: No?
+[1445.52] Curry: Yeah that&#x27;s what I hear
+[1446.52] Stephen: He had goggles on
+[1447.52] Stephen: Yeah goggles on
+[1448.52] Stephen: Yeah goggles on
+[1449.52] UNKNOWN: No comment
+[1450.52] UNKNOWN: They finally released some
+[1453.52] Stephen: Kind of freedom of information thing
+[1455.52] Stephen: And admitted that they had
+[1456.52] Stephen: Nothing the whole time
+[1458.52] UNKNOWN: No they had zero
+[1459.52] Stephen: And the sightings were
+[1460.52] Stephen: How much did they spend as well?
+[1462.52] Stephen: Zero incredible witnesses
+[1464.52] UNKNOWN: Yeah
+[1465.52] UNKNOWN: I really think it was Tony
+[1467.52] Jack: I mean he was there
+[1468.52] Jack: He did have goggles on
+[1469.52] Jack: He cut
+[1470.52] Jack: Had goggles
+[1471.52] UNKNOWN: Of course he didn&#x27;t have a drone with him
+[1473.52] Jack: He flew the drone
+[1474.52] Jack: He&#x27;s flying
+[1475.52] Jack: He&#x27;s flying
+[1476.52] Jack: The drone was flying around
+[1477.52] Jack: That&#x27;s why he got around here
+[1478.52] Tony: Those flops at night as well
+[1479.52] Tony: With a battery
+[1480.52] Tony: That lasted 5 hours
+[1481.52] Tony: For 45 minutes
+[1482.52] Tony: In the rain
+[1483.52] UNKNOWN: In the rain yeah
+[1484.52] Curry: That&#x27;s it
+[1485.52] UNKNOWN: Ohh Richard Warwick&#x27;s question
+[1487.52] Stephen: Has anyone tried quicksilver?
+[1490.52] UNKNOWN: No
+[1491.52] Stephen: This is the flying android
+[1492.52] Stephen: No I didn&#x27;t
+[1493.52] Stephen: No you might have seen
+[1494.52] Stephen: With the avocado logo
+[1497.52] UNKNOWN: I had a quad
+[1498.52] Curry: Ready to do it with
+[1499.52] Curry: Because this is
+[1500.52] Curry: An alternative
+[1501.52] Curry: It was brushed isn&#x27;t it
+[1502.52] UNKNOWN: Thing yeah
+[1503.52] Curry: I don&#x27;t think it had to be brushed
+[1504.52] Curry: But no
+[1505.52] Curry: That used to be
+[1506.52] Curry: Silver light
+[1507.52] Curry: So basic flight controllers
+[1508.52] Curry: So silver light was the ancient one
+[1510.52] Stephen: That worked on like
+[1511.52] Stephen: F0&#x27;s and F1
+[1513.52] Stephen: And it was for brushed quads
+[1515.52] Stephen: And quicksilver is someone
+[1516.52] Stephen: Who&#x27;s refactored that
+[1517.52] Stephen: For F4&#x27;s and F7&#x27;s
+[1523.52] UNKNOWN: Yes they did Tony Spin
+[1524.52] Tony: I know
+[1525.52] Tony: They had to sell
+[1526.52] Tony: Gatwick
+[1527.52] Tony: It was the Americans
+[1528.52] Tony: Sold Gatwick to France
+[1529.52] Tony: Two days after
+[1530.52] Tony: That incident
+[1531.52] Tony: Yeah
+[1532.52] Stephen: May have had something to do with the sale price
+[1536.52] UNKNOWN: May have knocked a couple of quid off
+[1538.52] Stephen: Or added a couple of quid on
+[1540.52] Stephen: Can&#x27;t walk me in here
+[1542.52] UNKNOWN: Yeah and winners saying that
+[1543.52] Curry: I still have not seen any evidence
+[1545.52] Curry: That drone registration has done anything
+[1546.52] Curry: To help prevent anything
+[1547.52] Curry: No but somehow the admin fee
+[1549.52] Curry: For doing it has gone up
+[1551.52] UNKNOWN: And we&#x27;re all on the list
+[1552.52] Curry: Hooray
+[1553.52] Tony: It&#x27;s essentially a database
+[1554.52] Curry: Which is very expensive
+[1557.52] UNKNOWN: They had to put the price up again
+[1559.52] Curry: Oh police drone flight with Cessna quality
+[1562.52] Curry: Yeah
+[1563.52] Jack: I have not seen this
+[1565.52] Jack: Well a police drone
+[1567.52] Jack: Picked the Cessna
+[1568.52] Jack: Yeah
+[1571.52] UNKNOWN: The flight crew of Cessna 172N
+[1575.52] Jack: Was unaware of the presence of an airborne
+[1576.52] Jack: Remotely piloted aircraft
+[1578.52] Jack: Traffic in the vicinity
+[1580.52] Jack: And due to several factors
+[1582.52] Jack: Active
+[1583.52] Jack: The scanning part of the Cenovoy principle
+[1585.52] Jack: Was unsuccessful
+[1586.52] Jack: And I identify in the complex
+[1589.52] UNKNOWN: York Regional Police Policy
+[1591.52] Jack: Does not require that
+[1593.52] Jack: Visual observers be
+[1595.52] Jack: Trained crew vendors
+[1597.52] Jack: And crew members
+[1600.52] UNKNOWN: Remotely piloted aircraft pilot
+[1602.52] Jack: Did not
+[1604.52] UNKNOWN: Brief the visual observer
+[1605.52] Jack: On his role
+[1606.52] Jack: In his responsibilities
+[1607.52] Jack: Before the operation
+[1608.52] Jack: As a result
+[1609.52] Jack: The visual observer
+[1611.52] Jack: Wasn&#x27;t aware of the requirements
+[1612.52] Jack: May maintain visual line of sight
+[1614.52] Jack: With a remote pilot
+[1615.52] Jack: He didn&#x27;t pay attention
+[1616.52] Jack: To know what he was doing
+[1617.52] Jack: And he broke the law
+[1618.52] Jack: That&#x27;s what that sounds like
+[1619.52] Jack: So did not the fact that his job title
+[1621.52] Curry: Was visual observer
+[1622.52] Curry: Give a clue away
+[1623.52] Curry: That he might be
+[1625.52] Curry: He&#x27;s just going to smoke sticks
+[1627.52] Curry: And stand in the corner, mate
+[1631.52] UNKNOWN: No he was trained in visual scanning
+[1633.52] Curry: Wow
+[1634.52] Stephen: He was in the corner
+[1635.52] Stephen: With a packet of Marlborough
+[1636.52] Stephen: Just sort of
+[1637.52] Stephen: Putting in a few bets
+[1638.52] Stephen: On his phone
+[1639.52] Stephen: That was all
+[1640.52] Stephen: I&#x27;d like to know
+[1641.52] Curry: What height
+[1642.52] Curry: A drone versus
+[1643.52] Curry: The Cessna we&#x27;re at
+[1644.52] Curry: Did one of them
+[1645.52] Curry: Break feet
+[1646.52] Curry: Height limit
+[1648.52] UNKNOWN: The police pilot was flying
+[1649.52] Tony: At 400 feet
+[1651.52] Curry: Just to the left of
+[1652.52] Curry: The flight path
+[1656.8] UNKNOWN: Oh dear, right there
+[1657.8] Curry: Maybe they were trying to
+[1658.8] Curry: Call the Cessna over
+[1659.8] UNKNOWN: I wonder what it was
+[1660.8] Curry: They had a crashing light
+[1661.8] Tony: On the drone
+[1662.8] Tony: I wonder what drone it was
+[1664.8] Curry: Where&#x27;s the lay by?
+[1665.8] Tony: As if it didn&#x27;t
+[1666.8] Tony: It obviously didn&#x27;t
+[1667.8] Tony: This little hand comes out
+[1670.8] UNKNOWN: You have to put that down, sir
+[1673.8] UNKNOWN: So the moment it&#x27;s
+[1676.21] Jack: Leaned up to the police
+[1677.21] Jack: The pilot
+[1678.21] Jack: The piloted aircraft likely was
+[1680.21] Jack: It became task saturated
+[1682.21] Stephen: Task saturated
+[1684.21] UNKNOWN: All right, yeah
+[1686.21] UNKNOWN: I just wasn&#x27;t paying attention
+[1687.21] Jack: I don&#x27;t know
+[1688.21] Stephen: In other words
+[1689.21] Stephen: Flapped about, basically
+[1690.21] Stephen: Task saturated
+[1691.21] Stephen: I often become task saturated
+[1693.21] Stephen: When I can&#x27;t be f***ing
+[1694.21] Stephen: To do something
+[1697.21] UNKNOWN: That&#x27;s
+[1698.21] Stephen: That task saturated from
+[1699.21] Stephen: That means
+[1700.21] Stephen: From the one thing I want
+[1701.21] Stephen: According to my wife
+[1703.21] UNKNOWN: It restricted his ability
+[1704.21] Stephen: To visually monitor
+[1705.21] Stephen: The remotely piloted aircraft
+[1707.21] Stephen: Yeah, I imagine sometimes
+[1708.21] Stephen: Curry, when you&#x27;re task saturated
+[1710.21] Stephen: It restricts your ability
+[1711.21] Stephen: To effectively monitor
+[1712.21] Stephen: The ongoing conversation
+[1713.21] Stephen: With your wife
+[1715.21] UNKNOWN: Yes, I&#x27;m too task saturated
+[1719.21] UNKNOWN: I&#x27;ve seen something shiny
+[1721.21] Curry: Somewhere else
+[1722.21] Curry: And I&#x27;ve gone and followed it off
+[1724.21] Stephen: Sorry, I&#x27;m task saturated
+[1726.21] Stephen: And I cannot do that
+[1728.21] UNKNOWN: We try and make sure
+[1729.21] Curry: Our drone operators
+[1730.21] Curry: Do have ADHD
+[1731.21] Curry: Just in case
+[1733.21] UNKNOWN: We don&#x27;t want them paying
+[1734.21] Curry: Too much attention to the drone
+[1736.21] UNKNOWN: Do we know where it hit?
+[1739.21] UNKNOWN: I don&#x27;t know
+[1740.21] Tony: I mean, it hit the plane
+[1741.21] Tony: It was in the tree
+[1742.21] Tony: So it was a big old thing
+[1743.21] Tony: Oh, there&#x27;s big, big, big
+[1744.21] Stephen: Junker
+[1745.21] Stephen: I didn&#x27;t take down a Cessna
+[1747.21] Tony: So I&#x27;m not so worried
+[1749.21] Tony: About being on a jumbo
+[1751.21] Tony: Unless it actually
+[1752.21] Tony: There should be a separation
+[1753.21] Tony: Of 100 foot and visual line of sight
+[1758.21] UNKNOWN: This is for yours
+[1760.21] Curry: A plane shouldn&#x27;t be below 500
+[1762.21] Curry: The drone shouldn&#x27;t be above 400
+[1764.21] Curry: Unless they&#x27;re in some
+[1765.21] Curry: Flight path for landing or something
+[1766.21] Curry: Unless they&#x27;re landing
+[1767.21] Curry: That implies that the visual observer
+[1768.21] Stephen: Was visually observing
+[1770.21] Stephen: And apparently he decided
+[1771.21] Stephen: That he didn&#x27;t need to do that
+[1773.21] Stephen: After it had taken off
+[1774.21] Stephen: And moved her out a bit
+[1775.21] Stephen: He thought he was done there
+[1778.21] UNKNOWN: I often get bored
+[1779.21] Stephen: Even if you haven&#x27;t got a visual observer
+[1781.21] Curry: If you&#x27;ve got ears
+[1783.21] Curry: You&#x27;d have probably heard a Cessna
+[1784.21] Curry: There&#x27;s only like 400, 500 feet above you
+[1787.21] Curry: I wonder what their birthday rates
+[1788.21] Curry: Are like round out
+[1789.21] Stephen: Around there
+[1790.21] Stephen: Because the police sort of go out on the beat
+[1792.21] Stephen: And then they forget
+[1793.21] Stephen: That they should in fact be policing the area
+[1795.21] Stephen: And just stand around a bit
+[1796.21] Stephen: And don&#x27;t notice anything
+[1797.21] Stephen: Do you think they just left their sirens on?
+[1799.21] Curry: Couldn&#x27;t hear anything
+[1801.21] UNKNOWN: You certainly don&#x27;t have to worry
+[1802.21] Stephen: About speeding tickets
+[1803.21] Stephen: I would have thought
+[1806.21] UNKNOWN: Dear, oh dear
+[1808.21] UNKNOWN: Well I am
+[1809.21] Curry: Good point Clive makes really though, doesn&#x27;t he?
+[1811.21] Curry: It&#x27;s like
+[1812.21] Curry: So why are the rules
+[1813.21] Curry: And I can survive a collision with my Matrice?
+[1815.21] Curry: Because our little fighting drone&#x27;s here
+[1816.21] Curry: And it&#x27;s not going to do anything
+[1817.21] Curry: That&#x27;s what I was trying to say, yeah
+[1819.21] UNKNOWN: Well, it&#x27;s all about the
+[1821.21] Stephen: It&#x27;s about conservation momentum, right?
+[1824.21] Stephen: So a big Matrice that&#x27;s barely moving
+[1826.21] Stephen: And clonks into a Cessna
+[1828.21] Stephen: With a, you know, combined collision speed
+[1830.21] Stephen: Of maybe 80 mile an hour
+[1832.21] Stephen: Is maybe not so bad
+[1834.21] Stephen: Compared to something that&#x27;s hurtling
+[1836.21] Stephen: Along a hundred mile an hour
+[1838.21] Stephen: Into the Cessna
+[1839.21] Stephen: With perhaps a bit more structural integrity
+[1841.21] Stephen: Than Matrice
+[1842.21] Stephen: It might just go straight through the windshield
+[1845.21] UNKNOWN: I think five inch pilots are up there with a Cessna
+[1847.21] Curry: They&#x27;d be chasing it though, wouldn&#x27;t they?
+[1848.21] Curry: Try and get some epic footage rather
+[1850.21] Curry: Yeah
+[1851.21] Tony: Although they might, you know
+[1852.21] Curry: If there was like biplanes
+[1853.21] Curry: They might try to fly in between the wings and stuff
+[1856.21] Curry: That would be the only danger
+[1860.46] UNKNOWN: I believe that
+[1862.46] Stephen: Andrew slash Frank had this problem
+[1865.46] Stephen: Task saturation
+[1867.46] UNKNOWN: Yes
+[1868.46] Tony: Indeed
+[1869.46] Tony: Too much red paint
+[1870.46] Tony: I think he was more and more unsaturated
+[1872.46] Jack: With the likes of all of us
+[1876.46] UNKNOWN: This episode was recorded in front of a live online audience
+[1879.46] Frank: Downloaded and edited to make sense
+[1881.46] Frank: When it played audio only
+[1882.46] Frank: Censored to please the iTunes people
+[1884.46] Frank: Hosted on the internet
+[1885.46] Frank: Forwarded through to your podcast provider
+[1887.46] Frank: Downloaded, playing on your device
+[1889.46] Frank: And is now playing in your ears
+[1891.46] Frank: All thanks to our Patreons
+[1893.46] Frank: Consider joining them
+[1894.46] Frank: And you&#x27;ll also get other online benefits
+[1896.46] Frank: Find out more at patreon.com
+[1899.46] Frank: Forward slash, let&#x27;s drone out
+[1902.46] UNKNOWN: Who&#x27;s going to Croatia meetup?
+[1905.46] UNKNOWN: So there&#x27;s an unmanned tech meetup in Croatia
+[1908.46] Stephen: And fail safe
+[1909.46] Stephen: I don&#x27;t know if you&#x27;ve got any videos from last year
+[1911.46] Stephen: Give us an idea of what you&#x27;re up to
+[1913.46] Stephen: I think you&#x27;ve got some pretty epic shots
+[1915.46] UNKNOWN: But there&#x27;s a whole load of bandos from old resorts and stuff
+[1920.46] UNKNOWN: Fail safe was absolutely shredding it around there last year
+[1923.46] Stephen: They didn&#x27;t like a dent in it then
+[1926.46] Stephen: Yeah, it was a thing on the paintwork
+[1929.46] UNKNOWN: So we&#x27;re looking
+[1931.46] Stephen: You should have gone through the prop to make a dent like that
+[1933.46] Stephen: Shouldn&#x27;t you?
+[1934.46] UNKNOWN: Maybe it was that gun timing thing
+[1936.46] Tony: You know, that we used to be able to shoot through a propeller
+[1940.46] Curry: That feels like it&#x27;s going that fast
+[1942.46] Curry: Drone was stationary
+[1944.46] Curry: Perhaps and plane just clonked into it sort of thing
+[1948.46] Stephen: Yeah, I&#x27;m just looking at like the impact it&#x27;s made
+[1951.46] Stephen: It kind of looks like the line of the prop
+[1954.46] Stephen: If the prop was in a vertical position rather than kind of mainly horizontal
+[1959.46] Stephen: If it was turned vertical
+[1961.46] UNKNOWN: Surely, I don&#x27;t know, maybe it&#x27;s got a tiny prop
+[1964.46] Stephen: But I&#x27;d have thought that the prop would be in front of that area
+[1968.46] Stephen: I wouldn&#x27;t have thought that&#x27;s the prop
+[1969.46] Curry: I think that&#x27;s the great big legs scratching along
+[1972.46] Curry: Because I think the props are still break pretty easy
+[1974.46] UNKNOWN: No, I mean the prop of the Cessna
+[1977.46] UNKNOWN: Oh, the prop of the Cessna
+[1978.46] Curry: Caroline says there are scratches on it as well
+[1980.46] Curry: Right
+[1983.74] UNKNOWN: There were also minor scratches
+[1986.74] Jack: This is on John Joyce&#x27;s YouTube
+[1988.74] Jack: You&#x27;re also beginning
+[1989.74] UNKNOWN: Minor scratches, wow
+[1993.74] Jack: There&#x27;s a picture of Matrice, if anyone&#x27;s wondering
+[1995.74] Jack: That&#x27;s probably worth more than the Cessna, isn&#x27;t it?
+[1998.74] UNKNOWN: No, not only that&#x27;s not how full size
+[2001.74] Jack: They&#x27;re much bigger than they look
+[2003.74] Curry: If you&#x27;ve seen one in the flesh, it&#x27;s like the Spanish
+[2006.74] Curry: Oh, look at that, a bit of hot glow
+[2010.74] Tony: Yeah
+[2011.74] Jack: See that sticker there with the pilot I&#x27;ve seen
+[2014.74] Jack: That&#x27;s basically a glorified ride on lawnmower, isn&#x27;t it?
+[2017.74] Stephen: It&#x27;s not sophisticated
+[2018.74] Stephen: I&#x27;ve been up in Cessna when I was a kid
+[2020.74] Stephen: And it rattles around like a cheap fairground
+[2023.74] Stephen: Yeah, being in Cessna told me I did not want to fly like airplanes
+[2027.74] Curry: No
+[2029.74] Curry: It&#x27;s like we&#x27;re going to die
+[2031.74] UNKNOWN: Yeah
+[2032.74] Stephen: It&#x27;s like all the fun of being in a vintage sports car
+[2035.74] Stephen: With the continual risk of death
+[2038.74] Stephen: Extra danger
+[2041.74] UNKNOWN: And a lot of the collision was overhousies
+[2045.74] UNKNOWN: Pilot on board
+[2046.74] UNKNOWN: They were about
+[2050.18] UNKNOWN: So, yeah, hang on
+[2051.18] Stephen: Well, it says York Police, but they&#x27;re talking about Canada
+[2054.18] Stephen: And this guy&#x27;s definitely Canadian, so is there a York in Canada?
+[2057.18] Stephen: Oh, it is, yeah, there&#x27;s a lot
+[2059.18] Stephen: I think so
+[2060.18] Stephen: Anything from England&#x27;s in Canada or America
+[2063.18] Tony: New London, all that
+[2066.18] Jack: Oh, right
+[2067.18] Jack: New South Wales in Australia
+[2069.18] Jack: It&#x27;s all spread around the place
+[2073.18] Tony: It&#x27;s what we do
+[2075.18] Stephen: Fail safe
+[2076.18] Stephen: Chuck us some clips of your adventures
+[2080.62] UNKNOWN: Oh, has he
+[2082.62] UNKNOWN: Has he been
+[2085.62] Stephen: Well, I know he did this thing last year because I think he
+[2088.62] Stephen: Bussed every one
+[2090.62] Stephen: But a single drone
+[2092.62] Stephen: Immediately before FPV Drone Fest
+[2094.62] Stephen: And then he came over to FPV Drone Fest with all these great stories
+[2097.62] Stephen: And he&#x27;d been out there, was boiling hot in the summer
+[2100.62] Stephen: He had his DJI action too
+[2102.62] Stephen: He kept on shooting, he was pouring bottled water over it to cool it down
+[2105.62] Stephen: Between packs and stuff like this
+[2107.62] UNKNOWN: Having a rare old time
+[2109.62] UNKNOWN: So I was just wondering if he had any pictures, that was all
+[2112.62] Tony: Sounds like fun, but
+[2115.62] UNKNOWN: I don&#x27;t like Bandos
+[2118.62] Tony: You do break a lot of stuff
+[2120.62] UNKNOWN: AudioGex says he&#x27;s been an assessor with duct tape holding the wings together
+[2125.62] Stephen: That&#x27;s
+[2126.62] Stephen: Speed tape
+[2128.62] Stephen: Speed tape, yeah
+[2131.62] Stephen: Pretty much
+[2133.62] Tony: That&#x27;s fine
+[2134.62] UNKNOWN: I wonder, obviously, if a private individual was flying a drone that hit a Cessna and caused that
+[2140.62] Curry: Damage, they&#x27;d get in serious trouble and people would call them to be hanged
+[2144.62] Curry: I wonder what happens to the police
+[2146.62] Curry: Is he okay because he was oversaturated on tasks
+[2149.62] Curry: And it&#x27;s like, well, that&#x27;s fair enough
+[2155.62] Curry: It&#x27;s not an excuse, like, I couldn&#x27;t pay attention to it, therefore
+[2159.62] Stephen: I accidentally put people&#x27;s lives in danger
+[2162.62] UNKNOWN: Yeah, that&#x27;s kind of
+[2164.62] UNKNOWN: It&#x27;s flying without due care and attention, one could suggest
+[2169.62] UNKNOWN: They&#x27;d be like, oh, it&#x27;s okay, I hit that child because I was changing the car stereo
+[2174.62] Stephen: I didn&#x27;t have enough ability to, you know, pay attention to everything, that&#x27;s okay
+[2178.62] Stephen: Task saturated, I was
+[2180.62] Stephen: Task saturated, yeah
+[2182.62] UNKNOWN: That&#x27;s masturbating
+[2184.62] UNKNOWN: He&#x27;s got a small spine
+[2187.62] UNKNOWN: Wow, is that it?
+[2189.62] UNKNOWN: Is this just Canadian niceties where they say, oh, well, sorry, I hit your plane, oh, don&#x27;t worry, man
+[2194.62] Curry: It&#x27;s fine
+[2197.62] UNKNOWN: I won&#x27;t do the accent out of respect for Cole, who&#x27;s listening to us
+[2202.62] UNKNOWN: What&#x27;s it all about, Cole?
+[2205.62] UNKNOWN: In the news they blame the Cessna
+[2211.62] UNKNOWN: Oh, dear, oh, dear, oh, dear
+[2214.62] Jack: I was going to say, he was going to change the name of this show to task saturated
+[2219.62] Jack: Task saturated, it&#x27;s the new buzzword for all things
+[2223.62] Curry: Yeah
+[2224.62] Curry: I&#x27;m going to use it as an excuse at least twice tomorrow
+[2226.62] Curry: Yeah
+[2227.62] Curry: My wife asked for a cup of coffee, I was like, I don&#x27;t know, I&#x27;m pretty task saturated
+[2230.62] Curry: Task saturated
+[2232.62] UNKNOWN: I&#x27;m just going to have to switch the brain off, Kyle
+[2234.62] Jack: It&#x27;s been saturated
+[2236.62] Jack: It works
+[2237.62] UNKNOWN: How are you feeling, Cole? Are you any better?
+[2240.62] Jack: You&#x27;re still a little bit
+[2242.62] Curry: I got much worse, so I was feeling good when I talked to you guys two weeks ago
+[2246.62] Curry: And then on Saturday I got bad again
+[2249.62] Curry: And it was really weird because my wife insisted on calling 111 because I was like in bed
+[2255.62] Curry: And she put a pulse ox meter on me and it was like 81
+[2258.62] Curry: And then the people on 111 said, we&#x27;re going to have to send an ambulance
+[2262.62] Curry: I was like, well, that seems a bit unnecessary because I think I&#x27;m okay
+[2265.62] Curry: And then I saw a doctor and then when I put it in his machine it was like 99
+[2269.62] Curry: I was like, oh, that&#x27;s weird
+[2270.62] Curry: And then I went back to my machine and then it was 99
+[2272.62] Curry: So I just had bad pulse ox for a while and then it was okay
+[2276.62] Curry: But I&#x27;m getting better again
+[2278.62] Curry: I&#x27;m back up to where I was two weeks ago
+[2280.62] UNKNOWN: Just with a bit of a cough and stuff
+[2282.62] Curry: And we seem okay
+[2283.62] Curry: We think it&#x27;s just
+[2285.62] UNKNOWN: It was Audiogex asking what it was
+[2287.62] Curry: It seemed to be flu followed by a sinus infection
+[2291.62] Curry: Followed by what the doctor says is a post-infectious cough
+[2295.62] Curry: Which generally lasts up to about six weeks
+[2297.62] Curry: Which is just everybody going around coughing and being a bit snotty
+[2300.62] Curry: But it&#x27;s okay
+[2302.62] Curry: One of the risks of long distance air travel when you&#x27;re knackered
+[2305.62] Stephen: And not feeling too great to start with
+[2308.62] UNKNOWN: Yeah, I mean, I don&#x27;t recommend flying economy to South Africa
+[2313.62] Curry: You use like, oh, it&#x27;s just 11 and a half hours
+[2316.62] Curry: What could go possibly wrong with that
+[2318.62] Curry: 11 and a half hours of people coughing on you
+[2321.62] UNKNOWN: Yeah, I&#x27;m thinking of you now
+[2324.62] Jack: Flu slash sinus
+[2326.62] Jack: Infections slash
+[2328.62] Jack: Task saturated
+[2330.62] UNKNOWN: Health saturated
+[2332.62] UNKNOWN: Illness saturated
+[2336.62] Curry: You do hear that
+[2337.62] Stephen: Dr. Hay, you&#x27;re making a comeback
+[2339.62] UNKNOWN: Sounding better
+[2340.62] Curry: Yes, I actually
+[2341.62] Curry: For the first time since December
+[2343.62] UNKNOWN: Early December, I recorded some intros to things
+[2346.62] Curry: I can actually make some videos eventually
+[2349.62] Stephen: So are you going to drop a box of reviews soon then?
+[2352.62] UNKNOWN: I did the box already
+[2354.62] UNKNOWN: I think that was the last one I did
+[2356.62] Curry: That was in December
+[2357.62] Curry: Because they all came out
+[2358.62] Curry: Because RadioMaster does
+[2359.62] Curry: Please release it on this date
+[2360.62] Curry: They all come out at once
+[2361.62] Curry: So you may have missed it
+[2362.62] Curry: Between the other 100,000 reviews
+[2365.62] UNKNOWN: I have got this that just turned up
+[2367.62] Curry: Master was away
+[2368.62] Curry: This is the new Rush FPV
+[2371.62] UNKNOWN: What&#x27;s it called?
+[2372.62] Curry: The Max Solo
+[2374.62] Curry: Two and a half watts
+[2376.62] Tony: They need to get bigger every release
+[2378.62] Tony: This is ridiculous
+[2379.62] Tony: How big is it?
+[2381.62] Jack: Open it
+[2382.62] Curry: That&#x27;s what she said
+[2383.62] Tony: I&#x27;m going to open it
+[2384.62] Tony: There we go
+[2385.62] Tony: Yeah
+[2386.62] Curry: The big red whopper
+[2387.62] Curry: Yeah, and I have to say
+[2388.62] Curry: When it says how big is it
+[2389.62] Curry: I&#x27;d say it&#x27;s surprisingly small
+[2391.62] UNKNOWN: I&#x27;m afraid
+[2394.62] UNKNOWN: But it&#x27;s got a big sort of heat
+[2396.62] Curry: Or heat dissipation thing on it
+[2398.62] Curry: Yeah, they&#x27;re all putting heat spreaders
+[2400.62] Stephen: On those VTXs now, aren&#x27;t they?
+[2401.62] Stephen: Great big aluminium boxes on them
+[2404.62] UNKNOWN: Yeah, you&#x27;ve got a little
+[2407.62] UNKNOWN: This got a little fan on it
+[2408.62] Curry: Who can zoom in on me?
+[2409.62] Curry: A fan
+[2411.62] Stephen: I was joking
+[2412.62] Curry: Are you actually telling the truth?
+[2414.62] UNKNOWN: Can you see that little
+[2415.62] Curry: Hang on
+[2416.62] Curry: There we go
+[2417.62] Curry: There&#x27;s a fan in there
+[2419.62] Curry: Like a mini cheap youth
+[2421.62] Stephen: That is incredible
+[2423.62] Stephen: There&#x27;s no good
+[2424.62] Curry: I do like the Rush FPV stuff
+[2426.62] Curry: I do recommend them
+[2427.62] Curry: Because they&#x27;re very, very clean
+[2428.62] Curry: In their pictures
+[2429.62] Curry: I was honestly joking about there being a fan
+[2431.62] Stephen: I can&#x27;t believe that
+[2432.62] Stephen: Yeah, there is one
+[2434.62] UNKNOWN: I don&#x27;t think there&#x27;s any necessity
+[2436.62] Curry: To put two and a half watts on anything
+[2438.62] Curry: But I have been messing around
+[2439.62] Curry: With my little FPV car
+[2441.62] Curry: And where that&#x27;s very low to the ground
+[2443.62] Curry: And you sort of turn a corner
+[2444.62] Curry: Around a house and stuff
+[2445.62] Curry: I was interested to see if that might
+[2447.62] Curry: Do anything more than
+[2449.62] UNKNOWN: What, a fan on a car
+[2450.62] Stephen: 800 milliwatts
+[2451.62] Stephen: On ground fear
+[2452.62] Stephen: Yes
+[2453.62] Stephen: Because it doesn&#x27;t
+[2454.62] Curry: Yeah, it doesn&#x27;t cool so well
+[2456.62] Curry: So that might work
+[2457.62] Curry: We&#x27;ll see
+[2458.62] Curry: It&#x27;s quite small actually, isn&#x27;t it?
+[2459.62] Curry: It&#x27;s only
+[2460.62] Curry: It&#x27;s much
+[2461.62] Curry: They always make these things
+[2462.62] Curry: But they don&#x27;t really fit
+[2463.62] Curry: You just put a bit of mountain tape on it
+[2465.62] Curry: Show it on
+[2466.62] Curry: Max Solo
+[2468.62] Curry: The previous Max I think was
+[2469.62] Curry: 1.2 watts
+[2471.62] Curry: Something like that
+[2474.62] UNKNOWN: This is more
+[2475.62] Curry: That&#x27;s the switching
+[2477.62] Jack: Switching that
+[2479.62] Jack: I really want some new
+[2480.62] Jack: Cherry antennas to go with that
+[2481.62] Curry: Which are some of my favourite antennas
+[2483.62] Curry: See what they&#x27;re like
+[2484.62] UNKNOWN: Who made those?
+[2486.62] UNKNOWN: Rush again
+[2487.62] Curry: Oh
+[2489.62] Curry: Do you use a Menace?
+[2491.62] UNKNOWN: I do use Menace on my goggles and stuff
+[2493.62] Curry: But on quads I mix it up a bit
+[2496.62] Curry: So I think
+[2498.62] UNKNOWN: Very nice
+[2499.62] Stephen: I was just going to
+[2500.62] UNKNOWN: What are you doing?
+[2501.62] Tony: I think we&#x27;re capable
+[2505.18] Stephen: Hello Coco
+[2506.18] Stephen: How&#x27;s the doggo doing?
+[2507.18] Stephen: Is she back in good health?
+[2508.18] UNKNOWN: Yeah, the two-core fell off eventually
+[2511.18] Tony: So we&#x27;re back in action
+[2513.18] Tony: I think we&#x27;re going out Saturday
+[2515.18] Tony: Mountain biking
+[2516.18] Tony: But we&#x27;ve been out
+[2518.18] UNKNOWN: And she&#x27;s been running around like a nutter again
+[2520.18] Tony: So she&#x27;s all good
+[2521.18] Tony: So is that it there?
+[2523.18] UNKNOWN: That&#x27;s it there
+[2524.18] Tony: That&#x27;s a better view of the fan, isn&#x27;t it?
+[2526.18] Curry: You can actually see it there
+[2527.18] Curry: Wow
+[2528.18] UNKNOWN: Some monster
+[2529.18] Stephen: Mmm, little squirrel fan
+[2531.18] UNKNOWN: It doesn&#x27;t look like there&#x27;s any way of actually mounting it to stuff though
+[2535.18] Stephen: Are you supposed to do it?
+[2536.18] Stephen: No, again
+[2537.18] Curry: What you generally get
+[2538.18] Curry: They&#x27;re used to
+[2539.18] Curry: When they first started doing these
+[2540.18] Curry: They were always a weird shape
+[2541.18] Curry: And then they had this little sort of
+[2543.18] Curry: Perspect
+[2545.18] UNKNOWN: .5x35mm thing
+[2547.18] Curry: And you could mount it on there
+[2548.18] Curry: And then you could put the screws in
+[2550.18] Curry: With these
+[2551.18] Curry: It tends to be like
+[2552.18] Curry: Slapping a bit of mounting tape
+[2553.18] Curry: Decide where you want to stick it on your quad
+[2555.18] Curry: Or whatever
+[2556.18] Curry: And do it that way
+[2557.18] Curry: So they&#x27;ve built it
+[2559.18] UNKNOWN: I guess they&#x27;ve built it
+[2560.18] Curry: Because you&#x27;ve got like these little
+[2562.18] Curry: Metal lines here for heat dissipation
+[2565.18] Curry: They wanted to build it in a certain way
+[2567.18] Curry: To make it work probably
+[2570.18] UNKNOWN: Yeah
+[2571.18] Stephen: We were thinking
+[2572.18] Stephen: With that amount of metal on it
+[2573.18] Stephen: It must weigh a bit
+[2574.18] Stephen: If you can&#x27;t bolt it down
+[2575.18] Stephen: It&#x27;s going to be
+[2576.18] Stephen: Don&#x27;t you have flying off?
+[2579.18] UNKNOWN: Not that much
+[2580.18] Curry: But I use mounting tape all over the place
+[2582.18] Curry: It seems to work all right
+[2583.18] Curry: Yeah
+[2584.18] UNKNOWN: Fair enough
+[2586.18] Curry: Very interesting
+[2589.88] Jack: What projects
+[2592.88] Jack: What products does Bruce release Caroline projects?
+[2597.88] UNKNOWN: No
+[2598.88] Curry: Well he was doing that thing about tracking
+[2601.88] Curry: Planes
+[2602.88] Curry: With like a
+[2604.88] Curry: Connected to it
+[2605.88] Curry: No it&#x27;s more about
+[2607.88] Curry: Finding out where
+[2608.88] Curry: Planes were using their signals
+[2610.88] Curry: So you could
+[2611.88] Curry: It&#x27;s the sort of
+[2612.88] Curry: What do you call it
+[2613.88] UNKNOWN: The
+[2615.88] Curry: Detect and avoid system
+[2616.88] Curry: I think you called it
+[2617.88] UNKNOWN: Yeah
+[2619.88] UNKNOWN: But it&#x27;s like
+[2620.88] Jack: You try and get a raspberry pie these days
+[2622.88] Curry: It&#x27;s like forget it
+[2623.88] Curry: It&#x27;s not going to happen is it
+[2625.88] Jack: A GSR receiver
+[2628.88] UNKNOWN: A DSB
+[2630.88] UNKNOWN: Currier
+[2631.88] Stephen: I&#x27;ve checked the spec on that
+[2632.88] Stephen: VTX
+[2633.88] Stephen: It&#x27;s got audio in
+[2634.88] Stephen: So you could put a little microphone on your car
+[2637.88] UNKNOWN: Naturally
+[2638.88] Stephen: I hear it zooming around
+[2639.88] Stephen: I might do that
+[2640.88] Curry: Because I&#x27;ve had microphones in the past
+[2642.88] Curry: And obviously on quads
+[2643.88] Curry: You hear a combination of wind noise
+[2645.88] Curry: And
+[2647.88] Curry: Which is not so good
+[2649.88] Curry: But yeah I&#x27;ve bought separate microphones in the past
+[2652.88] Curry: In fact I think
+[2654.88] UNKNOWN: Rush FPV made microphones for other ones
+[2657.88] Curry: Which I&#x27;ve tried
+[2660.88] UNKNOWN: Yeah we&#x27;re still
+[2661.88] Curry: I think Bruce never finished his 250 gram plane did he
+[2665.88] Curry: That he was on and on about for ages and ages
+[2667.88] Curry: And said I&#x27;m going to release all the details
+[2669.88] Curry: About how to build this
+[2671.88] UNKNOWN: Oh yeah
+[2672.88] Curry: Outlaw 250 plane never did a part 2
+[2677.45] UNKNOWN: Oh I don&#x27;t know
+[2678.45] Curry: I think the problem is
+[2679.45] Curry: He may be tar saturated
+[2681.45] UNKNOWN: Has he not gone seen or
+[2684.45] Tony: He got dementia
+[2685.45] Tony: Can we flash that out?
+[2688.45] UNKNOWN: We&#x27;ve only got it
+[2690.45] Curry: We&#x27;re doing better than us
+[2695.45] Jack: Do you not tell you
+[2698.45] UNKNOWN: Oh yeah the
+[2700.45] UNKNOWN: Oh yeah it is
+[2701.45] Jack: It&#x27;s just a tiny little thing
+[2703.45] Jack: But again
+[2704.45] Jack: What?
+[2707.08] Jack: What&#x27;s happened to Jackie&#x27;s side?
+[2709.08] Jack: Making noises
+[2711.08] Jack: Morning
+[2712.08] Jack: And just flying
+[2714.08] Tony: Morning
+[2719.65] UNKNOWN: Jack?
+[2720.65] UNKNOWN: Don&#x27;t know
+[2721.65] Stephen: Don&#x27;t you want to share one of Bruce and his projects with us
+[2723.65] UNKNOWN: Yeah there you go
+[2724.65] Jack: Yeah
+[2725.65] UNKNOWN: Go on
+[2729.62] Stephen: Give it a big one
+[2730.62] Stephen: Give us a little full screen
+[2732.62] UNKNOWN: So yeah it&#x27;s like a little tiny foam board
+[2738.35] Jack: Looking like a cute little thing
+[2740.35] Stephen: Yeah
+[2741.35] UNKNOWN: I was I was ready to build this
+[2743.35] Curry: I got a bunch of foam board over there
+[2744.35] Curry: Got a bunch of Sperry season motors
+[2746.35] Curry: But he never finished it
+[2748.35] UNKNOWN: Oh
+[2749.35] UNKNOWN: Don&#x27;t know plans released
+[2751.35] UNKNOWN: No he said he was going to do it
+[2753.35] Stephen: But of course that&#x27;s where he didn&#x27;t finish
+[2756.35] UNKNOWN: Apparently he&#x27;s been busy working out
+[2758.35] Stephen: English
+[2759.35] UNKNOWN: Is it doing up?
+[2760.35] Stephen: I don&#x27;t know
+[2763.89] UNKNOWN: Seems unlikely on a 250 gram job doesn&#x27;t it
+[2766.89] UNKNOWN: Was it
+[2769.46] Stephen: Bruce who released the video recently
+[2771.46] Stephen: His solution to being old was to be a beefcake
+[2774.46] Stephen: And he&#x27;d been doing lots of weight training
+[2776.46] UNKNOWN: I don&#x27;t know about that
+[2780.83] UNKNOWN: Can you imagine ripped Bruce
+[2782.83] Jack: Just going to Cather and like
+[2786.83] Jack: He&#x27;d folded them in half
+[2787.83] Jack: I think it was him
+[2793.06] UNKNOWN: Doesn&#x27;t take any messing from his foam board planes anymore
+[2796.06] Stephen: He said he was worried about falling over right
+[2798.06] UNKNOWN: He&#x27;s got some degenerative illness
+[2801.06] Stephen: He doesn&#x27;t want to worry about falling
+[2802.06] Stephen: So he was going to like just beef up
+[2804.06] Stephen: So he could take a few knocks I think was the idea
+[2806.06] Jack: Parkinson&#x27;s or whatever
+[2808.06] Jack: Yeah it would be interesting to see how that mount works
+[2812.06] UNKNOWN: For the motor
+[2814.06] UNKNOWN: The only problem with those planes with slots for the prop
+[2817.06] Curry: Is that it really makes a lot of noise doesn&#x27;t it
+[2820.06] Curry: Yeah
+[2821.06] UNKNOWN: So they&#x27;re not that efficient
+[2823.06] Jack: Got the hip hop fly in then
+[2827.06] UNKNOWN: Maybe that&#x27;s the idea
+[2828.06] Jack: It&#x27;s just to be holy gun
+[2830.06] Jack: Make a load of noise
+[2832.06] Jack: Piss everyone off
+[2833.06] Jack: And then be like
+[2834.06] Jack: There&#x27;s nothing you can do
+[2835.06] Jack: Because it&#x27;s 250 grams
+[2837.06] Jack: And what you&#x27;re going to do
+[2838.06] Tony: You&#x27;re hitting an old age pensioner
+[2840.06] Tony: Yeah
+[2841.06] Tony: The old age pensioner&#x27;s the one that&#x27;s flying it, mate
+[2844.06] UNKNOWN: Not long for you, Tony
+[2847.06] Stephen: Piss it
+[2848.06] Stephen: You know
+[2854.47] UNKNOWN: It&#x27;ll be there
+[2855.47] Jack: When are you going to help start my project?
+[2862.47] UNKNOWN: This is all very mysterious
+[2864.47] Curry: And when Tony says that
+[2865.47] Curry: He means when are you going to build my X-Class
+[2867.47] Tony: Yeah that&#x27;s exactly it
+[2868.47] Tony: While I watch and say hurry up
+[2870.47] UNKNOWN: And point at stuff
+[2871.47] Jack: Trump
+[2872.47] Tony: Trump
+[2874.47] UNKNOWN: What does that do?
+[2875.47] Tony: So how far did he get in this?
+[2880.47] Jack: It looks like quite a lot of a build video
+[2882.47] Stephen: Well certainly bits of foam
+[2884.47] Stephen: Is this the Outlaw 250 build video? Is it or not?
+[2889.47] Curry: Well Caroline&#x27;s still playing with poop
+[2891.47] Curry: Sure
+[2892.47] Curry: It looks like he had a bit of a build video
+[2894.47] Stephen: But he never finished the build video
+[2896.47] Stephen: So is it a build video?
+[2898.47] Stephen: There&#x27;s a part 2 for the rest of it
+[2900.47] Curry: Show the bits and put them together
+[2902.47] Curry: He&#x27;s cut all the pieces so they look exactly like that
+[2904.47] Stephen: And then you&#x27;re pretty much done
+[2906.47] Stephen: What are you complaining about?
+[2907.47] Stephen: Yeah use the hobby king map for scale
+[2910.47] Stephen: Yeah he&#x27;s left the map for scale
+[2912.47] Stephen: All you&#x27;ve got to do is do a bit of perspective correction
+[2915.47] Stephen: And you&#x27;re good, fine
+[2917.47] UNKNOWN: Weird
+[2921.42] Curry: He has a bad habit for that, though
+[2923.42] UNKNOWN: What are the stubs you just say?
+[2925.42] Tony: Oh Christ
+[2926.42] Tony: I can&#x27;t see on my phone
+[2927.42] Tony: Because there&#x27;s a big heart in the way
+[2929.42] Tony: Oh Christ, I was cringing and waving that scalpel about
+[2932.42] Curry: It&#x27;s like yeah, scalpel&#x27;s used as pointers
+[2934.42] Curry: When you&#x27;re doing that, can be a little bit dangerous
+[2936.42] Curry: You let go of them
+[2940.42] UNKNOWN: Show the bits, never put them together
+[2942.42] Stephen: What a tease
+[2947.42] Tony: Tone, how&#x27;s your cocoon with someone poking it and popping it
+[2952.42] Jack: It&#x27;s alright
+[2953.42] Tony: The wind a couple of weeks ago
+[2956.42] Tony: Was not very entertaining, kept me up at night
+[2960.42] Tony: Because it was
+[2962.42] UNKNOWN: It&#x27;s good for, well it&#x27;s survived up to 41 an hour gusts
+[2967.42] Tony: But it was, like when it blew really hard
+[2970.42] Tony: You could see the outline of the car
+[2972.42] Tony: So it was obviously touching the car
+[2975.42] UNKNOWN: And then people walking to and throwing between my van and the thing
+[2979.42] Tony: And then stroking their fingers
+[2982.42] UNKNOWN: Just gets annoying
+[2984.42] Tony: People leave other people&#x27;s stuff alone
+[2986.42] Tony: But I unzipped it the other day and looked at the car and it looks mint
+[2989.42] Tony: So it&#x27;s bone dry in there
+[2992.42] Tony: So hopefully it&#x27;s going to be all good
+[2994.42] Tony: I mean it&#x27;s not got an MOT now
+[2997.42] Tony: So when I do take it out
+[2999.42] Tony: It needs to go straight to the garage and get an MOT
+[3006.42] UNKNOWN: Oh, bye
+[3007.42] Jack: Unfortunately, Curry Kitten has had to leave
+[3011.42] UNKNOWN: Curry Kitten has to now go and watch bad television
+[3015.42] UNKNOWN: If any of the views of Curry Kitten watching TV has disturbed you
+[3023.21] Jack: There will be a helpline at the end of the show
+[3026.21] Jack: That was more for Tony&#x27;s MOT
+[3030.21] Stephen: Just an in case
+[3034.21] UNKNOWN: Yeah
+[3035.21] Jack: Well Tony doesn&#x27;t need an MOT
+[3038.21] Jack: I&#x27;m trying
+[3040.21] Jack: Like a TV license because he is a freeman
+[3044.21] UNKNOWN: Dispensation
+[3046.21] Stephen: He lives in his own kingdom
+[3048.21] Stephen: The Isle of Tony
+[3050.21] Tony: I do, I don&#x27;t need
+[3052.21] Tony: I don&#x27;t do rules and laws
+[3055.21] Tony: Not many anyway
+[3057.21] UNKNOWN: Certainly not a fair amount of tax
+[3061.21] Tony: Actually I&#x27;ve got to pay my tax bill in the next few days
+[3064.21] Tony: Oh yeah, let&#x27;s do that
+[3066.21] Tony: I haven&#x27;t been told how much by my account that I need to pay yet
+[3071.21] Tony: Not looking forward to it though
+[3073.21] UNKNOWN: It&#x27;s always a horrible time of year
+[3078.21] UNKNOWN: Sending my money away
+[3081.21] UNKNOWN: How did the Free Sky fan club begin?
+[3086.21] Stephen: I think people were complaining that there was an Express LRS Discord
+[3089.21] Stephen: But there wasn&#x27;t one for FR Sky
+[3092.21] UNKNOWN: And after such a strong performance by one of the FR Sky marketing staff
+[3096.21] Stephen: Also called Steve, different Steve
+[3099.21] UNKNOWN: Who appeared, promised a whole load of features
+[3103.21] Stephen: And then said, oh I can&#x27;t talk to you
+[3106.21] Stephen: Stop being mean to me
+[3107.21] Stephen: PS, my dogs died
+[3108.21] Stephen: And he just vanished and then never talked to anyone again
+[3111.21] Stephen: And then FR Sky released the product after him saying that
+[3115.21] Stephen: FR Sky would talk to the Express LRS developers
+[3118.21] Stephen: And FR Sky just blanked them
+[3120.21] Stephen: Did both talk to them
+[3121.21] Stephen: It&#x27;s just a bit of a running joke
+[3123.21] Stephen: Yeah, it&#x27;s a funny situation
+[3126.21] Stephen: And so there&#x27;s this parody Discord
+[3130.21] UNKNOWN: Except it&#x27;s not actually FR Sky fan club
+[3133.21] Stephen: It&#x27;s the Frisky fan club
+[3135.21] UNKNOWN: Using the original trading name
+[3138.21] UNKNOWN: Is the new release the Free Sky Twin X?
+[3143.21] UNKNOWN: I don&#x27;t know
+[3145.49] Stephen: I stopped using all the receivers a while back
+[3148.49] Stephen: And then I got into Tracer and then I dropped Tracer and got Express LRS
+[3152.49] Stephen: So I&#x27;ve got a pile of unused ones
+[3154.49] Stephen: I was going to take a picture of them in the cat litter tray
+[3157.49] Stephen: And put it into the pets photo contest
+[3161.49] Stephen: But I didn&#x27;t want to hover by the litter tray waiting for the cat to take his s***
+[3166.49] Stephen: So I haven&#x27;t got around to it yet
+[3170.49] UNKNOWN: There&#x27;s a few tasteful photos
+[3173.49] Stephen: I was going to put a very tasteless photo in there
+[3175.49] Stephen: I haven&#x27;t got around to it
+[3178.49] Stephen: Twin X
+[3181.49] Stephen: It&#x27;s got like a Sega gamepad
+[3184.49] UNKNOWN: I don&#x27;t know
+[3186.49] UNKNOWN: Built in
+[3187.49] Jack: I&#x27;m not sure like they look like any of them
+[3191.49] UNKNOWN: Runs to an EOS
+[3193.49] Jack: It looks like one of those things you clip your mobile phone into
+[3196.49] Stephen: So you can play like Sonic or something on your Android phone
+[3202.49] UNKNOWN: Is that the same thing we are looking at?
+[3205.49] UNKNOWN: It&#x27;s out of stock
+[3207.49] UNKNOWN: It&#x27;s £284 apparently
+[3212.49] Jack: Ergonomic lightweight design
+[3214.49] Jack: Slide screen design
+[3216.49] Jack: 2.5 inch colored screen
+[3219.49] Jack: 6 trim and quick modes
+[3221.49] Jack: Custom
+[3222.49] UNKNOWN: Buttons
+[3223.49] Jack: 2 moment switches
+[3225.49] Jack: 2 sliders and 4 switches on top
+[3227.49] Jack: Long range control
+[3229.49] Jack: Light type
+[3232.38] Jack: External module bay
+[3234.38] UNKNOWN: Foldable tab for attaching radio strap
+[3237.38] UNKNOWN: CNC metal gimbals
+[3239.38] Jack: High precision hall sensor
+[3241.38] Jack: Less latency
+[3243.38] Jack: Blah blah blah
+[3245.38] Jack: Built in one gig flash
+[3248.38] UNKNOWN: Yeah
+[3250.38] Jack: The other thing we&#x27;ve got is the old Hawkeye
+[3254.38] Jack: Little pilot school 4x3
+[3257.38] Jack: 5.8 FPV monitor
+[3260.38] UNKNOWN: Why does that come up?
+[3261.38] Jack: One antenna
+[3262.38] Jack: Yeah it&#x27;s just no
+[3264.38] Stephen: Is it?
+[3265.38] UNKNOWN: I thought those came out a couple of years ago
+[3267.38] Stephen: The little Hawkeye little pilot monitors
+[3269.38] Stephen: It&#x27;s a little pilot one isn&#x27;t it?
+[3271.38] Stephen: Yeah
+[3272.38] UNKNOWN: Those were out a couple of years ago
+[3274.38] UNKNOWN: Fair enough
+[3275.38] Jack: And the Speedy Bee Master
+[3278.38] Jack: 5 inch room
+[3279.38] UNKNOWN: Oh yeah
+[3280.38] Jack: That&#x27;s the one with the O3
+[3282.38] Stephen: Little plates in to do vibration isolation
+[3284.38] Stephen: It&#x27;s got a 3D print on the stack
+[3287.38] Stephen: That&#x27;s supposed to reduce vibration as well
+[3289.38] Stephen: Can you see that yellow bit?
+[3292.38] UNKNOWN: Yeah
+[3294.38] Tony: Hmm
+[3296.38] Jack: Don&#x27;t know if that&#x27;s any good or not
+[3297.38] Jack: Don&#x27;t know if he thinks of the back
+[3299.38] Stephen: Yeah that&#x27;s for your DJI
+[3301.38] UNKNOWN: It&#x27;s all designed around this new O3
+[3303.38] Stephen: Which is very costly
+[3305.38] Stephen: The old ones are fairly pricey
+[3307.38] Stephen: But I think this new one&#x27;s about roughly twice the price
+[3310.38] Stephen: It&#x27;s about 200 quid
+[3312.38] UNKNOWN: Not really tempting me
+[3315.38] Jack: Yeah, no worries
+[3317.38] Jack: It looks like that&#x27;s kind of all we&#x27;ve got time for
+[3321.38] Jack: Lots of things
+[3324.38] UNKNOWN: Not flown this year Richard Warwick
+[3327.38] Jack: Oh no
+[3329.38] Stephen: Hopefully we get some nice dry days soon
+[3331.38] Stephen: The ground out there is a bit dangerous
+[3334.38] Stephen: I was planning
+[3336.38] UNKNOWN: There is a place that I do want to fly
+[3339.38] Tony: There&#x27;s a field I&#x27;m going to fly
+[3342.38] Tony: Long distance, 7 inch
+[3344.38] UNKNOWN: Up to a big tower
+[3347.38] UNKNOWN: Around the tower and then I&#x27;m going to come back
+[3350.38] Tony: I don&#x27;t know when I&#x27;m going to do it
+[3351.38] Tony: Probably spring actually
+[3353.38] Tony: Might just wait a little while longer
+[3355.38] Tony: But I&#x27;ve scoped it out
+[3356.38] Tony: It&#x27;s on the way to my mountain biking site
+[3358.38] Tony: So I&#x27;m going to do it one day
+[3362.38] UNKNOWN: Yeah
+[3363.38] UNKNOWN: No worries
+[3365.38] Jack: Yeah, so it looks like that is all we&#x27;ve got time for
+[3369.38] Jack: Thank you, you&#x27;ve been listening to Let&#x27;s Throw Now
+[3374.38] Jack: This show is impartial and sponsored by our lovely Patreons
+[3378.38] Jack: Who keep us going and
+[3382.38] UNKNOWN: Keeping us from total destruction
+[3386.38] Jack: And, you know, paid shillness
+[3391.38] Jack: You&#x27;ve been joined by everyone&#x27;s favourite curry kitten
+[3395.38] Jack: Hello, bye
+[3399.38] Frank: Yeah, and everyone&#x27;s favourite moustache
+[3402.38] Jack: Stephen
+[3404.38] UNKNOWN: Thank you
+[3405.38] Stephen: I think by the way the Hawkeye little pilot box
+[3407.38] Stephen: He was talking about was the HD box for DJI FPV
+[3411.38] UNKNOWN: That&#x27;s the one on flying tech that they were looking at
+[3415.38] Stephen: And it&#x27;s a red box which is another LCD monitor
+[3418.38] Stephen: But slightly different and it can plug directly into the DJI goggles
+[3422.38] Stephen: And does your video out on a monitor
+[3425.38] Stephen: Oh, I&#x27;ve done the wrong one
+[3427.38] Jack: Sorry
+[3428.38] UNKNOWN: Yeah, similar
+[3429.38] Jack: My darling wife, Tony
+[3432.38] UNKNOWN: Bonjour
+[3434.38] UNKNOWN: And I have been bright until I fly
+[3436.38] Jack: Thank you
+[3437.38] Jack: We&#x27;re live every Thursday
+[3439.38] Jack: 8 till 9pm UK time
+[3442.38] Jack: Tune in, say hello, like, comment, subscribe
+[3446.38] Jack: And then watch Tony&#x27;s YouTube channel
+[3450.38] Jack: And then leave a comment under any of his airsoft videos
+[3455.38] Jack: Being like you&#x27;re a dirty cheater and you don&#x27;t call you shots
+[3458.38] Jack: And you grenade people upstairs
+[3460.38] Jack: What have I told you?
+[3461.38] Jack: Thank you, goodnight
+[3464.38] Jack: Bye
+[3466.38] Jack: Bye
+[3467.38] UNKNOWN: Telemetry lost
+</pre></body></html>

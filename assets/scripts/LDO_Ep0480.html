@@ -1,0 +1,987 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0480—LDO 480 -  with special guests AM32</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 480 ===
+Title: LDO 480 -  with special guests AM32
+Recorded: 2024-11-07
+Hosts: Stephen &quot;Belrik&quot; Howell, Jack &quot;Brightontillifly&quot; Nash, Koel &quot;Koala&quot; Anderson, Wayne &quot;CurryKitten&quot; Andrews, Andrew &quot;Frank&quot; Hyams
+Guest(s): &lt;details class=&quot;guest-toggle&quot;&gt;&lt;summary&gt;&lt;span class=&quot;gt&quot;&gt;Andrew &quot;tridge&quot; Tridgell, E…&lt;/span&gt;&lt;span class=&quot;gf&quot;&gt;Andrew &quot;tridge&quot; Tridgell, Eike &quot;Un!t&quot;, Pete &quot;AlkaMotors&quot; (AM32)&lt;/span&gt;&lt;/summary&gt;&lt;/details&gt;
+Total audience: 1,052
+Platforms: YouTube (https://www.youtube.com/watch?v=jtCvovs_Mwo); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1953828259-letsdroneout-ldo-480-am32.mp3)
+=====================================
+
+Check out AM32 Online:
+https://am32.ca/
+https://discord.com/invite/h7ddYMmEVV
+
+#LetsDroneOut #AM32 #ESC #FPV
+
+[0.0] UNKNOWN: Hello, and you&#x27;re listening to Let&#x27;s Drone Out, a special thank you to our lovely patrons
+[6.28] Jack: that help donate so that we can pay the editor to remove the swear words and silly things
+[11.36] Jack: we say.
+[13.0] Jack: Massive thank you to…
+[14.4] Jack: Carlos Campos!
+[16.2] Jack: Art Faulkner!
+[17.88] Frank: Sam Dahmer.
+[19.68] Frank: On with the show.
+[20.68] Frank: Hello and welcome to episode 480 of Let&#x27;s Drone Out, joined this week by our special
+[58.53] Stephen: guests from the AM32 project.
+[61.89] Stephen: You&#x27;re joined this week by Andrew Trichwell, by Pete, also known as Alka.
+[69.33] Stephen: Good evening.
+[70.73] Stephen: And we&#x27;ve got our regulars here, everyone&#x27;s favourite, Curry Kitten.
+[75.53] Stephen: Hello!
+[77.05] UNKNOWN: Jack the ESC.
+[79.25] Stephen: This is his Halloween outfit.
+[84.61] Stephen: And we also have Cole, Howdy, and myself, Stephen.
+[90.65] Stephen: Welcome to everyone, and thanks for the AM32 crew joining us this evening.
+[96.09] Stephen: We&#x27;ve got one more of their number who will be with us shortly, he&#x27;s just sorting out
+[100.61] Stephen: some domestic affairs and will be with us in a few minutes.
+[104.17] Stephen: But we wanted to spend some time talking about the progress.
+[107.57] Stephen: I think we last looked at AM32 probably a year or so ago, and it was very early days
+[113.21] Stephen: and we were kind of chatting to IKEA unit about beta flight and AM32.
+[118.97] Stephen: And things have exploded then, obviously, since kind of Embargo was put on to BL Heli
+[126.21] Stephen: 32, which meant that they effectively stopped exporting everything and very quickly all
+[131.01] Stephen: attention focused to the alternative project, which is AM32, now commanding a lion&#x27;s share
+[138.89] Stephen: of the 32-bit ESC market out of nowhere.
+[142.09] Stephen: So tell me, guys, how&#x27;s it been adjusting to all of that?
+[147.17] Pete &quot;AlkaMotors&quot; (AM32): Wild.
+[148.17] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s just been, I mean, it&#x27;s been overwhelming for the past few months.
+[153.57] Pete &quot;AlkaMotors&quot; (AM32): That&#x27;s my personal take on it.
+[156.65] Pete &quot;AlkaMotors&quot; (AM32): There&#x27;s just been too much too fast.
+[159.81] Pete &quot;AlkaMotors&quot; (AM32): But luckily, we&#x27;ve got Andrew now, so we&#x27;re all set.
+[166.77] Pete &quot;AlkaMotors&quot; (AM32): Goes in trouble.
+[168.77] UNKNOWN: We had to bring in a superhero to help us out to get AM32 to the next level.
+[176.37] Stephen: So Pete, you were kind of the originator of AM32.
+[179.45] Stephen: You mentioned Andrew being a bit of a superhero, and Andrew&#x27;s been around the block, haven&#x27;t
+[183.73] UNKNOWN: you, Andrew?
+[184.73] Andrew &quot;tridge&quot; Tridgell: Yeah, but I&#x27;m very new in this area.
+[188.05] Andrew &quot;tridge&quot; Tridgell: So I know Bugger all about motor control compared to what Pete knows.
+[193.09] Andrew &quot;tridge&quot; Tridgell: And luckily, Pete knows a lot about motor control and can deal with all of that side
+[197.05] Andrew &quot;tridge&quot; Tridgell: of things.
+[198.93] Andrew &quot;tridge&quot; Tridgell: But yeah, I&#x27;m just delighted that there&#x27;s a good open source alternative for ESCs, because
+[205.77] Andrew &quot;tridge&quot; Tridgell: I&#x27;ve just been frustrated by software issues with ESCs for years and years and years on
+[213.05] Andrew &quot;tridge&quot; Tridgell: bigger vehicles and vehicles falling out of the sky due to ESC firmware issues.
+[219.57] Andrew &quot;tridge&quot; Tridgell: So I am looking forward to being able to make the ESCs really, really rock solid.
+[229.57] Andrew &quot;tridge&quot; Tridgell: And so my focus is on those bigger vehicles.
+[232.13] Stephen: That&#x27;s fantastic.
+[233.13] Stephen: And obviously, the bigger vehicles part comes from some of your background as an autopilot
+[237.69] Stephen: developer, right?
+[238.69] UNKNOWN: Yeah, exactly.
+[239.69] Andrew &quot;tridge&quot; Tridgell: And helping people with larger sort of, the sort of 20 kilo, 50 kilo, 100 kilo plus type
+[246.85] Andrew &quot;tridge&quot; Tridgell: vehicles, you know, and where they&#x27;re, you know, even a rare failure on a little racing
+[256.15] Andrew &quot;tridge&quot; Tridgell: quad or, you know, if you get an ESC failure occasionally, well, okay, you might not win
+[263.49] Andrew &quot;tridge&quot; Tridgell: that race or whatever, but you pick it up and rebuild and go again.
+[269.09] Andrew &quot;tridge&quot; Tridgell: But on a bigger vehicle, there&#x27;s more consequences and a bit more pricey.
+[274.79] Andrew &quot;tridge&quot; Tridgell: So really interested in being able to find ways of making them just as robust as we possibly
+[280.79] Andrew &quot;tridge&quot; Tridgell: can.
+[281.79] UNKNOWN: So can I ask a real beginner question?
+[285.39] Curry: And this is coming from someone, I feel there&#x27;s many of us out there that treat an ESC like
+[289.87] Curry: this black box.
+[291.35] Curry: You connect a motor to it, you connect the signal wire to it, and it goes.
+[295.23] Curry: So when I always hear about, oh, people are developing new firmware for it, I&#x27;m thinking,
+[301.39] Curry: what to do apart from your firmware takes the control signal and says motor spin.
+[306.39] Curry: And aside from the fact that, you know, we&#x27;ve had protocols that do this quicker, what else
+[311.67] Curry: is there?
+[312.67] Curry: Because it sounds like there&#x27;s a whole lot to get your teeth into.
+[314.91] Curry: But from my stupid layman&#x27;s point of view, I&#x27;m just thinking control, make motor spin.
+[320.27] Curry: Is there more to it than that?
+[321.71] Curry: Clearly there is.
+[323.11] Pete &quot;AlkaMotors&quot; (AM32): Yeah, there&#x27;s, you know, you&#x27;re right.
+[327.43] Pete &quot;AlkaMotors&quot; (AM32): You almost could make a motor spin with a very small, very simple set of instructions,
+[334.23] Pete &quot;AlkaMotors&quot; (AM32): and maybe even do it with discrete components, just as soon as, you know, a comparator reads
+[340.79] Pete &quot;AlkaMotors&quot; (AM32): a certain voltage level, it turns on a MOSFET, which activates a phase and gets a motor spinning.
+[347.51] Pete &quot;AlkaMotors&quot; (AM32): But it doesn&#x27;t account for any of the millions of things that go wrong.
+[351.55] Pete &quot;AlkaMotors&quot; (AM32): And that is where the magic sort of happens.
+[358.55] Pete &quot;AlkaMotors&quot; (AM32): You could write software to make a motor spin very, very easily.
+[364.15] Pete &quot;AlkaMotors&quot; (AM32): But then what if the voltage changes?
+[367.11] Pete &quot;AlkaMotors&quot; (AM32): What if zero cross doesn&#x27;t happen on time?
+[371.69] Pete &quot;AlkaMotors&quot; (AM32): What if one happens too early or too late?
+[374.87] Pete &quot;AlkaMotors&quot; (AM32): What if the PWM that&#x27;s sent to the motors is interfering with the times that zero process
+[380.71] Pete &quot;AlkaMotors&quot; (AM32): happened?
+[382.55] Pete &quot;AlkaMotors&quot; (AM32): And then you have to start coordinating this with how you&#x27;re applying power to the motor
+[386.65] Pete &quot;AlkaMotors&quot; (AM32): to based on the input signal, and how quickly you can change power levels.
+[392.71] Pete &quot;AlkaMotors&quot; (AM32): What sort of, you&#x27;re trying to minimize the delays from when an input signal is received,
+[400.71] Pete &quot;AlkaMotors&quot; (AM32): converted into an output to power and delivered to the motors.
+[405.15] Pete &quot;AlkaMotors&quot; (AM32): And at the same time, you&#x27;re still trying to do all these checks and balances to try
+[409.51] Pete &quot;AlkaMotors&quot; (AM32): to make sure that the motor has done everything that it&#x27;s supposed to do.
+[414.19] Pete &quot;AlkaMotors&quot; (AM32): So we could just drive a motor very simply and assume that everything is going to work
+[419.09] Pete &quot;AlkaMotors&quot; (AM32): out well.
+[420.09] UNKNOWN: But unfortunately, it&#x27;s a very imperfect environment.
+[425.19] Pete &quot;AlkaMotors&quot; (AM32): And so the MC was constantly doing filtering, checking, readjusting, making sure that the
+[432.63] Pete &quot;AlkaMotors&quot; (AM32): times are as close to ideal as possible.
+[436.27] Pete &quot;AlkaMotors&quot; (AM32): And it&#x27;s shocking me how much work there is to do, because I was under almost the same
+[444.55] Pete &quot;AlkaMotors&quot; (AM32): assumption at first that if you drive a motor at low voltage, you should be able to use
+[450.79] Pete &quot;AlkaMotors&quot; (AM32): the same logic to drive a motor at high voltage.
+[453.31] Pete &quot;AlkaMotors&quot; (AM32): There&#x27;s nothing that&#x27;s changing.
+[454.99] Pete &quot;AlkaMotors&quot; (AM32): You&#x27;re just increasing the voltage of the system.
+[457.63] Pete &quot;AlkaMotors&quot; (AM32): But as we keep on increasing voltages and current demands, then we&#x27;re seeing more fluctuations
+[465.07] Pete &quot;AlkaMotors&quot; (AM32): on the system, more things we have to do to try to avert disaster when something doesn&#x27;t
+[472.71] Pete &quot;AlkaMotors&quot; (AM32): happen when we expect it to, or when something is not aligned the way we expect it to when
+[478.79] Pete &quot;AlkaMotors&quot; (AM32): it comes to zero cross.
+[480.07] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s 90% error checking and correction, and a very small amount of running a routine
+[492.15] Pete &quot;AlkaMotors&quot; (AM32): that does a very simple thing, which is look at when a zero cross happens and energizes
+[499.23] Pete &quot;AlkaMotors&quot; (AM32): phases to make the motor move to the next phase.
+[503.39] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s just the problem is that the world is not perfect, and the motors aren&#x27;t perfect,
+[509.19] Pete &quot;AlkaMotors&quot; (AM32): and then we have to do a massive amount of corrections afterwards.
+[513.67] Pete &quot;AlkaMotors&quot; (AM32): But no, I never thought it would take this much work either.
+[518.99] Curry: It sounds much more complex than I&#x27;ve explained it, because there were lots of words I didn&#x27;t
+[522.59] Curry: even understand.
+[523.59] Curry: So there&#x27;s clearly a lot.
+[525.59] UNKNOWN: Can we just break down some of the fundamentals, because we hear people talk about zero crossings
+[531.19] Stephen: a lot, and I kind of vaguely intuit, but from your mouth, what&#x27;s the correct way to describe
+[538.99] Stephen: what a zero crossing is?
+[541.43] UNKNOWN: Well, it&#x27;s, okay, so when you&#x27;re driving a brushless motor, we energize two phases at
+[549.79] Pete &quot;AlkaMotors&quot; (AM32): a time.
+[550.79] Pete &quot;AlkaMotors&quot; (AM32): So there&#x27;s three legs of the brushless motor, a three-phase motor.
+[554.91] Pete &quot;AlkaMotors&quot; (AM32): So we will set one phase low, another phase we will give voltage to.
+[560.83] Pete &quot;AlkaMotors&quot; (AM32): So there&#x27;s now current flowing from one phase through to the other phase.
+[567.11] Pete &quot;AlkaMotors&quot; (AM32): That leaves one phase floating, that it doesn&#x27;t have any current through that phase, where
+[572.59] Pete &quot;AlkaMotors&quot; (AM32): we don&#x27;t energize that one at all.
+[575.15] Pete &quot;AlkaMotors&quot; (AM32): And what we do with that final phase is we monitor the voltage on that phase.
+[581.31] Pete &quot;AlkaMotors&quot; (AM32): When that voltage on that phase goes from a low point or a high point and crosses the
+[589.43] Pete &quot;AlkaMotors&quot; (AM32): midway point of voltage, we know that that phase is, because that voltage is produced
+[598.07] Pete &quot;AlkaMotors&quot; (AM32): by that magnet moving in front of the coil.
+[603.75] Pete &quot;AlkaMotors&quot; (AM32): So when that voltage changes, we know the position of that magnet relative to the motor&#x27;s
+[608.95] Pete &quot;AlkaMotors&quot; (AM32): coil.
+[609.95] Pete &quot;AlkaMotors&quot; (AM32): So then we can then change which coils we energize to realign the phases based on when
+[616.43] Pete &quot;AlkaMotors&quot; (AM32): that zero cross happened.
+[618.39] Pete &quot;AlkaMotors&quot; (AM32): So we&#x27;re always looking at which phase is not energized so that we can constantly move
+[627.95] Pete &quot;AlkaMotors&quot; (AM32): or advance the phase that we are energizing one step ahead.
+[632.03] UNKNOWN: And it&#x27;s sort of like dragging around a horse with a carrot.
+[637.71] Pete &quot;AlkaMotors&quot; (AM32): Each time it reaches the carrot, we move it one step further again.
+[641.79] Pete &quot;AlkaMotors&quot; (AM32): And a zero cross is just our way of getting a snapshot of where the rotor is at any given
+[649.27] Pete &quot;AlkaMotors&quot; (AM32): point in time.
+[650.59] Pete &quot;AlkaMotors&quot; (AM32): And we can tell when that position is, because it produces a voltage when a magnet moves
+[654.71] Pete &quot;AlkaMotors&quot; (AM32): in front of the unenergized motor coils.
+[658.11] Pete &quot;AlkaMotors&quot; (AM32): And when that voltage exceeds a certain threshold, we can tell exactly where that magnet is.
+[663.75] Pete &quot;AlkaMotors&quot; (AM32): And then we apply the current to a new set of phases to drive it again.
+[669.05] Stephen: So that&#x27;s fundamental to everything like detecting if the rotor&#x27;s stuck or figuring
+[674.53] Stephen: out if you&#x27;ve hit something with a rotor or figuring out if it&#x27;s going a little too slow
+[678.85] Stephen: and it needs more power and things like that.
+[681.05] Pete &quot;AlkaMotors&quot; (AM32): Exactly.
+[682.05] Pete &quot;AlkaMotors&quot; (AM32): Yeah, we energize a phase, and then we observe the final phase that&#x27;s not energized.
+[686.81] Pete &quot;AlkaMotors&quot; (AM32): And depending on that observation, if we don&#x27;t see zero cross, we know that something bad
+[691.93] Pete &quot;AlkaMotors&quot; (AM32): has happened.
+[692.93] Pete &quot;AlkaMotors&quot; (AM32): If it happens much too early, we know something bad has happened.
+[698.13] Pete &quot;AlkaMotors&quot; (AM32): So we&#x27;re examining that final phase to see basically what the voltage is on that phase.
+[703.81] Pete &quot;AlkaMotors&quot; (AM32): Now we&#x27;re using on the ESC these hardware comparators, which are just comparing two
+[711.33] Pete &quot;AlkaMotors&quot; (AM32): voltages.
+[712.53] Pete &quot;AlkaMotors&quot; (AM32): And when one voltage exceeds the other, it gives you a one.
+[716.41] Pete &quot;AlkaMotors&quot; (AM32): Or when it drops below the other, it gives you a zero.
+[718.77] Pete &quot;AlkaMotors&quot; (AM32): So it changes that instead of having to constantly pull that phase to see what the voltage is,
+[725.01] Pete &quot;AlkaMotors&quot; (AM32): we just use the comparator to compare the two phases voltages and tell us whether one
+[729.85] Pete &quot;AlkaMotors&quot; (AM32): is higher or not to the other voltage.
+[734.49] Pete &quot;AlkaMotors&quot; (AM32): And so we&#x27;re comparing the phase voltage to the average of all three phases to find out
+[739.89] Pete &quot;AlkaMotors&quot; (AM32): where that phase is, where that magnet is, and at the given point in time.
+[745.17] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s a fairly simple procedure, but it&#x27;s just, yeah, there&#x27;s just so many things that can
+[753.53] Pete &quot;AlkaMotors&quot; (AM32): go wrong.
+[755.05] Stephen: It&#x27;s a simple procedure with a ton of nuance.
+[757.21] UNKNOWN: OK.
+[759.49] UNKNOWN: I noticed that the latest release, 216, you put out quite recently, you&#x27;re still going
+[765.61] Stephen: on adding a lot of features, something caught my eye, that there&#x27;s some kind of auto timing
+[769.33] Stephen: advance.
+[770.33] Stephen: And I remember getting into quads, hearing umpteen people disperse canned wisdom about
+[776.05] Stephen: timing advance and what it should be set to or not set to.
+[780.65] Stephen: You&#x27;re automating this particular problem for pilots now?
+[784.17] UNKNOWN: Yeah, the timing advance or auto timing advance was, it seemed to solve some problems with
+[795.09] Pete &quot;AlkaMotors&quot; (AM32): particular motors when it comes to hard braking and not losing synchronization, where a lower
+[804.81] Pete &quot;AlkaMotors&quot; (AM32): timing advance seemed to do better when it came to rapid deceleration and a higher timing
+[810.09] Pete &quot;AlkaMotors&quot; (AM32): advance seemed to do better with rapid acceleration.
+[813.37] Pete &quot;AlkaMotors&quot; (AM32): So with auto timing advance, we just set it so that when the throttle value is high, the
+[819.65] Pete &quot;AlkaMotors&quot; (AM32): timing advance is high.
+[820.85] Pete &quot;AlkaMotors&quot; (AM32): When the throttle value is low, it drops the timing advance value low.
+[825.97] Pete &quot;AlkaMotors&quot; (AM32): And for some people, it actually works very well for some setups.
+[833.45] Pete &quot;AlkaMotors&quot; (AM32): There&#x27;s so many variables that it doesn&#x27;t work for all quads the way we want it to.
+[839.89] Pete &quot;AlkaMotors&quot; (AM32): But some people, it seems to give you give them remarkably more control than a fixed
+[849.97] Pete &quot;AlkaMotors&quot; (AM32): timing advance, especially when it comes to braking.
+[853.17] Pete &quot;AlkaMotors&quot; (AM32): So yeah, we put it in there as an option.
+[857.97] Pete &quot;AlkaMotors&quot; (AM32): And so it seems that some people are now using it and enjoying it.
+[862.05] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s hopefully we&#x27;ll get more feedback and then can maybe fine tune that feature a bit
+[868.57] Pete &quot;AlkaMotors&quot; (AM32): more in the future.
+[870.01] UNKNOWN: Well, it&#x27;s awesome to see, you know, you&#x27;re out there communicating new ideas and letting
+[873.65] Stephen: people experiment and exploring what can be done.
+[876.21] Stephen: I think that that&#x27;s the magic to it, right, offering people a chance to explore ideas.
+[881.93] UNKNOWN: Yeah, hopefully.
+[882.77] Pete &quot;AlkaMotors&quot; (AM32): I mean, that&#x27;s I mean, sometimes I implement things and don&#x27;t even really know the full
+[889.73] Pete &quot;AlkaMotors&quot; (AM32): effects of the things I&#x27;m doing because I just there&#x27;s so many combinations of motors that we
+[897.45] Pete &quot;AlkaMotors&quot; (AM32): really need multiple we need lots of lots of hours and lots of experimentation by lots of
+[903.49] Pete &quot;AlkaMotors&quot; (AM32): people and lots of setups to to really get to see the benefit of some of these and and
+[911.41] Pete &quot;AlkaMotors&quot; (AM32): drawbacks on some systems.
+[913.01] Pete &quot;AlkaMotors&quot; (AM32): And so we can start making recommendations to other people.
+[916.29] Pete &quot;AlkaMotors&quot; (AM32): But so sometimes we&#x27;ll just make something an option and then people can play around with
+[922.21] Pete &quot;AlkaMotors&quot; (AM32): that option.
+[922.77] Pete &quot;AlkaMotors&quot; (AM32): And hopefully we&#x27;ll find unit this time goes on.
+[926.73] Stephen: Got to be really hard to find the corner cases on the bench because you&#x27;re looking at all
+[930.41] Stephen: those weird situations when something really unusual happens to the motor, voltage
+[934.73] Stephen: fluctuation, physical conditions, so forth.
+[939.09] UNKNOWN: How do you test for that?
+[942.61] Pete &quot;AlkaMotors&quot; (AM32): Well, it&#x27;s so hard now, especially on bench tests, because we were getting to the point
+[948.89] Pete &quot;AlkaMotors&quot; (AM32): where sometimes we&#x27;re trying to look at, you know, we&#x27;re trying to find problems that
+[953.21] Pete &quot;AlkaMotors&quot; (AM32): happen one in a million commutations on one in one in 100 hardware setups.
+[961.65] Pete &quot;AlkaMotors&quot; (AM32): And so it&#x27;s I mean, that&#x27;s why we really need as many developers as possible and as many
+[971.09] Pete &quot;AlkaMotors&quot; (AM32): people testing as possible and as much feedback as possible because I just can&#x27;t reproduce a
+[977.17] Pete &quot;AlkaMotors&quot; (AM32): lot of problems that I see people might have in Discord.
+[981.57] Pete &quot;AlkaMotors&quot; (AM32): And I can try it on a number of different ESEs and a number of different motors.
+[985.01] Pete &quot;AlkaMotors&quot; (AM32): And I just I can&#x27;t make the same same issue happen.
+[988.85] Pete &quot;AlkaMotors&quot; (AM32): And so it&#x27;s each new improvement gets sort of harder and harder and takes more hours of
+[998.41] Pete &quot;AlkaMotors&quot; (AM32): development to do now because of these so many hours of testing on so many different
+[1003.89] Pete &quot;AlkaMotors&quot; (AM32): different hardware configurations that is just it&#x27;s getting more and more difficult.
+[1010.09] Pete &quot;AlkaMotors&quot; (AM32): So I think the solution is more and more numbers of people helping us in testing.
+[1014.81] Pete &quot;AlkaMotors&quot; (AM32): So if people want to lend a hand and maybe preview some new interesting features, play
+[1020.17] Stephen: with some cool code and provide feedback, how can they do that?
+[1026.22] UNKNOWN: Well, the the easiest way is to jump onto our Discord and then we can sort of guide you
+[1033.86] Pete &quot;AlkaMotors&quot; (AM32): through the process.
+[1034.74] Pete &quot;AlkaMotors&quot; (AM32): We have multiple ways of building and testing now.
+[1040.06] Pete &quot;AlkaMotors&quot; (AM32): Andrew has been developing and and working on the Makefile builds again.
+[1046.5] Pete &quot;AlkaMotors&quot; (AM32): So we have built a GitHub is can build through GitHub Actions too.
+[1052.06] Pete &quot;AlkaMotors&quot; (AM32): So you can even just fork the project, make some changes and download the binaries right
+[1059.3] Pete &quot;AlkaMotors&quot; (AM32): from the the what&#x27;s produced with GitHub Actions.
+[1065.02] Pete &quot;AlkaMotors&quot; (AM32): Or you can use Kiehl and use and you can build and develop and debug easily at home.
+[1075.54] Pete &quot;AlkaMotors&quot; (AM32): But yeah, the easiest way to get started is to join join Discord and then download the
+[1083.14] Pete &quot;AlkaMotors&quot; (AM32): firmware or or fork the project and start tinkering.
+[1090.54] Pete &quot;AlkaMotors&quot; (AM32): Get yourself a current limited power supply because there will be there will be fireballs
+[1096.14] Pete &quot;AlkaMotors&quot; (AM32): otherwise.
+[1097.58] UNKNOWN: But yeah, get an ST link and and that is what you need to to get going with any of these
+[1106.18] Pete &quot;AlkaMotors&quot; (AM32): things. And then you can sort of see behind the scenes of running ESC.
+[1111.74] UNKNOWN: So that&#x27;s and we will help anybody out when it comes to setting up a setup to get debugging
+[1121.38] Pete &quot;AlkaMotors&quot; (AM32): anyway, so we can have some some more eyes on the code while running running different
+[1129.66] UNKNOWN: different combinations of hardware.
+[1132.22] UNKNOWN: So a Martian McFly has got a question here in the middle of things.
+[1136.06] Stephen: Here&#x27;s a bit of a technical question.
+[1137.66] Stephen: But what impact does having an odd number of turns buffets have?
+[1141.14] Stephen: A lot of tiny boot motors do this and it&#x27;s always baffled me.
+[1143.98] Stephen: Or even number of turns.
+[1145.54] Stephen: Does it make any difference?
+[1148.26] UNKNOWN: I don&#x27;t I don&#x27;t think it does.
+[1150.98] UNKNOWN: No, it&#x27;s like the number of turns on each winding.
+[1155.66] UNKNOWN: Is that what you&#x27;re saying?
+[1156.9] Pete &quot;AlkaMotors&quot; (AM32): That they hadn&#x27;t I thought I thought it was purely the number didn&#x27;t matter if it was odd or
+[1162.02] Stephen: even just the amount of current is going to be different if you have fewer turns, right?
+[1172.38] UNKNOWN: Yeah, as you decrease the number of turns, your KV will increase and your resistance will
+[1182.3] Pete &quot;AlkaMotors&quot; (AM32): decrease. But I don&#x27;t.
+[1186.62] Pete &quot;AlkaMotors&quot; (AM32): Yeah, I mean, I thought the KV was mostly defined by the number of turns on the on the
+[1193.86] Pete &quot;AlkaMotors&quot; (AM32): motor winding anyway.
+[1195.98] Pete &quot;AlkaMotors&quot; (AM32): So decreasing the number of wires.
+[1198.14] Stephen: Well, that might just be an engineering thing down to the small, the small production size
+[1203.18] Stephen: then that they they can&#x27;t do the windings the same way they do on the large ones, perhaps.
+[1209.14] UNKNOWN: Yeah, I don&#x27;t know the answer.
+[1211.5] Pete &quot;AlkaMotors&quot; (AM32): And the as far as the ESC knows, it doesn&#x27;t care.
+[1215.5] UNKNOWN: So it&#x27;s it doesn&#x27;t demand number of windings per per phase doesn&#x27;t really make a difference to
+[1221.74] Pete &quot;AlkaMotors&quot; (AM32): the logic of the way the motor is driven.
+[1224.78] Stephen: Speaking of exploring ideas, I noticed a while ago, I think it was Alka Pete, you put a couple
+[1232.98] Stephen: of extra protocols on and you started with crossfire, I believe, CRSF was that on then and
+[1241.26] UNKNOWN: some some other bits and pieces.
+[1242.7] Stephen: And I think Andrew&#x27;s been been charging off and doing some other stuff for bigger drones.
+[1247.14] Stephen: Want to tell us a bit about that?
+[1250.38] UNKNOWN: Well, Andrew, like he is.
+[1254.14] Pete &quot;AlkaMotors&quot; (AM32): Yeah, the drone drone can is his baby.
+[1258.42] Pete &quot;AlkaMotors&quot; (AM32): So I&#x27;ll let him talk about that for a bit.
+[1262.5] UNKNOWN: Andrew. Sure.
+[1263.82] Andrew &quot;tridge&quot; Tridgell: Yeah. So drone can is becoming the dominant protocol in in larger
+[1271.06] Andrew &quot;tridge&quot; Tridgell: UAVs, at least without your pilot because
+[1276.02] Andrew &quot;tridge&quot; Tridgell: a lot of the larger vehicles just use PWM, you know, like servo style 1000 to 2000 pulse
+[1282.86] Andrew &quot;tridge&quot; Tridgell: width with no feedback.
+[1287.02] Andrew &quot;tridge&quot; Tridgell: D shot and BD shot is used by some, but it tends not to be as reliable with the really
+[1295.02] Andrew &quot;tridge&quot; Tridgell: long cable links that you get in these vehicles.
+[1298.94] Andrew &quot;tridge&quot; Tridgell: And the the little four bit, you know, some that it checks, some that it&#x27;s got in there
+[1304.94] Andrew &quot;tridge&quot; Tridgell: is it is a bit weak.
+[1307.18] Andrew &quot;tridge&quot; Tridgell: So drone can gives a lot more flexibility and it provides you with a protocol that you can
+[1312.82] Andrew &quot;tridge&quot; Tridgell: use not just via your seas, but also for your airspeed and GPS and rangefinder and all the
+[1318.98] Andrew &quot;tridge&quot; Tridgell: other servos, et cetera.
+[1321.42] Andrew &quot;tridge&quot; Tridgell: So drone can has become the dominant protocol for all your peripherals on larger
+[1327.54] Andrew &quot;tridge&quot; Tridgell: vehicles. And so one of the main motivations for
+[1333.98] UNKNOWN: me getting into I am 32 was that opportunity to create an open source drone can firmware
+[1343.3] Andrew &quot;tridge&quot; Tridgell: done right by my definition of done right because there&#x27;s a there&#x27;s a lot of drone can
+[1348.06] Andrew &quot;tridge&quot; Tridgell: firmware is out there.
+[1350.1] Andrew &quot;tridge&quot; Tridgell: Most of them close source.
+[1351.18] Andrew &quot;tridge&quot; Tridgell: There&#x27;s one or two open source ones, but they have various issues with them.
+[1357.46] Andrew &quot;tridge&quot; Tridgell: And I really wanted a chance to be able to get in there myself and and change stuff.
+[1364.58] Andrew &quot;tridge&quot; Tridgell: And I should give a bit of a shout out to another developer who I&#x27;ve been from VIM drones.
+[1369.1] Andrew &quot;tridge&quot; Tridgell: He&#x27;s done this marvelous little development.
+[1371.86] Andrew &quot;tridge&quot; Tridgell: It&#x27;s great.
+[1373.3] Andrew &quot;tridge&quot; Tridgell: And so it&#x27;s it&#x27;s really cute little PCB.
+[1375.98] Andrew &quot;tridge&quot; Tridgell: It&#x27;s got a motor on the end there, you know, can bus connector, debug connector, et cetera.
+[1381.22] Andrew &quot;tridge&quot; Tridgell: And fantastic for development.
+[1383.22] Andrew &quot;tridge&quot; Tridgell: So I was on a trip over to the conference in Japan and I was I was spinning the motor on the
+[1388.66] Andrew &quot;tridge&quot; Tridgell: on the plane.
+[1389.46] Andrew &quot;tridge&quot; Tridgell: You know, people were looking at me a bit weirdly.
+[1392.3] Andrew &quot;tridge&quot; Tridgell: And, you know, what are you doing?
+[1393.98] Andrew &quot;tridge&quot; Tridgell: Oh, I&#x27;m just playing with autopilots.
+[1395.58] Andrew &quot;tridge&quot; Tridgell: And anyway, they&#x27;re really nice little development ones.
+[1400.38] Andrew &quot;tridge&quot; Tridgell: And so we&#x27;ve got we&#x27;ve had our first flights on drone can based
+[1405.94] Andrew &quot;tridge&quot; Tridgell: I am 32 ESEs and now are quite a number of vendors have now put their hands up to create
+[1413.18] Andrew &quot;tridge&quot; Tridgell: larger ESEs like one contacted me the other day.
+[1418.02] Andrew &quot;tridge&quot; Tridgell: One hundred and twenty amp twelve S actually fourteen S capable.
+[1422.1] Andrew &quot;tridge&quot; Tridgell: One hundred and twenty amp ESE, which is great to see how well it actually works.
+[1428.9] Andrew &quot;tridge&quot; Tridgell: We&#x27;ll see when we start, you know, yeah.
+[1431.78] Andrew &quot;tridge&quot; Tridgell: Pete&#x27;s having a bit of a laugh there to see how well that works.
+[1436.3] Andrew &quot;tridge&quot; Tridgell: Yeah, that&#x27;s right.
+[1437.46] Andrew &quot;tridge&quot; Tridgell: I mean, people they make these bigger and bigger vehicles.
+[1440.98] Andrew &quot;tridge&quot; Tridgell: They want to carry big payloads and and they want to fly for a very long time.
+[1446.5] Andrew &quot;tridge&quot; Tridgell: And so the vehicles get bigger and bigger.
+[1450.02] Andrew &quot;tridge&quot; Tridgell: And so the safety requirements do as well.
+[1454.38] Andrew &quot;tridge&quot; Tridgell: Yeah, but you want to get them more and more reliable.
+[1457.66] Andrew &quot;tridge&quot; Tridgell: So anyway, we&#x27;ve got drone can working quite nicely.
+[1461.02] Andrew &quot;tridge&quot; Tridgell: Hopefully we&#x27;ll get that merged into the main branch of I am 32 soon.
+[1465.5] Andrew &quot;tridge&quot; Tridgell: But we&#x27;ll see when when Pete&#x27;s had a really good look at the PR.
+[1469.54] Andrew &quot;tridge&quot; Tridgell: So that&#x27;s still pending.
+[1470.66] Andrew &quot;tridge&quot; Tridgell: But we&#x27;ve had quite a few flights on it.
+[1473.34] Andrew &quot;tridge&quot; Tridgell: And I think it&#x27;s it&#x27;s going to be an important part of the autopilot ecosystem going forward,
+[1480.9] Andrew &quot;tridge&quot; Tridgell: as they say.
+[1482.74] Andrew &quot;tridge&quot; Tridgell: So drone can, is that similar to automotive can or drastically different?
+[1487.78] Andrew &quot;tridge&quot; Tridgell: Different messaging structure, similar concepts.
+[1492.98] Andrew &quot;tridge&quot; Tridgell: Unfortunately, can is one of those transports where you can really only have one protocol on the bus.
+[1498.38] Andrew &quot;tridge&quot; Tridgell: There are some exceptions.
+[1499.34] Andrew &quot;tridge&quot; Tridgell: There&#x27;s you can split between 11 bit protocols and 24 bit and have them both on the same bus at the same time.
+[1504.78] Andrew &quot;tridge&quot; Tridgell: You&#x27;ve got this addressing scheme and there&#x27;s an 11 bit addressing scheme and a 29 bit addressing scheme.
+[1509.86] Andrew &quot;tridge&quot; Tridgell: And so you can mix those two.
+[1512.66] Andrew &quot;tridge&quot; Tridgell: But most of the larger, you know, more developed protocols use 29 bit addressing.
+[1518.54] Andrew &quot;tridge&quot; Tridgell: They do that so they can have a lot more types of messages.
+[1523.1] Andrew &quot;tridge&quot; Tridgell: And so drone cans are 29 bit ones.
+[1526.26] Andrew &quot;tridge&quot; Tridgell: You can&#x27;t have any other 29 bit on the same bus,
+[1529.42] Andrew &quot;tridge&quot; Tridgell: which means you end up with a whole lot of competing protocols.
+[1532.78] Andrew &quot;tridge&quot; Tridgell: Right. And we&#x27;ve settled on drone can as the primary one
+[1537.5] Andrew &quot;tridge&quot; Tridgell: for the autopilot ecosystem.
+[1539.9] Andrew &quot;tridge&quot; Tridgell: And then all of the manufacturers have got on board with that.
+[1543.22] Andrew &quot;tridge&quot; Tridgell: So lots of vendors are making, you know, like GPS, Airspeed, Rangefinder, Servos,
+[1548.38] Andrew &quot;tridge&quot; Tridgell: ESCs. And most of my time with ESCs for drone can over the past few years
+[1554.74] Andrew &quot;tridge&quot; Tridgell: has been working with existing vendors of ESCs, getting them on drone can,
+[1559.98] Andrew &quot;tridge&quot; Tridgell: which which has worked quite well, but it doesn&#x27;t allow me to sort of dive in deep
+[1564.94] Andrew &quot;tridge&quot; Tridgell: and and make changes at the fundamental level and work with someone like Pete,
+[1570.02] Andrew &quot;tridge&quot; Tridgell: who really knows the the motor control side so well to be able to
+[1576.26] Andrew &quot;tridge&quot; Tridgell: to try to make something really, really robust, because I&#x27;m just tired
+[1581.42] Andrew &quot;tridge&quot; Tridgell: of aircraft falling out of the sky because of software failures in ESCs.
+[1587.18] Andrew &quot;tridge&quot; Tridgell: It just happens far too often.
+[1588.78] Andrew &quot;tridge&quot; Tridgell: And I mean, if if there&#x27;s a hardware failure,
+[1593.5] Andrew &quot;tridge&quot; Tridgell: then sure, you&#x27;ve got a hardware failure, you know, but I
+[1597.3] UNKNOWN: I don&#x27;t like having software failures causing aircraft to fall out of the sky.
+[1603.78] Andrew &quot;tridge&quot; Tridgell: So I am hoping that we will reduce the number of, you know, software bugs.
+[1610.14] Andrew &quot;tridge&quot; Tridgell: We&#x27;ll never get it to zero.
+[1611.22] Andrew &quot;tridge&quot; Tridgell: That&#x27;s the nature of software development.
+[1613.26] UNKNOWN: But hopefully reduce it.
+[1616.7] Andrew &quot;tridge&quot; Tridgell: And so it&#x27;s a can, a drone can capable ESC,
+[1621.54] Stephen: a completely different beast to one that runs DSHOT or PWM, or is it the same?
+[1626.06] Stephen: They can do both.
+[1627.22] Andrew &quot;tridge&quot; Tridgell: So this little one that I was waving about.
+[1629.94] Andrew &quot;tridge&quot; Tridgell: So it&#x27;s got, you know, a CAN bus cable coming off it,
+[1632.66] Andrew &quot;tridge&quot; Tridgell: but it&#x27;s also got this DSHOT, BDSHOT, PWM cable coming off it.
+[1639.5] Andrew &quot;tridge&quot; Tridgell: And, you know, you have the potential to be able to have
+[1642.02] Andrew &quot;tridge&quot; Tridgell: this as a backup for that or vice versa.
+[1644.66] Andrew &quot;tridge&quot; Tridgell: So I am 32 has got a little
+[1648.1] Andrew &quot;tridge&quot; Tridgell: parameter, which is sort of what type of input defaults to automatic detection
+[1653.38] Andrew &quot;tridge&quot; Tridgell: between, you know, DSHOT or, you know, PWM and 32 call servo input.
+[1661.94] Andrew &quot;tridge&quot; Tridgell: So I&#x27;ve added another level to that for drone can.
+[1665.34] Andrew &quot;tridge&quot; Tridgell: And if it&#x27;s set to drone can, then it actually turns off the interrupt handler
+[1669.78] Andrew &quot;tridge&quot; Tridgell: for the DSHOT to make sure that, you know, noise on this line doesn&#x27;t cause an issue.
+[1675.94] Andrew &quot;tridge&quot; Tridgell: So it turns off both the DMA interrupt and the interrupt on that.
+[1680.3] Andrew &quot;tridge&quot; Tridgell: So but otherwise you could set it to both.
+[1684.66] Andrew &quot;tridge&quot; Tridgell: And then you&#x27;ve got to work out priority.
+[1686.22] Andrew &quot;tridge&quot; Tridgell: You know, you&#x27;d have to have a scheme where, you know, if you stop getting signal
+[1691.62] Andrew &quot;tridge&quot; Tridgell: on the CAN for a while, that it looks and sees whether it&#x27;s got signal on on this cable.
+[1697.74] Andrew &quot;tridge&quot; Tridgell: I haven&#x27;t set up a vehicle yet that&#x27;s got both,
+[1701.46] Andrew &quot;tridge&quot; Tridgell: but that&#x27;s definitely going to be in demand to have a backup for some vehicles.
+[1707.9] Andrew &quot;tridge&quot; Tridgell: The other thing that some vendors will like is having two CAN
+[1711.98] Andrew &quot;tridge&quot; Tridgell: CAN buses coming in.
+[1713.14] Andrew &quot;tridge&quot; Tridgell: So you actually have two CAN ports coming in to the same ESC.
+[1716.54] Andrew &quot;tridge&quot; Tridgell: And then you&#x27;ve got redundant flight controllers and two complete CAN buses
+[1720.58] Andrew &quot;tridge&quot; Tridgell: going round to all the ESCs.
+[1722.78] Andrew &quot;tridge&quot; Tridgell: Unit, welcome.
+[1724.54] UNKNOWN: Hey, here&#x27;s trouble.
+[1727.1] Andrew &quot;tridge&quot; Tridgell: So, yeah, anyway, it&#x27;s lots of scope for twiddling around with a different.
+[1736.18] Andrew &quot;tridge&quot; Tridgell: We had a follow up question to that from Caroline Tyler, I see,
+[1740.06] Stephen: who mentioned a Tesla trying CAN on an IP standard.
+[1745.9] Stephen: And I think just before the show started, you&#x27;d mentioned some options in that area.
+[1751.06] UNKNOWN: Yeah, yeah, we support running drone CAN on IPv4.
+[1755.82] Andrew &quot;tridge&quot; Tridgell: We&#x27;ve got a stand, if you look at drone can.org,
+[1758.34] Andrew &quot;tridge&quot; Tridgell: you&#x27;ll see there&#x27;s lots of different transports for drone CAN.
+[1761.3] Andrew &quot;tridge&quot; Tridgell: It&#x27;s not just CAN.
+[1762.3] Andrew &quot;tridge&quot; Tridgell: CAN is the most popular transport for drone CAN,
+[1764.82] Andrew &quot;tridge&quot; Tridgell: but it actually can be carried over a whole bunch of different transports.
+[1768.42] Andrew &quot;tridge&quot; Tridgell: And one of those is multicast UDP IPv4.
+[1773.7] Andrew &quot;tridge&quot; Tridgell: And so I expect that that I mean, that&#x27;s what we do in our simulator
+[1778.7] Andrew &quot;tridge&quot; Tridgell: because it&#x27;s really easy to do in a simulator.
+[1781.54] Andrew &quot;tridge&quot; Tridgell: But I&#x27;m expecting that will be used on real vehicles as well.
+[1784.74] Andrew &quot;tridge&quot; Tridgell: So I&#x27;m already using that for some devices.
+[1788.42] Andrew &quot;tridge&quot; Tridgell: Yeah, Ethernet, exactly.
+[1790.06] Andrew &quot;tridge&quot; Tridgell: So I&#x27;ve got a couple of my vehicles have Ethernet in them
+[1793.74] Andrew &quot;tridge&quot; Tridgell: and I can access drone CAN peripherals on those Ethernet,
+[1796.74] Andrew &quot;tridge&quot; Tridgell: but not ESCs yet over Ethernet.
+[1798.62] Andrew &quot;tridge&quot; Tridgell: So that&#x27;s something to look forward to.
+[1800.66] UNKNOWN: So we should add to a drone CAN ESC
+[1804.1] Pete &quot;AlkaMotors&quot; (AM32): is does have to have some physical differences
+[1807.3] Pete &quot;AlkaMotors&quot; (AM32): from the existing AM32 ESCs out there.
+[1809.78] Pete &quot;AlkaMotors&quot; (AM32): It needs to have a CAN transceiver on the ESC itself
+[1814.94] Pete &quot;AlkaMotors&quot; (AM32): and an MCU that&#x27;s capable of hardware CAN communications.
+[1819.5] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s not something that we can just make all ESCs work with CAN.
+[1823.9] Pete &quot;AlkaMotors&quot; (AM32): So it is a different ESC that will be made for drone.
+[1828.5] Pete &quot;AlkaMotors&quot; (AM32): OK, so this isn&#x27;t just a software conversion process.
+[1831.7] Stephen: You need some actual hardware enablement.
+[1834.1] UNKNOWN: Yeah, it&#x27;s like a controller.
+[1838.42] UNKNOWN: Does the ESC need to be mounted to the dev breakout for PCB as well?
+[1844.7] UNKNOWN: I don&#x27;t know. You can get I mean, there are lots of different form factors.
+[1847.9] Andrew &quot;tridge&quot; Tridgell: So yeah, it&#x27;s what you had.
+[1851.14] Jack: No, I was just like, yeah, here&#x27;s the audio.
+[1856.02] UNKNOWN: It&#x27;s such a neat little breakout device.
+[1860.1] UNKNOWN: That&#x27;s a little little one from the same vendor who I&#x27;ve been from VIM drones.
+[1864.62] Andrew &quot;tridge&quot; Tridgell: A tiny little one.
+[1866.38] Andrew &quot;tridge&quot; Tridgell: And then I&#x27;ve got a I&#x27;ve got a dev one here.
+[1868.5] Andrew &quot;tridge&quot; Tridgell: So this is this is a dev one from another vendor.
+[1871.7] Andrew &quot;tridge&quot; Tridgell: So this one&#x27;s really practical to fit on it on every phone.
+[1874.82] Andrew &quot;tridge&quot; Tridgell: I mean, you can imagine having eight of these on an octo quad.
+[1878.5] Andrew &quot;tridge&quot; Tridgell: And I think the rubber band is a nice touch.
+[1880.9] Andrew &quot;tridge&quot; Tridgell: That&#x27;s how I attach it to my drones.
+[1882.42] Andrew &quot;tridge&quot; Tridgell: Just rubber bands and zip ties.
+[1885.18] Andrew &quot;tridge&quot; Tridgell: And very practically, you see this one not lay out optimized.
+[1890.26] UNKNOWN: I&#x27;d love to see that like mounted to a toothpick or something.
+[1896.34] Jack: That would be hilarious.
+[1899.18] Andrew &quot;tridge&quot; Tridgell: You can sort of construct the quad out of a few of these, you know, just clamps.
+[1903.58] Andrew &quot;tridge&quot; Tridgell: You know, you could use a little C clamps to, you know, put it around.
+[1907.1] Andrew &quot;tridge&quot; Tridgell: I think that&#x27;d be a good drive to be good.
+[1910.5] Eike &quot;Un!t&quot;: Wasn&#x27;t there once a drone where you had a base plate, which was basically a PDB?
+[1916.02] UNKNOWN: Yeah, I&#x27;ve got one of those.
+[1917.14] Stephen: Don&#x27;t get track started.
+[1918.34] Stephen: I&#x27;ve got one as well.
+[1919.86] Stephen: I&#x27;ve got one. Yeah, yeah.
+[1921.54] Stephen: Black others, LMR or...
+[1923.42] Stephen: This is...
+[1924.42] Jack: Oh, wow.
+[1925.58] Jack: So that&#x27;s a...
+[1926.86] Jack: Welcome to Danger Zone.
+[1929.02] Jack: Yeah, it&#x27;s a light show drone.
+[1930.42] Andrew &quot;tridge&quot; Tridgell: Lots of LEDs.
+[1931.5] Andrew &quot;tridge&quot; Tridgell: So it&#x27;s got a huge number.
+[1933.18] Andrew &quot;tridge&quot; Tridgell: See all those LEDs along here?
+[1934.86] Andrew &quot;tridge&quot; Tridgell: You know, every arm&#x27;s got piles of LEDs and two 18650s.
+[1939.74] Andrew &quot;tridge&quot; Tridgell: And then this one was designed for going indoors.
+[1941.78] Andrew &quot;tridge&quot; Tridgell: These little these little things are IR reflections.
+[1945.74] Stephen: So that is literally what we would have seen a while ago doing light shows.
+[1950.1] UNKNOWN: Yeah, so this was for flying indoors.
+[1952.06] Andrew &quot;tridge&quot; Tridgell: I was flying it inside a this little indoor arena
+[1956.62] Andrew &quot;tridge&quot; Tridgell: that has this sensing system for the so you can measure the position and attitude
+[1962.1] Andrew &quot;tridge&quot; Tridgell: positioned within millimeters and attitude within tiny fraction of a degree.
+[1967.66] Andrew &quot;tridge&quot; Tridgell: And then, yeah, it&#x27;s all just a PC, but it&#x27;s really neat, actually,
+[1972.58] Andrew &quot;tridge&quot; Tridgell: for quite a long flight time.
+[1974.66] UNKNOWN: It&#x27;s a it&#x27;s a really neat little design.
+[1976.9] Andrew &quot;tridge&quot; Tridgell: I like this one a lot.
+[1979.26] Andrew &quot;tridge&quot; Tridgell: It&#x27;s great.
+[1980.26] Jack: XM receiver like sold.
+[1983.98] Jack: Yeah, that&#x27;s yeah, I think I sold about on it came some of the receiver.
+[1987.98] Andrew &quot;tridge&quot; Tridgell: And I think that&#x27;s XSR or some similar little receiver on there
+[1992.86] Andrew &quot;tridge&quot; Tridgell: that I put on the end there.
+[1994.5] Andrew &quot;tridge&quot; Tridgell: Yeah, it&#x27;s just got a three pin connector you can put.
+[1997.98] UNKNOWN: Yeah, it is.
+[1998.66] Andrew &quot;tridge&quot; Tridgell: It is just DuPont there.
+[1999.82] Andrew &quot;tridge&quot; Tridgell: And then you put whatever you want in there.
+[2001.5] Andrew &quot;tridge&quot; Tridgell: And I&#x27;ve just soldered that that one on.
+[2004.42] Andrew &quot;tridge&quot; Tridgell: But it&#x27;s also got it&#x27;s got Wi-Fi.
+[2007.38] Andrew &quot;tridge&quot; Tridgell: So it&#x27;s got an ESP32 Wi-Fi thing there, which is quite neat.
+[2012.14] Andrew &quot;tridge&quot; Tridgell: So these sort of little drones are great.
+[2014.14] Andrew &quot;tridge&quot; Tridgell: These are great research ones at universities and people.
+[2018.62] Andrew &quot;tridge&quot; Tridgell: I was using it to to fly Lissajous curves indoors like with a 3D.
+[2024.1] Andrew &quot;tridge&quot; Tridgell: So it had a height in the Lissajous like I did with, you know, the ABC logo,
+[2027.66] Andrew &quot;tridge&quot; Tridgell: ABC Television Australia.
+[2029.22] Andrew &quot;tridge&quot; Tridgell: It&#x27;s this Lissajous type curve.
+[2031.9] Andrew &quot;tridge&quot; Tridgell: It looks a bit like a triple figure type thing and trying to fly that as fast
+[2037.74] Andrew &quot;tridge&quot; Tridgell: as you can. Right.
+[2038.9] Andrew &quot;tridge&quot; Tridgell: So the idea is to to fly that really, really, really fast in this funny pattern.
+[2044.58] Andrew &quot;tridge&quot; Tridgell: It&#x27;s the sort of thing that that, you know, generates conference papers.
+[2049.22] Andrew &quot;tridge&quot; Tridgell: As yeah, was that the fly as fast as possible for persistence of vision?
+[2055.22] UNKNOWN: So the LEDs made it look like it wasn&#x27;t doing persistence of vision.
+[2060.54] Andrew &quot;tridge&quot; Tridgell: I was just trying to push it harder and harder and harder until it couldn&#x27;t hold
+[2064.38] Andrew &quot;tridge&quot; Tridgell: it and it flew off against the wall.
+[2065.86] Andrew &quot;tridge&quot; Tridgell: And, you know, that was fun.
+[2068.18] Andrew &quot;tridge&quot; Tridgell: But yeah, it was more about the control algorithm.
+[2071.74] Andrew &quot;tridge&quot; Tridgell: So and also pushing the state estimation because the the little EKF on board
+[2077.26] Andrew &quot;tridge&quot; Tridgell: that&#x27;s estimating, you know, where you are in your velocity and attitude with all
+[2081.22] Andrew &quot;tridge&quot; Tridgell: the really hard accelerations around those corners as you push up the speed.
+[2085.86] Andrew &quot;tridge&quot; Tridgell: And it gets quite tricky, that.
+[2087.42] Andrew &quot;tridge&quot; Tridgell: So there&#x27;s a there&#x27;s a lot of stuff related to, you know, the state
+[2092.18] Andrew &quot;tridge&quot; Tridgell: estimator keeping up with those high rates.
+[2096.5] UNKNOWN: It&#x27;s we&#x27;ve got a project we&#x27;re starting with aerobatic copters or autonomous
+[2101.78] Andrew &quot;tridge&quot; Tridgell: aerobatics trying to do freestyle
+[2106.78] Andrew &quot;tridge&quot; Tridgell: schedules autonomously.
+[2108.38] Andrew &quot;tridge&quot; Tridgell: So trying to produce nice, nice schedules.
+[2111.98] Andrew &quot;tridge&quot; Tridgell: So we&#x27;ll be aiming to demonstrate that later or middle of next year,
+[2117.02] Andrew &quot;tridge&quot; Tridgell: something like that.
+[2118.54] UNKNOWN: This episode was recorded in front of a live online audience, downloaded and
+[2122.38] Frank: edited to make sense when it played audio only, censored to please the iTunes
+[2126.74] Frank: people hosted on the Internet, forwarded through to your podcast provider,
+[2129.94] Frank: downloaded, playing on your device and is now playing in your ears.
+[2133.66] Frank: All thanks to our patrons.
+[2135.86] Frank: Consider joining them and you&#x27;ll also get other online benefits.
+[2139.22] Frank: Find out more at patreon.com or slash let&#x27;s drone out.
+[2144.26] UNKNOWN: So I actually I have a random question sort of at a left field
+[2146.94] Koel: which is not on top of with anything we were talking about.
+[2149.46] Koel: But as a Canadian, I&#x27;m curious am thirty two dot C.A.
+[2155.06] UNKNOWN: Is there any Canadian something going on in the background there?
+[2159.42] UNKNOWN: Oh, well, you haven&#x27;t noticed the accent.
+[2162.86] Koel: I did, but you can never tell.
+[2164.46] Koel: Like Canadians are very polite.
+[2166.82] UNKNOWN: Yeah, yeah.
+[2167.7] Pete &quot;AlkaMotors&quot; (AM32): No, I&#x27;m from from Nova Scotia, Canada.
+[2170.86] Pete &quot;AlkaMotors&quot; (AM32): So that&#x27;s where it&#x27;s where I&#x27;m based out of.
+[2173.66] UNKNOWN: Ah, OK.
+[2175.54] Pete &quot;AlkaMotors&quot; (AM32): Hence the C.A. domain name and also am thirty two dot com was taken.
+[2180.94] UNKNOWN: Yeah. So where C.A. was the next best.
+[2184.5] Pete &quot;AlkaMotors&quot; (AM32): That&#x27;s right. Yeah, yeah.
+[2185.54] Pete &quot;AlkaMotors&quot; (AM32): No, I saw that.
+[2186.42] Pete &quot;AlkaMotors&quot; (AM32): Yeah, I want to be Canadian.
+[2188.9] UNKNOWN: Someone&#x27;s got to be Canadian on this.
+[2190.38] Koel: Yeah. No, on the on the river water, Nova Scotia.
+[2195.74] Pete &quot;AlkaMotors&quot; (AM32): So nice.
+[2197.78] UNKNOWN: We got a fellow Scotian, I think, in the chat here as well.
+[2201.3] Koel: I&#x27;m in southwestern Ontario, but yeah.
+[2205.5] UNKNOWN: That&#x27;s cool. Oh, nice.
+[2208.42] UNKNOWN: You know, I was going to ask what he&#x27;s excited about with the project these days.
+[2214.02] Stephen: I&#x27;m glad you could join us.
+[2215.54] Stephen: It sounded like it was touch and go, but great to see you here.
+[2218.58] UNKNOWN: Yeah, thank you.
+[2220.18] UNKNOWN: Yeah, I&#x27;m I&#x27;m I&#x27;m always excited.
+[2221.94] Eike &quot;Un!t&quot;: And yeah, I think that that we are doing doing great job,
+[2227.38] Eike &quot;Un!t&quot;: mostly Pete nowadays, because I&#x27;m not so active in the you see development.
+[2232.82] Eike &quot;Un!t&quot;: I&#x27;m focused on other stuff like the configurator and such,
+[2237.18] Eike &quot;Un!t&quot;: which needs maintenance, too.
+[2239.14] Eike &quot;Un!t&quot;: But yeah, I think that Pete is on a great track on improving stability greatly.
+[2247.3] Eike &quot;Un!t&quot;: And we are we are I think I&#x27;m not sure how how how far into
+[2252.46] Eike &quot;Un!t&quot;: into a testable firmware for the outside.
+[2256.5] Eike &quot;Un!t&quot;: Are you? Oh, I mean, yeah, we&#x27;ve been working on
+[2263.01] UNKNOWN: the challenges for 12 SCS for a little while now.
+[2267.13] UNKNOWN: And this goes back to what Kerry Kitten was saying there about it.
+[2272.25] Pete &quot;AlkaMotors&quot; (AM32): It should be simple once you develop an algorithm to control the motor.
+[2278.45] Pete &quot;AlkaMotors&quot; (AM32): It shouldn&#x27;t matter what voltage you run that motor at.
+[2280.97] Pete &quot;AlkaMotors&quot; (AM32): But we&#x27;re finding that as the voltage increases and
+[2285.57] UNKNOWN: especially as we get over sort of 30, 40 volts and up into the 50, 60
+[2290.49] Pete &quot;AlkaMotors&quot; (AM32): or higher volt range with 12 to 14 s that there is a massive amount
+[2295.97] Pete &quot;AlkaMotors&quot; (AM32): of things we have to we can fiddle with on the ESEs to control slew rates,
+[2303.29] Pete &quot;AlkaMotors&quot; (AM32): to control the energization of phases, to try to just keep things in control.
+[2310.85] Pete &quot;AlkaMotors&quot; (AM32): Because it&#x27;s I mean, the we&#x27;re talking about major changes
+[2317.81] Pete &quot;AlkaMotors&quot; (AM32): when it comes to throttle changes in terms of voltage per second
+[2322.17] Pete &quot;AlkaMotors&quot; (AM32): compared to lower voltage rates and lower voltage levels.
+[2326.49] Pete &quot;AlkaMotors&quot; (AM32): And it&#x27;s been a real challenge.
+[2329.13] Pete &quot;AlkaMotors&quot; (AM32): So the last few weeks have been devoted just to 12 SCS and higher
+[2336.09] Pete &quot;AlkaMotors&quot; (AM32): and trying to get commutation times more stable when things go wrong.
+[2341.93] UNKNOWN: When phases get saturated on loaders, which is something that happens too.
+[2349.25] Pete &quot;AlkaMotors&quot; (AM32): And when zero crosses are skipped.
+[2352.81] UNKNOWN: So so that that is the goal.
+[2355.97] Pete &quot;AlkaMotors&quot; (AM32): And that&#x27;s the challenge right now is to try to to get those
+[2360.05] Pete &quot;AlkaMotors&quot; (AM32): running a little more stably.
+[2363.41] Pete &quot;AlkaMotors&quot; (AM32): But it&#x27;s it&#x27;s tricky.
+[2366.49] Pete &quot;AlkaMotors&quot; (AM32): I mean, even just developing these things
+[2370.61] Pete &quot;AlkaMotors&quot; (AM32): where you know, when you&#x27;ve got a twenty two hundred sized quadcopter
+[2376.17] Pete &quot;AlkaMotors&quot; (AM32): motor on a bench beside you spinning up while you&#x27;re on your computer
+[2380.09] Pete &quot;AlkaMotors&quot; (AM32): making changes, it&#x27;s not not that scary.
+[2383.81] Pete &quot;AlkaMotors&quot; (AM32): But when you&#x27;ve got a 50 volt, you know, 12 inch prop 400 KV motor
+[2390.73] Pete &quot;AlkaMotors&quot; (AM32): spinning like a lawnmower three inches away from your laptop,
+[2394.41] Pete &quot;AlkaMotors&quot; (AM32): they are trying to like, is you have to have all these wires
+[2398.13] Pete &quot;AlkaMotors&quot; (AM32): might be carrying a hundred amps each, it&#x27;ll just get a little bit daunting.
+[2402.17] UNKNOWN: Yeah, that&#x27;s right.
+[2403.09] Pete &quot;AlkaMotors&quot; (AM32): And it&#x27;s, you know, with developing lower voltage stuff, something goes wrong.
+[2407.13] Pete &quot;AlkaMotors&quot; (AM32): It might desync and it gets hot.
+[2410.09] UNKNOWN: That&#x27;s not a big deal with 12S stuff.
+[2413.21] Pete &quot;AlkaMotors&quot; (AM32): Something goes wrong.
+[2414.57] Pete &quot;AlkaMotors&quot; (AM32): It just turns into a nuclear fireball on your desk.
+[2417.37] Pete &quot;AlkaMotors&quot; (AM32): And I mean, there&#x27;s so little chance for error.
+[2422.25] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s it&#x27;s when whenever anything does go wrong, it&#x27;s a major event.
+[2426.57] Pete &quot;AlkaMotors&quot; (AM32): When you&#x27;re talking such high voltages in current set.
+[2429.77] UNKNOWN: So it&#x27;s yeah, it&#x27;s hard on the nerves, but little by little, we&#x27;re getting there.
+[2435.73] Pete &quot;AlkaMotors&quot; (AM32): And I realize now that I think getting this stuff working is not a mass,
+[2440.13] Pete &quot;AlkaMotors&quot; (AM32): not a breakthrough that all of a sudden I&#x27;m going to find some new routine
+[2443.69] Pete &quot;AlkaMotors&quot; (AM32): that&#x27;s going to magically make it work perfectly.
+[2446.29] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s a whole lot of little steps and a whole lot of little things
+[2450.65] Pete &quot;AlkaMotors&quot; (AM32): to have to come together to.
+[2453.93] UNKNOWN: To slowly improve things to make these
+[2458.09] Pete &quot;AlkaMotors&quot; (AM32): higher voltage motors and bigger props and larger current draws a little more stable.
+[2463.61] Pete &quot;AlkaMotors&quot; (AM32): And then as soon as we do, somebody is going to go up to 16S or 24S
+[2468.25] Pete &quot;AlkaMotors&quot; (AM32): and 24 inch props and then you&#x27;ll find your kit and e-bikes and God knows what.
+[2476.97] Stephen: Yeah, it&#x27;s a month rate is just going to go through the roof, man.
+[2480.09] Stephen: You&#x27;re going to be needing a new desk every week or so.
+[2482.41] Stephen: Just score marks everywhere.
+[2484.37] UNKNOWN: Oh, it&#x27;s it is ridiculous.
+[2487.05] Pete &quot;AlkaMotors&quot; (AM32): I&#x27;ve got a four foot plywood box beside me on my desk with a motor inside it
+[2493.93] Pete &quot;AlkaMotors&quot; (AM32): just to give myself some blast protection when things go wrong inside there.
+[2499.61] Pete &quot;AlkaMotors&quot; (AM32): But the ESC, unfortunately, is sitting on my desk and it&#x27;s
+[2504.37] UNKNOWN: yeah, I&#x27;ve got little scorch marks all over the place.
+[2507.41] Pete &quot;AlkaMotors&quot; (AM32): I think things sit on a little wood pad.
+[2510.61] Pete &quot;AlkaMotors&quot; (AM32): So I&#x27;ve got a little little wooden pad that when it does burn and it doesn&#x27;t burn my desk,
+[2515.09] Pete &quot;AlkaMotors&quot; (AM32): it just burns this little pad instead.
+[2516.97] Pete &quot;AlkaMotors&quot; (AM32): And each one of those is a dead ESC on there.
+[2520.49] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s a black and brown experience.
+[2523.57] UNKNOWN: Yeah, yeah.
+[2524.49] Pete &quot;AlkaMotors&quot; (AM32): And it&#x27;s you know, it&#x27;s not as when you&#x27;re dealing with low voltage stuff, too.
+[2529.01] Pete &quot;AlkaMotors&quot; (AM32): And you&#x27;ve got a whole roll full of eight dollar ESCs.
+[2533.17] Pete &quot;AlkaMotors&quot; (AM32): If you burn one out by trying some new routines and making a stupid mistake,
+[2537.01] Pete &quot;AlkaMotors&quot; (AM32): you just throw another one on there.
+[2538.61] Pete &quot;AlkaMotors&quot; (AM32): But when you burn a hundred and fifty dollar motor or a hundred dollar ESC out
+[2544.69] Jack: just in development, it&#x27;s not something that I don&#x27;t have a stack of them behind me.
+[2549.05] Pete &quot;AlkaMotors&quot; (AM32): I can just grab another and throw it on the desk.
+[2551.85] Pete &quot;AlkaMotors&quot; (AM32): So so progress is definitely slower.
+[2555.05] Pete &quot;AlkaMotors&quot; (AM32): But we&#x27;re going to keep on working on it anyway.
+[2558.01] Pete &quot;AlkaMotors&quot; (AM32): Something else that that always comes up here.
+[2559.93] Stephen: We&#x27;ve got people who, you know, always, oh, what about the faster update rates?
+[2564.21] Stephen: What about like twelve hundred updates per second?
+[2566.57] Stephen: What about twenty four hundred updates per second?
+[2568.53] Stephen: What about forty eight hundred updates per second?
+[2571.09] Stephen: But what&#x27;s your take on that?
+[2572.41] Stephen: And mechanically, what do you think the the the motor can actually
+[2578.97] Stephen: represent in terms of update rates?
+[2583.14] UNKNOWN: Oh, the motor is is glacially slow compared to those update rates.
+[2589.34] Pete &quot;AlkaMotors&quot; (AM32): I mean, you probably wouldn&#x27;t really be able to tell much of a difference
+[2593.1] Pete &quot;AlkaMotors&quot; (AM32): in terms of motor response between a hundred hertz and a thousand hertz and.
+[2599.34] Pete &quot;AlkaMotors&quot; (AM32): Yeah, thirty two thousand hertz or whatever the the higher update rates are at
+[2606.7] Pete &quot;AlkaMotors&quot; (AM32): for really finely controlled PID responses.
+[2609.5] Pete &quot;AlkaMotors&quot; (AM32): I mean, the lower the lowest latency and the better.
+[2613.3] Pete &quot;AlkaMotors&quot; (AM32): But here the the physical response of a motor with the prop
+[2619.26] UNKNOWN: is so slow compared to those update rates.
+[2621.94] Pete &quot;AlkaMotors&quot; (AM32): You could send the throttle one step per update from zero to full throttle
+[2628.26] Pete &quot;AlkaMotors&quot; (AM32): and back to zero again before the motor would even twitch.
+[2631.54] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s, you know, I don&#x27;t think that
+[2635.74] Pete &quot;AlkaMotors&quot; (AM32): there is there is a reason to have as low a latency as possible.
+[2639.34] Pete &quot;AlkaMotors&quot; (AM32): But chasing massive update rates
+[2642.7] Pete &quot;AlkaMotors&quot; (AM32): when the motor itself is a gigantic slow moving blob compared especially
+[2648.22] Pete &quot;AlkaMotors&quot; (AM32): for the big stuff, right?
+[2650.1] UNKNOWN: Yeah, yeah, definitely like it&#x27;s so maybe for for whoops, perhaps.
+[2653.78] Stephen: But you&#x27;ve got the little seven millimeter motors and stuff like that.
+[2658.82] UNKNOWN: Yeah, the faster the the physical rate of the possible physical rate of change,
+[2664.74] Pete &quot;AlkaMotors&quot; (AM32): the faster the update rate can be.
+[2668.74] Pete &quot;AlkaMotors&quot; (AM32): But with these big motors, I mean, they
+[2672.9] Pete &quot;AlkaMotors&quot; (AM32): they they won&#x27;t change very
+[2676.26] Pete &quot;AlkaMotors&quot; (AM32): even within one turn, they might not change RPM very, very fast.
+[2681.46] Pete &quot;AlkaMotors&quot; (AM32): You know, it could take quite a few turns before they even really have a
+[2687.14] Pete &quot;AlkaMotors&quot; (AM32): double their RPM, for example.
+[2688.9] Pete &quot;AlkaMotors&quot; (AM32): So by that, otherwise the heating effect would be pretty insane
+[2693.42] Stephen: because they&#x27;re never 100 percent efficient.
+[2694.98] Stephen: Right. So acceleration will cause a lot of heating, I guess. Right.
+[2700.05] UNKNOWN: Yeah, I mean, there&#x27;s just a certain point where any faster of an update rate
+[2703.97] Pete &quot;AlkaMotors&quot; (AM32): is not going to improve the response of a motor.
+[2706.81] Pete &quot;AlkaMotors&quot; (AM32): And I think we&#x27;ve exceeded that already with the 4K D shot that we&#x27;re using.
+[2713.09] Pete &quot;AlkaMotors&quot; (AM32): I don&#x27;t think anything beyond that&#x27;s really going to make it
+[2717.85] UNKNOWN: make it much faster.
+[2719.09] Stephen: Well, a 4K pit rate with D shot 300, would that be?
+[2723.89] UNKNOWN: Yeah. And I mean, even I mean, KISS that uses they have a much higher D shot rates.
+[2729.53] Pete &quot;AlkaMotors&quot; (AM32): You know, they use D shot 1200 or D shot 2400.
+[2733.57] Pete &quot;AlkaMotors&quot; (AM32): But they don&#x27;t they don&#x27;t update it any faster.
+[2738.45] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s not like that D shot signal is coming at a closer interval
+[2742.73] Pete &quot;AlkaMotors&quot; (AM32): or a tighter interval.
+[2743.77] Pete &quot;AlkaMotors&quot; (AM32): It&#x27;s it&#x27;s still being updated at a regular low,
+[2748.57] Pete &quot;AlkaMotors&quot; (AM32): I think four kilohertz or eight kilohertz PID loop rate.
+[2752.69] Pete &quot;AlkaMotors&quot; (AM32): So they I think the only advantage to those
+[2757.73] Pete &quot;AlkaMotors&quot; (AM32): is getting a little bit lower latency because the signal is finished
+[2760.61] Pete &quot;AlkaMotors&quot; (AM32): a little bit faster, but we&#x27;re talking microseconds.
+[2763.69] Pete &quot;AlkaMotors&quot; (AM32): So I don&#x27;t know what you know.
+[2765.97] UNKNOWN: Yeah, I&#x27;m not sure if it really is going to make much of a difference in the end.
+[2770.17] UNKNOWN: Yeah, I&#x27;m worried difference between
+[2774.53] Stephen: real results and how easy it is to attract people,
+[2777.97] Stephen: especially technical folk with with higher numbers.
+[2780.37] Stephen: Everyone likes higher numbers.
+[2782.77] UNKNOWN: It&#x27;s difficult. And for for butterfly, for example,
+[2786.73] Eike &quot;Un!t&quot;: you already saturate 4K loop rate with D shot 300.
+[2790.81] Eike &quot;Un!t&quot;: So the only reason to go 8K loop rate and D shot 600
+[2795.89] Eike &quot;Un!t&quot;: is to enable bi-directional D shot for RPM filtering
+[2799.37] Eike &quot;Un!t&quot;: because you basically have the data rate in half.
+[2803.13] Eike &quot;Un!t&quot;: So data rate is 300 and bi-directional telemetry is 300.
+[2809.29] Eike &quot;Un!t&quot;: So it adds up to 600 and you already saturate the the 8K loop with that.
+[2814.81] Eike &quot;Un!t&quot;: So for beta flight, there&#x27;s no reason to go any higher.
+[2819.49] UNKNOWN: 32K loop rate, IK, you can run 32K loop rate.
+[2822.97] Stephen: What was the answer?
+[2824.77] Stephen: Was there a time where that was possible, actually?
+[2831.17] Jack: Carl, you&#x27;ve got a question about the support for.
+[2836.09] UNKNOWN: Oh, yeah, yeah, yeah.
+[2837.09] Koel: So that is one thing.
+[2839.05] Koel: So with Kisteltra, I&#x27;ve seen that&#x27;s been added to the website recently
+[2842.37] Koel: and and the support for for that.
+[2845.33] Koel: Just curious, I guess what that was all like with the development
+[2848.89] Koel: and working with Alexander and stuff.
+[2853.26] UNKNOWN: Yeah, well, originally AM32 didn&#x27;t work properly with D shot 1200, 2400.
+[2859.02] Pete &quot;AlkaMotors&quot; (AM32): We just stopped it at 600.
+[2861.7] Pete &quot;AlkaMotors&quot; (AM32): And but we wanted to make sure that it worked
+[2867.78] Pete &quot;AlkaMotors&quot; (AM32): with as many flight controllers as possible.
+[2870.34] Pete &quot;AlkaMotors&quot; (AM32): And so we wanted to support Kist flight controllers as well.
+[2873.82] Pete &quot;AlkaMotors&quot; (AM32): We&#x27;ve heard a lot of good things from pilots
+[2875.98] Pete &quot;AlkaMotors&quot; (AM32): and some pilots really love Kist stuff.
+[2878.38] Pete &quot;AlkaMotors&quot; (AM32): So it seems to fly really nice and stable.
+[2882.38] Pete &quot;AlkaMotors&quot; (AM32): So we, you know, we wanted to make sure that AM32 works
+[2885.5] Pete &quot;AlkaMotors&quot; (AM32): with those higher D shot rates, too, that people are used to with Kist stuff.
+[2889.54] Pete &quot;AlkaMotors&quot; (AM32): So we had to just make sure that it could.
+[2894.06] UNKNOWN: Yeah, we had to just change some of the timings to allow
+[2898.66] Pete &quot;AlkaMotors&quot; (AM32): so it can accept 1200 or 2400.
+[2901.34] Pete &quot;AlkaMotors&quot; (AM32): It can actually accept D shot signals of really any any moderate.
+[2904.7] Pete &quot;AlkaMotors&quot; (AM32): It just compares the the pulse time to the total packet time
+[2909.7] Pete &quot;AlkaMotors&quot; (AM32): to to work out whether it&#x27;s a valid D shot signal or not.
+[2915.26] Pete &quot;AlkaMotors&quot; (AM32): So we made those changes for Kist
+[2918.26] Pete &quot;AlkaMotors&quot; (AM32): and and worked with a few of their test pilots.
+[2920.94] Pete &quot;AlkaMotors&quot; (AM32): And I hope they&#x27;re happy now.
+[2924.02] Koel: Well, you know, I saw I saw a bunch of stuff that Al Mac was putting out.
+[2928.98] Koel: He was working on some with Kist Ultra and the AM32 stuff.
+[2933.78] Koel: I don&#x27;t know if if you&#x27;re familiar with Al Mac.
+[2937.22] Koel: I&#x27;m guessing you may be.
+[2939.46] Koel: Yes, yes, I am.
+[2940.78] Pete &quot;AlkaMotors&quot; (AM32): No, I talked to him every once in a while through the the AM32 discord.
+[2946.5] Pete &quot;AlkaMotors&quot; (AM32): And we&#x27;ve we&#x27;ve he&#x27;s helped me out immensely with testing and development.
+[2953.06] Pete &quot;AlkaMotors&quot; (AM32): He&#x27;s been my guinea pig, lovely man.
+[2955.38] Pete &quot;AlkaMotors&quot; (AM32): AM60 up and running.
+[2958.3] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s and he&#x27;s luckily very patient.
+[2962.9] Pete &quot;AlkaMotors&quot; (AM32): So thanks. Thanks a lot, Al Mac.
+[2965.38] Pete &quot;AlkaMotors&quot; (AM32): I know you&#x27;re in the chat there, but yeah, we just had him on last week, I think.
+[2969.82] Stephen: So hello, Al. Hope you&#x27;re doing well.
+[2974.3] UNKNOWN: Yeah, also also a shout out to Alexander himself,
+[2978.38] UNKNOWN: who helped tremendous in fixing the configurator to work with Kist Ultra.
+[2982.9] Eike &quot;Un!t&quot;: And he actually wrote the code to make it more stable
+[2987.22] Eike &quot;Un!t&quot;: for everybody himself.
+[2989.02] Eike &quot;Un!t&quot;: And I added it to the country radio.
+[2991.62] Jack: Lovely. Very talented man.
+[2995.14] Jack: Very. It&#x27;s a it&#x27;s a pleasure to know him.
+[2999.9] Jack: Even though we do annoy the piss out of him.
+[3003.14] Koel: I&#x27;m sorry.
+[3006.38] Jack: Yeah, that&#x27;s fair. We definitely do.
+[3008.9] Koel: Thanks. No idea. Thanks, Feds.
+[3011.78] Koel: Oh, no, the man.
+[3014.42] Jack: Yes. How I can&#x27;t believe, Pete, am I right?
+[3019.54] Jack: I checked out an interview with you and this all started
+[3024.1] Jack: because you wanted to run DIY firmware.
+[3027.86] UNKNOWN: Is that right?
+[3029.02] UNKNOWN: Yeah, I see you and stuff.
+[3031.9] Jack: Yeah, it started because
+[3036.7] UNKNOWN: well, I was I wanted to make a lot of BLHESC at first.
+[3043.58] Pete &quot;AlkaMotors&quot; (AM32): So I was making those DIY and just flashing BLHES,
+[3047.38] Pete &quot;AlkaMotors&quot; (AM32): which was readily available to them.
+[3049.02] Pete &quot;AlkaMotors&quot; (AM32): And it was great for hobbyists because you can just play around
+[3052.78] Pete &quot;AlkaMotors&quot; (AM32): with your own hardware, download one of the hardware profiles
+[3056.5] Pete &quot;AlkaMotors&quot; (AM32): that matches and away you go.
+[3057.9] Pete &quot;AlkaMotors&quot; (AM32): And and I was really excited about 32 bit
+[3063.58] Pete &quot;AlkaMotors&quot; (AM32): BLHESC 32 to be able to do that, my firmware.
+[3067.06] Pete &quot;AlkaMotors&quot; (AM32): But unfortunately, it wasn&#x27;t so.
+[3070.46] Pete &quot;AlkaMotors&quot; (AM32): So that&#x27;s what started because I had to I had to make something
+[3075.34] Pete &quot;AlkaMotors&quot; (AM32): work on the hardware that I was was playing around with at the time.
+[3080.1] UNKNOWN: So I&#x27;m glad to see you stuck to it because you&#x27;ve created
+[3084.54] Stephen: a juggernaut here. It&#x27;s fantastic to see. Yeah.
+[3088.74] UNKNOWN: Oh, you&#x27;re amazing.
+[3091.18] UNKNOWN: I mean, yeah, I was flashing the stuff while buying
+[3097.1] Stephen: BLHESC 32 and paying their license fee and then spending hours
+[3100.94] Stephen: trying to figure this out and flashing it and importing weird little dongles
+[3105.26] Stephen: from AliExpress to to flash the 8032 hardware and everything.
+[3110.62] Stephen: And yeah, I think I think it&#x27;s fantastic.
+[3112.54] Stephen: Speaking of which, have you seen Andrew?
+[3116.14] Pete &quot;AlkaMotors&quot; (AM32): Well, I have now, if only that had been around a year ago.
+[3119.18] Pete &quot;AlkaMotors&quot; (AM32): That deserves a special mention, especially for anybody who&#x27;s out there
+[3123.54] Pete &quot;AlkaMotors&quot; (AM32): doing any flashing.
+[3125.1] Pete &quot;AlkaMotors&quot; (AM32): Maybe Andrew, you can talk a little bit about that too.
+[3127.34] Pete &quot;AlkaMotors&quot; (AM32): Oh, yeah. What it does for sure.
+[3130.26] UNKNOWN: I love you.
+[3134.86] Stephen: Yeah, he found it very easy.
+[3136.26] Stephen: So tell us more about it, Andrew.
+[3138.66] UNKNOWN: Yeah, it was just I noticed a lot of people struggling with
+[3142.62] Andrew &quot;tridge&quot; Tridgell: getting the debug connection and and having to solder.
+[3145.98] Andrew &quot;tridge&quot; Tridgell: I&#x27;m terrible at soldering.
+[3147.62] Andrew &quot;tridge&quot; Tridgell: Really, the fine soldering you have to do, you know,
+[3151.5] Andrew &quot;tridge&quot; Tridgell: in order to get a stable link to your debugger,
+[3155.26] Andrew &quot;tridge&quot; Tridgell: especially on a four in one.
+[3157.34] Andrew &quot;tridge&quot; Tridgell: And that was a real struggle.
+[3158.62] Andrew &quot;tridge&quot; Tridgell: And, you know, as any software engineers knows,
+[3161.34] Andrew &quot;tridge&quot; Tridgell: if you&#x27;re having a trouble with hardware, you try and fix it in software.
+[3165.42] Andrew &quot;tridge&quot; Tridgell: And so the idea was to try to automate that.
+[3169.02] Andrew &quot;tridge&quot; Tridgell: And I initially just did it as a little bash script.
+[3171.58] Andrew &quot;tridge&quot; Tridgell: So it was a little wild, true, you know, open OCD flash, flash, flash, flash,
+[3177.78] Andrew &quot;tridge&quot; Tridgell: right. And then you hold the pins and then it it goes OK.
+[3181.86] Andrew &quot;tridge&quot; Tridgell: And so then it was just a matter of wrapping that in a GUI.
+[3186.78] Andrew &quot;tridge&quot; Tridgell: So and with the little beeps, you know, it&#x27;s done.
+[3188.98] Andrew &quot;tridge&quot; Tridgell: So you don&#x27;t have to look at the screen and that sort of thing.
+[3191.7] Andrew &quot;tridge&quot; Tridgell: So, yeah, I&#x27;m really glad it&#x27;s been useful for people.
+[3196.06] Andrew &quot;tridge&quot; Tridgell: And I mean, the GUI is pretty crude,
+[3200.14] Andrew &quot;tridge&quot; Tridgell: but it does the job.
+[3202.02] Andrew &quot;tridge&quot; Tridgell: Well, if you want to use it once.
+[3203.9] UNKNOWN: Yeah, yeah, it&#x27;s it&#x27;s
+[3207.3] Andrew &quot;tridge&quot; Tridgell: it was it was nice when I when I did a four in one with it being able to go tap,
+[3210.9] Andrew &quot;tridge&quot; Tridgell: tap, tap, tap, tap.
+[3212.14] Andrew &quot;tridge&quot; Tridgell: You often have to scrape off the little covering.
+[3215.5] Andrew &quot;tridge&quot; Tridgell: They&#x27;ve got little little conformal coding on.
+[3219.66] Andrew &quot;tridge&quot; Tridgell: Although interesting thing about that, I do slightly worry about
+[3224.82] UNKNOWN: people end up then flying, of course, with that conformal coding scraped off.
+[3229.3] UNKNOWN: And we had this this issue in the past with our new pilot
+[3234.5] Andrew &quot;tridge&quot; Tridgell: where the debug pins like the debug connector was exposed
+[3238.9] Andrew &quot;tridge&quot; Tridgell: on the side of the vehicle.
+[3240.34] Andrew &quot;tridge&quot; Tridgell: And we found on some vehicles, you could make them reboot
+[3243.7] Andrew &quot;tridge&quot; Tridgell: by putting your hand on that connector.
+[3246.26] Andrew &quot;tridge&quot; Tridgell: And so, you know, your fingers touching between the clock and data pins.
+[3254.26] Andrew &quot;tridge&quot; Tridgell: Yeah. And it was just these particular vehicles.
+[3256.5] Andrew &quot;tridge&quot; Tridgell: It was possible.
+[3257.18] Andrew &quot;tridge&quot; Tridgell: So we&#x27;ve now changed our pilot by default
+[3261.46] Andrew &quot;tridge&quot; Tridgell: to disable those debug pins just by not setting the auxiliary functions
+[3266.26] Andrew &quot;tridge&quot; Tridgell: on those on those pins to to enable them.
+[3270.3] Andrew &quot;tridge&quot; Tridgell: And there&#x27;s a parameter in our pilot that sets whether to enable those.
+[3274.18] Andrew &quot;tridge&quot; Tridgell: You&#x27;ve got to then set that parameter for or a debugger won&#x27;t attach.
+[3278.62] UNKNOWN: And it might be nice to do that in in I am 32.
+[3282.5] Andrew &quot;tridge&quot; Tridgell: But the problem is that that also makes it harder for people
+[3285.22] Andrew &quot;tridge&quot; Tridgell: then replace the firmware if something goes badly wrong. Right.
+[3289.3] Andrew &quot;tridge&quot; Tridgell: But I do slightly worry that there&#x27;s a small chance
+[3294.34] Andrew &quot;tridge&quot; Tridgell: of a bit of electrostatic discharge or whatever on those exposed pads,
+[3299.06] Andrew &quot;tridge&quot; Tridgell: a bit of moisture, a drop of rain,
+[3303.06] Andrew &quot;tridge&quot; Tridgell: you know, with a with a bit of grime from, you know, sort from cars or whatever.
+[3307.86] Andrew &quot;tridge&quot; Tridgell: You can always get a little bit of conformal
+[3310.18] Stephen: and just just dab it on after you&#x27;ve got the bootloader on.
+[3313.74] Stephen: Sure. But again, software engineer, you know, if it&#x27;s
+[3316.78] Andrew &quot;tridge&quot; Tridgell: if it&#x27;s above the level of like zip ties and sticky tape,
+[3320.3] Andrew &quot;tridge&quot; Tridgell: then it&#x27;s sort of beyond my capabilities.
+[3322.06] Andrew &quot;tridge&quot; Tridgell: What about a hot glue? Do you interpret that in the list?
+[3324.62] Andrew &quot;tridge&quot; Tridgell: Yeah, I do have a hot glue gun.
+[3326.94] Andrew &quot;tridge&quot; Tridgell: It&#x27;s funny enough, I bought one of the US 110 volt hot glue guns
+[3332.3] Andrew &quot;tridge&quot; Tridgell: and I find that run it on 250 volts in Australia and it really heats up fast.
+[3337.02] Andrew &quot;tridge&quot; Tridgell: That was great.
+[3338.62] Andrew &quot;tridge&quot; Tridgell: So I&#x27;ve got a really fast heat up hot glue gun.
+[3343.18] Andrew &quot;tridge&quot; Tridgell: You&#x27;re on a live podcast. Shut up.
+[3347.78] UNKNOWN: If you&#x27;re only a man with pooming chores,
+[3350.38] Jack: I&#x27;ve only had to trip the, you know, the house figure a couple of times
+[3355.78] Andrew &quot;tridge&quot; Tridgell: when I plug in the hot glue gun.
+[3356.9] Andrew &quot;tridge&quot; Tridgell: Most of the time it works, but it does heat up fast.
+[3363.34] Andrew &quot;tridge&quot; Tridgell: Yeah, that I&#x27;m not telling you to do this,
+[3365.58] Jack: but if you get the temperature controlled ones and bypass the direct
+[3372.14] UNKNOWN: goes when it comes out, it bubbles and it&#x27;s quite steam.
+[3376.7] Jack: Excellent. Excellent.
+[3378.06] Jack: Yeah, do that rather than 110, baby.
+[3382.18] Andrew &quot;tridge&quot; Tridgell: Oh, right. OK, so you sort of steam the glue on.
+[3385.18] Andrew &quot;tridge&quot; Tridgell: Yeah, this sounds like a great idea.
+[3387.86] Stephen: Some kind of super soaker with a jet of steam.
+[3394.66] Andrew &quot;tridge&quot; Tridgell: Excellent. Great advice.
+[3397.1] UNKNOWN: Do you guys want to hear something awesome about Andreas
+[3400.94] Eike &quot;Un!t&quot;: and another another thing?
+[3402.86] UNKNOWN: Go ahead. Not really.
+[3404.3] Andrew &quot;tridge&quot; Tridgell: Do you guys all know Zumba?
+[3408.34] UNKNOWN: Ah, I haven&#x27;t worked on that for a long time.
+[3411.22] Andrew &quot;tridge&quot; Tridgell: It&#x27;s Zumba, SMB, Zumba.
+[3413.58] Eike &quot;Un!t&quot;: This is. Yeah. Say hello to the creator.
+[3418.46] UNKNOWN: Yeah, that was that was a long time ago.
+[3420.06] Andrew &quot;tridge&quot; Tridgell: That was procrastinating while while working on which versions
+[3423.5] Andrew &quot;tridge&quot; Tridgell: a long time ago in the version one days or up to version three.
+[3428.82] Stephen: I think we&#x27;re on for a vision for I started all the ones up to version four.
+[3433.14] Andrew &quot;tridge&quot; Tridgell: But then I then I hung up my Samba development hat
+[3436.34] Andrew &quot;tridge&quot; Tridgell: and handed over to the rest of the team.
+[3438.74] Andrew &quot;tridge&quot; Tridgell: So I haven&#x27;t done Samba development for a long time.
+[3444.02] Andrew &quot;tridge&quot; Tridgell: Well done. That&#x27;s made a lot of my infrastructure come along happily.
+[3447.94] Stephen: So good stuff. Yeah, it&#x27;s it&#x27;s good.
+[3450.42] Andrew &quot;tridge&quot; Tridgell: It&#x27;s really good feeling to make software that people find useful.
+[3454.42] Andrew &quot;tridge&quot; Tridgell: And as I&#x27;m sure Peter&#x27;s discovered,
+[3457.1] Andrew &quot;tridge&quot; Tridgell: the satisfaction that comes from, you know, appreciated software
+[3461.02] Andrew &quot;tridge&quot; Tridgell: and the frustration sometimes when it doesn&#x27;t work.
+[3464.1] Andrew &quot;tridge&quot; Tridgell: And, you know, oh, no, you blew up my essay.
+[3469.18] Andrew &quot;tridge&quot; Tridgell: Yes, that that happens, too.
+[3471.18] Andrew &quot;tridge&quot; Tridgell: And yeah, I&#x27;ve heard a few harsh words now.
+[3475.58] Pete &quot;AlkaMotors&quot; (AM32): Yeah, the past few years.
+[3479.42] UNKNOWN: But, you know, that&#x27;s that&#x27;s going to happen.
+[3481.86] Pete &quot;AlkaMotors&quot; (AM32): I mean, we&#x27;ve got thousands of people using something
+[3485.02] UNKNOWN: and millions of combinations.
+[3487.7] UNKNOWN: Yeah, it&#x27;s not all roses, unfortunately.
+[3490.82] Stephen: Yeah, the B to flight team has the same thing.
+[3493.38] Stephen: You need very thick skin to deal with with all of the users, because it&#x27;s
+[3497.9] UNKNOWN: 99 percent good news that you don&#x27;t hear.
+[3500.54] Stephen: And one percent ruins ruin someone&#x27;s day.
+[3503.5] Stephen: And they&#x27;ll hang around all week to tell you about it.
+[3507.14] Andrew &quot;tridge&quot; Tridgell: And crash logs takes on a whole new meaning when they&#x27;ve got flying vehicles.
+[3511.54] Andrew &quot;tridge&quot; Tridgell: Yeah. Yeah.
+[3514.86] Jack: One final question that I want to ask is
+[3518.5] Jack: what is the highest voltage
+[3521.66] Jack: you officially support and what you&#x27;re hoping to get to?
+[3527.3] Jack: What&#x27;s the road map for the height?
+[3528.94] Jack: You know, the voltage support of a and 32
+[3532.9] Jack: yes, I suppose it&#x27;s more of a hardware thing, isn&#x27;t it?
+[3536.9] UNKNOWN: I think save for now is eight is right.
+[3539.54] Eike &quot;Un!t&quot;: And nothing, nothing above eight is
+[3543.26] UNKNOWN: confirmed working.
+[3547.26] Curry: And so I mentioned the security in the chat.
+[3549.62] Stephen: They were talking about something that looked like a 12 SCC.
+[3554.78] UNKNOWN: It shouldn&#x27;t really match.
+[3556.78] Pete &quot;AlkaMotors&quot; (AM32): That&#x27;s that&#x27;s where it should really make much of a difference.
+[3560.22] Pete &quot;AlkaMotors&quot; (AM32): But what we&#x27;re doing now is having to create
+[3564.02] Pete &quot;AlkaMotors&quot; (AM32): software work arounds for hardware and possibilities.
+[3568.26] Pete &quot;AlkaMotors&quot; (AM32): So it&#x27;s it&#x27;s it&#x27;s we&#x27;re reaching a stage where
+[3572.58] UNKNOWN: we with the hardware can&#x27;t work on 12 S as it is.
+[3578.74] Pete &quot;AlkaMotors&quot; (AM32): So these 12 SCC is if we were to change voltage from zero to 50 volts
+[3584.94] Pete &quot;AlkaMotors&quot; (AM32): and give these motors full voltage right off the bat,
+[3588.74] UNKNOWN: they something would break,
+[3591.58] Pete &quot;AlkaMotors&quot; (AM32): whether it&#x27;s in the motor or something in the ESE or it would just
+[3595.26] Pete &quot;AlkaMotors&quot; (AM32): they&#x27;d be they&#x27;d be problems.
+[3596.54] Pete &quot;AlkaMotors&quot; (AM32): So as the voltage increases,
+[3599.58] UNKNOWN: there really shouldn&#x27;t be logic changes that we have to do.
+[3603.58] Pete &quot;AlkaMotors&quot; (AM32): But
+[3606.14] Pete &quot;AlkaMotors&quot; (AM32): because the hardware, we know we have to keep things under control.
+[3610.34] Pete &quot;AlkaMotors&quot; (AM32): We have to keep voltage fluctuations to a minimum and voltage ripple.
+[3614.14] UNKNOWN: We have to now do work arounds to make that higher voltage work.
+[3618.86] Pete &quot;AlkaMotors&quot; (AM32): I mean, in the past, aim 32 has been used on 150 volt DC water pumps.
+[3624.86] Pete &quot;AlkaMotors&quot; (AM32): So but they run at a fixed RPM.
+[3628.02] Pete &quot;AlkaMotors&quot; (AM32): They slowly reach the front.
+[3629.98] Pete &quot;AlkaMotors&quot; (AM32): They go from a low speed somewhere gradually up to their their final RPM
+[3635.54] Pete &quot;AlkaMotors&quot; (AM32): and then they just run at that one speed forever.
+[3639.38] UNKNOWN: And the hardware was made with that in mind, too.
+[3643.26] Pete &quot;AlkaMotors&quot; (AM32): So it worked fine.
+[3646.82] Pete &quot;AlkaMotors&quot; (AM32): But, you know, the ESE will work fine at 12 S2,
+[3651.58] Pete &quot;AlkaMotors&quot; (AM32): but it might not work fine at 12 S if somebody all of a sudden
+[3656.26] Pete &quot;AlkaMotors&quot; (AM32): demands 100 percent throttle when they&#x27;re at 10 percent throttle
+[3660.94] UNKNOWN: from all four motors on an ESE.
+[3666.1] UNKNOWN: Something might go wrong that.
+[3667.34] Pete &quot;AlkaMotors&quot; (AM32): So that&#x27;s that&#x27;s why it&#x27;s, you know,
+[3670.7] UNKNOWN: I think the highest supported
+[3673.62] UNKNOWN: firmware hardware right now is works reliably in 8S.
+[3679.06] Pete &quot;AlkaMotors&quot; (AM32): But there are 12 SESC&#x27;s that some people work and use perfectly fine
+[3685.1] Pete &quot;AlkaMotors&quot; (AM32): depending on their setup.
+[3686.86] UNKNOWN: But you have to be aware that AM 32 is not doing a lot of restriction for you.
+[3691.7] Pete &quot;AlkaMotors&quot; (AM32): So you have to do it yourself.
+[3694.06] Pete &quot;AlkaMotors&quot; (AM32): If you&#x27;re going to go to 50 percent throttle and then slam it to 100 percent throttle,
+[3700.5] UNKNOWN: the firmware is not going to stop you from just applying that voltage.
+[3704.5] Pete &quot;AlkaMotors&quot; (AM32): And it&#x27;s going to try to do whatever you&#x27;re asking it to,
+[3708.94] Pete &quot;AlkaMotors&quot; (AM32): which is going to exceed the limits of a lot of hardware.
+[3711.78] Pete &quot;AlkaMotors&quot; (AM32): So we&#x27;re going to have to add more of the protections that BL Heli had.
+[3719.06] UNKNOWN: So things that BL Heli 32 did in order to
+[3723.1] Pete &quot;AlkaMotors&quot; (AM32): to sort of mitigate disaster from these larger ESEs like
+[3731.7] Pete &quot;AlkaMotors&quot; (AM32): slew rate limitations.
+[3734.26] Pete &quot;AlkaMotors&quot; (AM32): So we&#x27;re not allowing a massive throttle jump.
+[3738.14] UNKNOWN: I&#x27;m also looking at sort of active phase
+[3744.78] UNKNOWN: de-energization or demag compensation is what they called it for BL Heli 32.
+[3750.9] Pete &quot;AlkaMotors&quot; (AM32): More low throttle protections for those
+[3756.38] Pete &quot;AlkaMotors&quot; (AM32): those high voltage lower RPM motors.
+[3760.02] Pete &quot;AlkaMotors&quot; (AM32): So in order to account for all those fringe situations,
+[3764.9] Pete &quot;AlkaMotors&quot; (AM32): we&#x27;re going to have to just add in a whole lot more options
+[3768.14] Pete &quot;AlkaMotors&quot; (AM32): that people could enable to to not be a complex beast.
+[3774.7] Pete &quot;AlkaMotors&quot; (AM32): It is. Yeah. Yeah.
+[3776.78] Andrew &quot;tridge&quot; Tridgell: Yeah. I&#x27;d like to get to 24S. Oh, yeah.
+[3782.38] UNKNOWN: So to 96. It&#x27;ll take a while.
+[3785.42] Andrew &quot;tridge&quot; Tridgell: That&#x27;s not going to be next week, that year or two.
+[3788.38] Andrew &quot;tridge&quot; Tridgell: But there&#x27;s quite a number of 24S vehicles that I&#x27;d love to see AM 32 on.
+[3793.34] UNKNOWN: And they&#x27;re currently flying like the 24S T motors, that sort of thing.
+[3799.06] Andrew &quot;tridge&quot; Tridgell: And I&#x27;d love it to be an option to be on the AM 32 instead.
+[3803.22] Andrew &quot;tridge&quot; Tridgell: Well, we have a few pilots here who&#x27;ve flown X-Class.
+[3806.14] Stephen: I think Clive FPV has flown one of those and Zoe FPV.
+[3809.98] Stephen: She was definitely kind of one of the proponents of X-Class.
+[3812.9] Stephen: And that crowd are all 12S, 14S.
+[3816.74] Stephen: So there might be a couple of test pilots there.
+[3819.78] Stephen: Yep. You guys have got a lot of love in the chat.
+[3826.0] Stephen: Yeah, everyone thinks you&#x27;re fantastic.
+[3827.6] Stephen: And shout out to Ikey as well.
+[3829.4] Stephen: I&#x27;m sorry we didn&#x27;t get to talk to you as much as the other guys,
+[3831.84] Stephen: but I think that the config tool that you did,
+[3834.56] Stephen: the AM 32 CA config tool is really nice.
+[3837.96] Stephen: And that really lowers the barrier to entry for a lot of users as well,
+[3842.44] Stephen: which is fantastic.
+[3844.6] Stephen: Yeah, definitely. That&#x27;s been fantastic.
+[3846.68] Andrew &quot;tridge&quot; Tridgell: That&#x27;s been fantastic.
+[3849.48] UNKNOWN: OK, I think we&#x27;re on that note coming up to the end of our slot.
+[3853.56] Stephen: So we&#x27;d like to thank the AM 32 team.
+[3856.72] Stephen: We&#x27;ve had Andrew here and Pete and Ikey.
+[3863.44] UNKNOWN: Thank you, guys. You&#x27;re doing a fantastic job.
+[3866.16] UNKNOWN: The community and everyone here really loves the work you&#x27;re doing.
+[3869.4] Stephen: Appreciate you tremendously. So thank you.
+[3872.8] UNKNOWN: Thank you. It&#x27;s been a pleasure.
+[3875.0] UNKNOWN: Yeah, thank you. Awesome.
+[3876.92] UNKNOWN: And thanks to all our Patreons for keeping the show going
+[3880.12] Stephen: and paying all the hosting and editing costs.
+[3883.56] UNKNOWN: You&#x27;re amazing as well.
+[3885.36] UNKNOWN: And we&#x27;ll bid you adieu for another Let&#x27;s Throw Now episode.
+[3889.36] Stephen: You have been joined by everyone&#x27;s favorite, Kerry Tietem.
+[3893.32] Stephen: Right. Fertilling around with the sheets of cardboard.
+[3896.44] Stephen: It&#x27;s Jack. Thank you.
+[3898.84] Jack: I was trying to make an ESC mobster at my friend.
+[3902.44] Jack: They&#x27;re not playing.
+[3903.8] UNKNOWN: And also, Cole, thanks very much.
+[3907.68] UNKNOWN: See you.
+[3909.44] Stephen: Myself, Stephen, too. Good night.
+[3911.92] UNKNOWN: Thank you. Good night.
+[3912.68] Stephen: Catch you later. Bye. Bye.
+[3915.12] Stephen: See everybody. Bye, bye, bye, bye, bye, bye.
+[3918.52] Koel: Telemetry loss.
+</pre></body></html>

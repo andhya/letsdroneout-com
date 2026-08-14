@@ -1,0 +1,647 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0203—LDO 203 - Sometimes Less Is More...</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 203 ===
+Title: LDO 203 - Sometimes Less Is More...
+Recorded: 2019-07-18
+Hosts: Andrew &quot;Frank&quot; Hyams, Tony &quot;TheTonstar1&quot; Marchant, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): &lt;details class=&quot;guest-toggle&quot;&gt;&lt;summary&gt;&lt;span class=&quot;gt&quot;&gt;Danny (Joker), Lee &quot;Painles…&lt;/span&gt;&lt;span class=&quot;gf&quot;&gt;Danny (Joker), Lee &quot;Painless360&quot; Schofield&lt;/span&gt;&lt;/summary&gt;&lt;/details&gt;
+Total audience: 2,315
+Platforms: YouTube (https://www.youtube.com/watch?v=H747_M6rFAM); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/653430212-letsdroneout-ldo-203-sometimes-less-is-more.mp3)
+=====================================
+
+Frank and Painless discussing the legislation as of June 2019; https://www.youtube.com/watch?v=pyd6CK4MU20
+
+Painless&#x27; video on arduplane;
+https://www.youtube.com/watch?v=xkx0USN6kJE
+
+Painless&#x27; video on FPV Raceband;
+https://www.youtube.com/watch?v=DCcttwFD4TE
+
+Franks Livestream from Woodsprings;
+https://youtu.be/bZNbN0s1f2Q?t=280
+
+[0.0] UNKNOWN: Hey guys it&#x27;s Jack here, big massive shout out to our patreons. So these guys are the guys who donate
+[9.84] Jack: for the editing and they really do make a huge difference to keep the show alive.
+[17.12] Jack: We&#x27;ve been sponsored by Art Faulkner, Ferdy Evers, Mikey Dread and Under Fluke.
+[23.2] Jack: These guys are absolute legends. Thank you so much and see you next show.
+[30.24] Frank: Good evening. Welcome to Let&#x27;s Drone Out.
+[63.41] UNKNOWN: We are live. Good evening, my name is Lee. Some of you might recognize me as Painless360 and I&#x27;m
+[70.85] Lee: obviously not Jack and the reason for that is pretty much everybody apart from Frank has found
+[77.09] Lee: something more interesting or more important to do tonight. So I am taking over as host so apologies
+[83.65] Lee: for that in advance. So as well as Painless360 you obviously have Andrew slash Frank. Hello.
+[90.05] Lee: And that&#x27;s all the introductions done. It&#x27;s a lot shorter this year time, isn&#x27;t it? We&#x27;re going to
+[94.69] Lee: do the legal notice at the top as well before we get into it because otherwise we&#x27;ll remember in
+[99.41] Lee: the middle as we&#x27;re being controversial. Absolutely. So go Frank. Any views expressed by any guests on
+[106.45] Frank: this show are personal and may not reflect the views of the hosts or any participant of the show
+[111.09] Frank: or any of the people that have disappeared from the show this week?
+[115.98] Lee: Yes. So with all that said, we can, and I love the fact that everybody, if you&#x27;re listening to
+[122.3] Lee: this on the podcast, you can actually interact with Let&#x27;s Drone Out while it&#x27;s being streamed live
+[129.1] Lee: and there&#x27;s a live chat running and I&#x27;m just looking at it all at the side of the screen I&#x27;m
+[133.5] Lee: looking at now that has Frank drinking his beer. It&#x27;s quite funny. Everyone&#x27;s just saying, oh,
+[137.98] Lee: okay, it looks like the grownups are in charge tonight. So thank you everyone for that. But you
+[141.82] Lee: obviously haven&#x27;t been out with me and Frank for a bit. So tonight it&#x27;s going to be a very
+[147.58] Lee: different format. It is literally going to be like the kind of chats that Frank and I have
+[153.1] Lee: when we do occasionally bump into each other in the right part of the country and have a beer,
+[157.18] Lee: or more typically, when Frank actually manages to get an hour away from work.
+[166.7] Lee: I ring him for a quick three minute chat and we&#x27;re on the phone for about an hour and a half.
+[170.94] Lee: It&#x27;s about standard. You&#x27;ve forgotten the few weeks of back and forth of each other trying
+[177.18] Frank: to ring each other and neither of us being available. Oh, okay, right. Yeah, we do play
+[183.02] Lee: telephone tag a lot. I thought you were going to talk about the two weeks in a field down south
+[187.18] Lee: last summer. For those of you that don&#x27;t know, I think, can I call you Andrew on this? Yes,
+[195.02] Lee: confuse everyone, right? But I know he&#x27;s Andrew. Andrew and I were involved in that. I don&#x27;t know
+[200.62] Lee: if any of you saw it last year. It was a thing that Love Productions did for Channel 4 called
+[205.34] Lee: the Model Squadron. And it was a group of RC modelers from both the UK and Germany recreating
+[213.74] Lee: key battles in the Battle of Britain. And it was an experience, I think we&#x27;ll call it that.
+[221.9] Lee: And Andrew and I were part of a team of foreground crew that were basically sticking things back
+[229.74] Lee: together, trying to find lipo checkers and servo checkers and basically hunting down where the
+[237.9] Frank: team had stored the lipos and all that sort of thing. Yeah, we&#x27;re not going to get into detail,
+[243.58] Lee: but the Germans did squirrel away an awful lot of the lipos that the English needed.
+[249.1] Lee: It was, in fact, the whole thing could have been twice as long. But yeah,
+[252.54] Lee: but that&#x27;s what I thought you&#x27;re going to talk about then. So what have you been up to this
+[257.82] Lee: week? Because I know you&#x27;ve been flying, haven&#x27;t you? Yeah, well, funnily enough, at the weekend,
+[262.62] Frank: I was at Woodsprings show, which is where Steve from the show from the Battle of Britain team,
+[271.66] Frank: he was the flight director, and Shannon was commentating for quite a bit of it.
+[277.82] Frank: And there was a big group of the mostly the Brits, but also Christian came along,
+[286.86] UNKNOWN: representing the Battle of Britain model squadron kind of thing, bringing all the same sort of stuff
+[292.06] Frank: out with all the FPV gear and everything and displaying that at Woodsprings show.
+[300.14] Lee: Is it worth while you&#x27;re talking about a little bit about some of that technology on the planes,
+[303.74] Lee: because some of the stuff that we did on that on that gig last year was pretty some of it was
+[309.58] Lee: pretty standard stuff if you&#x27;re an FPV racer. But for some of it was things I&#x27;d never seen before
+[314.94] Lee: flying for 20 odd years. Yeah, so I mean, the biggest difference from what a lot of us know
+[322.54] Frank: through normal FPV wings or FPV quads was the pan and tilt mechanism on the actual FPV camera.
+[332.38] UNKNOWN: And so this was so basically two servos, one panning the camera left and right, and the other
+[338.86] Frank: one tilting the camera up and down. And so you can look around. And this was also controlled by the
+[348.86] Frank: through a terranus through the head tracking module in some fat sharks. So it was it was
+[355.1] Frank: detecting you moving your head left and right and up and down. And it was translating that
+[360.38] UNKNOWN: into moving the servos left and right and up and down to move the camera. So it was almost like
+[365.02] Frank: you&#x27;re looking around the cockpit in real time. And the FPV team guys had actually recreated the
+[371.58] Lee: inside of these cockpits of the Spitfires, ME 109s, Heinkels, all these different kind of things.
+[377.1] Lee: And they cut out all the plastics of just leaving the ribs on the actual canopy. So when you were
+[382.86] Lee: looking around, it looked amazing. But most of the pilots who would come along had never flown.
+[390.46] Lee: And the other thing that was done as well was there was this whole system on the planes,
+[394.7] Lee: which was this infrared kind of gun system that you could fire using the auxiliary channel on
+[401.58] Lee: the radio. And then there was a little smoke canister mounted underneath the plane. And when
+[406.22] Lee: it sustained so many hits, it was all done via Wi Fi. It&#x27;s very clever. When it sustained so many
+[411.02] Lee: hits, then the smoke canister would pop and then that plane was considered damaged and out of the
+[415.66] Lee: thing. And I&#x27;ve not seen it since. So you actually were playing with all of this this week, were you?
+[420.78] Lee: So everyone pretty much stripped out the the infrared stuff, because I mean, it&#x27;s great when
+[427.18] Frank: you when we&#x27;re on set. But after that, it&#x27;s it&#x27;s a bit of a struggle. But we were doing a lot with
+[434.78] Frank: the FPV. So unfortunately, a lot of the head trackers seem to have also died in the past year.
+[442.3] Frank: So a lot of them have been moved over to sliders and rotary dials and things onto anuses
+[450.86] Frank: to rather than using the head tracker to control it. But the what they were doing for the smoke
+[458.54] Frank: instead was James had built up some pyro control units that were on a switch instead.
+[467.5] Frank: And so that it was all planned. Okay, now we fire the smoke, rather than being an actual combat
+[475.74] UNKNOWN: battle. Oh, that&#x27;s really exciting. So is this stuff that&#x27;s being made more use accessible to
+[482.62] Lee: the rest of us? Because I&#x27;ve got a friend that we would love to do that dog fighting thing with.
+[487.34] UNKNOWN: Well, in terms of dog fighting, Christian has actually invited a load of us. I don&#x27;t know if
+[494.86] Frank: he managed to get this invitation to you. I did pass the email address on. So maybe maybe he&#x27;s
+[499.1] Frank: got it. Maybe you haven&#x27;t. But over in Germany, not this week, but next week weekend, we&#x27;re going
+[508.14] Frank: out to his field near Frankfurt, where he&#x27;s got some very early prototypes of a run of PCBs that
+[516.86] Frank: are being made up right now, of essentially the same sort of thing that we were dealing with in
+[522.7] Frank: terms of infrared guns triggering things going off as a as a dog fighting capability. And this
+[530.86] Frank: is on Facebook as FPV combat, I think it&#x27;s called. Okay. This guy has been building up some PCBs for
+[540.22] Frank: this. And Christian has got some early samples. And we&#x27;re going to be testing those out in a field
+[545.58] Frank: in Germany next week weekend. That would be awesome. If yeah, give the guys a nudge, because
+[551.98] Lee: I would love to keep up to date with that. Because even I&#x27;ve got friends who find quads,
+[555.26] Lee: who would probably still quite like to do the whole combat shooting each other down with smoke
+[559.5] Lee: thing. That&#x27;s probably going to be illegal. But the other thing about this is it&#x27;s got an OSD in
+[567.74] Frank: there as well. So instead of just kind of judging by whether the smoke has gone off or not, and
+[573.66] Frank: they&#x27;ve got, you see like, tracer bullets, almost tracer rounds in the OSD, and you see your
+[581.66] Frank: ammunition go down, and you see your lives and it&#x27;s, you know, comes up with messages saying you&#x27;ve
+[585.9] Frank: been hit, and all that sort of thing. Oh, that sounds awesome. Are there any videos that we can
+[590.62] Lee: have a look at? There is a few videos, but I think they are all on Facebook rather than YouTube,
+[595.66] Frank: but I&#x27;ll see if I can get something put across so you can see it. If we can find the videos,
+[600.46] Lee: we&#x27;ll put them in the show notes. How about that? Because I would love to do that. I love
+[605.42] Lee: the idea of having an ammo counter. It&#x27;s like the sentry guns in aliens. Yeah, so that&#x27;s something
+[613.34] Frank: looking forward to. But the other thing, I was invited along to Woodsprings to do some FPV
+[621.58] Frank: live streaming. So yeah, so Steve and Sharon invited me along from Mini Air Show saying,
+[630.7] Frank: oh, you&#x27;ve got this to work here. Can you come and do something here? And we can strap cameras
+[637.26] Frank: to other planes and all sorts of things. Yeah, all right, I&#x27;ll give it a go. And we were sort
+[646.22] Frank: of checking things through beforehand, making sure it&#x27;s all going to work. And there was loads
+[651.98] Frank: of internet, all fine. And I got there and turned up on the Saturday. And it&#x27;s like, there&#x27;s no
+[659.42] Frank: internet. Oh, dear. What it was, it was a lot more popular than I expected it to be. And I think
+[667.66] Frank: with just the crowd of people that have just spectators being there already, I think that
+[673.98] Frank: had pretty much saturated the local 4G network. So there wasn&#x27;t a lot left for streaming,
+[682.46] Frank: which was a bit of a challenge. But eventually got something workable.
+[689.18] UNKNOWN: Are we going to have dog fighting at next year&#x27;s Mini Air Show?
+[692.7] UNKNOWN: I think we should. We&#x27;ve got to really, haven&#x27;t we? Because that was probably the coolest thing
+[697.1] Lee: I&#x27;ve seen the hobby for a long time. For those who haven&#x27;t seen this show that I&#x27;m talking about,
+[703.98] Lee: I&#x27;m not sure if it&#x27;s still available on my 4 or whatever, the streaming thing. But there was
+[709.1] Lee: probably 25, maybe 30 planes in the air at once. We had to have all the radios turned off. We had
+[717.26] Lee: to have the walkie talkies turned off. We had to have all the mobiles on airplane mode. It got
+[724.86] Lee: really exciting. But having all these planes whirling and whipping around, there were a couple
+[729.1] Lee: of mid-air collisions. But most of them were genuine kind of dog fighting stuff. And we had
+[733.58] Lee: a couple of guys who were actually flying with and using the FPV properly to line up and shoot
+[738.7] Lee: other planes down. But most of it was done line of sight. But just sort of watching it from the side
+[744.06] Lee: and watching the smoke popping and these planes leaving these big smoke trails as they kind of
+[749.58] Lee: came into land, it was fantastic. Absolutely. It was magnificent, in fact.
+[757.74] Lee: I think that&#x27;s a very good word. I think magnificence needs to be at the
+[763.42] Lee: mini air show next year, Bud. I think so. Well, a lot of the Battle of Britain guys
+[769.58] UNKNOWN: coming together and doing this kind of team display, that&#x27;s what they want to try and do,
+[774.7] Frank: is go to more events and hone this down to a fine art of making this big display happen.
+[782.22] Frank: So hopefully they can kind of build on that. That&#x27;ll be really good.
+[786.86] UNKNOWN: So I&#x27;d been kind of pulled along with my magic box that Jack built that takes all the FPV video
+[795.74] Frank: feeds and squeezes it into a network cable so I can pull it out the other end into my laptop
+[800.54] Frank: and do some streaming with it. And we were doing that so that there&#x27;s all these people there
+[808.14] Frank: who have got phones on them but have never seen goggles or anything. And there&#x27;s only
+[813.58] Frank: so many goggles amongst hundreds and hundreds of people. It wasn&#x27;t reasonable to try and give
+[820.46] Frank: everyone a ride along in some goggles. But we thought if we can take that stream and broadcast
+[825.82] Frank: it out and allow people to see it on their phones, then it gives everyone a bit more of
+[830.46] Frank: an insight into the FPV side of things and why we get so excited about it.
+[835.42] Frank: Definitely lowers the barrier for entry. That&#x27;s quite a smart way to do it. Like you say,
+[838.62] Lee: assuming that the network can handle the bandwidth.
+[841.26] UNKNOWN: Yes, this was a problem. Because I&#x27;ve also looked at trying to run it locally. You have
+[849.58] Frank: a Wi-Fi and things that people could just join in a little local Wi-Fi bubble and get it directly.
+[855.18] UNKNOWN: But then there&#x27;s all sorts of technical issues with that. It&#x27;s a really hard problem to solve.
+[860.38] Frank: I think the only solution is to have lots more internet available.
+[866.78] Lee: What&#x27;s the next one? G5 or whatever it is?
+[870.06] Frank: We&#x27;ll get the 5G. Getting a bit more technical. 5G has a part of it called EMMMC or something,
+[879.26] Frank: which has been built by the likes of BBC and that lot as a way to do this very thing for big events
+[885.02] Frank: and stadiums. There&#x27;s lots of video feeds and all that sort of thing. In some amount of time,
+[891.82] Frank: we might be able to piggyback on that sort of stuff. But at the moment, it&#x27;s really hard.
+[895.98] Frank: As Cranky72 says in the chat, what about a large outside screen or a projector?
+[901.74] UNKNOWN: Well, the problem is, it&#x27;s generally quite bright, which means that you know...
+[908.7] Frank: Well, a projector is completely out of the question. A normal screen out of the question,
+[913.9] Frank: you need an outdoor daylight media screen. And they are really expensive. You&#x27;re looking for
+[923.66] UNKNOWN: for a nice one that people can see, the ones that you sort of expect to see at these FPV events.
+[929.1] Frank: Those are going around a thousand pounds a day if you&#x27;re lucky.
+[934.14] UNKNOWN: So that&#x27;s not really an option. And when everyone&#x27;s walking around with a screen in their pocket,
+[939.1] Frank: you just want to get onto those, but it&#x27;s really hard.
+[943.26] UNKNOWN: I like the idea. Well, it definitely sounds like you had a more successful week then playing with
+[947.02] Lee: all this technology than I did, because my flying day was a complete, unmitigated disaster.
+[952.3] Lee: I wanted to go to the fields, because you know the way it works when you&#x27;re doing a video.
+[958.38] Lee: Everyone wants to see the model fly at the end of the video,
+[962.06] Lee: even though it ends up just being a little dot in the sky. But it proves it flies, right? And you
+[968.22] Lee: can talk a little bit over the video, can&#x27;t you, about what the characteristics of it.
+[972.62] Lee: And there are two things I desperately need five footage of. One is the Hobbyking paramotor,
+[977.58] Lee: which is the big parachute with a trolley underneath with a big fan on the back.
+[985.9] UNKNOWN: And there&#x27;s a knack to getting that flying. So I wanted to do the video showing the knack.
+[990.22] Lee: And the other one was the maiden of the AR wing build that I&#x27;m trying to do.
+[994.14] Lee: So the first one I tried was the paramotor. So while the wind wasn&#x27;t too big, I thought,
+[999.1] Lee: right, we need loads of footage of me running up and down a field like an idiot, desperately trying
+[1003.18] Lee: to get this canopy up. But with a paramotor, there&#x27;s only two controls, the two brakes that
+[1008.94] Lee: control the trailing edges on the very outside back part of each of the canopy. And when you
+[1016.46] Lee: pull one of them, it drops the back part of the canopy, and that causes drag, and that causes the
+[1021.18] Lee: canopy to turn in that direction. Okay, pretty standard stuff. But the problem is, is that just
+[1026.78] Lee: like a plane that isn&#x27;t trimmed, if you try and hand launch a plane with the ailerons all out of
+[1030.78] Lee: whack, then all it does is just immediately try to turn over on its back and nose into the ground.
+[1036.78] Lee: So that so you do have to trim the canopy by doing test pulls, you know, you kind of you have
+[1042.06] Lee: to kind of pull it over your head. And apologies, my videos craps out because I&#x27;m actually sat here
+[1047.82] Lee: demonstrating that no one can pull. But you have to pull it over your head, right. And as it comes
+[1053.9] Lee: up, it will it will kind of tip in one direction. And then you have to just use the trims on your
+[1060.06] Lee: radio like you would with a normal plane until the canopy comes up nice and cleanly. And when
+[1064.46] Lee: you&#x27;ve got it trimmed like that, then you&#x27;re in, you know, a reasonable place to do it. So it was
+[1070.14] Lee: on Tuesday, red hot, I foolishly decided to wear a black polo t shirt. So I was sweating like a pig,
+[1078.7] Lee: we have me and my mate running down the field because he was, you know, doing third person view.
+[1084.06] Lee: And we got all of the shots of this canopy going all over the place.
+[1088.62] UNKNOWN: Until we eventually got it trimmed. And I&#x27;m thinking, right, all we need now is the footage
+[1092.54] Lee: of me, you know, the majestic launch of it going over my head, 50% throttle, you know, just kind
+[1097.9] Lee: of as it comes over my head, I just kind of let go and it&#x27;ll sail into the sky. And we were just
+[1102.3] Lee: setting up to do that bit and the wind came up. So so that was a complete disaster. So I&#x27;ve got
+[1107.74] Lee: loads of footage of me running a bright red face, you know, completely wet through running around
+[1114.3] Lee: in the sunshine, but actually didn&#x27;t get what I wanted. So I thought, Oh, I know what we&#x27;ll do,
+[1118.86] Lee: we&#x27;ll we&#x27;ll launch the AR wing. And one of the things I&#x27;m doing at the moment, the series
+[1123.82] Lee: started last week. I don&#x27;t know if you saw it, Andrew, but it&#x27;s the next R&amp;D plane build that
+[1129.34] Lee: I&#x27;m doing with a 900 millimeter wing, Maytec flight control, you know, crossfire this time,
+[1135.42] Lee: things like that. So although the series has just started, if you&#x27;re looking in the playlist,
+[1140.7] Lee: you can actually find the majority of videos, there&#x27;s about another three or four to make in
+[1144.54] Lee: it. But I want to do the maiden, because it just proves that, you know, hey, technology works.
+[1149.66] Lee: Because it does, but you need a video because people like to see it flying.
+[1152.78] Frank: So I thought, Okay, it&#x27;s windy, doesn&#x27;t matter, we&#x27;ll throw the wing up. Now, it&#x27;s a problem
+[1158.46] Lee: with the code on the flight controller in the bootloader that I put on there. And there&#x27;ll be
+[1165.02] Lee: a video out on Tuesday. So everyone that&#x27;s listening to this that knows about this video
+[1169.26] Lee: can pretend you haven&#x27;t heard it before when the video comes back this week. But the way it works
+[1173.26] Lee: is that the bootloader, when it first starts, it goes into bootloader mode, then it pauses there
+[1178.94] Lee: for a moment, and then boots into R&amp;D plane and, you know, initializes, and then the GPS locks,
+[1184.06] Lee: and away you go. But there&#x27;s a fault in the bootloader version that I flashed in the very
+[1188.14] Lee: latest newest bootloader, which means that nine times out of 10, it won&#x27;t make it out of bootloader,
+[1193.9] Lee: it&#x27;ll just sit there. So I was prepared to, you know, doing the plug it in counts 10, unplug it,
+[1200.06] Lee: plug it in counts, you know, do keep going until I caught it. Anyway, first time I plugged it in,
+[1206.14] Lee: booted beautifully GPS locked, went in and use the bits and pieces to start on for the crossfire to
+[1213.66] Lee: set the VTX power. Everything&#x27;s looking fantastic. I think it right here we go rock and roll my mate,
+[1219.18] Lee: he was going to hand launch it for me has got the little GoPro on the brim of his cap.
+[1223.98] Lee: Where we&#x27;re set, right launch it into the wind because of course we&#x27;ve got the wind now because
+[1227.34] Lee: that&#x27;s what stops with the paramotor. So I thought, okay, I&#x27;ll give it the beans, I&#x27;ll put it,
+[1231.74] Lee: put it in manual mode, and I&#x27;ll catch it. So right, okay, mate, I&#x27;m ready, put the throttle up,
+[1236.38] Lee: he threw it, it wasn&#x27;t the best throw in the world, I obviously didn&#x27;t have the throttle
+[1240.94] Lee: hard enough. And it just kind of tipped over it did that thing that you know,
+[1245.66] Lee: all the really bad when wing launches do it just kind of went straight into the grass.
+[1249.74] Lee: So I broke the wing off. So it&#x27;s like, okay, hot glue time. So, you know, five minutes later,
+[1257.1] Lee: it was all back together. But of course, I unplugged it. While I did the hot glue,
+[1261.42] Lee: I don&#x27;t want it sat there with a VTX running, you know, getting the wall. And then could I get it
+[1267.02] Lee: out of bootloader mode? 45 minutes, I played with this thing. So I think I just needed this,
+[1273.1] Lee: I just need literally footage of it leaving his hand flying around cut to a bit of the FPV footage
+[1278.3] Lee: from the goggles, you know, tickety boo tick next video about auto launch, I think would be the
+[1283.66] Lee: next one. And I couldn&#x27;t get that either. So I went all this way for my flying day and ended up
+[1289.02] Lee: with but the only the only good thing that came out of the day was actually one of my the mate
+[1293.9] Lee: who was I was with I&#x27;m teaching him to fly FPV on fixed wing. So of course, because we have nothing
+[1300.62] Lee: else to do. We dragged the with the FPV wing out and kind of got in flying on that and it was a real
+[1308.06] Lee: breakthrough because up till now, every time I go, I do three or four batteries with him for FPV.
+[1313.82] Lee: And we&#x27;re doing it on a buddy box system. And you know, it&#x27;s it&#x27;s it&#x27;s actually working really well.
+[1318.62] Lee: But but this time, we actually had him flying from specific points to specific point around
+[1325.02] Lee: the field. So before I just got him up to 200 300 feet and just let him fly around, you know,
+[1330.3] Lee: had my finger over the button to take control if something nasty happened. And this time I was
+[1335.82] Lee: actually okay, so you fly to this point and fly to this point. And it was lovely at the end,
+[1340.06] Lee: because every time he does this, when we go into it is is a bit lackluster about the whole
+[1345.66] Lee: experience because, you know, he&#x27;s been a line of sight plane flyer for well, a very long time,
+[1349.74] Lee: you know, back in glow engine days. And every time he finishes, he&#x27;s more excited. And I think
+[1357.1] Lee: this time the penny dropped about how cool FPV and fixed wing is. So so yeah, it was great. So
+[1363.66] Lee: the only thing that&#x27;s panicking him at the moment is landing FPV. So but the problem is to you know
+[1370.3] Lee: the way it works, right? If you&#x27;re coming in FPV with a smaller plane, what looks like a reasonable
+[1375.1] Lee: distance out from the field, you pull your goggles down and then try and find the plane line of sight
+[1380.7] Lee: and you can&#x27;t see it or your spotters topping on the shoulder going it&#x27;s there it&#x27;s over the tree
+[1384.94] Lee: and the 27 trees. No, no, not that tree. No, you need to go left when he means right. So
+[1391.5] Lee: so that&#x27;s the next thing is is is crashing. In fact, actually, there&#x27;s a couple of people in the
+[1396.86] Lee: chat that so I can say a lot of people like Fraser and people like James, who I&#x27;ve done stuff with
+[1402.86] Lee: recently and talked about the move from multirotors to flying fixed wing. And there seems to be the
+[1411.02] Lee: same five or six things that catch people out all the time, particularly if you have a background
+[1416.62] Lee: in multirotors. And I don&#x27;t know whether it&#x27;s worthwhile maybe talking those kind of
+[1422.54] Lee: kind of four or five golden rules I go through. If anyone&#x27;s pulsing a throttle doesn&#x27;t get you
+[1427.18] Frank: over the tree. Exactly. Exactly. Throttle does not many times. Yeah, throttle does not equal
+[1435.42] Lee: height in a fixed wing. It just means you hit the thing harder. There&#x27;s a couple of things. Yeah,
+[1440.62] Lee: I mean, I mean, the first one, let&#x27;s talk about that then. I mean, the most common two mistakes
+[1447.1] Lee: I see are multirotor pilots. When they&#x27;re going down the field in a multirotor, and they realize
+[1452.94] Lee: that there may be a little lower than they thought, and the obstacle in front of them,
+[1455.98] Lee: it you know, they&#x27;re going to hit it, you can just blip the throttle and you rise into the
+[1459.34] Lee: air above it and you clear it. And that is a muscle memory that&#x27;s really dangerous in a fixed
+[1465.66] Lee: wing because it just, that&#x27;s how it speeds you up. The other thing that multirotor pilots I find
+[1470.62] Lee: really struggle with fixed wing is as multirotor pilots, we all get used to using the rudder to
+[1475.34] Lee: change direction. And hard use of the rudder in a fixed wing, particularly if it is a wing wing,
+[1485.66] Lee: it&#x27;s not as badly that, but in a normal plane, something like a Bixler or an AXM floater,
+[1489.74] Lee: something like that, if you slam the rudder over, you get a really violent reaction. So the way I
+[1495.58] Lee: do it, and in fact, you know, one of the guys in the chat was talking to about a couple of weeks ago,
+[1500.86] Lee: with a mode to radio, I normally say once the plane&#x27;s flying, you know, put the throttle at
+[1504.86] Lee: 50% and then take your thumb off that stick and just use the aileron to turn and the elevator
+[1510.38] Lee: to change the height. And that will usually get you, you know, your first half a dozen flights
+[1518.06] Lee: without too many problems. I mean, the other the other problems are multirotor pilots want to fly
+[1522.78] Lee: really low in the early days. Yeah. So the three mistakes high rule, although it&#x27;s great in
+[1529.34] Lee: principle, you kind of you know, you do a couple of and that&#x27;s that&#x27;s the thing as well. And if it&#x27;s
+[1534.78] Lee: flying line of sight, the whole nose in thing when when the plane is flying or wings flying
+[1539.02] Lee: towards you and the aileron first, if you have a momentary brain fart as it&#x27;s doing that, then
+[1547.34] UNKNOWN: if you&#x27;re not high enough, you make the correction you think you need, it actually
+[1550.86] Lee: exacerbates the problem. Before you know it, the plane&#x27;s upside down heading into the ground,
+[1555.1] Lee: which means that you immediately put the throttle because that&#x27;s going to give you more height. And
+[1558.94] Lee: that just runs into the floor even faster. But so there&#x27;s only about four or five things I tend to
+[1564.38] Lee: do with with pilots like that. I think I might make a video on it actually, just to kind of help
+[1570.14] Lee: people. I mean, I&#x27;ve done a couple of videos already. But it&#x27;s amazing how many pilots I have
+[1574.14] Lee: the conversation with, who then go and then crash and come back and can tell me exactly which one of
+[1580.62] Lee: those pieces of advice they completely ignored. Well, yeah, I mean, for me, I I&#x27;m pretty sure
+[1587.82] Frank: I&#x27;ve worked out all the brain farts of getting left right and right is left now after 14 years.
+[1597.42] Frank: But it&#x27;s the the other part is the orientation and the brain fart of is that is that the it going
+[1606.62] Frank: is that the with the left wing up and it&#x27;s going from right to left or is that the is it going the
+[1613.66] Frank: other way that it could be either way when it&#x27;s just a silhouette and you don&#x27;t know which way
+[1618.22] Frank: it&#x27;s going. Am I going away from myself? Or am I going towards myself? You just have to kind of
+[1624.86] Frank: try something and see what you expect. Exactly. You have to use the the the wing waggle as it&#x27;s
+[1631.1] Lee: known in our circle and see whether or not the wing moves in the same direction of the stick,
+[1636.06] Lee: which probably means it&#x27;s flying away from you. If it moves in the other direction,
+[1639.58] Lee: then it probably means it&#x27;s coming towards you and you probably need to get some height.
+[1643.18] Lee: But it&#x27;s it&#x27;s it&#x27;s a really, really interesting part of the hobby because some of the guys that
+[1648.94] Lee: I talked to are coming into the hobby brand new and have never flown before. So you&#x27;re talking to
+[1654.14] Lee: the really basic stuff about the radio and things like that and how you set that up. Because even
+[1658.62] Lee: things like, for example, on the radio with the fixed wing, you add things like exponential
+[1664.46] Lee: and travel. Right. And as quad pilots, we don&#x27;t do that because Betaflight does that for us. Right.
+[1670.94] Lee: And the the reaction time of a fixed wing seemed the wing seems to be flying through molasses
+[1678.14] Lee: because with a multirotor, you know, when we&#x27;ve got it tuned properly, this thing will flip five
+[1682.62] Lee: or six times a second. Right. And it&#x27;ll do a hard stop and Betaflight will work really hard to,
+[1688.78] Lee: you know, do that really hard crisp stop when we&#x27;re when we&#x27;re doing aerobatics and an acro
+[1695.26] Lee: with a plane. We&#x27;re just relying on good old fashioned physics and air moving over bits of
+[1699.58] Lee: balsa wood or bits of foam to kind of do it. And I know for a lot of lots of pilots, particularly
+[1704.46] Lee: quad ones, it feels really slow to react. So you almost have to anticipate things a little bit more
+[1711.18] Lee: in a slightly different way with a plane. I think that catches a few new pilots out, too.
+[1715.74] UNKNOWN: I also I mean, I have a tendency to just have a lot of throttle on a plane just because I know
+[1723.58] Frank: it&#x27;s not going to fall out of the sky then. And you know that planes can actually fly without
+[1730.62] Lee: the engine on, right? I know. I know. It&#x27;s particularly when it&#x27;s something that looks
+[1737.82] Frank: quite slow as it&#x27;s flying along. And then I&#x27;m just worried. Am I going to stall? When is it
+[1742.78] Frank: going to stall? What&#x27;s it going to do when it stalls? And and I just tend to have a throttle
+[1748.06] Frank: up on high a lot of the time. I was very grateful on Saturday. Yick gave me a go on his
+[1757.74] Frank: he&#x27;s got a Texan T6. He even swapped over a radio to be in mode two and was giving me a
+[1766.62] Frank: go on that. And so I got to fly there. And he was like, no, bring the throttle back,
+[1772.38] UNKNOWN: bring it back, bring it back. I was like, this is going to fall that sky. It&#x27;s going to stop
+[1776.14] Frank: flying at some point. Wings stop working when they go too slow. But he sort of was talking me
+[1783.02] Frank: through it as it was kind of doing whatever. And that ended up being quite fun. And I got used to
+[1790.14] Frank: the model and I got relaxed into it. And then I got a very painful, well, not painful reminder,
+[1797.26] Frank: I got a very strong reminder that I wasn&#x27;t just on my own in a field as I might usually be.
+[1804.54] UNKNOWN: Oh, you know, there&#x27;s not just a few of us here. There&#x27;s a lot of people here.
+[1809.34] UNKNOWN: And is all of a sudden, I think it was pretty much the entirety of the MWM Warbirds team
+[1815.02] Frank: just turned up and threw things into the air. Everything from, you know, Hawks, EDFs,
+[1823.58] Frank: EF extras that have obviously had different motors and batteries put in. And everything that just the
+[1829.9] Frank: sky just explodes with loud things coming in front of me very loud. And it was just okay.
+[1839.18] Frank: And I need to land at some point now. And I don&#x27;t know when I&#x27;m going to be able to do that,
+[1843.26] Frank: because it&#x27;s just going to end up with a cloud of foam if I do that now. Yeah, it&#x27;s just an
+[1849.66] Frank: interesting experience to be flying with that many people line of sight, which you can&#x27;t really do
+[1856.62] Frank: FPV because you only really get six, maybe eight. I mean, if you&#x27;re a very well organized race,
+[1863.42] Frank: you can get 16. But you can do that for fun. Well, while we&#x27;re on that subject, actually,
+[1869.1] Lee: this is something that I was talking about somebody in the business the other day in that
+[1874.14] Lee: the reason that we can in the UK, there&#x27;s only six, seven channels that we can use. I don&#x27;t
+[1880.06] Lee: remember, there was a video that I did a while ago with Greg from menace. And he worked out all
+[1885.9] Lee: the harmonics of all the different channels that was legally available to us in the UK and outside
+[1890.06] Lee: the UK, and gave recommendations about what chat what the best channels were for having
+[1897.02] Lee: two, three, four, five, six and up to seven pilots. And interestingly, it wasn&#x27;t raceband,
+[1902.14] Lee: which I thought was quite interesting. But but the actual frequencies that we have available to us
+[1907.66] Lee: as part of the hobby is pretty broad. And if we if we are rather than working with these inherited
+[1914.78] Lee: bands that we have, you know, the fat shark band, we still use quite a lot, you know, there&#x27;s the
+[1920.78] Lee: raceband, and then there&#x27;s the others, maybe used to be called things like boss cam. Do you
+[1925.98] Lee: remember that? Yeah, they&#x27;re generally just referred to as the letters now. Yeah, A, B, E, F,
+[1932.86] Lee: sometimes maybe D and R. And if you actually look at those frequencies, there is a much better way
+[1939.42] Lee: for for us to space the channels out so that the harmonics from the individual VTX transmissions
+[1945.98] Lee: don&#x27;t interfere with each with each other. And we could get a little bit more out of the FP the
+[1950.7] Lee: very limited FPV 5.8 gig band that we have. So I&#x27;m hoping, you know, here first that we will have
+[1959.42] Lee: some kind of recommendation because if someone like fat shark or immersion, because a lot of the
+[1964.94] Lee: transmitters that I&#x27;m getting in at the moment have the ability to set discrete frequencies,
+[1969.9] UNKNOWN: you know, so rather than you have to go with the preset ones, you can you can set it up to, you
+[1976.3] Lee: know, 5.762 or whatever, you know, gigahertz that you want. And also on a lot some of the new
+[1982.38] Lee: receivers that I&#x27;m getting in now some of the newer goggles also has the ability to kind of
+[1987.1] Lee: give you that feature as well. Now, it used to be that doing that on things like the immersion kit
+[1991.18] Lee: needed the super duper wand, you know, the super duper set up stuff. But I&#x27;m just I&#x27;m I&#x27;m really
+[1998.22] Lee: interested in being able to do that because having my my the most fun I have FPV is chasing my
+[2004.78] Lee: mates playing around the sky. Yeah, right. It would be awesome if there was three or four of us,
+[2010.38] Lee: maybe, you know, you, me, Jack, couple of mates, whatever, chasing each other around the sky.
+[2015.58] Lee: And who knows, maybe having a spot or two and using that gun system that you&#x27;re talking about,
+[2020.14] Lee: that just sounds like the most fun radio control flying day ever. So I&#x27;m hoping we can get some
+[2027.98] Lee: ideas for this FPV stuff. So keep your fingers crossed we can we can work something out. But
+[2032.14] Lee: that&#x27;s on the weekends, I&#x27;d forgotten there&#x27;s there&#x27;s all this stuff that you need to learn
+[2038.54] Frank: with FPV that a lot of people don&#x27;t know. And so it was all this like, you know, all these guys who
+[2047.18] Frank: haven&#x27;t used FPV much and when they have done it, it&#x27;s either been with basically you controlling
+[2055.58] Frank: everything, or they&#x27;ve been on their own, or, you know, with a spotter, but not flying loads of FPV
+[2061.5] Frank: at the same time. So to have all these people turning up and being like, Okay, so we need,
+[2066.14] Frank: you know, I&#x27;m going to we need to be on these channels. And why we&#x27;re all embraced band is
+[2071.34] Frank: fine. Yeah, doesn&#x27;t work that way. And then, and then, you know, it&#x27;s all right, it&#x27;ll be easy,
+[2080.46] Frank: we&#x27;ll just change the channels, it&#x27;ll be fine. And then you get to it. And of course, it&#x27;s buried in
+[2085.02] Frank: this fixed wing model. There&#x27;s one button that you have to press for three seconds to get into.
+[2091.1] Lee: Yeah, it&#x27;s not even that it is as drone racer says in the chat is dip switches.
+[2097.26] Frank: And it&#x27;s, and you look at these transmissions and go, I don&#x27;t think that&#x27;s entirely in compliance
+[2105.26] Frank: with 25 milliwatts judging by the sticker. But I&#x27;m sure that&#x27;s a mistake on the part of
+[2109.98] Frank: Yeah, there&#x27;s the CE sticker must have fallen off because it got warm, that&#x27;ll be what it is.
+[2115.58] Frank: Must be a model number and not not a milliwatt hour. Yeah. But, and then, oh, okay, so that&#x27;s
+[2124.06] Frank: running on that much. So that&#x27;s going to swamp everything. And so there&#x27;s all these sorts of
+[2129.82] Frank: things is like, hadn&#x27;t thought about these problems. Surely it can&#x27;t be that difficult,
+[2135.26] Lee: right? We&#x27;ve got, you know, in here in the EU, we&#x27;ve got this wonderful LBT system on the on
+[2140.46] Lee: the FR sky transmitters, right? So they listen before they start transmitting, which actually,
+[2145.26] Lee: I think it&#x27;s a really good idea for FPV. So if you&#x27;re flying and somebody walks up and has
+[2149.82] Lee: accidentally left their VTX on the same channel that you&#x27;ve got, and they plug the battery in and
+[2154.14] Lee: completely stomp all over you, it would actually be quite nice if the VTX when it powered up,
+[2159.82] Lee: actually had some receiving equipment that it could kind of just just listen briefly
+[2164.22] Lee: to that channel and just go, no one else is using this, right? And if it and if it didn&#x27;t,
+[2168.86] Lee: then it would it could power up. And I&#x27;m just conscious we go for 36 minutes and we haven&#x27;t
+[2173.9] Lee: mentioned the competition. Absolutely. So Jack will be very unhappy if I don&#x27;t mention the
+[2179.66] Frank: competition. So we we are doing a competition for our four year anniversary coming up this August.
+[2188.62] Frank: So from episode 200, we announced this and it&#x27;s been carrying on.
+[2194.54] Frank: If anyone was so so drone his life has donated a bunch of goodies, and Jack&#x27;s looking after them,
+[2202.62] Frank: and usually at this point in the show, he&#x27;d be waving them about. So you just have to kind of
+[2205.98] Frank: imagine that I&#x27;ve got some goodies from drone his life at the moment. And we are going to be
+[2212.78] Frank: awarding them to whoever sends us the well, if you send in a memory of LDO through timestamps
+[2222.38] Frank: or snippets or edits or any other collection of your favorite moments from LDO over the past four
+[2227.9] Frank: years, we&#x27;re going to watch them the week before our 208th episode. And we&#x27;re going to pick one.
+[2236.7] Frank: And we&#x27;re going to announce the winner on a two hundred and eighth episode, a four year episode.
+[2242.3] Frank: And and they will get some goodies. So we haven&#x27;t had a huge number of entries. So if you do send
+[2249.18] Frank: something in, as I say, either a timestamp of a podcast or a YouTube video or an edit that you
+[2257.82] Frank: put together, anything like that, you&#x27;ve got a fairly good chance of winning some goodies at the
+[2262.78] Frank: moment. So you can send them in to let&#x27;s join out at gmail.com or you can send them to our Facebook
+[2270.14] Frank: page at Facebook.com forward slash let&#x27;s join out or I&#x27;m sure you&#x27;ll find a way somehow. But those
+[2277.58] Frank: two should be good enough, I think. Fantastic. Thanks, Andrew. And welcome, Tony.
+[2283.34] Lee: Oh, sure. I&#x27;ve made it. Twenty minutes left. Oh, my God. That was a long drive. I&#x27;m so tired,
+[2290.38] Tony: but Joker Visions probably more tired. I think he&#x27;s going to he&#x27;s just going home. He lives down
+[2295.1] Tony: a road and I&#x27;m going to send him the link to come on and see if he can be on for 10 minutes in the
+[2301.34] Tony: chat. No, I&#x27;m not getting topless tonight, I&#x27;m afraid. I&#x27;m tired for that. Yeah, that&#x27;s that&#x27;s
+[2308.3] Lee: only when Jack&#x27;s on the podcast, I think, isn&#x27;t it? Totally. It&#x27;s a very pretty much. I just try to
+[2312.7] Lee: keep him amused. You know, Tony, you&#x27;ve been doing something pretty impressive. Are you allowed to
+[2318.14] Tony: talk about any of that? Oh, yeah. Yeah. When drift car chasing today. Rocking them
+[2325.42] UNKNOWN: quite far away. You know, it got shut down last year, didn&#x27;t it? Rocking them.
+[2330.22] UNKNOWN: So is this what all the all the kind of like the good quadcopter pilots are doing? Because every
+[2336.06] Lee: time I look at it these days, you&#x27;ve got somebody chasing a drift car. So is this how did you get
+[2340.22] Lee: this gig? Danny Joker Vision, who may come in on the chat in a minute. If I send him a link, he&#x27;s
+[2346.14] Tony: good. He he knows some people who used to do it because I think he was a photographer for
+[2355.34] UNKNOWN: some car magazines back in the day. And I think that&#x27;s how he got the gig. And then we went out
+[2360.78] Tony: this morning and we got there and they&#x27;re like, they&#x27;re not sure you can fly, you know. And we
+[2365.9] Tony: were like, oh, my God, we just drove three hours. Please don&#x27;t say that. But showed them our
+[2371.58] Tony: certificates of insurance and things like that. And they&#x27;re like, oh, okay. So we were all right
+[2378.86] Tony: after that. And I told them that I&#x27;m a pro. So it&#x27;s fun to get paid for something. You&#x27;re a pro,
+[2386.38] Tony: right? Yeah, that&#x27;s true. Yeah, that&#x27;s true. That&#x27;s yeah, there&#x27;s other interpretations,
+[2392.14] Lee: but we&#x27;ll move on from that. Yeah, you had a good day, mate. Yeah. Yeah, it was fantastic. I&#x27;m so
+[2398.38] Tony: tired, but really good. We drove through so much rain on the way out. We were like, no, please.
+[2405.26] Tony: Got there and it was it was nice and dry up there. Actually, it was good. So when will we see that
+[2411.5] Lee: footage? Maybe next week at some point. I&#x27;ve got tomorrow work Friday night, early night, because
+[2421.66] Tony: we&#x27;re going to the weekend if it doesn&#x27;t rain hard, which is basically lower guys in a field,
+[2430.22] Tony: massive fire. You&#x27;re coming, aren&#x27;t you, Frank? I am coming to me. Big fire drones, planes, guns.
+[2438.94] Tony: What can go wrong?
+[2444.62] UNKNOWN: Yeah, no, today was really, really good fun, though. Yeah, but they had a wet track today.
+[2450.86] Tony: So they run dry tracks and wet tracks depending on if there&#x27;s a number of them. It&#x27;s not whether
+[2457.58] Tony: it&#x27;s depending on well, it is doing in weather, but noise. So they wet the track. So it&#x27;s not
+[2465.26] Tony: permanently for eight hours. Oh, yes, they do that. So when I was getting low and chasing cars,
+[2475.82] Tony: like real low, I was getting water on my lens and things like that. But I think we&#x27;ve got enough
+[2482.78] Tony: footage to have some fun. But yeah, it&#x27;ll be next week, I should think.
+[2490.78] UNKNOWN: Well, if you have any of those gigs north of Watford and you need a bag man,
+[2494.22] Lee: make give me a call. It was north. Where was it? Well, we&#x27;re rocking them. Where was that?
+[2499.82] Tony: It was up past where N.J. lives. I went through N.J.&#x27;s hometown.
+[2505.9] UNKNOWN: Water these plants. Bedfordshire, I think.
+[2509.66] Tony: Bedfordshire, lovely. A bit further on than that. I&#x27;ve just sent Joker the link, so hopefully he
+[2515.34] Tony: might come on. But yeah, it was good fun. But we&#x27;re going up there to do a dry day. So we chased them
+[2520.86] Tony: when it&#x27;s dry. So we&#x27;re having more tire smoke and all that schmillarky.
+[2526.86] Tony: Yeah. Let&#x27;s blow out on the lenses. There&#x27;s a couple of questions I&#x27;ve just noticed
+[2531.58] Lee: people asking. So I&#x27;m keen that we cover these. One of them was from Dave. Dave, you&#x27;re asking,
+[2538.38] Lee: IRC is not the best or legal in the UK. IRC, one of the channels on what we call Fat Shark or IRC,
+[2549.58] Lee: or Band E or Band F, whichever you want to choose. One of them is not legal in the UK. It&#x27;s outside
+[2555.5] Lee: the limit, but actually it doesn&#x27;t provide bad separation. So it&#x27;s not illegal in the UK. There
+[2562.46] Lee: are a couple of bands that aren&#x27;t. I do have a video in it. If I remember, we&#x27;ll put the link
+[2568.22] Lee: in the show notes that talk about what the legal things are. It&#x27;s part of the FPV antenna lab
+[2574.38] Lee: series. And Jack, who&#x27;s obviously listening, so hello, Jack. I hope you&#x27;re feeling better, buddy,
+[2580.38] Lee: was asking, have I done the Fat Shark DVR update? The answer is yes, I did a video on it, so I had
+[2586.38] Lee: to. It has helped. The DVR update is only for when you have an issue where maybe you&#x27;re trying to
+[2594.14] Lee: synchronize FPV footage recorded in the goggles with maybe a GoPro or something on the actual
+[2601.1] Lee: model itself. You&#x27;ll sometimes find that the video is a slightly shorter video from the DVR than from
+[2608.94] Lee: the GoPro. And that&#x27;s because the original firmware in the goggles, if there was something
+[2614.38] Lee: wrong with the frame of the video, it would just kind of bin the entire frame and just kind of not
+[2619.66] Lee: bother. So that meant the frame was slightly concatenated and it was kind of crushed down.
+[2625.34] Lee: So that meant trying to get it exactly synced was a real pain in the butt. What the firmware update
+[2632.06] Lee: does, and check the read mes because it&#x27;s not suitable for all Fat Shark goggles. So double,
+[2637.42] Lee: double check. You put it on the SD card, you update it, and all it really does is improves
+[2642.14] Lee: the algorithm for things like rapid fire, where you could also with rapid fire get some weird
+[2649.5] Lee: effects in the DVR as well because the way it works, it kind of fixes all that stuff.
+[2654.22] Lee: There is a downside though, and the downside is that the auto recording, which I actually really
+[2659.9] Lee: like on the goggles, because I always forget to hit the button. Hey, all right, Danny.
+[2665.98] UNKNOWN: And there he is. He&#x27;s made it. I always forget to hit the button. That&#x27;s disabled by default,
+[2673.1] Lee: because it doesn&#x27;t automatically switch between NTSC and PAL. It has to kind of see the video feed
+[2678.86] Lee: before you hit the button. So the answer is that was a very long way of saying yes. But if you&#x27;re
+[2683.42] Lee: thinking of doing it, triple read the read mes so that nothing nasty happens. Make sure you got a
+[2688.3] Lee: full battery and your goggles. You don&#x27;t want it crapping out before it&#x27;s finished the update.
+[2692.3] Lee: It doesn&#x27;t take too long. Sweet. How are you feeling after driving six hours, Danny?
+[2700.78] UNKNOWN: Shattered. Absolutely shattered. It was a long way to go, but worth it, wasn&#x27;t it?
+[2707.1] UNKNOWN: Oh, it was great fun. And they&#x27;ve invited us back. Everyone was asking if they had to pay
+[2711.42] Danny (Joker): for the footage. We should have said yes. Yeah, I&#x27;ll burn you with DVD. It&#x27;ll only be 15 quid.
+[2723.42] Lee: Taking pictures for people. But we&#x27;ve just, yeah, we did anything. I don&#x27;t think you did.
+[2732.14] Frank: Enough to get your PFCOs until July 2020. Yeah, it&#x27;s not worth getting them now, is it?
+[2738.54] UNKNOWN: I don&#x27;t think so. Really? Be honest, unless you&#x27;re desperately going to do something in the next year
+[2744.06] Frank: that&#x27;s going to make you loads of money, then probably not. I&#x27;ve got one gig coming up, but
+[2748.78] Frank: it&#x27;s got to be free. Danny, you&#x27;ve got the loudest keyboard on the planet. I know. Do not type anymore.
+[2757.82] Lee: Okay, I&#x27;ll hand it back to him. It&#x27;s mechanical, that&#x27;s right.
+[2762.3] Tony: Just say hello in the chat or whatever. People will say hello to you.
+[2767.5] Tony: He was asking about the X-Class and it was just a five-inch and we were still had to fly.
+[2771.9] Danny (Joker): Because we technically wasn&#x27;t allowed to fly. No, like letters. Sometimes five inches is enough.
+[2780.38] UNKNOWN: That&#x27;s what she said. There we go. There&#x27;s the one per list. Jack&#x27;s hearing spirit,
+[2786.62] Lee: even if he isn&#x27;t here. That was Jack took over my body. Could you tell?
+[2790.3] Tony: No, you can&#x27;t have been Jack because your clothes are still on.
+[2796.46] Lee: I tell you, there is one thing I do want to talk about while we&#x27;re all together on this,
+[2799.98] Lee: and it&#x27;s a subject that&#x27;s a bit close to my heart, and that is, when I use a bit of technology,
+[2806.46] Lee: so if there&#x27;s something like Betaflight or iNav or RDPilot or some of the cool little telemetry
+[2811.98] Lee: gizmos and things you can put on your radio, you can get a lot of this stuff from GitHub now.
+[2816.3] Lee: A lot of these pages that we go to have this little donate and support the project, and 99.9%
+[2824.14] Lee: of us completely ignore that, download it, put it, try it, it works, and then hey, we&#x27;re at the field.
+[2830.54] Lee: It was just a very quick kind of just nudge to everybody in the hobby. If you are using
+[2836.22] Lee: particularly software that somebody&#x27;s writing and not getting paid for, they&#x27;re doing it for
+[2839.66] Lee: the love of the hobby, and you download it and you use it and you get enjoyment out of it,
+[2844.54] Lee: kick those developers back a couple of bucks, it makes a massive, massive, I know speaking to the
+[2849.98] Lee: iNav team, it makes all the difference in the world to them, and it also just lets them know
+[2854.7] Lee: that people are actually appreciating what they do, and for those projects that don&#x27;t get supported,
+[2860.3] Lee: they wither and die on the vine, so things like the OpenPilot project back in the day and stuff
+[2864.86] Lee: like that, so it was just a just a general reminder, if you&#x27;re using technology and you&#x27;ve
+[2868.94] Lee: downloaded it for free and it works and they have a way for you to give them a couple of bucks,
+[2873.18] Lee: go and find out what that is and do Patreon or do PayPal or whatever it is just to support
+[2878.38] Lee: and keep the stuff going in the hobby. That&#x27;s a really good idea, I&#x27;ve never even
+[2882.94] Tony: thought about doing anything like that. That&#x27;s the problem mate, and to be fair,
+[2887.74] Lee: I have to give myself a kick in the ass a couple of months everywhere, because I&#x27;ll find new tech
+[2892.38] Lee: and I&#x27;ll download it, somebody will mention something to me, I&#x27;ll get it, I&#x27;ll use it and
+[2895.58] Lee: think, oh that&#x27;s amazing, you know, that&#x27;s really good, and then it&#x27;ll be a couple of
+[2901.34] Lee: weeks later and I&#x27;ll think, oh my god, I&#x27;m still using it, I&#x27;m still loving it,
+[2904.38] Lee: like Lua scripts and things for the Toronto&#x27;s radio and stuff like that, it&#x27;s great,
+[2908.62] Lee: and for the sake of a couple of bucks, it might, you know, it&#x27;s not even a cup of coffee for me,
+[2912.86] Lee: but at least for the guy who receives it, it shows him that somebody&#x27;s kind of appreciated
+[2917.66] Lee: the time that he or she takes. That is a good point, I might do what you just said to be honest,
+[2923.1] Tony: Dave Storey in the chat says, you guys are going to get a re-bike from the editor this week,
+[2928.3] UNKNOWN: because it&#x27;s such a clean chat. I think we might just need to have the last 15 minutes,
+[2935.02] Lee: just completely filthy, really, and then at least he was going to win. I can&#x27;t be filthy without the
+[2940.46] Tony: Yeti here, it&#x27;s just weird, he just changes you, doesn&#x27;t he? You hang around with him and he rubs
+[2946.38] Tony: off on you a little. Oh, I nearly swore then. There&#x27;s one, there&#x27;s one, rubs off on you or
+[2953.1] Lee: rubs up against you. Spends where you are and how dark it is and see if he can get away with it.
+[2963.18] UNKNOWN: So what&#x27;s everyone&#x27;s latest projects, what they&#x27;re working on? How&#x27;s the X-Class flying,
+[2967.5] Lee: mate? Are you doing anything with that? My one, it&#x27;s getting there, it&#x27;s slowly,
+[2973.66] Danny (Joker): slowly getting there. Looking at starting maybe night-time displays with them.
+[2983.1] Danny (Joker): Pyrotechnics or just lights? Lights and pyrotechnics maybe, maybe some fireworks. I have
+[2990.62] Danny (Joker): got the superstar-like cat fox here to go on. Tell us a story about you trying to fly with that on.
+[2998.54] Tony: Can you just take one step back, Danny? What is that? Because you&#x27;re talking a language that I
+[3006.3] Lee: have not involved in yet. Is that what a camera FPV, what&#x27;s it in it? A foxy FPV camera. Right,
+[3012.38] Danny (Joker): okay. You can see it like 0.0001 lux, so it&#x27;s like new on darkness. It&#x27;s very good in the dark,
+[3021.02] Tony: very good. I stupidly set it to 16 by 9, couldn&#x27;t see the bottom of the screen and I couldn&#x27;t land
+[3028.38] Danny (Joker): it. I couldn&#x27;t fly it, could you? Something&#x27;s happened overnight, you&#x27;ve changed the pins,
+[3033.98] Tony: what&#x27;s happened? I think it&#x27;s because you stretch your screen and you&#x27;re supposed to have it
+[3041.02] Tony: four by three and you swap the camera and it could fly again. It must be that, so hopefully
+[3048.06] Tony: you&#x27;ll sort that out next time you fly because I&#x27;m actually interested in seeing how dark you
+[3052.7] Tony: can fly with that. Menace RC hopefully will be making us some big lights for the arms.
+[3062.78] Tony: I&#x27;ve gave him the measurements but you know what I&#x27;m like, probably be too big or too small.
+[3070.46] Tony: Yeah, hopefully Menace is going to make us some nice lights for the next class.
+[3076.06] UNKNOWN: Yeah, those cob lights are very bright that those guys do and I turned them on indoors
+[3082.7] Lee: and yeah, I couldn&#x27;t see anything for about a week. I put them on five inch and they&#x27;re really
+[3088.46] Danny (Joker): good. They&#x27;re really good. They&#x27;re really good. I did a review of the ZOHD orbit, it has the
+[3095.18] Lee: LEDs in the wings, it&#x27;s a flying wing thing and I do like flying at dusk with lights on. It just
+[3100.7] Lee: looks so cool. Yeah, I really wanted one on Saturday, something like that because I had my
+[3105.82] Frank: radian as well that I hadn&#x27;t flown at that point but it was just getting too dark and I was like
+[3111.18] Frank: ah, there&#x27;s lights on this, I can fly. Yeah, sorry we didn&#x27;t come Frank. Oh well, I think
+[3121.34] Frank: from the reaction I had to FPV and wearing a t-shirt with a quad on, I think it may have been
+[3128.46] Frank: the best. Well, I did keep asking in WM, is there any quad related stuff and nobody got back to me
+[3136.14] Danny (Joker): as I was like, no, we can&#x27;t do something else. Well, maybe we can turn it around like we did at
+[3142.94] UNKNOWN: Northwestern Wings and Wheels because they loved it down there. There&#x27;s quite a lot of, I&#x27;m just
+[3149.9] Lee: conscious, we&#x27;ve only got probably about six to seven minutes left and there&#x27;s lots of questions
+[3153.98] Lee: coming at the moment directed towards Andrew talking about the legislation that&#x27;s coming in.
+[3161.02] Lee: In a way, it&#x27;s kind of good that we&#x27;ve only got six to seven minutes because the last time Andy and
+[3164.46] Lee: I had a chat about this. After 45 minutes, Andrew was just warming up. So, Andrew, are you happy to
+[3174.38] Lee: give us the very top level bullet points of where we are? Just for those interested, Andrew and I
+[3181.02] Lee: did a much longer interview on this, it&#x27;s available on the Painless 360 YouTube channel, shameless plug,
+[3186.3] Lee: apologies for that in advance. We&#x27;re also going to be doing another one probably September time,
+[3190.14] Lee: I think we said, mate, didn&#x27;t we? An update, which will have more detail, but are you happy
+[3195.1] Lee: to do the high level highlights in four minutes? I can do my best. Action. Don&#x27;t panic. Registration
+[3208.86] Frank: is coming in November. It&#x27;s registering pilots, it&#x27;s not registering quads, but it&#x27;s for
+[3215.42] Frank: 250 grams plus come November, but come July 2020, it is applying to everything with a camera
+[3224.7] UNKNOWN: and then there&#x27;s lots of other rules as well of when you need particular types because there&#x27;s
+[3229.18] Frank: going to be from July 2020, there&#x27;s going to be two types of registering, so there&#x27;s going to be
+[3233.42] Frank: a normal registration, but there&#x27;s also going to be certificate of competency, which you&#x27;re going
+[3238.22] Frank: to have to get from somewhere, but then it works out where yet and there&#x27;s all sorts of other rules
+[3242.86] Frank: about. So the summary, if I can just jump in for a second, the bottom line is at the moment,
+[3253.1] Lee: there&#x27;s still loads of things to be decided, lots of things being proposed. My humble opinion is
+[3258.54] Lee: they&#x27;re probably proposing an overly oppressive set of rules so that when we pair them back to a
+[3264.7] Lee: much lesser set of rules, we&#x27;ll feel like we&#x27;ve had a win, which is probably where they want us
+[3267.98] Lee: to be anyway. That&#x27;s just how these things work. Not that cynical at all about this entire process.
+[3273.98] Lee: Not at all. So don&#x27;t panic just about it yet. There are different classes that have been
+[3279.58] Lee: proposed based on weight, speed, functionality of the vehicle, which the idea is it will encompass
+[3285.42] Lee: everything. But interestingly, there are potential loopholes around if the craft is homebuilt versus
+[3292.7] Lee: purchased. What I imagine the hobby will do is we&#x27;ll all figure out what the loopholes are
+[3301.02] UNKNOWN: and then everyone will build for the loopholes. At the moment, the two classes that we&#x27;re going
+[3308.62] Frank: to exist in at the moment is either so small and so slow that we&#x27;re probably not going to want to
+[3314.94] Frank: fly outside, basically tiny whoops, or it&#x27;s going to have to be so far away from everything that
+[3322.62] Frank: you&#x27;re never going to find anywhere to fly it. Those are currently the two situations come July
+[3327.18] Frank: 2020, unless between now and then we find a lot more loopholes or find a lot more spaces to fly
+[3334.86] Frank: that are ridiculously far away from anything else. But we&#x27;ll see. Yeah. You say don&#x27;t panic,
+[3343.26] Tony: but I&#x27;ve already started to panic. I think it&#x27;s difficult to, Tony, with the lack of information
+[3349.02] Lee: that we have and lack of certainty, I think that is as disconcerting as anything else. I know for
+[3355.34] Lee: me, looking at all the quads and all the planes and wings and all the stuff that I&#x27;ve got, you&#x27;re
+[3361.58] Lee: kind of thinking of what of this am I going to be able to fly without taking a 27-week exam?
+[3368.06] Lee: But I think for us, I think we just have to shake out the good news is, I guess, from those
+[3376.14] Lee: people representing the hobby at government level, is that talking to Andrew last time, and Andrew,
+[3380.62] Lee: please chime in as this has changed, but all these individual outfits that were talking to
+[3385.26] Lee: the government separately and trying to defend their own corner of the hobby all seem to be
+[3391.18] Lee: working together now, finally, which I&#x27;m taking as a good sign because it did feel to me a little
+[3396.62] Lee: bit like the fixed-wing fliers were trying to throw the drone guys under the bus.
+[3401.82] Lee: And there was a lot of that, oh, it&#x27;s not us, it&#x27;s these guys kind of activity going on. And now,
+[3405.98] Lee: because it&#x27;s going to bite them on the butt as well, those people representing that side of the
+[3410.14] Lee: hobby are suddenly wanting to throw their weight behind the rational arguments. So I&#x27;m hoping that
+[3415.9] Lee: that more considered approach is going to bear fruit. But this is the government we&#x27;re talking
+[3420.86] Lee: about. So who knows? I know who knows. I like Diddy Falls reply, I&#x27;m going to pay you painting
+[3427.74] Tony: Jolly Roger on my flying toys. Brilliant. I might do that as well. Maybe we should all just
+[3434.62] Lee: look together and just buy an island off Scotland somewhere and just all go there to fly.
+[3439.9] Lee: Well, I was thinking that there&#x27;d be FPV holidays now, wouldn&#x27;t there? Someone doing FPV holidays to
+[3447.18] Tony: places like Tenerife, where you can fly up in the volcanoes without...
+[3452.3] Lee: FPV cruises, we can park in the other way. We&#x27;re nowhere near anything then.
+[3458.22] Tony: Most of the legislation...
+[3464.86] Lee: Andrew, do you want to take it? It seems to be the people around, right?
+[3470.14] Frank: Yeah, so you&#x27;ve got the issue of there being people, but even if you go at six o&#x27;clock in
+[3475.42] Frank: the morning when there&#x27;s probably not that many people on the beach, you&#x27;ve got the issue of to
+[3481.26] Frank: take off, you need to have land owner&#x27;s permission. I thought Don Robinson said we&#x27;re beaches are...
+[3490.22] UNKNOWN: Exhibit from...
+[3491.18] Tony: Yeah, they can&#x27;t, they can&#x27;t.
+[3493.66] UNKNOWN: Well, it depends who owns it. Some beaches are fine, some beaches are owned by people.
+[3499.9] UNKNOWN: Can I stand on the beach and take off from my hand?
+[3503.58] UNKNOWN: That&#x27;s the same thing.
+[3505.42] UNKNOWN: Is it? Is it not?
+[3508.06] Tony: Maybe we just don&#x27;t...
+[3508.78] Tony: My launch pad is my hand, I&#x27;m just borrowing there.
+[3512.06] UNKNOWN: To be fair, Canva Sands was more worried about Tony bringing his dog on the beach than us flying a
+[3517.82] Danny (Joker): drone.
+[3518.3] Danny (Joker): Yeah, well, to be fair, dog&#x27;s everywhere. Mine doesn&#x27;t.
+[3526.62] Lee: Notes to everyone, Frank Swar, it was Frank brought the tone of the showdown.
+[3533.58] Tony: She&#x27;s right at the very end, we nearly made it.
+[3536.22] Lee: We nearly made it.
+[3537.18] Lee: One minute to go.
+[3540.14] Lee: There we go.
+[3540.86] Lee: And it&#x27;s all...
+[3541.34] Lee: That&#x27;s all just for joining for f*** sake, Frank.
+[3544.62] UNKNOWN: Well, we&#x27;ve got to make sure that the editor actually listens to the end, you see.
+[3548.38] Frank: Oh, that&#x27;s all it is.
+[3551.1] UNKNOWN: Fantastic. So we&#x27;re just coming to the end in this. I think, you know, to summarize, because I
+[3557.1] Lee: think what happened with the video that Andy and I did a little while ago, a lot of people
+[3561.1] Lee: watched the video were thoroughly confused at the end of it, which actually meant you&#x27;d
+[3564.22] Lee: followed it perfectly because it is completely confusing and nobody knows what&#x27;s going on.
+[3569.5] Lee: But it did mean that people were getting a bit despondent. And, you know, I wouldn&#x27;t take that
+[3573.82] Lee: away from it. I think that this is very much a negotiation that&#x27;s currently happening.
+[3579.66] Lee: All the people who represent the hobby are there. We just need to make sure as a hobby that we
+[3584.06] Lee: represent and behave ourselves and don&#x27;t put really stupid things on YouTube that all the
+[3588.7] Lee: people who are against the hobby can point to, as an example, is why it needs to be banned.
+[3593.9] Lee: So let&#x27;s have, you know, let&#x27;s try and not do that for the next eight months.
+[3599.42] UNKNOWN: Well, that&#x27;s it. Today was really hard for us because we&#x27;d spent four hours, nearly four hours
+[3604.86] Danny (Joker): driving, get there and they go, oh, no drones allowed. Why? Oh, because there&#x27;s cars here and
+[3611.34] Danny (Joker): people were spotted using drones to see what cars were here because there&#x27;s Bentleys and stuff.
+[3617.18] Danny (Joker): It&#x27;s because Rockingham now has been sold and someone&#x27;s bought it and now it&#x27;s basically a
+[3624.3] Tony: huge car park. And that&#x27;s it. Apparently, there&#x27;s people who have been flying
+[3633.02] UNKNOWN: DJI, maybe. Stuff what hovers and points and stuff and finding where good cars are and then
+[3640.06] Tony: going to borrow them. I think we need to finish on a slightly nicer note
+[3646.54] Lee: after all that. So, Andrew, do you just want to recap on the competition and then we&#x27;ll close
+[3653.26] Lee: it out because that&#x27;s gone very quickly. We&#x27;re on time. Absolutely. So please do send in your
+[3658.62] Frank: favorite moments of LDO from over the past four years to us at letstrownout.com and you will be
+[3665.26] Frank: in with a chance of winning some goodies from Drone is Life. Also, massive thanks to all our
+[3670.78] Frank: patrons. Without you, we wouldn&#x27;t be able to continue doing this because come August,
+[3678.94] Frank: the system we currently use Google Hangouts is disappearing. Hangouts on air will no longer be
+[3684.14] Frank: a thing and we&#x27;re having to build our own system to be able to continue to do this.
+[3688.62] Frank: So thank you very much for all your support without which we wouldn&#x27;t carry on.
+[3693.58] UNKNOWN: Good point. And it kind of goes back to what was saying before. If there are things in the hobby
+[3696.7] Lee: that you get for free, that you enjoy, support them and then they&#x27;ll stay around. So you have
+[3701.98] Lee: been listening to Let&#x27;s Drone Out, episode 203. So with me tonight, we&#x27;ve had Danny. We&#x27;ve had Tony.
+[3713.1] Lee: We&#x27;ve had Andrew. Bye. And I&#x27;ve been Lee Schofield, also known as Painless360.
+[3719.1] Lee: Have a wonderful week and happy flying.
+</pre></body></html>

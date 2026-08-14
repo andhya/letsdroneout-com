@@ -1,0 +1,443 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0401—LDO 401 - HAPPY BIRTHDAY STEPHEN</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 401 ===
+Title: LDO 401 - HAPPY BIRTHDAY STEPHEN
+Recorded: 2023-05-04
+Hosts: Stephen &quot;Belrik&quot; Howell, Koel &quot;Koala&quot; Anderson, Wayne &quot;CurryKitten&quot; Andrews, Jack &quot;Brightontillifly&quot; Nash, Andrew &quot;Frank&quot; Hyams
+Guest(s): (none recorded)
+Total audience: 1,323
+Platforms: YouTube (https://www.youtube.com/watch?v=emW14wKdgq8); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1508432182-letsdroneout-ldo-401-happy-birthday-stephen.mp3)
+=====================================
+
+[0.0] UNKNOWN: Hello, and you&#x27;re listening to what&#x27;s drawn out and special thank you to our lovely patrons that help donate so that we can pay the editor to remove the swear words and silly things we say massive thank you to Carlos campos.
+[17.68] Frank: Sam Darma on with the show.
+[51.76] UNKNOWN: Happy birthday steven happy birthday.
+[56.0] Jack: All right, thanks guys a birthday this even hello and welcome you are listening to let&#x27;s turn out today&#x27;s Thursday of that may the fourth be with you and curry kitten is with us everyone&#x27;s favorite curry kitten help and as soon as he&#x27;s taking a beer it&#x27;s steven&#x27;s birthday hello hello and welcome to episode 401 of let&#x27;s turn out.
+[85.24] UNKNOWN: Yeah, and we are also doing by my buddy Cole howdy and I&#x27;m brighten to the fly let&#x27;s stop the show sorry steven was telling us that he tried some what was it tennis fun yeah go well I went down to visit jack and we had a little fly and one of the things I took with me was this 10 s squad that I&#x27;ve been building.
+[112.16] Stephen: That there was a small amount of sparking and smoking from the slightly perhaps made on someone&#x27;s kitchen table as see that i&#x27;m using.
+[120.68] Stephen: But it flew for some reason the vtx wasn&#x27;t working, so I was like whatever it was working on the bench, it was a cadex visitor and i&#x27;d gone through the setup done wtfo s set up.
+[133.0] Stephen: Bill on screen display and verified it was working on a 12 volt supply on the bench plugged into the tennis so 42 volts motors are okay flies stable no worries.
+[145.48] Stephen: A line of sighted it put it in angle mode and gave it a punch whereupon it disappeared into the heavens without any worries came back down no problems, but yeah no video so i was like okay well it flies I gave it a couple of punch outs to make sure it was okay, but was kind of scratching my head on that and i&#x27;m.
+[164.92] UNKNOWN: I looked at the matec docs and it&#x27;s got this big back in the middle with an optional output, so you can jumper two pads to get nine volts you can jumper a different two pads to get 12 volt and according to the documentation if you.
+[177.8] Stephen: bridge both the 12 volt and the nine volt pad just supposed to get 16 volts out and I was feeding it 12 on the bench so i was like oh it&#x27;s under 16 so it&#x27;s probably just passing through what it what it gets.
+[187.6] Stephen: And i&#x27;d assumed it would give me 16 when I was at the field, which is what you&#x27;re supposed to do according to their docs for like 10s and 12s setups you go for the higher voltage get more efficiency.
+[197.76] Stephen: But yeah the field it wasn&#x27;t working and on the bench I am I connected the tennis lipos and quickly check the voltage output and it was giving me 42 volts to my vtx that&#x27;s not good that&#x27;s not good at all.
+[212.32] Stephen: What is the limit of the the voltage you can put into the vista success success definitely doesn&#x27;t like tennis.
+[220.08] Stephen: And yeah you can see the little blurb down the side there it&#x27;s like bridge one pad get nine volt bridge the other pad get 12 volt bridge both pads get 16 volts so I was like yeah okay bridge both parts get 16 for no no no no no definitely getting over 40 volts.
+[235.52] Stephen: So that wasn&#x27;t happy and it had a little red kind of when it pulls power from the uart it kind of gives you a little kind of ghostly red glow like half lights one of the leds and you.
+[247.68] Stephen: You can tell it&#x27;s not good when it&#x27;s doing that that&#x27;s what happens if you plug in usb but you don&#x27;t get the lipo power either.
+[254.88] Stephen: The weird thing is once I am I actually checked that back and I couldn&#x27;t get a sensible voltage out of it and and heating up and swapping over I think I knocked off one of the passives.
+[264.4] Stephen: Next to those bridges anyway so it&#x27;s just like screw it I didn&#x27;t the back in that board if you flash that up again jack.
+[270.56] UNKNOWN: It&#x27;s quite a good diagram kind of illustrates that that the back isn&#x27;t actually part of the flight controller the back is actually like a separate board.
+[278.88] Stephen: That is soldered onto the middle of the flight controller like there&#x27;s a square gap in the middle of the flight controller and a bunch of solder bridges down the side and they just drop the daughter border back on.
+[289.04] Stephen: So I am I was able to actually unsold those out ground ground in pads and and then prize the glue off and I already had one of these that I got for another project so I just dropped that in set it to 12 volts and it&#x27;s fine and I was just writing it off as like a dodgy back for whatever reason.
+[307.84] Stephen: It seems fine now I&#x27;ve swapped that but yeah the vista was still working as well which was the insanely.
+[314.08] UNKNOWN: Good bit that I wasn&#x27;t expecting I might have to leave it running on the bench with a fan on it and make sure it stays working at 10 S.
+[320.8] Stephen: But yeah after being taken up to 42 volts for a few minutes it seems okay touch wood so we&#x27;ll have to see how that goes because that&#x27;s the last vista I had.
+[333.36] Stephen: We&#x27;ll see how that goes.
+[334.32] Stephen: How are the stocks of vistas nowadays?
+[339.92] UNKNOWN: I think we&#x27;ve gone through the flash sale and now it&#x27;s like getting a bit low on stock to be honest so we&#x27;ll have to see.
+[349.44] Stephen: There&#x27;s always that whole I might upgrade my other quad to something that&#x27;s better than a vista I might upgrade this one to O3 I might upgrade that one to walksnail so.
+[357.92] Stephen: There&#x27;s that kind of musical chairs arrangement where I could free up one by upgrading something else to something better and then like put something into that 10 S squad but yeah nothing easy to get right now.
+[373.04] Stephen: Anyway it flew well which is good there was no kind of oscillations no flyaways no smoke no drama.
+[380.8] Stephen: Plug in the lipos and off we went the hardest thing is trying to get to lipos sitting side by side on the top plate and then you know monkeying around with the leads so they&#x27;re clear of the props and you can still plug in both batteries at the same time without the balance leads getting sucked down into the props that took a bit of juggling but yeah it&#x27;s good.
+[401.76] UNKNOWN: Promising you can&#x27;t get vistas or anything but what about that run cam link or wasp is that they&#x27;re all the same thing so.
+[410.16] Stephen: What we call the vista was a dgi product that kadak sold as the vista it&#x27;s called the dgi a unit light right so kadak sold is vista run cam sold it is link and did someone else ever sell it was there ever a.
+[424.24] UNKNOWN: Anyways, it was the same thing that comes from DJI and the camera comes from run cam or it comes from kadak so whoever.
+[433.44] Stephen: Two together and sell it as a product yeah.
+[436.8] UNKNOWN: And so I also understand you attempted to made in your lovely little plane yeah it&#x27;s still in one piece, thank God, but it was it was on a ridge and it was blowing a gale like enough that birds of prey were kind of hovering on the ridge line where the wind was hitting the cliff and punching up and this, as you can see, is not terribly large plane.
+[461.2] UNKNOWN: So what happened when the wind got it just kind of went very dramatically kind of and flipped around upside down, even though it had full throttle I think it was.
+[473.84] Stephen: Not powerful enough to handle that sort of condition and I as a pilot had no idea what I was doing I was hoping I get a couple of seconds grace while the thing gained altitude before I had to start jamming the controls one side or the other.
+[486.0] Stephen: So I wasn&#x27;t really prepared for it either and down it went a couple of cracks, but of you who poor.
+[491.92] UNKNOWN: Which I gather is the traditional approach and and it looks good.
+[496.24] UNKNOWN: We flew some analog quads as well just nice had a four inch analog build that i&#x27;ve been meaning to do for ages and traveling down to jack was impetus to go rebuild that and jack was kind enough to let me fly one of his which I must say.
+[509.12] Stephen: A sparklingly clear video for an analog build what magic he&#x27;s worked on that but it&#x27;s crystal clear video, which is pretty impressive.
+[518.08] Jack: What are you running on it jack.
+[521.36] Jack: The the deleted.
+[525.24] Jack: yeah the the deleted tramp yeah.
+[529.88] Jack: And with a.
+[533.28] Jack: With a fox here whatever camera i&#x27;ve got.
+[538.64] Jack: So it is your access it or.
+[544.03] Koel: There was no static it was just like the kind of perfect picture you see if you like you were just connecting a camera straight up to a goggle like there was no sign of a vtx being involved in the process at all no motor noise really nice crisp video so yeah good work on the build man.
+[561.19] UNKNOWN: twist twisting I guess twisting your video wires makes a difference.
+[567.71] UNKNOWN: Oh it&#x27;s a testimony to Tony with a tramp.
+[573.43] UNKNOWN: So.
+[575.91] UNKNOWN: yeah I still love my tramp so they they work great.
+[579.63] UNKNOWN: yep I think that one in but no it&#x27;s the other one that&#x27;s.
+[586.15] UNKNOWN: Yeah, my my second quad even the call was nice enough to to grab me one from from Taiwan, so you know they are quite hard to get hold of now.
+[599.63] UNKNOWN: Yeah, you can&#x27;t find them anywhere in Canada anymore there was I think there is actually one rather I&#x27;m not sure if it&#x27;s still available but there&#x27;s a place called great hobbies in.
+[609.63] Koel: Oshawa Ontario Canada and they have apparently one tramp hv left last time I checked, which was maybe a month or two ago now, but no other stores in Canada, no other stores in America really.
+[623.35] Koel: But apparently they had him in Taiwan, so I was pretty lucky and they were super cheap I got him for like I think maybe less than 10 bucks each is like they were like a quarter of the price of what they&#x27;re you know maybe a third of the price so it&#x27;s pretty good.
+[638.35] UNKNOWN: Is this the typical immersion RC thing where nothing gets discontinued they just run out of them for a while and then they might make a new batch bit like powerplay that ran out of rages they&#x27;ve just got new ones in.
+[652.21] UNKNOWN: I don&#x27;t know I don&#x27;t know where the I don&#x27;t know is there is there a successor is the question or is is that the only product in the range.
+[663.33] UNKNOWN: Well, when you go to the train the immersion website and you go to the tramp hv listing says by now you click it and it brings you to a broken Amazon link that has a little dog that says sorry we couldn&#x27;t find that page.
+[675.45] UNKNOWN: I feel like keeping a web pages updated well should we talk about the big news of the week we must be orca and it&#x27;s interesting time bomb in the bootloader code.
+[688.41] UNKNOWN: Which the joy of software copyright assignment sounds yeah it&#x27;s interesting just for the fact that the guys that developed it is doubling down on the fact that he thinks it&#x27;s legitimate and it&#x27;s not ran somewhere.
+[704.69] Curry: And they somehow wrote this with a time restricted copyright presumably.
+[714.09] Curry: Wanting to get another payment from orca before they release another firmware and I can&#x27;t imagine any company signing any sort of agreement to that so it&#x27;s interesting well there&#x27;s two sides to this one they may not have explicitly signed an agreement for it, but they may not have explicitly.
+[730.97] Stephen: taken copyright assignment of the code in the contract they wrote for the developer and unless you explicitly take copyright assignment of someone&#x27;s work.
+[741.33] Stephen: It will remain their property, so if they wrote a contract tip for him to write software and they said you just have to write the software and you have to deliver the software to us without express explicitly saying you shall give.
+[753.77] Stephen: All copyright assignment to us, along with the work you&#x27;re doing for us then he&#x27;s got a legal platform to stand on and say well actually I wrote it and I still have copyright assignment and for the purposes of this deal i&#x27;ve granted you the use of my work.
+[768.73] Stephen: And I could revoke that later.
+[771.33] Curry: yeah, although that you kind of think any company that contracts someone to write a piece of code for them would a.
+[778.41] Curry: Ask for the copyright of the code be get the source code because, as I understand all brand new company they&#x27;re a brand new company and this type of stuff that we&#x27;re talking about like making sure you&#x27;ve got copyright assignment.
+[789.77] Stephen: Making sure that all the legal stuff is cleared up that happens in big companies and I work for a very large company with a very hot on this and they check every bit of software and you have to.
+[799.33] Stephen: attribute every bit of code that you use and make sure that there is a good license behind it and the license isn&#x27;t going to be a time bomb.
+[806.65] Stephen: But with a small company like orca it&#x27;s their first product their brand new company and I think they may not actually have the.
+[814.33] UNKNOWN: The caution to think about these things if the people involved haven&#x27;t been involved in a software company before they haven&#x27;t dealt in this world before they could have gone and ask someone to write something for them and not properly understood the ramifications of asking someone to do work for them but they didn&#x27;t.
+[832.05] Stephen: own the work off to the person had done it for them that&#x27;s the trouble you are someone to do work for you but you don&#x27;t own the work in perpetuity.
+[839.61] Curry: It does seem pretty make a mouse to to allow someone to deliver here&#x27;s an encrypted binary that you will never see or read and it&#x27;s ours but it&#x27;s okay.
+[849.45] Curry: And later on we just may decide.
+[852.53] UNKNOWN: But you&#x27;d be surprised when you get outside the world of software development curry a lot of people just don&#x27;t think about this they&#x27;re like oh you&#x27;ve done it you&#x27;ve delivered it oh there&#x27;s the file and we just have to put the file here and it works great done.
+[864.25] Stephen: Whereas you and I would be like wait a minute what happens if this breaks how do we know how it works what happens if we need to maintain it later.
+[871.41] UNKNOWN: Yeah where&#x27;s the paper where&#x27;s the contracts where&#x27;s the yeah where&#x27;s all the world a lot of people I thought there was a common sense thing I didn&#x27;t think you have to be in software development for that it&#x27;s like you have to be bitten by it and then you&#x27;re like yes you learn once and then you and you never relearn again because it&#x27;s a.
+[890.33] Koel: Yep for sure well I know I know in the previous few years orca were.
+[897.05] Curry: Starting to recruit their own people in sort of development terms which is probably why they&#x27;ve managed to chunk crank out this this fix to repair at least so they didn&#x27;t have to go through the hassle of like paying this guy off it be interested to see how this.
+[911.57] Curry: This case comes out because you&#x27;ve got one guy claiming one thing one claiming another it seems to be one would say not you know not legal advice not in the spirit.
+[922.29] Curry: Of any sort of contract to provide something which you suddenly sort of revoked later on though that that would seem very odd.
+[930.29] UNKNOWN: Yeah yeah I mean hey as of today they got the fix download new firmware on bricking procedure so I mean it seems like they got it figured out pretty quick.
+[941.37] UNKNOWN: But then again what what yeah what&#x27;s gonna happen down the line I guess it&#x27;ll unfold for us and.
+[947.53] UNKNOWN: I&#x27;m sure it&#x27;ll it&#x27;ll be more you know comments in the peanut gallery and we&#x27;ll get to see how it all goes.
+[953.73] UNKNOWN: There&#x27;s a few interesting red flags there will be a nice and see how it pans out but I the fact that they didn&#x27;t check what was inside a blob like this they didn&#x27;t have someone do due diligence on it before it shipped that&#x27;s just.
+[968.85] UNKNOWN: Amateur hour really it&#x27;s quite an indictment that they got this far and it&#x27;s been out in the field and they thought everything was fine because they didn&#x27;t know what was going on.
+[978.21] Stephen: Wait if you&#x27;re in software and you think everything&#x27;s fine and you don&#x27;t understand the problem space you&#x27;re setting yourself up for a fall sooner or later.
+[988.21] UNKNOWN: Yeah you want to make sure you look at everything before you really appreciate what could go wrong before you can assure yourself that nothing will go wrong.
+[996.53] UNKNOWN: Yeah I guess easier said than done though I mean you never know what happens behind the scenes for companies and who runs it and you know who&#x27;s not checking each line of whatever or.
+[1007.33] Koel: Like you know I don&#x27;t know the whole thing behind it but yeah I&#x27;m obviously it can happen and it did happen and it does happen so it&#x27;s I guess it&#x27;s a lesson to a lot of people you know.
+[1019.05] UNKNOWN: Yeah the question is does this damage all cuz reputation for being a bit naive about how they put their code together and stuff or do they come out looking quite good because it was clearly.
+[1031.05] Curry: A sort of a bad actor involved and they put a fix out quickly that said or was promising their own digital system like two years ago and that hasn&#x27;t materialized so they&#x27;re a bit they haven&#x27;t done much in recent times have they about developing stuff.
+[1043.97] UNKNOWN: Well yeah they promised that was going to be a slew of updates and a never ending stream of software development that was going to that you&#x27;re going to deliver a hardware unit and there was going to be new functionality coming in via upgradeable software.
+[1057.53] UNKNOWN: And as of I think sort of six months ago I think that the last update to their app was in September there&#x27;s no new features they put this fbv connect board out.
+[1068.29] Stephen: And they gave people a controller which as far as I can tell hasn&#x27;t really made a big splash it was released it did ghost and I&#x27;m not seeing anyone make noise about it like I&#x27;m seeing people talking about the tango to I&#x27;m seeing people talk about the radio master boxer.
+[1086.41] UNKNOWN: I don&#x27;t see anyone talking about the the orca controller so it feels like a lot of their stuff they hyped it in 2021 and through 2022 they&#x27;re releasing stuff and now we get to 2023 and it feels like it&#x27;s been really quiet on the orca front for six months until we get to this unfortunate event.
+[1105.85] Stephen: Well I remember a year ago like yeah they they hyped up some some basically like you know VTX&#x27;s or digital you know digital boxes and whatnot and there was like three different ones I think but yeah there were a couple of photos taken at a trade show which I think you&#x27;re referring to they put this cabinet a trade show and they illustrated that they had a bunch of digital VTX&#x27;s and they were going to be working in different spectrums I think I think they had a 2.4%
+[1135.85] Stephen: 4 gig one and a 5.8 and a 1.3 or something like this and maybe also one that worked over 4G and they were kind of putting it out there like here&#x27;s here&#x27;s a picture of the casing we didn&#x27;t know if there&#x27;s a PCB inside but there were pictures of of the VTX like boxes the casing or heatsink that was going to be on the VTX with labels on them kind of implying that yeah we are intending to make this but it&#x27;s been a very long time since that announcement and that appears to have been a one-off maybe they were trying to fish for
+[1165.85] Stephen: the contracts and the contracts never arrived so the R&amp;D didn&#x27;t happen and it just dead-ended yeah I think I remember someone talking about like that the goggles would have you know you could do digital and analog built-in on some of the newer ones or whatever but that was a while ago now I can&#x27;t remember all the details but yeah they seem to have unfortunately not stepped up to match what HD zero did HD zero made this huge splash I think it&#x27;s fair to say that everyone is looking at HD
+[1195.85] Stephen: zero for analog right now even though it&#x27;s a digital goggle first the fact that they&#x27;ve put a lot of effort into the analog input really shouts premium whereas orca I think are now on the second rung behind them is that the second best option what for analog yeah it&#x27;s true if I was buying an analog pair of goggles now I wouldn&#x27;t know what to get it&#x27;s a very good point hmm you still would just be fat sharks of course yeah but
+[1225.85] UNKNOWN: I was really happy with the Skyo 4x I mean they were pretty good I got them with a coupon a while back imported them for cheap and yeah they were great like I said I was flying jack squad and I thought the video was just excellent you get that kind of frame combining stuff gives you pretty good range minimizes interference
+[1249.49] UNKNOWN: yeah here they said the perpetrator was particularly I can&#x27;t pronounce that word perfidious yeah perfidious because the occasional business relations with us over last year&#x27;s and was waiting for the code bomb to detonate so they said it was kind of like an almost ransomware was programmed to explode to cause maximum crisis
+[1280.25] UNKNOWN: yeah but there&#x27;s two people in this right there&#x27;s them and that the person they hired to write the code and they&#x27;ve got a facebook page as well so that they&#x27;re both saying the same thing but with very very different language.
+[1291.43] UNKNOWN: I&#x27;m calling it ransomware and the guy who wrote the code is is calling it a license and saying well you know the license was time to expire and.
+[1300.91] UNKNOWN: It&#x27;s my code and I&#x27;m going to charge them to re license the code that I wrote for them and it really is something that at the end of the day it needs to be decided in court right we need to figure out exactly who does own the code and what the rights are and if the code was licensed to walker and orca agreed at some point that they need to pay then the courts need to decide that yeah I&#x27;m not a liar but.
+[1328.91] UNKNOWN: I mean all that stuff should have been that should have all been dealt with before those guys should be in the contract right yeah and if orca are going to accuse the guy of ransomware they need to point to the copyright assignment in the code in the contract that says you know.
+[1345.47] UNKNOWN: This guy didn&#x27;t have right to do what he&#x27;s doing and it shouldn&#x27;t be on facebook by calling someone a perfidious whatever it should just be in black and white like.
+[1355.43] UNKNOWN: Orca owns all software and source code related to blah blah blah or they don&#x27;t all an all source code and they are paying for a time limited license or access to the code, in which case you know it&#x27;s going to fall down the other person&#x27;s I have a strong feeling there&#x27;s there&#x27;s no contract either way and it falls into this weird gray area perfidious by the way according to dictionary.com because I didn&#x27;t have a clue either means deliberately faithless treacherous deceitful.
+[1386.43] Jack: I reckon you look that word up there no no one just roll your videos off their tongue.
+[1390.99] UNKNOWN: Someone got through a thesaurus visual yeah.
+[1394.03] UNKNOWN: Yeah first time I&#x27;ve come across that it&#x27;s a big word you know a big word for Jack the thing is in the morning.
+[1404.67] UNKNOWN: As Tom says like if there was a license it would have a date that this wasn&#x27;t time to all go off on April the 29th apparently it just starts on April the 29th and then it&#x27;s going to randomly dribble out and it was set for according to the person that wrote the offending code the time bomb is set to to detonate.
+[1427.43] Stephen: Randomly from April the 29th so if yours works and you&#x27;re thinking oh I got lucky now you should probably still upgrade because it might just randomly blow up the weird thing is that they.
+[1440.35] Stephen: expressly stated that it was only for consumer goggles and any goggles that were part of a deal for for government or military or corporate sales were excluded which seems strange so.
+[1453.39] UNKNOWN: That they don&#x27;t want to annoy any large companies but they&#x27;re happy to kind of throw this in the face of regular consumers which again makes it look a little particularly shady because if this had been a general license scheme it should affect everyone equally you&#x27;d have thought.
+[1471.47] UNKNOWN: Yeah or it could be that sometimes like the old sort of thing like you know the ISO nine thousand one gubbins and rubbish would mean you have to have procedures and stuff and have to know everything so perhaps the goggles sold into government go out with a completely different bootloader that they had to write themselves because well selling into government means we have to do different things in different different ways of doing stuff for them to do business with us.
+[1499.47] UNKNOWN: This is why it looks shady I think because they&#x27;re basically saying oh don&#x27;t worry we didn&#x27;t put this on the government ones so there&#x27;s going to be no large institutions or government lawyers coming after us.
+[1512.19] UNKNOWN: I will not worried about regular Joe on the street seeking his lawyer on us.
+[1517.75] UNKNOWN: Which is it&#x27;s definitely shady guys yeah it&#x27;s definitely not good but I think he&#x27;s trying to exploit.
+[1525.51] UNKNOWN: A gray area rather than like you know it&#x27;s not all out ransomware but it&#x27;s not it&#x27;s clearly you know if there was some license to say orca holds the copyright of this code or whatever you know then he couldn&#x27;t have done it either so it&#x27;s somewhere in the middle but yeah we&#x27;ll follow it we&#x27;ll eat popcorn and you know we&#x27;ll just read about them shouting each other on Facebook which is a weird way of doing a legal proceedings but you know it works for us yeah.
+[1552.71] UNKNOWN: I guess that we don&#x27;t have orca goggles right yeah I&#x27;m thinking all that premium I&#x27;ve missed out on some part of this premium experience to thinking well there don&#x27;t seem to follow it up on all the software promises they made and now I&#x27;m thinking oh wow I actually like dodged a bullet by not going for those interesting how time changes perspectives.
+[1574.51] UNKNOWN: My hdos are still trusty so awesome yeah yeah.
+[1578.51] Koel: Cole if you can build a drone you can definitely build a PC yep so that might be an option yeah that is true I mean it&#x27;s just plug this plug that you can buy something cheap and make it better right because the box the box for a PC and the power supply and the maybe the motherboard of what you need you can always upgrade it from there get something off the shelf plug in a GPU.
+[1610.08] Stephen: Add a bit more memory these are trivial things to do once you&#x27;ve done those the rest seems less scary I think the because I&#x27;m a Mac user I think the I mean really the only thing that&#x27;s going to be that difficult I guess is what making a bootable disk for with a Windows operating system.
+[1628.08] UNKNOWN: Yeah it&#x27;s a bit of a pain if you only got a Mac but you can do it yeah there&#x27;s tools I mean there&#x27;s no way it&#x27;s that hard I mean yeah you get a case you have a power supply you have a motherboard you have hard drives SSD RAM graphics card.
+[1643.08] Koel: That&#x27;s basically it right yeah pretty much it&#x27;s like plug tab a into slot a like does this cable fit in here okay click and the manuals are always pretty good for motherboards as well now they still tend to ship paper manuals which is a godsend so you can always be like the worst part of the little LEDs in the front of the case when you go to plug the motherboard in if you buy something that&#x27;s already.
+[1668.08] UNKNOWN: Prebuilt you don&#x27;t have to worry but if you buy a separate case and motherboard you&#x27;ve got these little like jumpers and you&#x27;ve got to be like this is the LED ground and this is the LED positive and make oh and now yep when I switch the power on the LED the lights up what doesn&#x27;t light up that&#x27;s about the hardest part the rest is just like there&#x27;s a single place where this fits and you plug it in there.
+[1690.08] Curry: I still must put in my.
+[1693.08] Curry: My little two cents about this is wrong this is wrong because Cole is getting the PC for his other half design on it and graphic design must be done on the Mac nothing wrong with using a PC with a nice graphics card they and they run the same application you can do it on a beat.
+[1711.08] Curry: Any design agency there&#x27;s racks of Max everywhere it&#x27;s a Mac thing I don&#x27;t know why so you&#x27;re going to be.
+[1719.08] Curry: You see the trouble with Max is now they used to be elite but now a basic Mac is kind of a plebeian choice for a designer what you really want is a boutique PC PC with like some kind of nice wood exterior.
+[1734.08] UNKNOWN: All kinds of tasteful design on it and then you run it as a hackintosh so you could once again be elite and above everyone else instead of just buying a generic Mac like people are using like your grandma&#x27;s using to browse Facebook you know you&#x27;ve got to be a cut above that.
+[1748.08] Stephen: Yeah, but if you want to do a hackintosh you got to jump through a bunch of hoops and watch a bunch of tutorials and yeah, I.
+[1755.08] Koel: Your face in a toaster oven slam the door on your arm yeah all of that it&#x27;s not a good experience for sure and the instant you upgrade them they tend to just bork and fall over from the soundbit too.
+[1766.08] UNKNOWN: Yeah, I didn&#x27;t see any idea there was an interesting video I saw about a man managing to run.
+[1773.08] Curry: OS 9 the previous Mac lies on a no this lion is 10 point something we&#x27;re talking about nine nine.
+[1784.08] Curry: No it&#x27;s true no I was sex.
+[1788.08] Curry: He was running it on the Nintendo Wii I was quite impressed.
+[1795.08] Curry: Really did he run out of pins to shove under his nails or something was he doing this.
+[1801.08] UNKNOWN: Just just for funsies.
+[1805.08] Curry: Because you know like oh I like to spend 60 hours trying to do something just to see if it can be done and then the fonts didn&#x27;t work but apart from that it actually looked quite good.
+[1816.08] UNKNOWN: See like connect there are makers to the Internet you&#x27;re slight.
+[1821.08] UNKNOWN: Yeah, why.
+[1823.08] Koel: If it was for me I might you know dive into the world of building a PC and just learning and figuring how to do it.
+[1829.08] Koel: But because it&#x27;s not for me I don&#x27;t want to take I don&#x27;t want to be learning with someone else&#x27;s money especially you know I guess actually that&#x27;s the best way to learn really is with someone else&#x27;s money but I don&#x27;t know.
+[1842.08] Koel: You can get some pretty powerful computers these days that are just you know ready to go and somewhat affordable especially if you know how the sales system works.
+[1851.08] Koel: And you&#x27;ve got someone to complain if it breaks the trouble is if you&#x27;re buying a PC for yourself and you want to like shave a couple hundred bucks off it and get exactly what you want.
+[1861.08] Stephen: That&#x27;s fine because yeah if you can&#x27;t like load up your game or whatever you can just like crack it open and wiggle the cables around receipt things and fix it or change it by our setting fits for your significant other.
+[1875.08] UNKNOWN: You probably want to get something with a support contract so if magic smoke appears or something else is your fault.
+[1882.08] UNKNOWN: Yeah I don&#x27;t know if I want that weight on my shoulders I&#x27;m like let&#x27;s go to a big box store I know how the sales guys work I can get you a great deal and it&#x27;s going to work right out of the box and if anything does happen they&#x27;ll bring it right here if they can&#x27;t fix it then they&#x27;re going to give you a new one off my hands you know out of my hands so.
+[1899.08] Koel: Yeah and Dom does raise some of the compatibility kind of things you can walk into where it looks like things should work together but unless you&#x27;ve got kind of an appreciation of the speeds and timings of different components which.
+[1913.08] UNKNOWN: I&#x27;m a Mac user how am I supposed to know any yeah exactly and I&#x27;m a long time PC builder so maybe I just kind of plow under some of this pain that I&#x27;ve had to endure and learn over the years but yeah unless you can remember kind of what speed memory works with what CPU may not be the best thing to do.
+[1929.08] Koel: Yeah basically no Mac user knows any of that because we can&#x27;t access our RAM we can&#x27;t access our CPU I&#x27;m not on anything in past like 2012 or something.
+[1940.08] Koel: But if you want to get to anything else that involves peeling the screen off which is not very nice and I didn&#x27;t have a Mac book ages ago where you the last one you could like flip over and unscrew the bottom and you could swap the spinning disk for an SSD and upgraded the RAM but that was the last time I had a Mac.
+[1958.08] Curry: Yeah now now the screens are glued in so in order to get to the disk or the graphics that whole screen has to be de glued and you have to use special tools to go along them and peel them back just so you can do stuff.
+[1974.08] Curry: I really hope that the world comes full circle and you can use screws again.
+[1978.08] Curry: Really good which I agree with which is like I like Macs but I hate Apple it&#x27;s kind of accurate it&#x27;s like I like my iPhone but I hate Apple.
+[1987.08] Curry: Apple does the thing where they make the hardware and they make all of the internal well they don&#x27;t make all the internal components but they have a lot of control over those internal components and then they make all of the software so they can tie it together and you don&#x27;t have this like garbage dumpster fire like with Windows where it says please connect to the internet to install your network card driver and you&#x27;re just like.
+[2014.08] UNKNOWN: You know this kind of craziness work they just work they just they look good they work but you also pay a pretty penny for them and if you have any issues you got to bring it to them you can&#x27;t open it yourself there&#x27;s nothing you can really do I mean my my most up to like my newest Mac is a 2018 laptop.
+[2037.08] Koel: Everything else I&#x27;ve got like a 2010 iMac that still works great can still take the screen off I can still technically do that easily.
+[2046.08] Koel: But yeah any of the new Macs is just like come on Apple yeah I did a memory upgrade on one of those old iMacs the ones that had the the large white plastic that was the last one that was easy to take apart with the large white plastic monitor.
+[2062.08] Stephen: And I upgraded the next memory to like three gigs for someone on that that was still pretty difficult that wasn&#x27;t completely glued but it was like a couple of hours to carefully tease it apart and maneuver things around.
+[2092.08] Frank: Thanks to our Patreons consider joining them and you&#x27;ll also get other online benefits find out more at patreon.com forward slash let&#x27;s drone out.
+[2102.08] Curry: We&#x27;re being complained that there&#x27;s not enough drone talk so what.
+[2106.08] Koel: Go flying and stuff.
+[2110.08] Curry: Stephen and Jack managed to call what are you.
+[2114.08] Curry: Did you did you find any big radio towers to fly around.
+[2117.08] UNKNOWN: Well I did not find any big radio towers I am keeping my eye out like a hawk for anything that remotely you know resembles a dish or tower or anything.
+[2128.08] UNKNOWN: What did I do where did I go fly.
+[2131.08] UNKNOWN: Oh yeah I actually I went out the other day I was like it was raining all day and then it was starting to be around sort of late evening towards sunset and the sun decided to come out the clouds went away and I was like oh better to better charge up some batteries and.
+[2145.08] Koel: Go fly for a bit I went to just a little local sort of park area not too far for me and I was just testing out some new settings on my kiss ultra I was kind of messing around with the set point weight.
+[2158.08] Koel: And just seeing how it felt different throttle and whatever.
+[2165.08] Koel: But nothing too crazy.
+[2168.08] Koel: I don&#x27;t know just kind of cruise around really I.
+[2171.08] Koel: I&#x27;ve actually started to really enjoy just cruising around like I was really heavy into like freestyling and like I gotta find a band every time I fly and whatever but there&#x27;s something really therapeutic about going to like a really chill sort of park with trees and putting on some nice music and just kind of like just you know cruising on the tree tops and kind of sending it out a little further than maybe.
+[2196.08] Koel: I guess I&#x27;ll keep my mouth quiet.
+[2198.08] Koel: That&#x27;s that&#x27;s all I like to do.
+[2200.08] Curry: It&#x27;s not all about the flippy flappy just finding the most exciting thing I do these days is I find a field and you know those fields have the tram lines down where they plow them.
+[2211.08] Curry: You just lose low along those and you just like oh this is this is very relaxing you just watch the fields come past you and you watch your shadow of your quad and like that&#x27;s nice.
+[2220.08] Curry: I think I&#x27;m going to flip the top and come back and do it again and speaking of cruising around did Curry get his open HD setups in the air.
+[2228.08] Stephen: I think you did an open HD video.
+[2230.08] Stephen: So if you&#x27;ve been cruising around with with a quad and I did I&#x27;ve edited the video.
+[2236.08] Curry: It&#x27;s not released yet until next week.
+[2239.08] Curry: But yeah the quad did not work.
+[2243.08] Curry: Unfortunately there seems to be a problem somewhere along the line.
+[2247.08] Curry: What we&#x27;ve got is it was built up lovely all went in and the screen is like if the screen is this big I&#x27;ve got picture here and the rest of it is like digital breakup and I can&#x27;t figure out what&#x27;s wrong with that.
+[2263.08] UNKNOWN: But I did fly the wing using the new antenna the maple leaf named after Cole and and that worked brilliantly.
+[2275.08] Curry: Brilliantly.
+[2277.08] Curry: We got all the way out to a kilometer without a problem before I crashed it into the bush but that&#x27;s looking really good.
+[2285.08] Curry: So what&#x27;s what&#x27;s happened with open HD just recently is they&#x27;ve they&#x27;ve got their together basically they&#x27;ve got their new version the H open HD Evo into release candidate.
+[2297.08] UNKNOWN: They&#x27;ve got I think they&#x27;ve got a couple of release candidates now.
+[2299.08] Curry: And so I&#x27;ll be updating to that version.
+[2304.08] UNKNOWN: And hopefully it&#x27;s going to work and sort out some of the problems some of the problems I was having previously as some of the telemetry was was not being worked out properly so I could see that my my range in total was like three kilometers and my home arrows spinning correctly but my distance from home was zero because that part of the telemetry wasn&#x27;t working for example.
+[2327.08] Curry: And I need to upgrade that wing to INF six and try and get it less vibration because I had the thing with the artificial horizon indicator going out again which led to me crashing.
+[2340.08] UNKNOWN: But so with the with the quality you can see the top of the display and the rest was just garbage but the top few lines were okay.
+[2349.08] Stephen: Yeah the top few lines were okay. The quad at the moment.
+[2353.08] UNKNOWN: Is that bad maybe cable do you think because I can&#x27;t think how it would it could be damage. Here&#x27;s the quad at the moment it&#x27;s open HD is back off of it.
+[2364.08] Curry: Fortunately I made it very modular so I could just literally lift the parts out and I&#x27;m trying to get walks now in there.
+[2372.08] Curry: But I just need to pin out for this board which I can&#x27;t find because a bit like you want Steven it should have a nine volt out from the flight controller so I can power it that way and it just about reaches because it&#x27;s a very long body to get the.
+[2393.08] Curry: Yeah it&#x27;s quite long so that there&#x27;s some nice holes for it to sit here but I&#x27;ve checked it and it can reach there but it kind of needs to go underneath the board so I have to do some.
+[2403.08] Curry: You don&#x27;t have a 20 by 20 in front of the flight controller because that could be quite handy because it&#x27;s really easy to extend the BTS antenna.
+[2411.08] Stephen: Not enough space for it there unfortunately.
+[2414.08] Stephen: There&#x27;s the old DJI setups I actually to do that 10s quad I had to kind of go through the parts bin and I had a VTX with an eight centimeter cable and one of the nano cameras and I had to and I had to rifle through the parts bin and find.
+[2432.08] Stephen: Like a 12 centimeter cable because the standard cable is just stupidly short like you&#x27;d have to put the VTX in front of the flight controller which is usually a world of pain like some frames can do it and the longer seven inch frames probably are okay but on a five inch.
+[2450.08] Stephen: If you&#x27;ve got imagine the arms crossing on the cross in the middle is where you have your flight control on the SC usually put the VTX away from the nose and some of that have another 20 by 20 mount between the nose and the center of the frame but that usually means like just.
+[2469.08] UNKNOWN: Cramming it in there.
+[2471.08] Stephen: Yeah trying to do really you&#x27;ve got to push the cables in really tight and that mippy cables really delicate so you can&#x27;t push it too much or you&#x27;ll break it and you got to pay 10 pounds for another stupid cable if you do that.
+[2484.08] UNKNOWN: That&#x27;s annoying.
+[2486.08] Curry: It&#x27;s always troubling to sort of fit things into quads that are sort of pre built where it&#x27;s sort of pre built to like oh look the stack comes exactly to the roof and nothing else will fit and this fits exactly there and it&#x27;s like okay.
+[2499.08] Curry: I have to start you know if I have to make a little mount for it so I have like a 3D bit just so I can move the other bit away from the mounting holes just so I can not have that cable tight then.
+[2509.08] Curry: You upgrade your flight control and it has like a JST plug that&#x27;s like two millimeters to the side and it hits the one on the ESC in just the wrong place or some like little component is going to hit the ESC and you need to bump it up by two mil and then the frame doesn&#x27;t let you do it and you&#x27;ve got to kind of buckle the top.
+[2529.08] Stephen: Yeah world of pain.
+[2531.08] Koel: It is a nightmare.
+[2532.08] Koel: Oh what do we have here a wild curry.
+[2534.08] UNKNOWN: I thought I&#x27;d go and walk around the farmer see if he&#x27;s got any suggestions.
+[2538.08] Curry: This is like a country style.
+[2540.08] Curry: This is like a country style open HD wing.
+[2542.08] Curry: It got stuck at the top of a hedge row.
+[2546.08] UNKNOWN: So I am stood in the bucket of a tractor being driven up to the hedge row.
+[2553.08] Curry: Would you recommend this as a standard quad or wing retrieval process standing in a tractor?
+[2558.08] Curry: The good thing about farmers is they don&#x27;t believe in risk assessments.
+[2560.08] Curry: They&#x27;re just like getting a tractor.
+[2563.08] Curry: I was like I thought he meant in the cab and I was like no you stand in that bucket.
+[2567.08] Curry: I&#x27;m like really high.
+[2569.08] Curry: Don&#x27;t worry mate you still got two of everything.
+[2572.08] Curry: Get on in.
+[2574.08] Curry: Get on up.
+[2576.08] Curry: I mean it&#x27;s right up there that wing.
+[2578.08] Curry: Yeah it literally what had happened.
+[2580.08] Curry: It&#x27;s completely my fault.
+[2582.08] Curry: I&#x27;d launched it auto launch and sort of bought it round.
+[2586.08] Curry: I put it into return to home.
+[2587.08] Curry: I fought with the goggles like can&#x27;t work you bastards trying to get the HDMI cable not to not to move so I could actually get a picture.
+[2595.08] Curry: And I&#x27;d left it and stabilise and said switching it to manual.
+[2599.08] Curry: So when the AHI started to go out so it was fine for like 10 minutes and then it started going like this.
+[2604.08] Curry: Obviously stabilise was fighting.
+[2607.08] Curry: It&#x27;s like no look you&#x27;re sideways you&#x27;re upside down.
+[2609.08] Curry: And eventually to the point it was like no look we&#x27;re fine.
+[2612.08] Curry: We&#x27;re spinning around into the ground and it&#x27;s like why didn&#x27;t I just switch it into manual.
+[2615.08] Curry: Then it would just be the annoyance on the screen.
+[2618.08] Curry: But my fault.
+[2620.08] UNKNOWN: You did a pretty good job because you&#x27;ve got a massive field and you still managed to find like a hedge that you can&#x27;t reach the top of.
+[2628.08] Stephen: Everything else looks like it&#x27;s about five foot tall.
+[2631.08] Curry: Yeah if it was if it crashed straight into the ground it would have got more damage.
+[2636.08] Curry: That hedgerow at least helped slow it down.
+[2639.08] Curry: I mean it didn&#x27;t rip into the wing and I lost one of those antennas that got ripped off.
+[2643.08] Curry: But fortunately I would have fired it once.
+[2646.08] UNKNOWN: So it&#x27;s a tactical landing you&#x27;re saying?
+[2648.08] Curry: A tactical crashing.
+[2650.08] Curry: It&#x27;s a typical thing.
+[2652.08] Curry: Aggressive landing.
+[2653.08] Curry: If you know you&#x27;ve had a whole field and if there was one rock in there that&#x27;s what you would have hit.
+[2657.08] Curry: That&#x27;s just the way it goes.
+[2658.08] Curry: Well I did that one flying with Jack.
+[2659.08] Stephen: I was like oh yeah coming into land and had this katunk.
+[2663.08] Stephen: We&#x27;re in this kind of meadow land.
+[2666.08] Stephen: It&#x27;s all soft as far as you can see and I looked and like the only rock in ISOC.
+[2672.08] Stephen: I bounced my quad off it.
+[2674.08] Stephen: How did I do that?
+[2677.08] Curry: And it&#x27;s like Jack whenever he crashes he found like a dead sheep to get twisted onto his props and stuff.
+[2684.08] Stephen: Yeah he didn&#x27;t this time.
+[2685.08] Stephen: He did try and trim the trees a bit.
+[2687.08] Stephen: There was some aggressive arborealism going on.
+[2690.08] UNKNOWN: Would you like to know some bad news?
+[2697.08] Koel: Let&#x27;s hear the drama.
+[2700.08] Koel: What&#x27;s up?
+[2702.08] Curry: This is my video.
+[2704.08] Koel: Oh didn&#x27;t check your exposure settings again.
+[2708.08] Koel: I told you Jack always check before flying bro.
+[2712.08] Koel: Oh my word that is extreme exposure.
+[2715.08] Stephen: Did you forget which country you were in or something?
+[2717.08] Stephen: Were you flying in the night last time?
+[2719.08] Stephen: I don&#x27;t know yeah.
+[2720.08] Stephen: That&#x27;s impressive mate.
+[2722.08] Stephen: That&#x27;s almost as good as when you start your GoPro and then you find out it&#x27;s set to.
+[2726.08] Curry: Slide Joe.
+[2728.08] Curry: Time lapse or something.
+[2730.08] Curry: I just don&#x27;t trust myself to remember just that stuff.
+[2733.08] Koel: I just leave it on auto.
+[2735.08] Stephen: New rule of thumb Jack.
+[2737.08] Koel: The first thing you do when you get to a spot to fly.
+[2740.08] Koel: You take out your phone.
+[2742.08] UNKNOWN: You turn Bluetooth on on your GoPro.
+[2744.08] Koel: You connect to the GoPro quick app and you view your exposure settings.
+[2748.08] Koel: This is getting involved already.
+[2750.08] Curry: The guy turns up in the field with a freaking laptop.
+[2753.08] Stephen: He&#x27;s got a laptop at the field.
+[2755.08] Curry: You just put it on auto and you stop trying to be ponsy with your settings.
+[2760.08] Stephen: Yeah.
+[2762.08] Stephen: There&#x27;s nothing wrong with flying on auto.
+[2764.08] Stephen: Just be basic and have fun.
+[2766.08] UNKNOWN: Just yeah that&#x27;s true.
+[2768.08] Koel: That&#x27;s true.
+[2770.08] Koel: And in most scenarios that&#x27;s going to be perfectly fine.
+[2773.08] Koel: Unless you&#x27;re in the dark or.
+[2775.08] UNKNOWN: Yeah.
+[2777.08] Stephen: Unless someone&#x27;s paying you money for it.
+[2779.08] Stephen: I mean if you have pride in your work and you are standing to make a buck or two from it.
+[2785.08] Stephen: Spend the time adjusting it or if you if you&#x27;ve got.
+[2789.08] UNKNOWN: A hundred thousand followers who are desperate to see your next video.
+[2792.08] Stephen: Sure. But see I don&#x27;t have any of that but it only takes me two minutes to go set my ISO range and and you know it&#x27;s like I feel like that&#x27;s a huge thing with FPV pilots is like they don&#x27;t spend that extra maybe one or two minutes to get the camera settings dialed in.
+[2810.08] Koel: And then I feel like Cole Cole&#x27;s out there with a color board in front of his GoPro every time.
+[2815.08] Curry: Just tell this here so I can color grade this probably when I get back.
+[2819.08] Koel: No not even close and I can prove that I have an SD card with the proof.
+[2824.08] UNKNOWN: No.
+[2826.08] UNKNOWN: Yes it is nice when you when you go out and you just go.
+[2830.08] Koel: But you know it only takes a minute to to get the right settings.
+[2834.08] UNKNOWN: This is my old run cam hybrid little four inch that I was messing around on everything is on auto.
+[2842.08] Stephen: Was this just the other day with Jack.
+[2843.08] Stephen: Yeah this is Jack.
+[2845.08] Stephen: Oh I remember I recognize this spot Jack.
+[2849.08] UNKNOWN: It&#x27;s not the greatest flying ever it&#x27;s a quad I&#x27;ve only just built and it&#x27;s a little bit rough. The props are a bit messed up.
+[2856.08] Stephen: But yeah it was fun. It was a good fun fly.
+[2860.08] Stephen: And flying analog for the first time in a long while.
+[2864.08] Stephen: Just messing around seeing how many notches I can take out the props on these trees.
+[2870.08] Stephen: Good laugh.
+[2872.08] UNKNOWN: It looks like a fun spot.
+[2876.76] Koel: Yeah when the light was pretty the shadows along.
+[2880.76] Stephen: It was fun.
+[2881.76] Stephen: And Jack managed to prune the trees.
+[2887.39] Stephen: I think Jack&#x27;s going for some kind of like large scale bonsai art here where he goes out here with a five inch every once in a while and finds these null trees and just sculpts them the way he wants them you know.
+[2899.39] UNKNOWN: Well HD or a little hedge trimming I should say.
+[2901.39] Koel: Yeah but they are quite picturesque just at the top of this hill looking down on this big old valley.
+[2908.39] Stephen: It&#x27;s quite a laugh just to whiz around them you know.
+[2911.39] Stephen: Not sponsored by manscaped hedge trimming.
+[2916.39] UNKNOWN: I am not. It is just not connecting at all. I hate this.
+[2922.39] UNKNOWN: I will be your troubleshooting guide after this don&#x27;t worry.
+[2927.39] UNKNOWN: I am glad some of it came out. It is like 2.7K 60 and I think I tried to mess around with some of the frames set up after your previous comments Cole but yeah it is good enough as they say.
+[2941.39] Stephen: What about my comments are you?
+[2943.39] Koel: Remind me.
+[2945.39] Stephen: So you were talking about the kind of shutter timing being so many degrees out and yeah.
+[2951.39] Stephen: Yeah I think I actually tried to set up that run cam hybrid according to your guidance.
+[2956.39] UNKNOWN: Okay nice yeah. I mean I give guidance but I am also a cheater sometimes and I will like.
+[2964.39] UNKNOWN: Most of the time I try to follow what I like there are you know quote unquote rules when it comes to settings but like I don&#x27;t really fully follow them but you know it.
+[2976.39] Koel: Especially with GoPros it is a little tricky too because it is not like an actual camera that you can change aperture shutter speed and ISO like you only have shutter and ISO.
+[2987.39] UNKNOWN: So then you got to mess around with ND filters if you really want to do it according to the you know the cinematic regulations is not a real thing but yeah.
+[2998.39] UNKNOWN: Cinematic man you got to get the most cinematic settings dude.
+[3002.39] UNKNOWN: I think it actually looks okay. We had very flattering lighting of course.
+[3007.39] Stephen: Jack as he reviews his pruning attempts seeing whether it did the job or not.
+[3014.39] UNKNOWN: Yeah no those those settings are good. It&#x27;s like my well actually the last time I went out to fly it was a bit of a disaster because well I guess I can do some show and tell.
+[3027.39] UNKNOWN: I messed up my camera settings last time so you know I&#x27;m not I&#x27;m not the the wizard of all.
+[3034.39] Koel: I just messed up the recording full stop a lot of these videos.
+[3036.39] Stephen: The SD card kept ejecting midway through the flight. It didn&#x27;t fully eject but it kind of just unpopped. You know there&#x27;s that push pop setting with micro SD cards.
+[3052.39] Stephen: Well the run can un-pop itself when you do a hygiene maneuver so I think I need to dig out the funky little protector they used to sell with them that like adds a little wire clip over it.
+[3064.39] Stephen: I&#x27;ve I&#x27;ve got replacement SD card things that you can reflow and I can&#x27;t reflow Jack I&#x27;ll just butcher it and then throw the board away.
+[3074.39] Jack: Every time I&#x27;ve done anything in regards with that sort of stuff the SD card just doesn&#x27;t work.
+[3081.39] UNKNOWN: So I could always put some glue on the back of the SD card and then like make it really tight fit and jam it in and then pull it out with a pair of pliers that&#x27;ll probably work.
+[3089.39] UNKNOWN: Sorry Scott Cole you&#x27;re saying this is the.
+[3092.39] UNKNOWN: Yeah so this is this is when I had my settings like this my settings were great when the sun was out.
+[3099.39] UNKNOWN: But then two seconds later.
+[3102.39] Koel: It&#x27;s a very red running track. Oh yeah. Yeah. That&#x27;s it. Oh.
+[3107.39] UNKNOWN: There is all the red. Let&#x27;s go back and find it again.
+[3112.39] Koel: He likes to pretend session like.
+[3116.39] UNKNOWN: Session five whatever. No no this is a hero 11 mini.
+[3121.39] Stephen: Oh fancy.
+[3124.39] Koel: It has enough battery to.
+[3127.39] Stephen: Is the running track really that red because that seems like a kind of disco dance floor shade of red.
+[3133.39] Koel: It&#x27;s very red. It&#x27;s extremely red. Yeah it&#x27;s it&#x27;s crazy red.
+[3137.39] Jack: It&#x27;s as red as a maple leaf.
+[3144.39] Koel: Now the clouds came back and then hold on hold on.
+[3149.39] Koel: Sorry Cole. I am terrible.
+[3152.39] Jack: You&#x27;re not defending yourself. It&#x27;s weird.
+[3154.39] Stephen: Well I&#x27;m trying to show something. I&#x27;m not. I&#x27;m not trying to get to the point Jack just for one.
+[3159.39] Stephen: So this show there was actually a point. Yeah.
+[3162.39] Stephen: There&#x27;s a point when one flies past you but there was one here.
+[3167.39] Koel: OK well enough of your guys shenanigans. So as you see here my camera settings are way too dark.
+[3172.39] Koel: So I had an ND 16 on my.
+[3176.39] Koel: My ISO was at 100 Max 100 and I mean it&#x27;s still possible because it&#x27;s 10.
+[3184.39] Stephen: It looks like the sky is kind of nicely set up but the ground is pretty dark.
+[3191.39] UNKNOWN: Yeah. It&#x27;s almost cold like if you did just left it on auto you&#x27;d have had a better experience.
+[3196.39] Curry: Just saying. Well if I put it on auto and full throttle that&#x27;s the way to do it.
+[3203.39] Koel: If I put it on auto though then it&#x27;s going to put the ISO to like max and I&#x27;m going to have grainy ugly footage.
+[3209.39] Stephen: Well well yeah but you could just yeah but this is much better because you can&#x27;t see anyway.
+[3214.39] UNKNOWN: Well I have an argument here because here 11 mini is 10 bit footage.
+[3219.39] Koel: I was actually able to go into post production up the shadows and everything was beautiful.
+[3223.39] Koel: You can reach down and we see those and rip them up can you. Yeah. You guys want to see the difference. Yeah.
+[3229.39] Stephen: Yeah. Let&#x27;s see if the shadows actually look good or if the impact compression just turned them into giant squares.
+[3237.39] Stephen: Let me plug in my SSD for a second here.
+[3242.39] Koel: Can you guys.
+[3244.39] Koel: Trouble like if you record stuff in the extended color range it&#x27;s all great.
+[3247.39] Stephen: But the codec thinks that the dark areas aren&#x27;t really visible to the human eye. So it just compresses the snot out of them and they&#x27;re just turned into big rectangles.
+[3257.39] Stephen: And then you make them brighter and you&#x27;re like there&#x27;s a lot of slightly brighter big rectangles around the place.
+[3263.39] Stephen: Well man the you know I need to go back to flying my hero five session because I&#x27;ve kind of been addicted to this 11 mini since I got it.
+[3271.39] Koel: It just looks really nice and has it overheated for you yet or is it all right.
+[3276.39] Curry: I&#x27;ve never had any issues with it knock on wood but yeah no it&#x27;s been great. Well I&#x27;m trying to think was there any issues.
+[3286.39] Koel: I think oh you know I think the battery does seem to like turn itself or run itself down even when it&#x27;s off.
+[3293.39] Koel: But I think that every GoPro kind of does that batteries do that on every device unless you like physically take them out the device and make sure they&#x27;re not connected.
+[3301.39] Curry: This is the last GoPro I&#x27;m ever buying. I&#x27;m not I&#x27;m not doing it again. I&#x27;m so fed up with them now.
+[3307.39] UNKNOWN: I&#x27;m not enjoying flying with a GoPro I have to say overheating battery problems having this media module which is great for if I&#x27;m in the field trying to do some like I&#x27;m in the field sort of thing.
+[3321.39] UNKNOWN: Sometimes that decides like oh you press the on button doesn&#x27;t mean anything to me. You have to take it out take the battery out put it back in all that sort of crap.
+[3329.39] Curry: Digital VTX is the way forward man just like record by default don&#x27;t funny around with cameras. Well I don&#x27;t even put my GoPro on my card most of the time this is just for like recording me and stuff as I&#x27;m doing stuff and it still is hateful awful and it&#x27;s like.
+[3346.39] Stephen: So Cole you are showing us some of your fancy editing here. Yes I&#x27;m just I got to plug in my DVR SD card because it&#x27;s saying missing file.
+[3353.39] Koel: What I was going to say that was I really want to build you know I want to go digital and I want to build a long range like six or seven inch.
+[3360.39] Koel: No GoPro just oh three air unit and I&#x27;ve seen some pretty cool results from it. Yeah there&#x27;s a lot of people with like the Chimera seven that&#x27;s been out for a while from my flight and they&#x27;ve there&#x27;s some wonderful results that have come out from that.
+[3373.39] Stephen: Loads of people have been cruising around with it. Okay so let&#x27;s go to here let&#x27;s get rid of this. Let&#x27;s get rid of that. Let&#x27;s get rid of all my silly fancy stuff on the screen here.
+[3387.39] Koel: So you&#x27;re going to show us a post-processed version of that where you got it the 10 bit. Yeah. Oh yes. Well so I don&#x27;t know if you guys notice so well let me see where I start off so I start off and I just the sky is really spankingly bright the sky is like the most perfect blue sky.
+[3408.39] UNKNOWN: Yeah. Yeah. Okay so I just want to say one thing so you see down in the at the bottom middle where it&#x27;s still the same unreal shade of red but everything else is slightly brighter. Do you see this little can you see my cursor or like you&#x27;re where this 38 seconds is.
+[3423.39] Koel: So that&#x27;s right around where I&#x27;m sitting. Well okay I see if I can kind of show you if I&#x27;m going to turn around. So I&#x27;m sitting at that little bottom part right there and I end up going to the back where this where the woods are.
+[3438.39] Koel: Well like I said my camera settings were messed up so I&#x27;m like I&#x27;m flying through the woods and you do notice that as soon as you&#x27;re like not looking you&#x27;re not looking up and you look down.
+[3451.39] Stephen: The image has a lot more detail and a lot more color in it. If there&#x27;s sky in the image it&#x27;s definitely kind of forcing everything else down it feels like it&#x27;s always been a bit crap at that if there&#x27;s a bright light ahead it&#x27;s always darkening the floor.
+[3465.39] Curry: They they seem to have a terrible. Well they&#x27;re going to expose for the brain. They&#x27;re not going to. They&#x27;re not going to. He says is locking off his exposure so it shouldn&#x27;t be doing that. It&#x27;s not fully locked off like there&#x27;s still an ISO range like a slight one.
+[3478.39] Koel: Most of the time like maybe like one to two hundred or something like that but you get that because you&#x27;re in a quad and you&#x27;re tilting the camera around so much it&#x27;s really obvious when you&#x27;re going forward and then you punch up and you look down at the ground.
+[3489.39] Stephen: Oh yeah. And you go along from like oh dark ground dark trees and you punch up and look down at the ground and it&#x27;s suddenly like an emerald green all of a sudden. Yeah yeah. So look at this. So this is the original footage with nothing on it. You can&#x27;t see anything. It&#x27;s completely garbage. You can&#x27;t see anything at all.
+[3506.39] Koel: That was this. This is the this is the power of the 10 bit footage right here. So like you see no details on the left on the right now you can see all the details on the left and putting a curve over it or something.
+[3517.39] Curry: It does seem like you&#x27;re introducing some gray like there&#x27;s there&#x27;s a slight haze of gray as you brought it up.
+[3524.39] Curry: Yes but then I then I do a color correction and then you kind of fix it. Yeah. So it definitely like more here.
+[3533.39] UNKNOWN: Yeah. So basically what I did was I just I just literally up the shadow by like you know just a slight amount and then did a bit of color correction and with a little just very basic. It&#x27;s super super you know added a little saturation to the blues in the sky. You can kind of see.
+[3554.39] Koel: So you&#x27;d recommend basically get a GoPro that can do 10 bit because you can rescue a bit of a misstep in terms of the luminance and that the shutter set up.
+[3564.39] Koel: To be honest. No I wouldn&#x27;t say go get a GoPro that has 10 bit just so that I would say get your exposure right before you start flying. Just set it to auto.
+[3576.39] Stephen: How much more effort would it be just to fully animate it because you&#x27;re already using all these special effects just like oh no it&#x27;s not looking like that. So just just animate the whole thing.
+[3585.39] Curry: Anime the exposure you mean. No just make a complete CGI footage and pretend you were flying it. How far away are you from all these effects.
+[3594.39] Curry: I mean it&#x27;s OK. I I could I didn&#x27;t pick up on that because maybe I know I have watched this video. Yeah it&#x27;s any good. The dual operator where he puts the second operator gimbal on the drone.
+[3610.39] Koel: Yeah I watched this very cool except he kept breaking the gimbal arm on it every time he landed. He basically broke it. They&#x27;re not designed for high G. Are they quite delicate systems.
+[3622.39] Jack: Remind me we need to talk about this again soon because that is all we&#x27;ve got time for. Unfortunately.
+[3631.39] Jack: If you&#x27;re listening to this and you&#x27;re an audio listener you guys rule.
+[3636.39] Jack: We&#x27;ve got a patron that pays the lovely editor and the hosting and everything. And earlier on I had a meeting and apparently you know like well apparently if you record a podcast on YouTube and then upload the audio and then assign it to a RSS feed you know it&#x27;s so that you can call it a podcast instead of just.
+[3667.39] Jack: Conferencing or chatting amongst yourselves. OK so we&#x27;re going to netcast instead. Yeah maybe. Who knows. I don&#x27;t know. Maybe we need to use the podcast tab that YouTube has so gracefully bespoke because then people won&#x27;t be able to find any of our content because YouTube just introduced that tab like a month ago and it&#x27;ll probably be gone in two months time.
+[3691.39] Stephen: That&#x27;s true. Sounds like it&#x27;s just audio. We are multi media to call it a multimedia experience. Well I reckon if we use that a tab maybe we&#x27;re a rich audio visual experience out some more people because it&#x27;s a new feature.
+[3708.39] Koel: We&#x27;re a poor audio visual experience but we&#x27;re definitely an audio visual experience.
+[3713.39] UNKNOWN: Yeah. All right. That&#x27;s all we got time for. Thank you to all our lovely Patreons. You&#x27;ve been listening to let&#x27;s throw now you Patreons rock. It means that we can swear and next week we&#x27;re going to start adding mock product sponsors.
+[3733.39] Jack: So you guys get to enjoy products like Jack&#x27;s Sticky Glue Emporium stickiness. Sticky Jack&#x27;s Glue Emporium. Yep. And Tony&#x27;s Man Milk. It&#x27;s your meal replacement. Freshly pumped. And the two stroke ball and face trimmer.
+[3754.39] Jack: Yep. So look out for those slightly soiled mattresses deliverable. Coming soon to a store near you. Call right now. Get your calls dumped used mattresses coming to you via the hotel elevator.
+[3774.39] Jack: Yes. Exactly. Available to anyone standing underneath whatever calls address currently is. 123 fake street. I know. It is funny. Yep. Today has been Stephen&#x27;s birthday. Happy birthday. Cheers. Thanks Stephen. Birthday to me.
+[3801.39] UNKNOWN: I&#x27;m old. Birthdays don&#x27;t really matter when you get old. But it was nice. How old are you? Too old. Too old. Too old to tell you. I&#x27;m the answer to life the universe and everything. I feel I&#x27;m still the oldest by some margin so don&#x27;t worry. Yes you are. Yeah. But you&#x27;ve got hair so it doesn&#x27;t really count. It&#x27;s all right. Well you&#x27;ve got shiny hair. It just allocated to a different area. Oh yes. Oh you&#x27;re now playing the Star Wars video. Yep. Oh yeah. Made the fort. Made the fort.
+[3828.39] Koel: Yep. After this go over to Curry Kittens channel and then there&#x27;s the dad and daughter Star Wars extravaganza. You&#x27;ll be joined by everyone&#x27;s favorite Curry Kitten. Goodbye. And my buddy Cole. See ya. And I&#x27;ve been brighten till I fly. Thank you very much. What about the man with the mustache? Take care. Bye everyone. No we&#x27;ve done him first. It was his birthday. He went on this.
+[3857.39] Jack: Oh I got sidetracked by the birthday thing. Yeah. Then we&#x27;re talking about dirty mattress flinging and all sorts. Yeah. Two-stroke hair removal. Thanks guys. Have a good night. Bye. Good night. Bye. Telemetry lost. Goodbye.
+</pre></body></html>

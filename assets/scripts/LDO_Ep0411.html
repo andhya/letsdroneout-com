@@ -1,0 +1,1275 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0411—LDO 411 - Times Are Changing</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 411 ===
+Title: LDO 411 - Times Are Changing
+Recorded: 2023-07-13
+Hosts: Jack &quot;Brightontillifly&quot; Nash, Stephen &quot;Belrik&quot; Howell, Andrew &quot;Frank&quot; Hyams
+Guest(s): &lt;details class=&quot;guest-toggle&quot;&gt;&lt;summary&gt;&lt;span class=&quot;gt&quot;&gt;Dominic &quot;Mr Cleanflight&quot; Cl…&lt;/span&gt;&lt;span class=&quot;gf&quot;&gt;Dominic &quot;Mr Cleanflight&quot; Clifton&lt;/span&gt;&lt;/summary&gt;&lt;/details&gt;
+Total audience: 1,258
+Platforms: YouTube (https://www.youtube.com/watch?v=C8VQuhScsIw); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1565750986-letsdroneout-ldo-411-times-are-changing.mp3)
+=====================================
+
+[0.0] UNKNOWN: Hello, and you&#x27;re listening to Let&#x27;s Drone Out, a special thank you to our lovely patrons
+[6.28] Jack: that help donate so that we can pay the editor to remove the swear words and silly things
+[11.36] Jack: we say.
+[13.0] Jack: Massive thank you to…
+[14.4] Jack: Carlos Campos!
+[16.0] Jack: Art Faulkner.
+[17.84] Jack: Sam Dahmer.
+[19.68] Frank: On with the show.
+[20.68] Frank: Hello and welcome, you&#x27;re listening to Let&#x27;s Drone Out.
+[56.97] Jack: And tonight we are joined with the man with the mustache and the not-so-wonderful connection
+[63.93] Jack: Bellrick slash Stephen.
+[65.49] UNKNOWN: Hello, hopefully you can hear me.
+[68.53] Stephen: Broadband problems, but…
+[70.93] UNKNOWN: No, no, that was me.
+[74.81] Jack: That was me.
+[76.97] Jack: My flux just fell off.
+[78.89] Jack: Broadband problems and sabotage.
+[81.33] Stephen: So I would like to point out to our viewers that was Jack pointedly removing my audio
+[85.85] Stephen: from the stream and not me.
+[87.93] UNKNOWN: Yeah, I dropped my flux, I was like playing with it in my hand and it just hit the space
+[93.49] Jack: bar and it just…
+[94.49] Jack: Yeah, yeah, that&#x27;s what we all believe in.
+[95.93] Jack: Yeah, yeah, yeah.
+[96.93] Stephen: That&#x27;s totally what it is.
+[98.93] hydra: That&#x27;s what happens with my flux all the time, that is, it&#x27;s just funny that happened
+[102.69] hydra: to you.
+[103.69] hydra: Oh, it just gets all over anything that you want to touch.
+[106.25] Stephen: Yeah, when I throw random objects at my keyboard, sometimes they hit the keys, it&#x27;s just random.
+[111.09] Stephen: Yeah.
+[112.09] Stephen: What, you mean your fingers?
+[113.81] UNKNOWN: I don&#x27;t want these anymore.
+[116.81] Dominic: Yeah, I&#x27;m bright until I fly and we are joined by the whole reason that we have anything
+[125.05] Jack: in this hobby, Mr Clean Flight.
+[127.05] Jack: I wouldn&#x27;t say that&#x27;s true, but hi, everybody.
+[130.89] Jack: You&#x27;re the one who cleaned up the code, you&#x27;re the one who saved us from Timecop and…
+[137.21] hydra: There&#x27;s more than one flight control software out there, you know, we&#x27;d probably just be
+[142.01] hydra: using AlgaePilot or something instead, right?
+[143.77] hydra: Oh no, OpenToilet, remember that?
+[146.77] Dominic: Mm-hmm.
+[147.77] UNKNOWN: Oh.
+[148.77] Jack: Or Deronin.
+[149.77] UNKNOWN: I thought Deronin was later, wasn&#x27;t it?
+[153.29] Jack: Or Towlabs.
+[154.29] UNKNOWN: Who knows?
+[157.24] Jack: Who knows?
+[158.24] Dominic: Individually calibrating ESCs in OpenPilot.
+[161.24] Jack: Oh my God.
+[162.24] Jack: That sounds…
+[163.24] Jack: That was so bad, wasn&#x27;t it?
+[166.24] Jack: A quad would try and take off, it was just like a wing and a prayer.
+[176.0] UNKNOWN: I don&#x27;t think I ever tried it, to be honest, the calibration thing.
+[180.24] UNKNOWN: Well, it was all part of the setup.
+[183.0] Jack: You had to kind of go through that wizard before it would let you.
+[186.64] Jack: Maybe you did.
+[188.48] hydra: It&#x27;s a long time since I&#x27;ve used that, like a long, long time.
+[193.76] hydra: I think I decided fairly quickly that I didn&#x27;t like it.
+[198.4] Jack: So for any of you that are uninitiated, Mr. Clean Flight, Dominic Clifton right here,
+[204.6] Jack: took the forked base flight and then wrote Clean Flight.
+[213.32] Jack: And then we all switched over and then it was all good until Boris started meddling
+[222.12] Jack: around and then kind of had like a little offshoot fork for like beta testing stuff.
+[229.2] Jack: And then that got released out into the wild.
+[233.36] Jack: And then slowly, you beat a flight, overtook Clean Flight, unfortunately.
+[244.05] Jack: Popularity, yes.
+[245.21] Jack: The quality at the time, no?
+[247.33] UNKNOWN: Yeah, because it was just kind of…
+[249.93] Jack: I was just adding stuff.
+[252.09] Jack: I mean, the notch filter was revolutionary.
+[256.09] UNKNOWN: Yeah, I mean, B2Flight has been called things like filter flight before, right?
+[262.85] hydra: Yeah.
+[263.85] hydra: Yeah, I mean, obviously filters do make a huge difference and they are very, very useful
+[267.57] hydra: in signal processing.
+[268.57] hydra: So, yeah.
+[270.33] Dominic: Hey Alexander.
+[274.59] UNKNOWN: But they&#x27;re not my speciality, the filter side of things.
+[278.39] hydra: That&#x27;s not my speciality.
+[280.67] UNKNOWN: Yeah.
+[282.99] Jack: Was it, you know, back in the day, was it quite difficult to like keep up with all the
+[288.31] Jack: pull requests?
+[290.31] hydra: You have no idea.
+[291.71] hydra: It was a very fast changing time back then, yeah.
+[298.43] hydra: And the amount of people available to do code reviews, because I was busy like refactoring
+[303.71] hydra: a code base left, right and center, trying to like clean things up and make it into like
+[309.11] hydra: a more mature system, right?
+[312.47] hydra: And at the same time I&#x27;m doing that, people are going, oh, this is pretty good.
+[314.91] hydra: Oh, it flies pretty good.
+[315.91] hydra: Oh, can I add this to it?
+[316.91] hydra: And here&#x27;s some code.
+[317.91] hydra: It&#x27;s like, I was going to get to this other thing.
+[320.43] hydra: Now I&#x27;ve got to look at that.
+[322.11] hydra: And there wasn&#x27;t enough of me to go around or enough of all the other maintainers and
+[327.15] hydra: so on at the time either, so.
+[330.43] hydra: And I guess it was the first like large project with a large community involvement.
+[336.15] hydra: And I&#x27;ve never done that before.
+[338.67] hydra: And it turns out you need someone who can manage a community and manage all that side
+[345.27] hydra: of things if you&#x27;re busy writing the code.
+[349.43] hydra: So I didn&#x27;t have enough time to do both.
+[351.55] hydra: And therefore one thing slipped and it&#x27;s the thing that obviously I don&#x27;t enjoy doing as
+[355.63] hydra: much as the other thing that slipped, which is community management.
+[359.27] hydra: I prefer coding.
+[360.27] hydra: So, you know, I mean, computers only argue back a little bit.
+[363.87] hydra: People argue back a lot.
+[367.63] UNKNOWN: Right.
+[368.95] Jack: I know.
+[369.95] Jack: Yeah, totally.
+[372.59] Jack: I mean, you really have, you know, kind of gone completely through it.
+[378.19] Jack: So did you need a community manager then?
+[380.63] Jack: Did you need to find someone?
+[383.27] Jack: I hadn&#x27;t even thought about it or contemplated it.
+[387.43] hydra: These thoughts only come to me post situation, as it were, you know, hindsight.
+[395.11] UNKNOWN: It was still early day, though, for, you know, what it was.
+[400.11] UNKNOWN: Yeah.
+[401.11] hydra: Yeah.
+[402.11] UNKNOWN: Yeah.
+[403.11] hydra: I mean, there&#x27;s, but it&#x27;s, yeah, I mean, there were a few other, you know, bits of software
+[412.31] hydra: that predated it, like we mentioned earlier, but they&#x27;re all maturing, you know, being developed
+[417.51] hydra: like really actively at that time, like they still are today.
+[423.19] hydra: There&#x27;s some aspects of it are more sort of known and sort of commonplace now, whereas
+[429.19] hydra: before, no, you ever, you have attempted to go back and like, you know, revive clean
+[436.99] Jack: flight or do you ask that?
+[439.39] hydra: Someone asked me that the other day, actually.
+[441.19] hydra: They joined the clean flight discord server because there is actually a clean flight discord
+[445.29] hydra: server.
+[448.19] hydra: I did I did I have I posted the link anywhere?
+[451.19] hydra: I don&#x27;t know because I created it because Slack was like dying, basically.
+[456.99] hydra: So I just archived all the slack stuff, created the clean flight discord like ages ago, and
+[461.79] hydra: then I&#x27;ve just pasted a dump of the slack archive in there.
+[464.39] hydra: And a couple of other people randomly hop in there and say hi.
+[468.59] hydra: And then someone popped in there last week or something and said, it&#x27;s clean flight dead.
+[471.89] hydra: I&#x27;m like, well, it&#x27;s not actively maintained anymore.
+[476.19] hydra: And he goes, I was hoping for clean flight five or something like this.
+[480.59] hydra: I&#x27;m like, well, you know, I&#x27;m programming in Rust these days.
+[483.49] hydra: So we&#x27;ll see.
+[487.29] UNKNOWN: Rust the programming language, not the video game.
+[490.49] Jack: Correct.
+[490.99] Jack: Yes.
+[492.79] UNKNOWN: It always throws me is Rust coded in Rust.
+[497.09] Jack: Do you know the compilers can compiles itself now?
+[501.49] hydra: Yes.
+[503.59] hydra: That&#x27;s always like a milestone for any new programming language.
+[507.09] hydra: You know, can the compiler be written in the language that it compiles itself?
+[512.49] hydra: So you need an old version compiler to make a new version of the compiler.
+[515.69] hydra: But at some point you need something that creates the first bit of Rust code.
+[519.09] hydra: So that first bit of Rust code you can then write the next version.
+[523.29] hydra: And then you have to translate all the code into Rust or something once you get to that point.
+[528.59] Jack: It was like the very first CNC machine, you know, you needed to make the parts yourself
+[534.59] Jack: and then it could self-replicate kind of like 3D printers with the same thing.
+[539.49] hydra: Right as well.
+[540.09] Jack: Yeah.
+[541.09] Jack: And for like taking from other things and as soon as you&#x27;ve made that one thing, then it could make parts
+[546.49] Jack: for itself to make it better or make 3D printers.
+[551.39] Jack: It&#x27;s kind of weird.
+[554.79] Jack: You look hot.
+[556.69] Jack: I also love the fact that your like office slash workshop is in clean flight colors.
+[564.19] Jack: Sealing, ceiling fan.
+[566.49] hydra: And then we&#x27;ve got somewhere over here.
+[567.79] hydra: We&#x27;ve got is where is it a giant floor fan?
+[572.99] hydra: Oh, that&#x27;s quite nice.
+[574.39] hydra: I am just gonna stay like this.
+[576.09] hydra: It&#x27;s pretty good.
+[577.89] hydra: So I was going to show you Jack my amazing PC down here.
+[581.79] hydra: Where is it which is also a clean flight green.
+[584.99] Jack: Was it was it paid for by clean flight money?
+[588.49] hydra: No, most things are not.
+[593.79] hydra: No, nothing&#x27;s really paid with clean flight money because whatever money the project got, it was basically
+[599.09] hydra: used to like buy the devs like hardware and you know, might pay for test equipment and siliscopes
+[605.69] hydra: and things like that really.
+[608.09] hydra: But not so much my computer because I need one of those anyway.
+[610.49] hydra: So these projects don&#x27;t work as profit centers unless you&#x27;re selling companies thousand pound plus
+[617.09] Stephen: versions of the hardware.
+[618.49] hydra: Well, I mean, there&#x27;s a bunch of different ways to monetize like open source projects.
+[622.89] hydra: You have to have like a premium tier that you saw really expensive kit to not 50 or 20 quid boards to hobbyists
+[630.09] Stephen: where you can at most factor in.
+[631.39] Stephen: Yeah, perhaps a couple of quid if you&#x27;re like BLLE 32.
+[635.49] UNKNOWN: Yeah, it&#x27;s down to a volume game when the item you&#x27;re selling is small and low value.
+[643.99] hydra: So it&#x27;s like how many of them can you shift?
+[646.19] UNKNOWN: You know, it&#x27;s like cans of tomatoes in the supermarket.
+[650.79] UNKNOWN: You got to sell a lot.
+[652.89] Stephen: When your total addressable market is like 300 guys across Europe.
+[657.99] Stephen: That&#x27;s the challenge.
+[659.09] hydra: It&#x27;s exactly the market is very saturated.
+[664.39] hydra: That&#x27;s the word we&#x27;re looking for saturated.
+[666.69] hydra: There&#x27;s a lot of product out there.
+[669.99] hydra: Yeah, there&#x27;s a lot of stuff out there and there&#x27;s new people going.
+[672.99] hydra: I mean, I see people popping in like the hardware dev channels and stuff.
+[677.29] hydra: It&#x27;s like how do I do this?
+[678.79] hydra: How do I do this?
+[679.29] hydra: I&#x27;m thinking I make a new flight controller.
+[680.99] hydra: Is there any references for this out there and you see it like almost daily.
+[684.29] hydra: There&#x27;s someone someone new asking about it.
+[686.39] Stephen: I found this job error.
+[687.39] Stephen: That&#x27;s extremely cheap and available in large quantities.
+[691.49] Stephen: But is there a reason that the no we lost him.
+[695.89] UNKNOWN: No Steven connection problems nightmare.
+[700.29] UNKNOWN: This is a futile.
+[701.99] Jack: Yeah, I kind of just hope that clean flight is going to be like one
+[705.99] Jack: day like we you where, you know, in a couple of years, there&#x27;ll be one
+[710.49] Jack: update and we will be like, you know, paste in that South Park name.
+[716.09] Jack: I didn&#x27;t hear the bell, bitch.
+[720.69] Jack: It&#x27;s still going.
+[723.09] hydra: Yeah.
+[724.39] UNKNOWN: Yeah.
+[725.69] hydra: I mean the thing with it is I&#x27;m split too many ways.
+[729.29] hydra: My time is it&#x27;s like I don&#x27;t have enough time.
+[732.39] hydra: And like I was saying, you know, you need like a community manager
+[735.19] hydra: and someone to do this and someone to do that.
+[737.69] hydra: And it&#x27;s it&#x27;s a you need the size of the project and the potential
+[743.49] hydra: user base requires more than one person to do it like a team.
+[750.79] hydra: Basically for wearing this kind of this kind of sized project.
+[755.49] hydra: Yeah, it&#x27;d be amazing.
+[757.49] Jack: I think you should run a team and then you know, kind of have like
+[760.69] Jack: the the f1 like equivalent League where people fly and you know,
+[767.49] Jack: D shot 150 limit, you know, like f1 board.
+[775.49] UNKNOWN: I mean, it might be entertaining, I guess, but it&#x27;s not where my heart
+[780.39] hydra: is. It&#x27;s like I&#x27;ve seen how we used to do things.
+[783.39] hydra: I&#x27;m a technologist right and always wanted to push things forwards.
+[787.59] hydra: So I know there&#x27;s something better now.
+[791.29] hydra: Why would I want to use this old thing anymore?
+[792.99] hydra: You know, yeah, they would have to be a good reason.
+[797.29] hydra: One shot 42.
+[798.79] hydra: Yeah, back to it.
+[799.79] hydra: Yeah, it&#x27;s like chopping your fingers off with the yeah with the one
+[803.09] hydra: shot stuff.
+[803.69] hydra: It&#x27;s like no.
+[805.89] hydra: Thank you.
+[806.89] hydra: No, thank you.
+[808.39] hydra: Oh, do you remember?
+[810.29] Jack: With the switch, the random twitches on your bench.
+[815.19] Jack: Oh, yeah, it&#x27;s not good.
+[818.39] Jack: I just you know, like I just love it when you know, I don&#x27;t know
+[822.29] Jack: whether you&#x27;ve seen it, but I had a friend who like left up just
+[829.49] Jack: before you released left the hobby just before you released the
+[834.09] Jack: FPS the seriously pro f3.
+[837.59] Jack: So on time his his his last quad was like days 32 the like, you
+[846.89] Jack: know, the BL Heli ESCs be by DYS the white ones.
+[852.29] Jack: Yeah, yeah, yeah.
+[853.39] hydra: Yeah.
+[855.69] Jack: Yeah, and 1806 motors in a in a in a fossil stuff like, you
+[862.69] Jack: know, yeah, you know 250 quad.
+[866.59] Jack: But like they popped round for the first time in ages and they
+[871.59] Jack: were like looking at my quads of being like, what is this?
+[875.59] Jack: And and then I played the video of like, you know, wrote a riot
+[880.69] Jack: like flying the multi-we boards and being like watch this and
+[885.59] Jack: they were, you know, like, where&#x27;s the ISD?
+[889.29] Jack: My friend was like, we didn&#x27;t have an SD.
+[892.19] Jack: We you know, like what&#x27;s air mode?
+[894.09] Jack: Like they never heard of air mode.
+[896.19] Jack: Oh my God things you fall out the sky and you like it and you
+[899.89] Jack: don&#x27;t know why you don&#x27;t know where there&#x27;s any just the fun
+[903.99] hydra: of trying to keep it up there.
+[905.69] hydra: Yeah, half the half the half the entertainment.
+[908.89] hydra: I think that was we used to celebrate when we finished a
+[912.99] Jack: battery that used to be a big deal.
+[915.39] Jack: Yeah, if you actually remember that if you get to the end of
+[918.09] Jack: a battery, yeah, like there was like party poppers and you
+[922.59] Jack: know, my God, I didn&#x27;t crash it.
+[924.59] UNKNOWN: Pins and everything.
+[925.79] Jack: Yeah, you never used to finish a battery.
+[927.79] Jack: Your props used to break before that.
+[929.89] Jack: Yeah, the old, the old chatter props.
+[933.39] Jack: Yeah, you know, like there was, you know, there&#x27;s still
+[937.29] Jack: bi-blades, you know, like just, oh man.
+[940.89] hydra: One of my favorite quads is a bi-blade one.
+[944.29] hydra: It&#x27;s one of my favorite.
+[947.49] hydra: Have it in Ibiza.
+[948.49] hydra: I just used to fly over there and it just makes this most
+[951.39] hydra: amazing screaming noise when the props are slightly damaged
+[955.89] hydra: or whatever and it just boons around everywhere.
+[958.29] hydra: It&#x27;s just like obnoxious.
+[959.59] hydra: It&#x27;s great.
+[960.79] Jack: My favorite quad of yours was the TBS Acro Disco.
+[966.79] Jack: Oh, Acro Disco in, that&#x27;s well good.
+[969.79] hydra: It&#x27;s not the right frame for doing like Acro in, but if
+[973.39] hydra: you do the Acro in a disco, it&#x27;s well good.
+[977.39] hydra: Do you still have that?
+[978.89] hydra: It was amazing.
+[980.89] hydra: I&#x27;ve still got that.
+[982.59] hydra: It&#x27;s in the box in the cupboard over there.
+[984.49] hydra: It&#x27;s in there.
+[985.19] Jack: Grab it, please.
+[986.19] Jack: I&#x27;ll stall for it.
+[989.19] Jack: There&#x27;s a, like Dom&#x27;s got like a video on his YouTube, which
+[993.59] Jack: I might ask him to like, send me a link of his YouTube, but
+[996.69] Jack: it was like, yeah, you know, he was like, sort of like replying
+[999.89] Jack: to Mr. Steel, like, you know, can your, can your quad do this?
+[1004.49] Jack: It&#x27;s not been out for a while.
+[1006.69] Jack: Dom, Dom was like, he&#x27;s like the worst game.
+[1010.89] Jack: His, I mean, what moto could you possibly have had on that?
+[1016.09] UNKNOWN: Like, I must have been like 20 or right.
+[1022.39] Dominic: They gotta be.
+[1023.79] Dominic: Yeah, there it is.
+[1024.39] Dominic: I see it.
+[1026.59] Dominic: I see it.
+[1027.49] hydra: A box of random old stuff.
+[1031.39] hydra: Check that bad boy out.
+[1033.09] hydra: That&#x27;s one of the, I love that one.
+[1034.59] hydra: That was well good.
+[1035.59] Jack: Hobby RC strap on it.
+[1039.09] Jack: It was very flat and pancakey.
+[1041.69] hydra: Look how thin the carbon is on that bad boy.
+[1044.49] Jack: Oh my God.
+[1045.39] Jack: That was me.
+[1046.99] Jack: Is that a, is that a ZMR?
+[1051.59] Dominic: I don&#x27;t know what any of these are anymore.
+[1053.49] Dominic: They don&#x27;t stay in there.
+[1054.19] Dominic: V-tail.
+[1055.89] Dominic: Oh my God.
+[1056.69] Dominic: Yeah, I remember that one.
+[1059.09] Dominic: V-tail.
+[1060.89] Dominic: And then I have to get all these out before I can get to the
+[1063.49] hydra: other one because of the bomb.
+[1064.79] hydra: Is the V-tail.
+[1065.69] hydra: Same frame, but try a tripod.
+[1068.99] Jack: Try a tripod though.
+[1070.79] Jack: Is the V-tail running like a KK2 board or was there a special
+[1076.09] Jack: setting?
+[1077.99] hydra: If you&#x27;re asking me now, don&#x27;t know.
+[1080.19] hydra: This was my favorite quad for a long time.
+[1082.79] hydra: This is the one that went to drone nationals in 2015.
+[1085.79] hydra: This was.
+[1087.09] UNKNOWN: Jesus Christ.
+[1087.89] Jack: I mean, look at it.
+[1088.79] Jack: It&#x27;s got like a board camera.
+[1090.59] Jack: There&#x27;s so much 3D printing.
+[1091.79] Jack: I mean, I can&#x27;t imagine how much that weighs.
+[1094.59] UNKNOWN: It&#x27;s not light.
+[1097.19] UNKNOWN: We old sunny sky motors, but it was loads of fun.
+[1100.79] UNKNOWN: 20-0-8.
+[1101.59] hydra: Pretty durable as well, actually.
+[1103.39] Dominic: Oh, yeah.
+[1103.79] Dominic: 20-0-6.
+[1105.09] hydra: I&#x27;ve got to get this going again soon.
+[1106.39] hydra: This never flew, but I have some new software that should
+[1109.79] hydra: actually make this work.
+[1112.79] Jack: Oh, what the tilting.
+[1114.29] Jack: Yeah, servo arms.
+[1117.59] Jack: Why do people think that that would actually work?
+[1120.89] Jack: Because it does.
+[1122.79] UNKNOWN: Well, I&#x27;ve got some new code to get this working.
+[1127.19] Jack: It doesn&#x27;t work.
+[1129.39] UNKNOWN: Here we go.
+[1130.69] UNKNOWN: Yes, the Acro disc guy.
+[1135.19] Dominic: Yeah, turn us up.
+[1136.99] hydra: There we are.
+[1138.59] hydra: The GoPro went over here.
+[1140.59] UNKNOWN: Yeah.
+[1141.79] Jack: Has it got like the NASA board and like TBS core soldered
+[1147.09] Jack: in and everything?
+[1148.49] hydra: No, I think this.
+[1150.89] hydra: I think I may have upgraded it like maybe a few years ago
+[1154.59] hydra: and it&#x27;s got at the time that I was flying it had.
+[1157.89] hydra: I think I used to run a Sparky in this most of the time.
+[1161.99] hydra: Yeah, when I was doing most of the Acro stuff, I was using
+[1164.69] hydra: the Sparky in this.
+[1165.69] hydra: Remember the board that&#x27;s got like the weird cutout in the
+[1168.09] hydra: corner and only three mounting holes or something.
+[1171.89] hydra: Yeah, it&#x27;s like a F3 or F4.
+[1174.39] hydra: I think it might have been an F4 Sparky it&#x27;s called, but
+[1176.99] hydra: this has gotten an F7 jewel in there at the moment.
+[1181.49] UNKNOWN: It&#x27;s well good.
+[1181.99] hydra: I used to run like 4200 milliamp batteries in that thing
+[1187.29] UNKNOWN: with what motors are on it.
+[1189.29] hydra: Sunny Sky X2212 13 980 KV.
+[1198.39] UNKNOWN: I can&#x27;t find the Sparky flight control.
+[1201.09] Jack: Sparky.
+[1201.69] hydra: Yeah, Sparky.
+[1203.49] UNKNOWN: Oh my God.
+[1205.29] Dominic: The only thing that comes.
+[1207.09] hydra: I did my first flip with this quad.
+[1209.69] Dominic: Oh, I remember the days of the first flip.
+[1213.59] Dominic: This is a line of sight one.
+[1214.99] Dominic: Should I say?
+[1216.89] hydra: This is all line of sight.
+[1217.79] hydra: That&#x27;s all I can find.
+[1220.29] hydra: No, it&#x27;s not that Sparky.
+[1222.69] hydra: Talab Sparky.
+[1224.29] hydra: Well, it&#x27;s the original Sparky then probably.
+[1229.99] Dominic: It might have been an F3.
+[1233.23] hydra: No, you said F4.
+[1234.23] hydra: This is well good.
+[1235.13] hydra: This one is a lovely one.
+[1236.53] hydra: Let me power it up.
+[1237.73] hydra: Hold on.
+[1238.43] hydra: Let me turn my bench power supply.
+[1239.63] hydra: I&#x27;ve got to steal the power from it because I&#x27;ve got I made
+[1242.23] hydra: up a cable today just for random things that you do because
+[1246.23] hydra: it&#x27;s got a Pimpelli D set up on this thing.
+[1248.63] hydra: Let&#x27;s have a chuckle.
+[1252.28] hydra: No, this is got four.
+[1254.98] hydra: Oh, and this is a 3S as well.
+[1256.28] hydra: So I better not shove 16 volts in it.
+[1260.88] UNKNOWN: Can we get it working?
+[1261.88] hydra: What&#x27;s the chance?
+[1264.85] Jack: I wonder what the boot sequence is going to be like.
+[1268.25] hydra: Hold on.
+[1268.55] hydra: I&#x27;ve got to get my battery cables, right?
+[1270.45] hydra: XT60 to XT60 Deans connector.
+[1274.95] hydra: Deans connector on the quad.
+[1280.25] hydra: What is wrong with you?
+[1282.15] hydra: And then what do you want about 12.6 volts or something in it?
+[1288.45] UNKNOWN: Something like that.
+[1289.75] hydra: Yeah, 12.6.
+[1290.55] hydra: Hold on.
+[1290.85] hydra: Let me put the bench pass by 12.6.
+[1293.35] hydra: Current limit because it&#x27;s not been turned on for a while.
+[1296.45] hydra: Probably need more than 500 milliamps though.
+[1298.55] hydra: Let&#x27;s go 2 amps.
+[1302.66] Dominic: Boy beats.
+[1304.36] hydra: Yeah.
+[1306.96] hydra: Hold on.
+[1308.46] hydra: No, wait current limit kicked in just as it would do the motor
+[1311.26] hydra: beeps.
+[1311.56] hydra: Here we go.
+[1312.86] hydra: Oh, yes.
+[1314.76] Dominic: Yeah.
+[1316.96] hydra: Look at that bad boy.
+[1319.16] hydra: Oh, low battery.
+[1323.48] hydra: Don&#x27;t worry about it.
+[1324.08] hydra: It&#x27;s fine.
+[1324.78] hydra: Evan is fine.
+[1326.58] hydra: This is where we used to do night flying with this thing.
+[1328.68] hydra: It was brilliant.
+[1329.68] hydra: I used to do like just go out like randomly and just do night
+[1333.08] hydra: flying flips and stuff line of sight as well.
+[1336.28] hydra: Good.
+[1336.38] hydra: Oh my God.
+[1338.28] hydra: Love this thing.
+[1339.38] hydra: It&#x27;s brilliant.
+[1341.28] hydra: It&#x27;s amazing back in the box.
+[1344.78] UNKNOWN: Back in the box.
+[1347.08] Jack: The acro disco man.
+[1348.98] Jack: The acro disco.
+[1350.48] Dominic: Love the acro disco.
+[1352.38] UNKNOWN: I miss the old school ESE startup, you know, like the Simon
+[1356.78] Jack: K and all that.
+[1358.58] hydra: I don&#x27;t know what that was in that.
+[1359.88] hydra: Like with the flash, like the that sounded like Simon K.
+[1365.28] Jack: Probably was.
+[1367.38] hydra: Yeah.
+[1367.58] hydra: I don&#x27;t know.
+[1368.48] Jack: You know, the USB app mail flash loader.
+[1373.18] Jack: Yeah.
+[1373.58] Jack: Yeah.
+[1374.08] Jack: Yeah.
+[1374.18] Jack: You know, the thing that you like stick over the whole bloody
+[1378.88] Jack: chip, but for whole Arduino is on each arm.
+[1384.68] hydra: Let me just set my bench pass by up again.
+[1386.18] hydra: Sorry.
+[1387.28] Jack: All right.
+[1388.38] hydra: Oh, what&#x27;s going on there?
+[1389.88] hydra: I&#x27;ve got it wired up, right?
+[1392.48] hydra: Oh dear.
+[1392.98] hydra: What did I do?
+[1394.28] hydra: I&#x27;ve not killed it.
+[1395.58] hydra: Okay.
+[1395.98] hydra: I&#x27;ll come back to that later.
+[1397.58] hydra: It&#x27;s my new project.
+[1398.28] hydra: I was going to show you in a minute.
+[1400.58] Jack: The power supply testing.
+[1405.48] Dominic: Let me show you now then.
+[1409.68] Dominic: There.
+[1411.88] Dominic: Wait, let me get some more more camera.
+[1415.18] Dominic: Oh, someone&#x27;s measuring ripple.
+[1423.09] Dominic: So what you&#x27;re looking at is one of these.
+[1430.18] Dominic: Okay, which is a new flight controller that booted up for
+[1434.78] hydra: the first time yesterday.
+[1437.88] hydra: With one of these like VTX and receiver all in one more
+[1447.61] hydra: than that.
+[1449.01] Dominic: Mm-hmm.
+[1449.51] hydra: Come on.
+[1449.81] hydra: Is it going to focus?
+[1451.71] hydra: And on the other side, it&#x27;s got more stuff.
+[1453.71] hydra: Is it going to do it?
+[1455.51] UNKNOWN: Come on.
+[1456.11] hydra: Focus.
+[1456.71] hydra: Focus.
+[1458.21] UNKNOWN: Yeah, there we go.
+[1459.51] hydra: There you go.
+[1460.51] hydra: So you&#x27;ve got an ELRS chip with two SX1280s and two power amplifiers
+[1465.61] hydra: and the TCXO in the middle and you got two little black things
+[1468.61] hydra: either side there, which are the stacking connectors and you
+[1471.21] hydra: got a button over here.
+[1472.71] hydra: You got a Wi-Fi antenna here.
+[1474.21] hydra: You got a black box login flash chip expansion for the FC.
+[1478.61] hydra: And then the other side, you&#x27;ve got a VTX and an L4 processor
+[1484.21] hydra: for doing SP racing pixel SD.
+[1487.31] hydra: Nice.
+[1488.61] hydra: With the VTX connector there, Wi-Fi connector, Wi-Fi antennas
+[1492.31] hydra: and the Gemini ELRS things.
+[1495.61] hydra: And that stacks onto the flight controller.
+[1498.11] hydra: Then you end up with a teeny tiny little stack that&#x27;s, you know,
+[1500.41] hydra: super thin like that.
+[1502.51] UNKNOWN: Nice.
+[1504.21] hydra: And eight motor outputs.
+[1505.81] hydra: It&#x27;s got CAN on it, so you can do servos and all the rest of it.
+[1511.01] hydra: And then yesterday I was making up this little fun jig over here
+[1514.91] hydra: for programming it.
+[1516.81] hydra: Programming is a bunch more.
+[1519.71] hydra: But yeah, that&#x27;s been keeping me really nice with that for now.
+[1523.51] hydra: Yeah, for manufacturing, you just have these sort of pogo pin
+[1527.71] hydra: mount things, but I haven&#x27;t made it.
+[1529.21] hydra: Better than nails.
+[1529.71] hydra: When you&#x27;re only doing six, it&#x27;s like for testing samples and stuff.
+[1534.91] hydra: It&#x27;s like I&#x27;m not going through the whole process of making a jig
+[1538.41] hydra: up just for six, but so not like a proper jig.
+[1543.11] hydra: Yeah, so it&#x27;s just got a temporary one that hacked up yesterday.
+[1546.71] hydra: So but it seems to be over.
+[1549.21] hydra: I&#x27;ve got the camera in the wrong spot.
+[1550.41] hydra: Hold on.
+[1551.31] hydra: There we go.
+[1552.01] hydra: That&#x27;s better.
+[1553.31] hydra: That&#x27;s where it&#x27;s supposed to be.
+[1554.61] hydra: So you&#x27;re not worried.
+[1556.11] Jack: You&#x27;re still producing something that&#x27;s analog and you haven&#x27;t
+[1560.01] Jack: gone over to being like, oh, did you order?
+[1565.61] hydra: Not for the moment.
+[1566.61] hydra: I&#x27;m I they&#x27;ve added the OS.
+[1570.61] hydra: The VCS code in Express iOS only fairly recently and they use it a lot
+[1575.91] hydra: for the little whoop boards and so on.
+[1578.91] hydra: That&#x27;s it&#x27;s sort of one of its intended sort of markets or use cases
+[1584.41] hydra: or whatever on a weak board integrated.
+[1587.81] hydra: But it also makes sense if you combine like the OSD with it.
+[1592.01] hydra: And also in the face of like the beat of flight devs not wanting
+[1596.81] hydra: to merge the experience in pixel state into beat flight self.
+[1599.91] hydra: I&#x27;ve still got this code that spent quite a lot of time writing.
+[1602.11] hydra: So I&#x27;m like, well, I suppose if I write the you are code that allows
+[1606.01] hydra: beat of flight to talk to it via you are which is already in beat
+[1608.61] hydra: of flight and I now have already and then just make it compatible
+[1611.71] hydra: with that and then ship it and it&#x27;ll still be awesome, but it won&#x27;t
+[1615.91] hydra: be it&#x27;s not as awesome as it otherwise would be because obviously
+[1620.11] hydra: it&#x27;s held back technically by the you are communication speed
+[1625.41] hydra: as opposed to drawing pixels directly to a frame buffer in the
+[1628.41] hydra: flight controller code.
+[1629.71] hydra: So different catalafish.
+[1634.65] Jack: So you&#x27;re still not too sure about, you know, starting to make
+[1639.25] Jack: stuff for digital in mind.
+[1647.16] UNKNOWN: Yeah, the problem with the digital stuff is is there&#x27;s probably
+[1649.86] hydra: only like one or two chips.
+[1651.96] hydra: And I haven&#x27;t talked to the people that make the chip like
+[1655.66] hydra: the what&#x27;s the open?
+[1659.06] hydra: What&#x27;s it called?
+[1661.06] hydra: There&#x27;s two competing ones and then my brain is not working.
+[1665.06] hydra: What&#x27;s the name of the digital?
+[1668.56] hydra: I&#x27;m unsure.
+[1669.86] hydra: I wouldn&#x27;t know which one it is.
+[1672.06] hydra: No, you got the DJI one.
+[1673.26] hydra: You got the other AC zero.
+[1674.56] hydra: That&#x27;s the one I was thinking open VX or but that&#x27;s the other
+[1679.36] hydra: thing open night.
+[1680.56] hydra: He was the other one.
+[1681.86] hydra: I mean, it&#x27;s not that one but I haven&#x27;t talked to the to the
+[1686.56] hydra: one that I couldn&#x27;t remember which I can&#x27;t remember again
+[1688.26] hydra: now.
+[1690.26] hydra: I haven&#x27;t talked to them to see how you know, if you can buy
+[1692.76] hydra: the chips from them to make your ad X.
+[1697.46] hydra: But to be honest, I&#x27;m not it doesn&#x27;t excite me that much to
+[1700.96] hydra: be honest.
+[1702.16] hydra: Maybe but they are coming down in price.
+[1705.16] hydra: I mean, there was a new one.
+[1706.06] hydra: I came out fairly recently.
+[1708.66] hydra: Didn&#x27;t it a few days ago?
+[1709.86] hydra: It&#x27;s been announced which is like a race version of it which
+[1713.66] hydra: has got sensible like voltage inputs and the price wise.
+[1718.46] hydra: It looks pretty good for a for a VTX system.
+[1722.56] hydra: It&#x27;s like 60 bucks.
+[1723.56] hydra: I mean, we used to pay like 60 bucks for like an Emotion.
+[1725.86] hydra: I&#x27;ll see one back in the day.
+[1726.76] hydra: Didn&#x27;t we say that?
+[1727.66] Jack: Yeah, I know and that was that was that was 10 years ago.
+[1730.26] hydra: We&#x27;ve had inflation since then.
+[1731.56] hydra: So if you live look at it from that point of view, it&#x27;s like
+[1734.96] hydra: well, actually it&#x27;s not too bad.
+[1737.66] UNKNOWN: Yeah, still got a 500 quid worth of race.
+[1744.16] Jack: Yeah, but you know, like you pay like 400 quid or whatever
+[1749.66] hydra: for Dominators or whatever back in the day.
+[1755.86] UNKNOWN: True.
+[1756.26] Dominic: So, you know, race 3 VTX.
+[1761.97] hydra: I think it is.
+[1762.67] hydra: Is it this one?
+[1763.27] hydra: Yeah, 70 bucks is Clive.
+[1765.97] Dominic: Clive.
+[1766.47] Dominic: Yeah, race V3.
+[1768.77] UNKNOWN: Race V3.
+[1769.47] hydra: Yeah, bring it up on the screen share thingy.
+[1773.17] UNKNOWN: But yeah, that&#x27;s quite small.
+[1777.87] UNKNOWN: Nice people people still running.
+[1781.07] Jack: I thought yes, the new one is that I was going to say.
+[1783.47] Jack: Yeah, because the other one seemed that people were having
+[1786.27] Jack: to like run backs on them with them and stuff like that.
+[1788.97] Jack: Sorry, this one.
+[1789.57] hydra: This one you don&#x27;t this got a more.
+[1792.97] hydra: It&#x27;s got four to 12 volts, which is very good.
+[1796.17] hydra: So you run out of 5 volt back or 9 volt back or whatever
+[1799.57] hydra: like that.
+[1799.97] hydra: No problem.
+[1801.07] hydra: Which is good.
+[1804.79] hydra: It doesn&#x27;t say how much juice it wants.
+[1807.59] hydra: No, but it wouldn&#x27;t be on that.
+[1809.19] hydra: I mean like you don&#x27;t really want to have like giant switching
+[1813.39] hydra: regulators and massive inductors and all the rest of it on
+[1816.09] hydra: something that&#x27;s doing video transmission and RF signals.
+[1819.69] hydra: Yeah, you want to do the same board really.
+[1822.19] hydra: Yeah, so it&#x27;s better on somewhere else like yeah on the
+[1827.39] hydra: ESC basically the noisiest bit put the bag on the ESC.
+[1832.79] hydra: Like if you wanted to fix the world properly, you&#x27;d have the
+[1837.19] hydra: OSD built into the camera or the VTX transmitter.
+[1841.79] hydra: You would have your four-in-one ESC with a single MCU on
+[1845.89] hydra: it not for MCUs like we have today.
+[1848.09] hydra: So there&#x27;s only one bit of firmware to upgrade and then
+[1850.59] hydra: you&#x27;d have space for more BEX on ESC.
+[1855.29] hydra: Right and then you only got what action to the flight controller
+[1859.19] hydra: and then everything would be fine.
+[1864.36] hydra: But yeah, that&#x27;s that&#x27;s the ideal world solution.
+[1867.86] hydra: You heard it here first.
+[1869.06] hydra: Yeah.
+[1870.46] Jack: Yeah.
+[1870.66] Jack: Why is that with the whole like individual ESC?
+[1874.06] Jack: I suppose that&#x27;s a legacy thing for having individual ESCs.
+[1879.26] Jack: Not sure.
+[1881.06] hydra: Well, there&#x27;s a few reasons.
+[1885.16] hydra: One is that one motor requires various different hardware
+[1889.96] hydra: resources from the MCU.
+[1892.86] hydra: And if you&#x27;re using a cheap MCU they A don&#x27;t have enough
+[1896.16] hydra: hardware resources like comparators inputs and you know
+[1900.06] hydra: time of channel outputs and things like that and B the
+[1904.86] hydra: price it has to be super low C if you try to do four motors
+[1911.16] hydra: on one you would need a beefier CPU to do it all because
+[1914.36] hydra: instead of using a cheap one to do one your net is now got
+[1916.76] hydra: to do four.
+[1918.46] hydra: So it is a more complicated prospect in terms of software.
+[1922.06] hydra: So they just have four MCUs but it&#x27;s not the right solution
+[1928.06] hydra: because it you know, it&#x27;s much more of a problem the
+[1930.16] hydra: communication interface between the flight controller and
+[1932.96] hydra: the ESCs now you need some crap protocol like D shot dare
+[1938.76] hydra: I say it crap protocol.
+[1942.96] hydra: I mean it&#x27;s better than PWM but it only exists because we&#x27;ve
+[1947.86] hydra: got ESCs like four in one ESCs and separate ESCs which only
+[1952.76] hydra: have one sort of signal input.
+[1955.36] hydra: Yeah, so there&#x27;s a few different use cases that have to be
+[1958.26] hydra: solved in terms of like fixing the ESC problem.
+[1960.36] hydra: There&#x27;s the single ESC on an arm solution.
+[1964.06] hydra: So you need a protocol for that you need the solution for
+[1970.16] hydra: single MCU before motor for motor outputs on that MCU which
+[1976.06] hydra: is like, you know, the usual four in one boards.
+[1979.76] hydra: And then you&#x27;ve also got things where the motor that you see
+[1985.26] hydra: is very far away on a really big frame and you have to solve
+[1989.96] hydra: that as well because those ones really don&#x27;t like noise
+[1992.86] hydra: because the motors that they use are like massive and chunky
+[1996.16] hydra: and the signal controls them has to travel a long way.
+[2001.76] hydra: So, you know, I&#x27;ve been I&#x27;ve been talking to people about
+[2003.36] hydra: various different solutions regarding all this a while back
+[2006.16] hydra: ago before I started doing this currently.
+[2011.16] hydra: No, it&#x27;s not that it&#x27;s can FD looks like the sort of workable
+[2015.46] hydra: solution really for it all based on like the the cambas on
+[2021.86] Jack: cards with a noisy hand leads but can can bus V1 has it&#x27;s
+[2029.56] hydra: limited in the amount of data you can send to it.
+[2033.66] hydra: Whereas can FD can send eight megabits per second and then
+[2039.16] hydra: on top of that, you know out of that eight megabits per second
+[2041.96] hydra: you have to like have the can overhead protocol overhead
+[2045.16] hydra: itself, but there is enough bandwidth to do it at a rate
+[2047.56] hydra: which is good enough for what we need to do, you know,
+[2050.86] hydra: comparable to like D shot 600 kind of rates that kind of
+[2053.36] hydra: thing and if you&#x27;re sending like one frame to one other
+[2057.46] hydra: one four in one ESC and you can send all the data at the
+[2060.96] hydra: same time in a very short packet and then you can get a
+[2063.56] hydra: lot of those packets out and it uses a differential signal
+[2067.86] hydra: signal like USB USB cables can be fairly long because they&#x27;ve
+[2072.36] hydra: got like a positive rail and a negative rail on the signal
+[2076.06] hydra: and it&#x27;s the voltage difference.
+[2077.66] hydra: That is what is read at the other end of it.
+[2082.06] hydra: So if the voltage isn&#x27;t, you know, at the right threshold
+[2084.26] hydra: at the other end because the cable is really long or whatever
+[2086.86] hydra: it doesn&#x27;t matter.
+[2088.66] hydra: It&#x27;s the voltage difference is what matters and can FD is
+[2091.56] hydra: the same.
+[2094.66] hydra: LVDS SCSI was the same ages ago.
+[2097.26] hydra: I think that&#x27;s that&#x27;s the one that&#x27;s the one of the things
+[2101.76] hydra: that made SCSI, you know in server racks and things like
+[2106.86] hydra: that more more viable.
+[2109.46] Jack: Yeah, yeah, viable as well.
+[2111.46] hydra: Yeah, the twist cables and stuff.
+[2115.06] Jack: Yeah, yeah, and like ferrite cores in the middle of them
+[2119.26] Jack: and stuff.
+[2122.56] hydra: Where&#x27;s with like old SCSI and IDE IDE 40 pin connectors.
+[2126.96] Dominic: Oh, yeah, IDE you get up there like I know.
+[2134.36] UNKNOWN: Oh, yeah, say hey use the right technology for the right
+[2137.86] hydra: application.
+[2138.76] hydra: I think is is Mr.
+[2141.16] hydra: Clean fly.
+[2142.46] Jack: I remember when you finally got D shot to like sync with the
+[2148.96] Jack: packet the sort of your there was like a short little video
+[2153.36] Jack: that you did zoomed into oscilloscope and you were like,
+[2157.96] UNKNOWN: what was that for fixing some kind of bug or something?
+[2161.06] Jack: Yeah, well, it was just like discarding packets that that
+[2165.76] Jack: weren&#x27;t synced with the loop time.
+[2168.86] Jack: I think oh, there was something to do with that.
+[2171.46] hydra: It was about how with the refresh rate or something.
+[2176.06] hydra: Yeah, that&#x27;s a long time ago.
+[2177.86] hydra: That was yeah.
+[2179.96] hydra: Yeah, so yeah, because you got synchronous signals and
+[2184.26] hydra: asynchronous signals was the PWM is asynchronous.
+[2189.66] hydra: Whereas the D-shirt is synchronous ideally to the loop
+[2193.86] hydra: of a loop rate of the of the quad basically of the flight
+[2198.16] hydra: control.
+[2198.76] hydra: This episode was recorded in front of a live online audience
+[2201.86] Frank: downloaded and edited to make sense when it played audio
+[2204.76] Frank: only sensors to please the iTunes people hosted on the
+[2207.86] Frank: internet forwarded through to your podcast provider downloaded
+[2210.86] Frank: playing on your device and is now playing in your ears all
+[2214.16] Frank: thanks to our patrons consider joining them and you&#x27;ll also
+[2217.56] Frank: get other online benefits.
+[2219.36] Frank: Find out more at patreon.com forward slash let&#x27;s drone out
+[2224.46] Jack: any any regrets of stuff that you wished you did but you
+[2229.06] Jack: didn&#x27;t get around to doing
+[2232.06] hydra: regard what we
+[2233.86] hydra: What are we talking about here?
+[2236.26] hydra: Any regrets?
+[2237.76] hydra: There&#x27;s probably a lot of things I could have done better.
+[2242.56] hydra: There&#x27;s probably a few things that
+[2246.56] hydra: I don&#x27;t know should have jumped on earlier.
+[2249.86] hydra: I didn&#x27;t see the potential didn&#x27;t see, you know, it&#x27;s hard
+[2253.96] hydra: to know because when you got so many things been thrown
+[2256.06] hydra: at you by so many people is it&#x27;s hard to go.
+[2258.26] hydra: This is a killer feature.
+[2259.36] hydra: Everyone&#x27;s going to want that.
+[2261.76] hydra: Yeah, who knew that flashing your ESCs was such a killer
+[2265.36] hydra: feature that everyone just put a beat file on it because it
+[2268.16] hydra: had that on it first.
+[2269.46] hydra: Who knew who knew?
+[2272.16] UNKNOWN: You know, I feel that box logging was good.
+[2274.06] hydra: So I said yes, let&#x27;s have that.
+[2276.56] hydra: Time cop if you ask the same question to time cop he&#x27;d
+[2278.96] hydra: probably say go probably should have merged that bloody
+[2282.06] hydra: black box logging stuff before.
+[2283.46] hydra: Mr.
+[2283.66] hydra: Clean fly did it.
+[2285.96] hydra: Yeah.
+[2288.26] hydra: That was a game.
+[2289.16] hydra: That was a game changer.
+[2289.96] hydra: That was
+[2292.66] Jack: right.
+[2292.96] Jack: I just being able to see what your card is actually doing.
+[2298.06] hydra: I had to raise
+[2300.56] hydra: a raise an issue on it on a GitHub project that I found
+[2303.96] hydra: recently because I&#x27;m programming Rust these days.
+[2307.16] hydra: Randomly, I searched for black box logging on like crates
+[2312.46] hydra: to IO or something and it turns out there&#x27;s a Rust implementation
+[2317.56] hydra: of a black box log
+[2320.46] hydra: library so that you can suck out the information you need
+[2323.26] hydra: from a log and it&#x27;s all written in Rust which is really nice.
+[2325.66] hydra: I&#x27;m like great.
+[2326.66] hydra: So I looked at the read me page and I doesn&#x27;t mention anything
+[2329.46] hydra: about clean flight and like Nicholas Sherlock&#x27;s black box
+[2332.26] hydra: code or anything like that.
+[2333.26] hydra: So I raised an issue or something.
+[2334.46] hydra: You need to update your attribution list a little bit and
+[2337.66] hydra: they did.
+[2338.26] hydra: It was great.
+[2339.26] UNKNOWN: Me.
+[2340.86] hydra: I&#x27;m like I said, I&#x27;m sure Nick would appreciate it.
+[2343.86] Dominic: Yeah, open lager.
+[2346.76] UNKNOWN: That&#x27;s it.
+[2348.36] Dominic: Credit where credit&#x27;s due and all that.
+[2350.26] Jack: Yeah.
+[2352.16] Jack: That&#x27;s awesome.
+[2353.96] Jack: No, I just I just wondered like yeah, just you know, the
+[2356.96] Jack: sort of like implementations because like, you know, yeah,
+[2361.16] Jack: I mean you had all sorts you had like the painless like
+[2364.86] Jack: nagging you to make a wing only flight controller and now
+[2368.76] Jack: like Maytech and you know, like, you know, I had one
+[2375.16] Jack: you had that triangle thing and it was like, well, it was
+[2378.86] Jack: a flight control in the shape of a wing.
+[2381.46] hydra: Yeah, I should probably actually like finish that or something
+[2384.86] hydra: like do an H7 wing one or something.
+[2387.86] hydra: I&#x27;ve got a bunch of sitting in my box of parts down there.
+[2391.26] hydra: Say do it man.
+[2392.96] hydra: I would test him.
+[2394.96] hydra: I&#x27;ve got I&#x27;ve got to finish this thing first.
+[2397.56] hydra: It&#x27;s like there&#x27;s only one of me.
+[2398.96] hydra: I am going to time to do all the things.
+[2401.46] hydra: So right now.
+[2402.26] hydra: I&#x27;m in VTX land trying to understand the ERS VTX SPI
+[2408.96] hydra: implementation and I&#x27;m using the DAC and it looks like there&#x27;s
+[2413.06] hydra: a bug in it and it&#x27;s not setting the threshold voltage correctly
+[2416.96] hydra: which means I&#x27;m not getting the right milliwatt outputs on
+[2418.96] hydra: my VTX.
+[2419.56] hydra: That should be digital analog.
+[2424.76] hydra: Yeah, all this stuff.
+[2426.16] hydra: That&#x27;s what I&#x27;m doing today.
+[2427.86] hydra: I&#x27;m so fun.
+[2429.86] Jack: So that&#x27;s what the power the emerging RC power meter.
+[2436.06] Jack: That&#x27;s exactly what I was doing on my desk.
+[2438.06] hydra: Yes, I&#x27;m just base basic measurements to start with.
+[2441.66] hydra: I&#x27;m only getting like 9 milliwatts out of it.
+[2443.86] hydra: I&#x27;m like, that&#x27;s not right.
+[2445.86] hydra: And then if I put flip into this other mode on the transmitter,
+[2449.36] hydra: which I know is not configured correctly, but I&#x27;m just gonna
+[2451.26] hydra: want to get ballpark figures before I can calibrate it either
+[2453.76] hydra: up or down, right?
+[2455.46] hydra: And I&#x27;m like flipping to the other mode and I&#x27;m only getting
+[2458.86] hydra: like 45 milliwatts out of it.
+[2461.96] hydra: I might I mean it&#x27;s usable, but it&#x27;s supposed to be about 250.
+[2466.36] hydra: So why and I think the reason is because the bias threshold
+[2472.56] hydra: voltage not threshold voltage bias voltage is not being
+[2476.66] hydra: output correctly.
+[2477.96] hydra: I think that&#x27;s the root cause of it.
+[2480.66] hydra: After digging around in the code base.
+[2484.26] hydra: But there&#x27;s another buggy beater flight that like I came
+[2487.56] hydra: up today.
+[2487.96] hydra: I&#x27;m just like why why why so I&#x27;m like my understanding of
+[2491.86] hydra: the VTX code and in the LRS was you have an LRS RX that&#x27;s
+[2496.86] hydra: got a VTX on it and then it talks to the flight controller
+[2500.66] hydra: using a you are with crossfire on it and then the transmitter
+[2505.06] hydra: has got the VTX admin thing on it and you go send VTX and
+[2508.56] hydra: it would change the the VTX on the LRS thing.
+[2511.06] hydra: No, go on what the backpack or not the backpack backpacks.
+[2516.26] hydra: So it if you had a backpack it would send that to the backpack
+[2520.16] hydra: and then change for the goggles right but it&#x27;s supposed to
+[2524.36] hydra: send the VTX channel over the air to the receiver and then
+[2527.36] hydra: the receiver supposed to take the channel and then do something
+[2530.06] hydra: with it my understanding does it would talk directly to the
+[2532.66] hydra: VTX because it&#x27;s on the same MCU but it doesn&#x27;t which is
+[2535.16] hydra: really weird.
+[2535.56] hydra: So I&#x27;m going to probably have to write this code.
+[2539.16] hydra: But what it does what it actually does it takes it then
+[2542.46] hydra: creates an MSP packet and sends that to the flight controller
+[2545.46] hydra: over crossfire.
+[2547.46] hydra: So it embeds it in crossfire which is weirder again and then
+[2550.06] hydra: the flight control handles it and then sends more MSP back
+[2553.36] hydra: to the LRS receiver which then processes that back and then
+[2557.76] hydra: sets the VTX right so it&#x27;s really convoluted the way the
+[2560.46] hydra: way it is set it takes ages you press then VTX and it goes
+[2566.66] hydra: and then the channel changes.
+[2567.76] hydra: I&#x27;m like why okay not to my slow pass the parcel would be
+[2573.16] hydra: nice to improve that a little bit.
+[2574.66] hydra: But you know, we&#x27;ll see what we&#x27;ll see what we can do.
+[2576.86] hydra: But you know, at least you can do it for your handset.
+[2578.36] hydra: So instead of pressing a button on it.
+[2580.56] hydra: Yeah, true.
+[2582.36] UNKNOWN: So yeah, so I&#x27;m working through all that at the moment.
+[2584.36] hydra: So because I want this thing to be able to be used as
+[2587.16] hydra: standalone because I think that&#x27;s it up here.
+[2590.46] hydra: Yeah, I made these nifty little carrier boards this thing.
+[2595.96] hydra: So that&#x27;s a little carrier board.
+[2598.86] hydra: I world and I and this has got a back on it basically and
+[2603.36] hydra: it&#x27;s got four PWM outputs on it and this thing plops on
+[2608.76] hydra: here somehow.
+[2611.26] hydra: And then you sold a.
+[2613.36] UNKNOWN: And then there&#x27;s one on each corner as well for each PWM
+[2618.26] hydra: output and then you could use this in a wing for instance
+[2621.76] hydra: or glider or something like that or an FPV car and then
+[2625.36] hydra: you wouldn&#x27;t need a flight controller.
+[2627.76] UNKNOWN: But in order for that to work, I need to change the VTX
+[2629.86] hydra: channel from the transmitter.
+[2632.96] hydra: This is the flight controller.
+[2633.86] hydra: That&#x27;s the whole point.
+[2635.36] hydra: Yeah, that&#x27;s the whole point.
+[2637.46] hydra: So yeah, I&#x27;ve got some work to do there.
+[2640.16] hydra: Turns out more work than I thought I was going to have to
+[2642.86] hydra: do probably should have investigated that a little bit
+[2646.26] hydra: more before I designed the PCB, ordered the expensive PCBs
+[2649.76] hydra: and assembled them and everything.
+[2650.76] hydra: But you know, live and learn.
+[2655.66] hydra: It&#x27;s fun.
+[2656.56] hydra: But now I&#x27;ve built the carrier boards, the flight controllers
+[2658.36] hydra: for them to all stack into the design is kind of fixed and
+[2661.46] hydra: I ran into this really annoying problem in the ESP date
+[2665.36] hydra: sheets.
+[2667.06] hydra: I&#x27;ll show you this.
+[2667.56] hydra: It&#x27;s really funny.
+[2668.56] hydra: I can&#x27;t believe I screwed it up quite so badly as I did.
+[2671.16] hydra: But how the how the mighty a fool.
+[2677.56] hydra: It wasn&#x27;t good when I found out.
+[2678.96] hydra: I&#x27;m like, no, no, no, no.
+[2682.86] Jack: Any any questions for Mr.
+[2684.86] Jack: Clean Flight put it in chat and we&#x27;ll in the last 10 minutes
+[2688.16] Jack: we&#x27;ll quick fire some questions for you.
+[2690.86] Jack: Here we go.
+[2691.26] hydra: Here we go.
+[2691.96] hydra: Let me do a screen share.
+[2694.76] hydra: Present screen share.
+[2697.46] hydra: Don&#x27;t show these tips again.
+[2698.36] hydra: Go away and then pick the thing.
+[2701.56] hydra: Is it that?
+[2701.96] hydra: No.
+[2702.76] hydra: This technical reference mode.
+[2705.06] hydra: No, no, this one we should we should allow mode.
+[2711.36] hydra: Okay, so this is the data sheet for the CPU and you&#x27;re like,
+[2716.86] hydra: okay, so I&#x27;ve got a pin and this is what you do with it.
+[2718.96] hydra: I&#x27;ve got a pin and this is what you do that you got a pin
+[2721.56] hydra: and this is what you do with it, right?
+[2723.16] hydra: And you&#x27;re like, okay, cool.
+[2725.06] hydra: All right, great.
+[2726.56] hydra: So, you know, I&#x27;ve got some pins like maybe I don&#x27;t know.
+[2734.26] hydra: Let&#x27;s let&#x27;s let&#x27;s pick this one this one.
+[2736.46] hydra: So it&#x27;s got GPIO.
+[2738.26] hydra: It&#x27;s got SD command.
+[2739.56] hydra: It&#x27;s got a cable select 0 for SPI and it&#x27;s got some other
+[2744.06] hydra: stuff on it and you are one.
+[2745.26] hydra: It&#x27;s like fine.
+[2745.96] hydra: Okay, I&#x27;ll use that pin in my design.
+[2747.46] hydra: Everything&#x27;s fine.
+[2748.86] hydra: And then you go and then you go also down in this thing
+[2753.46] hydra: and you see this.
+[2754.86] hydra: Oh God, that&#x27;s looking really kai kai.
+[2758.86] hydra: Right.
+[2759.96] hydra: You see this this this is a this is the schematic of it.
+[2763.46] hydra: So you got CPU in the middle you got CPU in the middle and
+[2767.26] hydra: then you got a crystal up here and then you&#x27;ve got some
+[2769.06] hydra: capacitors over here and you&#x27;ve got a flash chip over here
+[2771.26] hydra: and you think okay, that&#x27;s how it all fits together.
+[2772.76] hydra: And that&#x27;s why you do the signals, but I&#x27;m not using the
+[2774.76] hydra: flash chip so he could ignore that and then he like hold on
+[2777.16] hydra: a minute.
+[2778.46] hydra: I thought the Pico had a had a crystal built-in.
+[2781.26] hydra: Why are they showing me a crystal that&#x27;s on the outside
+[2783.16] hydra: of the chip?
+[2784.86] UNKNOWN: You&#x27;re like, okay, that&#x27;s a bit weird.
+[2786.86] hydra: So then you scroll down here and then it&#x27;s got another peripheral
+[2789.16] hydra: on here like and then now it&#x27;s talking about PS RAM.
+[2792.06] hydra: It&#x27;s like my PS RAM and then you&#x27;re like, well, where&#x27;s the
+[2795.46] hydra: crystal gone?
+[2796.16] hydra: It was connected to these pins here.
+[2797.46] hydra: And where&#x27;s the caps gone?
+[2798.36] hydra: It was now it&#x27;s just nothing&#x27;s connected.
+[2800.16] hydra: What&#x27;s going on?
+[2801.16] hydra: What&#x27;s going on for in chips?
+[2803.06] UNKNOWN: So it turns out no, no, it turns out that this crystal is
+[2806.86] hydra: inside the chip.
+[2808.16] hydra: It turns out that this flash chip is inside the chip and
+[2811.46] hydra: it turns out that these choruses capacitor things over here
+[2814.06] hydra: are inside the chip.
+[2815.26] hydra: But the diagram hasn&#x27;t got a nice clear indication with a
+[2817.76] hydra: little dotted line around it to say that these are internal.
+[2822.16] hydra: Right?
+[2822.86] hydra: So then you like how down a minute might so and at this
+[2826.76] hydra: point I design the PCBs rooted the layout sent all the files
+[2830.76] hydra: off to China weighted ages paid for delivery paid for a
+[2834.06] hydra: reasonable size batch of expensive six layer PCBs, which
+[2837.36] hydra: you can&#x27;t get in like one or two quantities.
+[2838.96] hydra: You have to buy like 250 of them or something like this,
+[2842.06] hydra: right?
+[2842.76] hydra: Shipped them assembled them on the P on the pick and place
+[2845.06] hydra: machine, which took like two days to do that flapping about
+[2847.76] hydra: with that for ages put it in round the ELS code on it, you
+[2851.26] hydra: know, got the code on it and it booted but then it would just
+[2854.56] hydra: go into a boot loop.
+[2855.96] UNKNOWN: I&#x27;m like hmm and then one of the guys in the ELS channel
+[2859.26] hydra: goes what pin what pins what pins are using for this?
+[2862.06] hydra: I&#x27;m like these ones is like and then he pointed at something
+[2865.26] hydra: in the in the in the reference manual, which I missed because
+[2871.56] hydra: there isn&#x27;t, you know, like a little asterisk next to some
+[2874.46] hydra: of these pins that says the pins IO 1617 command o&#x27;clock
+[2881.16] hydra: SD0 and SD1 I used to connect to the embedded flashing could
+[2883.56] hydra: not be used for other purposes.
+[2885.36] hydra: So what was happening was that as soon as I tried to talk
+[2890.56] hydra: to the SX1280 for the ELS it would like toggle the CS pin
+[2895.06] hydra: on the SX1280 or whatever and then like overwrite the signal
+[2899.86] hydra: going to the internal flash and then the flash will be then
+[2902.66] hydra: reading the code from somewhere else and then they would just
+[2904.96] hydra: go that&#x27;s not code and reboot.
+[2907.96] hydra: I&#x27;m like bollocks.
+[2909.46] hydra: Excuse my French.
+[2910.56] hydra: Oh dear.
+[2912.36] hydra: So yeah, new PCB revision time.
+[2914.16] hydra: That was.
+[2915.96] hydra: No, 600 dollars of just PCBs in the bin.
+[2921.96] hydra: They&#x27;re still in China at the moment.
+[2923.56] hydra: I don&#x27;t even have them here because they&#x27;re supposed to be
+[2925.26] hydra: doing the assembly over there.
+[2926.26] hydra: They just I just sent like three or four PCBs here.
+[2930.06] hydra: And I just say no term in the bin can&#x27;t do anything with them.
+[2933.86] hydra: Don&#x27;t and the stencils that go with them for the solder paste.
+[2936.76] hydra: You got to get new ones of those as well.
+[2938.16] hydra: Oh dear.
+[2939.26] hydra: But now the problem now is that there were six pins that I
+[2943.86] hydra: used which you can&#x27;t use for anything else, but I&#x27;ve used
+[2946.76] hydra: those in my design and my design relies on those now.
+[2949.76] hydra: It&#x27;s like now what am I going to do?
+[2952.76] hydra: So I&#x27;ve got you running out of pins.
+[2955.06] hydra: Yeah, there are no there are no free pins.
+[2957.16] hydra: There&#x27;s no free pins.
+[2958.46] hydra: Oh no.
+[2960.06] hydra: So I&#x27;ve got a I&#x27;ve got to do either I to see IO IO expansion,
+[2965.16] hydra: but that&#x27;s latency issues involved in that or one of the guys
+[2968.76] hydra: in the ERS channel came up with the idea of a shift register.
+[2971.06] hydra: So I&#x27;ve got to do that.
+[2973.16] UNKNOWN: But unfortunately the devs have talked about it and they decided
+[2976.06] hydra: they don&#x27;t like the idea.
+[2976.96] hydra: So I&#x27;m like, so I don&#x27;t know whether that&#x27;s ever going to be
+[2980.06] hydra: merged into ERS if I go that direction.
+[2982.16] hydra: So yeah, but there&#x27;s still other stuff on it to test.
+[2986.16] hydra: I haven&#x27;t made a final decision yet, but I don&#x27;t really want
+[2989.76] hydra: to fork and run my own fork of ERS for my own stuff.
+[2992.96] hydra: But you know, don&#x27;t do it if I have to if I have to if I have
+[2996.96] hydra: to I have to you know.
+[2999.66] UNKNOWN: Oh stuff for a shift register because there&#x27;s no real there&#x27;s
+[3005.72] hydra: no real solution.
+[3007.02] hydra: It&#x27;s like wait a year use a new CPU with more pins on it like
+[3012.12] hydra: the S3 or something.
+[3013.42] hydra: I could possibly do that.
+[3014.62] hydra: But you know, I want to get this thing done shipping.
+[3019.12] Dominic: Now right, so yeah, you know, what are you going to do?
+[3025.82] Dominic: Never mind make a wing make the wing flight controller.
+[3032.39] Jack: I&#x27;d love to give out a bash.
+[3034.29] Dominic: Well, I mean part of the other problem is that you know, I&#x27;ve
+[3038.79] hydra: got my flight controller that the thing plugs into right and
+[3042.59] hydra: that that works is perfectly fine.
+[3044.29] hydra: And then I&#x27;ve also got my carrier boards, which I just had
+[3047.19] hydra: in my hand a minute ago.
+[3048.09] hydra: Yeah, yeah, yeah, I don&#x27;t know it&#x27;s disappeared now.
+[3050.49] hydra: Are you dropped on the floor?
+[3052.49] Jack: Probably remember because you went on.
+[3058.19] hydra: Yeah, so I got so I got I got the accessories and the ecosystem
+[3061.79] hydra: is ready for it now.
+[3063.59] hydra: And I spent ages writing the OSD code as well.
+[3068.39] hydra: Oh, yeah, because you look screen share that as well.
+[3070.49] Jack: Yeah, you&#x27;ve fixed the whole OSD thing where you&#x27;ve got to
+[3075.49] Jack: like clear the chip and then flash it set, you know, flash
+[3080.99] Jack: the flight controller separately.
+[3083.39] Jack: I think there was a bit of a song and dance with the one
+[3085.59] Jack: that those people well, there was a bug in beat of like
+[3088.89] hydra: a figure eight to where it was a raising the flash chip when
+[3090.79] hydra: it wasn&#x27;t supposed to be a raise in the flash chip even
+[3092.79] hydra: when the little thing that says full chip arrays was turned
+[3094.89] hydra: off do not go.
+[3096.19] hydra: Yeah, yeah, sometimes I just think they do that.
+[3099.49] Jack: Anyway, I think old Chris G had that a little bit of an
+[3103.99] Jack: issue with that.
+[3105.09] hydra: Yeah, we can let me do a present thing share screen.
+[3110.99] hydra: Do do do do do do there we go.
+[3113.29] Jack: Can you add it to stream or if I go click that button just
+[3117.79] Jack: down here?
+[3119.19] Dominic: I don&#x27;t know.
+[3119.99] hydra: I think you have to do it.
+[3120.89] hydra: Maybe don&#x27;t want to ask.
+[3123.89] hydra: There you go.
+[3124.69] hydra: Yeah, that&#x27;s it.
+[3126.09] hydra: So if I don&#x27;t know whether people know here anyway, but
+[3130.29] hydra: there&#x27;s a GitHub repo which has got the pixel OSD code
+[3136.39] hydra: and schematics and everything like that on there and the
+[3138.59] hydra: flight controllers that it was it was put on right and the
+[3143.29] hydra: original prototype was running on an L4 and then I moved
+[3145.99] hydra: it on to the H7s right but now it&#x27;s all going back the
+[3150.89] hydra: other way on to an L4 again and here&#x27;s the new prototype
+[3157.99] hydra: with the H because of the B2 flight maintainers don&#x27;t want
+[3163.19] hydra: to merge into B2 flight.
+[3164.19] hydra: So now I have to do all this stuff.
+[3166.39] UNKNOWN: Dead bug mate.
+[3167.79] Dominic: I have not seen that in a long time the other day.
+[3172.69] Dominic: So the wires 0.1 millimeter thick wires and the pitch on
+[3179.99] hydra: that component is 0.4 millimeters between each, you
+[3185.19] hydra: know, like the middle of one pad to the middle of the
+[3187.59] hydra: next pad.
+[3188.99] hydra: So yeah, it&#x27;s quite small component to be fiddling about
+[3191.89] hydra: with but it it was the first time that I was quite happy
+[3194.59] hydra: with that.
+[3194.99] hydra: I made a dead bug for ages.
+[3196.99] Jack: Mate, I have not seen one of those since the 80s and here
+[3199.99] hydra: it is and here it is working last week or whatever maybe
+[3202.89] hydra: two weeks ago, three weeks ago on the L4 again and then
+[3205.99] hydra: that same code is now what&#x27;s running on the new little
+[3209.09] hydra: circuit board, the new ELS board.
+[3212.39] hydra: So yeah, so that was that was pretty cool getting that
+[3214.19] hydra: running but there&#x27;s a lot more to do it because the moment
+[3216.39] hydra: it just draws pixels, but it&#x27;s completely static at the
+[3218.89] hydra: moment doesn&#x27;t go anything else.
+[3220.39] hydra: But the point is that the output signals work, you know,
+[3223.19] hydra: this stuff.
+[3225.84] hydra: That&#x27;s the important stuff.
+[3228.44] UNKNOWN: That&#x27;s it.
+[3228.84] hydra: That&#x27;s a video frame where the bits in the middle, you
+[3234.14] hydra: can&#x27;t see it.
+[3234.54] hydra: Oh, yeah, these bits here.
+[3235.84] hydra: This is the pixels of the test pan being drawn and this
+[3240.64] hydra: is the sync.
+[3242.14] hydra: This is the color burst.
+[3243.44] hydra: This is the image data and these are a couple of pixels
+[3246.94] hydra: and then it starts the next frame.
+[3248.84] Jack: Nice.
+[3249.54] hydra: That&#x27;s sort of what it looks like.
+[3252.14] Jack: NTSC, never the same color.
+[3255.54] hydra: Yeah, that&#x27;s the test pan and that&#x27;s some, you know, you
+[3259.94] hydra: can&#x27;t do that on a max 7456 overlays, overlaid text and
+[3265.84] hydra: your dreams drawing on top of graphics behind it, you know.
+[3272.74] Jack: That&#x27;s the devil work that is.
+[3275.84] UNKNOWN: It&#x27;s magic.
+[3277.34] UNKNOWN: What&#x27;s with the test pattern?
+[3278.74] Jack: Is that just a giant X or something?
+[3280.94] hydra: It&#x27;s just a bit of simple code that I could just throw
+[3283.54] hydra: together.
+[3283.94] hydra: So it drew something different on every single line.
+[3286.14] hydra: I didn&#x27;t spend more than about two minutes writing that
+[3288.14] hydra: test code.
+[3291.64] hydra: Yeah, it&#x27;s throwaway code.
+[3295.94] hydra: But it&#x27;s useful for making sure there is something to
+[3298.54] hydra: look at that&#x27;s different on every single line of the
+[3300.84] hydra: display, looking at the weird sort of edge cases, you
+[3305.24] hydra: know, where the pixels are next to each other.
+[3306.74] hydra: You can look at the slew rate of the black versus the
+[3312.34] hydra: white signals to see whether the black pixels end up
+[3315.64] hydra: being slightly longer than the white ones or whatever,
+[3318.04] hydra: you know, you can go to town and try to get the timing
+[3322.24] hydra: right on this stuff.
+[3326.04] Jack: All synced by an internal crystal.
+[3331.54] hydra: Sort of there is an internal crystal on the L4 because this
+[3335.54] hydra: one&#x27;s on the L4.
+[3337.34] hydra: The other stuff we were looking at was for the ELRS.
+[3341.24] hydra: That was for the SX-1280s, the RX receivers.
+[3345.54] hydra: So there&#x27;s two processors on that board, one for the OSD
+[3350.04] hydra: and one for the VTX and 2.4 gigahertz control link.
+[3357.14] hydra: Yeah.
+[3358.24] UNKNOWN: Yeah.
+[3358.54] hydra: So two bits of firmware on it, which is fun.
+[3362.64] Jack: Nice.
+[3363.14] Jack: Anyway, there we are.
+[3365.24] Jack: Right.
+[3365.74] Jack: Well, unfortunately, that is all we&#x27;ve got time for.
+[3369.24] Jack: No one put any questions.
+[3371.84] UNKNOWN: I think they just wanted to hear what you&#x27;ve been up to.
+[3375.74] Jack: Yeah, what&#x27;s the best things to follow you on to keep
+[3379.14] Jack: up to date?
+[3381.04] Jack: I&#x27;m very active in the ELRS hardware dev channel, if they&#x27;re
+[3384.24] hydra: curious.
+[3386.34] hydra: Quite active in there these days.
+[3389.64] hydra: Yeah, with all the random goings on in my life as well in
+[3392.64] hydra: the spam channel on there too, sometimes.
+[3396.54] hydra: That&#x27;s probably the best place or on the SP Racing Discord
+[3399.64] hydra: server.
+[3400.44] hydra: There&#x27;s not much chatter on there at the moment because there&#x27;s
+[3405.34] hydra: not too many issues that come up with the products that makes
+[3407.94] hydra: so there&#x27;s not too much support to do, which is nice.
+[3412.74] Jack: Thank you for everything you&#x27;ve done for the hobby.
+[3420.04] Jack: We do appreciate it.
+[3421.84] Jack: Even though sometimes the windgy ones make it seem like no
+[3425.84] Jack: one appreciates anything.
+[3427.14] Jack: But, you know, well, there are some people just as little
+[3431.94] hydra: bonus extra time that appreciate things a little bit more
+[3434.54] hydra: because the other day, I don&#x27;t know whether anyone knows
+[3438.44] hydra: about this YOLO flight controller project.
+[3441.54] UNKNOWN: No, but this board.
+[3446.24] hydra: Is a flight is the YOLO sort of chonker H735 based one.
+[3453.04] hydra: But the B flight maintainers couldn&#x27;t get it working.
+[3456.24] hydra: So CR teensy sent one to me and it works yesterday.
+[3462.74] hydra: So I got two flight controllers working the same day yesterday.
+[3465.64] hydra: I got my own got my own flight controller work in the afternoon
+[3468.14] hydra: and I got this one working in the morning.
+[3470.54] hydra: So they appreciate my work.
+[3474.34] UNKNOWN: Ben Scarborough says.
+[3476.64] Jack: Yep.
+[3476.94] Jack: Thanks.
+[3477.34] Jack: You personally got me off the ground at London Aerospace
+[3480.64] Jack: and never look back.
+[3482.34] Jack: Just enjoying the drone talk.
+[3484.14] Jack: No questions needed for the past.
+[3486.94] Jack: Yeah, I don&#x27;t know.
+[3487.54] Jack: Where has the hour gone here?
+[3488.94] Jack: Yeah, I do a radio show on the Thursday night show and
+[3500.24] Jack: I will be on from 11 till 1 in the morning.
+[3505.94] Jack: So if you if you guys like 80s new retro wave music come
+[3512.24] Jack: and join me on that.
+[3514.14] Jack: Unfortunately because Steven&#x27;s not here and I&#x27;m busy doing
+[3517.34] Jack: that we can&#x27;t do a bonus pod.
+[3519.64] Jack: But I really want to do a bonus pod with you.
+[3522.54] Jack: Mr.
+[3522.84] Jack: Clean flight and I don&#x27;t know whether you&#x27;re free next week
+[3525.54] Jack: and we can talk about like clones Radio C like the thing
+[3530.84] Jack: is I&#x27;ve always wanted to talk about Radio C but obviously
+[3534.74] Jack: like I love fab because like, you know, but equally like
+[3539.84] Jack: some of the bullshit I&#x27;d love to just do like I sort of
+[3543.04] Jack: like off the record like this is what happened.
+[3546.34] Jack: I&#x27;ve got a folder of like the Radio C drama and I&#x27;m wondering
+[3551.84] Jack: would you like to go through it with the patreons?
+[3554.94] hydra: Who else is going to be on there?
+[3558.04] Jack: It can&#x27;t be just me.
+[3559.04] Jack: Probably just me and you.
+[3562.84] Jack: We need to get more other Radio C people related people.
+[3566.34] hydra: Who else is there?
+[3568.14] hydra: There&#x27;s no customers or customers.
+[3571.94] Jack: What other people are there that you clone projects from and
+[3578.84] Dominic: who else like you can&#x27;t get trappy off trappings.
+[3585.14] UNKNOWN: I don&#x27;t know you&#x27;d have to go back on the internet way back
+[3587.84] hydra: machine or something like that and have a look and see what
+[3590.04] hydra: how many products were claimed.
+[3592.34] hydra: What like, you know, I know like Radio C archive nest or
+[3598.84] Jack: whatnot, but just like any one fight.
+[3601.64] hydra: Can you not find Radio C dot code at UK on the internet archive
+[3604.24] hydra: then I don&#x27;t know.
+[3605.24] Jack: Yeah, you can I think you can pull some images or whatever.
+[3611.17] hydra: Yeah, so you can look on there and see what else there was
+[3614.47] hydra: that might be a fun exercise.
+[3616.07] Jack: Yeah, I know but yeah, I just love to some of the stories of
+[3620.17] Jack: like, you know, my Radio C battery strap is by most prized
+[3627.27] Jack: possession.
+[3628.37] Jack: I&#x27;ve got one.
+[3629.17] Jack: Someone personally sent sent one to me.
+[3633.37] Jack: I know I just like man.
+[3636.37] Jack: I&#x27;m annoyed because fab took like my Radio C shirt.
+[3639.87] Jack: I had like the polo Radio C shirt would have loved to have
+[3642.87] Jack: still had that.
+[3644.77] UNKNOWN: Yeah, yeah, I&#x27;m sure we can arrange something, you know,
+[3651.07] Jack: the Sony CC D600 camera.
+[3656.37] Jack: I wish I still had one of them.
+[3658.37] UNKNOWN: Oh, yeah, the old board cams.
+[3659.47] hydra: Yeah, I was using a board cam as a I&#x27;ve got this one board
+[3663.47] hydra: camera.
+[3663.77] hydra: It&#x27;s really annoying for OSD stuff because the video signal
+[3666.57] hydra: voltage like goes all over the place.
+[3668.27] hydra: It&#x27;s a nightmare.
+[3669.27] hydra: So the OSD system has to track the voltage level and if it
+[3673.37] hydra: doesn&#x27;t then you lose sync.
+[3674.87] hydra: So it&#x27;s a good test even though it&#x27;s crap.
+[3678.17] Jack: Yeah.
+[3680.07] Jack: Oh my god, but yeah, I just kind of I don&#x27;t know if he&#x27;ll
+[3683.57] Jack: be up for it next week.
+[3686.07] Jack: Maybe we could do it, but I honestly I can&#x27;t think of anyone
+[3690.17] Jack: else other than like it&#x27;s worrying like saying Matt Hill
+[3696.47] Jack: Matt Hillier like is worrying like saying names out loud.
+[3702.07] Jack: Maybe we get Tony on Tony remembers Radio C days.
+[3705.27] hydra: Yeah, yeah, yeah, yeah, yeah tone would be good.
+[3709.37] hydra: Yeah, yeah, maybe about paint maybe painless 360 as well.
+[3714.47] hydra: He might not pay this is why is he cuz you&#x27;ve been threatening
+[3718.77] hydra: to get me and painless on the show at some point for ages.
+[3721.07] hydra: So that needs to happen at some point, doesn&#x27;t it?
+[3722.87] Jack: Yeah, well the thing is it&#x27;s like an after-hours bonus pod.
+[3727.17] Jack: So it&#x27;s like maybe the whole stream about Radio C.
+[3730.27] Jack: It&#x27;ll be fine.
+[3732.27] Jack: He can&#x27;t just like maybe it&#x27;s better off like sleeping dogs
+[3737.07] Jack: lie, you know, maybe maybe I don&#x27;t know but like just it&#x27;s
+[3742.27] hydra: an idea isn&#x27;t it?
+[3743.27] hydra: You know, you can put it on a backburner and come up with
+[3745.37] hydra: some more material.
+[3747.77] UNKNOWN: I know still there we are.
+[3750.47] Jack: I just think I think I think the patreons deserve it does
+[3753.47] Jack: they keep this show running?
+[3755.37] Jack: Yeah, any any views expressed by any guests or personal
+[3758.77] Jack: may not reflect the view of others.
+[3760.97] Jack: Thank you to all our wonderful patreons you&#x27;re there.
+[3763.57] Jack: Mr.
+[3763.77] Jack: Clean flight.
+[3764.37] Jack: Thank you for sponsoring us.
+[3767.97] Jack: You&#x27;ve you&#x27;ve been listening to let&#x27;s try now.
+[3770.97] Jack: We&#x27;ve got wonderful patreons.
+[3772.97] Jack: Maybe we could do a really sort of juicy patreon stream
+[3775.87] Jack: for you guys as a massive.
+[3777.47] Jack: Thank you.
+[3779.87] Jack: If you are listening to this on your favorite podcasting
+[3783.67] Jack: platforms audio only do you think about going to the patreon
+[3787.97] Jack: let&#x27;s try now and supporting us because that helps cut
+[3791.77] Jack: out all the rude words we say and bits of quiet and technical
+[3795.47] Jack: issues.
+[3796.27] Jack: And if you&#x27;re listening to this editor, thank you very much
+[3799.77] Jack: your lovely wonderful service and making this sound half
+[3802.97] Jack: decent.
+[3805.57] Jack: And we have been joined by the wonderful.
+[3807.77] Jack: Mr.
+[3808.07] Jack: Clean flight.
+[3808.67] Jack: Thank you very much.
+[3810.17] UNKNOWN: You&#x27;re welcome.
+[3810.87] Jack: Thanks for having me on and I&#x27;ve been bright until I fly
+[3814.87] UNKNOWN: and go self time cop.
+[3817.17] Jack: Thank you.
+[3817.57] Jack: Good night.
+[3823.07] UNKNOWN: Thought I&#x27;d cheer you up.
+</pre></body></html>

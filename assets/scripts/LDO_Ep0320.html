@@ -1,0 +1,859 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0320—LDO 320 - Bugs, Bricks And EV Tricks</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 320 ===
+Title: LDO 320 - Bugs, Bricks And EV Tricks
+Recorded: 2021-10-14
+Hosts: Wayne &quot;CurryKitten&quot; Andrews, Andrew &quot;Frank&quot; Hyams, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): (none recorded)
+Total audience: 2,521
+Platforms: YouTube (https://www.youtube.com/watch?v=yuV1zJEmYZ0); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1142272036-letsdroneout-ldo-320-bugs-bricks-and-ev-tricks.mp3)
+=====================================
+
+[0.0] UNKNOWN: Hello and you&#x27;re listening to let&#x27;s drone out and special thank you to our lovely patrons that help donate
+[7.48] Jack: So that we could pay the editor to remove the swear words and silly things. We say
+[12.56] Jack: Massive. Thank you to Carlos campos art folk now, Sam Darma
+[19.4] UNKNOWN: Mikey dread
+[21.2] UNKNOWN: on with the show
+[53.79] UNKNOWN: Hello and you&#x27;re listening to
+[55.91] Jack: Let&#x27;s drone out
+[61.71] Jack: Which runs this one I know
+[65.03] Jack: enthusiasm is palpable
+[67.39] UNKNOWN: You&#x27;re listening to let&#x27;s throw now tonight. We&#x27;re excitedly joined by current kitten who&#x27;s been out flying
+[72.95] Jack: I&#x27;m looking at hornet porn
+[76.19] UNKNOWN: That&#x27;s right people
+[78.67] Jack: We&#x27;re joined by our Lord master Andrew. That&#x27;s Frank. Good evening. And I am Jack bright to our fly
+[85.91] Jack: Hello and welcome to the show. Hello. I&#x27;ve dropped my screw now
+[91.59] UNKNOWN: I don&#x27;t fit in with a screw and I&#x27;ve dropped it
+[95.27] UNKNOWN: What screws that?
+[97.39] SPEAKER_01: It&#x27;s a
+[99.39] Jack: It&#x27;s a really really small one
+[102.15] UNKNOWN: But it goes in there. It&#x27;s not just forever. No, I know
+[106.55] UNKNOWN: It&#x27;s gone
+[108.91] UNKNOWN: What have you been working on or is it just a an orphan screw just a round
+[116.63] UNKNOWN: It&#x27;s for work
+[119.79] Jack: I got I got the plates back and
+[123.35] Jack: They didn&#x27;t drill the holes out. So I&#x27;m having to every time I come here. I like fatal and
+[130.79] UNKNOWN: Just pulling holes in aluminium just with a needle pile. Yeah pretty much. Wow. I&#x27;m just just being that guy
+[140.23] UNKNOWN: Don&#x27;t we have children in the Philippines to do this sort of stuff for you?
+[144.51] UNKNOWN: Well
+[145.87] UNKNOWN: Either my measurements are wrong, which I haven&#x27;t had a look to see whether I messed it up
+[151.99] UNKNOWN: But the last lie I had were fine
+[154.75] UNKNOWN: So I think they just forgot to run the drill through these I&#x27;m not sure you could just like measure me
+[160.43] SPEAKER_01: This is and if it&#x27;s wrong give it back
+[164.59] SPEAKER_01: Give me the right one
+[167.35] SPEAKER_01: Give me we&#x27;re not playing for this. I don&#x27;t I don&#x27;t look I don&#x27;t like it because they made they made a lot of mistakes
+[173.19] Jack: I don&#x27;t know you in this company, but
+[176.35] UNKNOWN: Which company is this so we know not to use them for anything?
+[180.55] UNKNOWN: Can&#x27;t say
+[183.67] UNKNOWN: You meeting person I&#x27;ll tell you
+[187.43] UNKNOWN: Are you coming up to pop them on Saturday?
+[191.59] Jack: There&#x27;s no fuel in Brighton, it sucks
+[194.75] Jack: Not a lot of fuel around here to be honest
+[196.79] SPEAKER_01: I&#x27;m yeah, I&#x27;m looking at that if it was a couple of weeks ago, I would definitely be saying no
+[202.47] SPEAKER_01: I&#x27;m not going because I have no fuel, but I have filled up in that time say
+[208.23] UNKNOWN: Feeling feeling flush with fuel
+[211.59] UNKNOWN: Yeah, I don&#x27;t I just I don&#x27;t fancy my chances
+[216.99] UNKNOWN: And I really don&#x27;t I want to go
+[220.31] UNKNOWN: but equally like all my all my wings are all
+[225.43] UNKNOWN: like I now have wings I
+[227.59] UNKNOWN: Suppose I could fly them in manual mode
+[230.59] UNKNOWN: Yeah, well that&#x27;d be more fun just to do sort of a pre
+[234.75] Curry: Calculated course and like I&#x27;m putting it in auto mode and
+[241.43] SPEAKER_01: Just wait for it to just just start flying off through all the like manned aircraft
+[248.31] SPEAKER_01: Just over the motorway through the petrol station they still like I now have two point something, you know
+[255.23] Jack: I
+[258.67] UNKNOWN: Feel the original medium. Yeah fell. Yep. I&#x27;m sat here fettling away
+[262.51] Jack: It was embarrassing with our annual meeting. It looked like I was
+[267.23] UNKNOWN: Badger RC reckons. You should go racing with your flight test twin
+[271.87] UNKNOWN: Flight test twin. I think he means he mini Guinea. Oh
+[276.71] UNKNOWN: Is this not one of these spec races where everybody has to have the same setup and was it just random well, it&#x27;s
+[285.43] UNKNOWN: Open
+[286.63] SPEAKER_01: Spec, I don&#x27;t know
+[288.75] Curry: Open specs sounds interesting means it&#x27;s it&#x27;s a bit of an oxymoron, isn&#x27;t it? It&#x27;s like, yeah, here&#x27;s the
+[295.99] Curry: Situation we&#x27;ve got here&#x27;s your setup. By the way, it&#x27;s open
+[299.23] Curry: So just change that motor out for something really big and see how fast it goes
+[303.71] Curry: I think it&#x27;s anything up to 900 millimeters
+[308.55] UNKNOWN: Could be wrong. I don&#x27;t know motor
+[313.68] UNKNOWN: and I don&#x27;t think
+[315.88] UNKNOWN: You know it being sort of
+[318.88] UNKNOWN: again the first
+[320.72] SPEAKER_01: wing racing event
+[322.64] SPEAKER_01: Like proper wing race. I suspect this one probably won&#x27;t be turning people away
+[330.65] SPEAKER_01: Especially given that it&#x27;s the middle of October in the UK in the southeast where there&#x27;s no fuel
+[339.57] SPEAKER_01: Weather is
+[341.89] SPEAKER_01: questionable
+[344.05] SPEAKER_01: Imagine they probably won&#x27;t be turning people away
+[347.01] UNKNOWN: Kind of an interesting time of the year to do it, but you know beggars can&#x27;t be choosers
+[351.45] UNKNOWN: Mm-hmm. I think the main thing is the x-class event
+[354.85] SPEAKER_01: Which is on this day all the people around the world
+[357.89] SPEAKER_01: I said they&#x27;re doing x-class setting up this very particular track and they&#x27;re all doing the same time trial at the same time
+[364.77] SPEAKER_01: Clive FPV in the chat says it&#x27;s the Aussie&#x27;s fault which sounds about right
+[369.17] UNKNOWN: Yeah, if in doubt
+[371.41] UNKNOWN: You get Tony to pick you up Tony Tony&#x27;s got worst
+[381.07] UNKNOWN: Miles for the gallon out of all Tony&#x27;s got like a real-time fuel gauge you watch it
+[388.55] UNKNOWN: It&#x27;s not measured in miles per gallon measuring gallons per mile
+[394.75] UNKNOWN: really
+[396.91] Curry: Here were you guys making fun of me and my potential electric car and
+[402.19] UNKNOWN: You&#x27;re like, oh yeah, because you&#x27;re gonna join a cult and you&#x27;re gonna be weird and not enjoy macchiatos weird
+[410.07] Curry: We like you our sort of weird
+[412.99] Jack: Where you touch of it, you know now you&#x27;re gonna be I swear to God if I catch you getting to do that little dance
+[419.79] Jack: thing I am gonna
+[422.11] Jack: knife your tires
+[423.87] UNKNOWN: Well, I hate that thing
+[426.47] UNKNOWN: like
+[427.87] SPEAKER_01: Can you charge up lipos from your Tesla, is that a thing does it have like yeah, oh god, I&#x27;ve seen
+[437.51] UNKNOWN: Yeah, yeah, you know that may on high, you know the person who hates us
+[444.35] Jack: Try not to watch it because she hates us so much the the other
+[451.23] Curry: The high and die and the Kia the new ones the the
+[455.55] Curry: Ionic 5 and the EV 6 both had adapters
+[460.23] Curry: Essentially because they&#x27;re the same car made by two different
+[462.59] Curry: Sister companies that you plug into the charge port and then you can plug like a regular free pin plug in it and run something off
+[469.03] Curry: Your battery that way
+[470.47] UNKNOWN: That was definitely different
+[473.39] UNKNOWN: Because because what I got I got a load of comments because I reviewed some weird little power bank thing
+[478.47] Curry: Which would like run free pin plugs and everybody&#x27;s like, ah, this is pointless in any years time
+[484.39] Curry: Everybody would just be charging straight off their cars because everyone will have massive batteries
+[488.67] UNKNOWN: There you go
+[490.51] UNKNOWN: RC Lebotic&#x27;s in the chat says my dad&#x27;s got a Model X the 12 volt plugs come from the 24 volt
+[497.11] SPEAKER_01: Normal car battery in the front
+[501.09] UNKNOWN: which
+[503.81] UNKNOWN: Yeah, the one that the one that deals with
+[508.29] UNKNOWN: The one the one that deals with all the security stuff all the locks and everything
+[513.21] UNKNOWN: is
+[516.09] SPEAKER_01: You can&#x27;t get in
+[517.77] SPEAKER_01: It doesn&#x27;t charge that one up when it&#x27;s plugged in at the wall at home
+[522.41] SPEAKER_01: So if you just leave it at home for a long time that one goes flat
+[526.29] UNKNOWN: yeah, and then
+[528.41] Jack: You have to take your like daylight running lights out and then fish the pull cord that opens
+[536.01] Jack: The bonnet in order to charge that yeah
+[539.25] Jack: so there&#x27;s a lot of people in the habit of driving their electric cars and
+[544.97] UNKNOWN: then they they drive it in and then they
+[549.21] Jack: Open the bonnet just so in the case that it decides to run that battery down that they can then
+[556.77] Jack: Charge that battery to get in their car. It&#x27;s ridiculous
+[563.22] Jack: Welcome to let&#x27;s car out
+[565.82] Jack: Sure, fall. It&#x27;s your fall
+[571.66] UNKNOWN: Magical pencil says you should just add an XC 60 in the glove box
+[576.74] UNKNOWN: You we can&#x27;t get into the glove box
+[582.59] Jack: You&#x27;re right to repair Jack you just yeah your way at the Tesla
+[586.91] Jack: Yeah, I&#x27;m gonna buy a black clap name it Clinton film it meowing at me constantly and
+[593.91] Jack: Go vegan go to the gym a lot get an Asian wife and just complain on the internet. I am
+[601.11] Jack: the whiter Lewis Rossman
+[610.36] UNKNOWN: I love that man. I
+[613.16] Curry: Can&#x27;t go with become a vegan. I enjoy eating meat too much
+[618.08] UNKNOWN: It&#x27;d be amazing cuz then I&#x27;d be on a high horse and Tony
+[625.82] UNKNOWN: Yes, curry you&#x27;d be you&#x27;ve been flying. What have you been flying? How&#x27;d that go?
+[632.18] UNKNOWN: It was a mix of stuff
+[634.18] Curry: I was I had a bit of a backlog since I&#x27;ve been taking time off while my knees been
+[639.8] Curry: Hurty I I managed to finish building some review stuff
+[643.84] Curry: But I went out on Wednesday
+[646.4] Curry: To the farm if you&#x27;ve watched my videos occasionally go to a farm
+[652.12] Curry: Where occasionally cows eat my planes?
+[655.4] Curry: and I flew
+[657.24] Curry: My old holy broke copies to having updated its latest beta flight and putting the TBS Tracer
+[664.28] Curry: 69 in so I could test that out and fly it with the TBS Mambo and that was very good the
+[670.44] Curry: the tracer works very well
+[672.88] Curry: the LQ of
+[675.36] Curry: 100 look like it was just gonna burn its imprint in my goggles. It didn&#x27;t drop whatsoever at all
+[680.84] Curry: I could ever go out to about a kilometer and then I ran out of space had to come back again
+[685.84] Curry: so that was good my
+[688.04] Curry: My Aquila which is sitting down here actually
+[691.2] UNKNOWN: Which has its top off? This is a little frame from rush FPV and STP. I
+[700.23] Curry: Had this in the garden and turned it on and I got satellites
+[703.79] Curry: So when I took it to the field to test it out the idea of this is kind of lightweight
+[708.39] UNKNOWN: long range
+[710.99] Jack: blades by blades by blades more efficient
+[715.23] UNKNOWN: I&#x27;m told I might be wrong. Don&#x27;t know I
+[719.91] Curry: Should explain that the frame is lovely and spanking you everything else is like off cuts
+[725.35] Curry: It&#x27;s all from my spares box. So the fact that fluid all
+[728.95] Curry: Is not bad
+[731.11] Curry: But got it to the field. I could not get a single satellite. So something something has gone
+[737.87] Curry: Drift on that one. I was trying to work out
+[740.99] UNKNOWN: What it was?
+[743.11] Curry: So I need to do some more testing that in the garden, but that flew okay again
+[746.83] Curry: That&#x27;s on Express LRS and we got to a kilometer and it&#x27;s a bit. It&#x27;s a bit inevitable now
+[753.43] Curry: I&#x27;m testing out all these radio systems and I was like
+[755.71] Curry: I&#x27;ve only got this much space before I hit a road and I&#x27;m sorry
+[759.27] Curry: The signal has not changed from full so it will probably go further. That&#x27;s what I can tell you it will go a long way
+[767.83] Curry: Yeah, and then I flew the I remember the race loop 30 with the multi-colored things
+[777.47] Curry: Yeah, where is that? Yeah, yeah
+[781.79] SPEAKER_01: Refreshers love hearts machine
+[785.31] UNKNOWN: The palm of eyelids all of that
+[788.39] UNKNOWN: The classic I&#x27;m colorblind. So I chose this one thing this
+[792.83] Curry: What they said is like these five bladed props much quieter than the old cine whoops
+[798.35] Curry: Doesn&#x27;t have as much material around it much quieter lies
+[801.67] Curry: I
+[805.03] Curry: Just
+[806.07] Curry: Insane there was see it&#x27;s it&#x27;s like my sister-in-law&#x27;s farm and two fields over
+[811.63] Curry: They have a small sort of caravan site and I&#x27;m like I was terrified because this thing
+[817.19] Curry: Sounds like some sort of like
+[819.79] Curry: swarm of demonic wasps
+[822.31] Curry: Literally, that&#x27;s back for the year for this again. Yeah. Yeah, that&#x27;s my segue for later
+[828.57] Curry: And
+[829.93] Curry: Yeah, this this was insanely loud and with a full GoPro because they said oh, yeah
+[835.89] Curry: it&#x27;s a bit lighter than the other stuff I kept turning and
+[839.89] Curry: The nose kept dropping so I crashed it twice just trying to fly regular acro and I was doing
+[847.01] UNKNOWN: Because it said you can do like light freestyle. So I thought yeah, I tested out. So every time I sort of did a flip
+[853.13] Curry: I could hear it and I could hear like because you know, obviously you you
+[857.69] Curry: Pump the throttle you throttle off you do your maneuver and then you&#x27;re kind of floating and you don&#x27;t expect that much noise from it
+[864.69] Curry: On this one. I could hear the motors spinning up
+[868.25] Curry: And it was it was moving around. So I think the thing is such a wind capture device
+[875.93] UNKNOWN: that in order to try and keep his position the motor spin up all the time and the whole thing was
+[882.13] UNKNOWN: It didn&#x27;t fly very nicely, but I took it out again
+[884.93] UNKNOWN: and
+[886.93] Curry: Yesterday into the woods
+[889.45] UNKNOWN: Where I sometimes fly like little things just trying to go between the trees and that and I kind of got the hang of it
+[894.45] Curry: A bit more and it was a case of like knowing when to really pump the throttle and stuff and I hit some trees
+[899.45] Curry: And I eventually broke a prop which I was quite proud of because it&#x27;s built for toughness. I&#x27;ve just lost my ear plug
+[906.41] UNKNOWN: but what and
+[908.53] Curry: Steven mentioned this the fact it&#x27;s like
+[911.41] UNKNOWN: Got these pusher props. It&#x27;s like so I crashed off a tree it landed upside down
+[915.29] Curry: I was like, I&#x27;m not quite sure where that is. Let&#x27;s see if I can turtle mode over and fly back. So I did
+[921.29] UNKNOWN: Took off and it sounded even worse
+[924.01] Curry: It sounded like really bad and I came over and I looked at it and said look at that
+[928.53] Curry: Not a single piece of damage took off again
+[930.53] Curry: Still sounded bad because it had some leaf stuck in it. So I pulled those out and then when I looked it had lost
+[936.01] Curry: Two or three of the blades of one of these five bladed props us. Oh, that&#x27;s why it&#x27;s got that noise
+[941.53] Curry: So yes, the problem with taking off from the ground when the props are literally on the ground is that you can smash things up
+[949.93] UNKNOWN: and I also flew that massive f450 trying to get it ready for
+[955.69] UNKNOWN: Open HD and that was a complete disaster
+[958.29] Curry: So I&#x27;m rethinking that one that was like trying to fly a breeze block
+[962.85] Curry: which has been
+[964.49] Curry: Like hit by a sledgehammer and you&#x27;re trying to take control of it and it&#x27;s just like this
+[969.41] Curry: I couldn&#x27;t I couldn&#x27;t even land it I had to put it in return to home
+[972.89] Curry: Just to bring it back again because I was like I see when I&#x27;m going
+[976.05] UNKNOWN: That was my week
+[977.57] UNKNOWN: fun times
+[979.33] UNKNOWN: can see where you&#x27;re going because of the
+[982.49] Jack: HD or
+[984.65] UNKNOWN: No, I haven&#x27;t got I haven&#x27;t got open HD in it yet. I
+[988.21] Curry: It&#x27;s got a regular FPV in there and I now because I wanted to make sure I now was going well
+[992.89] Curry: And I thought let&#x27;s do a bit of tuning on it and I&#x27;ve taken it out before and I had my old
+[998.21] UNKNOWN: Opto the old 30 amp opto ESC that speak PWM and that was all shaky and looked bad. I was like, okay
+[1004.61] Curry: we&#x27;ve got to go and
+[1006.25] UNKNOWN: Try and and put something more up-to-date because this is the old rose tinted spectacles
+[1011.33] Curry: I was like this was the smoothest whatever
+[1013.33] Curry: When I had my NASA on it and it was had my GoPro and then I went back and watched my videos from nine years ago
+[1018.69] Curry: And what I thought was like smooth then was just the fact that I could see where I was going and it was all
+[1026.97] UNKNOWN: Horrible, but we remember it as being like this is amazing
+[1029.61] Curry: Of course, it was amazing because we were flying and not crashing and could see where we&#x27;re going
+[1033.81] Curry: but that&#x27;s not the same as being smooth and
+[1037.17] Curry: And that&#x27;s why I changed I changed all the SCs out for something that could run D shot albeit D shot 300
+[1043.17] Curry: I thought this would give
+[1044.89] UNKNOWN: At least a fighting chance of being able to spin the motors up and break them better
+[1050.61] UNKNOWN: But of course, these are 900 kV motors with 10-inch props
+[1054.61] Curry: So these aren&#x27;t things that you can very quickly respond to and this has always been a problem
+[1060.05] UNKNOWN: With things like beat fly and I now as soon as you get to bigger quads
+[1063.85] Curry: It takes a lot more effort, but it was so bad. I thought you know what? I&#x27;m I&#x27;m just gonna give up on this
+[1069.77] Curry: I&#x27;m gonna move this to a quad that I already know flies well and
+[1074.25] UNKNOWN: Just stuff it in because the only reason I was using that quad is I thought I&#x27;ve got those space there
+[1078.61] Curry: I can fit this in easy, but actually that&#x27;s a bad. I&#x27;ve decided that&#x27;s a bad idea and the best idea is
+[1084.69] UNKNOWN: choose a quad of which there are many hanging round here that already flies and
+[1090.89] UNKNOWN: just find a way of stuffing the Raspberry Pi in there and
+[1095.05] Curry: Making it work. And if I have to gaffer tape stuff on
+[1098.69] Curry: And we&#x27;ll just do that and then we&#x27;ll see how it goes. So that&#x27;s that&#x27;s the new plan
+[1103.97] UNKNOWN: Shall I explain the Hornet reference? Mmm. Yes, since we&#x27;ve got nothing to talk about so you need to fill don&#x27;t we?
+[1111.09] UNKNOWN: Just before we came on I was talking and people appreciate this you go on to YouTube and it&#x27;s like suggested for you
+[1117.93] Curry: And for some reason the suggested for me was this video from a channel called Hornet removal
+[1125.57] Curry: Which is this I don&#x27;t know if they&#x27;re Chinese or that some
+[1129.57] Curry: Asian country where basically a bunch of guys
+[1133.29] Curry: Find these they call a murder hornet. So, you know these big Asian hornets like this big that can literally kill people
+[1139.57] Curry: like a couple of stings from these things you you&#x27;re out of it and
+[1143.21] Curry: One of the most interesting things I saw about their first video is how they tracked a hornet back to its nest now
+[1150.05] Curry: I&#x27;m not sure how they do it in terms of they put out some, you know sugary solution
+[1156.25] Curry: And of course the wasps and insects are attracted to it
+[1159.17] Curry: So you&#x27;ve got this giant Hornet, which looks like, you know a small rodent
+[1164.41] Curry: Sucking up this sugary drink and somehow they tie a little ribbon on it. I don&#x27;t know
+[1171.33] Curry: Do they capture it then freeze it
+[1176.97] Curry: That high-tech it&#x27;s just like a ribbon goes on it
+[1179.73] Curry: Anyway, as soon as the ribbons on and I think the hornet is so distracted by the sugary liquid
+[1185.33] Curry: Because you see the ribbon on it is still drinking away
+[1188.81] UNKNOWN: The thing takes off and you can see like a ribbon behind it and it&#x27;s like it&#x27;s doing like a streamer train
+[1195.05] Curry: plane so then they take off in a drone and they follow this little streamer in the sky and
+[1202.21] Curry: From this they get back to this hornet nest, which I thought they&#x27;d be in trees, but they&#x27;re apparently these underground
+[1209.29] UNKNOWN: Burrows these these like Asian hornets and it&#x27;s like the traditional sort of wasps nest but all underground
+[1215.29] Curry: So they get in there. They don these like hazmat suits
+[1219.05] UNKNOWN: So they can&#x27;t get stung and then they have a very high-tech thing of getting an old like plastic bottle putting it on the entrance
+[1227.05] Curry: Whacking it and all the hornets basically flood up the bottle and then they catch the rest and basically take the nest out
+[1234.61] Curry: That way, but the fact that they use a bottle
+[1238.61] UNKNOWN: It&#x27;s like, you know sort of free free liter bottle, but it doesn&#x27;t it doesn&#x27;t get all of them
+[1243.65] Curry: So they&#x27;re still like these massive hornets all flooding over them trying to sting them
+[1247.81] Curry: And then they&#x27;re out imagine a small fish net for goldfish. You see these guys just doing this
+[1253.81] Curry: It&#x27;s just catching these orders and then shoving them in the bottle. It&#x27;s bizarre
+[1257.53] Curry: I don&#x27;t know how that got in my suggested video, but having watched two of them. There&#x27;s now just rows and rows of hornet videos
+[1266.09] Curry: I can&#x27;t get away from the algorithm has determined you have an interest in hornets. You seem to like hornets
+[1272.37] UNKNOWN: Look at this
+[1274.89] UNKNOWN: Really weird, but I thought that&#x27;s a really interesting
+[1278.37] Curry: Way of using a drone and it kind of fits into RC cuz the whole like oh, we like following things with streamers
+[1283.85] Curry: That&#x27;s fun
+[1285.85] Curry: to insects now and
+[1287.81] SPEAKER_01: Banjo RC says he saw a video of a drone with a flamethrower setting fire to a wasps nest recently
+[1294.77] UNKNOWN: Oh
+[1295.77] Curry: They can let it see that again. It sounds more cruel if you use the flamethrower
+[1302.77] UNKNOWN: Do this stuff
+[1304.45] UNKNOWN: That is under suits. That&#x27;s that looks like the suits their suits a little bit less tech. Let me
+[1310.45] Curry: Let me find the video ahead because they&#x27;ve actually got this thing with the oh
+[1316.05] UNKNOWN: My god, my skin&#x27;s crawling. You can see that they&#x27;ve got the little
+[1321.09] UNKNOWN: thing around it which is
+[1323.33] UNKNOWN: Just about the weirdest thing. I think you&#x27;ll ever see
+[1328.49] UNKNOWN: He frees he frees them
+[1330.93] UNKNOWN: Are you sure about that? How&#x27;d you know? Yeah, you&#x27;re an expert on hornets
+[1337.67] UNKNOWN: No, they do that to like spiders and flies and stuff
+[1341.87] UNKNOWN: Freeze it and chill them out
+[1344.11] UNKNOWN: And get all those arms just slow
+[1347.55] UNKNOWN: It&#x27;s amazing when it flies because you&#x27;d think you&#x27;d lose sight of it pretty quickly. But look look at it go
+[1352.59] Curry: You can see it for miles. Can&#x27;t you?
+[1358.4] UNKNOWN: I had no concept of this was but yeah, they just as soon as they get in there, it&#x27;s it&#x27;s like slightly less high tech
+[1365.04] Curry: They dig a hole
+[1366.88] Curry: They get buzzed with massive of hornets and inside that hole
+[1372.16] UNKNOWN: It&#x27;s these giant nests full of like larvae and stuff and look at the size of those things
+[1378.84] UNKNOWN: Why don&#x27;t you just kill it with fire?
+[1384.5] Jack: That is nightmare fuel
+[1386.74] Jack: It should be nightmare fuel that&#x27;s horrendous, isn&#x27;t it and these I mean it&#x27;s not like how many something
+[1393.62] UNKNOWN: Only stings till it kills you. I don&#x27;t know. These are pretty serious insects
+[1398.9] Curry: I saw it was on job 60 when it was that used to be a thing and there were like a couple of stings from these
+[1405.82] Curry: Guys can take you out. Obviously any slight allergy towards that sting and you&#x27;re you&#x27;re out of it immediately
+[1411.26] Curry: Mm-hmm
+[1413.26] UNKNOWN: That would be bad
+[1414.54] Curry: But yeah, that&#x27;s that&#x27;s the random rabbit hole I&#x27;ve been doing and none of the videos in English
+[1419.14] Curry: I don&#x27;t really they and they they chat it through with the camera and I was like, I don&#x27;t know what he&#x27;s saying
+[1423.9] Curry: But it&#x27;s just really interesting to watch how many how many times can you say?
+[1430.26] Curry: You know, we found the hornets. We&#x27;re gonna dig them up put them in a bottle and kill them all now
+[1436.54] Curry: Don&#x27;t do anything else who knows
+[1441.34] Jack: Two inches long enough about you Jack drones
+[1450.58] SPEAKER_01: We&#x27;re getting a selection of favorite wasp videos in the chat now
+[1454.54] SPEAKER_01: It&#x27;s not just me. I think there&#x27;s been a big there&#x27;s being a big push
+[1459.02] SPEAKER_01: moving on from MTV in drones to
+[1462.94] SPEAKER_01: drone
+[1464.42] SPEAKER_01: wasps
+[1465.74] UNKNOWN: I mean to be fair if you can put a stream on it
+[1468.46] Curry: You can probably put a little one of those little one
+[1472.3] Curry: cameras
+[1474.74] Curry: Just like a tiny little survey with like a dab of sugar just on the end of it on the alarm
+[1479.82] SPEAKER_01: Just so you go one way on the carrot in a stick
+[1484.42] UNKNOWN: You could do it
+[1485.3] Curry: it&#x27;s be a bit like pickle Rick when he turns into a pickle and he has to
+[1488.98] Curry: Use his tongue to probe that like rats brain to try and get it to move which is
+[1494.3] UNKNOWN: Probe that the whole net make it flying different directions
+[1499.18] UNKNOWN: Changing the subject signing
+[1502.22] UNKNOWN: Happy birthday Caroline
+[1504.58] SPEAKER_01: I hope you enjoy your
+[1506.9] UNKNOWN: TX 16 s that you got given and
+[1510.62] SPEAKER_01: What else did you get you did?
+[1513.86] UNKNOWN: Can does anyone know whether I can flash this with non
+[1518.58] Jack: LBT
+[1521.38] Jack: There&#x27;s a series of receivers the radio master receivers no idea probably if anyone knows that would be amazing
+[1533.89] UNKNOWN: What else has happened recently
+[1536.29] SPEAKER_01: It was the BDRA championships on the weekend the
+[1540.37] SPEAKER_01: nationals
+[1542.21] SPEAKER_01: Look like it went very well that they had some pretty reasonable weather
+[1545.97] SPEAKER_01: And it was at BMFA Buckminster, and they just took over the fuel for the day
+[1552.57] SPEAKER_01: But looks well for the weekend if I looks good and have the you know the big inflation we&#x27;re tracking everything
+[1558.89] SPEAKER_01: Harry Holmes won it
+[1561.85] SPEAKER_01: Congratulations, Harry
+[1565.81] UNKNOWN: Yeah, that&#x27;s that&#x27;s the I mean I had a look through the stream
+[1570.89] SPEAKER_01: I didn&#x27;t watch the entire thing because it is all streamed. It&#x27;s under
+[1576.13] SPEAKER_01: What is it under?
+[1578.13] SPEAKER_01: Called drone racing streams is the channel on YouTube
+[1582.61] SPEAKER_01: BDRA British Championships and
+[1585.77] SPEAKER_01: You can watch the entire stream is like six hours each day or something like that
+[1591.05] SPEAKER_01: Yeah, I didn&#x27;t see any anyone using any digital stuff, but then I guess I wouldn&#x27;t like if it was
+[1596.57] SPEAKER_01: Digital and I guess they wouldn&#x27;t be picked up and streamed, but it looks
+[1601.41] UNKNOWN: It looks pretty impressive like
+[1604.29] SPEAKER_01: 13 second laps and things
+[1607.17] SPEAKER_01: quite a big complex track I think I would struggle to get through a gate in 13 seconds, so I
+[1615.73] UNKNOWN: Certainly wouldn&#x27;t remember the track layout. I think I saw
+[1618.45] UNKNOWN: Good. I didn&#x27;t watch any of it, but I&#x27;ve seen people posting little bits on
+[1624.21] UNKNOWN: Facebook and stuff
+[1626.17] Curry: Like I saw so rub cerebrus. So what&#x27;s his name again?
+[1631.53] Curry: Say sub
+[1634.53] Curry: Cerberus yeah, I saw some of his laps and
+[1637.65] Curry: Just I think the biggest obstacle with me would in racing wouldn&#x27;t be the fact that I&#x27;d hit all the gates
+[1643.45] Curry: It would be that I couldn&#x27;t remember where I was going. It&#x27;s like
+[1650.65] UNKNOWN: Now I had to be navigated we just have a big oval or something
+[1655.29] Curry: Yeah
+[1657.01] Jack: Speedway NASCAR, you know, yeah get the old beer bellies out and you know flip some barbecue
+[1664.89] UNKNOWN: Kind of trim trim left a bit. You&#x27;re right. Yeah, we like that
+[1671.41] SPEAKER_01: Racing course we just have poles and outside of that pole outside of that pole and that that&#x27;s good enough for me. Yeah
+[1680.09] UNKNOWN: Yeah copilot, that&#x27;s right Dave
+[1684.29] UNKNOWN: Yeah, I think I think I was just like telling you that line of sight what way you needed to go
+[1691.17] UNKNOWN: No, it was terrible. I
+[1693.85] Jack: I&#x27;m so bad at it. I just didn&#x27;t I did not know. Oh man. All the keys are like falling off my keyboard
+[1701.65] Jack: Horrendous. Well my keyboard update you only had one key missing before did you buy that set of keycaps?
+[1708.41] Curry: No, I got in a fight with the person on eBay
+[1715.29] Jack: And they blocked me
+[1717.61] Curry: even better story
+[1719.97] UNKNOWN: What did you do? How do you know? I&#x27;d like to buy these keys, please
+[1724.29] Curry: Here&#x27;s my PayPal and is my offer and they declined it twice
+[1729.65] Jack: And in on the final one, I told him to stick the keys up his arse. Oh
+[1736.57] UNKNOWN: No, if you wanted four quid for one key
+[1740.05] UNKNOWN: Oh
+[1742.05] Jack: Yeah
+[1743.49] UNKNOWN: And then he blocked me
+[1745.97] UNKNOWN: Four quids for one key Wow
+[1749.33] UNKNOWN: Is it made of gold or something? So luckily because I&#x27;m doing all this fettling. I&#x27;ve now got my
+[1756.65] Jack: File and I just use that to press the L key
+[1762.13] UNKNOWN: It&#x27;s a good thing there aren&#x27;t many owls in ldo or brighten till I fly
+[1767.61] UNKNOWN: You know an entire keyboard is some four quid on Amazon. Yeah, I
+[1772.09] UNKNOWN: Like this keyboard. Well, I don&#x27;t know why the keys keep coming off
+[1779.21] UNKNOWN: He blocked himself with the key I
+[1784.97] UNKNOWN: Didn&#x27;t I
+[1787.33] UNKNOWN: Know it&#x27;s bad. Yeah, so I&#x27;m still missing an elk a so if it carries if it carries on f9 is gonna get it
+[1795.89] UNKNOWN: and
+[1797.41] UNKNOWN: I&#x27;m just gonna like take the f9 key off and put it where the elk is
+[1802.09] UNKNOWN: Make sense
+[1805.09] SPEAKER_01: Right now on it. Yep. That&#x27;s my plan. She&#x27;s what I&#x27;m saying. It&#x27;s you doesn&#x27;t really matter spacebarrier
+[1815.01] Jack: The glorious day I think about that the glorious days of space bear and
+[1820.49] Jack: The dog was a dog called
+[1823.29] Jack: Pickles oh
+[1825.29] UNKNOWN: You&#x27;d mean for the KFC game. Yeah, it&#x27;s what make any sense to 90% of the people watching this. I
+[1831.77] Jack: Miss those days man playing games with curry ken. It was awesome
+[1836.73] UNKNOWN: This episode was recorded in front of a live online audience
+[1840.37] SPEAKER_01: Downloaded and edited to make sense when it played audio only
+[1843.73] SPEAKER_01: Sensors to please the iTunes people hosted on the internet forwarded through to your podcast provider
+[1848.69] SPEAKER_01: Downloaded playing on your device and is now playing in your ears all thanks to our patreons
+[1854.25] SPEAKER_01: Consider joining them and you&#x27;ll also get other online benefits find out more at patreon.com
+[1860.57] SPEAKER_01: slash let&#x27;s drone out I&#x27;ve seen in the in the discords that there&#x27;s been a few people mainly numbskull and
+[1869.89] SPEAKER_01: Bellerich
+[1871.01] SPEAKER_01: Steven who have been
+[1873.21] UNKNOWN: getting on the shark bike train and
+[1876.81] SPEAKER_01: Been hunting around for cameras and receivers and things and just snapping them up when they become available
+[1884.65] UNKNOWN: Is that I mean
+[1887.05] UNKNOWN: Is that anything I mean you&#x27;ve got your open HD curry you&#x27;re going that way it seems like
+[1893.09] UNKNOWN: I&#x27;m going that way because it&#x27;s cheap, and I&#x27;ve already bought some pies so under there. Yeah
+[1899.25] UNKNOWN: What might you jack are you not being tempted away from analog at all?
+[1904.09] SPEAKER_01: No, I
+[1909.09] Jack: Don&#x27;t yell up turn can we just set up a go fund me for Jack to get a new keyboard
+[1917.73] UNKNOWN: No, I don&#x27;t know I&#x27;m still undecided
+[1922.13] UNKNOWN: On what what I want to I want an open thing
+[1928.81] UNKNOWN: The HD goggles
+[1931.81] UNKNOWN: And I don&#x27;t I&#x27;m not too sure
+[1938.02] SPEAKER_01: RC the botics yes, there is a
+[1941.26] SPEAKER_01: Ldo discord which
+[1944.26] SPEAKER_01: Hopefully you should be able to find in the description below
+[1949.06] UNKNOWN: Should be a link
+[1953.66] SPEAKER_01: The reason I just disappeared was to show you something which I thought was quite interesting
+[1959.06] Curry: This is a Raspberry Pi
+[1961.22] Curry: Cm4 which means it&#x27;s a computer module which is very small
+[1966.38] Curry: Compared to the regular Raspberry Pi cuz you don&#x27;t have very shiny pins. You don&#x27;t have all the thingies and
+[1973.14] Curry: Somebody called Flavio in Italy has produced this open source
+[1978.22] Curry: Piece of hardware called the hang on I should say it right if I&#x27;m gonna say it
+[1985.5] UNKNOWN: It&#x27;s written on this instruction hold on
+[1989.22] UNKNOWN: The ocean
+[1991.06] UNKNOWN: OC HIN like that
+[1993.78] Curry: Which is this thing which has connectors there and there to fit the compute module on like so and
+[2000.98] Curry: Then what you do on the top
+[2003.62] UNKNOWN: You&#x27;d then fit this on and you&#x27;ll notice this has various holes for mounting
+[2008.1] Curry: And so you end up with sort of this situation like it&#x27;s a little stack and then on top of the stack
+[2013.7] Curry: You would put on your flight controller and thus you end up with a much neater solution for like open HD
+[2020.42] UNKNOWN: And what this is this is done. It&#x27;s got
+[2023.82] UNKNOWN: Regular pads here so you can put like a regular battery and it does all the voltage
+[2030.46] Curry: Regulation there and then it&#x27;s got normal
+[2033.54] Curry: connectors so you can run USB at these to your
+[2036.78] Curry: Wi-Fi module and you&#x27;ve got your arts here to connect your telemetry to your flight controller and stuff
+[2042.58] Curry: So that should be a much neater solution. So much better than your regular
+[2046.9] UNKNOWN: Big Raspberry Pi is what exactly looks like what credit card size
+[2051.66] SPEAKER_01: Is that about right? Maybe even a bit shorter in square slightly smaller much much smaller
+[2057.46] UNKNOWN: Than let&#x27;s see. I&#x27;ve got what&#x27;s this? This is an ESC board. So this is a 30 mil by 30 mil
+[2064.26] Curry: So you can see it&#x27;s not that much bigger
+[2067.06] UNKNOWN: Yeah, it&#x27;s a tiny tiny little bit wider
+[2070.7] SPEAKER_01: Then a 30 by 30 board and a little bit longer about one centimeter longer or something like that
+[2076.82] UNKNOWN: Yeah, so it&#x27;s not it&#x27;s not stupid
+[2079.62] Curry: Stupidly longer and this this the idea of this one is to go in the plane that Richard has just dispatched to me
+[2085.66] Curry: To see how that goes together
+[2087.66] UNKNOWN: But I thought that was an interesting idea the the only thing that&#x27;s slightly lacking
+[2092.62] UNKNOWN: As far as open HD goes and there&#x27;s a someone called it&#x27;s called Ruby HD or something like that
+[2098.5] Curry: Someone else has written something
+[2100.94] Curry: Is the cameras the cameras are all a bit naff and they use that CSI connection, which is this massive?
+[2108.22] Curry: Ribbon cable, which aren&#x27;t the best for flexibly
+[2112.54] UNKNOWN: Doing things so that&#x27;s that&#x27;s the only issue I&#x27;ve got with that, but that should be interesting
+[2117.78] UNKNOWN: And the other thing Richard works just linked to the github for me there. Okay, that&#x27;s God bless Richard work
+[2125.56] Curry: The other thing with open HD as far as
+[2129.44] UNKNOWN: We&#x27;ve seen so far on your ground vehicles. Anyway, I think it&#x27;s a fair bit of latency, right compared to
+[2137.84] SPEAKER_01: Looking about a hundred
+[2141.32] Curry: Milliseconds
+[2142.76] Curry: Is the best is looking at the moment one thing I&#x27;m I&#x27;ve organized doing
+[2148.36] Curry: after I get my next open HD project is talking to the guys that are running a
+[2154.6] Curry: The moment is basically a patreon
+[2157.6] Curry: They&#x27;re running to try and create
+[2160.44] UNKNOWN: a sort of single board
+[2163.36] UNKNOWN: to replace the the Raspberry Pi
+[2166.48] Curry: The idea of this is they can have their own chip that will be specialized in encoding decoding video
+[2173.64] Curry: That&#x27;s that&#x27;s the latency at the moment. It&#x27;s like
+[2176.84] UNKNOWN: using a single board computer
+[2179.32] UNKNOWN: Runs a whole bunch of OS code and other stuff and it&#x27;s like oh we&#x27;d like now aren&#x27;t you to compress this video?
+[2184.92] Curry: It&#x27;s like yeah, yeah, I&#x27;ll get to that. So yeah, there&#x27;s there&#x27;s this
+[2188.64] UNKNOWN: Delay because it&#x27;s doing other stuff if you look at stuff like the DJI goggles
+[2192.64] Curry: They&#x27;ve got specialist silicon that literally just takes this image
+[2198.32] Curry: Compresses it into something small squirts it through the goggles and such the latency is very small
+[2205.12] Curry: and if you can replace a
+[2208.28] Curry: Single board computer with a specialized chip that just does this one thing you can bring that down a lot. So these guys are doing
+[2215.0] UNKNOWN: Their own designs to try and do that
+[2216.96] Curry: So I&#x27;m hoping to talk to them in the next few months to see how far they&#x27;ve got along there
+[2220.96] Curry: So that they&#x27;re trying to get the at the moment. They&#x27;re aiming for
+[2225.68] Curry: about 60 millisecond latency, which is similar to what the
+[2230.96] UNKNOWN: What&#x27;s it called the other single board computer?
+[2234.64] UNKNOWN: Which has got all these Nvidia cores on it, which I now can&#x27;t remember the Jetson nano Jetson nano
+[2238.72] SPEAKER_01: Yeah, the Jetson nano because it&#x27;s much faster can bring that latency down a little bit. So
+[2245.04] UNKNOWN: Bringing it down to that might be even better, but I&#x27;m fully intending to now
+[2249.88] UNKNOWN: Having failed dismally on the f450 with iNav. I&#x27;m like screw it. I&#x27;m just gonna put on a beta flight quad
+[2255.24] UNKNOWN: Which is gonna fly fast and if I crash into stuff, then I know it&#x27;s not suitable for that
+[2261.2] UNKNOWN: But I can also fly, you know more conservatively if I have to and see how it goes really
+[2268.48] UNKNOWN: Um, I saw in the chat earlier that
+[2272.64] SPEAKER_01: RC robotics plan for the weekend is to mess around with some carbon fiber to make a
+[2278.8] SPEAKER_01: new version
+[2280.4] SPEAKER_01: of his uh, black hornets
+[2283.04] SPEAKER_01: hornets again, um
+[2285.76] SPEAKER_01: Which is the little
+[2288.06] SPEAKER_01: helicopters
+[2289.28] SPEAKER_01: that were made for the military and sort of
+[2292.0] SPEAKER_01: Going around social media a while back and you&#x27;ve been making
+[2295.12] SPEAKER_01: Increasingly nice little scale models of them. I guess scale one-to-one scale kind of
+[2301.52] SPEAKER_01: Um
+[2303.2] SPEAKER_01: and the
+[2305.04] SPEAKER_01: The other kind of bit of carbon fiber that&#x27;s also been floating around recently
+[2309.68] SPEAKER_01: I mean it&#x27;s been posted in the chat from josh barb was
+[2313.84] SPEAKER_01: Just done a video on it yesterday
+[2317.04] UNKNOWN: Of the qubit
+[2319.28] UNKNOWN: uh, which is a like a
+[2322.64] UNKNOWN: Tiny
+[2323.92] UNKNOWN: Well, not tiny. It&#x27;s like a toothpick sized quad
+[2327.52] SPEAKER_01: um, but with a couple of carbon fiber wings
+[2331.12] SPEAKER_01: and going between
+[2332.8] SPEAKER_01: Uh, sort of the front two motors and going between the back two motors
+[2336.72] SPEAKER_01: So it&#x27;s kind of got aerodynamic lift from those
+[2340.24] SPEAKER_01: um
+[2341.44] SPEAKER_01: And I saw that going around a while back and I didn&#x27;t think it was really going to go anywhere
+[2346.48] SPEAKER_01: But it seems like I mean if josh barb&#x27;s well covering it that&#x27;s probably going to go somewhere
+[2351.36] UNKNOWN: um
+[2352.24] UNKNOWN: Yeah, that&#x27;s that&#x27;s quite an interesting
+[2354.8] SPEAKER_01: idea. I don&#x27;t really know I mean, I guess kind of like your uh
+[2359.6] SPEAKER_01: long-range
+[2361.04] SPEAKER_01: GPS cruise are you showing off earlier carry? I guess that&#x27;s kind of where that&#x27;s going to sit because I mean if you&#x27;ve got
+[2367.44] SPEAKER_01: A bit more aerodynamic lift that&#x27;s going to be good for cruising
+[2371.76] SPEAKER_01: um
+[2373.52] UNKNOWN: I guess so the the interesting thing about flying that and maybe this is the same for that sort of thing
+[2378.08] Curry: And i&#x27;ve seen the thumbnail of the video. I haven&#x27;t watched it. So I haven&#x27;t seen it all is
+[2382.64] UNKNOWN: I didn&#x27;t really noticed
+[2384.72] Curry: Um, like it was easy to fly in terms of pushing through the air and stuff
+[2388.72] Curry: I got like, you know, nine minutes out of a little 850 battery
+[2392.32] UNKNOWN: but when I was doing sort of some light acro when I sort of
+[2395.6] Curry: sort of went upside down and
+[2398.0] UNKNOWN: Came out of it. I noticed the thing dropped like a stone
+[2401.2] Curry: So clearly the thing must cut through the air quite nicely
+[2405.36] Curry: Um else it would just you know, I expected a regular quad to float
+[2408.8] Curry: So that&#x27;d be interesting with the wings because you&#x27;d expect it to be
+[2411.76] Curry: more floaty, I guess
+[2413.92] Curry: It&#x27;s kind of like you you you want to cut through the air easily, but at the same time
+[2418.56] UNKNOWN: You want to use these wings to your aerodynamic advantage to sort of not have to
+[2424.4] UNKNOWN: Put so much
+[2426.08] Curry: energy into it
+[2428.08] UNKNOWN: I have to watch the video. Yeah
+[2431.6] UNKNOWN: Um, i&#x27;m a bit confused
+[2434.0] UNKNOWN: because they
+[2435.6] SPEAKER_01: They&#x27;ve got like these little winglets at the end of them that I imagine i&#x27;m gonna do quite well aerodynamically
+[2441.04] SPEAKER_01: But I just thought that&#x27;s gonna make them
+[2443.2] UNKNOWN: a bit too stable
+[2446.0] UNKNOWN: You know, you&#x27;re gonna end up something. It is a bit more like a wing. I don&#x27;t know. We&#x27;ll see
+[2451.68] SPEAKER_01: um
+[2453.28] SPEAKER_01: Be interesting to see kind of if other people have picked that up as well and have a go
+[2458.0] SPEAKER_01: Missing around with some other ways of doing it. Yeah, sorry
+[2460.56] SPEAKER_01: It was sorry a while back and he was like posting up a
+[2464.72] SPEAKER_01: almost like a crowd fund I think for
+[2467.84] SPEAKER_01: Getting a bunch of these wings made and you can either buy the whole thing or just the wings
+[2473.28] SPEAKER_01: And I was looking at the wings and just like um
+[2476.08] SPEAKER_01: Let&#x27;s know like i&#x27;d quite like to have a go at this project because it&#x27;s this sort of thing is up my street
+[2481.52] SPEAKER_01: But on the other hand
+[2483.36] SPEAKER_01: seems like a lot of money for
+[2485.68] SPEAKER_01: A couple of things i&#x27;m not convinced to gonna do but also seems like something that would be fun to bodge
+[2490.4] Curry: Like just get some cardboard
+[2492.4] Curry: Gaffa tape it to a frame and see what happens
+[2494.4] UNKNOWN: Exactly. Exactly. Especially now i&#x27;ve got a laser cutter. Just sitting there waiting for me to do things with
+[2500.0] SPEAKER_01: That&#x27;s too posh old old shoebox pair of scissors
+[2505.68] UNKNOWN: Yep
+[2507.44] UNKNOWN: That&#x27;d be quite fun
+[2511.22] UNKNOWN: Yeah, I suppose
+[2512.66] Curry: If you take it to the extreme where you&#x27;re like much more of a wing surface with a quad
+[2517.62] Curry: You&#x27;ve basically got like a veto plane, haven&#x27;t you but perhaps without wing surfaces
+[2524.42] UNKNOWN: But I suppose it might be interesting certainly
+[2527.22] UNKNOWN: How how is your your veto wing any any progress on it?
+[2532.02] SPEAKER_01: since
+[2533.06] SPEAKER_01: Scaring the **** out of myself with it. You could take it wing racing on saturday. I could take it wing racing on saturday. I&#x27;m not
+[2540.34] SPEAKER_01: Going to
+[2542.26] SPEAKER_01: I saw the video of you like oh, this is after me flying and it was just like you&#x27;re shaking
+[2549.68] Jack: Trembling a hand. Yeah, it it was a handful. Um
+[2555.78] SPEAKER_01: It took me quite a while to
+[2558.26] SPEAKER_01: Calm down after that one. It was it&#x27;s uh, yeah a little bit energetic needs a bit of tuning
+[2565.3] UNKNOWN: uh
+[2566.42] SPEAKER_01: I
+[2567.7] SPEAKER_01: Am very close to giving up with archery pilot and just sticking an eye nav on it and assuming it will probably work
+[2574.02] SPEAKER_01: better
+[2575.14] SPEAKER_01: Or even beta flight or something. I don&#x27;t know
+[2578.18] SPEAKER_01: I just I just want the idea that it can
+[2581.04] SPEAKER_01: stabilize
+[2582.26] SPEAKER_01: both in quad mode and in
+[2585.62] UNKNOWN: Well bike up to mode and in wing mode
+[2589.54] UNKNOWN: All right
+[2591.62] Curry: Any of you see daniel? I see test flight latest video
+[2595.3] Curry: Oh, that&#x27;s so good up and down the seattle river for yeah, like 16 hours without weaning once
+[2601.86] Curry: that was interesting because
+[2603.86] UNKNOWN: That guy is so experienced on arty pilot
+[2606.18] Curry: He&#x27;s done a lot with it
+[2607.62] Curry: But if you notice if you look at your screen all the way through it keeps saying like compass unhealthy
+[2614.1] Curry: All the way through sensor. Yeah
+[2617.78] Curry: It just decides to turn off
+[2619.62] Curry: And going to a boat and another time the entire thing just decides to stop working and he has to reboot it
+[2626.02] UNKNOWN: But um, yeah aside from that it was it was a fun video
+[2630.1] Jack: Don&#x27;t do many updates for it or is it just been released and that&#x27;s it
+[2634.42] UNKNOWN: Have they stopped working on it?
+[2636.98] SPEAKER_01: There are updates on it. It&#x27;s but it&#x27;s more kind of
+[2640.98] SPEAKER_01: more eye nav than beta flight
+[2643.22] UNKNOWN: Yeah
+[2644.5] SPEAKER_01: It used to be very heavily funded by uh, what was it 3d robotics that?
+[2650.1] Curry: Yeah, 3d xr right
+[2652.74] Curry: So anymore, it&#x27;s I guess it&#x27;s yeah. Well, I think they they kind of
+[2657.38] Curry: Even vectors gone off. I think because they were on the eagle tree went didn&#x27;t they?
+[2663.38] UNKNOWN: 3d xr I think started off basically just using literal arduino&#x27;s and that software and sort of
+[2671.3] SPEAKER_01: selling
+[2672.5] SPEAKER_01: Putting kind of kits together and selling those I think
+[2675.7] SPEAKER_01: from memory from way back when
+[2678.74] UNKNOWN: Um, yeah
+[2682.63] UNKNOWN: Uh, but then it&#x27;s it&#x27;s kind of evolved quite a lot since then
+[2688.87] UNKNOWN: But uh, yeah
+[2691.03] SPEAKER_01: The rc test flight videos are so good
+[2694.55] UNKNOWN: Uh, especially like he did with the music now as well
+[2698.31] SPEAKER_01: like the songs
+[2699.75] SPEAKER_01: But a little the sea shanty
+[2701.59] SPEAKER_01: Yeah, well this time it was a sea shanty, but like he&#x27;s um had ones for his like he&#x27;s a crowner plan and all sorts
+[2709.99] UNKNOWN: Yeah, they have a lot of fun. I miss quinn though quinn was quite fun
+[2715.27] Jack: Like when he used to fly with her that was that was really good
+[2721.11] UNKNOWN: But yeah, that&#x27;s a while I haven&#x27;t seen quinn for ages so I don&#x27;t know what the deal is with that but
+[2727.83] UNKNOWN: It was just uh, you know, it&#x27;s just like it&#x27;s amazing what he gets up to
+[2732.95] Jack: and like even um
+[2735.43] Jack: Like you know like fiberglassing stuff and that
+[2738.95] Jack: He&#x27;s tempting because you&#x27;ve seen like flight tests do that lately, haven&#x27;t they fiberglass there?
+[2743.99] Jack: They&#x27;re foamies and that you could just imagine like someone like lurgy doing that being an absolute weapon
+[2753.27] UNKNOWN: Yeah, doing doing like a wing yeah like a race wing I think fossil has been talking about that for
+[2760.47] SPEAKER_01: Years, so I wonder whether he might bring something on saturday
+[2766.63] UNKNOWN: My good buddy richard from the chat
+[2770.07] Curry: Um did try that once on what was it?
+[2773.75] Curry: it was um
+[2775.67] Curry: it was like a sort of
+[2779.28] Curry: Bixler type plane, but I think it went fine until the last coat
+[2783.68] Curry: And then he got some sort of dribbles in it
+[2785.84] Curry: So you ended up with this thing where the fiberglass was like smooth
+[2789.52] Curry: but down the bottom of the plane it like
+[2791.84] UNKNOWN: Congealed into this block and I think that plane had to be scrapped and tried again
+[2797.12] Curry: It&#x27;s um, it&#x27;s quite
+[2799.68] Curry: Uh tricky to do or tricky to get right easy to do tricky to get right. I think
+[2806.56] UNKNOWN: Looks like order order pilot based RC drones might be impossible to ensure
+[2812.56] Jack: For commercial work under the rules in the near future
+[2818.96] SPEAKER_01: Why is that then? Yeah, I don&#x27;t I don&#x27;t know where that would be
+[2823.76] Curry: Because there&#x27;s some really big, um commercial companies that are
+[2828.08] Curry: That are behind some of the
+[2830.08] Curry: One of these sort of steering committee things that have
+[2832.48] Curry: Sort of taken that code and putting their own stuff on it and selling very expensive sort of commercial products. Yeah
+[2838.32] Curry: quite a big thing for
+[2840.16] SPEAKER_01: The really high-end stuff like if they&#x27;re doing something a bit more
+[2844.72] SPEAKER_01: Funky than you can do with just a DJ. I&#x27;m a trees
+[2848.88] SPEAKER_01: um
+[2850.32] SPEAKER_01: I mean, yeah, they&#x27;re not going to be able to get it like a C rating and sell it
+[2855.76] UNKNOWN: Directly to people that way, but I imagine they&#x27;ll be kind of developing things and selling them as a
+[2863.52] SPEAKER_01: uh
+[2865.28] SPEAKER_01: Service, I imagine more than a thing because I guess that will be a thing is all the you know in at some point
+[2874.32] UNKNOWN: If you are selling a kit or a ready to fly model or almost ready to fly model or anything like that
+[2879.92] SPEAKER_01: You will have to get it C rated like, you know, the C naught C1 C2 C3 D4. I think it goes up to you
+[2887.68] UNKNOWN: um
+[2888.56] SPEAKER_01: Yeah, so
+[2889.92] SPEAKER_01: I guess that would be an issue
+[2894.29] UNKNOWN: But I wouldn&#x27;t have thought it would stop you from
+[2897.49] SPEAKER_01: building one
+[2900.87] UNKNOWN: Maybe the insurers would have something to say about it. I don&#x27;t know not really
+[2905.59] SPEAKER_01: had
+[2906.79] SPEAKER_01: Anything to do with well, hence voice
+[2909.35] Jack: Yeah, he said lie ensure commercial work
+[2912.71] SPEAKER_01: Yeah, but I he also said under the rules
+[2915.99] UNKNOWN: um
+[2917.03] Curry: Tell spits talking about having to be C certified
+[2920.79] UNKNOWN: Yeah, but yourself or
+[2923.19] UNKNOWN: well, uh C certifications are for
+[2927.43] SPEAKER_01: Drone, you know kits
+[2930.15] SPEAKER_01: or ready to fly or anything in between those two
+[2934.55] SPEAKER_01: being sold so
+[2937.27] UNKNOWN: If you just build one yourself
+[2939.67] SPEAKER_01: That&#x27;s never going to have to be C certified
+[2943.11] UNKNOWN: Unless they change the rules
+[2944.87] UNKNOWN: But they have there&#x27;s there&#x27;s nothing saying that that will ever be the case
+[2949.35] SPEAKER_01: Uh, they have specifically got a thing there for if you&#x27;re building something yourself
+[2954.15] SPEAKER_01: You don&#x27;t have to worry about C certification
+[2958.42] UNKNOWN: Yeah, is it am I right in thinking in your previous job you had a whole?
+[2963.3] Jack: um C certification
+[2965.94] SPEAKER_01: We did uh
+[2967.7] SPEAKER_01: Some things that were you know, we designed and made that were C
+[2972.8] SPEAKER_01: Certified we got C E certification for
+[2976.66] UNKNOWN: um
+[2977.78] UNKNOWN: Yeah, how do you go about doing that?
+[2980.1] UNKNOWN: Like especially with a drone surely that&#x27;s a like you got frequency
+[2984.58] Jack: Don&#x27;t lick it with the lead solder
+[2986.9] Jack: well, it depends what it is and what you&#x27;re selling it for and how different it is from
+[2992.42] SPEAKER_01: Um
+[2993.7] SPEAKER_01: Stuff that&#x27;s on the market already and the bits that you&#x27;re building it with and all this kind of thing like if you&#x27;re taking stuff
+[2999.7] SPEAKER_01: That individually all has a loaded certification on it. Like if everything you&#x27;re building it with
+[3005.54] SPEAKER_01: already has EMC certification
+[3008.66] SPEAKER_01: And stuff like that then it&#x27;s quite easy to
+[3012.26] SPEAKER_01: just
+[3013.22] SPEAKER_01: have
+[3014.34] SPEAKER_01: Another bit of paper that just says yeah, everything in it is fine. Therefore. It is fine as well
+[3020.34] SPEAKER_01: um
+[3022.34] UNKNOWN: a lot of what we were doing was
+[3024.98] SPEAKER_01: a case of going
+[3026.98] SPEAKER_01: We we were actually self-certifying, which is the thing you can do for certain things
+[3032.1] SPEAKER_01: We were actually we we&#x27;ve
+[3034.66] SPEAKER_01: Uh, you know during the height of covid problems. We were self-certifying
+[3040.02] SPEAKER_01: medical devices
+[3041.86] SPEAKER_01: because
+[3042.98] SPEAKER_01: we could um
+[3046.18] UNKNOWN: And you know it it it was uh
+[3049.54] UNKNOWN: But it there&#x27;s
+[3052.02] SPEAKER_01: a
+[3053.3] UNKNOWN: It can go from
+[3056.02] SPEAKER_01: Depending on what you&#x27;re doing it can go from
+[3058.74] SPEAKER_01: Writing a bit of paperwork and saying yes, this is safe
+[3063.86] UNKNOWN: Because it is obviously safe and I don&#x27;t have to prove anything else
+[3067.78] SPEAKER_01: up to
+[3069.38] SPEAKER_01: years of testing and
+[3071.7] SPEAKER_01: Getting other third parties with very special laboratories doing those things to it
+[3077.14] SPEAKER_01: Toys particularly
+[3079.46] UNKNOWN: Like medical devices and toys are like the two most difficult things to do
+[3084.66] UNKNOWN: Um, and yeah, like I I
+[3088.02] SPEAKER_01: Wouldn&#x27;t want to get involved in trying to get something with a toy certification. So to get something c zero certified
+[3094.66] SPEAKER_01: I think it&#x27;s probably going to be a massive pain in the ass
+[3099.54] UNKNOWN: Um, it makes you wonder how lego ever got sold
+[3102.58] Curry: Did they not just do a simple test where someone stands on a piece and shrieks in pain and said this can&#x27;t be certified
+[3109.22] UNKNOWN: Oh lego do a lot of testing
+[3112.66] UNKNOWN: they like
+[3115.06] SPEAKER_01: It&#x27;s crazy
+[3116.18] SPEAKER_01: The the sorts of things that they they do for getting a new lego brick certified
+[3122.5] Curry: Is that is interesting because they&#x27;re all small enough to be swallowed and if you stand on them, they hurt like hell
+[3128.1] SPEAKER_01: so
+[3129.14] UNKNOWN: Well, that&#x27;s why they&#x27;ll have the the age rating on it that will be like
+[3133.3] SPEAKER_01: Four and above or something like that the Saturn
+[3135.7] SPEAKER_01: Yeah, and the leg of men heads have now breathable holes so that when you choke on it, you can breathe through the little
+[3144.5] SPEAKER_01: Because it&#x27;s got to be
+[3146.02] SPEAKER_01: bigger than a certain size and it&#x27;s got to have holes no smaller than a certain size and
+[3152.1] SPEAKER_01: There&#x27;s there&#x27;s just there&#x27;s so much
+[3154.98] UNKNOWN: Yeah, robin fpv makes a good point. How did they test that?
+[3158.34] Curry: Do they stick them at children&#x27;s noses plus get them to eat them just to test this out?
+[3164.02] UNKNOWN: We want to make sure this this comes out in the poo undigested. So you&#x27;re not absorbing any of the lego brick toxins
+[3172.1] UNKNOWN: Yeah, is it true like mega does a photo degrade or break down and become brittle and stuff as well
+[3177.78] Jack: That&#x27;s why there&#x27;s like tons of it on a beach somewhere. I&#x27;ll have a load of uv stabilizers in there i&#x27;m sure
+[3183.7] SPEAKER_01: um
+[3185.3] UNKNOWN: Because it is expected to last quite a long time
+[3189.14] Curry: Yeah, people know we&#x27;ve done hornets. We&#x27;re moving on to lego bricks badger badger
+[3194.5] Jack: What a legend lego bricks were certified by the same lab that passed the three-pin plug
+[3200.42] Jack: or
+[3201.54] UNKNOWN: bs
+[3204.32] SPEAKER_01: 1465 what is it? I can&#x27;t remember. It&#x27;s been too long
+[3209.38] UNKNOWN: um
+[3210.9] SPEAKER_01: Richard work has got more of the comment that he was referring to
+[3214.02] SPEAKER_01: Uh, he says I was trying to get all the drones we use for research insured through my university&#x27;s insurer and they only accept it
+[3222.02] SPEAKER_01: They only accepted to ensure the dji ones
+[3225.06] SPEAKER_01: Classing the others as home-built
+[3227.38] UNKNOWN: And refusing to insure it. So now I have hundreds of pounds
+[3230.9] SPEAKER_01: Of argi pilot base tech that I can&#x27;t really use anymore as I&#x27;m not willing to risk flying them uninsured for work purposes
+[3238.02] SPEAKER_01: I mean
+[3239.14] SPEAKER_01: Yeah, if you&#x27;re flying something commercially you need to have commercial light
+[3244.34] SPEAKER_01: insurance
+[3245.94] SPEAKER_01: I can imagine that they wouldn&#x27;t
+[3248.34] SPEAKER_01: Want to do something that you&#x27;re classing as home-built
+[3252.5] UNKNOWN: But maybe then you have to find a different insurer. That&#x27;s got a different way of doing it. I mean that&#x27;s just
+[3258.26] SPEAKER_01: I don&#x27;t know. There&#x27;s out way way out of anything that I know about
+[3263.06] UNKNOWN: I wonder
+[3266.58] UNKNOWN: I wonder if like, you know, you could like pay someone to build it or you know, like a little mot for drones
+[3274.74] UNKNOWN: You know like I imagine that&#x27;s probably
+[3277.14] SPEAKER_01: I mean that&#x27;s probably gonna have to be a thing, right? Is that if you&#x27;re building something?
+[3281.46] SPEAKER_01: That you want to use commercially
+[3283.78] SPEAKER_01: You&#x27;re probably gonna have to talk to the caa about it
+[3286.82] UNKNOWN: I mean
+[3288.1] Jack: Yeah, oh by the way, I checked out, you know the the laws you were telling me about the whole
+[3292.82] Jack: You had a friend with the one wheel and everything and the whole laws of electric scooters and stuff
+[3299.3] Jack: You were right and it is absolutely horrendous
+[3303.62] Jack: It&#x27;s like if it hasn&#x27;t got an mot you get three points
+[3307.94] Jack: If it&#x27;s not insured you get another three points
+[3311.86] Jack: And like it&#x27;s like 24 grand fine
+[3315.94] UNKNOWN: And you know if you don&#x27;t have a license
+[3318.66] Jack: That&#x27;s a thousand pound fine
+[3321.38] UNKNOWN: I was like I looked that up because like, you know, like not that frank, you know
+[3326.5] Jack: I ever doubted you frank for a second
+[3328.98] Jack: But I was like, let&#x27;s have a look, you know, and I was like bloody
+[3333.46] Jack: Wow
+[3334.66] Jack: That is yeah. Do you not ride motorized scooters or bikes or anything?
+[3339.7] Jack: Yeah, there&#x27;s the police will actually vehicles
+[3342.98] SPEAKER_01: that aren&#x27;t like apart from
+[3345.78] SPEAKER_01: A bicycle that is you know an e-bike but it is only pedal assist
+[3350.82] SPEAKER_01: That is that is the limit of what is legal anything else?
+[3354.42] SPEAKER_01: You could lose your license for if you&#x27;re not there
+[3358.1] Curry: It seems like the police aren&#x27;t going after people though because I see
+[3363.7] UNKNOWN: These scooters around
+[3365.7] Curry: everywhere
+[3366.82] UNKNOWN: It does depend where like if you&#x27;re going
+[3370.5] SPEAKER_01: as a friend of mine
+[3372.5] SPEAKER_01: Knows from saw personal experience if you&#x27;re going around
+[3377.3] SPEAKER_01: In the bike lanes of london during commuter time
+[3381.06] UNKNOWN: Uh, there are police standing on the street corner waiting to go. I think that&#x27;s an electric vehicle
+[3388.1] SPEAKER_01: Can you come over here, please? I&#x27;m seizing that i&#x27;m putting that on the back of a
+[3392.74] SPEAKER_01: You know clamping vehicle and that&#x27;s good. You&#x27;re going to have to retrieve it from the pound and get six points on your license
+[3400.93] UNKNOWN: What you need then is to not have a driving license. I always find interesting for people that have no license
+[3406.61] Curry: Then caught stealing cars and then they have the license suspended
+[3410.45] UNKNOWN: That they don&#x27;t have
+[3412.29] UNKNOWN: It&#x27;d be like that
+[3414.69] UNKNOWN: You should have your license suspended for joining a e motor vehicle
+[3421.49] UNKNOWN: I had to explain to you
+[3424.61] UNKNOWN: Sorry, I was just gonna say I had to explain to the physio that I saw last week when she was looking at my other knee
+[3429.57] Curry: That looked a bit lumpy
+[3431.25] UNKNOWN: I said what what happened to this one? I saw I fell off a skateboard and she said oh, when was that?
+[3435.01] Curry: I said, I don&#x27;t know two years ago and she&#x27;s like what?
+[3438.85] Curry: What were you doing an electric skateboard two years ago? Oh, yeah falling off of it. Thanks
+[3445.89] Curry: There&#x27;s an electric skateboard account as an electric vehicle, yes
+[3450.29] UNKNOWN: Like oh my god, I don&#x27;t have an extra skateboard
+[3453.57] Curry: I have a remote control skateboard that I occasionally stand on and then fall off. That&#x27;s different
+[3459.49] UNKNOWN: So it&#x27;s just it&#x27;s just another RC ground vehicle
+[3463.89] UNKNOWN: That that is actually an interesting thing. Like if you were driving around
+[3469.17] UNKNOWN: Just remote control would that be fine?
+[3473.01] UNKNOWN: I think so
+[3474.21] SPEAKER_01: It&#x27;s all by the BMFA. You&#x27;d have insurance
+[3477.09] Jack: Because yeah, like if if otherwise it would mean that
+[3481.81] SPEAKER_01: Like driving a radio controlled car around that I just happened to be stood on
+[3488.85] UNKNOWN: I don&#x27;t know. I don&#x27;t know how that works. Oh man
+[3492.85] UNKNOWN: Tune in next week where we find now
+[3496.93] Jack: What happens if you take?
+[3499.17] SPEAKER_01: like an e quad bike
+[3501.57] SPEAKER_01: Put a radio control on it and just drive that around the streets
+[3505.89] SPEAKER_01: They&#x27;ll probably do you for terrorism. If you literally sat there with your little controller going like this and turning the wheel
+[3512.53] Curry: I think you&#x27;ll be okay
+[3514.53] UNKNOWN: Yeah, that&#x27;s the point, right? What happens if you&#x27;re on an electric scooter, right?
+[3519.89] Jack: But it&#x27;s not being controlled by you. It&#x27;s been controlled by someone
+[3523.73] Jack: In the passenger seat of a car next to you. You&#x27;re just on it
+[3529.09] UNKNOWN: And but you&#x27;re not in control of it
+[3530.85] Jack: It feels like everyone&#x27;s in so much more trouble than if you were just riding a scooter in the first place
+[3535.81] Curry: I was just thinking that how far could you push that? I mean
+[3539.33] SPEAKER_01: Couldn&#x27;t like what happens if you take an untaxed unregistered car and radio control it like is that all of a sudden?
+[3547.41] SPEAKER_01: Fine to just drive around the streets
+[3550.13] SPEAKER_01: Like it&#x27;s still a radio controlled car
+[3552.85] Jack: actual car
+[3554.53] UNKNOWN: No skin in the game. That&#x27;s right, but you wouldn&#x27;t be able to drive it on the streets. Would you?
+[3559.41] UNKNOWN: No
+[3560.61] UNKNOWN: That&#x27;s what I mean. If if you&#x27;re if no one&#x27;s in it and you&#x27;re just driving it around radio control
+[3566.93] UNKNOWN: It&#x27;s like a vehicle
+[3568.61] UNKNOWN: That&#x27;s an interesting one
+[3572.82] UNKNOWN: I think we found plenty of loopholes join in next week from hmp forward
+[3579.78] UNKNOWN: No, it&#x27;s guys you&#x27;ve been listening to let showing out
+[3582.34] Jack: Uh big massive. Thank you to all our patreons and people who tune in to watch this crap
+[3587.78] Jack: Uh, we love you. Uh frank roll the roll the
+[3591.62] Jack: Uh thing you&#x27;ve been joined by everyone&#x27;s favorite curry kitchen
+[3596.1] UNKNOWN: Goodbye
+[3597.3] UNKNOWN: And you stay frank. Bye
+[3599.94] UNKNOWN: And i&#x27;ve been brought to life lie and you&#x27;ve been listening to
+[3602.74] UNKNOWN: Like shown out. Thank you guys. Good night
+[3606.26] UNKNOWN: Bye
+[3608.26] Curry: Telemetry lost
+</pre></body></html>

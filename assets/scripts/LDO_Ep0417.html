@@ -1,0 +1,1302 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0417—LDO 417 - With Special Guest MUSTARDTIGER Of Formation Flight</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 417 ===
+Title: LDO 417 - With Special Guest MUSTARDTIGER Of Formation Flight
+Recorded: 2023-08-24
+Hosts: Stephen &quot;Belrik&quot; Howell, Andrew &quot;Frank&quot; Hyams, Wayne &quot;CurryKitten&quot; Andrews, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): MustardTiger
+Total audience: 1,189
+Platforms: YouTube (https://www.youtube.com/watch?v=OVXbDC6QsG8); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1601172114-letsdroneout-ldo-417-with-special-guest-mustardtiger-of-formation-flight.mp3)
+=====================================
+
+Check out Formation Flight online:
+https://formationflight.org
+https://github.com/FormationFlight/FormationFlight
+https://formationflight.org/getting-started/
+https://discord.com/invite/s6vEaN3Ucj
+https://www.youtube.com/watch?v=2xsQPJ3lDsE
+
+#LetsDroneOut #FormationFlight #FPV #Drone #Telemetry #ELRS #ExpressLRS
+
+[0.0] UNKNOWN: Hello, and you&#x27;re listening to Let&#x27;s Drone Out, a special thank you to our lovely patrons
+[6.28] Jack: that help donate so that we can pay the editor to remove the swear words and silly things
+[11.36] Jack: we say.
+[13.0] Jack: Massive thank you to…
+[14.4] Jack: Carlos Campos!
+[16.2] Jack: Art Faulkner!
+[17.84] Jack: Sam Dahmer!
+[19.68] Stephen: On with the show!
+[20.68] Stephen: Now on the tree we cover.
+[21.68] MustardTiger: Let&#x27;s Drone Out now.
+[52.12] Stephen: Hello, and welcome to Let&#x27;s Drone Out with our special guest Mustard Tiger.
+[58.32] Stephen: Tonight we&#x27;re going to be talking about Formation Flight, but before all that we are joined
+[63.48] Stephen: by Commander-in-Chief Frank.
+[66.92] Stephen: Good evening, hello!
+[68.8] Stephen: Everyone&#x27;s favourite, Curry Kitten.
+[70.96] Stephen: Hello!
+[72.24] Stephen: And our special guest, that way, Mustard Tiger.
+[75.68] Stephen: Hello!
+[77.32] Stephen: Also myself, Stephen Bellrick, bringing you a very interesting project this evening, Formation
+[83.36] Stephen: Flight.
+[85.36] UNKNOWN: Could you give us the rundown on Formation Flight, maybe the where and the why, and just
+[91.12] Stephen: kind of explain how you came about, the idea, and what you wanted to do with it?
+[96.52] Stephen: Absolutely, yeah.
+[98.44] MustardTiger: So Formation Flight, the kind of headline description, what it is.
+[102.92] MustardTiger: It&#x27;s open source inter-UAS positioning and telemetry for FPV.
+[106.88] MustardTiger: It&#x27;s a whole lot of words.
+[109.24] MustardTiger: If you&#x27;ve heard previously of the project, which went by a few names, iNav Radar, ESP32,
+[115.56] MustardTiger: iNav Radar, some variation of that.
+[118.76] MustardTiger: There were a couple of authors of that, Olivia C. being one of the main ones.
+[123.36] MustardTiger: This is sort of the spiritual successor to that project.
+[127.16] MustardTiger: So the general goal of this is, if you&#x27;re flying as a group, if you&#x27;re flying with
+[132.32] MustardTiger: anything you want to keep track of the position of, you have a small beacon device, which
+[137.4] MustardTiger: goes in every aircraft and shares position with other aircraft that are flying nearby
+[142.12] MustardTiger: you.
+[143.12] MustardTiger: The reason I came to developing this in any way, I always wanted to use iNav Radar.
+[150.84] MustardTiger: I do a lot of formation flying with some friends locally out here in the Pacific Northwest.
+[156.24] MustardTiger: And it&#x27;s really easy to lose each other when you&#x27;re doing Formation Flights, especially
+[159.32] MustardTiger: analog, especially any degree of long range.
+[162.44] MustardTiger: It&#x27;s easy to lose each other.
+[164.68] MustardTiger: When you do lose each other and you&#x27;ve got the perfect sunset, the perfect spot, everything
+[169.04] MustardTiger: is perfect, but you can&#x27;t find each other to get that nice Formation Flight shot.
+[173.04] MustardTiger: That&#x27;s frustrating.
+[174.04] MustardTiger: So I looked into iNav Radar.
+[177.16] MustardTiger: I had some of the hardware for it, some of the dev boards, but they seemed pretty heavy.
+[182.24] MustardTiger: And I&#x27;m also an R2 pilot user for my fixed wing stuff.
+[184.84] MustardTiger: So that was out the window for me off the hop.
+[188.76] MustardTiger: The first thing I did was made some light changes to the original iNav Radar project.
+[194.48] MustardTiger: So that it would function on Express LRS 900 megahertz hardware.
+[199.44] MustardTiger: That is significantly smaller, lighter, cheaper, and I already had it lying around.
+[203.88] MustardTiger: So that was perfect.
+[205.84] MustardTiger: The next thing I did was ported the OSD part from iNav into R2Pilot, so that I could use
+[212.04] MustardTiger: it with my R2Pilot aircraft, and then flew a couple of test flights with it.
+[215.36] MustardTiger: It worked great.
+[218.16] MustardTiger: And I decided, you know, there&#x27;s a few little tweaks I&#x27;d like to make to this.
+[222.28] MustardTiger: And maybe I can upstream it into iNav Radar.
+[225.76] MustardTiger: And as I started making more and more and more and more changes, it just kind of grew
+[229.6] MustardTiger: and grew and grew and grew, and eventually I took a look at the code, and it&#x27;s like less
+[235.12] MustardTiger: than 2% of iNav Radar&#x27;s original code still lives on.
+[239.56] MustardTiger: And most of it is vestigial, and I should probably clean it out.
+[243.18] MustardTiger: So at this point, I broke off the fork on GitHub, called it its own project.
+[249.28] MustardTiger: And now there&#x27;s two distinct projects.
+[251.96] MustardTiger: If you still want to run the original iNav Radar, it still exists.
+[255.84] MustardTiger: But Formation Flight is the spiritual successor, does all the same things, and hopefully does
+[260.48] MustardTiger: them cheaper, smaller, faster, all the nice things that I would hope to achieve.
+[265.52] Frank: So is that the difference then between Formation Flight and iNav Radar, it&#x27;s the hardware
+[270.16] Frank: that it needs to work?
+[271.96] UNKNOWN: Yeah.
+[272.96] MustardTiger: So hardware is the initial thing, right?
+[275.28] MustardTiger: iNav Radar runs on the sort of ESP32, LoRa dev boards you can get your hands on.
+[280.24] MustardTiger: They&#x27;re about 30, 45 US dollars, somewhere in that range from Aliexpress and the like.
+[285.92] MustardTiger: They weigh a good bit.
+[287.84] MustardTiger: They can be 50, 60 grams, and they&#x27;re pretty large.
+[291.6] MustardTiger: They&#x27;ve built in OLEDs, all sorts of things that, frankly, aren&#x27;t really necessary for
+[297.12] MustardTiger: the project.
+[298.12] MustardTiger: So yeah, the first thing I did with Formation Flight was to add additional hardware, a significant
+[303.4] MustardTiger: amount.
+[304.4] MustardTiger: I then went on, and in the process of all the many rewrites, I added support for the
+[309.76] MustardTiger: 2.4 gigahertz band, which means you can use the very small 2.4 gigahertz Express LRS receivers.
+[316.2] MustardTiger: And then sort of the main changes, the main reasons why somebody who currently uses iNav
+[320.56] MustardTiger: Radar might want to move to Formation Flight.
+[323.2] MustardTiger: It updates 10 times as fast.
+[325.16] MustardTiger: It supports six people in the air instead of four.
+[328.44] MustardTiger: It can use 2.4 gig, 900, and 433, as well as 868, of course.
+[335.08] MustardTiger: It has a very nice web UI for configuration and display of information as compared to
+[341.24] MustardTiger: the Bluetooth serial console that the original iNav Radar used.
+[345.88] UNKNOWN: Altogether, my goal with it was, as I said before, cheaper, better, faster.
+[352.04] MustardTiger: All around, it should be something now.
+[354.04] MustardTiger: You can install it in sub-250G aircraft very easily.
+[358.68] MustardTiger: Because it updates faster, the tracking is much tighter.
+[361.18] MustardTiger: It&#x27;s much easier to find people.
+[362.64] MustardTiger: All that.
+[364.04] UNKNOWN: That has a lot of features.
+[368.44] UNKNOWN: So I saw when I had a quick look through the website that it already works with iNav and
+[374.76] Curry: RduPilot, and you&#x27;ve written your own fork for beta flight until that&#x27;s in the code.
+[379.32] Curry: Have we got some screenshots of exactly what you would see as a pilot?
+[382.92] Curry: Obviously, you&#x27;ve got your SD, and basically, if I saw it right, you&#x27;ve got a little thing
+[387.32] Curry: saying, pilot B is this direction, or does it give height or distance, or what does it give?
+[396.84] UNKNOWN: Yeah, so I&#x27;m sending some links.
+[399.24] MustardTiger: Those are some links that describe it well.
+[401.32] MustardTiger: To be clear, the RduPilot changes are not yet upstreamed.
+[406.6] MustardTiger: I&#x27;ve been maintaining my own fork.
+[408.6] MustardTiger: I just want to make sure it is very, very, very safe before I consider upstreaming it.
+[412.68] MustardTiger: I&#x27;ve been flying it for a couple months now, though, and it&#x27;s been absolutely rock solid.
+[416.04] MustardTiger: So I think we&#x27;re at a good state where I should probably move to get it merged upstream.
+[421.56] MustardTiger: As to the OSD implementation, you might notice the iNav one is pretty,
+[427.32] UNKNOWN: in my opinion, complicated.
+[428.92] MustardTiger: It&#x27;s trying to be a HUD, which I think is a really, really cool idea.
+[434.28] MustardTiger: And of course, opinions are everybody&#x27;s own, right?
+[438.28] MustardTiger: And my opinion is that the HUD idea for a character-based OSD
+[443.4] UNKNOWN: just doesn&#x27;t really work for me.
+[446.76] MustardTiger: It jumps all over the place.
+[448.04] MustardTiger: It never quite shows you where the person actually is.
+[452.44] MustardTiger: Sometimes it covers them up while you&#x27;re trying to follow them.
+[455.72] MustardTiger: So when I ported this to RduPilot, I chose to take a simpler approach,
+[460.12] MustardTiger: which looks a bit like a home arrow with a altitude component as well.
+[465.32] UNKNOWN: I&#x27;ve got the second link I sent you.
+[469.08] MustardTiger: If you scroll down to the bottom there, I&#x27;ve got a screenshot from Analog DVR.
+[474.92] UNKNOWN: Was that the walk-sail example?
+[476.76] MustardTiger: The non-walk-sail one, though.
+[478.76] MustardTiger: So the walk-sail example, the one you&#x27;re looking at right now,
+[481.0] MustardTiger: this is from built into iNav, where you can see that sort of B element moving all over the screen.
+[486.92] MustardTiger: And then, yeah, this is the way I implemented it.
+[488.92] MustardTiger: Just above the wind speed in the bottom left, where you can see the letter C
+[494.44] MustardTiger: and an arrow and 1,500 meters.
+[497.24] MustardTiger: That&#x27;s saying back relative to the direction the aircraft is flying, 1,500 meters and down 124.
+[505.4] MustardTiger: This was a beacon not connected to an actual aircraft,
+[509.48] MustardTiger: which I&#x27;m not sure if we want to jump into that yet next.
+[513.96] UNKNOWN: If you have an agenda, we can stick with that.
+[517.8] Curry: Just interesting to see how it looks.
+[519.4] Curry: Because obviously, yeah, I&#x27;ll tell you a point.
+[521.16] Curry: If you&#x27;ve got a pixel-based OSD, then that sort of nice smooth thing on a radar screen
+[527.48] Curry: would work very well.
+[528.2] Curry: But when you haven&#x27;t, I think, as you said, it&#x27;s much more sensible to have just a fixed thing,
+[534.28] Curry: say the C is this way, and it&#x27;s here&#x27;s the altitude, and here&#x27;s how far it is away.
+[539.8] Curry: I think that works better.
+[540.44] Curry: Exactly, yeah.
+[541.4] UNKNOWN: And that&#x27;s what&#x27;s worked tremendously well for me.
+[543.32] MustardTiger: We&#x27;re all used to flying towards a home arrow if we need it.
+[545.48] MustardTiger: So this is the same kind of thing.
+[548.68] MustardTiger: So as I mentioned just a moment ago, this is a beacon,
+[551.4] MustardTiger: not necessarily connected to an aircraft.
+[553.72] MustardTiger: This is one of the other things I wanted to support with formation flight versus INAP radar.
+[558.76] MustardTiger: INAP radar requires being connected to an MSP-capable flight controller
+[563.48] MustardTiger: to establish its position and everything.
+[565.8] UNKNOWN: With formation flight, I implemented built-in GPS capabilities
+[569.96] MustardTiger: so that if your formation flight radio has its own GPS, it can be a beacon on its own.
+[576.12] MustardTiger: That might seem silly.
+[577.0] MustardTiger: Why would you want that?
+[578.36] MustardTiger: Well, a couple of things.
+[579.88] MustardTiger: One, if you&#x27;re doing cinematic work and trying to, say, follow somebody, follow a car,
+[584.6] MustardTiger: follow a you-get-the-idea, you stick these beacons in the car,
+[588.76] MustardTiger: you stick these beacons in whatever you want,
+[591.4] MustardTiger: and now you&#x27;ve got a real-time lock on exactly where they are.
+[595.4] MustardTiger: This allows you to do some really cool stuff.
+[597.16] MustardTiger: Everybody loves the cinematic shot where the drone rises over a visual obstacle, right?
+[602.92] MustardTiger: As they rise over the obstacle, the thing they&#x27;re supposed to be looking at is in-shot.
+[607.64] UNKNOWN: Normally, that&#x27;s hard to time.
+[608.84] MustardTiger: That&#x27;s hard to figure out, right?
+[609.96] MustardTiger: You&#x27;ve got to know where everybody is.
+[611.16] MustardTiger: You&#x27;ve got to be on radios.
+[612.6] MustardTiger: Now you&#x27;ve got an arrow pointing to exactly where that thing is you&#x27;re supposed to be following.
+[616.52] MustardTiger: It makes it much easier to hit that target.
+[619.72] MustardTiger: I guess you can do it with multiple participants as well.
+[623.0] MustardTiger: Yeah, exactly.
+[625.0] MustardTiger: This will work with up to six people in the air at a time.
+[628.2] MustardTiger: You and five of your best friends can all have this positioning up and running.
+[632.76] Frank: That does sound interesting.
+[635.24] Frank: You&#x27;re saying as well that the big feature of this is that it uses very cheap hardware.
+[639.48] Frank: I saw it as using, when I was looking at it, it was using the EP-1.
+[647.24] UNKNOWN: In the UK, that&#x27;s like 10 pounds for an E LRS receiver.
+[650.52] Frank: You don&#x27;t have to be using E LRS, obviously.
+[652.36] Frank: You can just have this being just the formation flight radio.
+[658.28] Frank: Is that what you&#x27;re then just wiring into a GPS?
+[663.16] UNKNOWN: Yeah, so it gets wired directly to an MSP speaking UART on your flight controller.
+[669.88] MustardTiger: Just the same ways you would wire in, say a DJI air unit or a walk snail unit, anything like that.
+[676.36] MustardTiger: Same exact configuration, just turn on the MSP flag and that&#x27;s what it takes.
+[680.52] MustardTiger: I&#x27;ve got specific instructions on the formationflight.org website for how to set up each
+[684.84] MustardTiger: flight controller, but not to get too far down that road.
+[689.0] MustardTiger: It&#x27;s not specific to Express LRS at all.
+[691.32] MustardTiger: You can use this with DragonLink, Crossfire, Tracer, E LRS, whatever you might choose to use.
+[698.68] MustardTiger: E LRS just happens to be a really good way to get
+[701.96] MustardTiger: affordable hardware, easy to find hardware, and lightweight hardware.
+[706.76] UNKNOWN: Yeah, absolutely.
+[707.48] Frank: I mean, if we&#x27;re saying that for 20 pounds, me and a mate could have these radios connected and
+[716.52] Frank: be seeing each other on our OSDs, that&#x27;s pretty impressive.
+[720.68] UNKNOWN: Absolutely, yeah.
+[721.56] MustardTiger: And versus the hardware that would otherwise be required to run iNav radar,
+[725.48] MustardTiger: looks like around 31 US dollars right now.
+[728.92] MustardTiger: And that&#x27;s per airframe, so that&#x27;s doubling that just to have the first dot on your screen.
+[736.6] UNKNOWN: Yep, all with smaller antennas, faster updates.
+[740.28] MustardTiger: Yeah, it&#x27;s hopefully a pretty compelling argument to be made.
+[744.2] UNKNOWN: Absolutely.
+[745.72] UNKNOWN: If someone&#x27;s beginning, I looked at the flashing side that the flashing is a little bit more
+[749.88] Stephen: involved than Express LRS, right?
+[751.56] Stephen: You need to use the kind of ESP programming tools, developer tools.
+[755.88] UNKNOWN: You got a couple options.
+[758.12] MustardTiger: For now, I haven&#x27;t built my own configurator or anything.
+[760.92] MustardTiger: Right now, the project is pretty much me and a couple of other folks who have made some
+[764.68] MustardTiger: contributions.
+[765.32] MustardTiger: Thank you very much, by the way.
+[767.08] MustardTiger: But to that end, Express LRS has almost a dozen regular devs.
+[772.04] MustardTiger: I&#x27;m soloing this.
+[773.48] MustardTiger: Yeah.
+[774.28] MustardTiger: No configurator, nothing fancy.
+[776.28] MustardTiger: The plus side is the binary packages we create in our build system,
+[781.08] MustardTiger: which includes automated builds every time I issue an actual release,
+[784.6] MustardTiger: right, can be web flashed to an ELS receiver.
+[789.0] MustardTiger: So if you have a brand new ELS receiver out of the package, you can boot it up,
+[793.56] MustardTiger: hop onto its Wi-Fi, upload formation flight, and now it runs formation flight.
+[797.0] MustardTiger: Oh, that&#x27;s really nice.
+[798.2] MustardTiger: Okay.
+[798.6] MustardTiger: Yeah, so nice and slick in that way.
+[801.56] UNKNOWN: And the subsequent updates are done over its own web interface as well?
+[806.36] UNKNOWN: Yep, that&#x27;s correct.
+[807.24] Stephen: All over the air updatable and everything.
+[809.8] UNKNOWN: Wow.
+[810.68] UNKNOWN: Suddenly, the existence of cheap Wi-Fi chips has made a lot of the configuration hassle
+[815.24] Stephen: evaporate.
+[816.36] Stephen: We often reminisce about old times on this show and VTXs, which had dip switches and
+[820.44] Stephen: the like, and it seems like a different world compared to that.
+[823.48] Stephen: That&#x27;s really impressive to be able to do that on 11 mils by 11 mil
+[829.24] UNKNOWN: under grams worth of hardware.
+[831.88] UNKNOWN: Exactly.
+[832.52] MustardTiger: Yeah, it&#x27;s really impressive what the ESP chips have allowed us to do.
+[837.08] MustardTiger: And especially, you know, keeping up with the timing of all six and
+[842.04] MustardTiger: the ESP just keeps on doing it.
+[843.96] MustardTiger: It&#x27;s happy to do it.
+[845.08] UNKNOWN: I think we can definitely all think back to a time where this would have been handy,
+[851.4] Frank: where we&#x27;ve been flying around as a group.
+[853.8] Frank: And like you say, particularly on the analog stuff,
+[857.24] Frank: but even with digital, finding people in the air, I mean, even with a fairly large model
+[865.0] Frank: to trace, it can be tricky sometimes if you&#x27;ve got a very dark model against the ground.
+[871.0] Frank: You get 50 yards away and all bets are off unless you&#x27;ve got perfect video, right?
+[875.32] UNKNOWN: Yeah, for people who haven&#x27;t tried it before, it is really difficult.
+[880.44] Curry: And getting the hang of it is a real skill.
+[883.32] Curry: And so we&#x27;ve done things in the past like we&#x27;ll do sort of a lap.
+[888.92] Curry: So we&#x27;re all going around a lap and we can kind of get each other.
+[892.52] Curry: But if you&#x27;re on sort of a further out and you&#x27;re trying to do some sort of epic chase
+[898.04] Curry: from a distance and you lose somebody, it&#x27;s like, where are you?
+[902.52] UNKNOWN: I&#x27;m over the trees.
+[904.28] Curry: Yeah, there&#x27;s trees everywhere.
+[905.4] Curry: We&#x27;re about over the trees by the field.
+[907.48] Curry: Yeah, that&#x27;s still like vague.
+[909.24] Curry: It just goes on and on.
+[911.0] UNKNOWN: Yeah, having that sort of thing is really handy.
+[913.4] Curry: And being able to just, even if you can&#x27;t see them and you&#x27;re starting to draw towards them,
+[917.8] Curry: if you can just see how far away, then you can manage your speed.
+[920.76] Curry: Because what can often happen is like, I see you.
+[924.52] Curry: Soaring by.
+[930.04] UNKNOWN: Oh, my apologies.
+[930.84] MustardTiger: I dropped the screenshot into the Formation Flight Discord.
+[935.16] MustardTiger: My apologies.
+[936.04] MustardTiger: Oh, well, I&#x27;m here.
+[936.84] MustardTiger: May as well shout that out.
+[937.72] MustardTiger: Hey, there&#x27;s a Formation Flight Discord.
+[939.88] MustardTiger: The link is in the description of this livestream if you want to jump into it.
+[944.12] UNKNOWN: That is how I got into it.
+[945.64] Frank: So, yep.
+[946.12] Frank: There you go.
+[947.0] MustardTiger: If you need any help setting it up.
+[948.52] MustardTiger: If you have any questions, I&#x27;m there pretty often.
+[952.68] UNKNOWN: And there&#x27;s a nice community of lovely folks who&#x27;d be happy to answer your questions.
+[957.8] Stephen: This is what you see off of your tiny little ERS receiver.
+[962.76] UNKNOWN: Yeah, the image looks like it&#x27;s getting cut off just a little bit.
+[965.72] MustardTiger: It was a little bit more on the right side.
+[967.0] MustardTiger: I&#x27;m not sure if...
+[967.8] MustardTiger: Let me try and zoom.
+[970.44] Stephen: I had it zoomed in.
+[971.8] Stephen: It&#x27;s unzoomed.
+[972.84] Stephen: That wheel.
+[973.48] UNKNOWN: Okay.
+[973.8] Frank: Yeah.
+[974.52] Frank: Everyone listening along, this is a...
+[976.92] UNKNOWN: I mean, if you saw this just in a normal website, you wouldn&#x27;t think anything of it.
+[983.32] Frank: I mean, it looks...
+[984.12] Frank: It&#x27;s a very nicely polished dashboard for devices.
+[988.28] Frank: It looks very nice.
+[989.72] UNKNOWN: Thank you.
+[990.2] MustardTiger: Thank you.
+[990.6] MustardTiger: I&#x27;m not a front-end web designer.
+[992.36] MustardTiger: I put on my front-end web designer hat and slapped this together in a day.
+[996.76] MustardTiger: And I think it turned out all right for all things considered.
+[1000.68] UNKNOWN: Yeah, yeah.
+[1002.2] MustardTiger: I guess it was a tailwind is the framework I used.
+[1005.24] MustardTiger: It looks cool.
+[1006.6] UNKNOWN: So for our audio listeners, we&#x27;ve got a very cleanly designed webpage with a dashboard and
+[1013.0] Stephen: an update section.
+[1014.52] Stephen: We&#x27;ve got some readings from the flight controller to tell us whether one is attached or otherwise.
+[1020.12] Stephen: We&#x27;ve got the GPS status.
+[1021.8] Stephen: We&#x27;ve got a list of peers and whether encryption is enabled or not,
+[1026.2] Stephen: which is an interesting feature.
+[1027.56] Stephen: More on that later, I guess.
+[1029.32] Stephen: And then we can see a list of peers and we can see a list of radios.
+[1033.48] Stephen: So you can see at a glance, am I actually going to pick up any peers?
+[1037.8] Stephen: Let&#x27;s check on the ground.
+[1038.84] Stephen: Let&#x27;s make sure we can all see each other before we go and lift off and start flying on the system.
+[1044.04] Stephen: So that&#x27;s kind of neat.
+[1046.28] UNKNOWN: Absolutely, yeah.
+[1047.08] MustardTiger: So I could talk through a few things in this display as well.
+[1051.48] MustardTiger: Up in the top left corner, you can see what flight controller it thinks it&#x27;s connected to.
+[1056.36] MustardTiger: It supports, as I&#x27;ve mentioned, iNav, R2Pilot, and then, oh, I guess we accidentally rabbit
+[1061.48] MustardTiger: trailed a little bit off of this.
+[1062.84] MustardTiger: There is a Betaflight fork that I have put together.
+[1067.8] MustardTiger: It is more ugly than the R2Pilot fork.
+[1069.96] MustardTiger: I would not recommend flying it.
+[1072.68] MustardTiger: I have tested it for a grand total of about five minutes, but it does appear to work.
+[1078.2] MustardTiger: It does the thing.
+[1079.0] MustardTiger: It renders the thing on screen, which would be quite nice for folks who do run Betaflight.
+[1083.56] MustardTiger: We persuade you to do a PR?
+[1086.28] Stephen: Yeah, absolutely.
+[1087.0] Stephen: I&#x27;d be happy to PR this.
+[1089.08] Stephen: The 4.5 cycles just going through RC now, but 4.6 wide open for PRs and a good time
+[1096.2] Stephen: to start discussing the best way to do this.
+[1099.08] UNKNOWN: Sounds lovely.
+[1099.72] Stephen: There&#x27;s a couple of changes I want to incorporate from the R2Pilot version I wrote
+[1103.88] MustardTiger: into the Betaflight fork, so I&#x27;ll get that going.
+[1107.64] MustardTiger: Of course, as I mentioned, there&#x27;s a lot to do, and I&#x27;m one man, so they&#x27;re my best.
+[1113.24] UNKNOWN: Well, yeah, you&#x27;ve probably got a judging by the time between 4.4 and 4.5 release
+[1117.4] Stephen: candidates, so I don&#x27;t think there&#x27;s a hurry on that one.
+[1120.44] UNKNOWN: Gotcha.
+[1120.92] MustardTiger: Yeah, there you go.
+[1122.92] MustardTiger: Other things, I mentioned that you can use an internal GPS, but by default,
+[1126.36] MustardTiger: Formation Flight will just pull GPS from your flight controller,
+[1129.0] MustardTiger: so no need to do anything crazy there.
+[1130.52] MustardTiger: All you got to do is hook it up to an MSP UART,
+[1133.16] MustardTiger: and it will negotiate with your flight controller, figure out GPS location, all of that.
+[1138.68] MustardTiger: The encryption is an interesting note, as you mentioned more on that later.
+[1143.08] MustardTiger: iNAV radar is unencrypted, which is fine for what it&#x27;s intending to be.
+[1148.04] MustardTiger: My reason for adding encryption is not necessarily for privacy first and foremost.
+[1153.72] MustardTiger: The goal of it is to essentially prevent people from cross-talking, right?
+[1159.4] MustardTiger: Be able to use different groups, and if we can get some very light crypto in there,
+[1164.68] MustardTiger: as a matter of course, that might be nice.
+[1167.0] MustardTiger: One thing to note, or I suppose a few things to note,
+[1170.04] MustardTiger: the crypto is not super-duper secure.
+[1172.76] MustardTiger: It will not stand up against an actual dedicated attacker.
+[1176.28] MustardTiger: It&#x27;s good enough.
+[1179.64] MustardTiger: Again, it&#x27;s intended primarily to be an inter-group deterrence,
+[1184.84] Stephen: effectively, right?
+[1185.48] Stephen: So instead of having to set a group ID and tally that up across all the members
+[1190.36] Stephen: who are flying in a field, say, you enable crypto,
+[1194.36] Stephen: and when you see each other, you negotiate a crypto key,
+[1197.32] Stephen: and then if another group of flyers a few miles away
+[1200.2] Stephen: happen to start spewing signal and you can hit and you can see them,
+[1203.88] Stephen: then that&#x27;s going to be discarded and not start confusing you when you&#x27;re in the air.
+[1208.76] UNKNOWN: Exactly, yeah.
+[1209.56] MustardTiger: And that&#x27;s the main goal.
+[1211.56] MustardTiger: If you do want to rotate this key, it&#x27;s a little complicated now.
+[1214.2] MustardTiger: Again, that&#x27;s one of the things on the back burner to clean up.
+[1218.44] MustardTiger: But yeah, this does exist, and it hopefully should provide
+[1221.88] MustardTiger: the bare minimum of additional privacy as well, if you&#x27;re interested in that.
+[1226.36] MustardTiger: Caveat, if you&#x27;re using ham frequencies to run this,
+[1229.88] MustardTiger: using ham power levels, blah, blah, blah, it might not be compliant.
+[1233.4] UNKNOWN: Figured I&#x27;d throw that out there.
+[1235.32] MustardTiger: Everybody who does this hobby should hopefully have a good understanding of radio stuff,
+[1239.48] MustardTiger: what is and isn&#x27;t right to do.
+[1240.68] MustardTiger: So your experience may vary, do the right thing for your regulatory environment, et cetera, et cetera.
+[1247.08] Stephen: So you&#x27;ve got a group of people, and you want to say that these are the pilots in the group,
+[1251.88] Stephen: and if someone, a couple of fields over with a big antenna,
+[1255.64] Stephen: starts flying with formation flight, we don&#x27;t want to see their data.
+[1260.04] Stephen: How do people lock that in before they take off?
+[1264.44] UNKNOWN: It&#x27;s presently done during build time.
+[1268.12] MustardTiger: My intention is right, you can see on the left side, there&#x27;s dashboard and update.
+[1272.92] MustardTiger: I have something turned off in the UI right now, which is a settings tab.
+[1277.16] MustardTiger: My hope is to have a whole bunch of settings.
+[1278.52] MustardTiger: You can flip on and off from there,
+[1279.96] MustardTiger: one of which being change of the group key from that settings display if you want to.
+[1284.2] MustardTiger: And that would get saved to persistent storage,
+[1285.88] MustardTiger: so you don&#x27;t need to do it every time just once.
+[1288.2] UNKNOWN: So you just send the group key to your friends via whatever chat client,
+[1292.44] Stephen: and then when they connect to the web page,
+[1294.76] Stephen: they synchronize the group key to the one you&#x27;re using for that flying session, right?
+[1298.84] UNKNOWN: Exactly, and the group key is plain alpha numeric,
+[1302.12] MustardTiger: so you can use whatever word you want.
+[1304.6] MustardTiger: By default, encryption is enabled with the group key open sesame.
+[1308.76] MustardTiger: That way, it&#x27;s encrypted by default,
+[1312.04] MustardTiger: but by default, you&#x27;ll also connect to one another, right?
+[1317.32] UNKNOWN: Okay, makes sense.
+[1319.72] UNKNOWN: Wow, there&#x27;s a lot going on here.
+[1321.48] Stephen: Congratulations, I appreciate a single developer working in their spare time.
+[1326.52] Stephen: You&#x27;ve accomplished a heck of a lot,
+[1328.12] Stephen: considering the iNav radar has been around for a few years,
+[1331.08] Stephen: and just kind of been ticking along.
+[1333.24] Stephen: This is kind of an explosive amount of activity.
+[1336.68] UNKNOWN: Thank you.
+[1337.48] Stephen: I don&#x27;t know, it was something of a passion project.
+[1340.84] MustardTiger: After I got it working in the first couple of changes I made,
+[1344.28] MustardTiger: it just went on from there,
+[1345.64] MustardTiger: and I have to say a huge thank you to the folks who&#x27;ve been helping me out in testing,
+[1349.56] MustardTiger: helping me out in development.
+[1350.84] MustardTiger: Not sure how many of them want their name shouted out,
+[1353.56] MustardTiger: but there&#x27;s some great folks out there who have been helping a lot,
+[1357.4] MustardTiger: so thank you very, very much.
+[1360.04] UNKNOWN: I guess that&#x27;s mainly in the Discord again, is it?
+[1362.68] UNKNOWN: Yeah, so there&#x27;s some folks in the Discord
+[1364.68] MustardTiger: who have been helping out with testing,
+[1366.84] MustardTiger: helping out with development.
+[1369.4] MustardTiger: They&#x27;re lovely folks, I&#x27;ve got a little label for them.
+[1373.96] MustardTiger: They&#x27;re colored blue in there,
+[1375.24] MustardTiger: people who have been running it since the early days,
+[1377.08] MustardTiger: beta testing, willing to test all the silly broken things
+[1380.44] MustardTiger: that occur with an early project like this.
+[1382.6] MustardTiger: So I really appreciate all their help,
+[1384.52] MustardTiger: as well as some folks locally here in the Pacific Northwest
+[1386.84] MustardTiger: who&#x27;ve been flying with me since the very early fork of iNav radar days.
+[1391.56] UNKNOWN: Yeah, and you were saying as well about the sort of hocking back.
+[1396.36] UNKNOWN: There&#x27;s the idea of the beacon,
+[1398.52] Frank: where you&#x27;ve got just the formation plate radio
+[1403.96] Frank: connected direct to a GPS.
+[1406.6] UNKNOWN: Yeah.
+[1408.92] Frank: How is that working?
+[1410.68] Frank: I guess because you&#x27;ve got the UART on the radio,
+[1415.16] Frank: it can just connect to a UART on a GPS and that just works.
+[1419.96] UNKNOWN: Yeah, so there&#x27;s a piece of hardware I would recommend for this.
+[1422.28] MustardTiger: You can build it yourself, it&#x27;s a little bit complicated.
+[1425.56] MustardTiger: It&#x27;s not terrible, but there&#x27;s already an existing piece of hardware,
+[1429.0] MustardTiger: and that&#x27;s the LILIGO, TTCO, T-BEAM.
+[1432.68] UNKNOWN: That&#x27;s Tango, Bravo, Echo, Alpha, Mic.
+[1436.84] MustardTiger: That&#x27;s a product that has an inbuilt 900 megahertz,
+[1441.8] MustardTiger: unfortunately, lower modem with GPS and an 18650.
+[1448.6] MustardTiger: So if you are using 900 megahertz formation flight,
+[1452.68] MustardTiger: this is a great, great radio to use as a beacon,
+[1455.24] MustardTiger: built-in antenna, built-in GPS.
+[1457.56] MustardTiger: There&#x27;s a target for it, you build it, throw it,
+[1459.88] MustardTiger: wherever it needs to be, and it&#x27;ll just work.
+[1462.44] MustardTiger: Are you doing an NMEA GPS?
+[1466.52] UNKNOWN: Yeah, right now it is NMEA only.
+[1468.84] MustardTiger: I do want to support the UBLOX protocol,
+[1470.84] MustardTiger: but once again, PRs are accepted if you&#x27;re interested in that feature.
+[1475.72] UNKNOWN: Well, it looks like a lot of those NMEA GPS
+[1478.36] Stephen: might be less useful in other locations.
+[1481.0] Stephen: So yeah, could be a good chance to take them out
+[1484.84] Stephen: and repurpose them for formation flight.
+[1487.64] UNKNOWN: Absolutely, yeah.
+[1488.68] Stephen: And it&#x27;ll do auto-bod and everything.
+[1490.68] MustardTiger: So as long as the GPS speaks NMEA
+[1492.44] MustardTiger: and it&#x27;s connected to a secondary UART,
+[1494.6] MustardTiger: the SP32 has three UARTs.
+[1496.04] MustardTiger: Yeah, that&#x27;ll just work.
+[1498.76] UNKNOWN: I was just going to ask, if you&#x27;re flying with multiple pilots,
+[1502.92] Curry: is it a case of you configure it so you&#x27;ve got like multi,
+[1506.04] Curry: like I&#x27;ve got pilot A, pilot B, pilot C, here, here, here,
+[1508.84] Curry: or have you built in some sort of thing
+[1510.28] Curry: so you can switch between positions of people?
+[1514.12] UNKNOWN: Yeah, yeah, that&#x27;s a lovely question.
+[1515.48] MustardTiger: So the INAF existing OSD,
+[1519.32] MustardTiger: the one that I haven&#x27;t made any changes to,
+[1522.2] MustardTiger: tries to do the HUD thing.
+[1523.32] MustardTiger: So every pilot that&#x27;s up,
+[1524.68] MustardTiger: you&#x27;ll see their tile exist in the HUD, essentially,
+[1529.16] MustardTiger: for the one that I created,
+[1530.28] MustardTiger: which is more like a home position arrow,
+[1532.36] MustardTiger: every, I believe, two seconds,
+[1534.28] MustardTiger: it&#x27;ll rotate through every active peer.
+[1536.92] MustardTiger: So if you can hear two people,
+[1538.2] MustardTiger: it&#x27;ll go back and forth every two seconds,
+[1539.96] MustardTiger: which, to me, that&#x27;s probably good enough.
+[1545.7] UNKNOWN: If anybody else has a better idea on how to incorporate that,
+[1548.1] Stephen: I&#x27;d be happy to hear it.
+[1549.06] Stephen: Well, with every higher resolution displays,
+[1552.1] Stephen: for some of the digital systems,
+[1553.62] Stephen: it might be feasible to even have all six
+[1556.34] Stephen: permanently on screen just as a single element.
+[1560.18] UNKNOWN: Absolutely, yeah.
+[1562.58] Curry: Are the digital systems actually pixel capable?
+[1565.38] Curry: I mean, they&#x27;re obviously working character mode at the moment,
+[1567.7] Curry: but is there a possibility
+[1570.26] UNKNOWN: of them doing something different?
+[1571.38] Curry: So the MSP link between the flight controller
+[1574.66] UNKNOWN: and the goggles is character-based,
+[1577.7] Stephen: but on the goggles,
+[1578.9] Stephen: they can pretty much just render PNGs onto the goggles.
+[1582.74] Stephen: So you can kind of do whatever you want on the goggles,
+[1585.7] Stephen: but you&#x27;ve got that limited bandwidth
+[1587.62] Stephen: between the flight controller
+[1588.98] Stephen: and that over-the-air link over to the goggles,
+[1591.14] Stephen: which kind of chokes the possibility of doing that
+[1593.38] Stephen: in a really elegant fashion, unfortunately.
+[1595.22] Stephen: Mm-hmm.
+[1597.99] UNKNOWN: And as Dominic Clifton has mentioned in the comments,
+[1600.95] MustardTiger: he&#x27;s got a pixel-based OSD that works with all his stuff.
+[1604.71] MustardTiger: And yeah, that would be very, very, very slick.
+[1608.07] MustardTiger: If you know your camera FOV
+[1609.43] MustardTiger: and can account for that in a pixel-based OSD
+[1611.43] MustardTiger: with very high resolution,
+[1612.87] MustardTiger: yeah, you could do some think fighter jet style.
+[1617.59] Stephen: That would be real slick.
+[1618.95] Stephen: You&#x27;ve got two factors to make that moving OSD
+[1623.43] Stephen: with the position markers move.
+[1624.63] Stephen: You&#x27;ve got to figure out your FPV camera angle
+[1628.07] Stephen: and also the FOV angle.
+[1631.51] Stephen: And if those numbers are off,
+[1632.71] Stephen: it&#x27;s going to be kind of confusing, isn&#x27;t it?
+[1635.59] UNKNOWN: Yeah, yeah.
+[1636.15] MustardTiger: So this is an existing problem as well
+[1637.91] MustardTiger: with the iNav implementation as it stands.
+[1639.67] MustardTiger: And one of the things that when I ported it to autopilot,
+[1643.43] MustardTiger: I decided to go a different direction.
+[1644.95] MustardTiger: Again, it&#x27;s my opinion.
+[1646.07] MustardTiger: I like the simplicity of a single,
+[1648.63] MustardTiger: well, a pair of vectors, right?
+[1649.91] MustardTiger: A horizontal vector and a vertical vector.
+[1652.87] MustardTiger: If other folks like OSD more,
+[1654.71] MustardTiger: I&#x27;d be happy to hear it.
+[1657.35] MustardTiger: However you want to make it work on the flight controller
+[1659.19] MustardTiger: will work with formation of flight.
+[1660.55] MustardTiger: It doesn&#x27;t care.
+[1661.19] MustardTiger: All it does is feeds the position information.
+[1662.95] MustardTiger: So if you&#x27;d prefer the OSD,
+[1665.19] MustardTiger: that&#x27;s something you absolutely have the option to do.
+[1668.55] UNKNOWN: There we are.
+[1669.27] Stephen: So there&#x27;s an update from iNav here
+[1671.27] Stephen: by the looks of it, Mark with the CFPV.
+[1675.11] Stephen: Mr. Tiger, the HUD elements will be adjustable
+[1677.91] Stephen: and split in separate elements with 7.0 probably.
+[1681.75] Stephen: So you can select if you want to see heading,
+[1683.75] Stephen: distance, RSSI, et cetera.
+[1685.43] Stephen: So that could be interesting.
+[1687.11] UNKNOWN: Neat, yeah, that definitely clean up the UI on iNav.
+[1690.95] UNKNOWN: Cool.
+[1692.39] UNKNOWN: Yeah, I think Mark&#x27;s from the iNav fixed-wing group.
+[1695.03] Stephen: I encourage you to have a look at formationflight.org
+[1699.35] Stephen: and see what&#x27;s going on there
+[1701.19] Stephen: because there&#x27;s a really interesting development
+[1703.59] Stephen: that kind of enables that feature
+[1705.19] Stephen: for a bunch of different people
+[1706.71] Stephen: and makes it easier to use much cheaper hardware.
+[1709.51] Stephen: It&#x27;s the short premise of this
+[1711.91] Stephen: in case any other people have jumped in halfway through.
+[1714.79] Stephen: I did spam the chat link around quite a few places,
+[1717.59] Stephen: but it&#x27;s easy to forget about these things.
+[1719.91] Stephen: So yeah, the real gotcha here was previously you needed
+[1723.99] Stephen: to basically be an ESP32 developer
+[1726.47] Stephen: to get this thing up and running.
+[1728.31] UNKNOWN: But now we&#x27;re seeing you can take very cheap hardware
+[1731.59] Stephen: that&#x27;s been designed for Express LRS
+[1733.35] Stephen: and is now available not just cheaply,
+[1735.91] Stephen: but also worldwide.
+[1737.11] Stephen: So you don&#x27;t need to go to stores on AliExpress
+[1739.51] Stephen: and hunt this stuff down.
+[1740.79] Stephen: So you can go to your local RC store
+[1743.27] Stephen: and you can get 10 pounds,
+[1745.51] Stephen: 10 of your local currency units generally
+[1748.07] Stephen: worth of Express LRS 2.4 gig receiver,
+[1750.71] Stephen: which is tiny and light.
+[1752.95] UNKNOWN: And you can program this
+[1754.95] Stephen: using the existing Express LRS web flashing system,
+[1759.11] Stephen: which is easy to use
+[1760.47] Stephen: and functions as an access point already.
+[1762.47] Stephen: So you could even do it from a mobile phone
+[1764.39] Stephen: and things like that.
+[1766.07] UNKNOWN: And then all the configuration is going to be handled
+[1768.95] Stephen: within that web interface.
+[1770.47] Stephen: So you don&#x27;t need to go and get complex tools
+[1772.63] Stephen: on your PC to make this work,
+[1775.19] Stephen: which I think it tackles the cost,
+[1778.79] UNKNOWN: tackles availability,
+[1780.55] Stephen: and it tackles ease of use all in one fell swoop,
+[1783.11] Stephen: which is just fantastic to see.
+[1785.51] UNKNOWN: Thank you. Yeah, that was sort of my goal with it,
+[1788.15] MustardTiger: make it a little bit easier to use
+[1789.19] MustardTiger: and hopefully get more folks using it, right?
+[1791.43] MustardTiger: I&#x27;d have radar was tremendous.
+[1792.79] MustardTiger: And I can&#x27;t say thank you enough
+[1794.07] MustardTiger: to all the folks who did work on that,
+[1795.51] MustardTiger: especially Olivia C,
+[1796.55] MustardTiger: who&#x27;s been doing the main development on it recently.
+[1800.55] MustardTiger: At this point, I just wanted to take it a few steps further
+[1803.59] MustardTiger: and hopefully get more folks using it, right?
+[1806.15] MustardTiger: And I thought getting that barrier of less expensive,
+[1808.95] MustardTiger: more easily available hardware is a huge difference.
+[1811.99] UNKNOWN: And yeah, Mark, to answer your comment there,
+[1814.23] MustardTiger: no, you don&#x27;t need to use Express LRS.
+[1816.47] MustardTiger: It&#x27;s just the hardware is cheap and available.
+[1819.19] MustardTiger: So I wrote formation flight
+[1820.95] MustardTiger: primarily to target Express LRS hardware.
+[1823.19] MustardTiger: It does work with pretty much any ESP variants.
+[1826.95] MustardTiger: And if nobody else has anything,
+[1828.95] MustardTiger: I figure Insipid Monkey asked a question
+[1832.39] MustardTiger: about the ESP-NOW functionality.
+[1834.39] MustardTiger: You mind if I jump into that?
+[1835.35] MustardTiger: Oh, absolutely.
+[1836.07] Stephen: I was going to mention that myself.
+[1837.75] MustardTiger: Sweet. Yeah.
+[1838.63] MustardTiger: So ESP-NOW is a really neat thing
+[1840.95] MustardTiger: that&#x27;s supported by ESP8266 and ESP32 microcontrollers.
+[1845.67] MustardTiger: They, of course, have the built-in Wi-Fi.
+[1847.59] MustardTiger: They also have the ability to do something called ESP-NOW,
+[1851.35] MustardTiger: which is effectively a...
+[1853.43] UNKNOWN: I think the kindest term I can use
+[1858.39] MustardTiger: is a bastardization of Wi-Fi frames
+[1861.27] MustardTiger: in order to remove a lot of the infrastructure
+[1864.07] MustardTiger: around Wi-Fi, right?
+[1865.19] MustardTiger: That is to say, there&#x27;s no network name
+[1868.87] MustardTiger: or anything like that.
+[1869.67] MustardTiger: It works essentially as a broadcast mechanism.
+[1873.27] MustardTiger: So that&#x27;s one of the additional radio types
+[1875.43] MustardTiger: I implemented for formation flight.
+[1877.27] MustardTiger: The goal being primarily you would use LoRa
+[1879.83] MustardTiger: on whatever frequency you chose.
+[1881.99] MustardTiger: 2.4 is, of course, my recommendation.
+[1883.91] MustardTiger: It gets just about 10K worth of range,
+[1886.39] MustardTiger: which hopefully should be more and more and more than enough
+[1888.95] MustardTiger: for the vast majority of use cases.
+[1891.35] MustardTiger: If you really want more, there&#x27;s 90433,
+[1893.67] MustardTiger: which are right around 100Ks.
+[1896.47] MustardTiger: But for most folks, 2.4 LoRa is going to be the way to do it.
+[1900.39] UNKNOWN: Primarily, what my goal with ESP-NOW is two things.
+[1904.07] MustardTiger: A, for folks who don&#x27;t want to do LoRa-based stuff,
+[1907.67] MustardTiger: ESP-NOW works up to about 1K,
+[1910.71] MustardTiger: and it&#x27;s very easy and cheap to find ESP chips on their own.
+[1914.95] MustardTiger: They cost right around $2 or $3 US
+[1918.71] MustardTiger: if you find them in the right places.
+[1920.47] MustardTiger: Again, the range is going to be significantly less.
+[1922.55] MustardTiger: It&#x27;s about 1 to 2K max,
+[1925.27] MustardTiger: but they work just the same as the LoRa versions.
+[1928.15] MustardTiger: My other goal with ESP-NOW, and this is not realized yet,
+[1931.11] MustardTiger: is to have a secondary link in addition to your LoRa link
+[1934.39] MustardTiger: such that if you fly 2.4 LoRa formation flight
+[1938.23] MustardTiger: and your friend flies 900 LoRa formation flight,
+[1940.79] MustardTiger: you&#x27;ll still be able to connect to each other
+[1942.39] MustardTiger: as long as you&#x27;re within 1 to 2Ks.
+[1945.43] MustardTiger: If you were further away, then LoRa would work.
+[1948.87] UNKNOWN: Nice. That sounds like the best of both worlds.
+[1953.27] UNKNOWN: Yeah, I&#x27;m excited about the potential that has.
+[1959.11] MustardTiger: You can turn it on right now,
+[1960.47] MustardTiger: but it does horrible things to your timing.
+[1964.15] MustardTiger: All the receivers try and synchronize with one another,
+[1966.47] MustardTiger: and when you have two radios operational,
+[1969.11] MustardTiger: they can get into some really interesting states
+[1971.27] MustardTiger: when you start doing that.
+[1996.47] Frank: Pause slash, let&#x27;s drone out.
+[1998.87] UNKNOWN: So we have a question from Dominic Clifton-Hydra
+[2002.63] Stephen: about the ESP hardware that you&#x27;ve been using.
+[2005.51] Stephen: Wondering if you&#x27;ve looked at the new S3 chip from ESP32.
+[2009.51] UNKNOWN: Absolutely, yes.
+[2010.39] Stephen: And I&#x27;ve got one on my desk right here,
+[2011.75] MustardTiger: which is the Lilligo T3 S3.
+[2016.87] MustardTiger: And I&#x27;ve got formation flight up and running on that.
+[2019.35] MustardTiger: Unfortunately, I think this is missing one pin
+[2021.51] MustardTiger: to make it usable by default,
+[2022.95] MustardTiger: but I think I&#x27;ll be able to bodge it in.
+[2025.83] MustardTiger: This particular piece of hardware,
+[2027.27] MustardTiger: it&#x27;s a pretty big one. It&#x27;s a dev board.
+[2029.19] MustardTiger: But yes, absolutely.
+[2030.07] MustardTiger: If you&#x27;ve got it running on S3,
+[2031.43] MustardTiger: and you&#x27;ve got a, in this case,
+[2033.67] MustardTiger: I believe they forgot to connect the DIO one line,
+[2036.39] MustardTiger: whatever you want to call that.
+[2038.31] MustardTiger: I use both of the DIO pins in my interaction with the SX1280.
+[2043.43] MustardTiger: So I believe this board will require a bodge to work,
+[2046.07] MustardTiger: but if your board has both of the DIO pins connected,
+[2049.27] MustardTiger: which I assume it does, then yes, absolutely.
+[2051.99] MustardTiger: You could run formation flight directly on there.
+[2056.14] UNKNOWN: Excellent. Well, just compatible with everything
+[2059.02] Stephen: you can get your hands on by the sound of it,
+[2060.46] Stephen: which is fantastic.
+[2061.42] Stephen: So they&#x27;ve got all the fixed-wing people out there
+[2063.98] Stephen: who are talking about formation flying.
+[2065.74] Stephen: If you have GPS, this is just the way to go, isn&#x27;t it?
+[2069.74] UNKNOWN: And I think one to two kilometers on ASP now is like,
+[2073.82] UNKNOWN: if you want more, then you may be some way off flying in formation.
+[2078.22] UNKNOWN: Normally, you&#x27;re missing some of those 50 meters.
+[2080.54] Curry: It&#x27;s not like, oh, I&#x27;m 10 kilometers that way.
+[2082.46] Curry: It&#x27;s like, you&#x27;ve been the wrong way.
+[2084.38] Curry: We&#x27;re flying a couple of years ago.
+[2086.62] Stephen: Like, one and a half kilometers away,
+[2088.86] Stephen: your main radio link would be dead anyway.
+[2092.3] MustardTiger: Absolutely, yeah.
+[2093.18] MustardTiger: So we&#x27;ve had really good experiences with ASP now,
+[2095.58] MustardTiger: as long as you have an external antenna.
+[2098.06] MustardTiger: If you have an internal antenna, it&#x27;s not great.
+[2100.54] MustardTiger: It&#x27;s around 100 meters.
+[2103.1] MustardTiger: But yeah, it absolutely does work.
+[2105.18] MustardTiger: It works surprisingly well.
+[2106.86] MustardTiger: I think we&#x27;ve gotten far more range out of it
+[2108.54] MustardTiger: than any of us expected.
+[2110.7] MustardTiger: Right about, I think, 1.8 k&#x27;s is the absolute max
+[2113.82] MustardTiger: we&#x27;ve seen in practice.
+[2114.86] MustardTiger: But that&#x27;s about 1k more than I expected it to do
+[2120.54] MustardTiger: in its absolute best case.
+[2121.66] MustardTiger: So yeah, it is absolutely an option if you want it.
+[2123.66] MustardTiger: I think 2.4 Laura is where the main majority of development
+[2127.34] MustardTiger: is going to be.
+[2127.98] MustardTiger: But yeah, if you have a bare ESP32 or an 8266 Dev board,
+[2133.26] MustardTiger: WeMos D1 Mini, whatever you might have,
+[2136.3] MustardTiger: you can absolutely slap that on there
+[2137.66] MustardTiger: and run it on ESP now.
+[2138.7] MustardTiger: Works great.
+[2139.18] Stephen: Nice.
+[2139.9] UNKNOWN: That&#x27;s kind of the fascinating use case,
+[2141.66] Stephen: as well, of people who, you know, they&#x27;re flying a wing,
+[2143.74] Stephen: they don&#x27;t have a flight controller in it.
+[2145.9] UNKNOWN: They could take a little Express LRS receiver
+[2148.14] Stephen: or someone could give them a little Express LRS receiver
+[2150.78] Stephen: with the GPS connected to it and be like,
+[2152.94] Stephen: yeah, here you are.
+[2154.46] Stephen: There&#x27;s like a servo lead attached to it.
+[2156.86] Stephen: Power this up and stick it with some hot glue
+[2159.02] Stephen: inside your wing and we&#x27;ll know where you are
+[2161.82] Stephen: and we&#x27;ll come find you.
+[2163.74] UNKNOWN: Exactly.
+[2164.3] Stephen: That does sound good.
+[2166.54] UNKNOWN: Yeah, I was just going to say,
+[2167.74] Curry: is that a way of like,
+[2169.98] UNKNOWN: you&#x27;ve got an inexpensive rescue solution,
+[2173.66] Curry: like I&#x27;ve crashed my plane somewhere,
+[2175.9] UNKNOWN: but if the battery is still in place
+[2177.42] Curry: and you&#x27;ve still got this signal,
+[2179.34] UNKNOWN: you can presumably find it
+[2181.58] Curry: because you&#x27;ll know your distance and your GPS coordinates
+[2184.54] Curry: and you can turn it along into the field and get it.
+[2188.3] UNKNOWN: Yeah.
+[2188.54] MustardTiger: So this is something we&#x27;ve actually discussed a few times,
+[2191.66] MustardTiger: using information flight to be able to find your aircraft.
+[2193.9] MustardTiger: Absolutely.
+[2195.66] MustardTiger: You can do that right now.
+[2196.94] MustardTiger: It works just fine for that.
+[2198.3] MustardTiger: I&#x27;ve done that a few times, actually.
+[2200.78] MustardTiger: I had some relatively small aircraft go out
+[2203.9] MustardTiger: pretty far out in the field and had to go hunt for it.
+[2207.5] MustardTiger: And I just brought along that little Ttco T-beam.
+[2210.78] MustardTiger: And when I got within about 500 meters,
+[2212.54] MustardTiger: that was ESP now on the ground.
+[2214.22] MustardTiger: So I expected the range to be reduced.
+[2215.74] MustardTiger: It was still pretty darn good.
+[2217.5] MustardTiger: It locked on and I&#x27;ve got on the little OLED display
+[2220.54] MustardTiger: that I&#x27;m X meters away in this direction
+[2222.62] MustardTiger: and I was able to walk right to it.
+[2224.54] MustardTiger: But I do have some ideas around including boards
+[2228.38] MustardTiger: with internal batteries and being able to say,
+[2231.98] MustardTiger: hey, the last MSP message I got from the aircraft
+[2234.3] MustardTiger: was that it was armed and then I lost the MSP link.
+[2237.9] MustardTiger: That tells me the aircraft is down,
+[2241.1] MustardTiger: unavailable in some way, shape, or form.
+[2243.66] MustardTiger: So stop trying to be a normal formation flight receiver
+[2245.98] MustardTiger: and start doing different LoRa encoding
+[2249.1] MustardTiger: in order to get longer range.
+[2250.78] MustardTiger: That way, hopefully, it would be a little bit better to find.
+[2254.86] MustardTiger: I look forward to seeing Currie&#x27;s videos on this
+[2257.42] Frank: adding on to his playlist of various ways
+[2260.14] Frank: of finding your crashed aircraft.
+[2261.9] Frank: Yeah, feel free to share with me.
+[2263.42] Curry: When beepers don&#x27;t work because it&#x27;s kilometers away,
+[2266.38] Stephen: then yeah, try radioing.
+[2268.46] UNKNOWN: Maybe we might see these integrated with lost model alarms
+[2271.5] Stephen: because these are not high-powered devices.
+[2274.14] Stephen: Would it be possible to integrate with a lost model alarm
+[2277.1] Stephen: with a beeper or a battery-backed beeper?
+[2279.42] Stephen: Absolutely, yeah.
+[2280.62] UNKNOWN: Just an ESP chip and a nice little antenna on it
+[2283.74] MustardTiger: would be perfect.
+[2286.06] UNKNOWN: So a few questions in the comments.
+[2287.66] MustardTiger: Mark with a C asks, I have three planes
+[2290.06] MustardTiger: with the original TDGO LoRa hardware.
+[2293.26] MustardTiger: Yes, it does work with the original TDGO LoRa hardware.
+[2295.74] MustardTiger: There are targets for all of that.
+[2298.3] MustardTiger: You can flash that.
+[2299.5] MustardTiger: It&#x27;s drop-in compatible.
+[2301.26] MustardTiger: Unless you&#x27;re using the V1.6 board,
+[2303.42] MustardTiger: I changed which pins are used for RX and TX.
+[2306.38] MustardTiger: You got to just move those over real quick.
+[2309.42] MustardTiger: Other than that, though, completely drop-in compatible.
+[2311.58] MustardTiger: You can use it exactly the same way
+[2312.86] MustardTiger: as you have been with INF radar.
+[2314.62] MustardTiger: It&#x27;s just faster, better.
+[2317.58] UNKNOWN: And then, and Sipidmaniki asks,
+[2319.74] MustardTiger: have you touched on using a formation flight in the LRS
+[2322.14] MustardTiger: on the same bed, on the same aircraft?
+[2325.26] UNKNOWN: I was very pleasantly surprised with how well this went.
+[2333.74] UNKNOWN: I expected it to work,
+[2336.14] MustardTiger: but I expected there to be a noticeable hit to LQ.
+[2340.14] UNKNOWN: I was wrong.
+[2343.1] MustardTiger: It works way better than I had ever possibly anticipated.
+[2349.02] MustardTiger: I keep the power pretty low information flight,
+[2350.94] MustardTiger: just to be sure,
+[2352.14] MustardTiger: but I did a pretty considerably LR flight
+[2358.7] MustardTiger: at 25 milliwatts TX power for Express LRS.
+[2363.9] UNKNOWN: A couple of weeks later,
+[2364.86] MustardTiger: when I was reviewing that aircraft that I did it with,
+[2368.06] MustardTiger: I realized that it had formation flight up
+[2369.9] MustardTiger: and running the whole time.
+[2371.26] MustardTiger: And I didn&#x27;t even notice.
+[2373.82] MustardTiger: That was with the LRS at minimum power
+[2375.82] MustardTiger: for the radio that I use out quite some distance.
+[2379.02] MustardTiger: So it seems to be completely unnoticeable,
+[2382.38] Stephen: which is great to hear.
+[2383.5] Stephen: You were saying you don&#x27;t cover all of the band
+[2386.22] Stephen: that LRS uses, right?
+[2387.5] Stephen: You&#x27;re just in the lower parts of that band,
+[2389.26] Stephen: you kind of restricted it a bit?
+[2391.18] UNKNOWN: Yeah, that&#x27;s exactly correct.
+[2392.3] MustardTiger: So I chose the formation flight to not do frequency hopping.
+[2396.3] MustardTiger: And the goal there was a couple-fold.
+[2398.62] MustardTiger: A, hopefully it&#x27;ll simplify the sync procedure.
+[2402.86] UNKNOWN: Right now, something like the LRS,
+[2404.22] MustardTiger: you only have two things to try and synchronize
+[2405.9] MustardTiger: with one another, a transmitter and a receiver.
+[2407.66] MustardTiger: And one is always in charge with formation flight.
+[2411.1] MustardTiger: Who&#x27;s in charge?
+[2412.3] MustardTiger: Who&#x27;s synchronizing with whom?
+[2414.22] MustardTiger: So it&#x27;s a much tougher problem to solve.
+[2416.3] MustardTiger: And when you add more variables like frequency
+[2419.02] MustardTiger: and time slot and all this kind of stuff,
+[2421.5] MustardTiger: synchronizing becomes really difficult.
+[2423.74] MustardTiger: So I chose to keep it,
+[2424.7] MustardTiger: just a single frequency, a nice low in the 2.4 gig band.
+[2429.42] MustardTiger: And then LRS hops all around up higher.
+[2431.82] MustardTiger: So it&#x27;s pretty much, it doesn&#x27;t seem to have any impact
+[2434.86] MustardTiger: on flying.
+[2435.5] MustardTiger: You can run 2.4 LRS alongside formation flight.
+[2438.54] MustardTiger: It runs just fine.
+[2439.98] UNKNOWN: Awesome.
+[2440.54] Stephen: So yeah, maybe one packet in 20 might be colliding.
+[2444.86] UNKNOWN: Yeah, exactly.
+[2445.74] Stephen: It kind of doesn&#x27;t matter.
+[2451.02] Frank: Because you were saying it can do six pilots.
+[2453.66] Frank: Is that a limitation of E LRS?
+[2456.06] Frank: Or is that just a limitation of formation flight?
+[2458.78] Frank: I&#x27;m just wondering, is there a case where
+[2460.62] Frank: if you had six pilots all using formation flight
+[2463.18] Frank: and all using E LRS, is that going to cause a problem?
+[2466.62] UNKNOWN: It&#x27;s going to be slightly worse.
+[2469.1] MustardTiger: But my experience with running 2.4 systems next to each other,
+[2473.82] MustardTiger: modern 2.4 systems, lower based ones,
+[2476.3] MustardTiger: they work just surprisingly well altogether.
+[2478.78] MustardTiger: I think, yeah, if you had six people
+[2480.14] MustardTiger: who are all using E LRS 2.4 control
+[2482.46] MustardTiger: and all using formation flight 2.4
+[2485.34] MustardTiger: and all using pretty high power and blah, blah, blah.
+[2488.86] MustardTiger: You&#x27;re probably going to see some low LQs, 60s, 70s,
+[2491.82] MustardTiger: but that&#x27;s still super flyable with the E LRS, right?
+[2495.74] MustardTiger: One thing you can do is if you&#x27;re staying pretty close,
+[2497.98] MustardTiger: use some of the faster options like the F500 option
+[2504.38] MustardTiger: to express E LRS.
+[2505.82] MustardTiger: That uses less air time, which would give more folks
+[2508.06] MustardTiger: the ability to stay up and running.
+[2509.58] MustardTiger: But broadly, yeah, it just works surprisingly well.
+[2513.26] MustardTiger: As to yes, is six a limitation?
+[2516.46] MustardTiger: It is a soft limitation in the sense
+[2521.9] MustardTiger: that I had a couple of variables to balance
+[2524.38] MustardTiger: and that was the exact set of variables I chose.
+[2528.38] MustardTiger: That is to say, to achieve 10 Hertz,
+[2531.42] MustardTiger: it updates 10 times a second, right?
+[2533.98] MustardTiger: Across 433, 868, 915, and 24 and ESP now,
+[2539.66] MustardTiger: which all have slightly different transmit times
+[2542.46] MustardTiger: at the ranges that I wanted to accomplish
+[2544.78] MustardTiger: with the number of people in the air
+[2547.66] MustardTiger: that I wanted to accomplish.
+[2549.42] MustardTiger: The particular set of parameters I chose balances out
+[2551.98] MustardTiger: with essentially six people in the air,
+[2555.34] MustardTiger: 10 updates per second, and that&#x27;s the spot that works, right?
+[2560.06] UNKNOWN: Absolutely, and it makes sense what we have experienced
+[2565.18] Frank: with FPV, six is a good number to have in the air.
+[2570.3] UNKNOWN: I think past six, you&#x27;re starting to run into
+[2572.38] MustardTiger: VTX channel issues and at that point,
+[2575.66] UNKNOWN: if anybody does really want to run this with eight people,
+[2578.62] MustardTiger: 10 people, let me know.
+[2581.26] MustardTiger: There are ways we can configure this to work with eight or 10,
+[2583.66] MustardTiger: you&#x27;re just going to sacrifice update rate or range.
+[2586.62] MustardTiger: But I figured for the vast majority of people,
+[2588.94] MustardTiger: I think 10 Hertz is very good.
+[2591.26] MustardTiger: Generally, the nicest GPS as most of us are running
+[2594.22] MustardTiger: are exactly 10 Hertz, so that&#x27;s a really nice balance
+[2598.7] MustardTiger: of all those parameters.
+[2603.42] UNKNOWN: Yeah, that&#x27;s good.
+[2606.06] Frank: Yeah, it makes a ton of sense.
+[2607.5] UNKNOWN: I think there&#x27;s a few people who are struggling
+[2609.26] Stephen: to get higher rates of GPS updates,
+[2612.7] Stephen: but that&#x27;s really for that kind of beta
+[2614.78] Stephen: flight, like super aggressive return to home,
+[2617.74] Stephen: like let&#x27;s not return to home, like our pilot,
+[2620.62] Stephen: let&#x27;s return to home like a racing quad,
+[2622.86] Stephen: like only just rip and do like just an invert,
+[2628.3] Stephen: you split us back over the pilot&#x27;s head and then come down.
+[2632.06] Stephen: Yeah, I mean, there&#x27;s vast GPS that,
+[2634.78] Stephen: but I think that the top units are getting to like 18 Hertz,
+[2638.38] Stephen: 25 Hertz, so 10 Hertz is still, it&#x27;s up there.
+[2642.38] Stephen: It&#x27;s good enough for most things.
+[2644.54] Stephen: Absolutely, yeah.
+[2646.86] UNKNOWN: I will say the tracking feels super tight.
+[2650.38] UNKNOWN: Because it does update 10 times per second
+[2652.22] MustardTiger: when you&#x27;re following somebody,
+[2653.42] MustardTiger: that position arrow is pretty much dead on them.
+[2657.02] MustardTiger: Depending on aircraft, there is a sort of open problem
+[2660.14] MustardTiger: I&#x27;m still working through,
+[2661.18] MustardTiger: which is effectively pipeline delay from GPS
+[2665.1] MustardTiger: through flight controller into formation flight,
+[2667.26] MustardTiger: formation flight, flight controller, OSD.
+[2669.98] MustardTiger: In some cases, I&#x27;ve found that to be maybe 10, 25 milliseconds,
+[2674.62] MustardTiger: some weird combinations for some reason,
+[2676.94] MustardTiger: that feels more like 200, 300 milliseconds.
+[2680.22] MustardTiger: So what that means is the position that it&#x27;s tracking
+[2683.74] UNKNOWN: might be slightly behind the person
+[2686.22] MustardTiger: that you&#x27;re actually following.
+[2688.38] MustardTiger: I have some ideas on how to solve that.
+[2690.46] MustardTiger: The original INF radar did some effectively projection
+[2695.26] MustardTiger: using ground speed saying,
+[2697.82] MustardTiger: hey, where will you be in a second?
+[2702.06] MustardTiger: For the time being, it&#x27;s probably not necessary,
+[2704.38] MustardTiger: but it might be nice to do that.
+[2707.98] MustardTiger: I think the vast majority of folks won&#x27;t notice it
+[2710.3] MustardTiger: unless you&#x27;re doing some real close formation chases.
+[2713.9] MustardTiger: And at that point, I think you know where the person is, right?
+[2718.22] UNKNOWN: Absolutely.
+[2720.14] UNKNOWN: Yeah, it&#x27;s really, I imagine, useful in those kind of setups
+[2723.02] Stephen: where, okay, we&#x27;ve all taken off.
+[2725.58] Stephen: Where did everyone go?
+[2727.82] UNKNOWN: Before you got people in visual.
+[2731.18] Stephen: Exactly.
+[2731.66] Stephen: Yeah.
+[2732.54] Frank: The only time is if someone&#x27;s really on their tail,
+[2735.74] Frank: maybe it can be nice to the right behind you.
+[2738.62] UNKNOWN: I will also say that.
+[2739.66] MustardTiger: Yeah, that brings up a really good point, Frank.
+[2743.66] UNKNOWN: A place where I&#x27;ve found it extremely useful
+[2745.74] MustardTiger: is when somebody is following me very closely
+[2748.22] MustardTiger: or say staying right off my port side flank.
+[2752.38] MustardTiger: And I need to know how to fly in such a way
+[2754.06] MustardTiger: that I&#x27;m not going to get into their flight path.
+[2757.74] MustardTiger: I no longer have to ask them, hey, where are you?
+[2759.82] MustardTiger: Are you off my right wing?
+[2760.78] MustardTiger: Are you off my tail, right?
+[2761.82] MustardTiger: And try and get the synchronization.
+[2763.18] MustardTiger: I can look at my OSD elements and say, cool,
+[2765.02] MustardTiger: they&#x27;re off my right side.
+[2765.98] MustardTiger: I&#x27;ll make a left turn coming up.
+[2767.18] MustardTiger: They&#x27;re like, ooh, 10 meters off my right side.
+[2769.74] MustardTiger: Ooh, okay.
+[2771.98] UNKNOWN: Yeah, it&#x27;s when you start getting down into the single digit
+[2774.86] MustardTiger: and you can see the decimal place, 9.7 meters, 8.5 meters.
+[2778.62] MustardTiger: Okay, yeah, we&#x27;re getting close.
+[2780.06] Stephen: That&#x27;s enough.
+[2780.62] Stephen: Yeah.
+[2781.66] UNKNOWN: So you&#x27;ve done a heck of a lot with this so far.
+[2783.9] Stephen: There&#x27;s a lot of features that have kind of come out
+[2786.54] Stephen: of left field that people weren&#x27;t expecting,
+[2788.46] Stephen: which is fantastic.
+[2789.82] Stephen: But where do you take it next?
+[2792.38] Stephen: Where do you see the project going?
+[2794.62] UNKNOWN: It&#x27;s a wonderful question.
+[2796.94] UNKNOWN: My hope is to sort of get it easier to use.
+[2801.34] MustardTiger: We talked about a couple of things that I&#x27;d like to do.
+[2804.38] MustardTiger: One of the main things that&#x27;s in the pipeline right now,
+[2806.54] MustardTiger: and thank you very much to the folks
+[2807.9] MustardTiger: who have been developing on this.
+[2810.62] UNKNOWN: Let me see if I can find the information I&#x27;m looking for.
+[2813.58] MustardTiger: Yeah, so, Em Musk, you might see in the chat,
+[2817.82] MustardTiger: has been tremendously helpful with a couple of things
+[2819.66] MustardTiger: on information flight.
+[2820.38] MustardTiger: Thank you so much.
+[2821.9] MustardTiger: Something he&#x27;s been kind of carrying to the finish line
+[2824.14] MustardTiger: that I barely started and then got distracted
+[2828.54] MustardTiger: into other things with is for people running F4 11 flight controllers,
+[2832.7] MustardTiger: which only have two available UARTs.
+[2834.86] MustardTiger: You want to use one of those for control,
+[2836.54] MustardTiger: and then you&#x27;re out of UARTs.
+[2839.74] MustardTiger: Information flight wouldn&#x27;t necessarily be feasible.
+[2842.54] MustardTiger: And my thought is, hey, what if we do the GPS pass through?
+[2848.46] MustardTiger: So in this case, GPS gets connected directly
+[2850.7] MustardTiger: to an ESP32 information flight radio,
+[2853.82] MustardTiger: which then converts the GPS messages into MSP messages,
+[2858.62] MustardTiger: MSP GPS messages.
+[2860.54] MustardTiger: That way you can use just one UART on your flight controller.
+[2863.02] MustardTiger: If you&#x27;re running, say, an F4 11, you can still use information flight.
+[2866.78] MustardTiger: And this is really nice for those like three, four inch
+[2869.1] MustardTiger: sort of iNav capable little long range aircraft, right?
+[2873.9] MustardTiger: The ones that run off two 18650s or something like that,
+[2876.7] MustardTiger: the Flywheel Explorer kind of class of aircraft
+[2881.58] MustardTiger: that all run F4 11s, that&#x27;s perfect, right?
+[2883.82] MustardTiger: Be able to find each other on those too.
+[2886.14] UNKNOWN: Now, the history of MSP enabled GPS is fairly brief,
+[2890.3] Stephen: I think it&#x27;s fair to say.
+[2891.42] Stephen: So do you think that there&#x27;s going to be a bunch of fixing up
+[2896.14] Stephen: on the FC firmware side to make sure that they&#x27;re actually
+[2899.5] Stephen: going to acknowledge MSP GPS updates correctly?
+[2903.74] UNKNOWN: I suppose there&#x27;s one way to find out.
+[2906.54] MustardTiger: Certainly is.
+[2908.86] UNKNOWN: Yeah, let&#x27;s see.
+[2909.66] MustardTiger: Do I have any sort of major plans?
+[2911.26] MustardTiger: I&#x27;ve got a page on information flight,
+[2914.14] MustardTiger: GitHub that says what I want to work on next.
+[2918.06] MustardTiger: Let me see if I can find that.
+[2921.26] MustardTiger: Oh, I&#x27;d like to do pass through flashing
+[2923.82] MustardTiger: in the same way as Express LRS supports.
+[2926.86] MustardTiger: So for example, beta flight pass through,
+[2928.38] MustardTiger: I think is what the feature is mainly called.
+[2931.1] MustardTiger: That&#x27;s something I&#x27;d really like to do.
+[2932.46] MustardTiger: And then the other, I suppose,
+[2933.5] MustardTiger: the main thing that I&#x27;d like to do is do persistent configuration
+[2937.58] MustardTiger: on the actual radio rather than doing it at build time.
+[2940.62] MustardTiger: Right now, a whole bunch of settings are done at build time,
+[2944.22] MustardTiger: which is slightly annoying if you want to do them out in the field.
+[2946.3] MustardTiger: And yeah, my hope is to convert a lot of those to persistent storage.
+[2950.62] MustardTiger: You go in the web UI, tick some boxes, fill in some fields,
+[2953.66] MustardTiger: change it right there, save and reboot,
+[2955.42] MustardTiger: and it comes back up with the new configuration.
+[2958.14] Stephen: Nice, very nice.
+[2959.9] UNKNOWN: We&#x27;re taking some lessons that have been learned over
+[2962.3] Stephen: in the Express LRS project there as well, I see.
+[2965.34] Stephen: Exactly, yeah.
+[2966.3] MustardTiger: So I&#x27;m hoping to keep the build system a little bit simpler.
+[2970.14] MustardTiger: I don&#x27;t necessarily need to do unified targets or anything like that.
+[2972.86] MustardTiger: But for now, yeah, there&#x27;s a lot of things
+[2975.1] MustardTiger: I would like to move to dynamic configuration.
+[2977.42] MustardTiger: And that means things like turning on and off radios.
+[2980.7] MustardTiger: There&#x27;s a little mode where it will spoof some peers.
+[2984.62] MustardTiger: So that if you&#x27;re setting it up at home,
+[2986.78] MustardTiger: don&#x27;t have friends to connect with at that very moment,
+[2989.02] MustardTiger: you can run a command and make sure your flight controller
+[2991.02] MustardTiger: will understand when peers do come up.
+[2994.14] UNKNOWN: All of those things would be nice to get in the web UI.
+[2996.22] MustardTiger: And that&#x27;s sort of what I&#x27;m working on
+[2997.58] MustardTiger: is the making it easier part of things.
+[3000.54] MustardTiger: I don&#x27;t foresee us having a proper configurator.
+[3003.9] MustardTiger: I think that&#x27;s probably unnecessary for the scale of this project.
+[3006.54] MustardTiger: Just stick to mostly web-based stuff.
+[3011.94] UNKNOWN: Certainly the easiest for out in the field,
+[3013.94] Stephen: which is Jack&#x27;s preference, you know,
+[3016.02] Stephen: does all his configuration when he gets to the field.
+[3019.38] UNKNOWN: They have Wi-Fi up for that.
+[3021.46] UNKNOWN: Perfect.
+[3022.58] UNKNOWN: Not having to have another configurator to keep track of
+[3026.1] Frank: and make sure it&#x27;s in the right version to update
+[3028.42] Frank: that particular thing that also sounds excellent.
+[3030.26] Frank: All those configurators, even people like TBS,
+[3032.98] Stephen: they&#x27;re slowly drifting towards web-based solutions anyway.
+[3036.26] Stephen: Just a matter of time before everyone coalesces on that.
+[3040.18] UNKNOWN: Speaking of Wi-Fi out in the field,
+[3042.18] MustardTiger: being able to connect to your aircraft from your phone
+[3045.86] MustardTiger: and look at that web UI, it&#x27;s silly.
+[3047.3] MustardTiger: It has effectively no practical purpose,
+[3049.62] MustardTiger: but it was very fun to stick one of my planes in Leuter,
+[3052.66] MustardTiger: connect to the ESP&#x27;s Wi-Fi and look at all of its parameters,
+[3056.98] MustardTiger: look at the speed and everything from my phone.
+[3061.86] UNKNOWN: Yeah.
+[3062.02] Stephen: Do you think people might put one in their radio in future
+[3065.3] Stephen: so they could have one in their radio
+[3066.74] Stephen: that they could always just, you know,
+[3068.1] Stephen: connect to with their phone?
+[3069.7] Stephen: Instead of needing to synchronize your GPS
+[3072.58] Stephen: and wait until it&#x27;s locked on before you take off,
+[3074.66] Stephen: you could just kind of have one that&#x27;s stuck in your radio
+[3077.38] Stephen: and then you take off and wait for it to get GPS and you&#x27;re away.
+[3083.06] UNKNOWN: I suppose sort of the sky&#x27;s limit, right?
+[3085.38] UNKNOWN: Yeah.
+[3086.58] UNKNOWN: I was going to say something about something I had planned
+[3091.46] MustardTiger: and it&#x27;s gone now.
+[3093.22] UNKNOWN: Such is life.
+[3094.1] MustardTiger: Sorry.
+[3095.22] UNKNOWN: No, no worries.
+[3095.94] MustardTiger: Sorry.
+[3097.94] UNKNOWN: You did mention that it&#x27;s on your GitHub,
+[3099.62] Stephen: so if anyone is looking for the updates on up and coming ideas,
+[3104.66] Stephen: go over to Formation Flight on GitHub.
+[3107.22] Stephen: Have a look at Mustard Tiger&#x27;s work.
+[3109.86] UNKNOWN: Absolutely.
+[3110.58] MustardTiger: Formationflight.org is the site that&#x27;ll help you through just about everything.
+[3115.14] MustardTiger: And then there&#x27;s a lovely Discord.
+[3116.5] MustardTiger: Again, the link is in this YouTube video&#x27;s description.
+[3119.3] MustardTiger: I&#x27;m Mustard Tiger there.
+[3120.42] MustardTiger: Feel free to hit me up there and I&#x27;m happy to help you out
+[3123.62] MustardTiger: with getting it set up, getting it sorted.
+[3126.74] MustardTiger: Any features you want to see, feel free to shoot those over in the Discord
+[3129.62] MustardTiger: and we&#x27;ll talk them out and see if we can get them done.
+[3134.18] UNKNOWN: Makes me want to try it out.
+[3135.3] Curry: It&#x27;s just so hard to fly on my own,
+[3138.58] Curry: let alone finding someone else to fly with at the moment.
+[3142.34] Curry: I am really no mates in my local area.
+[3146.18] UNKNOWN: I&#x27;m very fortunate to have a couple of local folks,
+[3148.74] MustardTiger: a few of whom have dropped an inset high.
+[3152.5] MustardTiger: Yeah.
+[3153.22] MustardTiger: Again, I don&#x27;t know if they want me to shout out who they are,
+[3156.18] MustardTiger: but they&#x27;re in there.
+[3158.02] MustardTiger: And yeah, they&#x27;re tremendous, lovely, lovely folks
+[3161.3] MustardTiger: who are willing to put up with my,
+[3163.46] MustardTiger: oh, hey, flash this build right before you leave the house.
+[3167.78] MustardTiger: Willing to do crazy things like stick a version of R2Pilot
+[3171.54] MustardTiger: I built last night at 11 p.m. on their aircraft and go fly it in the morning.
+[3176.58] MustardTiger: It&#x27;ll go fine, trust me.
+[3179.14] MustardTiger: It did go fine.
+[3180.98] UNKNOWN: I appreciate those lovely local folks who have helped me out with that.
+[3184.34] MustardTiger: Thank you.
+[3184.82] MustardTiger: It&#x27;s a high level of trust.
+[3186.82] UNKNOWN: Absolutely, yeah.
+[3188.02] Stephen: Well, and not so local.
+[3189.46] Stephen: If you&#x27;re running like 433 megahertz of some giant dev board,
+[3193.06] Stephen: they could be 50 miles down the road, sort of local, right?
+[3197.38] MustardTiger: Yeah, so that&#x27;s something I suppose is worth discussing on range.
+[3201.3] MustardTiger: The original iNav radar chose some LoRa parameters that were chosen.
+[3207.54] MustardTiger: I think that they may not have been the ones that I would have chosen
+[3213.62] MustardTiger: for that particular use case.
+[3215.62] MustardTiger: By my math, the original iNav radar on 433, for example,
+[3220.26] UNKNOWN: if everything is working right, should be around 500 k&#x27;s, which is excessive.
+[3227.3] UNKNOWN: Hi, where are you?
+[3228.5] Stephen: Oh, I&#x27;m in Texas.
+[3229.78] MustardTiger: Oh, I&#x27;m not.
+[3232.82] UNKNOWN: So I&#x27;ve got a page on formationflight.org slash info
+[3235.94] MustardTiger: that has rough location estimates, or sorry, rough range estimates.
+[3240.34] MustardTiger: And it includes ESP now, 2.4 giglora, 2.4 giglora with different antennas.
+[3245.54] UNKNOWN: Ballpark, yeah, the 2.4 giglora I think is the sweet spot
+[3248.74] MustardTiger: where just about everywhere you&#x27;ll be reasonably flying.
+[3251.62] MustardTiger: You can find your friends.
+[3253.54] MustardTiger: You won&#x27;t get dropouts if you go to a weird attitude and that kind of thing.
+[3258.1] UNKNOWN: Yeah, 433 seems like the proverbial sledgehammer to crack this problem.
+[3266.18] Stephen: It&#x27;s a whole lot of range.
+[3268.34] UNKNOWN: It is on that note, completely unrelated formation flight,
+[3272.58] MustardTiger: but I have been making some true diversity 433 radios for first best LRS.
+[3280.74] UNKNOWN: It&#x27;s absurd.
+[3281.78] MustardTiger: It&#x27;s silly.
+[3282.26] MustardTiger: I&#x27;ve got a couple of them on the desk here and I still need to flight test them.
+[3286.02] MustardTiger: But yeah, 433 is done with modern day protocols.
+[3290.98] UNKNOWN: These have a 50 minute max out like special legal dispensation.
+[3295.54] Stephen: Fly not just beyond visual line of sight,
+[3297.94] Stephen: but possibly in a completely different legal jurisdiction.
+[3301.06] UNKNOWN: Exactly.
+[3301.78] Stephen: Yeah, these these ones I have in front of me are only 50 milliwatt max power.
+[3305.86] MustardTiger: And by the math, they should be able to exceed 400 k&#x27;s very easily,
+[3309.86] MustardTiger: which I don&#x27;t know what what we fly that could hit that, but I don&#x27;t know.
+[3316.74] MustardTiger: I feel like in the UK, at least just the amount of just noise of other things on 433
+[3323.62] Frank: probably means that that&#x27;s going to be the bigger limitation than just the
+[3329.62] UNKNOWN: penetration, the broadcast of that signal.
+[3333.38] UNKNOWN: Quite possibly.
+[3334.18] MustardTiger: Yeah, it&#x27;s it&#x27;s real silly.
+[3336.02] MustardTiger: The antennas are huge.
+[3337.7] MustardTiger: A lot of folks were using 433 for on every radar
+[3342.34] MustardTiger: because the parameters chosen and the way that they worked,
+[3344.82] MustardTiger: even though it should have had super long range.
+[3348.1] UNKNOWN: It felt a lot shorter than it should have been essentially is the way I&#x27;ll say it.
+[3353.62] MustardTiger: A lot of folks were suggested to use 433.
+[3356.02] MustardTiger: I would really not recommend that anymore with information flight.
+[3359.14] MustardTiger: Stick with 24 Laura or ESP now.
+[3361.14] MustardTiger: That is that&#x27;s the way to go.
+[3362.42] MustardTiger: That&#x27;s straight up double the size for your crossfire antenna to get down to 433.
+[3366.98] Curry: All three people who want dipoles this big stuck to their planes.
+[3370.9] Stephen: How big is your plane?
+[3372.5] UNKNOWN: Not big enough.
+[3374.1] MustardTiger: Bigger antenna.
+[3375.22] MustardTiger: It&#x27;s better, man.
+[3375.86] MustardTiger: That&#x27;s how it works.
+[3378.34] UNKNOWN: Yeah, for flying information with someone on the other side of the planet.
+[3381.7] Frank: Yeah, hey, you&#x27;ll find each other.
+[3385.29] Stephen: That&#x27;s that&#x27;s the goal.
+[3386.33] Stephen: I&#x27;m just wondering about when do you hit an overflow error on USD elements?
+[3389.53] Stephen: That&#x27;s going to be the problem, isn&#x27;t it?
+[3391.37] UNKNOWN: In testing, it&#x27;s it&#x27;s surprisingly good about it.
+[3395.77] UNKNOWN: A lot of times, you know, during testing, I&#x27;d initialize the aircraft at like zero, zero,
+[3399.85] MustardTiger: and then spoof appear, you know, where I&#x27;m where I&#x27;m actually sitting in the P&amp;W
+[3403.69] MustardTiger: or bring up a real peer in the P&amp;W.
+[3405.77] MustardTiger: And, you know, before I added guards to prevent coming up at zero, zero,
+[3409.61] MustardTiger: I think it&#x27;s 7000 k&#x27;s or 13,000.
+[3412.33] MustardTiger: I forget what the exact number is.
+[3413.69] MustardTiger: Some absurd amount of distance.
+[3415.77] MustardTiger: And already pilot did a tremendous job of handling us displaying that distance.
+[3421.53] Stephen: Fantastic.
+[3422.89] UNKNOWN: Well, that builds some faith.
+[3424.25] UNKNOWN: That&#x27;s good.
+[3424.81] Stephen: Absolutely.
+[3425.29] Stephen: Yeah.
+[3427.69] Frank: Yeah.
+[3427.93] Stephen: Mark C, who was appearing before, I think a blacky FPV,
+[3432.65] Stephen: he was on here before discussing flying via 3G and 4G modems.
+[3437.21] Stephen: So that would be a perfect accompaniment, I feel, for these ludicrous range handsets.
+[3442.49] UNKNOWN: There you go.
+[3443.21] MustardTiger: Yeah.
+[3443.45] MustardTiger: I&#x27;ve run run your 433 megahertz 4G video.
+[3446.97] MustardTiger: There you go.
+[3448.01] UNKNOWN: I mean, you might have to be up quite high to avoid the curvature of the earth and stuff,
+[3452.09] Curry: but you&#x27;re probably in all sorts of trouble already for going that far out.
+[3456.09] Curry: He had a neat little lap that was doing telemetry on the web,
+[3459.13] Stephen: I think, didn&#x27;t he?
+[3459.93] Stephen: Well, there are 3G and 4G radios.
+[3462.01] Stephen: That was kind of cool.
+[3464.89] MustardTiger: Yeah.
+[3465.29] Stephen: So, oh, I do actually remember what I wanted to discuss a few minutes ago.
+[3469.61] MustardTiger: Something else that was sort of in vestigial stages back in the iNav radar days
+[3475.21] MustardTiger: was connecting one of your modems, one of your iNav, the formation flight radio,
+[3481.45] MustardTiger: whatever we want to call them, beacon nodes.
+[3484.01] MustardTiger: That&#x27;s a good term.
+[3485.85] MustardTiger: Connecting one of your beacon nodes to a ground station
+[3488.33] MustardTiger: and then being able to show everybody&#x27;s position.
+[3490.57] MustardTiger: Yeah.
+[3491.85] MustardTiger: I&#x27;ve got that loosely working.
+[3494.33] MustardTiger: It kind of sort of works.
+[3496.57] MustardTiger: There&#x27;s still a lot of stuff to be done,
+[3498.01] MustardTiger: but the hope is to be able to feed all of that data into mission planner.
+[3501.77] MustardTiger: Don&#x27;t have to be running autopilot.
+[3503.69] MustardTiger: It spoofs six aircraft and speaks MavLink over UDP,
+[3507.61] MustardTiger: so you just connect to the Wi-Fi of one beacon,
+[3511.13] MustardTiger: and then you can sit there on the ground and have everybody on a map.
+[3514.17] UNKNOWN: That&#x27;s cool.
+[3514.81] Stephen: So, if someone&#x27;s taking a break and they&#x27;re not wearing goggles or whatever,
+[3518.73] Stephen: they can just sidle over to a laptop and be like,
+[3520.97] Stephen: I wonder where everybody&#x27;s at.
+[3522.81] UNKNOWN: Absolutely.
+[3523.45] MustardTiger: It&#x27;s also nice for just spotting, especially on certain types of missions.
+[3528.73] MustardTiger: You could overlay your mission planner with ADS-B data,
+[3531.85] MustardTiger: just to be extra safe and say, hey, let&#x27;s not go that direction, that altitude.
+[3538.25] UNKNOWN: There&#x27;s some cool things you can do once you&#x27;ve got...
+[3540.57] MustardTiger: ADS-B overlay would be a fantastic use case for that.
+[3543.53] MustardTiger: Nice.
+[3544.01] MustardTiger: Yeah.
+[3544.65] MustardTiger: That already exists in mission planner,
+[3546.49] MustardTiger: so being able to overlay your formations position with ADS-B with ground maps and all that
+[3552.57] MustardTiger: could be quite nice.
+[3554.09] UNKNOWN: Yeah, definitely.
+[3555.45] Frank: I was even thinking about, I mean, it&#x27;s recently been the FPV combat meetup
+[3560.49] Frank: where they were trying to do the laser tag,
+[3565.29] Frank: or there&#x27;s even crashing them into each other as well as a form of combat.
+[3570.49] Frank: And so, if you have all of them,
+[3573.37] Frank: you can have some nice little kind of war maps of them all
+[3576.89] Frank: flying around and crashing into each other.
+[3578.41] Frank: That could be quite fun.
+[3579.61] UNKNOWN: That&#x27;d be fun.
+[3580.25] MustardTiger: And then they disappear once they hit one another.
+[3582.17] MustardTiger: It&#x27;s perfect.
+[3584.89] UNKNOWN: Yeah, there&#x27;s a lot of things you could do with that.
+[3588.97] UNKNOWN: Just need a little green OSD and get back to that kind of Apache gun ship look with all your
+[3595.37] Stephen: friend or foe recognizing.
+[3597.77] UNKNOWN: Yeah.
+[3598.01] Stephen: Last but with modern digital OSDs.
+[3600.17] Stephen: There you go.
+[3601.29] UNKNOWN: Yeah, just flip it onto another page.
+[3603.45] Stephen: I don&#x27;t think that&#x27;s dropping any day now, the red, green, amber, white pages.
+[3608.81] Stephen: So look at that one.
+[3612.17] UNKNOWN: Yeah, but there&#x27;s absolutely a lot of opportunity for features.
+[3615.69] MustardTiger: Again, if anybody has any cool ideas,
+[3617.29] MustardTiger: anything you want to see out of formation flight,
+[3618.89] MustardTiger: feel free to drop into that Discord, say hi.
+[3623.05] MustardTiger: Shoot me a message.
+[3624.01] MustardTiger: We&#x27;ll see if we can get something implemented.
+[3627.45] UNKNOWN: Awesome.
+[3627.93] Stephen: Well, it&#x27;s been an absolute pleasure, Master Tiger.
+[3630.17] Stephen: Thank you so much for joining us this evening and telling us about a,
+[3634.01] Stephen: frankly, fascinating project.
+[3636.09] Stephen: You&#x27;ve done an incredible amount in what I think is a very short amount of time as well.
+[3640.81] Stephen: Obviously, building on prior projects and due credit to INAF radar and everyone that&#x27;s come
+[3645.45] Stephen: before you, but huge congratulations on building something so impressive and so useful and so
+[3651.21] Stephen: attainable to a lot of pilots as well.
+[3653.29] Stephen: So thank you so much.
+[3655.37] UNKNOWN: Thank you so much for having me on.
+[3656.65] MustardTiger: I really appreciate the opportunity to chat with y&#x27;all and hopefully get some more folks
+[3661.61] MustardTiger: using formation flight.
+[3662.49] MustardTiger: It&#x27;ll be nice to see out there and see y&#x27;all in my OSD.
+[3666.41] UNKNOWN: Awesome.
+[3666.97] Stephen: Well, yeah, we&#x27;ll be seeing Master Tiger on OSD in the near future, I&#x27;m sure,
+[3672.17] Stephen: blasting out on 433 megahertz across the waves.
+[3675.85] Stephen: All right.
+[3677.29] UNKNOWN: You have been joined by Andrew slash Frank.
+[3681.05] UNKNOWN: Bye.
+[3682.73] UNKNOWN: Everyone&#x27;s favorite, Curry Kitten.
+[3684.97] UNKNOWN: I&#x27;m Dan Hinnah.
+[3685.93] Stephen: Bye.
+[3687.13] UNKNOWN: And Jack, who&#x27;s just dropped.
+[3689.53] Stephen: Thank you very much, Jack.
+[3691.53] UNKNOWN: Hello.
+[3692.25] Jack: I didn&#x27;t say anything the whole show.
+[3700.17] Stephen: And of course, by our fantastic guest, Master Tiger.
+[3703.69] Stephen: Thank you so much for joining us.
+[3705.37] UNKNOWN: Again, thank y&#x27;all for having me.
+[3707.13] UNKNOWN: All right.
+[3708.01] Stephen: Have a good day or evening wherever you are.
+[3710.01] Stephen: Catch you next week.
+[3711.29] Stephen: Thank you, Patreons.
+[3712.89] UNKNOWN: Thank you, our wonderful Patreons, for enabling us to do this,
+[3715.53] Stephen: keeping the websites online, paying the editor,
+[3717.93] Stephen: and 1,000 other useful things that make the show happen and keep the wheels on.
+[3723.21] Stephen: Thank you so much.
+[3724.33] Stephen: You&#x27;re awesome.
+[3725.53] Stephen: Look at patreon.org.
+[3726.73] Stephen: Let&#x27;s drone out to become a Patreon where you can pay to edit the show,
+[3730.89] Stephen: get your name in the credits, et cetera.
+[3734.17] UNKNOWN: I don&#x27;t know.
+[3738.49] UNKNOWN: Is it patreon.com?
+[3740.57] UNKNOWN: patreon.com.
+[3746.25] UNKNOWN: And on that note of failure and lack of accomplishment,
+[3750.41] Stephen: it&#x27;s another episode of Let&#x27;s Drone Out in the camera.
+[3753.37] Stephen: I think patreon.org is some dodgy fishing site.
+[3755.69] Stephen: It&#x27;s just a little bit too.
+[3758.49] UNKNOWN: Hey, as long as we&#x27;re sitting here, I&#x27;ll shout out formationflight.org.
+[3761.53] MustardTiger: That one is a .org.
+[3762.97] UNKNOWN: Telemetry lost.
+</pre></body></html>

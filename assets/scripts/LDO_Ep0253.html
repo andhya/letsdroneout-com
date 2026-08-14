@@ -1,0 +1,1227 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0253—LDO 253 - KISS</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 253 ===
+Title: LDO 253 - KISS
+Recorded: 2020-07-02
+Hosts: Andrew &quot;Frank&quot; Hyams, Tony &quot;TheTonstar1&quot; Marchant, Jack &quot;Brightontillifly&quot; Nash, Wayne &quot;CurryKitten&quot; Andrews
+Guest(s): &lt;details class=&quot;guest-toggle&quot;&gt;&lt;summary&gt;&lt;span class=&quot;gt&quot;&gt;Alexander &quot;fedorcomander&quot; F…&lt;/span&gt;&lt;span class=&quot;gf&quot;&gt;Alexander &quot;fedorcomander&quot; Fedorov, Lee &quot;Painless360&quot; Schofield&lt;/span&gt;&lt;/summary&gt;&lt;/details&gt;
+Total audience: 1,981
+Platforms: YouTube (https://www.youtube.com/watch?v=GQ7vAqtzZ5w); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/851756809-letsdroneout-ldo-253-kiss.mp3)
+=====================================
+
+***We&#x27;ve now done more episodes off of Hangouts On Air than we did on that system :O ***
+
+FedorCommander is https://www.youtube.com/channel/UC8L_QWQKIBC1thFDfbfI9tQ
+https://www.patreon.com/fedorcommander
+
+[0.0] UNKNOWN: Welcome to Let&#x27;s Drone Out, the original and best drone themed podcast.
+[5.0] Curry: We record the show live on the Thursday night on youtube.com forward slash Let&#x27;s Drone Out
+[10.0] Curry: and our lovely patrons help with the editing costs.
+[12.0] Curry: These are Wacky Wes, Mikey Dread, Art Faulkner, Carlos Campos.
+[19.0] Curry: Thank you.
+[20.0] Tony: Hello and welcome back to another wonderful episode of Let&#x27;s Drone Out.
+[57.83] Jack: Tonight you are joined by everyone&#x27;s favorite curry kitten.
+[61.83] UNKNOWN: Hello.
+[63.83] UNKNOWN: With a disclaimer.
+[66.83] UNKNOWN: Oh no, I haven&#x27;t found it.
+[68.83] Tony: He hasn&#x27;t got it.
+[69.83] Tony: Look for it.
+[70.83] Tony: Your only job.
+[72.83] Curry: There you go.
+[73.83] Curry: It&#x27;s there across the screen.
+[75.83] Curry: Don&#x27;t listen to any of us because it might all be wrong.
+[78.83] Curry: Especially guests.
+[79.83] Curry: They might talk rubbish.
+[81.83] Jack: My little Tony.
+[83.83] Jack: For sure.
+[85.83] Jack: Hello.
+[87.83] UNKNOWN: Andrew slash Frank.
+[89.83] Jack: Good evening.
+[91.83] UNKNOWN: Alex, who does the kiss for her firmware.
+[97.83] UNKNOWN: And I&#x27;m bright until I fly.
+[99.83] UNKNOWN: How are you doing, guys?
+[101.83] UNKNOWN: Very good.
+[104.83] UNKNOWN: Famous is back again.
+[106.83] Jack: So, you know that this will be somewhat of a half decent show.
+[109.83] UNKNOWN: I tell you what, the editor must love it when I&#x27;m on because they only have about two things to bleep.
+[120.83] Lee: We had that as a message.
+[127.83] Lee: The thing is now I know that everybody will be hell bent on making sure that they have a lot more than two things.
+[133.83] Lee: So that was my fault and I take full responsibility for that.
+[137.83] UNKNOWN: Look at what Katmens put in the chat.
+[139.83] Tony: Can someone highlight Katmens FPV?
+[148.83] UNKNOWN: He made a typo in WTF as well.
+[154.83] Jack: As you probably guessed, this is one of the worst drone podcasts ever.
+[161.83] Jack: And also one of the best just from the fact how many there are.
+[165.83] Curry: So, you know, both ways, isn&#x27;t it?
+[167.83] Curry: Yeah.
+[168.83] Jack: So thanks for coming on.
+[170.83] Jack: I invited you on.
+[171.83] Jack: I haven&#x27;t I haven&#x27;t spoken to you in a good while.
+[177.83] Jack: I think it was like sometime last year.
+[180.83] Jack: I mean, I&#x27;ve still got release candidate 40 on one of my quads from you and like being brilliant.
+[192.83] Jack: And I found out that you do a Patreon and you&#x27;ve been working on the firmware and it&#x27;s available there.
+[200.83] Jack: And you&#x27;ve you&#x27;ve flashed your little dev board if you don&#x27;t mind holding it up again explaining it again.
+[208.83] Alex: Oh, yeah.
+[211.83] UNKNOWN: Yeah.
+[212.83] Jack: So tell us what you got there if you don&#x27;t mind.
+[217.83] Alex: Well, I just dropped everything together because I was tired of things, you know, kind of concentrated in one bowl of wires.
+[226.83] Alex: So there&#x27;s a kiss of CF2 V2 crossfire receivers.
+[232.83] Alex: I have no idea which one GPS.
+[236.83] Alex: Wolf PDB for OSD because I use kiss messaging.
+[241.83] Alex: So I need to see what&#x27;s going on on the screen.
+[244.83] Alex: There is shut very shut down deeper because deeper gives me problems.
+[249.83] Alex: So last few hours.
+[251.83] Alex: And yeah, that&#x27;s pretty much you put AC in it and the thing can fly.
+[259.83] Alex: Can I ask a quick question on behalf of people like me that may not have used kiss?
+[264.83] Curry: I have used some kisser sees but never a flight controller.
+[267.83] Curry: So lots of people use beta flight.
+[269.83] Curry: We&#x27;re quite familiar with it.
+[270.83] Curry: What is different about kiss?
+[272.83] Curry: How does it work differently?
+[273.83] Curry: I know people that use it really quite even evangelize about it quite a lot because they really like it.
+[280.83] Curry: So what what what&#x27;s the what&#x27;s the key features?
+[285.83] Curry: Well, I think it&#x27;s all in the name, keeping it super simple.
+[290.83] UNKNOWN: So there&#x27;s no fancy GUI with 100 pages where you need to watch 10 videos to understand how the thing bloody works.
+[300.83] Alex: It&#x27;s just basically it&#x27;s one page and one advanced page.
+[304.83] Alex: And this is what you have super simple.
+[307.83] Alex: There is not not that much things you can change.
+[311.83] Alex: And this is kind of controlled of what people can change, but people cannot change.
+[317.83] UNKNOWN: Same things.
+[319.83] Alex: A lot of things made automatic.
+[321.83] Alex: So it&#x27;s behind the scenes.
+[322.83] Alex: So you don&#x27;t have to bother, for example, RTH.
+[325.83] Alex: You just you can fly with default settings.
+[329.83] Alex: Pete&#x27;s you can just go fly with default.
+[332.83] Alex: Pete&#x27;s flies quite a quite OK, by the way.
+[335.83] Alex: It&#x27;s for people who like more fly than tinker.
+[342.83] Curry: It&#x27;s just yes.
+[344.83] Curry: So is RTH on Kiss actually RTH not sort of crashed towards yourself at home like you didn&#x27;t really see that.
+[353.83] UNKNOWN: Yeah, it&#x27;s well, we kind of jumped to the end of history of the case now.
+[359.83] Alex: Well, I will tell you the RTH I wrote from scratch.
+[362.83] Alex: I promised somewhere last year that I will do RTH on Kiss.
+[366.83] Alex: So I start to do in 40.
+[368.83] Alex: I had the GPS support and other things.
+[372.83] Alex: And somewhere in March, I start testing RTH.
+[377.83] UNKNOWN: I wrote it from scratch.
+[379.83] UNKNOWN: So I think it flies quite nice.
+[384.83] Alex: The general idea for me is to try to mimic RTH like the pilot will fly.
+[390.83] UNKNOWN: So it&#x27;s very silky, smooth throttle control.
+[393.83] Alex: It&#x27;s smooth turns.
+[395.83] Alex: And well, I like it.
+[396.83] Alex: I like it.
+[397.83] Alex: It&#x27;s came up very good.
+[398.83] Alex: Still work in progress.
+[400.83] Alex: There are some things I still need to do.
+[403.83] UNKNOWN: Well, currently I&#x27;m busy adding RTH on file safe because a lot of people, of course, it needs to be done using video.
+[411.83] Alex: Well, you can flip the switch and what will come back.
+[414.83] Alex: I think record is now four point three kilometers on DJI, by the way.
+[419.83] UNKNOWN: And well, I need to do things to return the quad one receiver file safe.
+[426.83] Alex: And that requires some refactoring of the main code of file safe.
+[432.83] Alex: So it&#x27;s practically done.
+[434.83] Alex: I think this weekend I will wrap it up and ship it to the testers.
+[438.83] Alex: Well, that&#x27;s what I&#x27;m currently busy with.
+[442.83] Alex: And what&#x27;s the relationship between the Kiss hardware and the Kiss software?
+[448.83] Alex: It&#x27;s one to one.
+[450.83] Alex: So it&#x27;s one made for another.
+[452.83] Alex: So, for example, how can you do it?
+[456.83] Alex: You can treat better flight like Windows or Linux and Kiss more like Apple because we use very low level code and highly optimized code that runs only on our platform.
+[471.83] Alex: We run another flight controllers, by the way, with the adaptation.
+[475.83] Alex: But it is made for each other.
+[480.83] Alex: So that&#x27;s really a good thing.
+[482.83] UNKNOWN: I must admit, the Kiss stuff has been the best flying flight controllers without a lot of messing about that I&#x27;ve ever done.
+[493.88] Lee: I&#x27;ve done a couple of builds with stuff from you guys.
+[496.88] Lee: Whereas with things like B2Flight and iNav, the initial PIDs are OK and they get you flying.
+[503.88] Lee: There&#x27;s always an element of iterative tuning to get it to fly how you want.
+[509.88] Lee: With a Kiss stuff, I was all really impressed.
+[512.88] Lee: I don&#x27;t know what you guys do, but it just seems to fly really nicely straight away.
+[517.88] Lee: And I just love that because there&#x27;s so much fear and worry from lots of new pilots.
+[525.88] Lee: Some was joking before about, I wish it was only 10 videos to watch because most of us have been doing it for a while.
+[533.88] Lee: You talked about you need to watch 10 videos to set up B2Flight and I think a lot of people would argue it&#x27;s more than that.
+[540.88] Lee: With Kiss, you literally set it up, you plug it together, you fire it up and away it goes.
+[545.88] Lee: The return to home, is that just a quick question for me?
+[549.88] Lee: Is that return to home if it&#x27;s on a multi-rotor flight back and then land and disarm it?
+[553.88] Lee: Or is it like B2Flight where it just flies it back and hovers around there?
+[557.88] Lee: It doesn&#x27;t hover, Lee, it just crashes.
+[560.88] Lee: No, I was being generous.
+[563.88] Alex: Well, the moment it just comes back and hovers above and you&#x27;re supposed to turn off Artiation Landed yourself,
+[572.88] Alex: I didn&#x27;t do landing logic yet.
+[575.88] Alex: There is one problem I&#x27;m really fighting with myself.
+[580.88] Alex: I don&#x27;t want to put quads down with spin props.
+[585.88] UNKNOWN: I don&#x27;t.
+[587.88] UNKNOWN: Because you don&#x27;t know, it&#x27;s only relies on GPS and altitude and GPS.
+[592.88] Alex: Not that great on all GPSes, but it works with all the tricks I do.
+[597.88] Alex: But, you know, go slowly down around you with props spinning.
+[603.88] Alex: With these grass mowers, not really a good idea.
+[607.88] UNKNOWN: So I thinking, or there will be a chance to take over, that is preferred method.
+[613.88] Alex: So it comes back, take over and you landed loss.
+[617.88] Alex: Or it will hover until lipo alarm will trigger it and then it will disarm or just fall down and go to normal self-precedure.
+[628.88] Alex: But I didn&#x27;t decide it.
+[630.88] Alex: So at the moment, it just forwards above.
+[632.88] Alex: So you can do whatever you want.
+[634.88] Tony: To be fair, if it comes back and then just fell in front of me, I wouldn&#x27;t mind.
+[639.88] Tony: Better than going looking for it, isn&#x27;t it?
+[642.88] UNKNOWN: It will fall down eventually.
+[644.88] Alex: You know, we&#x27;ll never hang forever.
+[647.88] Tony: I&#x27;d much prefer that to be then go looking, trudging across wherever, looking for a quad that&#x27;s gone.
+[656.88] Tony: That&#x27;s problem already taken care of.
+[659.88] UNKNOWN: And you&#x27;ve managed to do that functionality just on the GPS, so it doesn&#x27;t need a compass as well.
+[664.88] UNKNOWN: No, no, I don&#x27;t use GPS.
+[665.88] Alex: It&#x27;s similar to what better flight rescue does.
+[669.88] Alex: So they also rely on minimum sensor.
+[672.88] Alex: It&#x27;s just GPS.
+[674.88] Alex: I do only GPS.
+[677.88] Alex: Honestly, I don&#x27;t have any means to connect a compass to KISS.
+[682.88] Alex: It would be not simple.
+[684.88] Alex: So that&#x27;s kind of not in sync with the project.
+[687.88] Alex: There is one way to use compass from with GPS book, but I didn&#x27;t implement it yet.
+[698.88] Alex: I&#x27;d like to ask, is it the ESCs that make KISS great or is it the flight controller or is it the programming?
+[707.88] UNKNOWN: Which one of them three?
+[709.88] UNKNOWN: All of them.
+[710.88] Tony: Or all together.
+[711.88] Tony: All together.
+[712.88] Tony: Is it all together?
+[713.88] Tony: It&#x27;s the Triforce.
+[715.88] UNKNOWN: Because I&#x27;ve seen people like, I fly KISS FC and then different ESCs and they love the, you know,
+[725.88] Tony: and I&#x27;m like, well, I like it all together and it just flies so good all together.
+[731.88] UNKNOWN: Well, people do split it sometimes.
+[734.88] UNKNOWN: The thing is, yeah, some people don&#x27;t like KISS ESCs and they&#x27;re trying to use it with KISS flight controller,
+[741.88] Alex: most likely because they used to and because the prices is higher for KISS components.
+[748.88] Alex: The original KISS ACs were made in Europe.
+[751.88] Alex: Of course, the quality was quite better than China stuff.
+[755.88] Alex: I&#x27;m talking about 24, 32 amps from FlyDooina.
+[759.88] UNKNOWN: And well, there is, it works.
+[762.88] Alex: Well, you&#x27;re missing some nice cherries on top like telemetry, like the short commands, like flushing your ACs through KISS.
+[776.88] Alex: So it will, well, it doesn&#x27;t work with Betaflight or with Bill Helis because of the technical limitations.
+[785.88] UNKNOWN: And that&#x27;s it.
+[787.88] Alex: Well, people fly with Bill Helis.
+[789.88] Alex: That&#x27;s fine.
+[791.88] UNKNOWN: Yeah.
+[792.88] UNKNOWN: How did you get involved with this?
+[794.88] UNKNOWN: Sorry?
+[795.88] Alex: Did you get involved with this?
+[797.88] Jack: Have you always been riding at all?
+[799.88] Jack: No, no, no, no, no.
+[800.88] Alex: Well, it was very simple.
+[802.88] Alex: I think three, three and a half years ago when KISS was released, I was very, very much a Betaflight user.
+[810.88] Alex: I actually did some even contributions to Betaflight project at the time.
+[815.88] Alex: I bought my first KISS.
+[818.88] UNKNOWN: I put it on the quad.
+[820.88] Alex: It was an LN5 inch.
+[822.88] Alex: I flown it.
+[824.88] UNKNOWN: And I never touch Betaflight again.
+[829.88] Frank: And this is my first encounter with KISS.
+[832.88] Alex: And, well, if I like something, I start to contribute into the project and jump some ideas.
+[840.88] Alex: And I was looking for ways to look at flight telemetry because, well, I worked on Betaflight with Nicholas Sherlock, the guy who made Black Box.
+[853.88] UNKNOWN: And I wanted to have something for KISS like this.
+[857.88] Alex: But there was no access to source code.
+[859.88] Alex: And I started to just look at telemetry stream.
+[861.88] Alex: And the guy, Norbert Machinek, who was working the KISS racing team manager at that time, he approached me and said, like, well, you&#x27;re doing great stuff.
+[871.88] Alex: Do you want to see the magic cells?
+[876.88] UNKNOWN: Are you kidding?
+[878.88] Alex: Of course.
+[879.88] UNKNOWN: You know how the software just dies.
+[882.88] Alex: I jumped on the train just blindly and started just punching code.
+[886.88] Alex: And that time KISS was like one page of GUI.
+[890.88] Alex: And Beeper was doing like, babe.
+[893.88] UNKNOWN: It was really dramatic, but it was flying well with some mid-flight oscillations.
+[901.88] Alex: But who cares?
+[902.88] Alex: The responsiveness was great.
+[905.88] Alex: So I started to, well, basically complete the project and writing some code and start to the GUI, extend GUI.
+[914.88] Alex: Basically everything that you see in the GUI after first page, it was, well, it was my stuff I did.
+[923.88] UNKNOWN: And then I started doing for more and deeper and deeper and some flying code, some filters.
+[930.88] Alex: And yeah, here we go.
+[935.29] Tony: I must say, it does fly lovely.
+[937.29] Tony: I fly it for freestyle, but I do fly beater flight for racing.
+[944.29] Tony: Just find the two.
+[947.29] UNKNOWN: I can&#x27;t race with KISS.
+[949.29] Tony: I have to race beater flight.
+[951.29] Tony: Not that I&#x27;ve done much racing the last year, but it just feels completely different to me.
+[956.29] Tony: Like, KISS for me is locked in freestyle.
+[961.29] Tony: Just feels really nice.
+[963.29] Tony: And beater flight just feels a bit looser and just a bit more, I don&#x27;t know.
+[968.29] Tony: They&#x27;re two different things for me.
+[970.29] Tony: And that&#x27;s how I fly both.
+[973.29] UNKNOWN: Oh, it&#x27;s a matter of choice.
+[974.29] Alex: It&#x27;s nice to have options, right?
+[976.29] UNKNOWN: Exactly.
+[978.29] Alex: Well, you know, Heiko, Heiko of Heiko, he&#x27;s a really fanatic KISS racer.
+[986.29] Alex: So he&#x27;s racing like there&#x27;s no tomorrow only on KISS.
+[991.29] Alex: For some reason, he prefers KISS feel on the racing.
+[995.29] Tony: There is some out there.
+[996.29] Tony: There is some out there.
+[997.29] Tony: I&#x27;ve met some KISS guys who like race KISS and that&#x27;s it.
+[1000.29] UNKNOWN: But for me, it&#x27;s just different.
+[1003.29] Tony: I don&#x27;t know.
+[1004.29] Tony: The locked in-ness of KISS when you&#x27;re freestyling, whereas the beater flight.
+[1009.29] Tony: It just feels different.
+[1010.29] Tony: It&#x27;s a lot different.
+[1011.29] Tony: And that&#x27;s just the way I do it.
+[1013.29] Tony: But that&#x27;s just personal preference.
+[1016.29] Alex: I have no idea.
+[1017.29] Alex: I wouldn&#x27;t lie.
+[1018.29] Alex: I&#x27;d never race.
+[1019.29] Alex: I&#x27;d never fly a beater flight.
+[1022.29] UNKNOWN: No, I&#x27;ve never raced.
+[1023.29] Alex: I&#x27;ve never had the urge to crash all the time.
+[1028.29] Alex: Yeah.
+[1029.29] Alex: I just do it for just pleasure.
+[1032.29] Curry: So what about KISS and DJI?
+[1034.29] Curry: Wasn&#x27;t that one of your questions, Tony?
+[1036.29] Curry: It was.
+[1037.29] Curry: Are you not getting your OSD through?
+[1039.29] UNKNOWN: Yes, or not at the moment.
+[1041.29] Tony: And wondering when will it be out and will it be easy?
+[1046.29] Tony: I think someone&#x27;s done it, but it&#x27;s like open chrome, do something, go backwards.
+[1052.29] Tony: I don&#x27;t know.
+[1053.29] Tony: There&#x27;s just nothing out there.
+[1055.29] Tony: That&#x27;s the problem with KISS.
+[1056.29] Tony: There&#x27;s nothing out there showing you what to do.
+[1058.29] Tony: No, not seen it.
+[1061.29] Tony: Not found it.
+[1062.29] Tony: Not seen it.
+[1063.29] Tony: But I&#x27;ve only had HD for like two days.
+[1069.29] Curry: To be fair, Tony doesn&#x27;t know how to work a computer either.
+[1072.29] Curry: If you don&#x27;t know where it is, it doesn&#x27;t mean it doesn&#x27;t exist.
+[1086.29] Alex: I think I released KISS first KISS DJI support the day after I got the goggles.
+[1094.29] Alex: First version was just voltage and alarm, voltage alarm that goes red.
+[1099.29] UNKNOWN: Now you have, well, I finished the firmware for DJI support.
+[1107.29] UNKNOWN: It supports pretty much all sensors that&#x27;s available to me.
+[1112.29] Alex: It supports KISS messaging.
+[1114.29] Alex: That&#x27;s a new thing I did in 45 firmware.
+[1119.29] Alex: I will probably tell you later on about it.
+[1122.29] Alex: You can select seven layouts.
+[1125.29] Alex: I didn&#x27;t want to do a very fancy editor.
+[1131.29] Alex: It&#x27;s quite complex.
+[1132.29] Alex: You need to move things around.
+[1134.29] Alex: It&#x27;s just presets.
+[1136.29] Alex: I assembled all information from a lot of people how they wanted and ended up with seven presets.
+[1142.29] Alex: Maybe I would make more.
+[1144.29] Alex: You have GPS data.
+[1145.29] Alex: You have HomePointer.
+[1147.29] Alex: Actually, HomePointer was supported before Betaflight.
+[1153.29] Alex: It supports LQ on crossfire and virtual LQ on other receivers.
+[1160.29] Alex: That&#x27;s also what Betaflight is having.
+[1163.29] Alex: I need this in my life.
+[1164.29] Tony: Where can I find it?
+[1165.29] Tony: Is there any videos to show me what to do?
+[1168.29] Alex: Well, you don&#x27;t need to do anything.
+[1170.29] Alex: You just connect it to serial port.
+[1173.29] Alex: You select serial port as MSP and this is it.
+[1177.29] UNKNOWN: Tony, the serial port isn&#x27;t like a socket on the wall.
+[1182.29] Jack: It&#x27;s like socketing with six pins on the wall.
+[1188.29] UNKNOWN: Tony, just make sure Danny heard this so he can do it for you.
+[1191.29] Curry: I think he&#x27;s in the chat.
+[1193.29] Tony: There you go.
+[1194.29] Tony: If not, I&#x27;ll be driving to Brighton.
+[1196.29] Jack: I think it asks any chance of IBUS support for KISS.
+[1201.29] Jack: IBUS support?
+[1202.29] Jack: You know the IBUS support.
+[1204.29] Jack: IBUS.
+[1205.29] Jack: What the heck is this?
+[1208.29] Jack: You know the FSIC?
+[1211.29] Curry: The Fliesky&#x27;s version of SBUS sort of a bit.
+[1215.29] UNKNOWN: Which is apparently faster.
+[1219.29] Alex: Crossfire is faster.
+[1222.29] Alex: Crossfire is the fastest.
+[1225.29] UNKNOWN: But I don&#x27;t have any Fliesky and I don&#x27;t have any intention to implement it
+[1230.29] Alex: because I don&#x27;t really use it.
+[1232.29] Alex: Sorry.
+[1233.29] Alex: That&#x27;s a hard no then.
+[1237.29] Curry: What is IBUS?
+[1238.29] Curry: It kind of gives it away.
+[1240.29] Alex: Nobody just sent me DJI goggles.
+[1243.29] Alex: That&#x27;s a nice present.
+[1245.29] Alex: I&#x27;ve got to hook it up.
+[1247.29] Alex: I just made a firmware for it to work.
+[1250.29] Alex: Fliesky has no idea.
+[1252.29] Alex: Same with Grubner.
+[1254.29] Alex: They approached me and said,
+[1256.29] Alex: can you make kind of a Lua editor for us?
+[1260.29] Alex: They also sent me some radios.
+[1263.29] Alex: Two days later it was done.
+[1266.29] Alex: This is pretty much how it works.
+[1268.29] Alex: If I got interested in something, I&#x27;d implement it.
+[1271.29] Alex: I like it to work.
+[1276.27] UNKNOWN: Yeah, it does.
+[1277.27] Curry: Fliesky.
+[1278.27] Curry: Someone sent him a Fliesky gear and it worked.
+[1281.27] UNKNOWN: Two days later.
+[1285.27] UNKNOWN: I think people were worried about KISS probably three years ago, Jack,
+[1291.27] Tony: that you were flying and always catching ESCs a lot.
+[1296.27] UNKNOWN: That was a very long time ago.
+[1298.27] Jack: Yeah, I was going to say it was like four.
+[1301.27] Tony: Was it like 20 amps, I think?
+[1304.27] Alex: No, it was 18 amp ESCs.
+[1306.27] Alex: It was the 18s, yeah.
+[1308.27] Alex: I bought like 24 of them.
+[1311.27] Alex: I bought just a liter of IPA with brushing all the balls out
+[1316.27] Alex: and cleaning it up like on the radios.
+[1319.27] Alex: I was burning, I think, half of them.
+[1325.27] Tony: When I first flew, I flew a couple and hit a branch
+[1329.27] Tony: and it would burn out and fall on the floor and that was it.
+[1332.27] Tony: Eight bit CPUs, eight bit of slow CPUs.
+[1335.27] Alex: What could they do?
+[1337.27] Alex: Yeah, it was back in the day, admittedly.
+[1339.27] Tony: It was four years ago or whatever now.
+[1342.27] Tony: There&#x27;s so much improvement.
+[1343.27] Tony: Yeah, it was quite a hype.
+[1345.27] Alex: There was a nice video from Nolak flying in the sunset
+[1349.27] Alex: in the garden showing responsiveness of KISS and that was so nice.
+[1353.27] Alex: I got hooked.
+[1356.27] UNKNOWN: Well, they felt really nice.
+[1358.27] Jack: They really were totally different.
+[1362.27] Jack: It reminded me of, what was it called again?
+[1371.27] UNKNOWN: Ah, I&#x27;ve forgotten.
+[1373.27] Jack: I&#x27;ve totally forgotten.
+[1375.27] Jack: Go, Jack.
+[1376.27] UNKNOWN: Obviously, we flight controllers, it kind of felt like that,
+[1381.27] Jack: like the sort of rates.
+[1383.27] Jack: It felt really nice.
+[1386.27] Jack: I just kind of got along with them,
+[1391.27] Jack: but yeah, they were like little firecrackers.
+[1393.27] Jack: They would just go all the time.
+[1396.27] Jack: One person, I was like, yeah, man,
+[1399.27] UNKNOWN: some sort of event or something.
+[1401.27] Jack: They had like a little mini like three or four inch quad.
+[1404.27] Jack: I&#x27;m like, oh, you get on all right with them.
+[1406.27] Jack: And he was like, well, as long as it&#x27;s tuned properly,
+[1409.27] Jack: they don&#x27;t explode.
+[1411.27] Jack: And I was like, hey, that&#x27;s right.
+[1416.27] Alex: Since without current limit, it&#x27;s yeah.
+[1420.27] Jack: Didn&#x27;t have any problem to the KISS 24 amps and the KISS
+[1427.27] Jack: V1 flight controller, the accelerometer ended up going.
+[1433.27] Jack: I think eventually it just took too many hits.
+[1436.27] UNKNOWN: I&#x27;d get this spin of death.
+[1438.27] Jack: It&#x27;s a specific one.
+[1439.27] Frank: Is that what we&#x27;re talking about there, Jack?
+[1441.27] Jack: Well, I had two of them go in the end.
+[1446.27] Tony: That could be your flying, though.
+[1449.27] Tony: Or crashing.
+[1452.27] Frank: Yeah.
+[1456.27] Frank: Tony, what do you run this KISS at the moment?
+[1462.27] Frank: Which of your quads?
+[1465.27] Tony: One&#x27;s V1 and one&#x27;s V2.
+[1467.27] Tony: And you can definitely tell the difference between V1 and V2.
+[1470.27] Tony: V2 is so much better.
+[1472.27] UNKNOWN: Oh, yeah.
+[1473.27] UNKNOWN: I just love flying V2.
+[1476.27] Tony: It just feels brilliant.
+[1478.27] Tony: But I&#x27;m too scared to do any updating.
+[1481.27] Tony: If I do this update and get me on screen display,
+[1486.27] Tony: is it going to be the same quad?
+[1488.27] Tony: That&#x27;s what I&#x27;m worried about.
+[1489.27] Tony: I never upgrade anything when it flies nice.
+[1493.27] Alex: Yeah, it can&#x27;t be this quad.
+[1495.27] Alex: Way from it.
+[1496.27] Alex: But it&#x27;s better.
+[1498.27] Jack: What are we on now?
+[1500.27] Jack: Because I&#x27;ve got 1.3 RC4ED.
+[1505.27] UNKNOWN: That&#x27;s the last one I&#x27;ve got.
+[1507.27] Alex: 1.345 F I&#x27;m busy with.
+[1511.27] Tony: I plugged mine into my mate&#x27;s laptop
+[1514.27] Tony: and it didn&#x27;t register on anything.
+[1516.27] Tony: It&#x27;s like there was a stone-owned van coming.
+[1521.27] Curry: If you plug something into a laptop,
+[1523.27] Curry: we don&#x27;t trust what you&#x27;re doing.
+[1525.27] Curry: You could be doing anything.
+[1527.27] Curry: It could be an empty schedule either.
+[1529.27] Tony: Should I just go?
+[1531.27] Jack: You plug in and it just takes ages.
+[1535.27] UNKNOWN: Laptop.
+[1539.27] Alex: This is a KISS laptop.
+[1542.27] UNKNOWN: XT60 doesn&#x27;t count only.
+[1545.27] Curry: That is one of my questions for a while.
+[1548.27] Curry: But KISS was sort of not OSD friendly
+[1552.27] Curry: and you had to put another board in and stuff.
+[1554.27] Curry: I take it that&#x27;s all changed now.
+[1556.27] Curry: Is it on the V2 boards?
+[1557.27] Curry: Is there an OSD now that you can...
+[1559.27] Curry: No.
+[1560.27] UNKNOWN: It does not.
+[1561.27] Curry: So you still have to do extra boards and stuff.
+[1563.27] UNKNOWN: Why not?
+[1565.27] Alex: Well, there is some work at FedEx.
+[1569.27] Alex: That includes OSD.
+[1572.27] Alex: I think it&#x27;s not a big secret.
+[1574.27] Alex: So it will be released quite soon.
+[1576.27] Alex: So you&#x27;ll have flight controller,
+[1578.27] Alex: case-based with OSD.
+[1581.27] UNKNOWN: There is very nice OSD.
+[1583.27] Alex: I really like it from Alexander Wolf, a friend of mine.
+[1587.27] UNKNOWN: Well, we work a lot together to improve communication,
+[1591.27] Alex: share ideas and...
+[1593.27] Alex: Well, I really like to work with that guy.
+[1597.27] Alex: There was a guy who was implementing something
+[1600.27] Alex: for Multi-View OSD.
+[1602.27] Alex: I had contact last week and he asked
+[1604.27] Alex: what was changed in protocol and he implemented
+[1606.27] Alex: like two hours later.
+[1608.27] Alex: Like, whoa, that&#x27;s nice.
+[1609.27] Alex: Case messaging on Multi-View OSD.
+[1613.27] UNKNOWN: DJI has OSD out of the box without nothing.
+[1617.27] Alex: Just plug and play.
+[1620.27] Alex: I did support for TBS EVO,
+[1622.27] UNKNOWN: VTX with OSD out of the box.
+[1625.27] Alex: Nothing needs a hardware side.
+[1629.27] Alex: There are plenty of options, but some people...
+[1631.27] Alex: I don&#x27;t like OSD.
+[1633.27] UNKNOWN: Honestly, I just have voice alarm on terrain
+[1636.27] Alex: saying when the mic is down,
+[1638.27] Alex: so that&#x27;s pretty much what I need.
+[1642.27] UNKNOWN: What else do you need it for?
+[1644.27] Jack: I like to see stuff.
+[1646.27] Curry: You turn that input much.
+[1648.27] UNKNOWN: I don&#x27;t like to see stuff.
+[1650.27] Jack: I like to see my RSSI.
+[1652.27] Curry: I like to see my timer.
+[1653.27] Curry: I like to see my voltage.
+[1654.27] Curry: Yeah, you can get them in telemetry.
+[1656.27] Curry: So that&#x27;s the way it works.
+[1657.27] Curry: You say this has been called KissTalk.
+[1659.27] Curry: Presumably there&#x27;s this protocol
+[1660.27] Curry: and you can talk back and forth to devices
+[1662.27] Curry: and they display OSDs and stuff like that.
+[1665.27] UNKNOWN: There&#x27;s more than one protocol that talks to us.
+[1668.27] Alex: DJI use MSP protocol.
+[1671.27] Alex: For example, it&#x27;s old, old, old, old TV protocol.
+[1675.27] Alex: I implemented it from scratch,
+[1677.27] Alex: so I cannot use source code from open source projects.
+[1679.27] Alex: So I need to write everything from freaking scratch.
+[1682.27] Alex: So that&#x27;s an interesting concept.
+[1686.27] Alex: And there is a special protocol for Kiss
+[1690.27] Alex: that&#x27;s used to communicate with OSD.
+[1694.27] Alex: Well, it didn&#x27;t change since version 1.2
+[1698.27] Alex: and it&#x27;s just growing with more commands
+[1703.27] Alex: and more support stuff.
+[1705.27] UNKNOWN: Yeah, different techniques we use now with Alex Volve.
+[1710.27] Alex: It&#x27;s way, way nicer.
+[1712.27] UNKNOWN: It actually helps.
+[1714.27] Alex: We optimized the protocol so it helps to get GPS data
+[1718.27] Alex: from OSD to Kiss for RTH.
+[1721.27] Alex: So that was all about it.
+[1724.27] UNKNOWN: I suppose one could accuse you
+[1726.27] Curry: of not keeping it super simple
+[1728.27] Curry: if you have to put an external sort of board on for an OSD.
+[1731.27] Curry: But I suppose you could equally argue
+[1733.27] Curry: that it&#x27;s much more simple not to have an OSD.
+[1736.27] UNKNOWN: Well, yeah, you also need battery and motors.
+[1738.27] Alex: So if you want to try.
+[1741.27] Curry: It&#x27;s never that simple, is it? Not with a cord.
+[1745.27] UNKNOWN: I don&#x27;t know. Just put PDB with OSD on it.
+[1749.27] Alex: You still need to feed power to your ESCs. It&#x27;s convenient.
+[1753.27] Alex: And otherwise, it will make just FC bigger and more expensive.
+[1758.27] Alex: And until recent, we didn&#x27;t have much of the alternative
+[1762.27] Alex: than Mox chip, which is huge, power hungry.
+[1766.27] Alex: It gets hot all the time.
+[1768.27] Alex: And that&#x27;s why it was never on Kiss.
+[1772.27] Alex: Actually, I&#x27;m blind.
+[1774.27] Alex: I have one Kiss board with OSD,
+[1776.27] Alex: one-of-a-kind prototype.
+[1779.27] Alex: It actually has OSD on it.
+[1781.27] Alex: It has VTX on it.
+[1783.27] Alex: It has four ESCs.
+[1784.27] Alex: So it&#x27;s basically all quad in one board.
+[1788.27] UNKNOWN: And...
+[1790.27] Alex: No, it didn&#x27;t work out.
+[1792.27] Alex: And I have just one prototype left.
+[1794.27] Alex: It melted off for a couple of minutes.
+[1796.27] Curry: No, no, no. It still works, actually.
+[1798.27] Alex: It&#x27;s 18 amps. It&#x27;s not much.
+[1802.27] Alex: But it gets really hot with VTX on it.
+[1805.27] Alex: I bet.
+[1807.27] UNKNOWN: Mark has got a question. It&#x27;s not Kiss-based.
+[1812.27] Jack: I&#x27;m going to go flash my spare quad. Hang on.
+[1817.27] Jack: He asks,
+[1819.27] Jack: can you say something about the new APK on Android phone,
+[1825.27] Jack: what are the differences between that and Speedy-B?
+[1829.27] UNKNOWN: That sounds like a painless question.
+[1832.27] Jack: I&#x27;ve not played with the APK stuff on Android.
+[1836.62] Lee: I&#x27;ve done stuff with Speedy-B.
+[1838.62] Lee: So what that is for people who don&#x27;t know what that is talking about
+[1842.62] Lee: is rather than have the Beatify configurator on your computer
+[1845.62] Lee: and then plug it into your machine via a USB cable,
+[1850.62] Lee: you can either use an on-the-go
+[1853.62] Lee: or there&#x27;s a little Speedy-B adapter that you can kind of power and plug in
+[1857.62] Lee: and connect over Bluetooth.
+[1859.62] Lee: And it gives you kind of a Beatify configurator light on your phone.
+[1863.62] Lee: It&#x27;s handy at the field if you want to booger about
+[1865.62] Lee: and maybe you don&#x27;t use an on-screen display.
+[1869.62] Lee: Then you want to change the settings,
+[1871.62] Lee: change the way things out now, like your flight modes are assigned.
+[1874.62] Lee: You can do it all on your phone.
+[1876.62] Lee: I&#x27;ve not used the Beatify one yet, though.
+[1878.62] Lee: But it&#x27;s nice to go back to what we were talking about before.
+[1881.62] Lee: It&#x27;s nice to have different choices.
+[1883.62] Lee: But I&#x27;ll probably give it a go and see what it&#x27;s like.
+[1885.62] Lee: I actually, at the moment, am taking a little tablet PC to the field
+[1890.62] UNKNOWN: to do things with iNav
+[1892.62] Lee: to change things like level alignments
+[1894.62] Lee: and stuff on some of the planes I&#x27;m building.
+[1896.62] Lee: And although it works, it&#x27;s just blooming cumbersome
+[1899.62] Lee: to have a tablet and a cable
+[1901.62] Lee: and trying to figure all that stuff out.
+[1903.62] Lee: In the middle of a field, it&#x27;s not the place to do it.
+[1905.62] Lee: Whipping out the phone and doing it Bluetooth would be a lot nicer.
+[1909.62] Alex: Well, you need hardware to connect to Bluetooth,
+[1911.62] Alex: so that&#x27;s why you have SPDB download.
+[1914.62] Alex: It&#x27;s basically USB host converted to Bluetooth serial.
+[1919.62] UNKNOWN: Yeah, those guys, though, they did a number of flight controllers
+[1922.62] Lee: that had the Bluetooth built in, which was quite smart.
+[1924.62] Lee: So you didn&#x27;t actually need the dongle, which was quite cute.
+[1928.62] Lee: But to be honest, I&#x27;m not a big fan of having lots of RF signals
+[1933.62] Lee: on a model that you don&#x27;t need.
+[1935.62] Lee: And there&#x27;s one problem.
+[1937.62] Alex: If you have Bluetooth on the board,
+[1940.62] Alex: you need to power quad with the LiPo.
+[1942.62] Alex: And it definitely will not work on case
+[1947.62] Alex: because we disable all the features that cannot be changed
+[1953.62] Alex: while LiPo is attached.
+[1954.62] Alex: It&#x27;s just dangerous and we don&#x27;t do that.
+[1956.62] Alex: Makes sense.
+[1957.62] Frank: Yeah.
+[1960.62] Alex: I had this problem.
+[1962.62] Alex: I had to go to the field to tune, you know, to test firmware.
+[1967.62] Alex: And I got fed up bringing my laptop.
+[1970.62] Alex: And you sit in the global and you have Apple laptop
+[1973.62] Alex: in the back next to you.
+[1974.62] Alex: And, well, neighborhood can be dodgy.
+[1977.62] Alex: So I think it was last year, I think last summer.
+[1981.62] Alex: I thought, well, I want to build something small
+[1985.62] UNKNOWN: that can do pretty much everything with case.
+[1987.62] Alex: So I built myself this thing.
+[1989.62] UNKNOWN: Very simple keychain configurator for KISS.
+[1995.93] Alex: I built it a year ago, so you can&#x27;t.
+[2001.93] Alex: Yeah, I did a video on it, didn&#x27;t I?
+[2004.93] Alex: Yeah.
+[2005.93] Alex: It was one of the cursor.
+[2007.93] UNKNOWN: It&#x27;s a cute little idea.
+[2010.27] Lee: It just makes it a lot easier.
+[2013.27] UNKNOWN: Well, it grew actually from just KISS.
+[2018.27] Alex: Then I thought, well, why the hell?
+[2020.27] Alex: I cannot configure TBS products.
+[2023.27] Alex: So I can configure TBS products over the year,
+[2025.27] Alex: just connected by USB.
+[2027.27] Alex: It was made mostly for people with micro receivers
+[2031.27] Alex: and without load.
+[2033.27] UNKNOWN: That was it.
+[2035.27] UNKNOWN: I remember now because it actually supports the whole
+[2038.27] Lee: inbuilt directory structure of the TBS stuff
+[2042.27] Lee: and everything, doesn&#x27;t it?
+[2043.27] Lee: Yeah, it does.
+[2044.27] Alex: And then I thought, well, why don&#x27;t we configure
+[2049.27] Alex: FedTech over one wire?
+[2051.27] Alex: So they have nice GUI for FedTech.
+[2054.27] Alex: I thought, well, it&#x27;s too much,
+[2055.27] Alex: but put it in this little device.
+[2057.27] UNKNOWN: So you also can do FedTech KISS with it.
+[2061.27] UNKNOWN: And KISS is, of course.
+[2063.27] Alex: Wow, plenty of things.
+[2064.27] Alex: Actually, you can put Bluetooth module in it
+[2066.27] Alex: and you will have same thing like SPDB dongle does.
+[2070.27] Alex: So you can use it even with Betaflight
+[2072.27] Alex: with a bridge from USB to serial.
+[2075.27] Alex: Well, quite a lot.
+[2076.27] Alex: It&#x27;s about 25,000 lines of code in the thing.
+[2080.27] UNKNOWN: Wow.
+[2081.27] Alex: Yeah.
+[2107.27] Frank: So Alex, how did you get into flying and FPV?
+[2112.27] Curry: What was your story there?
+[2113.27] Curry: How did you discover it all?
+[2115.27] Curry: Oh, it was a long time ago, actually.
+[2119.27] UNKNOWN: The thing is, I was doing a lot of modeling when I was a kid.
+[2125.27] UNKNOWN: I did planes, mostly planes and cord models
+[2130.27] Alex: and this kind of thing.
+[2131.27] Alex: And I always wanted to have a heli.
+[2134.27] Alex: So I wanted to fly helis.
+[2136.27] Alex: And it was quite expensive for a kid in Russia to do that.
+[2142.27] Alex: And especially if you have to crash it many times.
+[2148.27] Alex: And then that idea quite died on me,
+[2151.27] Alex: so until I was like 37.
+[2156.27] UNKNOWN: Then I saw first multi-copters.
+[2159.27] Alex: It was like a parrot drone or something.
+[2163.27] Alex: And I thought, oh, look, it&#x27;s almost like a heli,
+[2166.27] Alex: but with a lot of propellers.
+[2168.27] UNKNOWN: And my wife bought me one for a birthday.
+[2172.27] Alex: Oh, wow.
+[2173.27] Alex: It lasted about a week.
+[2176.27] Alex: Then it was converted to fly with spectrum radio
+[2181.27] Alex: because the range was kind of sucks.
+[2183.27] Alex: So I put a hack on it to run it from normal receiver.
+[2188.27] Alex: And that was fun.
+[2191.27] Alex: And then I wanted to do something bigger.
+[2197.27] Alex: So it was a flamewheel.
+[2199.27] Alex: I think everyone had it at any time.
+[2203.27] Alex: After a flamewheel was a tarot.
+[2206.27] Alex: My monster machine was like three kilogram quad.
+[2209.27] Alex: This is a hexa.
+[2212.27] Alex: And then Mr. Blackout enters the sea.
+[2216.27] Tony: Oh, yes.
+[2217.27] Alex: I was in the first batch of Blackout quad.
+[2222.27] Alex: Hey, doggy.
+[2224.27] UNKNOWN: And, yeah, well, it was fun.
+[2227.27] Alex: I still have somewhere my first flight video with Simon K.
+[2231.27] Alex: Sheesh.
+[2232.27] Alex: Oh, man, that was fast, really fast.
+[2236.27] Jack: And, yeah, that was then was another Blackout.
+[2240.27] Alex: Then was probably aliens.
+[2244.27] Alex: Yeah, after Blackout was alien.
+[2247.27] Alex: I think I have six or seven now different kind of.
+[2252.27] UNKNOWN: They&#x27;re pretty rare.
+[2255.27] Jack: They&#x27;re pretty rare.
+[2256.27] Jack: I feel like a dinosaur flying them.
+[2259.27] UNKNOWN: And, well, that&#x27;s that&#x27;s how it goes.
+[2262.27] Alex: So you getting new things, you flying it, you enjoying it,
+[2266.27] Alex: you&#x27;re getting more.
+[2267.27] Alex: You know how it works.
+[2269.27] UNKNOWN: I remember seeing the Blackout quad flying across the
+[2274.52] UNKNOWN: across a load of woods.
+[2277.52] Alex: With the lights in it, like Star Wars.
+[2279.52] Alex: Yeah, I think it&#x27;s famous video.
+[2281.52] Alex: And Metal Danny was also doing quite crazy stuff in the woods.
+[2287.52] Alex: Yeah, he was doing stuff in the woods.
+[2289.52] Tony: It was good.
+[2290.52] UNKNOWN: Can I ask you about your your wings in the background?
+[2293.52] Jack: I see you&#x27;ve got like an S800 and a drag and everything.
+[2297.52] Jack: I have currently mini taller for long range.
+[2301.52] Alex: It&#x27;s on this wall.
+[2303.52] UNKNOWN: There&#x27;s mini drag.
+[2304.52] Alex: There&#x27;s an S800, indeed, modified.
+[2309.52] UNKNOWN: I have none.
+[2310.52] Alex: None of the drug needs to be built.
+[2312.52] Alex: I have crack hack for loss, loss training.
+[2315.52] Alex: Well, I kind of lost nice in the park flies low and
+[2320.52] Alex: acrobatic.
+[2321.52] UNKNOWN: And what else?
+[2322.52] Alex: No, I think that&#x27;s it.
+[2324.52] UNKNOWN: I had caparini too.
+[2325.52] Alex: I sold it.
+[2326.52] Alex: I didn&#x27;t like it.
+[2328.52] UNKNOWN: A lot.
+[2331.52] Alex: Well, honestly, mini drug and for fast flying and mini
+[2339.52] Alex: talon for like 10 kilometers flying.
+[2342.52] Alex: That&#x27;s that&#x27;s my my favorite.
+[2348.52] Alex: It&#x27;s it started like two years ago.
+[2351.52] Alex: I would when I was not doing kids, I was off the scene for
+[2355.52] Alex: a year and want to catch a little bit more adrenaline.
+[2360.52] Alex: So I thought, well, let&#x27;s let&#x27;s build some wings.
+[2363.52] Alex: And it&#x27;s great.
+[2365.52] Alex: And yeah, it helps.
+[2369.52] UNKNOWN: So we&#x27;ve got 20 minutes left.
+[2371.52] Jack: Something English.
+[2373.52] Jack: Are you doing admin?
+[2374.52] Jack: Are you able to chat?
+[2376.52] UNKNOWN: I am.
+[2377.52] Lee: No, no, I&#x27;m listening intently.
+[2379.52] Lee: I&#x27;m sorry.
+[2380.52] Lee: Before we move on, I was just going to quickly ask what
+[2383.52] Frank: flight controller software do you use on your wings?
+[2387.52] UNKNOWN: Ha!
+[2388.52] UNKNOWN: Vector.
+[2391.52] UNKNOWN: Who you use?
+[2392.52] Frank: Vector.
+[2394.52] UNKNOWN: Oh, Vector.
+[2395.52] Curry: Oh, yeah, I&#x27;ve got one in my mini talon.
+[2398.52] Curry: It is a great system.
+[2399.52] Curry: It&#x27;s quite expensive.
+[2400.52] Curry: Yes, it is expensive.
+[2402.52] Alex: But I had a very nice deal on Hobbicking.
+[2405.52] Alex: I think once they scrub the prices and it was like 40
+[2409.52] Alex: euro for for flight controller.
+[2411.52] Alex: I think I made I made an order in X.
+[2415.52] Alex: I, by mistake, clicked it three times.
+[2418.52] Alex: And so I got like three flight controllers for press
+[2421.52] Alex: of one.
+[2422.52] Alex: I said, OK, let&#x27;s build more wings.
+[2425.52] Alex: Speaking of OSD, I think it&#x27;s best on our OSD.
+[2429.52] Alex: I ever seen.
+[2430.52] Alex: So I love it.
+[2431.52] UNKNOWN: Yeah.
+[2433.52] UNKNOWN: That&#x27;s something I meant to us, Lee, actually.
+[2435.52] Curry: I noticed, Lee, on your Instagram, you were showing some
+[2438.52] Curry: new plane flight controllers.
+[2441.52] Curry: So instead of iNav, it&#x27;s back to the more traditional.
+[2444.52] Curry: Here is a flight controller and you just plug everything
+[2447.52] Curry: in there and it just does its thing.
+[2449.52] Curry: Have you tested yet?
+[2450.52] Curry: Is it any good?
+[2451.52] UNKNOWN: Currently working through it, because the manual is one
+[2453.52] Lee: of those classic one side of A4.
+[2456.52] Lee: And what they do is they try and consolidate two hours
+[2459.52] Lee: work into one piece of paper.
+[2462.52] Lee: So currently working through that.
+[2463.52] Lee: But the reason for it, and it&#x27;s kind of picking up on
+[2466.52] Lee: the kind of the whole theme of this, which is about
+[2469.52] Lee: keeping it simple.
+[2470.52] Lee: And I know lots of pilots that I talk to would love to
+[2473.52] Lee: put a flight controller in a fixed wing.
+[2475.52] Lee: They want more than a stabilizer.
+[2477.52] Lee: And it&#x27;s usually they want return to home in case
+[2480.52] Lee: something horrible goes wrong.
+[2481.52] Lee: And they want some kind of simple on-screen display
+[2483.52] Lee: if they do an FPV.
+[2484.52] Lee: And they don&#x27;t want to go the full iNav already playing
+[2488.52] Lee: vector route.
+[2489.52] Lee: You know, they don&#x27;t want to spend hundreds of pounds
+[2491.52] Lee: and spend 45 minutes just soldering pins on.
+[2494.52] Lee: They just want something that everything plugs into.
+[2496.52] Lee: And I&#x27;ve been thinking, blime, there must be something
+[2498.52] Lee: around.
+[2499.52] Lee: Because you remember Furious FPV did an F-35 Lightning
+[2502.52] Lee: flight controller.
+[2504.52] UNKNOWN: And all the pins were on it.
+[2505.52] Lee: And it came with a GPS and an airspeed sensor.
+[2508.52] Lee: And it was a little pack.
+[2509.52] Lee: And it was kind of like, although you had to do the
+[2511.52] Lee: iNav-y stuff, you just plugged it all together.
+[2514.52] Lee: And for many pilots, the idea of you get all these
+[2517.52] Lee: disparate parts, you order them all from different places,
+[2519.52] Lee: and they arrive and you start crimping and soldering.
+[2522.52] Lee: And that&#x27;s without starting the computer
+[2524.52] Lee: and downloading software.
+[2525.52] Lee: They&#x27;re just like, no, I&#x27;m out.
+[2526.52] Lee: So I&#x27;ve been looking for simple flight controllers
+[2529.52] Lee: that are plug and play.
+[2530.52] Lee: And it looks like lots of them.
+[2533.52] Lee: So you remember that I did a load of videos on the
+[2535.52] Lee: co-pilot from ZOHD.
+[2537.52] Lee: That&#x27;s kind of a stabilizer with a return to home
+[2539.52] Lee: function is really what it is.
+[2541.52] Lee: Whereas this thing from Daytech, I think it is,
+[2545.52] Lee: or Datum, they got in touch.
+[2547.52] Lee: And so we&#x27;ve created this thing.
+[2549.52] Lee: And it&#x27;s a stabilizer.
+[2551.52] Lee: So it&#x27;s kind of like the co-pilot, but it&#x27;s what
+[2553.52] Lee: everyone wants next in the co-pilot.
+[2555.52] Lee: So it&#x27;s got an FPV on-screen display, return to home,
+[2558.52] Lee: more flight modes, a little bit more customization.
+[2561.52] Lee: But it comes with all the pins attached.
+[2564.52] Lee: Hallelujah.
+[2565.52] Lee: And you just plug everything in.
+[2567.52] Lee: In fact, I emailed Furious FPV today.
+[2570.52] Lee: Somebody came onto me and said that there was a rumor
+[2575.52] Lee: that they were going to do an updated version of the F-35,
+[2579.52] Lee: because it was an F-3-based flight controller.
+[2582.52] Lee: If they do like an F-75 and it was an F-7 base,
+[2586.52] Lee: that would honestly sell so many, because loads of
+[2589.52] Lee: people out there just would love to do the return to
+[2591.52] Lee: home stuff.
+[2592.52] Lee: My mate actually, we were playing with this funny
+[2595.52] Lee: story from last week.
+[2596.52] Lee: I&#x27;m not sure if I managed to cover it.
+[2598.52] Lee: I built him a nano-talent, I think it was actually.
+[2604.52] Lee: We put iNav in it with an FPV system.
+[2607.52] UNKNOWN: And I was teaching him about return to home because
+[2610.52] Lee: he loves playing with return to home, but the little
+[2612.52] Lee: panic button, he has this little brain fart when he
+[2615.52] Lee: actually needs to flick it and he forgets about it.
+[2617.52] Lee: And by the time he remembers he&#x27;s got a return to
+[2619.52] Lee: home button, it&#x27;s all over.
+[2621.52] Lee: So we were doing circuits.
+[2623.52] Lee: You know when you did your driving test and the guy
+[2627.52] Lee: had his book?
+[2629.52] Lee: Well, he probably doesn&#x27;t anymore now, right?
+[2631.52] Lee: And the guy goes, when I hit the dash, I&#x27;d like you
+[2633.52] Lee: to do an emergency stop.
+[2634.52] Lee: And he goes like that.
+[2635.52] Lee: And he had to brake and try and get him to nook the
+[2637.52] Lee: dash.
+[2638.52] Lee: Well, I was doing the same thing.
+[2640.52] Lee: I&#x27;d shout and go return to home and he&#x27;d have to find
+[2642.52] Lee: the switch.
+[2643.52] Lee: Anyway, long story short, we did it five times and he&#x27;s
+[2646.52] Lee: starting to get very relaxed with this whole thing.
+[2649.52] Lee: And unfortunately, the battery that we put in, when he
+[2653.52] Lee: gave it to me for this little flight that was only
+[2655.52] Lee: going to be five minutes, it was all puffed up and a
+[2659.52] Lee: bit knackered.
+[2660.52] Lee: So I said, are you sure about using it?
+[2662.52] Lee: Have you not got any other ones?
+[2663.52] Lee: Oh, no, I&#x27;m not getting any others.
+[2664.52] Lee: It&#x27;ll be fine.
+[2665.52] Lee: It&#x27;ll be fine.
+[2666.52] Lee: We&#x27;re only going to fly five minutes.
+[2667.52] Lee: And after 12 minutes, this battery just kind of went,
+[2671.52] Lee: nah, I&#x27;m out.
+[2672.52] UNKNOWN: And of course, it was over the farthest field and this
+[2676.52] Lee: plane just started to sink.
+[2678.52] Lee: He hit the return to home.
+[2680.52] Lee: I now have kind of said, okay, I&#x27;ll fly it back and said,
+[2682.52] Lee: okay, let&#x27;s have more power.
+[2684.52] Lee: And when we went to look for it, hopefully the farmer
+[2694.52] Lee: isn&#x27;t listening, but his potato crop is about four foot
+[2697.52] Lee: high, but there was this lovely line that just cut the
+[2702.52] Lee: top off all this stuff.
+[2703.52] Lee: It was brilliant.
+[2704.52] Lee: So going back to your question, for people like him who
+[2709.52] Lee: wants an on-screen display but doesn&#x27;t want to come round
+[2712.52] Lee: to my house for four hours while I solder everything up,
+[2715.52] Lee: set it up, to be able to plug it in would be great.
+[2717.52] Lee: So I&#x27;m really excited about seeing how this thing works.
+[2720.52] Lee: But it&#x27;s not expensive either.
+[2721.52] Lee: It&#x27;s relatively cheap.
+[2723.52] Lee: That is good news because they used to be quite popular
+[2728.52] Curry: and there was development.
+[2729.52] Curry: I&#x27;ve still got a couple of Storm OSDs.
+[2731.52] Curry: There&#x27;s the vector.
+[2733.52] Curry: There&#x27;s another one from somebody else.
+[2736.52] Curry: But it seemed like as soon as I now took off, that also
+[2739.52] Curry: went out the window.
+[2740.52] Curry: But yeah, I still think there&#x27;s very much a place for it.
+[2742.52] Curry: Just literally a little box.
+[2744.52] Curry: It has plugs for your servos.
+[2746.52] Curry: And you just plug it in and go.
+[2748.52] Curry: I like that idea.
+[2749.52] UNKNOWN: Yeah.
+[2750.52] Lee: I mean, the co-pilot has been really successful.
+[2752.52] Lee: I speak to ZOHD last week about it.
+[2754.52] Lee: And it&#x27;s exceeded all their expectations.
+[2758.52] Lee: What I would love them to do is bring out, because it&#x27;s
+[2761.52] Lee: always been, interestingly, it was called the ZOHD co-pilot
+[2764.52] Lee: Lite, which kind of intimates that it&#x27;s a full-size one,
+[2767.52] Lee: right?
+[2768.52] Lee: I&#x27;m hoping, yeah, like the Pro or the Gold Edition.
+[2773.52] Lee: But I&#x27;m hoping they do, because that stuff actually works
+[2776.52] Lee: really well.
+[2777.52] Lee: But no, it&#x27;d be good.
+[2779.52] Lee: But I&#x27;ve got a question for Andrew while we&#x27;re kind of off
+[2782.52] Lee: subject for a minute.
+[2784.52] UNKNOWN: Sorry, Andrew slash Frank.
+[2786.52] Lee: Of course, I&#x27;m on LDO.
+[2788.52] Lee: I have to use his, yeah.
+[2791.52] UNKNOWN: I&#x27;ve driven my own title.
+[2793.52] Lee: Thank you very much.
+[2794.52] Lee: That&#x27;s Andrew slash Frank.
+[2797.52] Lee: It sounds like an instruction, doesn&#x27;t it?
+[2800.52] Lee: So you sent me a little message the other day,
+[2803.52] Lee: and I want to pick your brains about this,
+[2805.52] Lee: because I&#x27;m a bit sad, all about, because last week we
+[2809.52] Lee: talked about this and said there was going to be an
+[2811.52] Lee: update about what was going on with the UK legislation
+[2814.52] Frank: and whether or not we were going to get an extension.
+[2817.52] UNKNOWN: Yes.
+[2818.52] Frank: And it looks like we might not have.
+[2820.52] Lee: What&#x27;s going on and what does it mean that you have to
+[2822.52] Lee: do if you want to fly legally from whenever?
+[2825.52] Lee: Yeah.
+[2826.52] Lee: So.
+[2828.52] UNKNOWN: I&#x27;ve got a second big swig of beer while I talk about
+[2830.52] Lee: this, because I&#x27;m very sad.
+[2831.52] Lee: Very wise.
+[2833.52] Frank: Now is a good time to have something large and strong
+[2837.52] Frank: to hand.
+[2838.52] Frank: So the exemption for the members of the Model Flying
+[2844.52] Frank: Associations in the UK, so we had an exemption from the
+[2848.52] Frank: new rules that came in technically last November.
+[2852.52] Frank: We had an exemption through till July.
+[2855.52] Frank: And then because the world ended, it got delayed.
+[2861.52] Frank: A lot of it got delayed even further back to November.
+[2865.52] Frank: And then now it&#x27;s been delayed back to end of December,
+[2869.52] Frank: although we&#x27;ll get to that when it comes to it.
+[2873.52] Frank: But there was a couple of clauses that were separate
+[2879.52] Frank: from everything else.
+[2883.52] Frank: So most of it is to do with EU implementations and
+[2887.52] Frank: don&#x27;t worry about it.
+[2888.52] Frank: Most of it is in one big lump of rules.
+[2891.52] Frank: And so that&#x27;s coming in at the end of December.
+[2893.52] Frank: Then there&#x27;s two clauses that weren&#x27;t covered by that.
+[2898.52] Frank: And there was meetings end last week over the weekend.
+[2902.52] Frank: And so remember that the exemption ran out on Monday.
+[2908.52] Frank: They released an exemption for one of them on Monday,
+[2912.52] Frank: which is to say if you&#x27;ve done the test that, you know,
+[2916.52] Frank: if you&#x27;ve done any of the BMFA A-certs, B-certs,
+[2920.52] Frank: the online tests that the BMFA do, the online tests that
+[2923.52] Frank: FPVUK do, or any of the other associations,
+[2928.52] Frank: if you&#x27;ve done those tests, you don&#x27;t have to do the
+[2932.52] Frank: CAA&#x27;s online test.
+[2934.52] Frank: So that&#x27;s one thing.
+[2936.52] Frank: But that still stands.
+[2937.52] Lee: That&#x27;s what we thought it was going to be, right?
+[2939.52] UNKNOWN: Yeah.
+[2940.52] Frank: So that makes sense.
+[2941.52] Frank: But on Monday, they went, oh, yeah, here you go.
+[2944.52] Frank: You will honor that for at least until the end of the year,
+[2950.52] UNKNOWN: whether they will or not after that.
+[2952.52] Frank: Yes.
+[2953.52] Frank: But anyway, so there&#x27;s this one last clause,
+[2957.52] Frank: which is to say that you need to have your operator ID
+[2963.52] Frank: on your aircraft before you fly up.
+[2966.52] UNKNOWN: Boo.
+[2967.52] Lee: Boo.
+[2969.52] UNKNOWN: I hope they can read it at 70 miles an hour because I
+[2972.52] Lee: don&#x27;t get it before.
+[2973.52] Frank: Right.
+[2974.52] Frank: And that clause, there was twoing and froing,
+[2979.52] Frank: and, you know, they released an exemption on Tuesday.
+[2985.52] Frank: So the day after the old one expired,
+[2988.52] Frank: they released a new exemption to say if you haven&#x27;t got your
+[2992.52] Frank: ID yet because you applied for it after June the 15th,
+[2997.52] Frank: then we&#x27;ll give you three months leeway while you&#x27;re waiting
+[3002.52] Frank: for your operator ID to turn up because they&#x27;re too busy
+[3005.52] Frank: moving Excel spreadsheets around.
+[3008.52] Frank: And so there&#x27;s three months.
+[3012.52] Frank: If you pay them your nine pounds now,
+[3015.52] Frank: you get three months to extra to not put your operator ID on.
+[3022.52] Frank: I applied, not done the test, but I have an operator ID.
+[3026.52] Tony: What do I do?
+[3029.52] UNKNOWN: So to comply with the rules, if you got your operator ID
+[3034.52] Frank: or you applied for your operator ID before the 15th of June 2020,
+[3038.52] Frank: then you need to put your operator ID on anything before you fly it
+[3043.52] Frank: with a minimum size of three millimeter text height
+[3048.52] Frank: or eight and a half points in old typey numbers.
+[3053.52] Frank: Can I burn it on my face?
+[3057.52] Tony: Not unless your face is attached to your quad.
+[3060.52] UNKNOWN: Yeah, it&#x27;s got to be on the main.
+[3062.52] UNKNOWN: OK.
+[3063.52] Tony: It&#x27;s got to be on every single drone, not just the wing.
+[3067.52] Tony: But can we just put them on the screen?
+[3070.52] Frank: It needs to be on the main structure of what&#x27;s flying
+[3073.52] Frank: and it needs to be minimum three millimeters
+[3076.52] Frank: and it needs to be accessible without specialist knowledge or tools.
+[3080.52] Frank: So just stick them on your batteries, Tony.
+[3083.52] Curry: It needs to be on the main structure.
+[3086.52] UNKNOWN: Can&#x27;t be on the battery.
+[3087.52] Curry: It&#x27;s part of the main structure when it&#x27;s on there.
+[3090.52] Frank: Well, if your batteries are an integral structural component,
+[3094.52] Frank: then you can have it on your batteries.
+[3096.52] Frank: Well, they don&#x27;t fly very well without them.
+[3099.52] UNKNOWN: What makes me laugh here is that you know the whole weight category
+[3103.52] Lee: and the weight they consider the battery a part of the quad.
+[3108.52] Lee: But then when it comes to doing this stuff, then it&#x27;s not.
+[3111.52] Lee: It just seems to be one of those kind of...
+[3113.52] Lee: Yeah.
+[3114.52] Lee: Because putting it on the batteries will be so much easier.
+[3117.52] Lee: So just so I&#x27;m clear here, right?
+[3119.52] Lee: Just so I know what to tell people
+[3121.52] Lee: or anybody that comes up to annoy me when I&#x27;m flying.
+[3125.52] Lee: So if you have already registered,
+[3128.52] Lee: paid you £9, got your whatever search from whoever,
+[3131.52] Lee: got your operator ID,
+[3133.52] Lee: as of now, it should be on your model in three millimeter or higher
+[3140.52] Lee: on somewhere that you can get to without specialized tools
+[3143.52] Lee: and isn&#x27;t the battery.
+[3144.52] Lee: If you have applied after, whenever it was, 15th of May, was it you said?
+[3150.52] Lee: 15th of June.
+[3151.52] Lee: 15th of June and your operator ID hasn&#x27;t yet come through,
+[3155.52] Lee: you have an exemption in operation where you can still fly.
+[3161.52] Lee: So that you would need to have your bit of paper
+[3165.52] Frank: or on your phone or whatever,
+[3167.52] Frank: with the exemption, with the proof that you&#x27;ve applied for it
+[3172.52] Frank: and the search.
+[3175.52] Frank: And this is just for over 250 grams still.
+[3179.52] UNKNOWN: Until the end of the year, under 250 grams is exempt.
+[3184.52] UNKNOWN: Also flying indoors is going to be exempt for as far as we can see at the moment.
+[3191.52] UNKNOWN: Something to be aware of but not to worry about at the moment
+[3194.52] Frank: is if it&#x27;s got a camera on in 2021,
+[3199.52] Frank: then it will no longer be exempt even if it&#x27;s under 250 grams.
+[3205.52] Lee: Just so you know, this heli is well under 250 grams with a battery.
+[3209.52] Lee: So you know what?
+[3210.52] Lee: I might be sticking an FPV kit on here to fly this instead.
+[3215.52] Lee: I&#x27;ll tell you what, I am so gutted that we haven&#x27;t got an extension for this
+[3220.52] Lee: because I was really hoping that it would,
+[3222.52] Lee: to be honest, we&#x27;ve got so many other things to worry about as a country
+[3226.52] Lee: than penalizing this small group of people,
+[3229.52] Lee: the vast majority of which are not in the dickhead crowd.
+[3232.52] Lee: Even the CIA have got bigger things to be worrying about at the moment
+[3236.52] Frank: with trying to not have all the UK&#x27;s aviation industry go bust.
+[3241.52] Frank: Yeah, in a car park.
+[3244.52] UNKNOWN: Air traffic control at this point in time,
+[3248.52] Frank: trying to work out whose actually pilot licenses are still valid
+[3255.52] Frank: because they haven&#x27;t got the hours in over the past few months
+[3257.52] Frank: because they haven&#x27;t been able to come out.
+[3258.52] Frank: Of course they haven&#x27;t been able to maintain, yes.
+[3261.52] UNKNOWN: Some pretty major things to worry about.
+[3263.52] Frank: So this is probably why all this was done on literally the last day
+[3268.52] Frank: that it could be worried about.
+[3272.52] UNKNOWN: The other thing is I have it on good authority that since last November
+[3278.52] Frank: when this whole thing was all set up,
+[3280.52] Frank: they&#x27;ve had a grand total of 10 inquiries by police looking up operator IDs.
+[3286.52] Frank: Just to remind you, how much did this system cost again, Andrew,
+[3290.52] Lee: allegedly based on the last report?
+[3293.52] Lee: It was £5 million that&#x27;s being spent on it.
+[3296.52] Frank: So each inquiry cost the British taxpayer about half a million quid.
+[3300.52] Lee: Is that what we&#x27;re saying?
+[3302.52] Lee: What a fantastic waste of money that was.
+[3304.52] Lee: Well done, everybody.
+[3305.52] Lee: Didn&#x27;t they be joined the quads?
+[3310.52] UNKNOWN: Yeah, I&#x27;m putting my postcode on as well.
+[3314.52] Tony: Still your property.
+[3316.52] UNKNOWN: Yeah, but that&#x27;s 10 years of a police inspector&#x27;s salary per inquiry there.
+[3324.52] Frank: That&#x27;s mental.
+[3326.52] UNKNOWN: That is mental.
+[3327.52] Lee: Well look, thank you for keeping us all abreast with this.
+[3330.52] Lee: I know you get a lot of flack when you talk to people about this
+[3333.52] Lee: because it is like, you know, finding out.
+[3336.52] Lee: It&#x27;s not Frank&#x27;s fault.
+[3337.52] UNKNOWN: It&#x27;s not Frank&#x27;s fault at all.
+[3339.52] Lee: Don&#x27;t take it out.
+[3340.52] Lee: He&#x27;s just a messenger.
+[3343.52] UNKNOWN: I&#x27;m not saying it&#x27;s the right thing.
+[3345.52] Frank: I&#x27;m not saying it&#x27;s right.
+[3346.52] Frank: I&#x27;m just saying this is what is happening.
+[3348.52] Frank: So you can make your own decisions as to what you follow.
+[3355.52] Lee: But at least we&#x27;re aware of what the legal position is
+[3359.52] Lee: and what we should be doing.
+[3360.52] Lee: And then we can just do whatever we want and set the consequences.
+[3364.52] Lee: It just feels really draconian and silly,
+[3368.52] Lee: particularly that poor couple that got messed about with Gatwick.
+[3372.52] Lee: I know they only got 50 grand.
+[3374.52] Lee: Well, they&#x27;re not poor anymore, are they?
+[3376.52] Lee: Well, to be honest, they only got 50 grand out of that 200, didn&#x27;t they?
+[3380.52] Lee: Well, it&#x27;s like 50 grand.
+[3382.52] Tony: I don&#x27;t think anyone would, but it&#x27;s a lot less than 200,
+[3386.52] Lee: but everyone was talking about.
+[3388.52] UNKNOWN: I mean, your name on the newspapers being like, you&#x27;ve done it
+[3392.52] Jack: and then have the police raid and find all sorts of things in your house, right?
+[3398.52] Tony: It would be less scary than your house,
+[3401.52] Tony: especially in that draw to your right.
+[3405.52] UNKNOWN: I don&#x27;t know.
+[3406.52] Frank: I&#x27;ve seen various firearms on your walls, Tony.
+[3412.52] Frank: We&#x27;re live, Frank.
+[3417.52] Lee: Has he got to put his operator ID on them as well?
+[3420.52] Curry: I don&#x27;t know if you want it.
+[3422.52] UNKNOWN: There&#x27;s one really funny comment that a drone race has written.
+[3426.52] Lee: I don&#x27;t know if you want to flush it up.
+[3428.52] Lee: We can register like the Pakistani airline pilots have,
+[3431.52] Lee: which I think is one of my favorite comment of the entire evening.
+[3434.52] Lee: That&#x27;s fantastic.
+[3436.52] UNKNOWN: I&#x27;m not familiar with it.
+[3437.52] Jack: Can you explain?
+[3439.52] UNKNOWN: So at the last I heard there was an allegation
+[3442.52] Lee: that about half of the Pakistan airline pilots actually didn&#x27;t have,
+[3446.52] Lee: they weren&#x27;t certified to be pilots.
+[3448.52] Lee: Basically, yeah.
+[3451.52] UNKNOWN: They passed someone to do the test for me.
+[3454.52] Tony: Why on my own test for me?
+[3460.52] UNKNOWN: We wouldn&#x27;t do anything like that, would we, here on LDO?
+[3464.52] UNKNOWN: No, no.
+[3465.52] UNKNOWN: Well, to be fair, we were talking about that, Tony,
+[3467.52] Lee: when there was talk of having to do some kind of line of sight test,
+[3470.52] Lee: weren&#x27;t we?
+[3471.52] Lee: We were trying to figure out who was going to do that one for you.
+[3475.52] Tony: Someone, NJ actually reached out and said,
+[3478.52] Tony: come up and I&#x27;ll teach you how to fly the line of sight.
+[3482.52] Tony: Well, if it comes to it, I&#x27;ll be there, mate.
+[3484.52] Tony: Don&#x27;t worry.
+[3486.52] Tony: I&#x27;ll touch with Eric Lee Koo of Rotor Racing fame
+[3494.52] Frank: about doing a new specially targeted part of the achievement scheme,
+[3500.52] Frank: so the ASETs and all that kind of thing,
+[3502.52] Frank: specifically for FPV races.
+[3505.52] Frank: So there&#x27;s some things going along on that front
+[3509.52] Frank: that I&#x27;m sure will pick up when people can get out
+[3512.52] Frank: and about a bit more confidently.
+[3515.52] UNKNOWN: Yeah, it sounds just as hard.
+[3517.52] Curry: It&#x27;s like you&#x27;ve got the line of sight test,
+[3519.52] Curry: which is going to hurt normal FPVs or a racing test,
+[3522.52] Curry: where you&#x27;re going to have to do it like a clean circuit
+[3524.52] Curry: and that&#x27;s somewhat beyond me most of the time as well.
+[3526.52] Curry: It&#x27;s like I&#x27;ve crashed on the second gate.
+[3529.52] Tony: They tell me to take my bloody goals off and I&#x27;ll be like,
+[3532.52] Tony: no, no, I cannot power loop, no.
+[3537.52] Tony: That&#x27;ll be the book on the dashboard again.
+[3541.52] UNKNOWN: FPVs died, recover.
+[3543.52] Frank: No, that&#x27;s the bit where Tony pulls his hoodie up and says,
+[3547.52] Lee: I&#x27;m just going to the toilet.
+[3548.52] Lee: I&#x27;ll be straight.
+[3549.52] Lee: But when he comes back, he&#x27;s got a quiff
+[3551.52] Lee: and has grown about six inches and suddenly, you know,
+[3554.52] Lee: and then does the flight and he goes,
+[3555.52] Lee: right, I&#x27;m going back for another wee
+[3557.52] Lee: and then comes back.
+[3558.52] Lee: So all done.
+[3559.52] UNKNOWN: And done.
+[3560.52] Lee: And one of the rules of the show, Tony,
+[3561.52] Lee: would be that you can&#x27;t sit down whilst flying.
+[3564.52] Curry: You have to stand up.
+[3566.52] Curry: This has to be like, right, I need to have a hobby.
+[3570.52] UNKNOWN: I don&#x27;t think I could ever quit FPV, but not sitting down.
+[3574.52] Tony: I need to sit down and fly.
+[3576.52] Tony: I need to feel relaxed, man.
+[3578.52] UNKNOWN: Come on.
+[3579.52] Tony: What&#x27;s all this standing up stuff anyway?
+[3581.52] UNKNOWN: When you&#x27;re paying attention to each every blade of grass.
+[3585.52] Tony: Oh, the blades of grass and HD are amazing.
+[3589.52] Lee: Yeah.
+[3590.52] Lee: You can actually see the leaves on the, on the branches,
+[3592.52] Lee: on the trees.
+[3593.52] Lee: Oh, I don&#x27;t know.
+[3594.52] Tony: It&#x27;s bloody weird.
+[3596.52] Jack: I left out in the cold in this.
+[3599.52] UNKNOWN: Me and you both.
+[3600.52] Jack: I&#x27;m DJI.
+[3601.52] Tony: We&#x27;re the paupers.
+[3602.52] Jack: I do it.
+[3603.52] UNKNOWN: It&#x27;s amazing.
+[3606.52] UNKNOWN: It&#x27;s amazing.
+[3607.52] UNKNOWN: Well, when we all get together at Western in our wellies
+[3611.52] Lee: and we go for a curry, we&#x27;ll bring our goggles.
+[3614.52] Lee: Yeah.
+[3615.52] Lee: Well, we ought to watch them, man.
+[3617.52] Jack: They&#x27;ll be full of old, you know, human malware.
+[3620.52] Jack: I&#x27;ll bring my wipes.
+[3622.52] Tony: Jack, you&#x27;ll be all right.
+[3625.52] Frank: I&#x27;m not looking through some DJI goggles because it will be too
+[3628.52] Frank: expensive.
+[3631.52] UNKNOWN: You look for them and you just like chitching.
+[3634.52] UNKNOWN: I&#x27;m looking through Andy&#x27;s with his quad just on the ground.
+[3638.52] Frank: That was like, oh, oh, yeah.
+[3641.52] Frank: I can&#x27;t.
+[3642.52] Frank: I definitely can&#x27;t just spectate and I&#x27;m piggyback on someone else
+[3646.52] Frank: flying because it&#x27;s not going to go well.
+[3651.02] UNKNOWN: No, you&#x27;re mad.
+[3653.02] Jack: Thank you.
+[3654.02] Jack: Alex, do you want to give a shout out to your your Patreon or
+[3659.02] Jack: like if, you know, tell people how to get hold of the new
+[3663.02] Jack: firmware that you write?
+[3665.02] UNKNOWN: Sure.
+[3666.02] Alex: If I may.
+[3668.02] UNKNOWN: Shout out.
+[3669.02] Alex: I&#x27;m extremely grateful actually for all the Patreons because
+[3673.02] Alex: I don&#x27;t have many, but I treasure every one of them.
+[3676.02] Alex: And basically what I do now, it&#x27;s because of those guys who
+[3681.02] Alex: are supporting me.
+[3683.02] Alex: I didn&#x27;t really want to have Patreon, but they forced me to
+[3686.02] Alex: do that.
+[3688.02] UNKNOWN: Weird.
+[3690.02] Alex: Yeah, there are all the new frameworks I&#x27;m making before
+[3694.02] Alex: they hit public officially.
+[3697.02] Alex: They all go on Patreon.
+[3699.02] Alex: I do their GUIs.
+[3701.02] Alex: I do all the better for RTH, for DJI, for other goodies to
+[3705.02] Alex: make.
+[3706.02] Alex: Mostly supporting questions from.
+[3713.02] UNKNOWN: Sorry about that.
+[3716.02] Alex: Slight wobble.
+[3719.02] Tony: Trying to answer as many questions on Patreon as I can
+[3724.02] Alex: because I feel obliged to help those guys and probably
+[3728.02] Alex: answer them more than on Facebook.
+[3730.02] Alex: Well, if you feel like supporting me, join.
+[3735.02] UNKNOWN: I hope I deliver.
+[3737.02] UNKNOWN: And the link is in the description down below.
+[3740.02] Frank: I put it in there.
+[3742.02] Alex: Thanks so much for coming on.
+[3752.02] Jack: You&#x27;ve been listening to Let&#x27;s Throw Now.
+[3754.02] Jack: You&#x27;ve been joined by Curry Kitten.
+[3757.02] Jack: Goodbye.
+[3758.02] Jack: My little Tony.
+[3759.02] UNKNOWN: Bonjour.
+[3761.02] Jack: Painless360.
+[3762.02] UNKNOWN: Happy Flying.
+[3764.02] Jack: Thank you, Stashfrank.
+[3766.02] UNKNOWN: Hi.
+[3767.02] Jack: Alex.
+[3768.02] UNKNOWN: Yeah.
+[3769.02] Alex: Flying nice.
+[3770.02] Jack: I know I&#x27;ve been jacked.
+[3771.02] Jack: No worries.
+[3772.02] Jack: Cool.
+[3773.02] Jack: Thank you very much, guys.
+[3774.02] Jack: Remember, tune in every Thursday.
+[3776.02] Jack: Thank you to our Patreons for your love and support.
+[3779.02] Jack: And hopefully next week.
+[3781.02] Jack: I can&#x27;t do it this week.
+[3782.02] Jack: We&#x27;ll do last week&#x27;s last month&#x27;s bonus pod.
+[3786.02] Jack: I&#x27;m very sorry about that.
+[3788.02] Jack: Thank you.
+[3790.02] UNKNOWN: G&#x27;day.
+[3792.02] Curry: Telemetry lost.
+</pre></body></html>

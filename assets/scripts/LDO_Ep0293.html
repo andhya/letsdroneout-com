@@ -1,0 +1,810 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0293—LDO 293 - Aces High - FPV Combat</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 293 ===
+Title: LDO 293 - Aces High - FPV Combat
+Recorded: 2021-04-08
+Hosts: Andrew &quot;Frank&quot; Hyams, Wayne &quot;CurryKitten&quot; Andrews, Klaudyna &quot;Kaja&quot; &quot;BlueOwl&quot; Wrochna, Tony &quot;TheTonstar1&quot; Marchant
+Guest(s): Björn, Matteo Betti, Stefano
+Total audience: 2,056
+Platforms: YouTube (https://www.youtube.com/watch?v=tpAtHuxFneY); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1026514021-letsdroneout-ldo-293-aces-high-fpv-combat.mp3)
+=====================================
+
+After literal *years* of development, we&#x27;re excited be joined by a few of the FPV Combat group showing us the latest design, currently in production to be released May 2021.
+
+Analogue: https://www.youtube.com/watch?v=ijO7kAyqqmk
+HD: https://www.youtube.com/watch?v=nILtpYoI0ac
+
+Björn has been testing the system - https://www.youtube.com/channel/UCHo2X-eImyfabYFmhH_D62w 
+Matteo has been piling on the features - https://www.fpv-combat.com/ 
+Stefano is managing the distribution - https://www.facebook.com/modeldromemilano/
+
+[0.0] UNKNOWN: Welcome to Let&#x27;s Drone Out, the original and best drone theme podcast.
+[5.0] Curry: We record the show live on the Thursday night on youtube.com forward slash Let&#x27;s Drone Out
+[9.8] Curry: and our lovely patrons help with the editing costs.
+[12.2] Curry: These are...
+[13.0] (Patrons): Wacky Wes
+[14.2] Curry: Mikey Dread
+[15.8] (Patrons): Art Faulkner
+[17.4] (Patrons): Carlos Campos
+[19.0] (Patrons): Thank you!
+[20.2] (Patrons): Now let the trees recover.
+[21.4] Stefano: Let&#x27;s Drone Out now.
+[50.96] UNKNOWN: Good evening and welcome to Let&#x27;s Drone Out, episode 293.
+[58.16] Frank: We&#x27;ve got a good episode this week.
+[60.36] Frank: We&#x27;ve got quite a lot of stuff that we&#x27;ll try and get through.
+[63.76] Frank: So this week we have Curry.
+[67.36] Frank: Hello.
+[68.36] Frank: We have Blue Owl.
+[70.36] Frank: Hi, Guten Tag.
+[72.36] UNKNOWN: We have Tony.
+[73.76] Frank: Bonjour.
+[75.16] Frank: We have Mateo.
+[76.76] Frank: Hi.
+[77.96] UNKNOWN: We have Stefano.
+[79.96] Björn: Hi.
+[80.96] Frank: We have Bien.
+[82.36] Björn: Salut monsieur dame.
+[84.56] UNKNOWN: And I&#x27;m Andrew Sashrank.
+[87.96] Frank: We will probably have Jacket back next week.
+[91.16] Frank: This week he&#x27;s surrounded by piles of bits of car.
+[95.76] Frank: So we&#x27;ll see if he manages to cobble them back together and get on tonight.
+[101.16] Frank: But we&#x27;ll crack on because we&#x27;ve got quite a lot to get through.
+[104.96] Frank: Because we&#x27;ve got this week, the two guys here are bringing along their FPV combat system,
+[111.56] Frank: which I have been waiting for a long time since I had to go with the laser tag system on the Battle of Britain show.
+[124.96] Frank: We had great fun with that and a couple of guys on there heard about this project going on
+[131.76] Frank: and I&#x27;ve been watching it very closely waiting for it to come to release.
+[137.16] Frank: I&#x27;m very happy to see that it&#x27;s in production now and we&#x27;ll be in the shops within a month, apparently.
+[143.96] Frank: So yeah, we&#x27;ll kind of go through what it is.
+[148.16] Frank: But before I kind of go through everything, I&#x27;ve just got the little video queued up.
+[156.96] Frank: I&#x27;ll show everyone kind of what we&#x27;re talking about.
+[160.66] Frank: So I don&#x27;t know, Mateo, if you want to talk us through this video or whether we should kind of do that.
+[170.06] Mateo: How do you want to?
+[171.26] Mateo: I can explain actually that this video is showing the main purpose of the FPV combat.
+[181.06] Mateo: So a few years ago, I just wanted to try to have some cool laser tag dogfighting for our planes flying FPV.
+[192.06] UNKNOWN: So I started developing my own system since I was asking myself why nobody is doing that.
+[201.06] Mateo: So then I started to do that and the thing grown up in the last three years
+[208.26] UNKNOWN: and I integrated the OSD function and advanced game modes.
+[213.46] UNKNOWN: And what you&#x27;re watching here actually is the real combat from two years ago
+[222.06] Mateo: where we were testing two models fighting against each other.
+[227.26] UNKNOWN: And the really cool feature is, of course, the OSD is giving you a lot of information on the video.
+[235.86] Mateo: But the cool function is that it can also affect and manipulate the control of the model.
+[243.86] UNKNOWN: So that&#x27;s basically what it is, the system right now.
+[251.46] UNKNOWN: But you&#x27;ve been working on it for quite a while, I believe.
+[255.26] Mateo: Yes, I think there were three years.
+[258.06] UNKNOWN: So three years and a half, I would say.
+[261.26] UNKNOWN: I started, yes, because it&#x27;s taking a really long time.
+[266.26] Mateo: It is not my full time job, so I spend my nights working on the project.
+[273.26] UNKNOWN: And so when I started seeing some cool results, especially with the integration of the OSD,
+[282.46] Mateo: there is where the fun part started because I could implement a lot of different functions
+[289.06] Mateo: and features, and I think we are going to talk about that during these live streams today.
+[298.66] UNKNOWN: Absolutely.
+[302.46] UNKNOWN: The other thing, to head off the questions, because I know there is that question of it&#x27;s an OSD system
+[312.06] Frank: and therefore it&#x27;s kind of limited to the OSD chips
+[317.26] Frank: and therefore may not work with digital, but you&#x27;ve made a way to work with digital, haven&#x27;t you?
+[325.46] Frank: Yes, actually, unfortunately, the digital FPV system came out and they came out before my system.
+[334.46] Mateo: So then it&#x27;s really downside for me.
+[338.26] Mateo: But a lot of users around the world, I would say, of course started loving the digital FPV system.
+[346.06] Mateo: So what I actually needed to implement back again in the system was the control of the addressable LEDs.
+[356.66] UNKNOWN: And I think that Bjorn has edited some cool videos about that.
+[363.86] Mateo: So basically, you don&#x27;t have, of course, the OSD on the digital system because right now it&#x27;s just not possible to have it.
+[373.06] Mateo: So what you can have actually is placing some addressable LEDs in the field of view of the camera.
+[380.66] UNKNOWN: And you can see Bjorn that lights up his tanks.
+[385.66] UNKNOWN: And there are some LEDs that actually are showing the lives and the ammo of the system.
+[392.86] UNKNOWN: So they are also giving feedback to the user.
+[398.26] Mateo: It&#x27;s a little bit too bright.
+[401.26] UNKNOWN: That&#x27;s good.
+[403.26] UNKNOWN: That&#x27;s really bright. In the camera, it doesn&#x27;t look so much, but you can barely see also the...
+[410.26] Mateo: You can see the green line and the blue line. The green line is actually five LEDs for the life.
+[416.26] Björn: And the blue lines are for the ammo.
+[420.26] UNKNOWN: And on top you see one LED which shows you the color of your team.
+[429.26] Frank: But I think we can see that later in the DJI combat video better.
+[439.26] Björn: It&#x27;s nicer and clearer than now in the webcam.
+[444.26] UNKNOWN: So one of the most, the biggest improvements that have been done in the past year, I would say,
+[451.26] Mateo: after the summer, the first testing that we did a couple of days, a couple of years ago actually, sorry.
+[461.26] Mateo: And it was to implement the functionality of the real-time feedback.
+[466.26] Mateo: So what I did was just picking up some RF modules.
+[474.26] Mateo: And with those modules, let me see if I can show you a little bit better.
+[479.26] Mateo: So these modules here can be plugged into the system.
+[483.26] Mateo: And actually, they are giving you the real feedback when you hit someone or when someone hits you.
+[492.26] Mateo: So you actually know. You can know.
+[495.26] Mateo: And if you have an OSD, so an analog system, you will get also the nickname of the other player that hits you
+[503.26] Mateo: or the nickname of the player that you hit during the fight.
+[508.26] Mateo: And to get the same feedback, of course, we can&#x27;t have the character OSD.
+[515.26] Mateo: So we can&#x27;t see the nickname in the digital systems.
+[520.26] Mateo: But what you can have actually is the light color code.
+[524.26] Mateo: So when the player is shooting at another player and he successfully hits the other player,
+[531.26] Mateo: the LEDs in the cockpit will blink white, indicating that it was a successful hit for the player.
+[539.26] Mateo: And that&#x27;s really, really satisfying.
+[543.26] Björn: I&#x27;m with you, the site, today.
+[545.26] Björn: And I really enjoyed using that because all the time before we had that feedback,
+[553.26] Björn: you were shooting and you were asking around, did I hit you? Did I hit you? Did I hit you?
+[558.26] Björn: And maybe nobody said yes or I don&#x27;t know. Nobody claimed the hit.
+[565.26] Björn: But then now you get real feedback and you get the reward for your shot.
+[574.26] UNKNOWN: Yes. And there are a lot of features that I think that Bjorn didn&#x27;t introduce himself.
+[581.26] Mateo: He&#x27;s one of the, I would say, the most active tester of the system.
+[587.26] UNKNOWN: So while I was working on improving the functionalities and the function of the firmware,
+[596.26] Mateo: Bjorn was giving me the feedback from the field and giving me some really useful advices for,
+[604.26] Mateo: oh, I would like to implement that feature. Is it possible?
+[609.26] Mateo: Okay, maybe yes. No, forget it.
+[614.26] Mateo: I remember one time he just told me, okay, look, I never even noticed that you have the MOs showed up in the OSD.
+[623.26] Mateo: And so I don&#x27;t really think it&#x27;s useful. And I replied to him, okay, I spent something like two months on that feature.
+[632.26] Mateo: We&#x27;re going to keep it.
+[635.26] Björn: To have the graphical amount of MOs disappearing.
+[640.26] Tony: I will try to show you maybe.
+[644.26] Tony: That&#x27;s cool. So you get a certain amount of MO when you&#x27;re shooting each other.
+[649.26] UNKNOWN: You can set up that feature in the number in the OSD menu.
+[656.26] Mateo: And when you say shooting, when you say shooting somebody, does it work like Paintball or does it work like laser tag?
+[665.26] BlueOwl: How do you like, is it?
+[667.26] BlueOwl: It&#x27;s like either tag.
+[674.26] Mateo: The basic principle of working is on infrared LEDs. So it is more similar to the laser tag.
+[683.26] Mateo: And since it is on laser, and it&#x27;s not laser actually, it&#x27;s just infrared LEDs.
+[689.26] Mateo: So since it&#x27;s not visible from the light, from the cameras or the human eye, you will not get the feedback from a visible feedback that you&#x27;re shooting.
+[702.26] Mateo: That&#x27;s why I implemented the features in the OSD. So that was the purpose of the presentation.
+[710.26] Curry: So one of the things about infrared, because a few guys have tried this before, they had problems with working in the sunlight and having it accurate.
+[719.26] Curry: How did you get around those sort of problems? Is this what the development time took?
+[723.26] Curry: So there were different ways to do that. At the beginning, I was trying to code the infrared light.
+[734.26] Mateo: So I was able to send also some information over the air and get a good range.
+[741.26] Mateo: And okay, one step back. You can drive an LED with different amount of power.
+[748.26] Mateo: So the LED that I&#x27;m using for the gun is not a common LED. You have to look for that.
+[758.26] Mateo: It has some really specific performance. It can be drive at a very high current, so you can get a very long shooting range.
+[770.26] Mateo: And it also has a very narrow beam. That&#x27;s one of the main reasons for the range.
+[777.26] Mateo: Yes, the same LED can give you a very wide angle or very narrow.
+[782.26] Mateo: So in my case, I&#x27;m using a 10 degrees opening beam.
+[788.26] UNKNOWN: And of course, it is not 10 degrees at 30, 40 meters away because it lost some shooting power, I don&#x27;t know what to say.
+[799.26] Mateo: But basically, when you drive correctly and in the right timing, you can get very good ranges from this simple LED.
+[808.26] UNKNOWN: We discovered after some real-world testing that the LED was capable of shooting at over 35 meters in direct daylight.
+[824.26] Mateo: So I&#x27;m talking about summer here in Italy.
+[827.26] Mateo: And the problem was that when I was coding the shoot, it was getting a lot of noise from the around.
+[838.26] Mateo: So shadows, props and servos, if you&#x27;re using planes or something like that.
+[844.26] Mateo: So it is a really tricky environment where you can play with this setup.
+[850.26] Mateo: So I had to work again.
+[854.26] Mateo: And after a few steps back, I realized that I needed to drive it in a different way, which was not coded anymore.
+[862.26] Mateo: And that was giving me very good range.
+[866.26] Mateo: I improved the range just at about, I would say, 40 meters without aiming too much.
+[874.26] Mateo: And if you aim, you can get very far.
+[878.26] Mateo: Also 50 meters is really possible.
+[883.26] Mateo: The problem is that you need to aim.
+[885.26] Mateo: You can&#x27;t just shoot and you will get your target.
+[888.26] UNKNOWN: And flying a plane and aiming is not that easy as it sounds.
+[896.26] UNKNOWN: No, it doesn&#x27;t even sound easy.
+[900.26] UNKNOWN: Yes, that&#x27;s really crazy because you are so focused on following somebody else that you can get really easily disoriented.
+[911.26] UNKNOWN: And so you can lose control with one second and crash and destroy everything.
+[919.26] UNKNOWN: I tell you, do you have a system on your desk there with your nice camera desk setup?
+[926.26] Frank: Maybe you could kind of show us the bits of the system.
+[929.26] Frank: We can talk through that a bit maybe.
+[931.26] UNKNOWN: So I prepared this simple different model to try to show you a few features, a few connections of the world.
+[945.26] Mateo: Basically, the board to work needs just one simple standard channel from the standard receiver.
+[959.26] UNKNOWN: So you can plug it into a PWM receiver or you can, if you are using, for example, a flight controller,
+[968.26] Mateo: you can forward one channel to one output.
+[971.26] Mateo: iNav can do that as well as a beta fly.
+[976.26] Mateo: So you can forward one channel and you just need that channel to trigger the shots.
+[982.26] UNKNOWN: So after you wired up the trigger, you can decide if you want the board to manipulate also the control of the system
+[991.26] Mateo: or just keep working like just visual feedback.
+[997.26] UNKNOWN: So here I can show you how it looks like the OSD.
+[1004.26] Mateo: It takes just a few seconds to start up.
+[1010.53] Mateo: Well, it&#x27;s fancy.
+[1014.94] UNKNOWN: So I don&#x27;t know if you can see it very well.
+[1018.94] Mateo: Yeah, we can.
+[1020.94] UNKNOWN: With the white background, it&#x27;s perfect.
+[1022.94] Björn: Yeah, it&#x27;s good.
+[1024.94] UNKNOWN: I can show you also a little bit bigger here.
+[1029.94] UNKNOWN: And let me turn off the background.
+[1033.94] Mateo: OK, here.
+[1034.94] UNKNOWN: So this is basically what you have in your OSD.
+[1039.94] Mateo: So there is the site in the center.
+[1043.94] UNKNOWN: There is the pilot icon, the nickname, the battery voltage monitor.
+[1049.94] Mateo: And actually, you have two different voltages that you can plug.
+[1053.94] Mateo: So depending if you are using just the battery or the 5 volts from the receiver,
+[1061.94] Mateo: you can monitor more than one voltage.
+[1065.94] Mateo: And there is not really a limit for hobbyists since it can handle up to 60 volts.
+[1071.94] Mateo: So it&#x27;s pretty high voltage.
+[1074.94] Mateo: On the left side of the screen, you can see the MOs.
+[1079.94] Mateo: So those MOs that I was talking about before.
+[1084.94] UNKNOWN: The ones that took you two months to code, yeah?
+[1087.94] Mateo: Yes, something like that.
+[1089.94] Mateo: Now, let me try if I can simulate a shot.
+[1095.94] Mateo: Yes, you can see it&#x27;s ready to shoot.
+[1099.94] Mateo: And then when you shoot, it gets damaged.
+[1102.94] Mateo: And then simulate also one shot.
+[1104.94] Mateo: And you can see on the left side,
+[1107.94] Mateo: this is just a simulation from the infrared remote control.
+[1113.94] Mateo: Let me pick up my directions.
+[1117.57] UNKNOWN: I will also try to show you a few other functionalities.
+[1122.57] Mateo: So on the left side, you can see that the MOs are decreasing.
+[1126.57] Mateo: They&#x27;ve got little icons of the shots of the MO.
+[1131.57] Frank: Also, the lives are going down on the right lower corner.
+[1136.57] UNKNOWN: On the lower right corner, you can see the lives.
+[1140.57] Mateo: Right now, a five, four.
+[1142.57] Mateo: So it&#x27;s whenever you get shot, right?
+[1145.57] BlueOwl: When you get shot, you lose one life.
+[1147.57] UNKNOWN: Actually, this is a tricky question.
+[1149.57] Mateo: It depends on the MOs.
+[1151.57] Mateo: Yes, because that&#x27;s not a rule.
+[1153.57] Mateo: In general, it&#x27;s a good rule, but that&#x27;s not the only one.
+[1157.57] Mateo: Because let me jump into the configuration of the MO.
+[1161.57] Mateo: I will show you a few parameters.
+[1165.57] Mateo: All the configurations are done in the OSD.
+[1169.57] Mateo: So you don&#x27;t need...
+[1170.57] Mateo: Let me move myself a little bit lower.
+[1174.57] UNKNOWN: Something like that.
+[1176.57] UNKNOWN: Okay.
+[1178.57] Mateo: So what you are watching now is the main menu of the board.
+[1182.57] Mateo: And you can navigate into the menu by simply using the infrared remote controller.
+[1190.57] Mateo: And this remote controller can be any remote controller that you have.
+[1195.57] UNKNOWN: So if you just got a TV remote at home, you can just point it at your...
+[1199.57] Frank: Anything you have.
+[1200.57] Mateo: The targets on your aircraft and it all...
+[1203.57] Frank: That&#x27;s cool.
+[1204.57] UNKNOWN: Any remote controller, which is based on infrared, can work.
+[1209.57] Mateo: And actually Bjorn is using an app on his smartphone.
+[1215.57] Mateo: And he can control the board with a custom design.
+[1221.57] Mateo: You can see now in his camera, with a custom design remote controller,
+[1227.57] Mateo: which is specifically built for the navigation in the menu.
+[1234.57] Mateo: Really good.
+[1236.57] UNKNOWN: So going back to the question that I received before.
+[1244.57] Mateo: Okay.
+[1245.57] Mateo: Let me go back.
+[1246.57] Mateo: I&#x27;m getting some problems with it.
+[1248.57] UNKNOWN: What is wrong with you?
+[1251.57] UNKNOWN: The problem is you&#x27;re demonstrating it.
+[1253.57] Frank: Therefore it&#x27;s going to go wrong.
+[1256.57] UNKNOWN: Yes.
+[1258.57] UNKNOWN: So let me jump into...
+[1260.57] Mateo: There is the remote controller.
+[1262.57] Mateo: Empty batteries, really.
+[1265.57] Mateo: I can&#x27;t believe that.
+[1267.57] Mateo: Now.
+[1268.57] Frank: It&#x27;s timing.
+[1270.57] UNKNOWN: Yes.
+[1271.57] Mateo: So if you go into the submenu for the model,
+[1277.57] Mateo: you can set up a few other parameters, which are the defense level.
+[1283.57] Mateo: Here there is an error.
+[1284.57] Mateo: I know I already fixed that, but I didn&#x27;t flash this board.
+[1288.57] Mateo: So now you see it&#x27;s written wrong.
+[1291.57] Mateo: Never mind.
+[1293.57] Mateo: Anyway, every time you get hit,
+[1296.57] Mateo: it depends by the parameters that you have set up here,
+[1301.57] Mateo: the defense level and the shooting power.
+[1304.57] UNKNOWN: And if, for example, in this case, if you have a shooting power of three
+[1308.57] Mateo: and another player, the victim of your shot is having something like defense level three,
+[1315.57] Mateo: you will take one life every time you hit him.
+[1318.57] UNKNOWN: Ah, clever.
+[1320.57] Mateo: For example, if you set up, I don&#x27;t know, four shooting power
+[1324.57] Mateo: and the defense level is just two,
+[1326.57] Mateo: you will take two lives every time you shoot him.
+[1331.57] Frank: And the other side, if you have a defense level
+[1336.57] Mateo: which is higher than the shooting power,
+[1338.57] Mateo: you will get damage and partially damage,
+[1341.57] Mateo: and then you will get...
+[1344.57] Mateo: You will lose the life once you get damage again.
+[1348.57] Frank: But this is where you&#x27;ve got a certain number of stat points that you can share.
+[1353.57] Frank: So if you think you&#x27;re a really good shot,
+[1356.57] Frank: then you want to have your shooting power.
+[1359.57] Frank: If you think you&#x27;re probably not a good shot
+[1362.57] Frank: and you just want to survive more than 30 seconds,
+[1364.57] Frank: then you&#x27;re going to want to put your stat points on the defense.
+[1368.57] Björn: Exactly, exactly.
+[1370.57] UNKNOWN: It&#x27;s very good.
+[1371.57] Mateo: It actually really plays on a strategy on that
+[1375.57] Mateo: because especially when you&#x27;re playing with some friends and teams,
+[1380.57] UNKNOWN: you can build up a strategy.
+[1382.57] Mateo: So a player which is really good at aiming
+[1385.57] Mateo: can set up a very high shooting power
+[1388.57] UNKNOWN: and you know, I don&#x27;t know, shoot rate.
+[1391.57] UNKNOWN: The rate is just how many words are at the shot that we have.
+[1397.57] Matteo: You can go to one shot.
+[1402.3] Mateo: The longer is the shooting.
+[1405.3] Mateo: So it is easier actually to hit the other player.
+[1409.3] UNKNOWN: And the other two are just the two values that you can set up
+[1414.3] Mateo: and play around with them.
+[1417.3] Björn: Yeah, you have a total of 10 points you can distribute on all your features.
+[1423.3] UNKNOWN: Yes.
+[1426.3] UNKNOWN: Yes.
+[1427.3] Mateo: That&#x27;s cool.
+[1429.3] Mateo: So here I was trying to show you...
+[1435.71] UNKNOWN: Okay, this remote controller is not working very well.
+[1438.71] Mateo: I don&#x27;t know what...
+[1439.71] UNKNOWN: That&#x27;s getting me...
+[1442.71] UNKNOWN: Do you mind showing us that maybe if you lift up your typhoon up there
+[1448.71] Frank: to up to the camera a bit,
+[1449.71] Frank: maybe we can kind of have a look at what the bits look like.
+[1453.71] Frank: So there&#x27;s on the nose, there&#x27;s I guess the receiver and transmit,
+[1459.71] Frank: like the infrared receiver and transmitter, is it?
+[1462.71] Mateo: This is the receiver, the one that you&#x27;re seeing here.
+[1467.71] Mateo: And then this is the main controller.
+[1470.71] UNKNOWN: And these are just accessories connected to the model.
+[1474.71] Mateo: And the gun right now is not plugged in.
+[1478.71] UNKNOWN: Let me see if I can show you.
+[1480.71] Mateo: Okay, so the gun looks like a kind of fairly normal 5mm LED
+[1485.71] Frank: with a little board behind it and kind of looks like a freaking...
+[1491.71] Frank: On the back.
+[1492.71] UNKNOWN: Yeah.
+[1493.71] Mateo: Actually, there is one LED, which is the infrared LED, the black one.
+[1498.71] Mateo: And then the white square LED is just an RGB LED.
+[1503.71] Mateo: And it is blinking when you&#x27;re shooting.
+[1506.71] UNKNOWN: And one of the cool features that I think are implemented right now
+[1512.71] Mateo: is that depending by how you plug in the sensor, the gun,
+[1518.71] UNKNOWN: you will get two different shooting power.
+[1523.71] UNKNOWN: So for example, if you plug in, let&#x27;s say this way,
+[1528.71] Mateo: so with the white cable on one side, you will get the maximum power.
+[1534.71] Mateo: And if you plug in, if you just swap this connector
+[1538.71] Mateo: so the white is on the other side, now you change the shooting power of the gun.
+[1545.71] Mateo: Yeah, this is really useful and necessary when you play indoors, for example.
+[1552.71] Björn: When you play indoors and you use the full power of the IR LED,
+[1557.71] Björn: you have reflections like you know that from your TV,
+[1560.71] Björn: you can also point with your TV on the wall on your back
+[1564.71] Björn: and you can control your TV.
+[1567.71] Björn: And that will not be useful in a game where you want to shoot each other
+[1572.71] Björn: and want to hit each other.
+[1574.71] Björn: So when you play indoors, you want to use the lower power mode
+[1578.71] Björn: just not to fake everything.
+[1582.71] UNKNOWN: I guess if you&#x27;re just on the high power and you&#x27;re all in the room,
+[1586.71] Frank: then just after a couple of shots from either team, everyone&#x27;s dead.
+[1590.71] Frank: Yeah, and you will shoot yourself as well.
+[1595.71] UNKNOWN: Just nuclear option, just everyone in this room.
+[1599.71] UNKNOWN: Yeah, it is very powerful, the LED.
+[1602.71] Mateo: So if you want to get the very high level and high long range of shooting,
+[1608.71] Mateo: you just need to do that.
+[1611.71] UNKNOWN: So I had two questions about this.
+[1613.71] Curry: First off, I was a bit surprised to see that the receiver is at the front.
+[1616.71] Curry: I figured this would normally be on the back of a plane,
+[1618.71] Curry: so people have a clear shot to it, or does it not matter?
+[1621.71] UNKNOWN: Actually, this is just a model.
+[1626.71] Mateo: It is not a real setup, so I just wanted to keep it simple.
+[1633.71] Mateo: I&#x27;m getting ready to record some tutorials in the next days,
+[1637.71] Mateo: so this is like a sneak peek from the tutorials coming.
+[1642.71] Mateo: So I just wanted to show you that there is the receiver and the controller.
+[1648.71] Mateo: I didn&#x27;t want to show anything more right now.
+[1651.71] Mateo: For the placement of the sensor and of the gun,
+[1654.71] Mateo: of course, we can talk about that.
+[1656.71] Mateo: It is going to take really a lot to find out the right setup for that.
+[1662.71] Mateo: Yeah, so for everyone listening along,
+[1665.71] Frank: the gun is a little LED with a little 3-pin servo connector
+[1671.71] Frank: on the back of it, essentially.
+[1673.71] Frank: A little PCB there, but very small.
+[1676.71] Frank: That could go pretty much anywhere on anything, I imagine.
+[1679.71] Frank: I imagine you could probably stick that in a turret,
+[1681.71] Frank: a little pan-tilt turret.
+[1683.71] Frank: Yes, you can do that.
+[1686.71] Curry: Another question.
+[1687.71] Curry: GrumpyFPV said, what about using a head track
+[1692.71] Curry: so you can have your camera and gun that make things...
+[1696.71] Curry: Do you consider that 3-pin?
+[1697.71] Curry: Does it make things too easy, or is that fair game?
+[1702.71] Mateo: Okay, it depends on how the player wants to play.
+[1707.71] Mateo: Some player, I received that input from different people around,
+[1714.71] Mateo: asking, oh, what about the head tracker?
+[1717.71] Mateo: I can install the gun on the camera, for example,
+[1721.71] Mateo: and aiming with my head.
+[1723.71] Mateo: I said, if that is something that you want to do that way, okay, no problem.
+[1728.71] Mateo: You can do that.
+[1729.71] Mateo: Just your friends need to know that you are doing that because...
+[1734.71] UNKNOWN: Everyone playing needs to agree to these rules.
+[1737.71] Frank: But actually, I got some requests from different people
+[1743.71] Mateo: which are loving the flight with the head trackers.
+[1747.71] Mateo: And they say, actually, for example,
+[1751.71] Mateo: you have to generate the real setup.
+[1754.71] Mateo: The guns are not moving with the camera, and the sight is not moving.
+[1760.71] Mateo: So they wanted to be able to disable the OSD sight, for example, and the traces.
+[1769.71] UNKNOWN: And so I added this feature that you can set up...
+[1773.71] Mateo: You can choose, for example, the sight model,
+[1777.71] Mateo: if you want more old style or new style, or you can totally disable that.
+[1783.71] UNKNOWN: And after talking again with other people, they told me, they asked me,
+[1789.71] Mateo: look, but I would like to be able to disable...
+[1792.71] Mateo: I would like that the sight would disable just when I turn my head.
+[1799.71] Mateo: And it will be back on when I look at straightforward.
+[1805.71] Mateo: So I added also that feature.
+[1811.71] Matteo: So you can basically also disable the sight by just turning your head around.
+[1820.71] Mateo: So every time you will be looking straight, you will get the sight and the traces.
+[1825.71] Mateo: And if you are just watching somewhere else, you are shooting,
+[1829.71] Mateo: but you will not see the traces and the sight on the OSD.
+[1833.71] Mateo: I&#x27;ve seen in the Facebook group as well, which is also linked in the description below.
+[1838.71] Frank: If anyone wants to follow along.
+[1841.71] Frank: I&#x27;ve seen as well someone having a little kind of pepper&#x27;s ghost with a little screen,
+[1848.71] Frank: like a little LCD screen reflected in a glass screen.
+[1853.71] Frank: I think we have three guys here.
+[1857.71] UNKNOWN: But that is here somewhere.
+[1860.71] Mateo: We can indirectly talk to you and explain.
+[1864.71] UNKNOWN: Actually, yes, that was me with the small head-up display.
+[1870.71] Björn: Because I really like how the OSD or how the RGB LEDs are working now for the DJI users.
+[1881.71] Björn: But I still wanted to have the feature to know who hit me and who did I hit.
+[1888.71] Björn: For me, it was kind of a challenge to work on a head-up display.
+[1895.71] Björn: So I took a small LCD, placed a glass screen in 45 degrees,
+[1904.71] Björn: and experimented on how visible is it under which conditions.
+[1910.71] Björn: In the end, I ended up with a glass screen coated with two layers of half-transparent mirror film stuff.
+[1923.71] Björn: But actually, I was not so successful that I would say it will work in a daylight environment perfectly.
+[1933.71] Björn: Because the normal LCD screens are not that bright.
+[1937.71] Björn: The backlight of the LCD is not very bright.
+[1941.71] Björn: And against a sunny day and a maybe white, cloudy sky, you won&#x27;t see anything.
+[1952.71] Björn: You need something like an OLED, which is much brighter.
+[1958.71] Björn: Actually, my OLEDs just arrived.
+[1964.71] UNKNOWN: So I still want to try to get a head-up display for my DJI setup.
+[1973.71] UNKNOWN: But actually, I&#x27;m totally fine with the RGB LED integration.
+[1978.71] Björn: So that&#x27;s cool, except that I&#x27;m missing some features.
+[1984.71] UNKNOWN: This episode was recorded in front of a live online audience, downloaded and edited to make sense when it played audio only,
+[1991.71] Frank: censored to please the iTunes people, hosted on the internet, forwarded through to your podcast provider,
+[1995.71] Frank: downloaded, playing on your device, and is now playing in your ears.
+[1999.71] Frank: All thanks to our Patreons. Consider joining them and you&#x27;ll also get other online benefits.
+[2005.71] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
+[2009.71] Frank: A couple more questions in the chat that I think are probably relevant to each other.
+[2015.71] Frank: So Andy B is asking, is this for sale?
+[2018.71] Frank: And Richard Ward asking, who are the UK stockists?
+[2023.71] Mateo: So you can check. It is not on sale yet.
+[2027.71] Mateo: It is in process of manufacturing right now.
+[2033.71] Mateo: So in the next four weeks, I would say it should arrive to the stores.
+[2039.71] Mateo: And you can check the this is a good advice for everyone interested into that.
+[2045.71] Mateo: If you go on the website, FPV dash combat dot com, you will get the dealers list in the you will find the dealers dealers list in the website.
+[2058.71] Mateo: So you can just check who is selling that the product right now.
+[2065.71] Mateo: And if you have any advice, you can just write me on the page on Facebook or directly on the email or just ask to the to the store.
+[2079.71] Mateo: Oh, would you be interested interested into this system?
+[2083.71] Mateo: And then we will figure out how to do that.
+[2087.71] UNKNOWN: So it will be also available in the U.S., but I don&#x27;t have the list of the stores yet, but it will be available directly in the U.S.
+[2098.71] Mateo: About the price range, a lot of people are asking about that.
+[2103.71] Mateo: So there will be a different version of the system.
+[2107.71] UNKNOWN: The standard version, which is the full size, 36 millimeters by 36, the standard big flight controller.
+[2118.71] Mateo: And it will be available at a price of 50 dollars U.S. dollars.
+[2125.71] Mateo: And I don&#x27;t know if sellers will apply additional sales.
+[2131.71] Mateo: I don&#x27;t know because the margins are really low.
+[2134.71] Mateo: So right now the project is running on.
+[2138.71] UNKNOWN: Let&#x27;s try to make it alive and let&#x27;s hope that we didn&#x27;t lose too much.
+[2145.71] Mateo: That&#x27;s the real truth.
+[2150.71] UNKNOWN: What&#x27;s really mind blowing for me, you said at the beginning that you were implementing it for three and a half years, right?
+[2159.71] BlueOwl: Yes.
+[2160.71] BlueOwl: So that must have been the end of 2017 when you started.
+[2165.71] UNKNOWN: And when I think about the state of the hobby and FPV in 2017, I could barely apply by then.
+[2174.71] UNKNOWN: No, it was before. I think I started really thinking about that at the end of 2016.
+[2185.99] UNKNOWN: Yes. And I remember because I was implementing the OSD functionalities when my daughter was born.
+[2195.99] Mateo: So it was in June 2017.
+[2199.99] Mateo: So, yes, in 2017 I was already working on the OSD.
+[2205.99] UNKNOWN: Just basic functionalities, not really impressive, but that was the beginning.
+[2212.99] Mateo: And now there are all the game stuff and way more things than you would expect.
+[2220.99] UNKNOWN: And what was the biggest challenge that you run into? What was the moment when you said, is it really worth it?
+[2229.99] UNKNOWN: Like from the beginning till yesterday.
+[2237.99] Mateo: Right now, I don&#x27;t know if it is possible to get an idea of how many hours are spent into the model, into the design of this project.
+[2252.99] Mateo: Because it is designed from zero, starting from the firmware and the CAD of the PCB layout.
+[2262.99] Mateo: There are a lot of challenges coming up with the design of this kind of board and this kind of system.
+[2270.99] Mateo: We were talking before, making it work in the daylight is challenging.
+[2276.99] Mateo: And right now we can see just this system working and the system from video aerial systems, which is out from a couple of, I don&#x27;t know, a few months now.
+[2289.99] UNKNOWN: But nobody else just implemented these kind of functionalities and the integration with the control of the model and different kind of controls,
+[2299.99] Mateo: because you don&#x27;t have just one way to make it work. You can customize it how you prefer.
+[2307.99] UNKNOWN: You&#x27;ve not even just got the different stat points either as well. You&#x27;ve got different game modes as well, haven&#x27;t you?
+[2315.99] Mateo: Yes, there are right now three games implemented and one additional mode, which is the compatibility mode for the video aerial system project,
+[2328.99] Mateo: which is always a laser-based, infrared-based combat platform.
+[2333.99] Mateo: So another question that I got very often is, can this system work with the base combat from video aerial system?
+[2342.99] Mateo: The answer is yes. It can work from out of the box and you can select the specific mode to get the full functionality, full compatibility with that system.
+[2355.99] Mateo: But basically, I will try to show you. Let me switch to the other view.
+[2367.16] Frank: So I saw someone had a tank who was holding up the tank. Can you shoot tanks versus planes and planes versus attacking ground tanks?
+[2378.16] UNKNOWN: Yes, indeed you can.
+[2381.16] Tony: You have to learn how to dive.
+[2384.16] Tony: That&#x27;s really cool.
+[2389.16] Björn: Actually, I will let it be switched off so you can see it better. This is actually my Fluk tank.
+[2400.16] UNKNOWN: It&#x27;s Fluk Abwehr. It&#x27;s German. It&#x27;s the anti-aircraft tank.
+[2408.16] Björn: You can see here the shooting LED. You can see here my pan tilt mount for the camera.
+[2415.16] Björn: And here you can see the sensors.
+[2418.16] Björn: When I joined the project, when I got a tester, I used that when I was going alone to the field and I just placed that on a big flag so I could see it from the airplane.
+[2435.16] Björn: I shot at the tank to see how good is my range and how good can I aim.
+[2442.16] Björn: This tank gave me feedback with beeps and the LEDs got lit up so I could see that I hit something.
+[2456.16] UNKNOWN: Someone is asking if you can change TV channels.
+[2462.16] UNKNOWN: At the beginning, you could. Right now, not anymore.
+[2467.16] UNKNOWN: When did you do your old costume shoot, Tony?
+[2472.16] Frank: Four years ago, probably.
+[2475.16] UNKNOWN: It might have been about the right time for you to go flying through the TVs.
+[2480.16] UNKNOWN: We don&#x27;t talk about me crashing into the TV. Shut up.
+[2485.16] UNKNOWN: Sounds like a good story.
+[2489.16] Tony: We&#x27;re not talking about labs.
+[2494.16] Mateo: I had some audio problems, actually.
+[2499.16] UNKNOWN: This is the view that I wanted to show you.
+[2504.16] Mateo: By pressing the OK button that you configure on the remote controller, you can get the access to the game selection page.
+[2517.16] Mateo: There are three games which are Fox Hunt, Combat and Capture the Flag.
+[2523.16] UNKNOWN: Of course, the video area system compatibility mode that I was talking before.
+[2530.16] Mateo: For all the games, you&#x27;re going to need to have the install on your system, the RF modules, additional modules.
+[2538.16] Mateo: They will not be sold with the system or in the stores.
+[2543.16] Mateo: In the hobby shops, you can buy them on Amazon, eBay or, I don&#x27;t know, Banggood.
+[2549.16] Mateo: There are a lot of different places where you can purchase those modules.
+[2554.16] Mateo: They are cheap, like two or three euros. They work fine.
+[2559.16] Mateo: You don&#x27;t need to configure anything.
+[2562.16] Mateo: But they are needed in order to work with the game modes.
+[2568.16] Mateo: For the games, you need to have the real-time feedback.
+[2573.16] Mateo: All the players have a jump into a login procedure, which is automatically done by the board
+[2582.16] Mateo: by simply giving a few inputs from the user.
+[2586.16] Mateo: For example, let&#x27;s try to start the game.
+[2592.16] Mateo: When you select the game, you press OK.
+[2598.16] Mateo: You can select the duration of the match.
+[2603.16] Mateo: For example, in this case, you can see the old score from the previous match.
+[2612.16] Mateo: What is happening is that the master player is starting the match
+[2620.16] Mateo: and all the other players are getting a notification on the system.
+[2625.16] UNKNOWN: Do you want to join this game?
+[2628.16] UNKNOWN: If you trigger one shot from the transmitter, you will jump into the game.
+[2640.16] Mateo: There is an automatic procedure that will list all the players.
+[2644.16] Mateo: You will see all the nicknames of all the players who logged into the game.
+[2650.16] Mateo: For example, if you selected the capture flag, you can see the name of the flags
+[2657.16] Mateo: which are logged into the game.
+[2660.16] UNKNOWN: During the match, you will get the full feedback and information of the player that you hit
+[2669.16] Mateo: or the player that hit you.
+[2672.16] Mateo: All the additional features like defense level or shooting power.
+[2679.16] Mateo: You have really a simulation of what could be a real battle from the best.
+[2687.16] Mateo: Pretty intense.
+[2688.16] Frank: What are the three game modes?
+[2691.16] Frank: There was the fox, how do they all work?
+[2695.16] Mateo: We have the fox hunt.
+[2699.16] Mateo: Let me tell you something.
+[2702.16] Mateo: I&#x27;m finalizing the last release of the manual.
+[2708.16] Mateo: There will be explained in detail all the features because they are really a lot to talk about.
+[2714.16] Mateo: If you don&#x27;t have the system in your hand, you will not really get the fully understanding of what is going on.
+[2723.16] Mateo: In the fox hunt, it&#x27;s like all the players have to catch the fox.
+[2731.16] Mateo: When a player is catching the fox, it turns from the dog to the new fox.
+[2742.16] Mateo: When you start the game, all the players are hunting dogs.
+[2747.16] Mateo: The first player who hit another one, he became the new fox.
+[2752.16] Mateo: It&#x27;s like it or tag.
+[2756.16] UNKNOWN: Yes, it&#x27;s something like that.
+[2759.16] Frank: All the dogs have to try to catch the fox.
+[2763.16] Mateo: When one dog catches the fox, he becomes the new fox.
+[2769.16] Mateo: The fox&#x27;s score is starting to increase and counting up in the upper right corner.
+[2777.16] Frank: The cool feature is that with the telemetry or the network,
+[2784.16] Mateo: you know in real time who is the player which is the fox right now.
+[2790.16] UNKNOWN: It shows up in the OSD, the nickname of the player, which is running away from the other.
+[2796.16] Mateo: If you have a dressable LED, the LED will start blinking orange.
+[2803.16] UNKNOWN: It will start blinking, so you will know that the only player that you need to hit is the blinking one, which is the fox.
+[2816.16] UNKNOWN: At the end of the game, there is the score table that shows up in the OSD.
+[2821.16] Mateo: You can enable it, disable it. It depends how you want to do that.
+[2826.16] Mateo: As it seems with everything that you&#x27;ve built here, there&#x27;s a lot of options.
+[2832.16] Mateo: Yes, a lot. The combat mode is the second game implemented with the system.
+[2839.16] Mateo: It is actually just the combat.
+[2843.16] Mateo: The difference from the turn on the system and start fighting is that within the combat,
+[2851.16] Mateo: it is needed for all the players to have the module for the RF feedback.
+[2857.16] Mateo: You will get those information only if you have the module.
+[2864.16] Mateo: This is why it is a dedicated mode.
+[2869.16] Mateo: You can start the match, set up the timer, start the fight,
+[2874.16] Mateo: and then you will get the number of hits that you did against other players
+[2884.16] Mateo: and the kills that you received from other players.
+[2889.16] Mateo: Again, there is the score table at the end of the match that shows up in the OSD.
+[2894.16] UNKNOWN: You can disable it if you don&#x27;t like it.
+[2897.16] Mateo: That&#x27;s what Bjorn is asking, actually.
+[2899.16] Mateo: I don&#x27;t want too many stuff on the OSD while I&#x27;m trying to end it.
+[2906.16] Mateo: We tried to disable those information just for you.
+[2914.16] Mateo: The last one, the capture the flag?
+[2916.16] Mateo: Capture the flag. It&#x27;s a really complex game,
+[2920.16] Mateo: at least when I&#x27;m talking about the development side.
+[2926.16] Mateo: For the user, you will need to build some flags.
+[2931.16] Mateo: Let me see if I have one here to show you.
+[2936.16] UNKNOWN: Oh, Bjorn has one to show you.
+[2937.16] Mateo: Bjorn has one.
+[2940.16] Mateo: Actually, this one is falling down.
+[2945.16] UNKNOWN: One of the kind of paper expandable globe lampshades.
+[2949.16] Frank: Yes, yes.
+[2951.16] UNKNOWN: There is an Arduino inside.
+[2953.16] Frank: There is an Arduino inside.
+[2957.16] Björn: Here are some IR receivers.
+[2961.16] UNKNOWN: Actually, capture the flag.
+[2965.16] Björn: I don&#x27;t know if you ever played some online games where you have that mode.
+[2970.16] Björn: You can shoot with your tank, with your plane, with your whatever,
+[2975.16] Björn: wherever you installed your combat system.
+[2978.16] Björn: You can shoot the flag and the flag will get the color of your team
+[2985.16] Björn: and will count score to your team score,
+[2993.16] Frank: as long as the flag belongs to your team.
+[2996.16] Björn: When another team shoots the flag,
+[2998.16] Björn: it changes the team and counts score for the other team.
+[3003.16] UNKNOWN: In the end, you see the scoreboard
+[3006.16] Björn: and how many flags have been on which team side for what time.
+[3016.16] Stefano: Basically, your points are basically the seconds
+[3022.16] Stefano: that you&#x27;re having the possession of that flag.
+[3029.16] Stefano: Based on the number of flags you have during the game,
+[3032.16] Stefano: you&#x27;re going to have 300 seconds during the game.
+[3036.16] Stefano: You have 900 points for 3 flags.
+[3039.16] Stefano: Those 900 points will be divided between the different teams.
+[3045.16] UNKNOWN: Presumably, these teams can defend their flags
+[3048.16] Curry: by shooting the other planes that are coming to try and take it.
+[3052.16] Stefano: I think you can only shoot the flags during the capture the flag.
+[3057.16] Stefano: I think Mateo implemented some kind of shooting mode
+[3061.16] Stefano: that if I shoot you, you&#x27;re not able to shoot the flag for some time.
+[3065.16] UNKNOWN: That makes sense.
+[3067.16] Mateo: Yes, actually, you can shoot against each other,
+[3071.16] Mateo: but those kind of information will not be really useful for the game.
+[3076.16] Mateo: You don&#x27;t get points for it.
+[3078.16] UNKNOWN: No.
+[3079.16] UNKNOWN: You&#x27;re just blocking the other one.
+[3083.16] UNKNOWN: Yes, and slowing down their game.
+[3088.16] UNKNOWN: I&#x27;m trying to change my view, but...
+[3092.16] UNKNOWN: Mateo is blocking again.
+[3095.16] Frank: One question we haven&#x27;t actually asked you on air.
+[3098.16] Frank: Whereabouts are you three in the world at the moment?
+[3103.16] Frank: Are you able to fly out and test them together, or is that a bit tricky?
+[3111.16] Mateo: Actually, I&#x27;m in Italy. Bjorn is in Germany.
+[3115.16] Mateo: I don&#x27;t have really many people here close to me
+[3119.16] Mateo: that helped me with the testing of the system in real life.
+[3125.16] Mateo: We did it in the summer.
+[3127.16] Mateo: Yes, a lot of really intense days flying.
+[3133.16] UNKNOWN: For example, Bjorn and Jens, when his friend came here, we met with Stefano,
+[3139.16] Mateo: and then we had a crazy weekend flying around.
+[3143.16] Mateo: Yeah, that was awesome.
+[3145.16] UNKNOWN: That was awesome.
+[3146.16] Mateo: We destroyed something like, I think, five models in two days.
+[3151.16] Mateo: Oh, good effort.
+[3153.16] UNKNOWN: Yes, and you will never believe how easy it is
+[3157.16] Mateo: to get some crashes and mid-air collision
+[3161.16] Mateo: by flying planes in the open space.
+[3165.16] UNKNOWN: That&#x27;s crazy. That&#x27;s really crazy.
+[3169.16] Frank: He plays over there, just like, oh, we just had a weekend together.
+[3172.16] Frank: But I believe Bjorn had quite a drive for that one, eh?
+[3179.16] Björn: Yes, actually, I think Mateo made up the idea,
+[3183.16] Björn: or the idea was in the air for some time,
+[3186.16] Björn: and on one point Mateo just wrote,
+[3190.16] Björn: hey, Bjorn, I have two weeks.
+[3194.16] Björn: My family is somewhere else, and do you want to come over?
+[3200.16] Björn: And I was like, hey, we don&#x27;t have lockdown at the moment, so yes, why not?
+[3206.16] Björn: Let&#x27;s make it a weekend.
+[3208.16] Björn: And I asked one of my friends,
+[3211.16] Björn: I also gave one of the boards to him, and we were testing it,
+[3215.16] Björn: and I was like, hey, let&#x27;s make a cool FPV trip over the Alps,
+[3220.16] Björn: down to Italy, and visit Mateo, the developer of the system.
+[3225.16] Björn: And actually, until this point, we didn&#x27;t knew each other too good.
+[3231.16] Björn: So I knew he was developing the system.
+[3235.16] Björn: We were communicating sometimes, and I was giving him feedback,
+[3239.16] Björn: but actually, we were not friends or something like that until that point.
+[3244.16] Mateo: And then we packed our stuff,
+[3248.16] Björn: we packed my small Opel Astra Coupe with, I don&#x27;t know,
+[3256.16] Björn: like five big planes,
+[3259.16] Björn: quadrocopters, batteries, chargers.
+[3263.16] Björn: And then we were on the decision how to go to Italy,
+[3268.16] Björn: and you have the chance to go through the Alps or over the Alps.
+[3272.16] Björn: We were like, we have to go over the Alps,
+[3275.16] Björn: we have to pull out the planes on top, and we have to fly there.
+[3281.16] Björn: And yes, we did it, and it was awesome.
+[3286.16] Björn: Yeah, so after a long, long, long Friday of driving,
+[3290.16] Björn: we arrived at Mateo&#x27;s place,
+[3292.16] Björn: and then he started updating all our boards.
+[3296.16] Björn: He soldered like a maniac.
+[3300.16] UNKNOWN: And yeah, on the Saturday and on Sunday,
+[3304.16] Björn: we were flying around Milano.
+[3309.16] Björn: And yeah, it was pretty cool.
+[3311.16] Björn: And since then, I would say we are friends.
+[3315.16] Mateo: Definitely, yes.
+[3318.16] UNKNOWN: Saving friends again.
+[3320.16] Curry: There was another part in the board I wanted to ask you about,
+[3323.16] Curry: because you said the board can affect the flight.
+[3326.16] Curry: Is this what the output is?
+[3327.16] Curry: I thought it&#x27;s set to shake.
+[3329.16] Curry: Can you do things when you get hit and sort of affect like,
+[3332.16] Curry: oh, you&#x27;ve been hit and this does this?
+[3334.16] Curry: Yes.
+[3335.16] Mateo: Now, if I can turn the view here, I will try to show you.
+[3341.16] Mateo: So yes, when you enter into the menu,
+[3344.16] Mateo: you have the output submenu.
+[3347.16] Mateo: So here you can set up three different modes.
+[3352.16] Mateo: So you have one output coming out from the board.
+[3357.16] Mateo: And it can be set to shake mode or esque mode or auxiliary.
+[3364.16] Mateo: So in the auxiliary mode is very simple,
+[3369.16] Mateo: and you basically...
+[3371.16] Mateo: Let me...
+[3372.16] Mateo: I will just go around here.
+[3375.8] Mateo: Okay.
+[3376.8] Mateo: Let&#x27;s do like this and that&#x27;s easier.
+[3379.8] Mateo: Okay.
+[3380.8] Mateo: Yes.
+[3381.8] Björn: Don&#x27;t go too deep into the details.
+[3383.8] Mateo: No, no, no.
+[3384.8] Mateo: I will just show you these three parameters,
+[3386.8] Mateo: auxiliary norm, auxiliary shot and auxiliary dead.
+[3390.8] Mateo: So you can set up three different positions for one servo output
+[3394.8] Mateo: and you can plug directly into the board
+[3397.8] Mateo: that can accept that kind of standard PWM signal.
+[3402.8] Mateo: So a servo and electronic switch or an ESC,
+[3407.8] Mateo: whatever you want, actually.
+[3409.8] Mateo: So maybe, for example, a little control board
+[3413.8] Frank: that&#x27;s connected to maybe some kind of smoke pyrotechnic device.
+[3417.8] Frank: Yes.
+[3418.8] Mateo: Yes.
+[3419.8] Mateo: For example, that&#x27;s a great thing, a great example.
+[3422.8] Mateo: Actually, the board can drive also directly some power loads.
+[3429.8] Mateo: So if you have an ignition system or like very bright LEDs
+[3434.8] Mateo: which load is lower than five amps,
+[3437.8] Mateo: you can directly power them from the board.
+[3440.8] Mateo: So that&#x27;s already integrated.
+[3443.8] Mateo: But if you want something more, something different,
+[3445.8] Mateo: to have more control, you can set up servo output
+[3449.8] Mateo: and set those three parameters in order to get three different positions
+[3455.8] Mateo: for normal state, for one position when you get hit
+[3459.8] Mateo: and one position when you finish the lives.
+[3462.8] UNKNOWN: So this is the first mode, auxiliary.
+[3466.8] Mateo: Then you have the ESC mode.
+[3469.8] Mateo: The ESC mode is intended to be used with, of course, ESCs.
+[3475.8] Mateo: So if you want, for example, to cut the throttle of your model
+[3479.8] Mateo: when you receive the hit, you can set up the parameter in the ESC of parameter.
+[3489.8] UNKNOWN: You can set up the value that you want to force the output to the ESC.
+[3496.8] UNKNOWN: So, for example, if you want to turn off the motor when you get hit, you can do that.
+[3502.8] UNKNOWN: And then it will turn back on when it finishes the sequence,
+[3508.8] Mateo: or if you finish the lives, it will stay off, for example.
+[3512.8] UNKNOWN: And then you have the mode that I actually like the most, is the Shake mode.
+[3520.8] Mateo: So this mode actually is taking the input from the receiver
+[3524.8] Mateo: and then it is forwarding the same signal from the receiver
+[3531.8] Mateo: through the output from the board and to servo or to the ESC.
+[3538.8] UNKNOWN: So what happens when you get hit by other players
+[3543.8] Mateo: is that this value gets modulated by the board.
+[3550.8] Mateo: So it introduces a sort of noise on the controller.
+[3556.8] Mateo: So you can see, actually, for example, if you wire up on the aileron of the plane,
+[3562.8] Mateo: you can see the aileron moving up and down when you get hit.
+[3566.8] Mateo: But the cool thing is that you will see the control of the model
+[3571.8] Mateo: because it will modulate the signal on the same amount on both directions.
+[3580.8] Mateo: So you will get the same control of the model, but you will feel the hit on the model
+[3587.8] Mateo: because, for example, on the planes that we were flying this summer
+[3591.8] Mateo: or Bjorn is testing out, you can actually see from the video that the video is shaking.
+[3597.8] UNKNOWN: And then when it stops the sequence, it stops shaking and you can fly again normally
+[3603.8] UNKNOWN: without losing the control too much.
+[3607.8] UNKNOWN: And always here in this menu, you can select how long you want this sequence to be done.
+[3615.8] Frank: Yeah, how long it keeps shaking. You model around for.
+[3619.8] Frank: Yes, and you can set up, but that&#x27;s up to you.
+[3622.8] Mateo: So in my case, in our case, it was always set about, I don&#x27;t know, three seconds, five seconds.
+[3630.8] Mateo: I don&#x27;t know, you can set up the amount of time.
+[3634.8] Frank: So we&#x27;re looking at saying kind of May-ish, that these are hopefully going to be in stores
+[3641.8] Frank: and people can buy them.
+[3643.8] Frank: And when they get the unit, the first, there&#x27;ll be these kinds of settings
+[3649.8] Frank: and they can go around and start shooting each other with their models.
+[3653.8] Frank: When you will get the board, you can jump into the use of the board and the fun part of the board
+[3661.8] Mateo: by simply wiring up the battery, the sensor and the gun,
+[3666.8] Mateo: and of course the signal from the receiver to get the shots.
+[3672.8] UNKNOWN: And then probably the next step after doing that would be to get one of these 433 packet radios,
+[3681.8] Frank: wire that in and all the kind of clever games get going.
+[3687.8] Frank: You can jump into the more deep configuration of the...
+[3693.8] UNKNOWN: Could you set it up to electrocute each other?
+[3698.8] UNKNOWN: Actually, that was something that we were planning to do.
+[3703.8] Frank: Watch this space.
+[3705.8] Frank: Yes, you don&#x27;t really have any kind of limitations when we are using these kind of modules.
+[3711.8] Mateo: And I can promise you, but in the future, it could be that you can just take one additional module,
+[3717.8] Mateo: flash one Arduino, for example, which is something that everybody can get very easily.
+[3725.8] Mateo: And then, okay, I want to be shaken or fired with a teaser.
+[3733.8] UNKNOWN: That&#x27;s up to you.
+[3735.8] Mateo: Time to check, combat. Brilliant.
+[3738.8] UNKNOWN: So you will know who was the victim of your shots.
+[3742.8] Mateo: Well, will they shout, won&#x27;t they?
+[3744.8] Frank: In terms of actually getting these into the shops, we do have to...
+[3749.8] Frank: Thanks, Stefano, I believe, for a lot of actually getting those into the shops where we can buy them, right?
+[3759.8] UNKNOWN: Well, let&#x27;s say that I haven&#x27;t spoken much during this live stream.
+[3764.8] Stefano: Sorry, guys, but I was listening to everything.
+[3766.8] Stefano: So I didn&#x27;t want to jump in the various descriptions and information that Mateo was giving.
+[3773.8] Stefano: There&#x27;s a lot of information.
+[3776.8] Frank: I&#x27;m sad that we didn&#x27;t get to cover all the stuff that you&#x27;ve done with model drones as well.
+[3781.8] Frank: I might have to invite you back sometime soon to go through some of that because that&#x27;s really fun as well.
+[3786.8] Frank: Yeah, that&#x27;s okay. Obviously, it&#x27;ll be very nice of you.
+[3791.8] Stefano: And all I can say is that we&#x27;ve been working together since 2018, I think, with Mateo.
+[3798.8] Stefano: And we did many, many fairs around Italy.
+[3802.8] Stefano: And we brought the first prototypes of the FPV combat and kids could try this experience by having some kind of homemade rifles where they could shoot around the drones we were flying.
+[3816.8] Stefano: So it was like the first test benches for the FPV combat system, where actually he could use those particular situations in order to see how the system could react to outside shootings and points, lives and everything.
+[3835.8] UNKNOWN: So we began like that. We were friends. We actually were more project friends than flying friends.
+[3844.8] Stefano: We almost never fly together, obviously. And not talking about the last year and a half, obviously.
+[3851.8] Stefano: Actually, because last time we were flying together with Bjorn and Gens, where he didn&#x27;t install the system on his quad.
+[3862.8] Mateo: He was making the videos from outside, from the third point of view.
+[3870.8] Mateo: And so I think you got jealous with not having the system on your quad. He just tried to kill as many models as possible.
+[3880.8] Mateo: Find some more traditional forms of model aircraft combat, yeah?
+[3884.8] Frank: Yeah, that&#x27;s right. Actually, the wide angle of the camera made me go very close to their models in order to take cool shots.
+[3894.8] Stefano: Sometimes the shots were a little bit too cool, so I just got into them and cut some parts of their ailerons and everything.
+[3903.8] Stefano: There are some interesting shots we can share maybe in another stream.
+[3909.8] Frank: Yeah, we&#x27;ll definitely have to have you back and cover some of the stuff we&#x27;ve done there.
+[3914.8] Frank: But I have to kind of wrap up now.
+[3917.8] Frank: You&#x27;ve definitely inspired it. I&#x27;ve got Dominic Clifton in the chat of Mr Clean Flight.
+[3921.8] Frank: He&#x27;s coming up with lots of ideas of other things that he sounds like he might be interested in doing.
+[3928.8] Frank: So we&#x27;ll see what happens there. But I&#x27;m definitely keen to get my hands on one.
+[3933.8] Frank: I&#x27;m definitely keen to maybe try and see what we can do at this Mini Airshow Invitational event that I&#x27;ve been trying to fit together this year.
+[3941.8] Frank: We&#x27;ll maybe try and do something. But yeah, I&#x27;m really looking forward to seeing this and playing it.
+[3948.8] Frank: So thank you guys for making it and making it work and getting it out there.
+[3952.8] Frank: And thank you for coming on tonight and sharing it with everyone.
+[3956.8] UNKNOWN: It was my pleasure. Honored to be here.
+[3961.8] Frank: Thanks for hosting us. Thank you.
+[3964.8] Frank: So thank you everyone as well for all our patrons and all our audience all listening along.
+[3971.8] Frank: Tonight we have been Kerry Kitten.
+[3974.8] UNKNOWN: Hello. Goodbye.
+[3976.8] UNKNOWN: Blue out.
+[3977.8] UNKNOWN: Goodbye.
+[3979.8] UNKNOWN: Tony.
+[3980.8] Frank: Bonjour.
+[3981.8] UNKNOWN: Mateo.
+[3982.8] Frank: Hi.
+[3983.8] Frank: Stefano.
+[3985.8] UNKNOWN: Bye-bye.
+[3986.8] Frank: Ambien.
+[3987.8] Frank: Ciao.
+[3989.8] Frank: I&#x27;ve been Andrew&#x27;s last question.
+[3991.8] BlueOwl: Here we go.
+[3995.8] UNKNOWN: Thank you.
+[3996.8] UNKNOWN: And we&#x27;ll see you next week. Thank you very much. Goodbye.
+[4000.8] BlueOwl: Telemetry lost.
+</pre></body></html>

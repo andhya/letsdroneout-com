@@ -1,0 +1,623 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0033—Episode 33 - Chris White of embedded.fm</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 33 ===
+Title: Episode 33 - Chris White of embedded.fm
+Recorded: 2016-04-14
+Hosts: Andrew &quot;Frank&quot; Hyams, Adam Juniper, Jae &quot;Chipko&quot;, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): Anaseed, Chris White
+Total audience: 2,065
+Platforms: SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/262684979-letsdroneout-episode-33-chris-white-of-embeddedfm.mp3)
+====================================
+
+LDO chat to an embedded engineer discussing his adventures in and out of R/C, from autonomous data acquisition and telemetry to slingshots and A&amp;E...
+
+[0.21] UNKNOWN: Don&#x27;t forget, this podcast is sponsored by Radio C, number one for all your drone related
+[8.01] (Editor): needs. Pay them a visit at RadioC.co.uk and use the promo code LEO for 5% off your order
+[14.21] (Editor): and free shipping on orders over £80. Hello, and welcome to Let Drone Out. How are you
+[19.51] Jack: guys doing? And we are joined by actually, Frank, can you do the intro? Yeah, this week
+[28.63] Frank: we&#x27;ve got on Chris White, who&#x27;s an embedded engineer, so deals with all the lovely chips
+[33.71] Frank: and boards and interfaces day to day, but also works on the embedded FM podcast, which
+[41.23] Frank: is very, you know, very interesting, as far as I&#x27;m concerned. And there&#x27;s a lot of interesting
+[46.49] Frank: people that make as educators, artists and engineers talking about those chips and boards
+[51.59] Frank: and interfaces. And Chris recently was talking on the podcast about how he recently got back
+[58.55] Frank: into the RC hobby. So I thought it would be interesting to hear how it&#x27;s been for him,
+[64.95] Frank: you know, with that sort of background coming in and seeing how we&#x27;re abusing the chips
+[68.67] Frank: and boards and interfaces in what we&#x27;re doing. So carefully designed. Yeah. And who else
+[73.59] Jack: is joined? We&#x27;ve also got Jay. Hello, everyone. Yeah. And Adam. Hello. I&#x27;m Frank, and we&#x27;ve
+[81.27] Frank: got Jack. Hello. Always got Jack. Thankfully, we&#x27;ve got Jack. And also, don&#x27;t forget everyone,
+[86.39] Jack: we are joined by our resident newbie. Ask lots of questions. We have someone very intelligent
+[95.43] Jack: on with a very nice voice. So Chris, do you want to tell us a little bit about what you&#x27;ve
+[107.95] Frank: been getting up to getting back into the hobby and what you&#x27;ve been doing recently? Yeah.
+[113.87] Chris White: Well, first of all, hi from Southern Southern California.
+[118.67] UNKNOWN: I hate you already. But and I apologize for my funny accent.
+[122.67] UNKNOWN: It sounds really good. You can tell you belong on the podcast. Definitely.
+[127.63] Chris White: Yeah. So I&#x27;m actually not as much of a newbie to the hobby as as it might sound. But I&#x27;ve kind of
+[133.95] Chris White: fallen in and out of it, maybe two or three times over the last few decades. And when I first
+[140.35] Chris White: started with it, I was a young kid. And that was back when I knew probably guys probably don&#x27;t
+[145.47] Chris White: remember this. But you know, our planes, you could get planes that were on strings and they&#x27;re gas
+[151.07] Chris White: powered. Oh, yeah. Stand there spinning around until you got really sick, or until the gas ran
+[155.79] Chris White: out. That was kind of my first experience with it. And I didn&#x27;t really get into RC until my brother
+[161.31] Chris White: did years later. And that was all gas powered, but I was too young to be allowed to fly gas.
+[167.23] Chris White: Um, so I eventually got an electric plane and this was back. God had to be early 90s.
+[173.23] UNKNOWN: And electric planes were just not very good in the early 90s. Big, big battery, no power.
+[181.87] Chris White: So it was on like nickel metal hydride or NiCad or something. And then yeah, yeah, big brush
+[186.99] Chris White: motors that did nothing maybe with a gearbox as well. Yeah. And like, you know, two meter wingspan
+[192.11] Chris White: because you needed that much lift. So I crashed that pretty immediately and kind of fell out of
+[197.15] Chris White: the hobby there. I got back really seriously into it, probably about 12 years ago, when electric was
+[202.59] Chris White: starting to take off as kind of a more viable thing. And yeah, I got a couple planes and really
+[210.11] Chris White: started enjoying it and kind of fell back out of it because I got into work and really haven&#x27;t paid
+[215.95] Chris White: any attention to it until late last year. Um, I started fooling around with cheap quadcopters.
+[223.15] Chris White: And my brother eventually said he was going to get, you know, a racing quad and play around
+[228.19] Chris White: with that. And I said, well, maybe I should dip my toe back into this hobby and see what&#x27;s going
+[231.79] Chris White: on. And I was just amazed at how much everything has changed. It&#x27;s just ridiculous. It&#x27;s kind of
+[236.91] Chris White: like, uh, if you&#x27;d only seen a video game in the eighties, you know, space invaders or something
+[241.15] Chris White: and then fallen asleep for 20 or 30 years and somebody shows you Call of Duty, it&#x27;s kind of like
+[246.83] Chris White: what&#x27;s happening. How is this all possible? Oh no, they took away the game play.
+[253.55] UNKNOWN: Yeah. Uh, so yeah, so I&#x27;ve been getting back into it flying fixed wing mostly. Um, and you know,
+[260.27] Chris White: just, just getting really excited about all the stuff you can kind of do with it with, uh, you
+[265.71] Chris White: know, the telemetry and the sensors and the FPV aspect, uh, it&#x27;s all, it&#x27;s all really exciting and
+[271.23] Chris White: much more, you know, things exist that couldn&#x27;t have existed even 10 years ago. And even then
+[277.47] Chris White: they&#x27;re affordable now. So it&#x27;s, it&#x27;s really exciting on one hand. Um, a bad couple of weeks
+[285.79] Chris White: with flying. So I haven&#x27;t done much lately. What happened? Well, uh, is there a good crash
+[292.35] Frank: story involved? I think is what Adam is asking. Yeah, it&#x27;s a, it&#x27;s a, it&#x27;s a crash story and its
+[299.31] Chris White: consequences. Uh, yeah, I, uh, uh, my main plane that I&#x27;ve been experimenting with is a Bixler
+[304.99] Chris White: three from hobby King. Yep. And, uh, nice plane with a fair amount of, uh, fair amount of lift and
+[311.87] Chris White: storage space for electronics. Uh, that&#x27;s stuffed it full of all kinds of electronics and telemetry
+[316.19] Chris White: things. Cause for some reason, I just love getting data back from remote objects. It&#x27;s,
+[321.55] Chris White: I don&#x27;t do anything with it, but it&#x27;s just seems so cool to me that I just keep cramming more stuff
+[324.91] Chris White: in. Um, and this was the first time I was trying to fly at FPV and we have a local park here,
+[330.59] Chris White: which has a lot of trees. And I think I can say some of the faces of the story coming together.
+[336.75] UNKNOWN: Well, I got a little confused moving back and forth between the, the, the camera view and,
+[341.55] Chris White: you know, line of sight and I just lost it for a second and wham. It was in top of a,
+[347.07] Chris White: uh, about a 35, 35 foot tree. Um, yeah. So there was no way to get it.
+[358.43] UNKNOWN: Tried all sorts of things. And the upside is I ended up severely injuring myself attempting
+[364.43] Chris White: to get it down. Ended up going to the emergency room and well, that&#x27;s, that&#x27;s pretty severe. I
+[369.23] Frank: mean, I&#x27;ve, I&#x27;ve, I&#x27;ve ripped a hoodie before, but I&#x27;ve never sent myself, you know, to requiring
+[374.83] Frank: medical attention. Well, see, I went on the internet and somebody said the best way to do
+[378.35] Chris White: this is to get a slingshot and fire a metal metal weight over, over the plane with some fishing line
+[383.47] Chris White: and pull it down. I have zero experience with slingshots. And, uh, so I ended up firing it into
+[389.47] Chris White: my thumb, which did quite a bit of damage. Um, yeah. So that, that took me out of it for
+[398.75] UNKNOWN: a couple of weeks. And then we went back to get it back about a week ago and try to,
+[403.47] Chris White: try to all sorts of safer options. None of them worked. Uh, unfortunately my wife got in with
+[408.19] Chris White: the trees and she ended up with poison oak. So she really appreciates the hobby. So tell me,
+[417.23] Adam: you&#x27;re going back now with a train chainsaw because you know, humanity has to beat nature.
+[421.71] Chris White: The very strange, funny thing is the next day somebody showed up at my doorstep with my plane.
+[428.75] Chris White: They had been trying to get it down. They got it down and I had my address and contact and
+[432.91] Chris White: fall over it because the FAA wants you to. Yeah. And they just, and I was so flabbergasted that
+[438.03] Chris White: somebody had got it down and brought it to my house and I didn&#x27;t even know what to say to them.
+[443.15] Chris White: Did you find out? So drug registration, a good idea in the end.
+[449.31] UNKNOWN: Yeah. For that one case, although they didn&#x27;t, they didn&#x27;t use the database,
+[452.43] Chris White: which apparently isn&#x27;t working yet. Uh,
+[457.39] UNKNOWN: plane recoveries, the dangerous businesses we&#x27;ve found out. Yeah. Did you find out how they got it
+[462.75] Frank: down? Did it just fall down in the end or? No, they, they had some, they had tried a bunch of
+[468.27] Chris White: things which were similar to what we were trying. Uh, but I guess they ended up with a ladder and
+[471.95] Chris White: some very long poles, which I wasn&#x27;t, wasn&#x27;t really willing to try. Were they disappointed
+[476.11] Adam: when they found like a name addressed on it? Were they thinking? I don&#x27;t know. I did wonder.
+[482.59] Frank: Maybe they just liked the challenge. Any idea? They wanted to know what it was. It&#x27;s a kind of
+[488.67] Chris White: a big place to place for doing right. What once went wrong. Yeah. I like that sort of person.
+[497.71] Frank: Getting down all kites and things as well. Yeah.
+[502.43] Jae: This is another reason that Monty Rhodes are usually a better option because when they crash,
+[505.71] Jae: it&#x27;s easy to use to recover them. And well, and you can stop, right? That&#x27;s the thing my brother
+[511.07] Chris White: was telling me, you know, you get in trouble, you can just stop. But with fixed wing floats,
+[516.27] Chris White: kind of like driving down the freeway. It&#x27;s not like you can change your mind. If you get
+[520.11] Chris White: it depends whether you have more trust in the pilot or the equipment. Because, you know, if,
+[524.83] Frank: if a multirator, the equipment starts failing, then it&#x27;s, it&#x27;s very failed. No glide slope.
+[532.11] UNKNOWN: Yeah, exactly. That, that old thing. Whereas if a fixed wing, you know, if it starts going a bit
+[538.59] Frank: wrong, it starts dying, then it&#x27;ll at least glide down gradually, give you a bit of warning. But if
+[545.39] Frank: you&#x27;ve got, you know, if it&#x27;s the pilot error, then it&#x27;s the other way around. Also, you know,
+[552.59] Adam: you plow a multirator into a tree. And, you know, lose a prop, it will pull it will fall down with
+[558.51] Adam: some speed. And, you know, the second impact might be the one that gets rid of it. Yeah.
+[564.11] Frank: Last Saturday, I saw a Mitsuko go completely ballistic. It, I think it probably,
+[577.63] Frank: probably an issue with the item. It did too many flips in a second. And it just kept flipping in
+[584.51] Frank: infinite roll rate, pretty much by the looks of it. And it went about 100 miles an hour into the
+[590.51] Frank: ground in the next field across next to a family having a picnic, which is a bit awkward. But yeah,
+[596.83] Frank: it still just came away with a broken prop, which is, you know, that&#x27;s nice when, when you can trust
+[603.47] Frank: that you&#x27;re only going to walk over to, well, unless you have a fire, but you know, if everything&#x27;s
+[609.55] Frank: not on fire, then you can just go over there and just change a prop and it&#x27;ll be flying again. I
+[615.23] Adam: was thinking more of the larger commercial ones, though, which have shells and what have you.
+[620.43] Adam: They get smashed up. They do. So, Chris, I actually, ironically, got into the tail end of the gas
+[628.19] Jae: engine, you know, combustion engine, sort of when I got into the planes, because I was
+[632.43] Jae: flying some electric planes and I liked it, but I, you know, I had to recharge my expensive
+[636.43] Jae: batteries, which I had fuel back in about eight years ago or so. And I&#x27;d always have to charge
+[643.71] Jae: the batteries up before I went flying. So I thought, well, at least with the gas or, you know,
+[647.95] Jae: fuel, I can just reload and put it back up in the air. I still have that plane not finished. And
+[652.67] Jae: they&#x27;re now considering do I make it electric just to continue on and actually use it in about
+[658.83] Jae: four years. Maybe I&#x27;ve built crazy, isn&#x27;t it? And essentially now that it&#x27;s catching up and
+[666.43] Jae: with the batteries and the efficiency of all the setups with the electric is the way forward.
+[671.95] UNKNOWN: But yeah, also taking that further, I think we can do a lot more with what we put the payload
+[676.59] Jae: and whatever we put on to do whatever we want, sort of data acquisition stuff that we&#x27;re saying,
+[681.23] Jae: getting the data back of whatever you do with it. So it&#x27;s interesting how it&#x27;s got to now,
+[686.35] UNKNOWN: where do you see the system is going? I was wondering also, do you have any goals for your
+[690.91] Frank: own projects? Is there anything particular that you&#x27;re working on? I mean, there&#x27;s obviously FPV
+[697.87] Frank: just to have a look around and experience flying, but do you have any projects that you&#x27;ve got in
+[702.83] Frank: mind? Well, it&#x27;s kind of funny. I do, but most of them are probably going to be illegal.
+[709.87] UNKNOWN: It&#x27;s artistic. Just call it artistic.
+[716.51] UNKNOWN: My original excitement about the hobby was from some very unrealistic expectations I had as a kid
+[721.79] Chris White: where I wanted to make a plane that could fly itself and then just come back to me and give me
+[728.03] Chris White: information about where it went without me interacting with it. So the whole autonomy
+[731.63] Chris White: part of it was really exciting to me as a kid, but it was totally impractical and now it&#x27;s not.
+[738.51] Chris White: That part of it is really cool to me and working from the ground up and kind of,
+[744.11] Chris White: and I know it&#x27;s kind of ridiculous to do this because you can just buy the parts, but
+[749.23] Chris White: working from the ground up to try to replicate a flight controller,
+[753.87] UNKNOWN: some of the telemetry sensors, adding my own sensors for various things that they aren&#x27;t selling
+[758.59] Chris White: necessarily. That&#x27;s kind of interesting to me and I would love to make an actually autonomous
+[766.03] Chris White: vehicle, but it looks like that&#x27;s not going to be something that you&#x27;re allowed to do.
+[771.87] UNKNOWN: So I think, realistically, what I&#x27;m going to end up doing is kind of experimenting with micro
+[778.51] Chris White: controllers and position gyros and accelerometer sensors and just try to learn about how flight
+[788.75] Chris White: controllers work, whether for quadcopters or for fixed wing, because I think it&#x27;s an interesting
+[794.11] Chris White: area just intellectually, not necessarily to solve any big problem just for my own fun and education.
+[803.47] Chris White: But the whole idea of a computer vision that&#x27;s now accessible and to tinker with some change,
+[810.27] UNKNOWN: not necessarily autonomously, but to recognize and do things on a data acquisition front is quite
+[816.67] Jae: amazing. Yeah, and I think that&#x27;s more interesting on the quadcopter kind of platform because you
+[821.39] Chris White: could actually, you know, you could set up courses indoors or set up obstacles or particular
+[828.59] UNKNOWN: visually interesting waypoints and have it react to them. So there&#x27;s some things there
+[833.31] Chris White: that I&#x27;m kind of interested in looking at. See, I think we&#x27;re quite lucky in the UK with
+[838.51] Jae: that regulation and how it&#x27;s imposed because it doesn&#x27;t rule it out. And there&#x27;s other countries
+[842.91] Jae: in the world like Dubai where it&#x27;s much more open to what you can do with these things. And I think
+[847.07] Jae: America is risks stunting investment and, you know, R&amp;D into different fields and if they impose
+[854.51] Jae: restriction on them en masse, apart from the selected fee, I suppose. It&#x27;s a shame that
+[861.63] Jae: the regulations stunts not only the enjoyment, but perhaps the development of these sort of things.
+[868.91] Adam: Regulation here is not super friendly to autonomous modes, that kind of thing.
+[872.83] UNKNOWN: No, but it&#x27;s still... It&#x27;s generally accepted that people will go and learn how to do that in
+[876.59] Adam: countries without much of a population. And then the rules might be reviewed later.
+[881.39] UNKNOWN: But as long as it&#x27;s in a visual line of sight, there&#x27;s no problem where you can&#x27;t...
+[885.63] Adam: Yeah, but the interest... I thought truly the interesting things about autonomous
+[889.55] Adam: are surely when it starts going well beyond visual line of sight.
+[892.67] UNKNOWN: That is true. There is that. Like for the, you know, package delivering and all that sort of thing,
+[898.35] Frank: or just data acquisition over a long term, you know, like a solar powered long distance,
+[906.19] Frank: just weather drone. Yeah. That would have to be completely out of line of sight.
+[912.75] Jae: Even with... Well, I mean, you get much further nowadays than you do on analog with some of the
+[916.59] Jae: Lightbridge technology. Yeah, exactly. It&#x27;s easy to see a long way out.
+[923.15] Jae: Yeah, that was one of the milestones for a while.
+[926.91] Jae: The rules are a little more, you know, they&#x27;re not set by any one company.
+[930.75] Adam: So the visual line of sight in the UK is set at 500 meters. That&#x27;s just what the government say it
+[936.27] Adam: is. And that&#x27;s, you know, how it&#x27;s staying for now. But I think, you know, people will achieve
+[942.75] Adam: things by not entirely following the rules, but by showing that you can ignore them.
+[948.11] UNKNOWN: And it won&#x27;t happen in densely populated areas. At first, it&#x27;ll be, you know,
+[952.19] Adam: bands of people going out to experiment in deserts or whales or somewhere equally worthless.
+[957.15] Adam: Well, I&#x27;m desperately trying to find the video of the guy who had, I think it was an APM fixed
+[964.59] Frank: wing and he was flying it. So it was flying at him itself. But he was sitting in the car
+[972.67] Frank: in the back of his car following it along. Oh, I didn&#x27;t see that. And so he his aim was to get his
+[980.59] Frank: plane to fly from one coast of America to the other autonomously. And I&#x27;m pretty sure he got
+[988.43] Frank: pretty far just by it automatically landing and him replacing a battery every now and again.
+[994.91] UNKNOWN: I&#x27;m just trying to find it. And it shows how silly the restrictive some of the regulation is
+[1000.83] Adam: at the moment. Well, he definitely does a place to do that. That&#x27;s what I&#x27;m saying. Yeah. Yeah.
+[1008.11] Chris White: I think there&#x27;s a place for some of it. It&#x27;s definitely it&#x27;s kind of funny because it&#x27;s
+[1012.11] Chris White: become definitely more of an issue with the existence of quadcopters. You know, prior to
+[1018.03] Chris White: that, it was pretty much it&#x27;s just pretty much do whatever you want in common sense to get in.
+[1026.03] UNKNOWN: Yeah, I think that&#x27;s the problem. And you do need regulation when you&#x27;ve got lots of videos.
+[1030.03] Adam: It&#x27;s just seems a bit unfair on people who aren&#x27;t idiots. The other way to experiment is to get a
+[1034.43] Adam: military contact with the drones, entirely autonomous ones that go off and find Russian
+[1040.35] Adam: submarines and Chinese submarines. That&#x27;s, have anyone seen any of the news about that?
+[1045.39] UNKNOWN: I have seen that appearing in various news feeds, but I haven&#x27;t actually read up about it.
+[1052.35] Frank: Have you read into it? Yeah, well, the basic design is the moment the technology for finding
+[1060.19] Adam: submarines is sonar boys, which, you know, just sit there until they die. Yeah. And that&#x27;s basically
+[1067.39] Adam: what&#x27;s been happening since World War Two. And the idea with the drones was you just have a network
+[1072.03] Adam: of these very small autonomous drones, which are basically quadcopters that can fly to a
+[1077.47] Adam: location they&#x27;re needed. They&#x27;ve got about one hour out of every 24 they can fly. And then they&#x27;ll
+[1084.03] Adam: just sit on the surface of the water, monitor it and report back until the, you know, the idea is
+[1090.59] Adam: that they&#x27;re so cheap that once the algae or whatever destroys them, another one will just fly
+[1095.79] Adam: into its place. And that they reckon they can charge it to give it an hour&#x27;s worth just from
+[1101.47] Adam: a solar array on the top of a fairly small aircraft. That would be impressive. I&#x27;ve also seen
+[1107.71] Frank: autonomous surface based drones, like as in little boats with sails that it sets itself.
+[1115.15] Frank: I thought that would be until I saw this, you know, until I read about it. Yeah. Because to me,
+[1121.55] Adam: I don&#x27;t see what advantage to be able to take off as other than being very cool. Obviously,
+[1127.95] Chris White: it&#x27;s actually the other project I&#x27;m thinking of working on is a little floating floating thing,
+[1133.31] Chris White: maybe no directional power whatsoever, just solar panels and an iridium radio so it can talk
+[1138.67] Chris White: wherever and and just follow it along on GPS and take temperature readings or something. Yeah. But
+[1144.67] Chris White: that&#x27;s another thing where things have gotten so cheap that you can actually piece that together
+[1148.43] Chris White: for a few hundred dollars. What about those do we know satellites, you know, you get one of those
+[1153.47] Jack: where the balloons send it up, you know, take readings, connect to what is it, 3G via your phone
+[1161.63] Jack: and that. I&#x27;ve seen a couple of people working on that. Yeah. A lot of the problem now is not
+[1167.07] Chris White: how do we do something? It&#x27;s which one of these 15 million things you could do
+[1171.23] UNKNOWN: to choose. And I tend to get into trouble where I&#x27;m like, oh, I could do five different things. So I
+[1176.11] Chris White: get 10% of the way in on five different things. Oh, yeah. Yeah. I think we&#x27;re all like that.
+[1180.83] Adam: Otherwise, we&#x27;d be millionaires. Millionaires are the people who pick the one thing,
+[1185.23] Adam: you know, the commercially useful thing and work on it until I get something. I mean, I can see at
+[1190.75] Frank: least four barely started projects from where I&#x27;m sitting right now. So yeah, I think that&#x27;s the
+[1197.95] Frank: way things go a lot. I&#x27;m doing really well on my main project, sleeping. Sleeping.
+[1205.71] UNKNOWN: So Chris, you said, well, it was referred to earlier, you didn&#x27;t necessarily say, but we&#x27;ve
+[1209.39] Jae: been abusing our micro processes. And obviously, you come from an embedded background. So is it
+[1215.47] Jae: frustrating to see how we&#x27;ve bundled along with these things and tried to integrate 32 bit,
+[1221.07] Jae: etc., with all that variety of things? Or where have we been going wrong? Well, I don&#x27;t think
+[1226.91] Chris White: there&#x27;s necessarily places going wrong. It looks very much like many other, I guess, subclasses of
+[1236.27] Chris White: embedded electronics in the hobby spaces, where, you know, there&#x27;s a few common types of micro
+[1241.79] Chris White: controllers that are being used, and they&#x27;re plugged together in the same ways. And the software
+[1246.75] Chris White: isn&#x27;t necessarily great, but it does the job. So I don&#x27;t think I wouldn&#x27;t consider it abuse
+[1252.75] Chris White: necessarily, unless your goals are different. I mean, if you&#x27;re, you know, if you&#x27;re taking
+[1257.55] Chris White: this stuff and you&#x27;re putting into a safety critical system, I&#x27;m going to give you a funny
+[1262.19] Chris White: look. But, you know, for hobby stuff, this is all perfect, as far as I&#x27;m concerned, because it&#x27;s
+[1267.63] Chris White: open enough that you can kind of figure out what&#x27;s going on and learn, you know, like the FR sky
+[1274.91] Chris White: serial protocol for all the telemetry has been been reverse engineered, or is open enough that
+[1279.95] Chris White: you can, you know, add stuff to it. So I&#x27;m actually I know, I&#x27;m pretty happy with the state of things.
+[1285.31] Chris White: And I think, I hope it continues to, I guess, what I&#x27;d like to see more is more kind of
+[1292.59] Chris White: almost standardization of interconnects and things. And even more openness, because I think,
+[1300.43] Chris White: I think some of the radio manufacturers still have a tendency to keep things close
+[1304.75] Chris White: to protect their old RC style sort of mentality. Yeah, I mean, that&#x27;s, that&#x27;s been a driving force
+[1311.15] Jae: for some of the technology, I think, and some of the applications in that it has been so fragmented
+[1316.51] Jae: across the board from the old KK boards and all the other different interfaces for playing all
+[1320.83] Jae: bossy radar. And actually, choice now to my current to another, it&#x27;s not so easy. And the equipment
+[1328.03] Jae: usually gets redundant, like you say, because there&#x27;s no standardization so easily to transfer
+[1334.75] Jae: these things that evolve, a pile of old receivers and things. A lot of the people that I know, we
+[1342.91] Frank: are only exposed to GitHub by when we need to download firmware. And we struggle through
+[1351.31] Frank: and we work out how to do that bit. And that&#x27;s about it. And I imagine, given your background,
+[1359.47] Frank: you probably are able to go a bit deeper than that. I wonder if you have and actually have a
+[1364.75] Frank: look at some of the code and see what&#x27;s going on. I have, yeah. And is it any good?
+[1372.91] UNKNOWN: Some of it is, some of it is, is what you would expect from, you know, somebody doing it as their
+[1380.59] Chris White: nighttime amusement. Yeah, I&#x27;ve looked at, I&#x27;ve looked at a couple of flight controllers because
+[1388.59] Chris White: software, because that interests me from just a mathematical point of view.
+[1394.27] UNKNOWN: And, you know, it&#x27;s okay. It&#x27;s not what I would, a lot of it&#x27;s not what I would consider professional
+[1400.43] Chris White: software. But then again, it doesn&#x27;t have to be. No. So, you know, I tend to give a lot of leeway
+[1409.71] Chris White: to things that aren&#x27;t meant for anything but entertainment. Yeah, I mean, I&#x27;m pretty impressed
+[1416.51] Frank: by all the things that people are doing with their quads. Yeah, it works, right? I mean, this stuff
+[1422.59] Frank: works. Going super fast, being able to do 12 flips a second or something and then come out of it and
+[1429.47] Frank: carry on flying and whatever. And all the code for that has been written by a disparate group
+[1439.47] Frank: of people around the world working in their free time on one project or even many projects
+[1445.15] Frank: that have trickled down from one to the other from multi-weed to clean flight to beat of light
+[1449.39] Frank: to whatever. And it still works most of the time, some of the time at least. Yeah, it&#x27;s quite
+[1456.67] Chris White: impressive. I think it&#x27;s awesome. I think it&#x27;s great. And, you know, I don&#x27;t mean to disparage
+[1460.43] Chris White: anything. You know, a lot of it probably is written by professional people in their spare time and
+[1466.03] Chris White: it&#x27;s professional quality. I haven&#x27;t looked at everything, obviously. But yeah, I mean, the mere
+[1471.87] Chris White: fact that it works so well is a testament to people are doing really good stuff. Yeah. Do you
+[1477.63] Frank: think you will be? Because I personally, I like to be able to contribute back, but I&#x27;ve tried to
+[1484.83] Frank: even just have a look and I haven&#x27;t been able to work that out yet. And it&#x27;s just been so much
+[1488.99] Frank: effort to try and even look into the codes that I haven&#x27;t even got as far as that. So I just got
+[1496.19] Frank: put off of it. Do you think you&#x27;re going to be looking into it and contributing back? Is that
+[1501.39] Frank: something you think you&#x27;ll be doing? Well, you know, it&#x27;s the easiest way to get started
+[1506.27] Chris White: is if you try to just pick off an entire project on your own, it&#x27;s it&#x27;s a lot easier to give it up.
+[1513.39] Chris White: So I think, yeah, I think I might I might do that. That&#x27;s that&#x27;s kind of the best way to get
+[1518.19] UNKNOWN: to get into a community is to start contributing small little features and patches and things.
+[1522.99] Chris White: Yeah. So yeah, that does sound like a pretty good plan. But I don&#x27;t I, you know, I don&#x27;t know where
+[1528.11] Chris White: to start with that. Yeah, that&#x27;s the thing. It&#x27;s like I&#x27;ve I&#x27;ve done stuff with Arduino and Fortran
+[1534.67] Frank: and MATLAB and stuff that I could probably work my way around the code. It&#x27;s the being able to
+[1541.87] Frank: deal with it on the like the community side of thing of how does that even work? I haven&#x27;t even
+[1547.79] Frank: worked out. I&#x27;ve tried briefly, but I haven&#x27;t put a lot of effort into it, I have to admit. So maybe
+[1552.99] Frank: I&#x27;m making it a lot more difficult than it is. It sounds more difficult than it usually is.
+[1558.11] Chris White: GitHub kind of enforces the mechanism for doing that, where you, you know, you put together,
+[1564.11] Chris White: you have to learn how to use Git really well, which is kind of a horrible, horrible thing.
+[1567.87] Chris White: But once you do, you kind of put your patch back in, you put it in a request, and then somebody
+[1572.75] Chris White: looks at it and they can decide whether to incorporate it in the project or not. Or they
+[1576.67] Chris White: can just come back to you and say, Yeah, could you fix these five things? And then we&#x27;ll put them.
+[1581.31] UNKNOWN: So so if you&#x27;d never use GitHub still, what&#x27;s it for what to do?
+[1585.87] UNKNOWN: I have to explain source control. So there&#x27;s a concept in software development called source
+[1590.67] Chris White: control. It&#x27;s a place where as you work on a project, you is exactly it&#x27;s a place to track
+[1596.11] Chris White: and store different versions of software as time goes on. So you can get back to earlier versions,
+[1600.19] Chris White: you can see what&#x27;s changed easily. And GitHub is just a place to do that on the internet as part
+[1604.67] Chris White: of a big community. So you can put up your own. Yeah, no, I understand versioning. Okay, actually,
+[1610.43] Chris White: thank you, kids. Okay, sorry. I know I was trying to help the other listeners.
+[1618.75] Adam: It&#x27;s it&#x27;s like the first choice, isn&#x27;t it for everyone? Yeah, it is become the first choice.
+[1623.39] Chris White: There used to be used to be SourceForge and a couple other places, but those have kind of become
+[1629.15] UNKNOWN: places in the city you don&#x27;t want to go.
+[1633.47] UNKNOWN: The dark areas now. Jack, I was reading that most of the best code on GitHub is
+[1639.31] Adam: written by women these days. Jack is always interested in anything that is to do with women.
+[1644.43] UNKNOWN: Yeah, yeah. Well, I like women. No, I know. I&#x27;m just, you know, keeping with the running joke,
+[1649.23] Adam: Jack. No, that&#x27;s fine. And of course, the convenient truth. Yeah. I suppose with systems
+[1654.59] Jae: that are so open source, there&#x27;s inherently a risk of security and hijacking, you know, like to be
+[1660.75] Jae: able to, if it&#x27;s that open source, then we reverse engineer all these things, there&#x27;s going to be
+[1665.07] Jae: more problems that present themselves going forward. If there is no standardization, or at
+[1670.67] Jae: least some level of collaboration amongst variants of it all, I think. Do you mean like in the way
+[1681.15] Frank: that clean flight and beta flight have a million different targets of all the different flight
+[1687.15] Frank: controller boards that exist and all the different ways that they&#x27;re slightly different? Like, for
+[1691.71] Frank: example, even the Lumineer Lux, it was meant to be this close enough to the TBS Calibri that they
+[1699.31] Frank: could share a target. And then it was like, oh, but there&#x27;s this slight hardware difference
+[1705.15] Frank: somewhere in the line that actually that doesn&#x27;t work anymore. So they&#x27;re two separate things now.
+[1709.39] Frank: So now Boris, presumably Boris and Dominic Clifton now have to work on keeping those as well as all
+[1717.87] Frank: the other ones that they&#x27;ve got to keep going, which is why things like the CT 3D kind of get
+[1722.91] Frank: dropped occasionally. I was just going to say on like radio links and all sorts of stuff of it.
+[1728.27] Jae: Well, I think there&#x27;s things like S bus and stuff like that, they&#x27;re pretty common across all things
+[1734.91] Frank: aren&#x27;t there? But what is it that I&#x27;m not thinking of? I was going to say that the security thing,
+[1740.27] Adam: that the total mix of stuff, surely that makes it more secure, because it&#x27;s much harder, you know,
+[1745.07] Adam: like in the same way, there are fewer viruses for Macs, because they&#x27;re obscure. And there are
+[1749.79] Adam: lots of PC viruses, if you have lots of different things, then it&#x27;s going to be much harder to hack
+[1754.67] Adam: into somebody&#x27;s drone that passes by. In the old, you know, you used to have to just swap crystals
+[1759.31] Jae: and maybe someone could shoot a plane down or anything like that, you know, exactly. It was
+[1763.15] Jae: easier to take control a long time ago. But the same problems exist where you have control over
+[1768.03] Jae: these aircraft. And maybe it&#x27;s sabotaging the race, maybe it&#x27;s just malicious, maybe it&#x27;s just
+[1772.43] Jae: somebody having fun. There&#x27;s no, you know, they&#x27;re gonna get it&#x27;s easy to disrupt and hard to take
+[1779.15] Adam: control, I think is my point. Well, indeed, in the still, yeah, to the larger point of open source
+[1786.11] Chris White: and security, it goes both ways. I think open source advocates tend to tend to argue that the
+[1794.19] Chris White: more high you have on something in the more open it is, the more secure it actually is, because
+[1797.63] Chris White: you&#x27;re not hiding things. And people find problems and fix them. And I tend to agree with that,
+[1805.15] Chris White: especially with projects with larger amounts of contributors. On the radio side, that gets a
+[1810.67] Chris White: little trickier, of course, because we&#x27;re talking about physics and spread spectrum and, you know,
+[1815.87] Chris White: protocols and things that if you want it to actually work, it has to be able to you can&#x27;t,
+[1821.63] Chris White: you can&#x27;t hide the plane from the transmitter. So I&#x27;ve done that.
+[1826.27] UNKNOWN: You&#x27;ve hidden the plane from the transmitter.
+[1828.11] Adam: Oh, yeah, if you go behind a lot of trees, it doesn&#x27;t work.
+[1831.07] Adam: Objects. Yeah, it&#x27;s very good. You can hide it.
+[1834.83] Adam: Physics is always the problem, as you said.
+[1836.67] UNKNOWN: Yeah. But yeah, I don&#x27;t think that&#x27;s the ideal, the ideal use case, you know,
+[1842.03] Frank: the security wise, you can&#x27;t hide everything behind trees. It doesn&#x27;t work.
+[1846.11] UNKNOWN: No, I don&#x27;t know. You know, a lot of government installations are hidden behind trees.
+[1850.11] Adam: Is that why? Because it just stops us taking control of their drones.
+[1855.07] UNKNOWN: That&#x27;s right. I think that&#x27;s when I started to learn to fly planes. They always said don&#x27;t
+[1859.63] Jae: fly behind the trees. I never was allowed to fly behind the trees. And I suppose therein lies a
+[1864.35] Jae: problem. People that get into this hobby now. Yeah, well, yeah, that too. But people getting
+[1869.71] Jae: into the hobby don&#x27;t have any sort of unless they have friends already in the hobby, any sort of
+[1874.51] Jae: training before they can go out and fly. And it&#x27;s when someone this week flew a Phantom 4 over the
+[1881.63] Jae: streets of London. Every single rule in the book. And the community at least did jump on and say,
+[1890.35] Jae: that&#x27;s rubbish. Take that video down. You&#x27;ll ruin it for everyone. You&#x27;re not allowed to fly there.
+[1894.35] Jae: The community at least posted all these things. And it did get taken down. But I suppose by,
+[1900.43] Adam: you know, just one of those people who&#x27;s seen drones and thinks they&#x27;re cool,
+[1904.59] UNKNOWN: who just said, Oh, did you see that video of London? It was awesome.
+[1908.67] UNKNOWN: And, you know, I was like, No, I didn&#x27;t. I hadn&#x27;t heard about it. Is it? Well, straight up
+[1915.15] Adam: Regent Street. No, no, that&#x27;s absolutely unacceptable. But the video was good.
+[1921.39] Frank: It was an interesting video. That&#x27;s what he was saying. He was saying, but it was really awesome.
+[1925.07] Adam: And surely these things are safe now. Was it what he thought? So it&#x27;s really interesting that he
+[1930.19] Adam: wasn&#x27;t having a panic about it. But actually, us as a community were terrified of what was going to
+[1935.23] Adam: happen if it stayed up there. Have there been any prosecutions in America for flying?
+[1942.51] Chris White: There was a guy who landed. I&#x27;m not sure if it was a phantom, but some similar quadcopter on a
+[1949.31] Chris White: ledge at a building in Manhattan. And he asked police to help him get it down and they arrested him.
+[1957.63] UNKNOWN: Yeah, that wasn&#x27;t a great move on his part. No, he wasn&#x27;t even that high enough.
+[1961.71] Frank: I heard that from like behind the behind the headlines about that one was that he it was like
+[1968.83] Frank: a nano QX type size thing. And he had asked the gun inside, asked them, Can I fly it? And they had
+[1979.63] Frank: said, Yep, sure, that&#x27;s no problem. And then he said he&#x27;d then gone and flown it. And so it got
+[1988.43] Frank: stuck somewhere. So he&#x27;d gone inside and asked, Can we kind of kind of get it back? It&#x27;s got stuck up
+[1993.63] Frank: there. And they changed their mind at that point. There was another guy, too, who crashed a drone
+[2001.71] Chris White: in one of the hot springs in Yellowstone Park. Yeah, that&#x27;s a bad, bad form. Beyond that,
+[2010.75] Chris White: there&#x27;s been lots of reports of near misses with planes. Some of them I&#x27;m quite skeptical of,
+[2015.63] Chris White: but some of them are probably quite real. And of course, that&#x27;s hard to track those people down.
+[2020.19] Adam: Yeah, very, very expensive civil action. Yeah, you know, I don&#x27;t know about police prosecution,
+[2025.47] Adam: but to be honest, if you get fined $1.4 million as the people of Skypex, or is it? No, not Skypex.
+[2034.19] Adam: Anyway, we had some people in the first edition of my book on drones,
+[2038.99] Adam: that I thought would do these amazing shots over Manhattan. And I assumed, because they told me,
+[2045.71] Adam: that it was all perfectly legit, that they got sued and lost by the FAA for $1.4 million. So we
+[2052.27] Adam: had to quickly redo it for the next printing. So we didn&#x27;t feature them, which was quite,
+[2058.03] Adam: quite annoying. That&#x27;s a bit awkward. Yeah, it was a scene of a quad, says White Spy.
+[2063.07] Jack: Was it what, sorry? The quad that crashed into the Empire State Building was a SEMA.
+[2070.03] Jack: S-I-M. It&#x27;s not effective. Yeah.
+[2072.03] Adam: That is. Oh, okay. No, it weren&#x27;t a phantom. It was just, you know, like the SEMA quad.
+[2078.51] Jack: Ivy Crazy&#x27;s got one of them. He plays with his dog with it. And the dog catches out the air,
+[2083.47] Jack: pretty harmless. I&#x27;m sure plastic spoons more deadly.
+[2087.15] Adam: Well, what if the props get near his eyes, that&#x27;s what I&#x27;d say.
+[2091.07] UNKNOWN: It&#x27;s been so slowly, honestly. It&#x27;s just held in the air by his mouth.
+[2095.79] Jack: Yeah. I&#x27;m sure I could hurt myself with it. You can hurt yourself with a tree.
+[2100.99] Jack: Exactly. And a sleep shop.
+[2103.39] Jack: That&#x27;s a valid thing to hurt yourself with. So what do you think the next sort of
+[2108.99] Adam: step will be in the code for aircraft in general, Chris?
+[2114.99] UNKNOWN: More accurate and higher capability gyros being used, I think. And definitely starting to
+[2123.95] Chris White: incorporate imagery. You know, DJI&#x27;s got their object avoidance thing, which, you know, is,
+[2131.95] Chris White: I don&#x27;t know how good it is, but, you know, it&#x27;s interesting. They&#x27;re incorporating cameras in
+[2135.63] Chris White: different ways to avoid obstacles and to improve tracking over ground. So that&#x27;s something that I
+[2143.55] Chris White: think the hobby should start playing around with because it&#x27;s totally doable.
+[2149.79] Chris White: It always feels so sort of impressive and commercial. It feels like it would need an
+[2154.67] Adam: army of people to do the code, to do something like that.
+[2158.75] Chris White: The army&#x27;s already kind of done it. And there&#x27;s a lot of open projects that support it. OpenCV
+[2164.27] Chris White: is a big code project that gives you the building blocks to do a lot of machine vision kinds of
+[2169.87] Chris White: things. And yeah, you know, it&#x27;s not going to be over.
+[2173.15] Chris White: Jones, is it? I mean, there&#x27;s been the Raspberry Pi, there&#x27;s been the other
+[2177.15] Jae: better boards. Has anyone got a Raspberry Pi
+[2180.75] UNKNOWN: project yet? Or is it all on Arduino? No, you can get a plug-in board for the Raspberry Pi.
+[2187.47] Jae: Navio2, I think they&#x27;re up to now. You plug it onto your Raspberry Pi and it makes it a fully
+[2191.95] Jae: autonomous flight capable. Someone did a demonstration of it in front of a
+[2198.03] Jack: load of class and the ESC caught on fire very badly. That&#x27;s the last I heard.
+[2204.35] Adam: Jack, your card is in the rule of not being on fire.
+[2207.39] UNKNOWN: Yeah, don&#x27;t break. It just opens it up for another audience and that&#x27;s a wonderful thing, I think.
+[2213.79] UNKNOWN: So Jack, is that a story of someone you know having an ESC cut?
+[2218.11] UNKNOWN: No, no, I didn&#x27;t. You know, it&#x27;s a class and it looks like America.
+[2222.11] Jack: I only thought, you know, and the ESC, just lovely on fire. If I find it, I will add it to the show
+[2230.03] Jack: notes, but it&#x27;s just what I think it was titled, like what not to do during a quad demonstration
+[2236.59] Jack: or something. How many ESC fires have you had, Jack? No. Well, I had one on the first day of
+[2243.63] Jack: shooting on Let&#x27;s Drone Out YouTube, so Ed&#x27;s got that. I replaced them, you know, the quad that
+[2253.55] Jack: Bruce Simpson, RC Model Reviews, was working, you know, flying and testing. I replaced,
+[2260.59] Jack: in the end, I had to replace all three arms of that quad and one of them did catch on fire
+[2265.39] Jack: during an ESC calibration. During a calibration? Yeah, pretty good. Wow, that&#x27;s impressive. Yeah,
+[2272.35] Jack: I know. I don&#x27;t know how I managed that. And then the the tricopter has had an ESC fire.
+[2281.07] Jack: The ZMR back in the day has had about four ESC fires before I gave up on the KISS 18 amps.
+[2288.83] Jack: Frank knows all about that. I knew he&#x27;d burnt down his venue. That was great.
+[2294.11] Adam: Is anyone else trying to work out if Jack is sad about fires or there&#x27;s some sort of arsonist
+[2298.99] Adam: going in there? Well, I could honestly say I&#x27;ve never had an ESC fire touch, you know. Exactly.
+[2305.23] Jae: Jack has a lot of fire stories. I fried them, but not fire. Yeah, I mean, I&#x27;d much prefer an ESC
+[2312.19] Jack: fire to a LiPo fire. Yeah, yeah, to motor fire. I haven&#x27;t had one of those. How do you have a
+[2318.03] Jack: motor fire? I was flat. What are you doing? My old planes that I upgraded to LiPo was a Zagi,
+[2326.03] Chris White: and I was running the standard speed 400 motor on it and flying it was a good flight. And then
+[2333.15] Chris White: suddenly I had to dead stick it in, had no power, and I went and got it. The motor was on fire.
+[2338.43] Chris White: Wow. Oh my God. With the old gas aircraft, were there any explosions?
+[2346.35] UNKNOWN: I don&#x27;t think the fuel was really an explosive kind of fuel.
+[2351.31] Chris White: It was super high compression, more like diesel. The only times you ever see the explosions
+[2357.39] Jae: usually on the jets, and that&#x27;s just because of the speed of the impact, isn&#x27;t it? Is it the
+[2362.59] Frank: nitromethane fuel like you have for the cars that worked on the planes? Yeah, that was the same.
+[2368.27] UNKNOWN: Yeah, because I&#x27;ve made a pulse jet out of a glass jar in a bucket of water with one of them
+[2374.27] Frank: with this nitromethane fuel. Glass, the main tool. Yeah.
+[2380.91] UNKNOWN: So it was only driving it downwards, but it was still, it was a pulse jet, so it&#x27;s fine.
+[2385.47] Frank: It made a lot of noise. What could possibly go wrong? Yeah, it was that kid who managed to
+[2392.11] Adam: achieve nuclear fission in his school the other year. Did you hear a read about that?
+[2397.15] Frank: Yeah, he got close enough that the FBI went in and were like, no, we&#x27;re taking all this away.
+[2402.67] Frank: It was in the UK. It was in some posh privacy. A different one. They helped him out. Someone else.
+[2408.59] Adam: Yeah, no, not some little Sheldon character who was trying to destroy his neighbors with an
+[2413.63] Adam: x-ray or something. No, he was an excellent student and was being encouraged to
+[2422.19] UNKNOWN: have a reaction, which seems a little unnerving. Yeah, and then you&#x27;ve got a boy who brings in
+[2427.71] Jack: a clock and then all of a sudden he&#x27;s a terrorist. Oh, no, don&#x27;t look. This boy was white and quite
+[2433.95] Adam: posh, so it&#x27;s fine. Yeah, great. What do you think of the SPI bus? It&#x27;s a wonderful bus.
+[2444.35] Chris White: I use it all the time. I don&#x27;t know how to answer that question. Better or worse than a number 93?
+[2449.31] Adam: I see two, which do you prefer? It&#x27;s definitely SPI. I prefer it over I2C most of the time.
+[2457.71] Chris White: Oh, look at him. Can you translate, please, with your knowledge? No, no, I&#x27;m not even going to
+[2463.07] Jack: bother. I&#x27;m just going to embarrass myself. You do it. I don&#x27;t know. These are all different
+[2469.71] Frank: words that I don&#x27;t know. You&#x27;ve got at least some experience. Well, SPO is a one-wire bus
+[2480.75] Jack: protocol that pulls the information in a way. Explain I2C. It&#x27;s very similar, except the
+[2492.67] Chris White: advantage of I2C is that it doesn&#x27;t have a chip select. For SPI, you have to have a chip select
+[2500.51] Chris White: line that goes to every device. You can tell it, okay, I&#x27;m talking to you. For I2C, you have an
+[2508.75] Chris White: address, and you can address them on the wire and say, okay, I&#x27;m talking to you. I&#x27;m talking to you,
+[2514.19] Chris White: and it saves lives. A lot of wires. But it&#x27;s more complicated, and with both of them,
+[2519.95] Chris White: everybody&#x27;s device implements it just slightly differently. So it&#x27;s a standard with some
+[2528.35] Chris White: variations, and the variations tend to be difficult to debug if they&#x27;re not working right.
+[2532.59] Chris White: So now that I&#x27;ve actually looked into it very briefly, now I do recognize it because I have
+[2538.99] Frank: used it on some Arduino projects. But basically, I&#x27;ve only ever learned anything about them.
+[2544.35] Frank: The minimum of I have had to know to be able to write some bit of code to make a chip work,
+[2548.91] Frank: to then put it away and forget everything. So I&#x27;m very bad and don&#x27;t learn these things.
+[2554.67] Frank: Maybe I should. I&#x27;m dyslexic. I just can&#x27;t.
+[2558.75] UNKNOWN: So YouTube everything.
+[2560.51] Jack: I just, yeah, I&#x27;m just like, when I start looking at code, I&#x27;m like,
+[2566.03] UNKNOWN: you know, I can barely spell. You know, that&#x27;s on fire. I can fix that.
+[2573.95] Jack: But when it comes to, I just, Boris, yeah, filters. I just don&#x27;t understand. I mean,
+[2581.15] Jack: poor bradders, bradders trying to explain things to me from the improvements of
+[2588.35] UNKNOWN: of actually, I might do a podcast of that where Dan&#x27;s dyslexic, I&#x27;m dyslexic,
+[2594.43] Jack: and then bradders doesn&#x27;t understand a word that Boris says.
+[2598.35] Jack: And then we all try and explain things together.
+[2604.11] Jack: Somebody in between you before the chaos rains on.
+[2607.47] UNKNOWN: Yeah, I&#x27;m amazed you managed to put out all those fires you start.
+[2610.51] UNKNOWN: Yeah, I know. That&#x27;s it.
+[2612.43] UNKNOWN: Well, by the time we got there, they were already out in Whitechapel.
+[2615.79] Frank: Yeah, yeah, it did stink to high heaven.
+[2619.95] Jack: Yeah, so I don&#x27;t know.
+[2623.23] Jack: Does anyone watch the hidden Britain by drone with drones?
+[2629.15] Adam: But my TV has watched it, and I will watch it late, you know,
+[2632.35] Adam: or it&#x27;ll tell me what it thought.
+[2634.91] Jack: You watched it with me, didn&#x27;t you, Niko?
+[2636.59] Jae: I was impressed with some of the footage, but they had large machines to go over.
+[2641.31] Frank: Yeah, but it&#x27;s still nice to watch sometimes.
+[2644.43] UNKNOWN: So they need to grade some of their footage.
+[2646.51] Frank: That&#x27;s all I&#x27;ll say.
+[2647.87] UNKNOWN: Was it was it just me or did some of it look like you didn&#x27;t need a drone?
+[2652.99] UNKNOWN: Yeah, well, no, a lot of it was shot without a drone.
+[2655.71] Jae: And yeah, some of it didn&#x27;t really need a drone.
+[2657.79] Jae: They were just on a show called like Britain by drone.
+[2660.51] Adam: A lot of it was shot from the land.
+[2662.35] Adam: And also, why do you need Baldry?
+[2664.11] Adam: Well, it&#x27;s not just to have cool cool pictures.
+[2667.55] Frank: It&#x27;s because it&#x27;s channel four and it&#x27;s in a field.
+[2669.47] Frank: So, you know, so you have to have Baldry.
+[2671.15] Frank: Yeah, no, I know.
+[2672.43] Adam: It&#x27;s a positive image for some of these drones now.
+[2675.87] Jae: And I suppose we&#x27;re lucky that there is some positive show.
+[2680.51] UNKNOWN: U.S. side.
+[2681.31] Jae: Is there any shows that...
+[2682.51] Chris White: Is this Baldryk if I have a cunning plan?
+[2684.75] UNKNOWN: Yes, exactly.
+[2686.51] Adam: In real life, he&#x27;s called Tony Robinson.
+[2688.19] Adam: And these days now he does this architectural show in the UK.
+[2694.11] Adam: He takes the Indiana Jones out of archaeology
+[2696.83] Adam: and makes it some boring people digging near a village for Roman coins.
+[2701.79] Adam: That kind of thing.
+[2703.15] UNKNOWN: Drinking cider.
+[2704.43] UNKNOWN: Or flying drones, apparently.
+[2706.43] Adam: Yeah, but now flying drones.
+[2708.11] Adam: So that&#x27;s...
+[2709.39] Adam: Yeah, him.
+[2710.43] UNKNOWN: Yeah, you&#x27;ve got...
+[2712.27] Frank: Well, MythBuses obviously had a lot of drones flying.
+[2714.99] Frank: But yeah, are there any other big shows out in America
+[2717.79] Frank: that have obvious drone usage?
+[2720.59] Chris White: Maybe in terms of just getting footage,
+[2722.19] Chris White: but there&#x27;s not a lot of kind of technological...
+[2727.55] Chris White: Technology interesting TV shows these days.
+[2731.79] Chris White: Maybe somebody else has some suggestions, but...
+[2734.67] UNKNOWN: You&#x27;ve got your podcasts.
+[2738.11] Frank: Particularly, I&#x27;ve been listening through the backlock of catalog on your podcast.
+[2744.03] Frank: And definitely the Simone Yurch and the Sarah Pettis one.
+[2749.23] Frank: Those are very nice and easy to get into it.
+[2753.71] Frank: Those were very interesting ones.
+[2755.71] Frank: And I would highly recommend everyone go and wait and listen to them.
+[2759.47] Frank: I want to marry...
+[2760.03] Frank: Particularly Jack.
+[2760.75] Frank: You need to go to listen to both of those two.
+[2763.55] Frank: I know you like Simone Yurch already,
+[2764.91] Frank: but also listen to Sarah Pettis&#x27; one
+[2766.75] Frank: because that is also very much up your street.
+[2770.43] UNKNOWN: Simone, just link me.
+[2771.95] Jack: Did you say you had a question, Chris?
+[2773.47] Chris White: I did in the last remaining moments.
+[2775.47] Chris White: We like getting questions.
+[2777.79] Chris White: If I wanted to get into quads,
+[2779.07] Chris White: which I&#x27;m not really into right now,
+[2781.15] Chris White: what should I get?
+[2782.27] Chris White: How should I start?
+[2784.35] UNKNOWN: What did you want to do though?
+[2785.55] Jae: Just race or have aerial photography
+[2788.59] Jae: more capable flight or race fast?
+[2792.11] UNKNOWN: A little bit do-it-yourself,
+[2793.31] Chris White: and I don&#x27;t really care about speed that much.
+[2795.87] UNKNOWN: I would...
+[2796.59] Frank: I mean, whatever you do,
+[2798.27] Frank: I would recommend getting something small
+[2800.67] Frank: like a Hubsan X4 first.
+[2803.07] Frank: Actually, you know what?
+[2804.67] Jae: Sorry, I&#x27;d say you&#x27;d probably be better off with something like a Pixhawk
+[2808.27] Jae: because they are ultra configurable.
+[2810.51] Jae: Oh yeah.
+[2811.63] Jae: And 32-bit, the newer ones.
+[2813.71] Jae: So the good architecture.
+[2815.55] Frank: Definitely for your ability of coding side,
+[2819.23] Frank: you want to pick...
+[2819.79] Frank: It&#x27;s the APM.
+[2820.43] Jae: Yeah.
+[2820.91] Jae: Yeah, APM.
+[2821.71] Jae: It&#x27;s a good established software package.
+[2826.19] Jae: And fantastic support, you know,
+[2827.71] Adam: with the online, their website.
+[2830.91] Adam: It&#x27;s great.
+[2832.43] UNKNOWN: Definitely.
+[2832.99] Adam: The community.
+[2836.11] UNKNOWN: But while you&#x27;re building that one,
+[2837.71] Frank: practice flying with a Hubsan X4 first
+[2840.19] Frank: because it&#x27;s about 20 pounds
+[2841.79] Frank: and you can learn all the throttle control
+[2843.87] Frank: and orientation and all of those skills.
+[2847.07] UNKNOWN: Have you flown any Helis or anything, Chris?
+[2849.47] Chris White: I&#x27;ve flown some very, very cheap quads
+[2852.03] Chris White: and one very, very small Heli, so...
+[2856.11] UNKNOWN: Yeah, if I live in America,
+[2858.35] Jack: I&#x27;d get a Blade Nano QX or something like that.
+[2861.23] Jack: You know, the one with the goggles
+[2863.95] Jack: so then you can kind of play around.
+[2865.79] Jack: Buy something from a white spy.
+[2868.19] Jack: He&#x27;s got kits.
+[2869.63] Jack: All right.
+[2870.19] Jack: Yeah, he&#x27;s American.
+[2872.75] Jae: It has been a pleasure having you on, Chris.
+[2875.15] UNKNOWN: Oh, thanks.
+[2875.71] Jae: It&#x27;s been fun talking to you guys.
+[2877.31] Jack: Yeah, thank you.
+[2877.95] Adam: It&#x27;s been great.
+[2878.43] Adam: Sorry if we&#x27;ve been a bit all over the place.
+[2880.99] UNKNOWN: That&#x27;s quite all right.
+[2882.03] UNKNOWN: Yeah.
+[2882.35] Frank: Thank you for bearing with us.
+[2883.71] Frank: And yeah, it&#x27;s been interesting to hear
+[2886.67] Frank: a different side of things.
+[2887.95] Frank: Yep.
+[2888.27] Jack: No worries.
+[2889.71] UNKNOWN: All right.
+[2890.19] Jack: And good luck.
+[2892.19] Jack: Yeah, we look forward to hearing about
+[2893.87] Frank: what you managed to get at X-HOP to do.
+[2898.11] Jae: Follow your work or anything
+[2899.47] Jae: or do you put anything up on the online
+[2901.15] Jae: of what you&#x27;re working on?
+[2902.03] Jae: Is there any way people can find your stuff?
+[2905.15] Chris White: So we have the Embedded.fm blog,
+[2907.23] Chris White: which is where I will put stuff
+[2908.59] Chris White: if I get around to putting things up.
+[2911.71] Chris White: That&#x27;s at Embedded.fm.
+[2913.31] Chris White: And, you know, I always talk about stuff
+[2914.75] Chris White: on the podcast too.
+[2916.11] Chris White: And I&#x27;m Stony Monster on Twitter,
+[2917.87] Chris White: if anybody cares.
+[2919.63] UNKNOWN: Ah, well, no, I mean, it&#x27;s,
+[2922.35] UNKNOWN: I think there&#x27;s, you know,
+[2923.95] Jae: people going back towards planes now.
+[2925.39] Jae: So it&#x27;d be interesting to hear your perspective
+[2927.39] Jae: of how you put your fix through.
+[2929.87] UNKNOWN: Oh, there are a lot of quad people
+[2931.31] Adam: who, you know, come into planes that way
+[2933.23] Adam: rather than like digital photographers
+[2937.31] Adam: turning to film.
+[2938.91] UNKNOWN: It&#x27;s good to get someone who&#x27;s come
+[2940.43] Jae: from a different angle, you know,
+[2942.51] Jae: or a different experience
+[2943.95] Jae: and different knowledge of different systems.
+[2946.19] UNKNOWN: Yeah.
+[2946.59] Adam: Well, yeah, like I said,
+[2948.99] Chris White: finding out how much everything has changed
+[2950.51] Chris White: has been really impressive.
+[2952.03] UNKNOWN: Right. We&#x27;ve got to go, guys.
+[2953.71] Jack: No worries.
+[2954.03] Jack: Thank you.
+[2954.51] Jack: You&#x27;ve been listening to Let&#x27;s Drone Out.
+[2956.03] Jack: Tune in every week from 8 until 9.
+[2958.83] Jack: GMT.
+[2959.95] Jack: On Thursday night show.
+[2961.63] UNKNOWN: Bye.
+[2962.51] UNKNOWN: Tally ho.
+[2963.39] Adam: Telemetry lost.
+</pre></body></html>

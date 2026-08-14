@@ -1,0 +1,1348 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0323—LDO 323 - Simulation Bonanza</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 323 ===
+Title: LDO 323 - Simulation Bonanza
+Recorded: 2021-11-04
+Hosts: Stephen &quot;Belrik&quot; Howell, Wayne &quot;CurryKitten&quot; Andrews, Jack &quot;Brightontillifly&quot; Nash, Tony &quot;TheTonstar1&quot; Marchant, Andrew &quot;Frank&quot; Hyams
+Guest(s): (none recorded)
+Total audience: 2,604
+Platforms: YouTube (https://www.youtube.com/watch?v=aI36-Q1Ffn8); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1155039343-letsdroneout-ldo-323-simulation-bonanza.mp3)
+=====================================
+
+[0.0] UNKNOWN: Hello and you&#x27;re listening to Let&#x27;s Drone Out and special thank you to our lovely patrons that helped donate so that we could pay the editor to remove the swear words and silly things we say. Massive thank you to.
+[14.0] Jack: Carlos Campos.
+[16.0] Jack: Art Faulkner.
+[18.0] Jack: Sam Dahmer.
+[20.0] Frank: Mikey Dread.
+[22.0] Frank: On with the show.
+[24.0] Frank: Let&#x27;s Drone Out now.
+[54.64] Jack: Welcome back to another episode of Let&#x27;s Drone Out. Tonight you are joined by everyone&#x27;s favourite curry kitten.
+[60.64] Jack: Hello.
+[61.64] UNKNOWN: Everyone&#x27;s beardy Stephen.
+[63.64] Jack: Hello.
+[64.64] Jack: More moustache and beard. I think you are great at moustache bra.
+[67.64] Jack: Going for the wingspan.
+[69.64] Jack: Yep. My darling wife.
+[71.64] Jack: Bonjour.
+[73.64] Jack: You can change your way to Tony if you want.
+[75.64] Jack: No, I&#x27;m happy with that.
+[77.64] Jack: Wife. We&#x27;re waiting for Frank and I&#x27;m bright until I fly. Hello.
+[82.64] UNKNOWN: Unwelcome.
+[84.64] Jack: Does anyone know what life Frank&#x27;s held up with it?
+[88.64] UNKNOWN: He&#x27;s basically putting out fires.
+[91.64] Curry: Yeah, I was going to say it can&#x27;t be London stuff anymore.
+[94.64] Tony: He says go, go, go.
+[96.64] UNKNOWN: It&#x27;s got to be like cows crossing the road and sheep and things like that now. It can&#x27;t be stabbings and things like that.
+[103.64] Tony: Got a sheep stuck on the roof.
+[105.64] Tony: Yeah, it&#x27;s none of that anymore.
+[107.64] Jack: So you guys were talking about your quad wing design. Is that right, Stephen?
+[115.64] Jack: Oh, man. My plan for a bloody stuker design and ultimately the vehicle for many wing flyers to point at me and say I told you so.
+[125.64] Stephen: I&#x27;ve got a bunch of foam gliders here and I&#x27;ve got bits of quad frame and some bits of motor.
+[134.64] UNKNOWN: I&#x27;ve got some 2204s and I was just saying like I probably want something that swings.
+[139.64] Stephen: I was looking at three inch and I thought maybe swinging a bigger prop is good because when you&#x27;re on a plane and you&#x27;ve got a quad that&#x27;s kind of
+[146.64] Stephen: illustrative purpose or a quad like that on the front.
+[150.64] Stephen: What I&#x27;m going to need to do is to have lots of yaw inertia because my yaw is going to become my role.
+[158.64] Stephen: And I was just humming and whirring about that basically.
+[162.64] Tony: So you&#x27;re putting a quad on the nose?
+[164.64] UNKNOWN: Yeah, or chop the nose off and put the quad a bit further back so it doesn&#x27;t completely screw the CG.
+[170.64] Curry: This is interesting because this seems to deviated slightly from last week when I thought you were talking about putting a quad this way on
+[177.64] Curry: because you said, oh, you can take off anyway, you just hover.
+[180.64] Curry: Or the old podcast.
+[182.64] UNKNOWN: This way is horizontal. I thought mounting horizontally.
+[188.64] UNKNOWN: So I was thinking what I actually wanted was to mount it kind of on the wing and then to have the wing have some little legs that come out.
+[196.64] Stephen: So the quad still sits upright and then I just take off like that.
+[200.64] Stephen: Sorry, I should take this thing out of the bag.
+[203.64] Stephen: Do you think the frame is going to...
+[205.64] UNKNOWN: No, I don&#x27;t really think the frame is going to do the job, but it&#x27;s just what I thought.
+[209.64] Stephen: The other frame I&#x27;ve got is down in the box and I can&#x27;t be quite good to go on route around.
+[214.64] Stephen: I apologize to audio listeners. It sounds like you&#x27;re in the cinema and the person in front of you...
+[218.64] Curry: Sorry, the person next to you needs a popcorn very rudely.
+[222.64] Stephen: So for audio listeners, I&#x27;m showing the wing out of a foam glider with a quad frame on the top of it.
+[228.64] Stephen: And I was thinking if I get sort of stand like this, I might be able to get two of the little tail finny bits or just some 3D printed bits and just put some legs on it.
+[237.64] Stephen: And then I could take off like, you know, straight up, however I want.
+[241.64] Stephen: And then I can just punch it forward and I&#x27;ll get a nice bit of lift by virtue of the fact that there is a wing attached to the rear of my quad.
+[252.64] Stephen: If indeed the flight controller can deal with it, it would be a testament to what they&#x27;ve managed and be to flight 4.3.
+[258.64] Stephen: Does it completely freak out or does it go, yeah, all right, yeah, you tied a wing onto your quad. That&#x27;s fine.
+[265.64] Stephen: Well, I think it&#x27;s more viable now because what you&#x27;ve basically done is replace one prop at the front with four and using differential thrust instead of your servos.
+[275.64] Curry: Yeah, I hate servos. That was the main thing.
+[280.64] UNKNOWN: I was wondering if you could just mount. Well, you can even tell it that the flight controller is mounted differently than it is.
+[288.64] Curry: So it believes that way is level with the wing or you could just mount the flight control on the wing and the motors of the quad just in front.
+[300.64] Stephen: I was going to mount the flight controller on the frame so it kind of knew that it was facing forward.
+[305.64] Stephen: It shouldn&#x27;t be a problem. I mean, ultimately, I&#x27;m not going to fly stabilized. I&#x27;m going to fly acro.
+[310.64] Stephen: And acro is just like, is it going where I&#x27;m pointing it? It&#x27;s not going to try and self level itself.
+[315.64] Stephen: So it should be all right, I think. But you can still just go like balls to the wall and fly, you know, 90 degree forwards if you want to with the flight controller, can&#x27;t you?
+[326.64] Stephen: I mean, when you get a mounting camera in the middle, the camera is going to be quite quite an extreme angle, obviously.
+[333.64] Stephen: You&#x27;re going to need 90 degrees. Yeah, well, at least 90, nearly 90 degrees. I do. Yeah, I do have a flight controller somewhere with a camera switch.
+[343.64] Stephen: So that&#x27;s not the question. They&#x27;re not. I&#x27;ve used one on a tank before the rover that I&#x27;ve got. It&#x27;s got two cameras on. That&#x27;s not terrible.
+[350.64] Stephen: I could just splash out for a matek with a built in built in camera switch or get a separate camera switcher just runs off of your or off the LED pin.
+[360.64] Stephen: Either way, yeah. So what a switch, if you&#x27;ve got a nice big like field of view, if I have a one point six mil lens, that field of view is going to be like 160 degrees.
+[369.64] Stephen: Oh, it switches almost instantaneously tone, so long as you&#x27;re not using one of the rapid fire, like field combining modes, you&#x27;ve got to put on like legacy mode because it butchers the sync signal.
+[380.64] Stephen: Right. But yeah, I was really thinking just put the camera at sort of 60 degrees and have a really wide field of view. And then I&#x27;ll be able to take off for once. I&#x27;m going, I&#x27;ll probably see enough.
+[391.64] UNKNOWN: Have you considered, since it&#x27;s now at the front of the wing, how are you going to land without wrecking stuff? Same way I land a quad, so I&#x27;ll probably wreck stuff.
+[401.64] Stephen: Turn it off off here.
+[405.64] UNKNOWN: Just to start with that.
+[407.64] Stephen: If I&#x27;m flying like that and I put it in stabilised mode, it&#x27;s just going to go whoop and it&#x27;s going to have the wing on its arse and I can probably just slowly park it there, can&#x27;t I?
+[416.64] Stephen: It would probably fly down, wouldn&#x27;t it? It would probably land like that. If you just switched the light, it would probably glide for a bit.
+[424.64] Tony: Yeah, I mean, if I completely disarm it, I could probably glide a bit. Yeah, that&#x27;s true. But I was thinking more of a vertical takeoff and landing because that looks really messy and like probably getting mud on the wing.
+[437.64] Stephen: So I&#x27;ll just sort of flip it into stabilised mode and just pop it down at my feet.
+[443.64] Stephen: Same way. That was the thing of taking off as well, just to sort of take off, whoop.
+[448.64] UNKNOWN: So put some little triangles or something on the end of the wing so it can stand up, which apparently are also something-something-wing-let-something-something stability. I don&#x27;t know.
+[458.64] Stephen: It might just be bits of cardboard slotted into the wing. I don&#x27;t know. It&#x27;s going to be a learning experience.
+[463.64] Curry: Well, we all look forward to this video and demonstration.
+[468.64] UNKNOWN: Did you ever do anything with the, do you remember the slow down air mode flaps? Did you do anything with those at any point?
+[477.64] UNKNOWN: The slow down air mode flaps? No. Yeah, it was like, it was a weird idea, basically, where, you know, like it gave you like bullet time where flaps from underneath your quad would open out, giving you a greater surface area.
+[492.64] Jack: I vaguely remember someone doing stuff with those. It looked a bit faffy, I have to say. You mean like an air brake?
+[500.64] UNKNOWN: Yeah, yeah, an air brake.
+[503.64] Jack: If you&#x27;re really bombing it along on a quad and you&#x27;ve got an air brake, unless it was a very solidly constructed air brake, you&#x27;d end up with just an explosion and then you&#x27;d carry on.
+[515.64] Jack: Well, I can&#x27;t remember. It was just like some, some quad had it where you could just, you know, they kind of like fold it out and it would slowly, I&#x27;ll be back. Sorry. I&#x27;ve got to be ill. I&#x27;m sorry.
+[529.64] UNKNOWN: I vaguely remember it, but I can&#x27;t remember exactly what it looked like.
+[532.64] Curry: Pavel did it, apparently, according to Caroline Tyler. I have to say, I don&#x27;t remember that particular experiment, but I&#x27;d be interested to see. I just thought it&#x27;s an interesting phenomenon and see what happens. We will see.
+[546.64] UNKNOWN: I&#x27;ve also been building some other bits and bobs.
+[550.64] Stephen: Apart from procrastinating on the wing, I&#x27;ve got SharkBite up and running with its fancy, what you call it, display port, all that canvas mode, button gubbins.
+[560.64] Stephen: So super shiny digital menus and things in this little guy, which is a 1304 based three inch.
+[566.64] UNKNOWN: I thought, you know, if there&#x27;s a place where SharkBite is going to excel, it&#x27;s on the super lights where you can&#x27;t get regular digital system. So try it there.
+[575.64] Stephen: And it&#x27;s really nice. I&#x27;ve got an EP2 in here and they changed the LED for a bright green one and it looks like a disco. It&#x27;s quite fun. I jammed it right at the top of the canopy.
+[587.64] Stephen: Yeah, I&#x27;m going to fly that over the weekend and see how that goes.
+[590.64] Tony: Have you guys talked about our nemesis yet? Well, you know, DJI stuff.
+[597.64] UNKNOWN: In what way?
+[599.64] Tony: Well, they&#x27;ve got a new drone, I think, coming out tomorrow.
+[605.24] UNKNOWN: I&#x27;ve seen bits appear on YouTube saying announcement coming, but they didn&#x27;t seem to suggest what it was. Have you seen anything, Tony, about what was coming?
+[613.24] UNKNOWN: I think it&#x27;s a new Mavic.
+[615.24] UNKNOWN: Because every time you think, oh, it&#x27;s a new Mavic, it&#x27;s a new Phantom. It&#x27;s some sort of stupid phone.
+[620.24] Curry: It&#x27;s a gimbal.
+[621.24] Curry: Yeah, it&#x27;s a gimbal.
+[622.24] Curry: Yeah, it&#x27;s a fast charging battery, Matt.
+[623.24] Curry: It&#x27;s a new Mavic, but it&#x27;s got two cameras on the front. I think one for Stills and one for Zoom, something like that. I haven&#x27;t seen, I&#x27;ve just seen pictures. I haven&#x27;t really looked into it at all.
+[633.24] Tony: I was still interested in Mads, Ian, the Welsh guy&#x27;s coverage of the Action 2. I thought that was quite amusing. You couldn&#x27;t use it indoors for more than five minutes.
+[645.24] UNKNOWN: I saw Roto-Riot&#x27;s video, and it looked really good on there, but then I&#x27;ve looked at other people&#x27;s videos, and it does look good, but apparently it cuts out.
+[656.24] UNKNOWN: If you run it at 4K, 120 frames, it gets too hot and cuts out.
+[662.24] UNKNOWN: This is one of those press announcements you can literally use to decide who&#x27;s taking money from DJI and who isn&#x27;t getting money from DJI, because some people say, it&#x27;s amazing!
+[672.24] Stephen: Nothing wrong whatsoever, and other people are like, I can only record for four and a half minutes, and it switches off, and then I charge it, and the charging heats it up, and then I can only record for two minutes.
+[682.24] UNKNOWN: That seems to be a problem, no problem.
+[684.24] Stephen: That&#x27;s basically where you are in the world as well, isn&#x27;t it?
+[687.24] Tony: Okay, in the UK, I saw Bloods posted a video having a go at it, and I asked him, I said, did you have any overheating problems?
+[695.24] Curry: He said, no, it came down freezing, because look outside right now, it&#x27;s pretty cold, so we&#x27;re in the perfect environment to run it.
+[703.24] Curry: So long as you&#x27;re flying outdoors, if you&#x27;re flying indoors...
+[705.24] Curry: An actual environment are screwed.
+[707.24] Curry: Isn&#x27;t it geo locked as well, though? There&#x27;s a heat sink thing where you can press a button, if you&#x27;re in the States, you can make it run.
+[717.24] Tony: Sorry, it will apparently run for a longer time, but because we&#x27;ve got EU stuff over here, it&#x27;s not allowed to get to...
+[723.24] Tony: Because we&#x27;ve actually got safety regulations, and it&#x27;s not just like, sell something until it becomes unsafe and kill someone, and then take it off the market, unlike America.
+[732.24] UNKNOWN: So it&#x27;s blanked out in England, or EU and stuff, the bit where you can...
+[737.24] Tony: It&#x27;s the same as the FCC mode for the FPV system, right? Just geofenced it.
+[743.24] Stephen: That&#x27;s boring. So what you should do if you want to get one is buy it from the US, then it will...
+[748.24] Curry: Well, the instant you activate it, and you have to activate it after a certain amount of time, it locks out that option.
+[753.24] Stephen: So you can use it for a short while, but then you&#x27;re stuck.
+[756.24] Stephen: And this is why I don&#x27;t have DJI goggles.
+[760.24] Curry: Any consumer piece of kit, which is essentially like standalone, but forces you into activation is like...
+[767.24] Curry: It&#x27;s a bit dirty.
+[768.24] Curry: I don&#x27;t like it. I don&#x27;t like it.
+[771.24] UNKNOWN: I think, though, for a couple of firmware updates, I mean, the weight&#x27;s really good, and the size of it, it&#x27;s not much actiony, though, is it? It doesn&#x27;t look very rugged.
+[782.24] Tony: No.
+[784.24] UNKNOWN: I thought it sounded like...
+[786.24] Curry: Massive and replaceable lens on the front that is just saying, scratch me now.
+[790.24] Curry: It&#x27;s got a beautiful looking image quality. I mean, he did criticize it, but his flight videos look amazing.
+[796.24] Stephen: And once you&#x27;ve got it on a quad, it&#x27;s cool enough. It&#x27;s okay. It&#x27;s got plenty of air going over it.
+[801.24] Stephen: But you&#x27;ve got no removable memory, and you&#x27;ve got no removable battery.
+[806.24] Stephen: So you&#x27;ve got a 20-minute runtime and a 22-gig usable capacity.
+[813.24] UNKNOWN: And once either of those is done, you&#x27;ve got to recharge it, and you can&#x27;t use it, can&#x27;t swap the battery out, keep flying.
+[819.24] UNKNOWN: And you&#x27;ve got to drain the storage onto another device, and you can&#x27;t use it while that&#x27;s happening either.
+[824.24] UNKNOWN: And apparently, it takes one minute to move one minute of recording, so 20 minutes flying, 20 minutes charging and moving.
+[832.24] Stephen: That means you&#x27;ve got to take a laptop out of here, or go and do your 20 minutes filling up.
+[837.24] Tony: Well, you&#x27;ve got to buy two of them effectively, because they run for 20 minutes at a time, and they record 20 minutes.
+[843.24] Stephen: And so you come down with one, swap it over, it gets recharged, and pull all the data off it, and you fly with your second one.
+[851.24] Stephen: So if you want to actually use it for serious business, you need at least two of them.
+[854.24] Stephen: I do like the weight of it, though. Is it 56 grand or 53?
+[858.24] Tony: Yeah, it&#x27;s pretty light.
+[859.24] Stephen: Yeah, a bit good on a blue.
+[861.24] UNKNOWN: And the footage looks beautiful. It&#x27;s really nice.
+[864.24] UNKNOWN: It does look good, what I&#x27;ve seen of it. But yeah, I mean, who&#x27;s going to run 4K 120 frames anyway, all the time?
+[871.24] Tony: They&#x27;re not, are you?
+[872.24] Tony: Nah.
+[873.24] Stephen: Well, not if you want to do that.
+[875.24] Tony: Cinematic, I mean, cinematic in the cinema is 24 frames.
+[879.24] Tony: Why would you run 120 unless you want to slow some bits down?
+[882.24] Tony: A little slow 4K is like 30 grams, take some microSD, you can power it.
+[887.24] Stephen: I&#x27;ve got a balance connector there, just power it off your LiPo.
+[891.24] Stephen: And that&#x27;ll do 4K 60. It doesn&#x27;t do 4K 120, but it does 4K 60.
+[896.24] UNKNOWN: Yeah.
+[897.24] Stephen: It&#x27;s maybe not as nice. It&#x27;s not quite as fancy, but it&#x27;s pretty good.
+[900.24] UNKNOWN: No, it&#x27;s 20 minutes to get footage off there.
+[908.58] Jack: Yeah.
+[909.58] UNKNOWN: Fly for 20 minutes, copy footage in charge for 20 minutes, fly for another 20 minutes.
+[913.58] Stephen: It&#x27;s interesting to think who they&#x27;re marketing that at, because if it&#x27;s marketed as an action camera,
+[919.58] Curry: looking like everybody like, if you&#x27;re like a mountain biker or a skier or a scuba diver or whatever,
+[924.58] Curry: you just take a GoPro on and, you know, you can do about an hour&#x27;s recording and then, oh, it&#x27;s full,
+[931.58] Curry: swap the battery, swap the SD card you carry on with a little bank of those things, wouldn&#x27;t you?
+[936.58] Curry: Yeah.
+[937.58] Curry: Just keep turning it on.
+[938.58] Stephen: You&#x27;re a snowboarder.
+[939.58] UNKNOWN: You&#x27;ve got your stick and you&#x27;ve got your camera and you&#x27;re going to take some amazing videos.
+[944.58] Stephen: You get to the top of a lift, oh, it&#x27;s full.
+[947.58] Stephen: Oh, what do you do?
+[948.58] Stephen: You have a laptop in your backpack?
+[950.58] Stephen: What&#x27;s the situation look like?
+[953.58] Tony: I haven&#x27;t thought about this, have I?
+[955.58] Jack: Not really.
+[956.58] Tony: 4K on YouTube looks s*** anyway, unless it&#x27;s really slow and a sunny, hot day.
+[961.58] Tony: Like, my video of me traveling down the river with a dog on the kayak, 4K&#x27;s glorious day,
+[968.58] Tony: looked lovely because it was just all slow.
+[970.58] Tony: You go fast on YouTube, 4K.
+[973.58] Tony: It&#x27;s just choppy and s*** anyway, isn&#x27;t it?
+[976.58] Tony: So, I don&#x27;t know.
+[979.58] Tony: I mean, 4K 120 slow down stuff was really good.
+[983.58] Tony: Well, that&#x27;s just an infrastructure problem, right?
+[985.58] Stephen: It&#x27;s waiting for people&#x27;s internet connections and people&#x27;s devices to catch up.
+[989.58] Stephen: It&#x27;s actually pretty demanding to play, like, high bitrate 4K streams.
+[994.58] UNKNOWN: You can really max out your connection.
+[997.58] Tony: It costs YouTube a lot of money to have these massive streams.
+[1000.58] Tony: Well, I mean, YouTube got advertising, so I&#x27;m sure they&#x27;ll find a way if there was incentive for them to do it.
+[1005.58] Stephen: I&#x27;ve actually up sampled some stuff, I just doubled it,
+[1008.58] Stephen: and I ended up with 5K videos for some of my stuff on YouTube.
+[1012.58] UNKNOWN: I was trying to get around the crappy quality by doubling the resolution,
+[1017.58] Stephen: and some of it ended up at, like, 5K.
+[1021.58] UNKNOWN: And, yeah, it gets really demanding to play it.
+[1024.58] Stephen: I&#x27;ve got this PC with, like, 24 cores, I can just watch my CPUs get slammed.
+[1029.58] UNKNOWN: I mean, me editing 4K, 30 frames stuff, my PCs are like,
+[1035.58] Tony: do it 120, I was, like, trying to watch a bit of footage and edit it would be a nightmare.
+[1041.58] Tony: And where&#x27;s it going? A lot of the audiences on Instagram and stuff as well, so...
+[1046.58] Tony: 4K just takes up too much disk space.
+[1049.58] Curry: I&#x27;ve already got four disks sitting there just for 1080p for...
+[1054.58] Curry: Yeah, I think Mads was quoting for the 4K 60, 850 megamin.
+[1060.58] UNKNOWN: So your 20 minutes of footage is, that&#x27;s 15, 16 gig.
+[1065.58] UNKNOWN: I&#x27;ve been thinking about chimney nuts.
+[1069.99] UNKNOWN: Have you now? Tell us about chimney nuts.
+[1072.99] Jack: Chimney nuts. Well, I was just thinking you can slide, like, a bit of plastic here,
+[1079.99] Jack: and then screw into the bottom of there, like that, M5, of course.
+[1085.99] Jack: This is a podcast, Jack, to explain what you&#x27;re doing.
+[1088.99] Tony: Explain what a chimney nut is for ignorancees like me who are staring at that
+[1092.99] Stephen: and wondering if it&#x27;s a bit of stationer you&#x27;ve found.
+[1095.99] Jack: No, a chimney nut is like, basically it&#x27;s like a nut with a clip that&#x27;s a clip,
+[1101.99] Jack: and you, like, you can slide, I&#x27;ve slid a bit of paper in it,
+[1104.99] Jack: and you can then tighten it down on your prop,
+[1108.99] Jack: and then maybe you could D-I-O-R your own propellers.
+[1112.99] UNKNOWN: Mmm.
+[1114.99] Jack: Google a chimney nut if you don&#x27;t know what one is.
+[1119.24] Jack: Well, it&#x27;s a Christmas special from the Victorian era, chimney nuts.
+[1123.24] UNKNOWN: Yeah.
+[1124.24] UNKNOWN: A sooty, but they taste great.
+[1126.24] UNKNOWN: A bit dim-nought knows about them.
+[1129.24] UNKNOWN: Yeah, good old chimney nuts. That&#x27;s what I was thinking.
+[1132.24] Jack: What is the most stupidest thing I could slot into a chimney nut
+[1136.24] Jack: and make my own props?
+[1139.24] UNKNOWN: So you could get a little bit of perspex and you could just bend it with hot air, right?
+[1143.24] Stephen: Yeah, yeah, exactly.
+[1147.24] UNKNOWN: But equally, you could just do that with a bit of plastic
+[1150.24] Jack: and then just drill a five-mil hole in it.
+[1153.24] Jack: This is what we need.
+[1155.24] UNKNOWN: Back to cottage industries, homemade artisanal quadcopters.
+[1159.24] Stephen: Yeah.
+[1160.24] UNKNOWN: I feel it&#x27;s derailed enough for us to say,
+[1163.24] Curry: should we go and get on with the actual subject of this podcast,
+[1168.24] Curry: which is Stephen&#x27;s suggestion, about sims?
+[1172.24] Curry: Because he said, when you said it a few months ago,
+[1175.24] Curry: we were having lovely weather, and you said,
+[1177.24] Curry: oh, it&#x27;s getting quite crap.
+[1178.24] Curry: We should talk about sims at some point.
+[1180.24] Curry: We&#x27;re like, no, it&#x27;s really good.
+[1181.24] Curry: This week, or last week, it&#x27;s been bloody awful.
+[1185.24] UNKNOWN: Well, as we&#x27;ve all lived in this country for most of our lives,
+[1189.24] Stephen: I think we realize that it gets shitty and no one wants to stand outside
+[1192.24] Stephen: roughly from November until April.
+[1197.24] Stephen: I find, even if you can stand going outside,
+[1200.24] Curry: doing this means after about five minutes,
+[1202.24] Curry: you can&#x27;t actually feel the...
+[1204.24] Curry: The first pack, you&#x27;re really nimble and agile.
+[1206.24] Stephen: The third pack, you can barely move your fingers.
+[1209.24] UNKNOWN: So what have you found out, Stephen, about sims and the way this went?
+[1213.24] Curry: Well, I saw that it was the Steam Halloween sale,
+[1217.24] Stephen: so I kind of went bananas, and I bought a bunch of sims.
+[1221.24] UNKNOWN: And I thought, well, how can I legitimize this reckless fiscal irresponsibility?
+[1228.24] Stephen: I could do a sim comparison.
+[1230.24] Stephen: So what we have here is me being a grumpy git
+[1233.24] Stephen: and playing sims on my own and comparing them.
+[1236.24] UNKNOWN: I did a lot of testing on Linux because that&#x27;s what I run,
+[1240.24] Stephen: but I also booted into Windows to make sure that it was representative.
+[1244.24] UNKNOWN: And I found out a whole load of things.
+[1247.24] Stephen: One, don&#x27;t believe the hype.
+[1250.24] Stephen: And two, some of these are absolutely gargantuan.
+[1255.24] Stephen: I didn&#x27;t realize how complex and how many maps were in some of these.
+[1261.24] UNKNOWN: I also learned a lot about how gamepads are mapped, so touch on that.
+[1266.24] UNKNOWN: And let&#x27;s just do a quick rundown of the ones I found.
+[1270.24] Stephen: There&#x27;s some that are very similar names that start the lineup,
+[1273.24] Stephen: and those are the Drone Champions League.
+[1275.24] Stephen: You may have noticed this in yellow and black livery.
+[1278.24] Stephen: Doesn&#x27;t seem to actually be that huge of a contest, but they&#x27;ve got a game.
+[1283.24] Stephen: And it is a real-world contest.
+[1286.24] Stephen: There&#x27;s the Drone Champions League, and then there&#x27;s Drone Racing League,
+[1293.24] UNKNOWN: which is people like Nurk and that flying in.
+[1297.24] Stephen: And this is the one where they have tryouts every year,
+[1299.24] Stephen: and you&#x27;ll see Bardwell and others talking about it.
+[1302.24] Stephen: If you run the weekly tryouts, you can get into the actual real-world thing.
+[1307.24] Stephen: Then we&#x27;ve got Velocidrone, which I was pressured to include,
+[1310.24] Stephen: despite the fact that it winds me up.
+[1312.24] Stephen: Liftoff.
+[1313.24] UNKNOWN: CurryKit and Sim, can&#x27;t leave that one out.
+[1316.24] Stephen: Sterling Work.
+[1317.24] UNKNOWN: Uncrashed.
+[1319.24] Stephen: FPV Freerider, which was dusted off and thrown into the running.
+[1323.24] Stephen: This many.
+[1325.24] Stephen: Yeah.
+[1326.24] Stephen: And I was just going to do a quick rundown,
+[1328.24] Stephen: and feel free to jump in.
+[1330.24] Stephen: I&#x27;ve rated them on a bunch of criteria,
+[1333.24] Stephen: and I&#x27;ve decided that useful criteria would be the selection of quads,
+[1338.24] UNKNOWN: the graphics, the controller support, obviously a big one for us,
+[1343.24] Stephen: the tracks, the interface and menus, and then the community around it.
+[1347.24] Stephen: And so I&#x27;ve kind of done a little comparison.
+[1351.24] Stephen: I&#x27;ll post the notes if anyone wants to see.
+[1353.24] Stephen: I&#x27;ve also got the price of each.
+[1356.24] UNKNOWN: So starting off with this Drone Champions League,
+[1359.24] Stephen: this was the most expensive, and I must have bought it on sale at some point,
+[1362.24] Stephen: because it&#x27;s $24.99, and I&#x27;m pretty sure I didn&#x27;t pay that much for it.
+[1366.24] UNKNOWN: It&#x27;s Windows only, but I managed to cluge it into working under Linux,
+[1370.24] Stephen: as well as trying it on Windows.
+[1372.24] Stephen: Refuses to go full screen, even under Windows.
+[1374.24] Stephen: Just a little bit odd there.
+[1376.24] Stephen: I think it&#x27;s designed for PS4.
+[1378.24] Stephen: I don&#x27;t have any consoles, but I gather that&#x27;s where a number of the players are.
+[1382.24] Stephen: I was going to say, there&#x27;s a couple of these ones,
+[1385.24] Curry: and it&#x27;s a little bit confusing,
+[1387.24] Curry: because we got something something League about four times, haven&#x27;t we?
+[1390.24] Curry: But they did make, I think, an Xbox and PS4 version of one of these,
+[1396.24] Curry: but I&#x27;ve no idea how that plays, because obviously using a PS4 controller
+[1401.24] Curry: is one of the worst things possible to do when trying to fly anything.
+[1404.24] Curry: There are people talking about plugging OpenTX into a PlayStation
+[1408.24] Stephen: with varying degrees of success.
+[1411.24] Stephen: From what I can gather, the way you really want to do it is just go straight USB,
+[1414.24] Stephen: not use one of these wireless adapters, because they have very varying results,
+[1417.24] Stephen: but straight in USB.
+[1419.24] Stephen: The one thing I should get off the bat right now,
+[1423.24] Stephen: if you&#x27;re finding that you can&#x27;t see a throttle channel,
+[1427.24] Stephen: it&#x27;s because Windows, or whatever your OS is, has assumed you&#x27;re using a gamepad.
+[1433.24] Stephen: Curry probably knows this, but gamepads have triggers, analog triggers.
+[1438.24] Stephen: So you don&#x27;t go left X, left Y, right X, right Y,
+[1444.24] Stephen: you go left X, left Y, left Z, right X, right Y, right Z.
+[1451.24] Stephen: So where you think you should be seeing a throttle, usually like AETR should be on channel four,
+[1459.24] Stephen: or channel four, it assumes is going to be the trigger axis,
+[1463.24] Stephen: and most of these don&#x27;t have any use for a trigger, so they hide the trigger axis.
+[1467.24] Stephen: So you want to step over channels three and six,
+[1472.24] Stephen: and just map things to one, two, and then four, five,
+[1478.24] Stephen: and then you should get a mapping if you haven&#x27;t got someone who&#x27;s actually worked,
+[1483.24] Stephen: wait, mirrors, someone who&#x27;s actually worked and got their controller mapping working properly.
+[1488.24] Stephen: A lot of these games just don&#x27;t bother to do that,
+[1491.24] Stephen: so you&#x27;re going to need to jump around it and create a special model for the joystick,
+[1496.24] Stephen: which isn&#x27;t too much hardship, you just have an extra model that remaps avoiding channels three and six.
+[1502.24] Stephen: You&#x27;ll also find that when you want to map a button,
+[1506.24] Stephen: a lot of them think things aren&#x27;t buttons or switches until you get up above that axis ten or eleven,
+[1511.24] Stephen: and below that it thinks, no, it must be an axis, it must be like a thumb hat,
+[1516.24] Stephen: or an extra, God knows what they put on the fishing controller.
+[1520.24] Stephen: I can explain why that happens quite easily.
+[1524.24] Curry: In OpenTX they designed the joystick map,
+[1529.24] Curry: so the first sixteen channels are all axis, and anything above that is a button.
+[1534.24] Curry: It doesn&#x27;t matter what it&#x27;s assigned to, if you&#x27;re on channel seventeen and you put it on a stick,
+[1540.24] Curry: it&#x27;s now a button and has a zero or one.
+[1543.24] Curry: That&#x27;s kind of OpenTX&#x27;s fault, but it is very odd.
+[1547.24] Stephen: I was able to get buttons reading out on channels fourteen and fifteen, so I don&#x27;t know what was going on there.
+[1553.24] Stephen: I don&#x27;t have anything mapped over channel sixteen, but I managed to get buttons working.
+[1558.24] Stephen: Maybe we can put our heads together and post a profile on this, but that was present on a bunch of these.
+[1564.24] Stephen: So anyway, DCL, very expensive.
+[1567.24] Stephen: The quad selection, I&#x27;ve given that a three out of ten on DCL,
+[1571.24] Stephen: because they have their big yellow and black quad, their small yellow and black quad,
+[1575.24] Stephen: and a giant yellow and black quad.
+[1578.24] Stephen: And you&#x27;re like, oh, but look, there&#x27;s hundreds more.
+[1580.24] Stephen: Well, the hundreds more are just skins. They don&#x27;t behave any differently.
+[1583.24] Stephen: So you&#x27;ve got an X-Class that isn&#x27;t really designed for the tracks,
+[1590.24] Stephen: a middling underpowered seven inch, and then a typical kind of five inch race, which is a bit more fun.
+[1596.24] Stephen: And I flew most of them on the five inch race one, so three out of ten for that.
+[1600.24] Stephen: The graphics, I&#x27;m saying nine out of ten, because it had beautiful, beautiful trails that you followed,
+[1606.24] Stephen: and the maps were rendered in delicious detail.
+[1609.24] Stephen: This is the only one where I noticed the scenery was actually one of the two,
+[1613.24] Stephen: where I noticed the scenery is actually dynamic, and there&#x27;s some movement and things there.
+[1616.24] Stephen: That was nice.
+[1618.24] Stephen: The controller support was four out of ten, because in the menus,
+[1624.24] Stephen: at some point it would decide, because you&#x27;re using a gamepad,
+[1628.24] Stephen: all of the menu actions are no longer clickable with your mouse,
+[1632.24] Stephen: and you have to use your shoulder buttons to move through the menus.
+[1636.24] Stephen: And I never did figure out exactly which channels were supposed to be the shoulder buttons,
+[1639.24] Stephen: so I was unable to use the menus for a lot of that,
+[1642.24] Stephen: unless I backed out of the menu and went in, and then it would randomly allow mouse clicking,
+[1646.24] Stephen: and as soon as I maybe jiggled the stick on the joystick,
+[1649.24] Stephen: it was convinced that I plugged in my gamepad, and it would remove the mouse clicking options
+[1653.24] Stephen: and show me LT and RT prompts for things,
+[1656.24] Stephen: which just stops me from being able to actually select a track.
+[1659.24] Stephen: That was pretty rough.
+[1661.24] Stephen: The tracks are just huge.
+[1664.24] Stephen: This is along with Prop Town, and you&#x27;ll probably see Prop Town a lot of videos,
+[1667.24] Stephen: and there&#x27;s an oil bando that&#x27;s quite nice as well.
+[1670.24] Stephen: There&#x27;s not many of them, but the tracks are really, really nice.
+[1673.24] Stephen: Interface and menus, very hit and miss, like I said.
+[1677.24] Stephen: I&#x27;m saying five out of ten for the interface and menus,
+[1680.24] Stephen: because you just can&#x27;t click through them with OpenTX,
+[1684.24] Stephen: because it thinks that you need to use R1 and L1 and A and B buttons.
+[1689.24] UNKNOWN: Maybe we can figure out a profile for that,
+[1691.24] Stephen: but it&#x27;s going to rely on people memorizing things
+[1694.24] Stephen: and using their trim switches as buttons, it&#x27;s horrible.
+[1697.24] Stephen: Overall, it looks great.
+[1699.24] Stephen: There&#x27;s a lot of hype on DCL, but I&#x27;d say, actually,
+[1702.24] UNKNOWN: that 25-quid price and the low number of quads make it not great.
+[1707.24] Stephen: Then move on to DRL, which is kind of the whole...
+[1710.24] UNKNOWN: Sorry.
+[1711.24] Jack: It&#x27;s £8.24 at the moment.
+[1713.24] Jack: It&#x27;s on sale.
+[1715.24] Stephen: Yeah, that&#x27;s when you want to buy it.
+[1718.24] Jack: DRL on the other hand.
+[1720.24] Jack: Just to say as well, while Stephen&#x27;s going through all this,
+[1723.24] Curry: if you&#x27;ve tried these and have an opinion,
+[1725.24] Curry: please write it in the comments and we&#x27;ll take that into account.
+[1728.24] Curry: Throw it in there. More feedback is good.
+[1731.24] Stephen: Yeah, so that&#x27;s DCL, and the one I was going to...
+[1734.24] Stephen: Yeah, there&#x27;s lots and lots of hype, but to be honest,
+[1737.24] Stephen: the lack of quads and lack of tracks is a bit of a downer.
+[1740.24] Stephen: This episode was recorded in front of a live online audience,
+[1743.24] Frank: downloaded and edited to make sense when it played audio only,
+[1747.24] Frank: censored to please the iTunes people,
+[1749.24] Frank: hosted on the internet,
+[1750.24] Frank: forwarded through to your podcast provider,
+[1752.24] Frank: downloaded, playing on your device and is now playing in your ears.
+[1756.24] Frank: All thanks to our Patreons.
+[1758.24] Frank: Consider joining them and you&#x27;ll also get other online benefits.
+[1761.24] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
+[1766.24] UNKNOWN: Then if we go on to DRL, which I think is better,
+[1773.24] Stephen: the price is £7.49 normally and it&#x27;s 50% off,
+[1778.24] Stephen: so it&#x27;s down to like £3.60 right now.
+[1781.24] Stephen: I think you just...
+[1782.24] Stephen: You can&#x27;t... Oh, no, the price is up again.
+[1784.24] Stephen: You can&#x27;t not buy this one if it&#x27;s on sale. It&#x27;s really good.
+[1788.24] Stephen: If you want to have a go, the quality here,
+[1792.24] Stephen: the number of quads and the fact that they do tryouts each year
+[1795.24] Stephen: and you can just play everyone in the world,
+[1798.24] Stephen: that makes it quite a compelling purchase.
+[1802.24] Stephen: There&#x27;s some beginner tracks and then it escalates very quickly
+[1806.24] Stephen: up to some insanely difficult professional tracks with tight cornering
+[1810.24] Stephen: where you need to do inverted zero-g moves to get through gates and stuff.
+[1814.24] UNKNOWN: I&#x27;d say the quad selection is 9 out of 10.
+[1817.24] Stephen: I&#x27;m seeing everything from 533s Switchback Pro
+[1821.24] Stephen: through to other popular race frames, freestyle frames.
+[1826.24] Stephen: There&#x27;s stuff up to the DRL 4,
+[1829.24] Stephen: which is a big 7-inch all the way down to a whoop.
+[1832.24] Stephen: You can fly a whoop on full throttle around the same tracks
+[1836.24] Stephen: that you flew a 7-inch very cautiously around. It&#x27;s quite funny.
+[1840.24] Stephen: What do they feel like now? Do they feel like you&#x27;re flying a drone?
+[1845.65] Tony: I think... I found it compelling.
+[1848.65] Stephen: I found Freerider, FBV Freerider,
+[1851.65] Stephen: they haven&#x27;t changed the physics on that
+[1853.65] Stephen: and that felt like absolute poop compared to this.
+[1856.65] Stephen: I actually felt it was a very nice feeling game
+[1860.65] UNKNOWN: and when I put on, I played most of it with that 533 Switchback Pro
+[1865.65] Stephen: and it felt really nice.
+[1868.65] Stephen: I can&#x27;t speak for the bigger DRL quads because I just don&#x27;t fly that type of thing
+[1872.65] Stephen: but I fly light 5 inches and it felt like a light 5 inch.
+[1876.65] UNKNOWN: I think I preferred the feel of DRL to pretty much everything here.
+[1880.65] Stephen: It felt like they really put a lot of effort into it
+[1883.65] Stephen: and I can believe that because they&#x27;ve got professional race pilots playing it
+[1886.65] Stephen: and they&#x27;d call it out if there was something too wrong there.
+[1890.65] Stephen: The graphics aren&#x27;t quite as shiny as DCL but they&#x27;re still pretty hot.
+[1894.65] Stephen: I&#x27;ll give the graphics an 8 out of 10.
+[1896.65] Stephen: It feels a little bit older. It&#x27;s not quite as shiny as DCL or uncrashed here
+[1900.65] Stephen: but it performs well and there&#x27;s no glitching and slowdowns.
+[1904.65] Stephen: What&#x27;s really visible is the fact that they&#x27;ve had maps in there from 2016, 2017
+[1909.65] Stephen: all the way through to 21
+[1911.65] Stephen: and the older maps just don&#x27;t look as good.
+[1913.65] Stephen: They haven&#x27;t gone back and remastered them
+[1915.65] Stephen: so they&#x27;re still using an older 3D feature set.
+[1919.65] Stephen: Not as great textures, not as great lighting.
+[1922.65] Stephen: There&#x27;s quite a variety.
+[1924.65] Stephen: You can see how it&#x27;s progressed just by playing a few of them
+[1927.65] Stephen: but the new maps do look spectacular.
+[1929.65] Stephen: I&#x27;m thinking of things like the bridge and campground maps. They were really good.
+[1933.65] UNKNOWN: Controller support, 7 out of 10.
+[1936.65] Stephen: Same problem with channels.
+[1938.65] Stephen: Calibration worked.
+[1940.65] Stephen: It didn&#x27;t think that I was using a gamepad through the menus
+[1943.65] Stephen: and I had no issues there.
+[1945.65] Stephen: Tracks 9 out of 10.
+[1947.65] Stephen: There&#x27;s just a huge and I mean huge number of tracks.
+[1950.65] Stephen: Not quite as many as the user-submitted iterations for Velocidrone
+[1954.65] Stephen: but a really, really big number of tracks.
+[1957.65] Stephen: There&#x27;s some United States Air Force maps which are quite nice
+[1963.65] Stephen: where you can fly through decommissioned aircraft
+[1966.65] Stephen: and you&#x27;ve got gates that are like the turbine housings of jets
+[1969.65] Stephen: that you have to make a beeline through.
+[1972.65] Stephen: Really, really interesting setup on this one.
+[1975.65] Stephen: The only problem with some of the maps are that they&#x27;re so varied and odd.
+[1980.65] Stephen: A lot of the times a couple of aeroplane wings with light-up posts on them
+[1986.65] Stephen: are the gate and it can be hard to tell what&#x27;s a gate
+[1988.65] Stephen: and what&#x27;s just part of the scenery that you&#x27;re flying around
+[1991.65] Stephen: but overall the variety I think really made up for that.
+[1994.65] Stephen: And when you&#x27;re chasing towards a gate it shows a fixed-size sprite
+[1998.65] Stephen: and you don&#x27;t know if you&#x27;re getting closer or not to the gate
+[2000.65] Stephen: because the sprite doesn&#x27;t get bigger as you fly towards it.
+[2003.65] Stephen: It just stays the same size and then eventually you hit it
+[2006.65] Stephen: when you&#x27;re not expecting to.
+[2009.65] UNKNOWN: The interface, 7 out of 10, really simple
+[2012.65] Stephen: and I like the fact they put the camera angle on the main menu
+[2015.65] Stephen: so you didn&#x27;t have to go into submenus.
+[2017.65] Stephen: You just had the camera angle right there.
+[2019.65] Stephen: It&#x27;s nice and easy to tweak if you wanted to dial it in.
+[2022.65] Stephen: Because a lot of these, you&#x27;re changing quads,
+[2024.65] Stephen: flying different speed maps with tight cornering or big ovals.
+[2027.65] Stephen: And you want to change the camera angle quite a bit.
+[2030.65] Stephen: But I think the real winner on that was the community,
+[2032.65] Stephen: like 9 out of 10.
+[2034.65] Stephen: You can play in tryouts every year
+[2038.65] Stephen: and those tryouts can take you into the real world competition
+[2042.65] Stephen: so that&#x27;s the only one that offers that as far as I know.
+[2046.65] Stephen: Matchmaking was on by default
+[2048.65] Stephen: which I didn&#x27;t really want when I was testing it out
+[2050.65] Stephen: but it was easy enough to turn off the notifications
+[2052.65] Stephen: and just go into Mr. Boring&#x27;s Forever Alone mode
+[2055.65] Stephen: which is what I did.
+[2058.65] Stephen: The next one, everyone loves
+[2060.65] Stephen: and I think probably a lot of people own a copy of this
+[2062.65] Stephen: from what I can tell.
+[2063.65] Stephen: It&#x27;s Velocidrone.
+[2065.65] Stephen: I thought it was the oldest of the bunch
+[2067.65] Stephen: but after Frank suggested I try FPV Freerider,
+[2069.65] Stephen: I&#x27;m no longer sure.
+[2071.65] Stephen: I&#x27;ve used the Velocidrone.
+[2073.65] Jack: The Velocidrone has its own store
+[2075.65] Stephen: and that&#x27;s kind of a negative.
+[2077.65] Stephen: It uses its own downloader
+[2079.65] Stephen: and its own downloader is kind of janky.
+[2081.65] Stephen: I had to install older security libraries
+[2083.65] Stephen: on my Linux system for it to work
+[2085.65] Stephen: and to install an old version of TLS
+[2087.65] Stephen: because they haven&#x27;t properly included the libraries.
+[2089.65] Stephen: It takes an absolute age to download.
+[2092.65] Stephen: The base game is 17 quid
+[2094.65] Stephen: and there&#x27;s a bunch of DLC between 4 and 8 quid for this.
+[2098.65] Stephen: There&#x27;s a lot of tracks but there&#x27;s no real curation
+[2102.65] Stephen: so you&#x27;ve got millions of tracks with just minor variations
+[2106.65] Stephen: and you can&#x27;t really tell which are good and which aren&#x27;t.
+[2109.65] Stephen: The graphics are described as janky.
+[2113.65] UNKNOWN: They&#x27;re well behind most other things
+[2115.65] Stephen: and the quad selection,
+[2118.65] UNKNOWN: I&#x27;d say 5 out of 10,
+[2120.65] Stephen: there&#x27;s lots of quads but I didn&#x27;t really feel
+[2122.65] Stephen: there was a difference in performance
+[2124.65] Stephen: between a lot of the quads.
+[2126.65] UNKNOWN: I gather additional quads are available in a paid 4 DLC
+[2129.65] Stephen: but you&#x27;re paying 17 quid for the game to start with in it.
+[2132.65] Stephen: I didn&#x27;t really feel like going for the DLC.
+[2135.65] Stephen: I think the graphics I said would be a 2 out of 10 here.
+[2138.65] Stephen: It really took me back to 2002
+[2141.65] Stephen: when things were transitioning from half-life to half-life 2
+[2146.65] Stephen: kind of think Quake 3 Arena,
+[2148.65] Stephen: that sort of really, really old graphics.
+[2150.65] Stephen: Lots of terrain pop up and flashing on the highest settings.
+[2154.65] Stephen: Shadows look terrible.
+[2156.65] Stephen: HDR claims to be there but it&#x27;s sort of half-implemented HDR.
+[2160.65] Stephen: The resolution would reset to 640 480 every time I started it under Linux.
+[2164.65] Stephen: The load times are really long
+[2166.65] Stephen: and my notes are here.
+[2168.65] Stephen: I cannot emphasise how **** this looks compared to everything else.
+[2172.65] Stephen: It was the worst looking by a long way.
+[2174.65] Stephen: How did you find, because one of the things
+[2177.65] Curry: I always thought about Velocidrone,
+[2179.65] Curry: it&#x27;s not particularly pretty,
+[2181.65] Curry: he says with clearly the worst looking quad sim ever,
+[2184.65] Curry: but the physics and the feel of the quad to me always felt pretty good.
+[2189.65] Curry: Did you find that?
+[2191.65] Curry: I was frustrated by the size of the environment
+[2194.65] Stephen: and it was way behind DRL, notably.
+[2198.65] Stephen: Just the performance and the maps were quite small.
+[2203.65] UNKNOWN: I didn&#x27;t enjoy it and when I crashed it would auto restart me
+[2207.65] Stephen: and things like this where I couldn&#x27;t just flip over and carry on.
+[2212.65] UNKNOWN: I just bounced off this one.
+[2215.65] Stephen: I bought it on recommendation and spent 10 or so hours trying to get into it.
+[2220.65] Stephen: I just couldn&#x27;t.
+[2222.65] UNKNOWN: I found the controller support was a bit off as well.
+[2225.65] Stephen: I couldn&#x27;t get it to detect any switches or buttons on my controller.
+[2230.65] Stephen: Just things like the curation of tracks.
+[2233.65] UNKNOWN: You&#x27;ve got like empty scene day.
+[2235.65] Stephen: Great, empty scene day, everyone&#x27;s favourite.
+[2238.65] Stephen: Where are the popular tracks?
+[2240.65] Stephen: Where&#x27;s like a curated track?
+[2243.65] UNKNOWN: Any views or opinions expressed on this show are personal
+[2247.65] Jack: and do not reflect the use of...
+[2249.65] UNKNOWN: Yeah, I know it&#x27;s super popular.
+[2251.65] Stephen: I think it&#x27;s because people have been playing it for donkey&#x27;s years.
+[2255.65] UNKNOWN: Time to memorial.
+[2257.65] Stephen: Yeah, and that&#x27;s what&#x27;s got the...
+[2260.65] Stephen: I said it was 10 out of 10 for the community
+[2262.65] Stephen: because I know there&#x27;s a huge number of people that play it.
+[2265.65] Stephen: I&#x27;m sure if your mates are on this and you&#x27;ve got older laptops
+[2268.65] Stephen: and you just want something to kick off a game, it&#x27;s great.
+[2272.65] Stephen: I found it challenging compared to the others
+[2274.65] Stephen: and that might be because the others have got a bit more advertising behind them.
+[2278.65] Stephen: One of the things about DRL, it did have some annoying
+[2281.65] Stephen: insurance company sponsorship messages
+[2283.65] Stephen: and there&#x27;s none of that here.
+[2288.38] Stephen: I think what really got me about CurryKittenSim
+[2292.38] Stephen: was he&#x27;s only been working on that for a little while
+[2295.38] Stephen: and it already looks just about as good as Velocidrone does
+[2298.38] Stephen: and the controller mapping worked, I think, a bit better than Velocidrones
+[2302.38] Stephen: and I just don&#x27;t know how it&#x27;s so bad
+[2304.38] Stephen: when it&#x27;s been in development for so long.
+[2307.38] Stephen: It just felt...
+[2309.38] UNKNOWN: Spending the money on this, it just felt kind of insulting
+[2312.38] Stephen: that it was as bad as it is.
+[2315.38] Frank: Mm-hmm.
+[2317.38] UNKNOWN: And, you know, Curry&#x27;s is literally 10% of the cost of this,
+[2320.38] Stephen: so I&#x27;d say go buy Curry&#x27;s.
+[2322.38] Stephen: Oh, you could get the free version, which is infinitely cheaper.
+[2326.38] Stephen: Oh, there you are. Infinitely cheaper.
+[2328.38] Stephen: And then we&#x27;ve got Lift-Off as well, which people also slag off.
+[2332.38] Stephen: I spent a bit more time on Lift-Off.
+[2333.38] Stephen: I found it easier to get into,
+[2335.38] Stephen: but it&#x27;s also fairly old, I think, second oldest here.
+[2339.38] Stephen: It&#x27;s also quite expensive. It&#x27;s about the same cost as Velocidrone,
+[2342.38] Stephen: but it&#x27;s on Steam and so it does have occasional sales Lift-Off.
+[2347.38] Stephen: The graphics, I&#x27;d say, are middling.
+[2350.38] Stephen: They&#x27;re not quite down there with Velocidrone,
+[2352.38] Stephen: but they&#x27;re certainly not up there with DRL and the newer stuff.
+[2355.38] Stephen: There&#x27;s some fancy light effects and things,
+[2358.38] Stephen: but, you know, they&#x27;ve put all this with the camera filters on.
+[2361.38] Stephen: When you actually hold on to the shots for a minute,
+[2363.38] Stephen: you realize it&#x27;s pretty basic.
+[2366.38] Stephen: The quad selection, I think, is 9 out of 10,
+[2368.38] Stephen: because they really benefit from the Steam workshops.
+[2371.38] Stephen: They&#x27;ve got community-submitted quads,
+[2373.38] Stephen: and that gives them a huge variety of different quads that you can fly,
+[2378.38] UNKNOWN: together with reviews and comments about them,
+[2380.38] Stephen: which I found difficult about Velocidrone,
+[2382.38] Stephen: that the maps and quads and things,
+[2384.38] Stephen: there wasn&#x27;t a lot of information,
+[2385.38] Stephen: whereas Steam&#x27;s workshop system lets you actually have a little bit
+[2388.38] Stephen: of reporting on which is what and kind of how they behave.
+[2393.38] UNKNOWN: The graphics, I think, are 6 out of 10.
+[2396.38] Stephen: It&#x27;s an older engine.
+[2397.38] Stephen: It shows its age in areas like foliage.
+[2401.38] Stephen: Performance is fairly strong.
+[2403.38] Stephen: They&#x27;ve been careful and not cluttered up the maps with tons of stuff,
+[2406.38] Stephen: so the performance level stays pretty high.
+[2408.38] Stephen: But the maps are not as detailed as they are in some other Sims
+[2412.38] Stephen: in order to maintain that performance level.
+[2415.38] UNKNOWN: There is a DLC for this, I should mention,
+[2417.38] Stephen: that adds a bunch of night modes,
+[2419.38] Stephen: which is perhaps unique.
+[2421.38] Stephen: We don&#x27;t see that with a lot of the others,
+[2423.38] Stephen: so you get all of these maps rendered at night with fancy lighting,
+[2426.38] Stephen: which could be nice.
+[2429.38] UNKNOWN: Controller support. Sorry.
+[2431.38] Stephen: I was just going to say, there&#x27;s a quick comment from Caroline there.
+[2434.38] Curry: You mentioned old PCs are pretty good for Velocidrone.
+[2437.38] Curry: She says, my PC is barely able to play Velocidrone.
+[2440.38] Curry: I did notice, and this is not to slag off Sims that aren&#x27;t mine,
+[2444.38] Curry: I do notice that some Sims, especially Velocidrone,
+[2447.38] Curry: are quite bloated in terms of how long it will take
+[2451.38] Curry: an older system to boot the game up.
+[2453.38] Curry: And then when you say, I want to play this map,
+[2456.38] UNKNOWN: wait several minutes, and then it will go.
+[2459.38] Curry: And that&#x27;s only a problem if you say, actually,
+[2461.38] Curry: my friend is all playing another map, I want to change,
+[2463.38] Curry: and then you have to wait a few minutes to change,
+[2465.38] Curry: which is a bit of a shame.
+[2467.38] UNKNOWN: I think Velocidrone wanted, it only took 17 gigs of disk space,
+[2472.38] Stephen: but during the install it wanted something like 45 gigs
+[2475.38] Stephen: to do the install, and I just didn&#x27;t really understand
+[2477.38] Stephen: what was going on there.
+[2478.38] Stephen: It took a very long time to install.
+[2480.38] Stephen: And I&#x27;ve got quite a modern PC here with NVMe storage
+[2483.38] Stephen: that can run at a couple of gigs a second,
+[2485.38] Stephen: but it still spent 20 minutes after it downloaded the stuff,
+[2490.38] Stephen: just decompressing things.
+[2491.38] Stephen: And I know I could have compressed and decompressed
+[2494.38] Stephen: that data about 50 times over in the amount of time
+[2496.38] Stephen: their installer took.
+[2497.38] Stephen: So I think that there&#x27;s some inefficiencies there.
+[2500.38] Stephen: They&#x27;ve got to remember their audience,
+[2502.38] Jack: that we spend all our money on drones and crashing
+[2505.38] Jack: rather than PCs.
+[2506.38] Jack: Well, Liftoff as well, I think you can have a fast preset
+[2510.38] Stephen: with Liftoff that does pretty well.
+[2512.38] Stephen: Yeah.
+[2513.38] Stephen: And the controller supports.
+[2515.38] Stephen: And the community maps.
+[2516.38] UNKNOWN: Yeah, the community maps are nice.
+[2519.38] Stephen: I think if you put your stuff on Steam,
+[2521.38] Stephen: you get a bit of a jumpstart in terms of doing multiplayer
+[2524.38] Stephen: and community support and allowing people to edit stuff
+[2527.38] Stephen: and submit their own content.
+[2529.38] Stephen: Steam gives you a lot of that stuff for free.
+[2531.38] Stephen: With Velocidrone, they&#x27;ve tried to do it,
+[2533.38] Stephen: but they&#x27;ve clearly had to put a lot more work into it
+[2535.38] Stephen: to get that off the ground.
+[2537.38] UNKNOWN: I think the tracks.
+[2539.38] Stephen: So controller support, I said 9 out of 10
+[2541.38] Stephen: because it just seemed to work.
+[2543.38] Stephen: I don&#x27;t know what they&#x27;ve done with their secret source
+[2545.38] Stephen: controller mapping, but it worked really well.
+[2547.38] Stephen: Buttons and everything.
+[2549.38] UNKNOWN: The only complaint is I can&#x27;t remap the controller
+[2551.38] Stephen: without quitting a map, which is annoying
+[2553.38] Stephen: when you&#x27;re trying to dial everything in the first time
+[2555.38] Stephen: because you find yourself loading and quitting maps
+[2557.38] Stephen: a jillion times to get everything working.
+[2560.38] UNKNOWN: Tracks, I&#x27;d say 7 out of 10.
+[2562.38] Stephen: There&#x27;s not a huge number of base maps,
+[2564.38] Stephen: but the maps are huge.
+[2566.38] Stephen: Not as huge as DRL, but they&#x27;re pretty large
+[2568.38] Stephen: and they&#x27;re well-designed.
+[2570.38] Stephen: There&#x27;s a lot of community maps, and some of those
+[2572.38] Stephen: are quite creative.
+[2574.38] Stephen: You get a lot of variety from indoors to cities
+[2576.38] Stephen: to construction sites, woods,
+[2578.38] Stephen: and they&#x27;ve got a very nice map
+[2580.38] Stephen: of a big Russian radar array.
+[2582.38] Stephen: I think it&#x27;s called the Russian woodpecker.
+[2586.38] UNKNOWN: Yeah, which is pretty cool.
+[2588.38] Stephen: Pretty cool.
+[2590.38] UNKNOWN: Yeah, so there&#x27;s some quite
+[2592.38] Stephen: unique maps in there. It&#x27;s fun.
+[2594.38] UNKNOWN: Interface was also a
+[2596.38] Stephen: strength of it. It was nice and clear.
+[2598.38] Stephen: Not too much faffing around.
+[2600.38] Stephen: Community, I&#x27;d say,
+[2602.38] UNKNOWN: it&#x27;s not as popular as others. People like to
+[2604.38] Stephen: dig on lift-off
+[2606.38] UNKNOWN: and call it names
+[2608.38] Stephen: for whatever reason.
+[2610.38] Stephen: I think it&#x27;s always
+[2612.38] Stephen: traditionally vying for popularity
+[2614.38] Stephen: with Velocidrone, and Velocidrone just seems to
+[2616.38] Stephen: get the pro racer element, whereas lift-off&#x27;s
+[2618.38] Stephen: a bit more of a noob thing, I guess.
+[2620.38] Stephen: There&#x27;s some sponsorship here
+[2622.38] Stephen: which kind of falls into it,
+[2624.38] Curry: because lift-off is, I think,
+[2626.38] Curry: sponsored by Emotional Sea.
+[2628.38] Curry: Maybe amongst them.
+[2630.38] Curry: Velocidrone is TBS,
+[2632.38] Curry: so it&#x27;s kind of like
+[2634.38] Curry: Commodore 64 versus Spectrum
+[2636.38] Curry: fighting against each other.
+[2638.38] Curry: We&#x27;re on to the big guns now.
+[2640.38] UNKNOWN: Currykit and Sim.
+[2642.38] Stephen: We flip over to the
+[2644.38] Stephen: Steam page for that bad boy.
+[2648.38] Stephen: I felt like, should I put ratings
+[2650.38] Stephen: on this? I don&#x27;t feel you have to
+[2652.38] Stephen: be nice to me. You can make mine on Steam.
+[2654.38] Stephen: I&#x27;m going to go gentle on something.
+[2656.38] UNKNOWN: I think that the key
+[2658.38] Stephen: thing to mention here is if you&#x27;re prepared to do the
+[2660.38] Stephen: legwork, this is available
+[2662.38] Stephen: for free on GitHub, or
+[2664.38] Stephen: a small donation. It really is a small donation
+[2666.38] Stephen: there. I think it&#x27;s £1.69
+[2668.38] Stephen: on Steam. I&#x27;d say just buy
+[2670.38] Stephen: Bun Curry a couple of quid.
+[2672.38] Stephen: It&#x27;s one person&#x27;s work, and he&#x27;s clearly
+[2674.38] Stephen: put a bunch of time into it.
+[2676.38] Stephen: £1.70 is
+[2678.38] Stephen: even a half pint, let&#x27;s be honest.
+[2680.38] UNKNOWN: It also runs Windows Mac and Linux,
+[2682.38] Stephen: which I think is kind of the odd
+[2684.38] Stephen: one out here. I&#x27;ve managed to
+[2686.38] Stephen: goose most of this stuff and make it work under
+[2688.38] Stephen: Linux, but that&#x27;s just because I&#x27;m a big nerd
+[2690.38] Stephen: and I run Linux all the time. That&#x27;s my
+[2692.38] Stephen: day job. This one has native Mac
+[2694.38] Stephen: support, so useful for
+[2696.38] Stephen: a lot of people. Not sponsored.
+[2698.38] Stephen: Yeah, fake news,
+[2700.38] Jack: curry kit, and fake news.
+[2702.38] UNKNOWN: It does come up with a massive
+[2704.38] Stephen: TBS logo when you load it.
+[2706.38] Stephen: So is that copyright infringement then?
+[2708.38] UNKNOWN: And it has the TBS quads available
+[2710.38] Curry: in it. If you go to
+[2712.38] Curry: Liftoff, it has all the
+[2714.38] Curry: Emotion RC quads available, so that was
+[2716.38] Curry: my thinking behind that.
+[2718.38] Jack: Very listen to us
+[2720.38] Jack: we are idiots.
+[2722.38] UNKNOWN: So,
+[2724.38] Stephen: I do wonder why they&#x27;ve got a
+[2726.38] Stephen: massive Team Blackstreet logo, because that comes
+[2728.38] Stephen: up every time it loads, and I&#x27;ve noticed it
+[2730.38] Stephen: a lot.
+[2732.38] UNKNOWN: So, obviously I&#x27;ll hand over to
+[2734.38] Stephen: Curry fairly soon on this one. I&#x27;ll just
+[2736.38] Stephen: run through some of the tidbits I&#x27;ve
+[2738.38] Stephen: got. But I think, yeah, one man versus Pro
+[2740.38] Stephen: Game Studio. He&#x27;s done pretty well.
+[2742.38] Stephen: This is kind of
+[2744.38] Stephen: some unique aspects in the video that we&#x27;re
+[2746.38] Stephen: looking at now. We were just following some cars
+[2748.38] Stephen: and now we&#x27;re following some planes.
+[2750.38] Stephen: It&#x27;s got a line of sight mode, which I
+[2752.38] Stephen: think is in one or two of the others, but not very
+[2754.38] Stephen: common. The
+[2756.38] Stephen: quad selection,
+[2758.38] Stephen: I think it&#x27;s unique in that you have
+[2760.38] Stephen: planes and cars. That&#x27;s
+[2762.38] Stephen: what really makes this one stand out.
+[2764.38] UNKNOWN: It would
+[2766.38] Stephen: be nice to see some presets I put.
+[2768.38] Stephen: It&#x27;s like, you know, to tweak the quad a bit, to go
+[2770.38] Stephen: from down to a woof up to X
+[2772.38] Stephen: class and stuff. But, you know,
+[2774.38] UNKNOWN: it&#x27;s just one guy.
+[2776.38] UNKNOWN: I was really impressed by the
+[2778.38] Stephen: graphics. I mean, it was skimming around an environment
+[2780.38] Stephen: here. It&#x27;s got 3D terrain
+[2782.38] Stephen: mountains, and it&#x27;s
+[2784.38] Stephen: got shadows and stuff that just look
+[2786.38] Stephen: a lot better than some of the others here.
+[2788.38] Stephen: I think he&#x27;s done
+[2790.38] Stephen: a pretty good job with Unity here, which is nice.
+[2792.38] Stephen: It&#x27;s got a pretty
+[2794.38] Stephen: big map as well. A lot of them shy away
+[2796.38] Stephen: from putting too much stuff onto one map,
+[2798.38] Stephen: I guess because of PC constraints
+[2800.38] Stephen: back in the day.
+[2802.38] UNKNOWN: I think Curry&#x27;s probably done a lot more testing on
+[2804.38] Stephen: low-end systems.
+[2806.38] UNKNOWN: I just have this stupid workstation I run
+[2808.38] Stephen: on here.
+[2810.38] UNKNOWN: I think this
+[2812.38] Stephen: in particular makes Philosodone&#x27;s graphics
+[2814.38] Stephen: inexcusable. It was this thing like
+[2816.38] Stephen: he&#x27;s done this. It&#x27;s not like
+[2818.38] Stephen: some big project.
+[2820.38] Stephen: Okay, he&#x27;s probably put a lot of time into it, but
+[2822.38] Stephen: he&#x27;s not put the amount of time that Philosodone has
+[2824.38] Stephen: into it, and it just looks wonderful.
+[2826.38] UNKNOWN: Very
+[2828.38] Stephen: excited to see what comes next. I saw
+[2830.38] Stephen: Curry put out a YouTube video,
+[2832.38] Stephen: and I think it calls out
+[2834.38] Stephen: some of the older
+[2836.38] Stephen: engines of other games that are hampering them
+[2838.38] Stephen: a bit, and seeing some of what Curry&#x27;s showing
+[2840.38] Stephen: with newer engines, it&#x27;s interesting to see
+[2842.38] Stephen: what he might do. Curry, over to you.
+[2844.38] UNKNOWN: Yeah,
+[2846.38] Curry: the idea
+[2848.38] Curry: behind my sim was
+[2850.38] Curry: I suppose different from other sims in that
+[2852.38] Curry: I&#x27;m not that into racing,
+[2854.38] Curry: and most of the other sims
+[2856.38] Curry: are more geared towards racing. You can obviously
+[2858.38] Curry: freestyle in them, but I&#x27;m not
+[2860.38] Curry: that interested in gates, so I wanted to put up
+[2862.38] Curry: things that we like to do, like
+[2864.38] Curry: we like to follow each other if we&#x27;re flying planes,
+[2866.38] Curry: or if
+[2868.38] Curry: there&#x27;s drift cars available, or there&#x27;s a
+[2870.38] Curry: Bando, and so I just like the idea
+[2872.38] Curry: of a big map with stuff in it,
+[2874.38] UNKNOWN: and that you can fly around
+[2876.38] Curry: to it and stuff like that. That was the
+[2878.38] Curry: general gist of it. And yeah, the reason
+[2880.38] Curry: it runs on low end systems is it was
+[2882.38] Curry: written on a 2009 Mac.
+[2884.38] Curry: But
+[2886.38] Curry: as I did mention in the video
+[2888.38] Curry: about the amount of things written in Unity,
+[2890.38] Curry: this is written using Unity,
+[2892.38] Curry: liftoffs using Unity,
+[2894.38] Curry: Velocidrones using Unity.
+[2896.38] Curry: Unity is very easy to do
+[2898.38] Curry: cross platform stuff, so it constantly
+[2900.38] Curry: surprises me that people
+[2902.38] Curry: just won&#x27;t put out a Windows
+[2904.38] Curry: and a Mac and a Linux version,
+[2906.38] Curry: because it&#x27;s pretty easy to do. I mean,
+[2908.38] Curry: I had to make some changes to do
+[2910.38] Curry: iOS and Android
+[2912.38] Curry: versions, but they&#x27;re not that hard.
+[2914.38] Curry: So putting out desktop versions, everything&#x27;s
+[2916.38] Curry: very easy, so I&#x27;m quite surprised
+[2918.38] Curry: that other sims
+[2920.38] Curry: have such a hassle, or don&#x27;t
+[2922.38] Curry: want to do that. We should call
+[2924.38] Stephen: out your controller support as well. I think that&#x27;s
+[2926.38] Stephen: one of the strongest of the bunch.
+[2928.38] Stephen: A lot of them
+[2930.38] UNKNOWN: try and make the controller support look
+[2932.38] Stephen: really technical, but you&#x27;ve just really
+[2934.38] Stephen: kept it simple. There&#x27;s not a lot on
+[2936.38] Stephen: screen.
+[2938.38] Stephen: It&#x27;s got a nice visualization of the actual
+[2940.38] Stephen: radio, and it was
+[2942.38] Stephen: a real duddle to set up, so I think
+[2944.38] Stephen: that&#x27;s worth mentioning.
+[2946.38] Curry: Even I managed it.
+[2948.38] UNKNOWN: What I found is all
+[2950.38] Curry: radios, no matter
+[2952.38] Curry: who they come from,
+[2954.38] Curry: can have
+[2956.38] Curry: you might say, okay, well
+[2958.38] Curry: I&#x27;ve got
+[2960.38] Curry: throttle on
+[2962.38] Curry: channel 3,
+[2964.38] Curry: but it doesn&#x27;t mean it&#x27;s going to appear
+[2966.38] Curry: as this axis in the same place.
+[2968.38] Curry: Which surprised
+[2970.38] Curry: the hell out of me.
+[2972.38] Curry: Literally, every single person
+[2974.38] Curry: that plugs in their new radio
+[2976.38] Curry: is telling me, why is this on axis 18?
+[2978.38] Curry: I&#x27;m like, I don&#x27;t know, that&#x27;s just the way it maps.
+[2980.38] Curry: But if you just say that&#x27;s throttle,
+[2982.38] Curry: then that should work.
+[2984.38] Curry: It&#x27;s a bit weird.
+[2987.69] Stephen: One of the things I noticed off of
+[2989.69] Stephen: FPV Freerider, it was the only one
+[2991.69] Stephen: out of the bunch that simply said
+[2993.69] UNKNOWN: move your throttle up.
+[2995.69] Stephen: Now move your left.
+[2997.69] Stephen: Now move your pitch left.
+[2999.69] Stephen: Now move roll up. And then it just
+[3001.69] Stephen: picked out those axes, and for
+[3003.69] Stephen: whatever reason, a lot of the others
+[3005.69] Stephen: leave it up to the user to kind of
+[3007.69] UNKNOWN: look at all 32 axes and
+[3009.69] Stephen: wiggle sticks. I wonder
+[3011.69] Stephen: why
+[3013.69] Stephen: they kind of don&#x27;t
+[3015.69] UNKNOWN: do more of a straightforward
+[3017.69] Stephen: matching.
+[3019.69] UNKNOWN: I do have
+[3021.69] Curry: controller remapping, which asks you to do that.
+[3023.69] Curry: The only problem is, with controller
+[3025.69] Curry: remapping, when it says move your throttle stick
+[3027.69] Curry: forwards, is that if
+[3029.69] Curry: the system doesn&#x27;t have it
+[3031.69] Curry: calibrated, so if the system thinks you&#x27;re only
+[3033.69] Curry: moving your stick this much
+[3035.69] Curry: instead of this much, then it
+[3037.69] Curry: won&#x27;t pick it up, because it&#x27;s looking for a certain
+[3039.69] Curry: amount of pitch.
+[3041.69] Curry: So that&#x27;s the easy way to do it.
+[3043.69] Curry: But occasionally, if you plug
+[3045.69] Curry: the wrong stick in, especially
+[3047.69] Curry: these, do you remember the USB dongles
+[3049.69] Curry: that plugged into the trainer ports? They were
+[3051.69] Curry: particularly bad at being calibrated.
+[3053.69] Curry: So you can move the stick all the way, and then you
+[3055.69] Curry: get like 10% movement. So you&#x27;d have to do a calibration.
+[3057.69] Curry: So one axis would be calibrated with more
+[3059.69] Stephen: movement than the other, so you&#x27;d move your throttle, but
+[3061.69] Stephen: also bump your, and I think you were
+[3063.69] Stephen: on the yaw axis. So people would constantly
+[3065.69] Curry: write to me and say, oh, I
+[3067.69] Curry: can&#x27;t get a throttle to be
+[3069.69] Curry: recognised. And this is because I found out
+[3071.69] Curry: it&#x27;s like, someone actually sent me his dongle
+[3073.69] Curry: because I was like, this is so weird, what is it?
+[3075.69] Curry: And I had to change the code because of it.
+[3077.69] Curry: It&#x27;s because you move the stick all the way, and
+[3079.69] Curry: it goes like this. So we have to
+[3081.69] Curry: recalibrate before
+[3083.69] Curry: doing the remapping.
+[3085.69] UNKNOWN: So in some circumstances
+[3087.69] Curry: it won&#x27;t work unless you&#x27;ve done a
+[3089.69] Curry: calibration first.
+[3091.69] Curry: Awesome. Okay, I said there&#x27;s
+[3093.69] Stephen: only one track, but
+[3095.69] Stephen: you know, it&#x27;s clearly work in progress, so
+[3097.69] Stephen: no judging on that. I really
+[3099.69] Stephen: like the interface and menus, man.
+[3101.69] Stephen: You&#x27;ve kept it simple, and I think
+[3103.69] Stephen: that counts for a lot. Some of the others
+[3105.69] Stephen: are kind of drowned in neon colour schemes
+[3107.69] Stephen: and you can&#x27;t really figure out what&#x27;s going on.
+[3109.69] UNKNOWN: There&#x27;s almost too much on screen.
+[3111.69] Stephen: I think less is more when it comes
+[3113.69] Stephen: to interface and setup.
+[3115.69] UNKNOWN: I still argue
+[3117.69] Jack: the building
+[3119.69] Jack: site is a bit too tight,
+[3121.69] Jack: and I miss that the
+[3123.69] Jack: the
+[3125.69] Jack: you know, the wind
+[3127.69] Jack: turbines wandering off.
+[3129.69] UNKNOWN: They don&#x27;t do that anymore. I
+[3131.69] Curry: fixed it.
+[3133.69] Curry: The wind turbines
+[3135.69] Curry: now have a script to say
+[3137.69] Curry: has your turbine moved?
+[3139.69] Curry: Move back.
+[3141.69] UNKNOWN: We don&#x27;t know what happened, but
+[3143.69] Curry: me, Jack,
+[3145.69] Curry: I don&#x27;t know if you&#x27;re the Italian
+[3147.69] Curry: and certainly Frank, we&#x27;re all playing online and chasing around.
+[3149.69] Curry: I think it&#x27;s Frank.
+[3151.69] Curry: After an hour,
+[3153.69] Curry: one of the turbine blades had moved about
+[3155.69] Curry: 20 feet away from the turbine.
+[3157.69] Curry: Just the blades, not the actual turbine.
+[3159.69] Stephen: It was still rotating.
+[3161.69] Stephen: Just a naughty bit of rounding error had crept in
+[3163.69] Stephen: and accumulated over time.
+[3165.69] UNKNOWN: Essentially, that&#x27;s it.
+[3167.69] Curry: I think it&#x27;s possible
+[3169.69] Curry: to move.
+[3171.69] Curry: We were crashing into it
+[3173.69] Curry: and I think
+[3175.69] Curry: even though the mass of these is
+[3177.69] Curry: huge, and I actually said
+[3179.69] Curry: you are constrained from movement,
+[3181.69] Curry: the fact that
+[3183.69] Curry: what happens is when a collider move
+[3185.69] Curry: against another collider, something
+[3187.69] Curry: will move no matter what.
+[3189.69] Curry: Over time, this was going
+[3191.69] Curry: out. So there&#x27;s now
+[3193.69] UNKNOWN: a script that says
+[3195.69] Curry: rotate the blade and also move it back
+[3197.69] Curry: if it moves, which is weird.
+[3199.69] Curry: Reattach blade. Rotate, reattach,
+[3201.69] Stephen: rotate, reattach.
+[3203.69] Curry: All these little tiny things.
+[3205.69] Curry: A little bloke who goes up there on a ladder
+[3207.69] Stephen: and just kind of...
+[3209.69] Curry: It&#x27;s a very weird thing.
+[3211.69] Stephen: Anyway,
+[3213.69] Stephen: I like all the plane chasing, car
+[3215.69] Stephen: chasing business, but the low
+[3217.69] Stephen: cost of entry for this one just makes it like
+[3219.69] Stephen: you&#x27;ve got to go get it.
+[3221.69] Stephen: Uncrashed would be the next
+[3223.69] Stephen: on the list.
+[3225.69] Stephen: This is the one that really...
+[3227.69] Stephen: Yeah.
+[3229.69] UNKNOWN: So this is what kicked off
+[3231.69] Stephen: my interest in this. I saw this and I was like
+[3233.69] Stephen: oh, Sims.
+[3235.69] UNKNOWN: It seems to be
+[3237.69] Stephen: one guy&#x27;s passion project.
+[3239.69] Stephen: There&#x27;s quite a few
+[3241.69] Stephen: interesting levels here.
+[3243.69] Stephen: Beautifully designed levels.
+[3245.69] Stephen: You can tell he&#x27;s not using the same
+[3247.69] Stephen: governs as the rest of them. Look at the
+[3249.69] Stephen: lighting and the shadows on this one. The one thing that
+[3251.69] Stephen: sticks out immediately is
+[3253.69] Stephen: wow, this looks nice.
+[3255.69] Stephen: The lighting is soft,
+[3257.69] Stephen: the shadows look a lot more realistic,
+[3259.69] Stephen: and some of these bando levels are just
+[3261.69] Stephen: kind of a pleasure to fly around. They really are
+[3263.69] Stephen: a joy.
+[3265.69] UNKNOWN: I think this is what
+[3267.69] Stephen: Curry was saying about before.
+[3269.69] Stephen: This is an Unreal Engine 4
+[3271.69] Stephen: game. He may just
+[3273.69] Stephen: have done a couple of stock asset dumps here.
+[3275.69] Stephen: We&#x27;re not sure, but it&#x27;s
+[3277.69] Stephen: really enabled someone to get a bit of a
+[3279.69] Stephen: jump on the graphical quality
+[3281.69] Stephen: of the others.
+[3283.69] UNKNOWN: It looks visually stunning.
+[3285.69] Stephen: There&#x27;s a lot of incidental
+[3287.69] Stephen: detail that you wouldn&#x27;t notice
+[3289.69] Stephen: until you go back to other games and
+[3291.69] Stephen: think, why are the buildings just plain boxes?
+[3293.69] Stephen: There&#x27;ll be mops
+[3295.69] Stephen: and things standing up in the
+[3297.69] Stephen: buildings and bits of rope and
+[3299.69] Stephen: plants at odd angles, just
+[3301.69] Stephen: as though they were left there.
+[3303.69] Stephen: It really helps conjure a lot of
+[3305.69] Stephen: realism in the maps.
+[3307.69] Stephen: The quad selection, 4 out of 10.
+[3309.69] Stephen: There&#x27;s A quad, but
+[3311.69] Stephen: you can change a lot of the variables by
+[3313.69] Stephen: sliders. You can say how big the props are,
+[3315.69] Stephen: how much it weighs, how much air resistance,
+[3317.69] Stephen: and so on and so forth.
+[3319.69] UNKNOWN: That gets you most of the way.
+[3321.69] Stephen: It&#x27;s not perfect. I&#x27;d like to see
+[3323.69] Stephen: a few presets that
+[3325.69] UNKNOWN: jump you around that and
+[3327.69] Stephen: have your 7-inch and your 5-inch
+[3329.69] Stephen: and your little woop presets and things.
+[3331.69] Stephen: That would, I think, help a lot.
+[3333.69] UNKNOWN: But I was able to get
+[3335.69] Stephen: a nice feel. The graphics
+[3337.69] Stephen: I think are a 10 out of 10, especially that
+[3339.69] Stephen: Sky City. You&#x27;ve got this kind of
+[3341.69] Stephen: reminds me of
+[3343.69] Stephen: what was that?
+[3346.69] Stephen: Multipass.
+[3348.69] Stephen: Multipass, yeah. Oh, God.
+[3350.69] Stephen: I completely blanked on it. Now,
+[3352.69] Stephen: the fifth element, the fifth element
+[3354.69] Stephen: reminds me a lot of that.
+[3356.69] UNKNOWN: Yup, exactly. The
+[3358.69] Stephen: incredible jumpsuit lady and
+[3360.69] Stephen: Bruce Willis being gormless and smoking
+[3362.69] Stephen: cigarettes that are 90% filter.
+[3364.69] Stephen: Yeah, and
+[3366.69] Stephen: it was really fun flying around that.
+[3368.69] Stephen: It&#x27;s just nice to be flying around an environment
+[3370.69] Stephen: where other stuff&#x27;s moving. Like a lot of these
+[3372.69] Stephen: sims, the cars are stationary, the scenery
+[3374.69] Stephen: doesn&#x27;t move, but flying around the flying city
+[3376.69] Stephen: especially, like you don&#x27;t just
+[3378.69] Stephen: have to remember the course.
+[3380.69] Stephen: You have to time it and dodge round
+[3382.69] Stephen: cars that are moving.
+[3384.69] Stephen: And I thought that was just outstanding
+[3386.69] Stephen: and it&#x27;s a lot of fun.
+[3388.69] Stephen: Controller support, 5 out of 10.
+[3390.69] Stephen: It was basic, but it worked.
+[3392.69] Stephen: It was able to detect some buttons
+[3394.69] Stephen: and switches, but a little bit finickity.
+[3396.69] Stephen: The tracks, 6 out of 10,
+[3398.69] Stephen: very small in number, but since
+[3400.69] Stephen: I bought it, they added two extra tracks,
+[3402.69] Stephen: which was nice. It shows the guys
+[3404.69] Stephen: really putting a bunch of effort into this.
+[3406.69] Stephen: That futuristic city track
+[3408.69] Stephen: is just outstanding as well.
+[3410.69] Stephen: And the Bandos are really realistic and nice.
+[3412.69] Stephen: Interface and menus are quite good.
+[3414.69] Stephen: It&#x27;s simple, it does what it needs to
+[3416.69] Stephen: and it&#x27;s clearly put the work in where
+[3418.69] Stephen: it counts on screen and
+[3420.69] Stephen: getting it to handle nicely.
+[3422.69] Stephen: Community&#x27;s pretty low, though. I&#x27;m not sure
+[3424.69] Stephen: anyone&#x27;s really playing this online. If you&#x27;re looking
+[3426.69] Stephen: for multiplayer, it might not be what you want.
+[3428.69] Stephen: But for freestyle and a bit of practice,
+[3430.69] Stephen: it&#x27;s pretty good.
+[3432.69] Stephen: Now, the last one,
+[3434.69] Stephen: FBV Freerider Recharged.
+[3436.69] Stephen: This is the newer
+[3438.69] Stephen: version of FBV Freerider
+[3440.69] Stephen: and new because it was released
+[3442.69] Stephen: in 2018.
+[3444.69] Stephen: On Steam again, yeah.
+[3448.03] Stephen: So you&#x27;ve got FBV Freerider and I&#x27;ve
+[3450.03] Stephen: gone for the Recharged version. A couple of
+[3452.03] Stephen: years newer and we&#x27;re now moving
+[3454.03] Stephen: into that dizzying era
+[3456.03] Stephen: of 4S batteries
+[3458.03] Stephen: and props that only exploded sometimes.
+[3460.03] Stephen: And this is a simulator born
+[3462.03] Stephen: of that era. And you can kind of feel
+[3464.03] Stephen: it because everything&#x27;s a little bit
+[3466.03] Stephen: sort of slow and
+[3468.03] UNKNOWN: the flight controller makes me
+[3470.03] Stephen: think like I&#x27;m kindly
+[3472.03] Stephen: requesting a butler to go and do something
+[3474.03] Stephen: rather than snapping
+[3476.03] Stephen: and it happening.
+[3478.03] UNKNOWN: But it&#x27;s fun.
+[3480.03] UNKNOWN: It&#x27;s a nice little project.
+[3482.03] Stephen: It&#x27;s maybe not great value these
+[3484.03] Stephen: days. Considering this now costs more
+[3486.03] Stephen: than DRL, which
+[3488.03] Stephen: offers a thousand times more
+[3490.03] Stephen: content for a couple of quid less,
+[3492.03] Stephen: I&#x27;m not sure it&#x27;s a great value proposition.
+[3494.03] Stephen: This is now £8.50 at the moment.
+[3496.03] Stephen: And there is a DLC as well
+[3498.03] Stephen: that adds a couple of extra tracks for another
+[3500.03] Stephen: £2.20 on top.
+[3502.03] Jack: £49.
+[3504.03] Stephen: £49.
+[3506.03] Stephen: £49. Save that penny.
+[3508.03] Stephen: The maps are really small. Like if you punch up
+[3510.03] Stephen: you&#x27;ll just get a lot of distance fogging
+[3512.03] Stephen: and then realise it&#x27;s about 300 metres
+[3514.03] Stephen: across. It reminds
+[3516.03] Stephen: me a lot of Gears of War. I was getting serious
+[3518.03] Stephen: Gears of War flashbacks off the early
+[3520.03] Stephen: Gears of War games here. Like everything
+[3522.03] Stephen: is very brown and there&#x27;s
+[3524.03] Stephen: a couple of lighting effects like Godrays
+[3526.03] Stephen: that the developers were clearly very
+[3528.03] Stephen: happy about and used extensively.
+[3530.03] Stephen: It kind of
+[3532.03] Stephen: dates the game quite heavily.
+[3534.03] Stephen: Quid selection
+[3536.03] Stephen: 3 out of 10. You&#x27;re talking sliders
+[3538.03] Stephen: but less slider-ific than Uncrashed.
+[3540.03] Stephen: You can&#x27;t do a lot with it. And they all kind of
+[3542.03] Stephen: felt the same, like a bit wonky
+[3544.03] Stephen: and not that powerful and not responsive.
+[3546.03] Stephen: Graphics, I mean
+[3548.03] Stephen: 4 out of 10 I&#x27;d say.
+[3550.03] Stephen: There&#x27;s a couple of buildings. There&#x27;s
+[3552.03] Stephen: a building you can fly around
+[3554.03] Stephen: and a car park and each map has
+[3556.03] Stephen: just like one building that you&#x27;re locked in
+[3558.03] UNKNOWN: or nearby.
+[3560.03] UNKNOWN: Not really compelling.
+[3562.03] Stephen: Very brown. Took me back
+[3564.03] Stephen: to Quake 2 and Gears of War and things.
+[3566.03] Stephen: I think
+[3568.03] Curry: the original was possibly
+[3570.03] Curry: the very first sim
+[3572.03] Curry: out there. And if you think the
+[3574.03] Curry: maps are small on Recharge, the
+[3576.03] Curry: original maps were like
+[3578.03] Curry: zoom. If you
+[3580.03] Curry: take a look
+[3582.03] Curry: remember&#x27;s playing it
+[3584.03] Curry: and playing the playground. It&#x27;s like
+[3586.03] Curry: a swing. Go past the swing and that&#x27;s
+[3588.03] Curry: hit you out of the map. It&#x27;s like go back.
+[3590.03] UNKNOWN: Well that would be realistic
+[3592.03] Curry: because that was about the range you get off your
+[3594.03] Stephen: radio, right? That&#x27;s true.
+[3596.03] UNKNOWN: The original FPV experience.
+[3598.03] Stephen: Yeah so
+[3600.03] UNKNOWN: this map I thought looked amazing.
+[3602.03] Stephen: Like oh I&#x27;m in a desert with a Land Rover
+[3604.03] Stephen: and
+[3606.03] UNKNOWN: go about like 20 feet away and
+[3608.03] Stephen: I&#x27;ve hit the edge of the map.
+[3610.03] UNKNOWN: It&#x27;s cute.
+[3612.03] Stephen: It&#x27;s not badly made.
+[3614.03] Stephen: It&#x27;s dated. That&#x27;s all it is.
+[3616.03] Stephen: It&#x27;s just dated.
+[3618.03] Stephen: I can see how they took
+[3620.03] Stephen: these and developed them for Recharge
+[3622.03] Stephen: because they&#x27;re clearly
+[3624.03] Stephen: the same set of maps but with less polish.
+[3626.03] Stephen: It&#x27;s probably taught more people
+[3628.03] Jack: how to fly ancro than
+[3630.03] Jack: you care to admit.
+[3632.03] Jack: Fair dues.
+[3634.03] Jack: It served its purpose
+[3636.03] Jack: and the standalone version
+[3638.03] Jack: literally runs on a potato.
+[3642.03] UNKNOWN: Yeah and it&#x27;s on itch.io as well
+[3644.03] Stephen: so it&#x27;s a good platform for actually
+[3646.03] Stephen: giving the developer all the money and
+[3648.03] Stephen: Steam doesn&#x27;t get a cut should you want to do that as well.
+[3650.03] Stephen: So yeah
+[3652.03] Stephen: that&#x27;s the little run down.
+[3654.03] Stephen: Short version I&#x27;d say.
+[3656.03] Stephen: If you haven&#x27;t checked out anything
+[3658.03] Stephen: go grab a copy of DRL
+[3660.03] Stephen: and it seems to be on sale for
+[3662.03] Stephen: £3.60 every now and then.
+[3664.03] Stephen: Definitely worth a punt.
+[3666.03] Stephen: If you&#x27;ve already got a lot of these
+[3668.03] Stephen: have a look at Uncrashed. It&#x27;s a lot of fun.
+[3670.03] UNKNOWN: Yeah
+[3672.03] Jack: I will have to.
+[3674.03] Jack: I&#x27;ve had some corrections.
+[3676.03] Jack: Velocidone has 30 different quads
+[3678.03] Jack: and I was playing
+[3680.03] Jack: out of date video footage
+[3682.03] Jack: of their starter
+[3684.03] Jack: so apparently it looks
+[3686.03] Jack: a lot better than
+[3688.03] Jack: I showed.
+[3690.03] Jack: Hopefully
+[3692.03] Jack: alright
+[3694.03] Jack: hopefully
+[3696.03] Jack: hopefully
+[3698.03] Jack: Your definition
+[3700.03] Stephen: of better may be different from mine
+[3702.03] Stephen: but I&#x27;ve tried to play a bunch for this.
+[3704.03] Curry: Also hint hint, at any time
+[3706.03] Curry: on your Steam storefront
+[3708.03] Curry: you can change the video so if
+[3710.03] Curry: it looks significantly better then they should make a new
+[3712.03] Curry: video and put it there instead.
+[3714.03] Jack: They&#x27;re not on Steam though.
+[3716.03] Jack: They&#x27;re running their own Valley website.
+[3718.03] Jack: They can do what they want with it.
+[3720.03] UNKNOWN: They don&#x27;t want the Steam stuff.
+[3722.03] Curry: In which case put videos up there.
+[3724.03] UNKNOWN: Yeah I&#x27;ve got
+[3726.03] UNKNOWN: I don&#x27;t know
+[3728.03] Jack: I just didn&#x27;t find
+[3730.03] Jack: here we go.
+[3732.03] UNKNOWN: This is video on there.
+[3734.03] UNKNOWN: So Ali B in the chat
+[3736.03] Stephen: says I had an old Velocidone build.
+[3738.03] Stephen: Well this is Frank telling me
+[3740.03] Stephen: I installed it
+[3742.03] Stephen: last week using their downloader
+[3744.03] Stephen: from their website so if I&#x27;ve got an old
+[3746.03] Stephen: build it&#x27;s their fault not mine.
+[3748.03] Stephen: I didn&#x27;t go and download an old build
+[3750.03] Stephen: I installed it last week.
+[3752.03] Stephen: Not playing this.
+[3754.03] UNKNOWN: So I played
+[3756.03] Jack: I played their tutorial stuff
+[3758.03] Jack: on YouTube.
+[3760.03] Jack: This is what it looks like now
+[3762.03] Jack: I believe.
+[3764.03] UNKNOWN: There&#x27;s a bit of water effects
+[3766.03] Jack: and some trees.
+[3768.03] UNKNOWN: Some green stuff
+[3770.03] Stephen: some blue stuff.
+[3772.03] Stephen: How kudos for them for continuing the project
+[3774.03] Stephen: and things.
+[3776.03] UNKNOWN: It&#x27;s not my cup of tea.
+[3778.03] UNKNOWN: I&#x27;ve enjoyed
+[3780.03] Jack: playing it
+[3782.03] Jack: at the UK drone show
+[3784.03] Jack: and stuff like that.
+[3786.03] UNKNOWN: If you&#x27;re with a bunch
+[3788.03] Stephen: of mates you could be playing anything
+[3790.03] Stephen: it&#x27;s the fact that you&#x27;re all in there
+[3792.03] Stephen: having a race and it&#x27;s a laugh isn&#x27;t it.
+[3794.03] UNKNOWN: So a lot of it does come down to community.
+[3796.03] Stephen: I remember very clearly the Andy RC
+[3798.03] Curry: experience we had
+[3800.03] Curry: where
+[3802.03] Curry: I&#x27;ve set with you for posting that.
+[3804.03] Curry: Andy said I think this is how you do
+[3806.03] Curry: a trippy spin and
+[3808.03] Curry: smashed his quad into the ground
+[3810.03] Curry: and Jack sent a clip of it to write a riot.
+[3812.03] Curry: He&#x27;s kind of
+[3814.03] Curry: in trouble from Andy.
+[3816.03] Jack: Andy hates me.
+[3818.03] Tony: That&#x27;s why you left.
+[3820.03] Jack: Andy absolutely hates me.
+[3822.03] Jack: I&#x27;m sorry Andy.
+[3824.03] Jack: I still love you.
+[3826.03] UNKNOWN: Oh well.
+[3828.03] Jack: Well that&#x27;s all we got time for
+[3830.03] Jack: for tonight.
+[3832.03] Jack: Steven thank you so much for doing that
+[3834.03] Jack: and giving us the
+[3836.03] Jack: insight and generating content.
+[3838.03] Jack: The
+[3840.03] Jack: literally the glue that&#x27;s
+[3842.03] Jack: holding this ship
+[3844.03] Jack: together.
+[3846.03] Jack: Everyone&#x27;s favourite curry kitten.
+[3848.03] UNKNOWN: Goodbye.
+[3850.03] Jack: Everyone&#x27;s favourite Sim review, Steven.
+[3852.03] UNKNOWN: Bye bye.
+[3854.03] Jack: My darling wife.
+[3856.03] Jack: For sure.
+[3858.03] Jack: And I&#x27;ve been writing to her fly. Thank you guys.
+[3860.03] Jack: You&#x27;ve been listed to Let&#x27;s Throw Now.
+[3862.03] Jack: Massive shout out
+[3864.03] Jack: to our
+[3866.03] Jack: Patreons
+[3868.03] Jack: who keep this
+[3870.03] Jack: show up and running
+[3872.03] Jack: and keep going.
+[3874.03] Jack: We couldn&#x27;t do it without you guys.
+[3876.03] Jack: Seriously big love.
+[3878.03] Jack: Hopefully we&#x27;ll be doing some bonus podcasts
+[3880.03] Jack: and doing all the Christmas bonus
+[3882.03] Jack: podcasts and all that sort of stuff for you guys
+[3884.03] Jack: because you guys were all
+[3886.03] UNKNOWN: thank you guys and good
+[3888.03] Jack: night.
+[3890.03] UNKNOWN: Bye.
+</pre></body></html>

@@ -1,0 +1,711 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0185—Making Reactors</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 185 ===
+Title: Making Reactors
+Recorded: 2019-03-14
+Hosts: Jack &quot;Brightontillifly&quot; Nash, Andrew &quot;Frank&quot; Hyams, Neil &quot;NJ Tech&quot; Jones, Wayne &quot;CurryKitten&quot; Andrews, Tony &quot;TheTonstar1&quot; Marchant
+Guest(s): Ryan &quot;Mako&quot; Lessard
+Total audience: 2,477
+Platforms: YouTube (https://www.youtube.com/watch?v=gPeNITWy1vc); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/595255500-letsdroneout-making-reactors.mp3)
+=====================================
+
+Follow mako on YT and insta:
+https://www.youtube.com/channel/UCJ7B46o3kibCqowdlozhL8w
+https://www.instagram.com/makoreactra/
+
+[0.0] UNKNOWN: Hey guys it&#x27;s Jack here. Big massive shout out to our patreons. So these guys are the guys who
+[9.12] Jack: donate for the editing and they really do make a huge difference to keep the show alive.
+[17.12] Jack: We&#x27;ve been sponsored by Art Faulkner, Ferdy Evers, Mikey Dread and Under Fluke.
+[23.2] UNKNOWN: These guys are absolute legends. Thank you so much and see you next show.
+[30.0] Frank: Let&#x27;s drone out now. And action. Jack doesn&#x27;t know what to do. We&#x27;re going to wait 10 minutes
+[46.21] Jack: just for traditional sake. Hello and welcome to Let&#x27;s drone out. And tonight we are joined by
+[56.69] Jack: Andrew slash Frank. Good evening. Mako Reactor. Hello. Even that should be Mako Reactor.
+[68.13] UNKNOWN: Five Fantasy Seven. One life. Sorry. One life. We are joined by the sexy NJ.
+[76.61] UNKNOWN: Hello. God I&#x27;ve missed you. My little Tony. Bonjour. Sorry. And everyone&#x27;s favourite Curry
+[85.17] Jack: kitten. Hello. Look at that. There&#x27;s a whole row of people. So much better than a few weeks ago.
+[90.13] UNKNOWN: And everyone&#x27;s usual. Oh my god Jack&#x27;s an idiot. Jack&#x27;s here. Right until I fly. How are we all
+[97.97] Jack: doing? Well you are. I&#x27;m not with it but yeah we are here to talk about your wonderful trip Mako.
+[112.77] UNKNOWN: And you&#x27;ve been and had some experiences. Straight in there Jack. And Tony. We&#x27;re getting
+[118.61] Mako: right into it. Tony upset you by texting you asking about your dad. Oh really bad.
+[130.85] UNKNOWN: He didn&#x27;t mean it. It just got awkward now.
+[135.97] Mako: I look at it. Well I think actually Tony might have said this. It&#x27;s more to honor him.
+[142.37] UNKNOWN: Yeah because he was a very intelligent man and he made you.
+[147.33] UNKNOWN: Yeah sure. We&#x27;ll get back to that bit in a minute. Should we talk about the. Where did you go?
+[154.21] UNKNOWN: All right. Well it was the New York City drone film festival. But it was actually in Jersey City.
+[162.29] Mako: So it wasn&#x27;t in New York City. They just called it that. And the Friday night was the film festival
+[167.17] Mako: and I wasn&#x27;t there for that. I&#x27;m kind of disappointed that I couldn&#x27;t make it for
+[170.69] Mako: that because there were some really cool FPV pilots nominated for awards. It was a
+[174.93] Mako: lot of aerial photography but NERC was nominated. Red FPV was nominated. And I think there might
+[183.57] Mako: have been GAD 707 was nominated too. So that was really neat but I didn&#x27;t get to see that.
+[188.85] Mako: I went on Saturday which was at the science museum. It was called Day of Drones. And it
+[196.13] Mako: was really a bunch of workshops, panels, classes that you could take as well as some demos. They
+[205.17] Mako: did some fly demos and tiny whoop racing. So there was a full day of drone activity. It&#x27;s a lot of
+[211.73] Mako: fun. I can kind of go into some specifics about my panel if you want. Yeah go go. Okay so there
+[219.25] Mako: were different panels. Oh my god had a panel. I got to see his about FPV freestyling.
+[225.73] Mako: Andy Shen drone had a panel and unfortunately I missed his because his was at the same time as
+[230.69] Mako: mine. But mine was basically bridging the gender gap in drones and it was myself and four other
+[238.29] Mako: women on the panel. And it really just showed me the variety in drones. These women were more aerial
+[245.49] Mako: photography drone pilots. They all had their part 107s all in businesses. One is from Australia and
+[254.13] Mako: she leads this company that basically is like lifeguarding and watching for sharks in the ocean.
+[261.01] UNKNOWN: Such a quite cool job. Like that sounds pretty sick.
+[265.97] Tony: And then what was that? I wouldn&#x27;t mind doing that. Sounds good fun. Yeah but she said that
+[272.45] Mako: they were transitioning more into like people sitting behind a screen and not and just kind
+[279.09] Mako: of pushing buttons here and there. It was more autonomous it sounded and it sounded something
+[284.05] Mako: like FPV pilots wouldn&#x27;t like that. You know we want to be like doing more and behind the goggles.
+[291.65] UNKNOWN: But there was another woman who was like the first female who ever passed the part 107 so
+[296.93] Mako: that was really neat. And an educator was there as well. And we kind of talked about just how
+[304.13] Mako: there weren&#x27;t a lot of women in the drone industry and kind of some of the barriers and maybe what
+[309.17] Mako: reasons why that is. Just to jump in. Is it any better represented for women in aerial photography
+[317.25] Curry: as opposed to sort of more freestyle FPV pilots or is it still very very low? For sure. I don&#x27;t
+[324.93] Mako: have any facts about that but it seems as though there are more aerial photography pilots who are
+[330.85] Mako: women than FPV pilots. I don&#x27;t know if you guys would agree with that but. I only see a few FPV
+[339.49] Tony: pilots. Yeah. And do you want to really follow any photography stuff? Well I know there&#x27;s in the UK
+[346.61] Frank: there&#x27;s the helicopter girls. So that&#x27;s they&#x27;ve been running for quite a long long while they&#x27;re
+[352.05] Frank: well established as cinematographers and videographers. Got some very nice very fancy
+[358.21] Frank: kits. I suppose it might be a bit more of a natural progression even if you&#x27;re coming
+[364.05] Curry: from a photography background and you&#x27;re then like oh I could put a camera in the air here or
+[368.29] Curry: I could film this differently. Yeah that makes sense. But most of the aerial photography people
+[374.13] Mako: there were so interested in FPV and wanted to start doing that. That&#x27;s good. That&#x27;s cool.
+[380.61] Curry: Did you did you convert any? Did you tell them what to go out and buy in?
+[384.93] UNKNOWN: What was that? Did you do you think you&#x27;ve managed to convert any of them? Did you give
+[388.93] Curry: them a kit list to buy in and say this is how you start doing it and get on the tiny
+[392.21] Curry: loop course and that sort of thing? Yeah I don&#x27;t know. I think they I think they converted the
+[398.61] Mako: person who organized it, Elena. She&#x27;s a woman who drones CEO and she was so interested in it
+[405.33] Mako: and wants to get on board with it for sure. So maybe a little bit but they also converted me
+[411.97] Mako: I would say. I want to get my part 107 now. We still got a piece from you on account to 107.
+[423.57] Jack: Tony what&#x27;s up with your cameraman? Because he&#x27;s kind of giving you like a cinematic feel.
+[428.85] Jack: Now you&#x27;ve got like a does anyone else got that? He&#x27;s got like a border around him.
+[433.65] Jack: Have I? Yeah it&#x27;s really weird. Definitely got a lens flare.
+[440.53] UNKNOWN: That&#x27;s that&#x27;s God shining on me tonight. You don&#x27;t believe in God do you?
+[447.01] Jack: I don&#x27;t know. It&#x27;d be one of the light bulbs in the dome then.
+[452.45] UNKNOWN: Wait that&#x27;s another that&#x27;s the Flat Earth series that I&#x27;m gonna start next week.
+[457.89] UNKNOWN: I&#x27;ve got I&#x27;ve got a little thing. Apparently we won we won fourth place.
+[463.65] Jack: We didn&#x27;t win we are fourth place. That&#x27;s not winning.
+[467.09] Tony: It is anything. Oh it&#x27;s the top 10 so.
+[471.17] UNKNOWN: He polished his head. You never get that in boxing do you? I won second place.
+[479.49] Jack: It&#x27;s not for us. We&#x27;re like the worst. You&#x27;re even less likely to win fourth place.
+[487.09] UNKNOWN: Well we&#x27;ve got we&#x27;ve got fourth place and you know.
+[490.69] Jack: Fourth place in what Jack? Yeah that&#x27;s why I&#x27;m wondering.
+[494.77] Jack: Best drone podcast on Frank. Where was it again? I don&#x27;t know it&#x27;s me. I didn&#x27;t find the link.
+[502.13] UNKNOWN: So I&#x27;m reading your website. Yeah I&#x27;ll post the link hang on.
+[505.97] Jack: It was free spot blog nameless. Why aren&#x27;t you letting a sparkler for this winning fourth place?
+[514.13] Mako: It means opening.
+[517.57] UNKNOWN: I agree we got it. Hang on let me.
+[521.17] UNKNOWN: And also I&#x27;ve been putting up Let&#x27;s Drone Out episodes up lately. Slowly.
+[526.13] Jack: Yeah so I had four minute 31 with you and
+[530.05] Tony: Curry kitten just basically giggling for four minutes.
+[533.65] Tony: That&#x27;s what we do. That&#x27;s what we do together and we tickle each other.
+[538.37] UNKNOWN: I think it works.
+[541.09] Jack: Fourth place.
+[547.81] Jack: I&#x27;ll tell you what disturbs me about this fourth place is that it&#x27;s such a narrow field. It&#x27;s like
+[552.61] Curry: podcast drone based podcast we&#x27;ve never really come forth. Can we have like UK drone based podcast?
+[560.21] Curry: The UK drone based podcast is on every Thursday. Then we have a more more chance.
+[566.21] Curry: Yeah because even in UK drone based podcasts we&#x27;re second.
+[570.29] UNKNOWN: Yeah this is how we&#x27;re second. Well there&#x27;s the
+[577.65] NJ: maybe we could win with an ethnic diversity. We have that into the categories. Yeah we should try.
+[584.77] UNKNOWN: Yeah Let&#x27;s Drone Out isn&#x27;t racist.
+[590.53] Jack: I don&#x27;t know but I&#x27;m proud of you guys. That&#x27;s what I was going to say. I&#x27;m really proud of you.
+[594.61] Jack: It&#x27;s an honor. It&#x27;s taken us three years.
+[598.29] Jack: Yeah we&#x27;re not as good as the drone trainer podcast or the Ask Drone You podcast.
+[604.77] Jack: We&#x27;re not as good as the drone radio show. Just just to put it in perspective if somebody was
+[609.81] Curry: to dream up a new drone podcast and put it on air tonight I think they would be eighth wouldn&#x27;t they
+[613.65] Curry: or something. But we beat the FPV show. Screw this guys. That is an interesting point you make
+[623.25] Frank: Kerry. Because it does say top 10 and there&#x27;s only nine on the list. Why are we spoiling it
+[631.17] Tony: for long girls? We&#x27;re being so British about this aren&#x27;t we? That&#x27;s what&#x27;s happening here.
+[637.97] NJ: Yeah. Give an award to a bunch of Brits and they&#x27;ll just completely tear it apart. Well there no we
+[642.93] NJ: didn&#x27;t really win anything. I should have said there are nine because I would have thought maybe
+[647.33] Mako: there were 20 and it would have sounded better than before. No we can&#x27;t even do that right.
+[653.89] Jack: It can&#x27;t even come from us. Jack you got a lighter fizzy thing. Oh the patches yeah.
+[662.21] Jack: The patches just donate a huge two bucks. Why are you buying sparklers man? I&#x27;ve got to buy a lighter
+[666.85] Tony: as well because um. Oh my word. Because the lighter doesn&#x27;t work. If only there was a pound shop.
+[675.01] UNKNOWN: I don&#x27;t like it. Bleach is my retinas.
+[677.49] Jack: Any patches? Keep it away from your Goldilocks. Don&#x27;t get it.
+[685.97] UNKNOWN: Hold it up you can&#x27;t see.
+[689.65] Tony: I like it being this end of it and not lighting it and stuff. It&#x27;s good. There you go. There you go
+[694.93] Jack: patches. Cheers mate. And I&#x27;d like to thank everyone who tunes in every week and listens to
+[700.61] Jack: this god-awful monstrosity and uh yeah like thank you for helping us get fourth place.
+[708.13] Jack: If you really love us I mean really like adore and listen to this podcast and it provides you
+[715.57] Jack: with any sort of help whatsoever please go to our iTunes review and leave a positive review
+[722.69] Jack: other than uh we got a nasty review and then you read later on and then it&#x27;s actually one of our
+[728.53] Jack: friends. Do you mean you can comment? Yeah. You mean iTunes review? Yeah iTunes review. Not YouTube
+[735.57] Frank: review. Sorry. That&#x27;s not a thing. Yeah. I think Gary&#x27;s in the chat by the way. Hello everyone
+[743.33] Tony: wave to Gary. Hi Gary. He&#x27;s so gonna be called Gary forever now. Don&#x27;t accidentally click the
+[755.57] Jack: report a concern. That won&#x27;t help us. Sorry. Mako what were you saying? I was thinking actually
+[763.97] Mako: there was an interesting statistic um that they brought up at the panel that said often women
+[771.73] Mako: when they apply for a job will only apply if they have 100 of the qualifications and um men I think
+[780.21] Mako: it was like they would do it 60 percent you know so I don&#x27;t I think that&#x27;s probably pretty close
+[786.29] Mako: to true. I never applied unless I had 100 percent of the qualifications. Who just died? Someone
+[797.09] Frank: collapsed in shock. What was that noise? So yeah guys if you got if you got iTunes
+[805.17] Jack: leave us a review. Please. Please. Thank you. Oh there&#x27;s the link. Yeah um a similar statistic
+[815.49] Frank: I&#x27;ve heard to that is that um like I can&#x27;t remember what percentage but like men are much
+[821.65] Frank: more likely than women to ask for raises and and things like that um but was it out of your panel
+[829.01] Frank: discussion was there anything in particular that um kind of came up as like a major hurdle I mean
+[835.97] Frank: obviously you said like applying for jobs is is one thing but was there anything is there anything
+[841.17] Frank: else out there that&#x27;s like a major hurdle? Yeah I think we really talked about just the way we were
+[849.17] Mako: raised and how that was a bit different and nowadays like there&#x27;s more STEM and you&#x27;re getting
+[854.05] Mako: more of that um in the schools in the classrooms and you see more girls doing kind of the hands-on
+[860.29] Mako: stuff now um I know when I was in school I took home ec you know I didn&#x27;t have those kind of tech
+[868.77] Mako: classes I was always encouraged to kind of play with the the dolls and that sort of thing but
+[875.17] Mako: I always wanted to go out and play with the boys and that&#x27;s where Jack only likes the idea of that
+[882.29] Tony: Jack used to be encouraged to do home ec and play with the
+[885.81] UNKNOWN: dolls and stuff didn&#x27;t you? I also think kind of staying in it staying in the hobbies hard when um
+[892.29] Mako: I just don&#x27;t have that tech background you know I have to learn so much more like even the tools
+[898.61] Mako: that we use I was never really comfortable using so I&#x27;d like well which screwdriver do I use
+[903.97] Mako: something as simple as that have you bought yourself a pink set just to add to the cliche
+[912.29] Jack: or get your favorite parent anodize it pink you know and just take it back Rosie the Riveter
+[917.73] UNKNOWN: you know but I&#x27;m trying to learn more and more I um I did that little build video of that frame
+[922.77] Mako: I know it&#x27;s just a frame it&#x27;s not that difficult to build but it was fun doing
+[926.85] UNKNOWN: I don&#x27;t know you don&#x27;t seem to only try and build a frame let&#x27;s not talk about that I&#x27;ve got pink
+[932.77] Tony: tools talk about applying for jobs that you&#x27;re not qualified for oh yeah oh you may oh yeah
+[942.93] Curry: it&#x27;s interesting what you say about the stem subjects because over in the UK
+[946.93] Curry: the computer I think it is actually the computer science subject now is now a lot more programming
+[953.65] Curry: based but um it turns out at least at my daughter&#x27;s school to be not that popular as an option
+[958.85] Curry: because it&#x27;s hard which is I think a good thing because it should be hard and then it&#x27;s very
+[963.09] Curry: challenging but because of that there&#x27;s there&#x27;s like a handful of boys and girls that have actually
+[967.57] Curry: chosen it as opposed to like the what I call the soft subjects like sociology that was very popular
+[973.73] UNKNOWN: yeah well if you look back through sort of the past few decades back in the 80s computer science
+[980.29] Frank: was was actually dominated by women in in academics in academia and then all of a sudden
+[988.85] UNKNOWN: it sort of became this I think it was when it kind of became the computers became a hobby thing
+[994.93] Frank: and you could access it all of a sudden it stopped being such a female dominated area and
+[999.97] Frank: and became seen as a kind of masculine thing to do for some reason um but I don&#x27;t know why that
+[1006.85] Frank: is or what we can draw from that but that&#x27;s that&#x27;s something that&#x27;s kind of fairly regularly
+[1011.57] Frank: shared in in the kind of um IET and that sort of group that you know look at where engineers come
+[1018.37] Frank: from over the past few decades um it&#x27;s just like there&#x27;s been this kind of change in who goes and
+[1024.05] Frank: does computer science um but I don&#x27;t know what we do about that that sounds that sounds like a job
+[1029.97] Jack: for my trans activist friends you know like talking about we&#x27;re going in dangerous ground
+[1036.69] Jack: that us idiots should never go yeah especially this sort of like level of show but I&#x27;m glad that
+[1045.09] Jack: you know girls are doing more like you know techie stuff and getting a bit more sciency
+[1053.01] Jack: and stuff it&#x27;s like it&#x27;s bizarrely sort of like gender assumptions you know it&#x27;s just like we&#x27;re
+[1059.97] Jack: all people at the end of the day you know tony&#x27;s good at washing windows whether he&#x27;s a woman or
+[1065.89] Jack: not and I look like Janet when I straighten my hair I could be a receptionist even though I&#x27;m
+[1074.13] Jack: dyslexic I do love the Janet receptionist look I know it&#x27;s quite a good look at it really
+[1079.25] Jack: we have a fair number of girls at my school who are really into it now and actually um
+[1086.69] UNKNOWN: I don&#x27;t know if I mentioned this last time it was on your show but came to my race and um
+[1091.73] Mako: watched me race and put on the goggles and then tried some flying at the end of it so
+[1096.69] Mako: I have a bunch of girls who will love it probably just as much as the boys that&#x27;s really cool
+[1102.45] Tony: that&#x27;s really cool did you get to meet and talk to tommy at the show
+[1106.69] UNKNOWN: yeah yeah I think he appreciated us in the audience he kind of talked to us a little bit
+[1111.25] Mako: because it was more interactive in a discussion because we were one of the few people who were
+[1116.13] Mako: FPV pilots there um so I think we understand what you&#x27;re saying it&#x27;s fine oh yeah
+[1126.13] UNKNOWN: but yeah he was really interesting I asked him about his acrobat because I keep I&#x27;m on the lookout
+[1131.97] Mako: for really a really good micro cinna cinna micro I guess um I had a diatone one and I&#x27;m working on
+[1140.29] Mako: that one and I have one it was interesting the acrobat but now I think I&#x27;m gonna go the
+[1144.61] Mako: shun drone route and get a nutmeg I&#x27;ve never heard of that I don&#x27;t know these yeah they have
+[1151.33] Mako: the square and the nutmeg I know listen to those names don&#x27;t worry we&#x27;ve got the the potato wars
+[1157.89] Jack: going on at the moment yeah let&#x27;s let us all say hi right all right because we know you watch and
+[1164.21] Curry: steal all the ideas nice to meet you come on don&#x27;t take any views any views expressed by any guests
+[1173.89] Curry: on this show a person may not reflect the views of these hosts also the host may talk rubbish as
+[1178.53] Curry: well so ignore them but that is quite true but yeah me and frank did a potato quad ages ago
+[1188.53] Tony: what have they called they&#x27;re not rotor right anymore though are they
+[1195.09] Tony: no they rename their facebook fan club is it rotor right a fan club yes I think I didn&#x27;t
+[1202.77] Tony: think it went down well and I don&#x27;t think they can change it for 20 more days or something
+[1207.73] UNKNOWN: which I find quite funny um batwoman asks batwoman fpv asks I&#x27;ve had my daughter&#x27;s teachers asking
+[1216.93] Jack: about it today they want her to bring her little quadcopter in to show them that&#x27;s awesome hi
+[1223.41] Mako: batwoman oh yes showing the love um at school I&#x27;ve done a few presentations you guys should
+[1231.17] Mako: look into doing that you should go in and do a presentation for the whole school like you don&#x27;t
+[1234.93] Mako: have to do the whole school at once but small groups can come in you could fly for them
+[1239.25] Mako: they would love it but you&#x27;d ask lot turning up at a school suggested I go in for careers day
+[1246.21] Curry: and I had to decline based on apparently lynch me and you don&#x27;t have a career anymore
+[1253.97] Curry: I know it&#x27;s like what do you do I don&#x27;t do anything really I sit home sometimes I fly some
+[1257.73] Curry: drones and make some youtube videos because all the kids would be that&#x27;s amazing you want to do
+[1261.57] Curry: that what kind of questions you need none at all you just leave school now it&#x27;s so funny
+[1270.61] UNKNOWN: it&#x27;s so funny how into youtubers they are if they find out you have even five followers you
+[1276.37] Mako: a celebrity in their eyes it&#x27;s ridiculous that&#x27;s the only thing that keeps me even vaguely cool
+[1283.33] Curry: at school amongst my daughter&#x27;s peers otherwise I&#x27;m just that stupid old man I&#x27;m a man of your
+[1289.89] Jack: youtube channel curry kitten and I mentioned you the other day and someone said I really love
+[1297.17] Jack: curry kitten I can&#x27;t remember who it was but they liked you as well good enough I&#x27;ll take it
+[1304.69] UNKNOWN: richard wild one in the chat says his 10-year-old daughter flies fixed wings
+[1308.93] Frank: and he&#x27;s getting into quads and she loves watching and learning the build and fix process
+[1313.97] UNKNOWN: so there you go definitely to put her on to your to your video yeah great god I don&#x27;t know whether
+[1322.05] Jack: me and tony can be trusted like you know we&#x27;ll pass the criminal background check have you
+[1326.53] Jack: done anything dodgy tone it&#x27;s just called airing it&#x27;s just trying to get in the dead hookers in the
+[1337.89] Jack: search in this show being like he&#x27;s got a wank sock
+[1351.41] Jack: see whereas you&#x27;re like doing good and you know in fact we&#x27;re probably making your reputation work
+[1357.49] UNKNOWN: yeah sorry about that green patches in the chat kindly requests that richard wild one keeps his
+[1365.25] Frank: daughter flying fixed wing I imagine because green patches feels uh slightly uh at risk of
+[1372.13] Frank: going further down the global leaderboards oh having another a 10-year-old uh start starting
+[1380.05] Frank: to fly quads because as we know you know below 16 years old you&#x27;re far better at flying quads
+[1389.25] Frank: yep and then you hit that that age and then all of a sudden a terrible pilot all of a sudden
+[1395.65] UNKNOWN: right should we should we go off topic uh well like on topic what yeah off off the the topic
+[1404.37] Jack: that is mako reactor on our show and talk about the big uh the new laws have come in and now you&#x27;ve
+[1413.25] Jack: got to phone the airport to let know that you&#x27;ve changed your battery and you can take off again
+[1418.05] Jack: five and a half nautical miles uh yeah all of that kind of stuff um yeah we&#x27;ve had some changes
+[1425.97] NJ: over here have you got a rundown of the changes andrew that you can yeah I&#x27;m sure you&#x27;ve got this
+[1432.21] NJ: bullet point is in front somewhere somewhere organized man you are I&#x27;m not organized enough
+[1437.73] Jack: on that I I actually hate them and I might even make a video on it where I phone um shorum airport
+[1447.17] Jack: seven times in a row uh yeah I&#x27;m gonna call you back in another three minutes because that&#x27;s how
+[1451.73] Jack: much long my batteries last I&#x27;ll mention I&#x27;m taking off again is that how bad it&#x27;s gonna be
+[1459.49] UNKNOWN: I&#x27;ve heard on the grapevine that airport seems to be less willing to grant um an exclusion for
+[1469.65] Curry: somebody wanting to fly because they&#x27;re slightly more worried about like liability for some reason
+[1474.77] Curry: so so people that have been flying in the zones now um are and I mentioned this just from comments
+[1482.69] Curry: I&#x27;ve seen around in various places that concern that they&#x27;re not getting the permissions that
+[1487.17] Curry: they thought they&#x27;d be able to as easily how that holds up or not the I&#x27;ve seen quite a few people
+[1495.73] Frank: who have done this have rung up their local ATC when they&#x27;re going to fly in and what&#x27;s what&#x27;s the
+[1503.41] UNKNOWN: initialism for this one I think it&#x27;s flight restriction zone um so what it is is that all
+[1511.41] Frank: the airfields and airports and all that kind of thing now have a I think it&#x27;s five and a half
+[1518.85] Frank: nautical mile um exclusion zone around them and then a bit along the runway as well it&#x27;s a little
+[1526.69] Frank: bit further that&#x27;s in like kilometers or something because air law loves mixed units for some reason
+[1533.81] Frank: um and then so if you&#x27;re going to fly in one of those areas you have to ring up the ATC and say
+[1541.41] Frank: hello I want to fly is that okay and they go yes um so from I&#x27;ve seen quite a few people who have
+[1549.97] Frank: done this and it&#x27;s been absolutely fine quite a few of them have been told by the ATCs to just
+[1555.73] Frank: like yeah it&#x27;s if you&#x27;re going to be flying there in that particular spot over the next six months
+[1561.73] Frank: that&#x27;s fine go away call us again in six months just so we don&#x27;t forget about you um I think there
+[1568.37] Frank: have been maybe one or two people who have been a bit adversarial when they&#x27;re calling up and
+[1577.73] UNKNOWN: that hasn&#x27;t gone particularly well for them um but basically don&#x27;t be a dick and it will be fine
+[1586.05] UNKNOWN: um that&#x27;s checked naked yeah yeah um I wouldn&#x27;t recommend calling up Shoreham every time you&#x27;re
+[1592.29] Frank: about to take off but just call them before you take off the first time have a bit of a discussion
+[1599.01] Frank: with them they&#x27;ll probably say yeah you&#x27;re far away we don&#x27;t care about you you&#x27;re flying below
+[1605.33] Frank: the tree level it&#x27;s fine so I guess you shouldn&#x27;t say I want to go up really high so I can see your
+[1610.29] Curry: plane&#x27;s land that would be unpopular that would not go down well but if you say I&#x27;m flying below
+[1617.73] Frank: the tree level or I&#x27;m only going up to a thousand feet or whatever you&#x27;re doing
+[1622.37] UNKNOWN: um and say you know I&#x27;m staying in this particular area and it would help to have
+[1628.77] Frank: you know some longitude and latitude or particular I don&#x27;t understand longitude and latitude
+[1635.33] Frank: you don&#x27;t need to just look it up on google and read it out to them it&#x27;s fine um they&#x27;ll know what
+[1641.57] Frank: it means just don&#x27;t just just just be polite to them just ask the question they&#x27;ll say yes why
+[1650.77] Frank: are you asking us you idiot um I can see I can see this ending ending with a logbook
+[1657.97] NJ: that&#x27;s where I think this will be very similar to general aviation well we&#x27;re all left the right
+[1663.09] UNKNOWN: well we just keep keep whether it&#x27;s an app or whether it&#x27;s a physical logbook some way of saying
+[1670.93] UNKNOWN: I was here over these days and these hours because if you&#x27;re saying this is my area
+[1675.17] NJ: I&#x27;m going to be flying here I hope you guys are cool with it and ATC say yeah you&#x27;re absolutely
+[1679.65] NJ: fine if anything happens then the first people that they&#x27;re going to call this probably you
+[1685.97] NJ: at which point you&#x27;ll have to say here&#x27;s my logbook I wasn&#x27;t flying on the day that event happened
+[1691.49] NJ: I suppose the other worry is you call them up and they say yeah you&#x27;re fine for six months
+[1697.57] Curry: um if you keep flying that area and then something somebody turns up says hey you&#x27;re
+[1702.61] Curry: in a restricted zone you say it&#x27;s okay I&#x27;ve got permission from the ATC and they say prove it
+[1709.57] Curry: and uh the ATC say oh yeah I don&#x27;t know John was on that day did he write it down don&#x27;t know
+[1714.53] Curry: no we haven&#x27;t got anything I think there is a club or two that I have seen that have literally
+[1719.89] Frank: got an email with the ATC saying yeah you&#x27;re fine for that amount of time
+[1724.05] Frank: flying in that area so it might be worth doing that if if you&#x27;re going to be flying in the same
+[1728.69] Frank: spot for that amount of time but basically I don&#x27;t think it&#x27;s anything to panic about until
+[1734.05] Frank: you&#x27;ve actually had that conversation if they say no go away we never want you flying anywhere near
+[1739.01] Frank: us ever again stay away then we might it might be worth actually bringing that up and see what
+[1745.81] Frank: we can do as a community but for the moment I don&#x27;t think it seems like anyone&#x27;s hit up against
+[1751.33] Frank: that kind of hard wall yet well here um I fly in a location that you&#x27;re supposed to be within
+[1759.49] Mako: and not within you have to be farther than five miles from an airport here
+[1763.57] UNKNOWN: um and I fly a place that&#x27;s like 4.75 so I originally called the ATC and the first time
+[1770.45] Mako: I called they took like my name my number what time I was flying a bunch of information my license
+[1776.45] Mako: number I think too um and then driving and they&#x27;re just like basically leave me alone and hung up
+[1788.05] UNKNOWN: Frank if you&#x27;re in five however many dautical miles of an airport but you flew five miles away
+[1794.13] Curry: in a different direction is that okay just so we can get clear that one up
+[1800.13] UNKNOWN: if as long as you&#x27;re flying away from the airport that&#x27;s fine uh as long as you&#x27;re
+[1805.73] Frank: within you know visual line of sight I&#x27;ve got very good eyes and I can see through my goggles
+[1811.17] Frank: it&#x27;s not you it&#x27;s your spotter that needs to have very good eye invisible timing is awesome as well
+[1814.93] Frank: yeah I do know I&#x27;d prefer this I&#x27;d prefer this system if it was done on email just so you&#x27;ve
+[1820.85] NJ: got something officially and writing I would I would probably not call ATC I would if they&#x27;re
+[1827.57] NJ: gonna have an email that you can make them out of hours that they might otherwise be busy doing
+[1833.01] NJ: more important stuff not my favorite would be I call them record the conversation then I get
+[1839.49] Jack: drugged to court and then I&#x27;m like I have got proof and then I play it and then they&#x27;re like
+[1844.93] Jack: we&#x27;re gonna now see you for recording us without our permission this is the other question which
+[1849.89] Frank: mr fruity cakes in the chat does ask is who&#x27;s gonna enforce this who&#x27;s gonna drag you to court
+[1855.09] Frank: over this like who&#x27;s gonna do that who is gonna enforce exactly who like I like his names well
+[1864.29] UNKNOWN: yes good name um yeah I don&#x27;t think there&#x27;s anything to worry about at the moment uh just a
+[1872.45] Frank: reminder to everyone that tomorrow Friday the 15th there&#x27;s gonna probably be some well no it&#x27;s
+[1879.17] Frank: gonna be Brexit news let&#x27;s be honest but there&#x27;s the possibility of there being some news about
+[1883.65] Frank: the drone bill that&#x27;s gonna be talked about but it&#x27;s not the real drone bill ignore it don&#x27;t worry
+[1888.69] Frank: about it I think you probably get buried under all the Brexit stuff yeah I think we&#x27;re safe
+[1892.93] Jack: what&#x27;s happening with Brexit other than we&#x27;re not I think we should dig up guy forks
+[1900.37] UNKNOWN: I think that guy had the right idea well two two-thirds of parliament voted against
+[1906.37] NJ: anything happening by the end of the month so basically they&#x27;ve also voted against nothing
+[1910.61] Frank: happening so yes yeah it&#x27;s it&#x27;s just just gonna keep getting right they&#x27;re all addicted to putting
+[1917.09] Curry: things down now which is great they&#x27;re just enjoying it whatever comes up now hey guy they
+[1922.45] Jack: better let you back in from your travels when Brexit does happen and I&#x27;m really annoyed if they
+[1927.81] Jack: don&#x27;t the other chat wants to know what Brexit is it&#x27;s a it&#x27;s a new drone Brexit means breakfast
+[1935.81] Frank: everyone&#x27;s knows that um anyway yeah interesting uh in answer that uh Jack travels there&#x27;s something
+[1945.33] NJ: with a lot of us who work in and out of Europe and the world travel regularly it&#x27;s this is a
+[1952.21] NJ: strong danger of it becoming a huge pain in the arse yeah I know well do you think that&#x27;s because
+[1959.89] Jack: the you know the border of control gonna finger so everyone&#x27;s listening to this get away from this
+[1966.45] Frank: so drones are brilliant drones are good hashtag has anyone of us uh flown this week because the
+[1975.09] Curry: weather has been unbelievable it&#x27;s been blowing like 60 mile an hour winds outside every day
+[1980.69] Curry: good weather for like dynamic soaring but other than very dynamic don&#x27;t get round with a glider
+[1987.41] Jack: and I had to make a battery adapter so I think Dom&#x27;s gonna go out gliding soon that sounds that
+[1993.57] Jack: funny that means it&#x27;ll the the wind will drop and it&#x27;ll be fine for flying mako you&#x27;ve been out
+[2000.61] Jack: lately were you flying a hole in here though flying where do you have tiny ropes in a hole
+[2007.89] Tony: yeah hole where many quite outside um this past weekend it was finally warm enough
+[2015.65] Mako: oh I flew around some trees and uh there was snow on the ground but still got snow I can&#x27;t
+[2023.89] Tony: believe it yeah it won&#x27;t go away it won&#x27;t melt but I fly indoors a lot because we do the tiny
+[2030.21] Mako: wolf racings racing every week yep and I tune in now and again and you pay me a little bit of
+[2036.37] Jack: attention on twitch and I&#x27;m like oh she&#x27;s on twitch you&#x27;re the best how long do you get
+[2045.49] Jack: five you need to do it more so you get five continuous viewers and over 12 and then we can
+[2053.73] Jack: subscribe to you it&#x27;s my husband&#x27;s thing you need to I&#x27;m sick of watching adverts for call of duty
+[2066.05] Jack: even more mobile camera yeah but I don&#x27;t know what did you see any interesting stuff on the
+[2072.69] Jack: the you know drone video like awards yeah I was gonna ask what what was the format of those was
+[2079.25] Curry: it yeah was it bits of drone footage in other films or was it all especially just shot from
+[2085.81] Curry: drones especially for it or what was it what was the deal teach us well the film festival part
+[2092.69] Mako: with a lot of um just like videos of drone flying like aerial photography and fpv videos
+[2098.85] Mako: like I think the one of NERC when it was when he was flying around maybe a museum
+[2102.93] Mako: I don&#x27;t know if you ever saw that video he did I think he did it with his Shen drone squirt
+[2107.17] UNKNOWN: um but I wasn&#x27;t there for that part of it so I don&#x27;t really know much about that but the day
+[2111.73] Mako: I was there you could go into different workshops so there was like an editing workshop you can
+[2116.61] Mako: learn about editing footage and there was someone really professional that&#x27;s been doing it a long
+[2120.37] Mako: time and kind of teaching you about it uh Andy Shen drone did his uh cinematic footage with
+[2127.17] Mako: racing drones so he talked about that um and uh oh my god did the flying freestyle with fpv
+[2135.81] Mako: and there were places where you can go and kind of demo drones for people so they had the cage
+[2141.57] Mako: and they had this autonomous one that kind of followed you around I think it was called a sky
+[2145.25] Mako: deal maybe um and then they did some fpv tiny whooping in the cage to kind of demonstrate that
+[2151.89] Mako: and then we did some tiny this part was really fun we did some tiny whoop racing in one of the
+[2156.45] Mako: exhibits and the kids were holding up kind of wands with circle gates and we got to fly through
+[2161.73] Mako: them and demonstrated there were a bunch of screens around the the room where people can
+[2166.69] Mako: watch the screens um but it was in the 9-11 exhibit so that was kind of interesting the
+[2171.73] Mako: world trade center exhibit and there were steel beams from the actual towers in there so it kind
+[2176.61] Mako: of was like a little awkward flying around at the same time because it&#x27;s kind of like
+[2181.17] Jack: you don&#x27;t want to crash into any of them it&#x27;s also like yeah you want to be careful but you&#x27;re
+[2186.29] Mako: flying around and respectful of it because there&#x27;s so many emotions attached to that yeah wow
+[2192.93] UNKNOWN: oh man that&#x27;s that sounds like no nothing from you tony i don&#x27;t i don&#x27;t want to know what you&#x27;re
+[2198.21] Frank: gonna say anything oh my god no just by saying that i know what&#x27;s in his head yeah
+[2206.21] UNKNOWN: no comment all my workmates are fascinated by you
+[2211.89] Jack: they all wanted to know we&#x27;re not going down this rabbit hole oh please um quickly thinking
+[2217.65] Frank: of something else to say uh this weekend&#x27;s there&#x27;s drone clash happening in the netherlands is anyone
+[2222.85] Frank: going either anyone in the chat going do we know anyone who&#x27;s going no no i&#x27;ve been watching i
+[2230.29] Curry: watched peter streeple&#x27;s video about him uh checking it out and i think number god&#x27;s built
+[2237.17] Curry: one has any for uh his team to do it and it&#x27;s essentially you have like uh what is it like a
+[2244.61] Curry: queen that acts as like the base and a bunch of things attack it and there&#x27;s defenders and
+[2250.21] Curry: attackers etc have i got that generally right it&#x27;s a drone fight then it&#x27;s something a bit more
+[2256.13] Tony: it is a drone fight but there are there&#x27;s like a base ship and i think there&#x27;s like fighters
+[2261.17] Curry: so they&#x27;re all sort of built slightly differently oh so it&#x27;s kind of like a defender and a couple
+[2266.69] Frank: of attackers or something yes like the sort of thought so he&#x27;s tried to build it so you
+[2271.89] Curry: couldn&#x27;t get into the ducks and it can like survive having things thrown on it and it can
+[2277.33] Curry: obviously air mode over but of course the more the more you surround the ducks with like uh
+[2282.77] Curry: wiring stuff as he found out trying to make sure nothing got into it the heavier and less
+[2286.85] Curry: efficient it becomes it was like full throttle trying to get this thing off the floor which would
+[2291.97] Curry: fly for about two minutes so he went through a whole thing about trying to make it more efficient
+[2296.45] Curry: and more usable uh so that i think that&#x27;s sort of an interesting concept that people are going to
+[2301.41] Curry: be different ideas to it and people have got like different ideas about how they&#x27;re going to attack
+[2305.57] Curry: it so some will go sort of all out with something they can smash and others could just like well i&#x27;m
+[2309.73] Curry: just going to hang this string down as if and get it into a prop and that sort of thing i&#x27;m
+[2314.29] Frank: interested to see how this goes because in the u.s there&#x27;s been for quite a while uh or quite a few
+[2319.89] Frank: years i think it&#x27;s at one of the maker fairs where there&#x27;s game of drones um which is a similar kind
+[2325.25] Frank: of idea but it&#x27;s one on one as far as i can tell or at least it&#x27;s kind of it&#x27;s not teams it&#x27;s
+[2331.09] Frank: individuals even if there&#x27;s like a few of them in an arena at the same time and they&#x27;re like you say
+[2336.05] Frank: having strings coming down from them but this sounds like it&#x27;s a kind of a team versus team
+[2340.45] Frank: as far as i can tell seems that way but it&#x27;s yeah it&#x27;s interesting i am very tempted to like buy a
+[2346.37] Frank: last minute ticket and go and have a look because it sounds quite fun you should do it film it and
+[2350.61] Curry: report it next week yes come on because i was meant to be going to pop them this weekend and
+[2359.65] Frank: sourcing stuff out with kqrc but unfortunately trying to get three busy people into the same
+[2365.33] Frank: place at the same time isn&#x27;t working out so well uh so it&#x27;s probably not going to be this weekend
+[2369.97] UNKNOWN: you didn&#x27;t see my invitations to the mini air show for things that are not working out so well
+[2375.57] Frank: what the inviting people to talk uh i i honest to god i feel like jk job jack i i felt like jk
+[2385.09] Jack: rolling but with a shit version of harry path what what&#x27;s rejection all around what
+[2395.25] UNKNOWN: i you i think you&#x27;re far deeper into harry path to lord and i am
+[2400.93] Jack: she was unemployed she was taking her book round everywhere and everyone was saying no
+[2409.17] Curry: so jack jack&#x27;s the alternate universe where jk rolling was turned down by everybody
+[2413.57] Curry: yes and half hung herself i&#x27;m off the kitchen table
+[2418.37] Tony: jesus christ what do you take medicine wise at the moment jack well soon in april i will
+[2425.09] Jack: be cold turkey because it&#x27;s going on the controlled substance list and i will be in pain
+[2433.49] UNKNOWN: so you&#x27;re gonna be even more happy yeah is this why you&#x27;re thinking of giving up flying
+[2440.21] UNKNOWN: yep i&#x27;m very screwed so we we need lots of uh donations from everyone for various
+[2448.21] Frank: analgesics for jack so that he carries on flying i know i&#x27;m not allowed cannabis laced gummy bears
+[2454.37] Jack: i&#x27;m not allowed pre-gabble in i&#x27;m not allowed government in when you say you&#x27;re not allowed
+[2458.77] Curry: them is this because of a stomach reaction or the government the government have stuck them
+[2464.45] Jack: in ireland they&#x27;ve got a bit of a pre-gabble in issue there are we sending you over to ireland is
+[2470.13] Jack: that a thing no no you&#x27;ll have to send me back to the eu where they i&#x27;m allowed to be treated
+[2475.09] Jack: and put down we&#x27;re gonna have to have like export licenses for that i don&#x27;t know if it&#x27;s not too
+[2480.61] Curry: late to send them off to dignitas if you want to just like cut it off no i&#x27;ll end up going to
+[2485.33] Jack: sweden instead of switzerland that&#x27;s the problem with dyslexia isn&#x27;t it i&#x27;ve come here to kill myself
+[2501.89] UNKNOWN: anyway that was a bit so mako would you like to tell us about your your daddy
+[2509.81] UNKNOWN: yeah
+[2513.57] UNKNOWN: tony where were you tony you you do this segment because you wanted to learn stuff
+[2520.05] UNKNOWN: hold on hold on we&#x27;ve got to stop there i&#x27;ve got nothing to lie all i&#x27;ve got is this whole
+[2525.49] Jack: panel that&#x27;s locked in the lantern i guess robert&#x27;s uh gig ever be right thank you buddy thank you
+[2535.33] UNKNOWN: thank you so much for the donation 20 bucks from roman i really appreciate everything for this
+[2542.05] UNKNOWN: this gives tony some valuable thinking time oh yeah also remember the cameras further up
+[2548.85] UNKNOWN: called up and up up up up there damn it have you got the fire extinguisher handy
+[2558.5] UNKNOWN: no i&#x27;m just gonna hope for the best oh well and push them all together
+[2562.5] Jack: oh that&#x27;s uh that&#x27;s kicked off quite a bit
+[2572.74] Jack: look at it it&#x27;s molten
+[2576.26] Jack: pleased together wow it&#x27;s like it turned into thermal lance or something that&#x27;s amazing
+[2583.7] Frank: no one likes your t-shirt by the way this was a christmas present off my dear friend frank
+[2589.86] Jack: yes it was and just saying thank you man i love it it was one size too big and i&#x27;ve grown into it
+[2597.54] Jack: shirt that fits because awkwardly my new colleagues asked me you know what do you do
+[2606.26] Jack: at the evening and i&#x27;m just like i sleep i eat and i you know everywhere and uh i was like that&#x27;s
+[2613.86] Jack: it i think i&#x27;ll just just think of me as a big giant bear that&#x27;s hibernating in brain yeah
+[2621.78] Jack: which is a whole new rabbit hole to go down
+[2627.22] Jack: but i would like to point out if i was a big gate there tony would be my cub
+[2634.5] Jack: yep yep little cubby because you&#x27;re not a twink um nj would probably be nj you you&#x27;re older
+[2642.58] Jack: than me though aren&#x27;t you um yes i am elder than you jack mentally and
+[2650.66] Curry: nj is really considering hard if he wants to acknowledge that question
+[2656.18] NJ: why he came back the reason no the reason he said that was because my birthday is on
+[2659.86] NJ: monday and it&#x27;s unfortunately a big one no way it&#x27;s the big three oh but maybe a bit more than
+[2668.18] Jack: that i&#x27;m afraid oh shut up nj you look 12 yeah really the life begins at um yeah it&#x27;s that one
+[2679.86] NJ: oh god half 37 as well or is it 27 when are you meant to do yourself in if you&#x27;re a talented
+[2686.66] Jack: musician oh um yeah i think it&#x27;s 20 yeah it&#x27;s 27 is the kind of that&#x27;s there was one magical
+[2695.06] NJ: magical was completely the wrong word um don&#x27;t use that at the um tree tower
+[2702.26] NJ: yeah i think jimmy hendrix died in curcobain there&#x27;s all these there&#x27;s maybe why now they all
+[2708.1] NJ: seem to seem to uh yeah well that was a bleak turn for tagging off the back of my upcoming
+[2715.38] NJ: basically you failed as a musician because you&#x27;re still alive that&#x27;s an interesting way of looking
+[2719.7] Curry: at it exactly i&#x27;m actually stoked to turn 40 because not it&#x27;s a few years away not too many
+[2726.18] Mako: though all right just push that one on that don&#x27;t worry about us it&#x27;s like no it&#x27;s many years away
+[2730.18] Curry: from me but i&#x27;ll be stoked about it well you can fly in the um like the older people race i don&#x27;t
+[2737.22] Mako: know what they call it at multi gpio you can fly at the 40 plus race yes dimension special i think
+[2746.1] Curry: yeah let&#x27;s fly the wind job tony what is this called
+[2758.58] Jack: oh dear is that it&#x27;s like a class we&#x27;re gonna have to bring in a uh mini air show oh please do
+[2764.9] UNKNOWN: i might win that you&#x27;re gonna have to like have like uh geriatric x-class and then that&#x27;s like just
+[2771.46] Frank: you well it looks like it&#x27;s just gonna be me anyway i&#x27;ll put out a uh a shout out the other
+[2778.34] Tony: day it was like you finally got a chance of winning a race at least i know we&#x27;re gonna be
+[2782.74] Frank: you in it so anyone listening who has an x-class or has some parts for an x-class or is looking to
+[2788.66] Frank: build an x-class please be by maybe you know this better than i do tony may the 12th there you go
+[2796.74] UNKNOWN: i keep forgetting um yes all the days you haven&#x27;t forgotten it&#x27;s just all the days are blending into
+[2803.3] Jack: one mass panic and yeah well the thing is is because we&#x27;ve got like the the camping starting
+[2810.42] Frank: on the 10th and then assessing setting up happening on the 11th and then no no camping
+[2816.34] Frank: starting on the 9th sets up having on happening on the 10th and then the racing and everything
+[2821.22] Frank: happening on the 11th and the 12th and it&#x27;s really days it&#x27;ll be fine it&#x27;ll be fine it puts
+[2827.7] Frank: gun in mouth i do need some x-class people to fly with yeah well what do you do for your birthday
+[2833.22] Frank: nj um are we clubbing up together and getting nj next class is that what you&#x27;re saying jack
+[2839.86] Frank: because i think that would be fun i think nothing too huge i don&#x27;t think i&#x27;m slightly suspicious
+[2849.62] NJ: that something might be organized um after 5000 yeah um but yeah not too much is on the uh on the
+[2862.42] NJ: agenda as it were i just working through mountains of reviews probably got an army of synne whoops
+[2867.94] NJ: here that uh need to get done so uh i have uh actually been sent by beta fpv a replacement
+[2875.3] NJ: for the one for anyone that caught my live stream where i did reveal the sad undoing of my last beta
+[2881.78] NJ: x 85 xhd which made its found its way under the wheel of a very fast moving tractor
+[2889.7] UNKNOWN: yes it was quite an amusing video i do i have been sent another one now so i will be uh that
+[2895.3] Tony: looks really nice oh yeah i&#x27;ve just printed a new canopy for it one of the problems with
+[2899.3] NJ: uh the original canopy was that you couldn&#x27;t really angle the turtles too well on it
+[2903.54] NJ: um so i&#x27;ve uh printed a newer one which has a bit more room but um this flew so well on 4s i was
+[2912.18] NJ: i was this was my favorite little work until it got run over so uh version two we&#x27;ll see are you
+[2918.34] NJ: going to be um taking their advice about only running it on freest now are you going to carry
+[2922.66] Curry: on the forest on it on 4s i i i mean i&#x27;ll allude to in the uh in the review which is that i think
+[2929.94] NJ: part of the problem was the pits they provided i just think they were on on a
+[2933.86] NJ: a whip that&#x27;s running i mean my biggest issue was they&#x27;ve got a whip running d shop
+[2938.26] NJ: 500 which is just completely bonkers i don&#x27;t think it needs that at all um and running a protocol
+[2944.9] NJ: that fast um and then running d terms of that are up in the sort of mid 60s it&#x27;s just it&#x27;s asking
+[2952.42] NJ: for trouble on 4s with such high kv tiny motors and they&#x27;re so the motors spin so fast that it&#x27;s
+[2959.06] NJ: not something that you&#x27;d ever hear you can always hear that metallic ringing of a high d term on
+[2963.78] NJ: the five inch quad um quite easily you can use your ear to do that but it&#x27;s less noticeable on
+[2970.66] NJ: a on a tiny work so i got my end tuned up on 4s with the pits me and mr shutterbug had a chat
+[2977.78] NJ: about pits and we both independently tuned ours 85x hds and we both ended up with pits that were
+[2984.18] NJ: around half of the ones that beta fpv shipped it with and i went back to them and said look i
+[2989.38] NJ: think your pits are too high and this is what smoking your ear sees um so i&#x27;ve gone straight
+[2994.1] NJ: onto 4s with it and again with my own numbers on it it&#x27;s been flying great so i&#x27;m going to stick
+[2999.3] NJ: with 4s well hopefully they take note it was it was actually quite good to see uh beta fpv they
+[3005.22] Curry: put a blog post out about their investigation and i know a lot of companies are quite crap when it
+[3011.22] Curry: comes to people blowing quads up they&#x27;re like oh yeah yeah it&#x27;s it&#x27;s it&#x27;s nothing don&#x27;t worry
+[3015.06] Curry: about it they put a load of quads through torture tests and managed to blow up a load and they they
+[3020.42] Curry: figured that some of them were dodgy ear sees and they blew up they had a whole box of 4s failures
+[3027.46] Curry: and then they had a bunch of 3s ones that didn&#x27;t fail which is why they came onto the idea about
+[3032.58] Curry: it&#x27;s 4s but it&#x27;d be really good if they could repeat that test trying something like your pits
+[3037.94] Curry: and see if they still had the same problem yeah i mean numbers mean things when it comes to testing
+[3043.3] Curry: like this it does and i&#x27;ve i kind of got a little bit disheartened when i mean face facebook groups
+[3050.5] NJ: you see all kinds of people in and you saw people just absolutely tearing them a new one i thought
+[3055.22] NJ: well hang on you&#x27;ve got companies like you know i&#x27;ll say it but but run cam who go and we don&#x27;t
+[3061.46] NJ: support the news that he sorry yeah but you know they sort of discreetly changed the lens
+[3066.82] NJ: behind people&#x27;s backs to fix a problem uh and you know they really upset the community with a few
+[3072.02] NJ: shady moves and then you&#x27;ve got beta fbv who came out completely with their hands up and said look
+[3077.14] NJ: here&#x27;s the problem if you&#x27;ve got if this has been a problem for you we&#x27;ll totally honor fixing it
+[3081.78] NJ: here&#x27;s all our research that we&#x27;ve done into why we think the problem exists we&#x27;re going to write
+[3085.62] NJ: it for everyone it&#x27;s completely the right way to do it and i think they should be applauded for that
+[3090.42] NJ: and as usual you still get people going at them and i i kind of think that&#x27;s a bit uncool i think
+[3096.74] NJ: they deserve support for the fact that they&#x27;ve you know they&#x27;ve said we&#x27;ll honor any you know
+[3100.74] NJ: if yours blew up because the csc fire if you had any it was still a small number of people who had
+[3104.58] NJ: the problem but if they did they said we&#x27;ll send you a new sc we&#x27;ll we&#x27;ll we&#x27;ll make it right and
+[3110.26] NJ: here&#x27;s the research so that we we think we found the problem and we&#x27;re going to fix it and move
+[3114.58] NJ: forward um so i think they&#x27;re to be applauded for that for dealing with things that way um but
+[3120.1] NJ: i&#x27;ve i&#x27;ve chapped with um the chaps over there and i&#x27;ve uh chapped with nate and uh yeah i think
+[3128.02] NJ: that the pids are definitely something to do that i hope i have i&#x27;ve told them as much anyway so um
+[3134.02] NJ: we&#x27;ll uh we&#x27;ll see how things go i&#x27;ll continue to run it on for us and you know i&#x27;ll either eat my
+[3138.5] NJ: words or uh or not but nate and i have certainly been flying for us for quite a while on that
+[3143.86] NJ: quad without problems so i think it&#x27;s fine i think the numbers just need to come down
+[3148.82] UNKNOWN: right there is a question in the chat for mako where uh from con concrete snail concrete snail
+[3162.1] UNKNOWN: good home where does mako stand on the rise of brushed whoops and racing because you don&#x27;t fly
+[3169.06] Tony: brushed yet do you i fly both you fly both but you still kicking ass without flying brush
+[3177.06] Tony: yeah there&#x27;s been a rise of brushless and a decrease in brushed right that&#x27;s why i&#x27;m
+[3181.06] Mako: a little bit i fly brush like 65 millimeter brushed yeah but i have brushed list too i
+[3187.94] Mako: have the 75 brushes i actually really like flying this i&#x27;ve had um this one i have another one around
+[3194.42] Mako: here but i really like flying the 75 mil it&#x27;s a lot of fun i feel like it lasts i don&#x27;t know it
+[3200.74] Mako: just doesn&#x27;t get the sag towards the end for some reason i don&#x27;t know if the battery i use um oh
+[3206.82] Mako: gosh i wish i had i use like a 600 ma battery i wish i had it but a lot of people use like the 300
+[3214.18] Mako: right oh yes what is that a 2s uh 600 or no 1s oh wow that&#x27;s it feels quite heavy but it obviously
+[3224.42] Curry: works for you yeah it&#x27;s brushless oh you&#x27;ve got like a little blanket on you i&#x27;m cool oh
+[3234.1] UNKNOWN: there is snow on the ground oh i didn&#x27;t see that oh yeah that&#x27;s quite a meaty looking
+[3239.62] Mako: not really uh there we go it&#x27;s your face you&#x27;ve got to cover your face it face tracks you
+[3248.82] Mako: yeah so i use a pretty large battery here it&#x27;s got to be it&#x27;s funny it&#x27;s one question i get asked
+[3255.14] NJ: um quite a lot on my channel is what batteries i&#x27;m using with various different works and i&#x27;ll
+[3261.22] NJ: say the same thing to them as i&#x27;ll say now it really doesn&#x27;t matter i use a load of cheap
+[3265.62] NJ: batteries because 1s when you&#x27;re pulling a decent amount of current from them and they&#x27;re
+[3269.38] NJ: so small in capacity they&#x27;re going to puff and die anyway and they&#x27;re so cheap so just use them abuse
+[3275.38] NJ: them and throw them away jack&#x27;s girlfriends what girlfriends
+[3284.5] Mako: no tiny who has their um brushless motors now so i&#x27;m really interested in making a 65 mil brushless
+[3292.02] UNKNOWN: you&#x27;ve also got a new is it is your little new frame going to come out do you think or is it just
+[3299.78] Tony: for you why i think it&#x27;s just for me so um they this is the one they released or are releasing
+[3307.78] UNKNOWN: to the cat i think they&#x27;re doing a contest right now where you and it might have ended i don&#x27;t
+[3315.86] Mako: know but where you submit artwork and they&#x27;ll print some of the frames for prizes bring that
+[3322.26] NJ: up onto a camera again we&#x27;ve got you presenting so we can get yeah look great oh so it&#x27;s got like
+[3329.3] NJ: a little on it that&#x27;s funny it&#x27;s like a hydro bit print or something hmm yeah but yeah they put my
+[3338.58] Mako: logo on it was it&#x27;s pretty awesome i can&#x27;t wait to get it it&#x27;s in the mail so oh so you got your
+[3343.78] Tony: one coming so it&#x27;s going to be the same as that with your with your logo yeah and i&#x27;m not sure i
+[3350.34] Mako: like if i should fly it&#x27;s too nice that that they may need just hanging on the wall yeah and i um
+[3356.5] Mako: fly who sent me these crazy gold bling i think i&#x27;m going to put them on it it&#x27;s just
+[3364.58] NJ: something you should probably wear around your neck yeah
+[3366.82] NJ: yeah i know and what about um i&#x27;ve seen on your your instagram uh with your um 128th
+[3376.98] Frank: rc truck uh have you been driving that around a lot no not too much because we brought it to um
+[3385.3] UNKNOWN: the new york city thing the john festival and it got squished in the
+[3389.78] Jack: oh so it&#x27;s a little i need some repair
+[3395.14] UNKNOWN: but maybe i&#x27;m hoping to like work on that a little bit because at the hobby shop we race at
+[3399.7] Mako: they do car races too so it might be fun to go down and try that out they don&#x27;t do it fpv so i
+[3405.62] Mako: think if we walk in and do it fpv they&#x27;ll give us funny looks but i think that&#x27;s the way to go fpv
+[3412.34] Tony: more realistic my first fpv experience was a 136 lozy micro t with a 2.4 gigahertz um
+[3421.22] Frank: old security camera on it and yeah it&#x27;s just great fun to just drive around the house i think
+[3426.34] Curry: the problem is on on like a racetrack is it can be too bumpy yeah you need to have the right
+[3432.18] Curry: combination of suspension and camera to to get it right yeah it&#x27;s just gonna be like get a bit sick
+[3438.74] Jack: can&#x27;t you get the jello balls does that not do anything or does that amplify quite a small
+[3446.74] Curry: guess it depends where you are if you&#x27;re like an indoor sort of carpet track type thing which
+[3451.14] Curry: which could be a lot of fun what you need is some kind of three-axis gyro for the camera
+[3456.98] NJ: or the cheap way of doing that would just to be to build one big enough to hold a chicken
+[3461.86] NJ: and then you mount it to the chicken&#x27;s head we want to see the video of the guy who moves the
+[3466.02] NJ: body of the chicken yeah i&#x27;ve noticed that by you mountain biking i wear a chest harness
+[3472.5] UNKNOWN: and it goes up and down but if i put it on my helmet the camera my hand works as a gimbal
+[3479.06] UNKNOWN: a video that i saw many many many years ago by i&#x27;m pretty sure it was uh a lexmus who did uh
+[3486.98] Frank: he built his own gyro kind of gimbal thing but it it was like the chicken he built it around
+[3494.26] Frank: the idea of the chicken so it had like a an arm that so it would stabilize not just in
+[3499.94] UNKNOWN: in direction but stabilize it up and down as well and it looks amazing and i think he just used it
+[3505.54] Frank: in one little video and then it never appeared again and um i really like one of those you just
+[3513.46] Tony: need the gopro seven now don&#x27;t you sir it does work nicely people in the chat are saying that
+[3518.58] Curry: the same thing that&#x27;s in my head i thought you needed an owl for proper bird gimbal type tracking
+[3524.02] Curry: but the chicken that you do on the cheek they&#x27;re much easier to go than before the best fbv podcast
+[3530.74] Jack: we&#x27;re talking about gimbal owls exactly you know it&#x27;s on topic ish and it&#x27;s inventive you&#x27;ve had a
+[3540.66] Frank: chicken in your in your flat jack we&#x27;ve talked about normal you&#x27;re a chicken you&#x27;re a grateful
+[3546.18] Jack: prick oh thanks what friends do what we need to do if you bought a chicken if someone bought you
+[3555.14] Jack: a chicken gaffer type of camera to it said clearly have you had to go i mean we had to go
+[3564.58] Frank: at the uk drone show uh maker have you had to go with a tiny wolver yet a what a tiny hoover
+[3572.42] UNKNOWN: tiny hoover hoover pulling into general uh gender stereotyping
+[3579.7] UNKNOWN: i don&#x27;t know what that is so it&#x27;s a little like uh hopper craft okay okay i do know what that is
+[3585.54] Mako: i just didn&#x27;t know what they&#x27;re called i haven&#x27;t tried one they are crazy fun because we had um
+[3592.82] Mako: sort of i don&#x27;t know what it&#x27;s called it sort of looked like a wing and it had like a try a
+[3596.66] Mako: whoop in it yes that&#x27;s that&#x27;s and what&#x27;s that one called i can&#x27;t even remember i&#x27;ve seen something
+[3602.9] Tony: like that which like it&#x27;s got a wing attached to it yeah i did i have actually fbv my hoover once
+[3612.34] Tony: i&#x27;m not even joking funny like you&#x27;re saying fbv watch your control method surely it&#x27;s your hand
+[3619.3] Tony: no comment is this is this related to your live streaming tony of all yes it was yeah
+[3626.58] Tony: it was i&#x27;m so tempted to buy a rumba and stick an fbv thing on it even though you&#x27;ll have no
+[3632.82] Jack: control over it just make it around tony&#x27;s house and make a big thing of it and be like tony i&#x27;ve
+[3639.06] Jack: made you a present remember yeah so you can sit there and like watch and like not have control over
+[3648.66] Jack: it that sounds like an excellent 24 7 live stream no it does yeah but it&#x27;s not big enough to 24
+[3655.46] Jack: hour hoover air i just want to quickly talk about mako and her father and what her dad did and where
+[3664.18] Tony: he was stationed and things like that because this is really because we know stuff for people
+[3669.38] UNKNOWN: we do yeah i&#x27;m sorry i guess for those of the people who don&#x27;t know my my family we&#x27;re an
+[3676.42] Mako: air force family my dad who&#x27;s no longer with us was in the air force and he was a tech sergeant
+[3682.82] Mako: and he was a mechanic so he worked on planes and he worked on the sr-71 that was one of the planes
+[3688.58] Mako: he worked on which is a pretty famous plane it&#x27;s known for being really fast like three times the
+[3695.54] Mako: speed of sound over 2 000 miles per hour the cia basically went to Lockheed Martin and asked them
+[3702.9] Mako: to create this crazy surveillance plane so that&#x27;s what they came up with and they&#x27;re about 30 made
+[3708.74] Mako: and i my my family was stationed at in california at vl air force base which is basically the home
+[3715.62] Mako: of the sr-71 so pretty much all 30 32 of them have been in and out of that air force base
+[3721.86] UNKNOWN: so my dad&#x27;s probably climbed around on all of them but um he was a crew chief so he was in
+[3727.38] Mako: charge of basically all the mechanics and making sure the plane ran but the plane was incredible
+[3733.22] UNKNOWN: i went on my honeymoon to go see the actual plane that my dad worked on the most
+[3737.94] Mako: and got to touch it and everything it was really exciting but um that&#x27;s cool yeah but we went to uh
+[3744.18] Mako: this is methodian museum in dc and we saw a ton of world war two planes and this the sr-71 was just
+[3752.5] Mako: huge in comparison i can&#x27;t even describe how big it is um i don&#x27;t even know how they got it
+[3758.26] Mako: in the museum like if they had to take off the roof it&#x27;s or take it apart into pieces but i don&#x27;t
+[3763.14] Mako: even it&#x27;s humongous but um it&#x27;s made of titanium and it&#x27;s pretty loose fitting so what happened
+[3770.74] Mako: was when it wasn&#x27;t flying it would leak fuel and my dad bathed in fuel i think at least once
+[3778.66] Mako: but um they would then when it would fly it would uh you know the speed and the heat it would expand
+[3784.34] Mako: and then it would fill those holes and it wouldn&#x27;t leak anymore but um he went up in the
+[3790.18] Mako: couple times uh as a pilot and he had to wear a space suit because it&#x27;s like 80 it goes up like
+[3796.18] Mako: 80 000 feet um but it flew a lot of hot missions they call them so and they don&#x27;t know exactly
+[3804.82] Mako: where they&#x27;re flying but my dad did know that um they would fly over Nicaragua Cuba and then
+[3812.02] Mako: we were stationed in Okinawa and that&#x27;s where kind of the big big missions go out of and then also
+[3818.1] Mako: and um mildenhall how did you how do we pronounce it oh yeah that&#x27;s in the UK yeah yeah so he was
+[3827.7] Mako: stationed there and they flew a bunch of hot missions out of there too um but he was also
+[3833.62] Mako: in Saudi Arabia he traveled a lot um due to his job yeah that&#x27;s incredible i mean that that was
+[3841.22] NJ: absolutely one of my like childhood poster planes that i just absolutely obsessed over is it
+[3847.3] NJ: one of the sexiest looking planes in the world it&#x27;s sort of the thing that nine-year-old you would
+[3852.9] NJ: would draw if someone said draw me a plane and you crossed it with your favorite spaceship
+[3857.22] NJ: and everything else i mean the technology considered it was designed in the 70s right
+[3862.5] NJ: was it late 60s early 70s it was yeah it came out like the 60s and the technology i mean even
+[3868.5] NJ: the way the nose cone retracted in and out of the engines to make sure that the air
+[3872.42] NJ: the air coming in it could it got such incredible speeds that the nose cones had to move in and out
+[3878.26] NJ: to be able to bring the speed of the air down to where it could actually combust it was just
+[3883.14] NJ: insane insane technology in this thing and so i read there was lots of reports of people saying
+[3889.22] NJ: well we&#x27;ve got the official speeds of this but there&#x27;s actually it&#x27;s it&#x27;s theorized that this
+[3894.66] NJ: thing could go way faster than that but they never wanted to actually publicize just how fast
+[3899.38] NJ: this thing could go there&#x27;s lots of rate uh atc stories of of people saying there&#x27;s stuff we&#x27;ve
+[3905.62] NJ: seen move across a radar that we think might have been uh 71 but they&#x27;ve you know we officially
+[3911.78] NJ: weren&#x27;t told but it was just ballistic and it probably was that on reconnaissance you know on
+[3917.06] NJ: the edge of space there is an absolutely excellent book on on the sl 71 and some similar
+[3924.42] Frank: ones that came out the skunk works so the book is skunk works by ben r rich and i absolutely highly
+[3931.7] Frank: recommend that and how they kind of trialed different fuels for the sl 71 and ended up
+[3937.14] Frank: almost blowing themselves up um all the talk about how like the the let you say the the cones in the
+[3943.3] Frank: engines that produce so much thrust through weird bits of maths and things but it&#x27;s it&#x27;s a great
+[3949.38] Frank: piece of kit and uh someone in the chat i will check who said it uh one who flew over his house
+[3958.74] Frank: oh it was mr fruity cakes again uh said uh there&#x27;s an sl 71 at uh the imperial war museum
+[3966.02] Frank: uh american air museum at duxford um and i&#x27;ve seen that many times i think i&#x27;ve seen that
+[3972.74] Tony: actually now i&#x27;m thinking about it because i went to duxford and flew a tiger morph and i&#x27;m pretty
+[3976.82] Tony: sure that i did see it there now i&#x27;m thinking about it it was really big maker have you got any
+[3984.58] NJ: got any classified classified info can you tell us any secrets if i tell you i&#x27;ll never kill you
+[3992.02] Mako: one of them more high club tail jack and then kill jack please tell jack and then kill jack yes
+[4001.78] NJ: yes that&#x27;s his one that&#x27;s one very cool dad and i know you imagine if i become a dad what did you
+[4007.86] Tony: do i cleaned windows for a living son it&#x27;s kind of too bad in a way though because no i shouldn&#x27;t
+[4014.42] Mako: say it that way it&#x27;s it&#x27;s unfortunate because i didn&#x27;t realize growing up how like sick his job
+[4020.18] Mako: was until i was really old and then he passed away so i didn&#x27;t really talk to him more about it
+[4025.62] Mako: i would have loved to get some dirt yeah cool i now understand that few things interesting
+[4033.86] Curry: because i remember seeing a good documentary about it because it sounds insanely dangerous
+[4037.3] Curry: but i remember that the engineer saying actually if something was on fire you could throw that
+[4041.94] Curry: sort of fuel over it to put the fire out because it was such non-combustible somehow that it was
+[4048.74] Curry: not considered dangerous that the fact that fuel just leaked out of it when it was on the ground
+[4052.66] Curry: like that that&#x27;s crazy it expanded that much when it was going that fast yeah who did the
+[4058.9] Curry: maths for that i don&#x27;t worry about the leaker to be five horses in the air can you imagine sending
+[4064.26] Jack: it to the machinist though are these your tolerances because you do realize it fits
+[4069.54] Jack: together like a soggy jigsaw puzzle when it&#x27;s in the air it doesn&#x27;t no when it&#x27;s up at yeah
+[4077.62] Frank: hundred and something degrees it makes a difference it must have got quite warm
+[4082.98] Tony: yeah it was i guess like over a hundred degrees in fahrenheit in the cockpit yeah i think at certain
+[4090.74] NJ: speeds it was considerably higher it was like you know really getting the external the external
+[4097.46] Mako: surface was like over 600 yeah that got really really hot pretty insane i mean imagine being
+[4104.02] NJ: told what you&#x27;re about to go and fly don&#x27;t be concerned the thing you&#x27;re getting into is about
+[4108.98] NJ: absolutely hemorrhage fuel but as soon as you get to this point in altitude it all glue itself
+[4114.58] NJ: together i&#x27;m sorry about the fact the nose is going to glow red hot that&#x27;s cool too we&#x27;ve
+[4119.7] NJ: sussed all that i&#x27;ve done the math i mean it&#x27;s just it&#x27;s bonkers and we&#x27;d like you to go at the
+[4124.34] NJ: edge of space and then fly over you know russia or wherever they&#x27;re very far you might have been
+[4130.1] NJ: russia it might not it&#x27;s crazy yeah don&#x27;t worry about the u2 that got shot down by a missile a
+[4135.62] Frank: few years ago like that won&#x27;t happen again we promised well that plane was one of the famous
+[4142.82] NJ: stories about that from i can&#x27;t remember who the uh the pilot was was saying that you know whenever
+[4147.54] NJ: they got a missile fired at them they just put the accelerators on you know cut the throttle all
+[4152.02] NJ: the way forward turned on the reheat and they just outpaced it you know see you later missile
+[4156.5] NJ: that fail to keep up that is i didn&#x27;t tell you my dad actually worked on the u2 also nice
+[4168.18] Mako: that is that is a cool dad was he offended by that shitty band
+[4176.98] Jack: this plane doesn&#x27;t deserve that bono
+[4180.1] UNKNOWN: um but it&#x27;s crazy because the sr-71 would go up so high yet be able to take surveillance
+[4188.9] Mako: of like parking lot lines basically back in the 60s like how
+[4196.26] UNKNOWN: the lens on the camera that was was ridiculous wasn&#x27;t it that was like one of the most expensive
+[4201.7] NJ: pieces of kit on the aircraft and it had this just insane zoom and as you say you could see
+[4208.02] NJ: you know read license plate numbers and you know from however high they were flying it&#x27;s it&#x27;s mad
+[4214.18] NJ: so your dad probably definitely met aliens
+[4220.74] NJ: flew all four corners of the earth atone yeah
+[4228.1] Frank: just finishing that this up um does anyone have any recommendations for more space films because
+[4233.3] Frank: i&#x27;ve i&#x27;ve recently got through all the lists i can think of so apollo 13 uh write stuff um
+[4241.14] Frank: last your first man um miles of text what about interstellar and gravity yeah i don&#x27;t like them
+[4251.38] Curry: so much gravity you need to wear headphones or have a really good sound system interstellar is
+[4257.06] Curry: very much based on like uh physics the small nano stuff but and they did because they did the the
+[4264.74] Frank: black hole simulation as well didn&#x27;t they um that like they did put a load of super computer time
+[4270.82] Frank: on simulating this black hole to do some weird science math stuff that we now know more about
+[4277.06] Frank: black holes because of that movie um which is weird um but there&#x27;s also on
+[4286.66] Frank: on netflix there&#x27;s a documentary called mercury 13 that i watched recently but kind of bringing
+[4292.5] Frank: this back to the the original theme of the show um it was about the 13 women who uh went through
+[4299.78] Frank: all the uh testing and training for the mercury program yes my parents said that was a
+[4306.18] Tony: only to watch that it was really good it is a really good documentary um but yeah it&#x27;s uh
+[4312.58] Frank: watching that as well as watching the right stuff kind of puts a lot of things in perspective
+[4318.66] UNKNOWN: and i&#x27;m first one he&#x27;s wrong about the earth being flat about many things jake about many things
+[4326.42] UNKNOWN: oh what&#x27;s what&#x27;s the one with the the the women being the computers at nasa on something yeah that
+[4333.06] Curry: that&#x27;s a black woman wasn&#x27;t it yeah but they&#x27;re the computers before they were computers
+[4341.94] Curry: that&#x27;s a good film something it&#x27;s like i can&#x27;t remember someone looking out come on chat where
+[4348.1] Curry: are you let&#x27;s play dementia what was it called i&#x27;m the oldest i have a right to forget things
+[4355.94] Curry: red dwarf life space 1999 on figures hidden figures there you go there you go
+[4368.5] Jack: i was just testing you guys i&#x27;m not honest tune in next week to play another game of dementia
+[4379.22] UNKNOWN: you&#x27;ve been listening to let&#x27;s drone out shall i end the show yes please you&#x27;ve been listening to
+[4386.18] UNKNOWN: let&#x27;s show now you&#x27;ve enjoyed by andrew saffron bye they&#x27;re not only wonderful beautiful and
+[4392.58] Jack: talented moco ria trot fine it&#x27;s talking with you oh it&#x27;s just so lovely so ready to hijack that
+[4400.74] Jack: goodbye i thought about it and the lovely sexy and talented but probably will get kicked out
+[4410.26] Jack: because of brexit because we&#x27;re apparently new version of the windrush uh yeah bye everyone
+[4418.82] Jack: see you soon all right we love you you&#x27;re an asset to our thing and i&#x27;ll make sure frank feels in the
+[4424.98] Jack: appropriate paperwork to prove that you you&#x27;ve sponsored me to stay
+[4431.38] UNKNOWN: and if it all goes wrong you can either marry me or tony
+[4434.66] Jack: okay we enjoyed by my little tony for sure i think you&#x27;d rather be kicked out than
+[4450.34] NJ: i&#x27;ll kind of whoop the rings down the aisle for you oh would you thanks
+[4454.98] NJ: oh
+[4465.54] Jack: i can&#x27;t talk uh everyone&#x27;s favorite cocaine goodbye and i&#x27;ve been bright until i fly thanks
+[4471.86] Jack: for tuning in guys and i really appreciate it fourth place thank all patreons jack come on
+[4481.86] Jack: i&#x27;d like to thank patreons anyone who sponsors um everyone that&#x27;s tuned in just a few booboo ben
+[4490.42] Jack: swiney did you know colors klai first person great story richard warrick
+[4500.18] Tony: falling with style what&#x27;s up i&#x27;m going riding sunday if you want to come mr free
+[4504.42] Tony: shakes give a dollar onto our patreon we&#x27;ll make you a mod because i&#x27;d love to see your comments
+[4510.5] UNKNOWN: green practice tribal fbv some of the girls
+[4520.26] Tony: for his lovely donation thank you very much thank you and good night peace bye bye
+[4528.82] UNKNOWN: who can say the last word me telemetry lost
+</pre></body></html>

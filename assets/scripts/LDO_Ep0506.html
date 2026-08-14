@@ -1,0 +1,915 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0506—LDO 506 - Circular References</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 506 ===
+Title: LDO 506 - Circular References
+Recorded: 2025-05-08
+Hosts: Andrew &quot;Frank&quot; Hyams, Stephen &quot;Belrik&quot; Howell, Wayne &quot;CurryKitten&quot; Andrews, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): (none recorded)
+Total audience: 858
+Platforms: YouTube (https://www.youtube.com/watch?v=S6Y-eoRuXqY); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/2093378229-letsdroneout-ldo-506-circular-references.mp3)
+=====================================
+
+[0.0] UNKNOWN: Hello, and you&#x27;re listening to Let&#x27;s Drone Out, a special thank you to our lovely patrons
+[6.28] Jack: that help donate so that we can pay the editor to remove the swear words and silly things
+[11.36] Jack: we say.
+[13.0] Jack: Massive thank you to…
+[14.4] Jack: Carlos Campos!
+[16.0] Jack: Art Faulkner.
+[17.84] Jack: Sam Dahmer.
+[19.68] Frank: On with the show.
+[20.68] Frank: Hello, and welcome to Let&#x27;s Drone Out, the night we are joined by our Lord and Saviour
+[57.22] Jack: Andrew S. Frank.
+[58.7] Jack: Good evening.
+[59.7] Jack: Everyone&#x27;s favourite curry kitten.
+[62.5] Jack: Hello.
+[63.5] UNKNOWN: Back from Amsterdam, our man, Stephen.
+[68.38] UNKNOWN: Hello, nice to see everyone.
+[72.06] Jack: And I am your host, Brode To My Fly, and if you are over a nervous disposition or suffer
+[82.18] Jack: from high blood pressure, please leave and return to the show in about 10 minutes.
+[91.06] Frank: Yeah, skip the first few minutes, we&#x27;ll skip over that.
+[97.58] Jack: So what&#x27;s happened, Frank?
+[99.22] UNKNOWN: We&#x27;ve also got legal notice scrolling across the bottom here, do not take legal advice
+[104.38] Frank: from podcasts, that is also relevant.
+[110.26] Frank: So this morning, promptly at 9 o&#x27;clock this morning, the CAA published their consultation
+[122.82] Frank: reply document and recommendations for regulations moving forward.
+[128.1] Frank: So there was a consultation…
+[129.1] Frank: Well, we got all our feedback and we were all very thorough and very careful, so I imagine
+[132.66] Stephen: they really listened to us, haven&#x27;t they?
+[134.34] Stephen: Tell us what they&#x27;ve done.
+[136.1] Frank: Yes, so they&#x27;ve had a good few thousand respondents, most of whom were over 60, 70 odd percent
+[148.26] Frank: were model flyers, 98% were men, and that&#x27;s sort of, you know, just giving that as a bit
+[157.1] Frank: of colour, a bit of context.
+[163.34] Frank: Usually everyone says, yeah, don&#x27;t increase the regulations, don&#x27;t do remote ID, don&#x27;t
+[171.78] Frank: stress about it, do simplify it, that&#x27;s all we want, is for you to simplify the rules
+[176.14] Frank: that are already there, make it clearer.
+[180.74] Frank: So of course what they&#x27;ve said is that based on this overwhelming, you know, singular feeling
+[189.9] Frank: for what should be done with the regulations, they&#x27;re going to bring in remote ID in 2028
+[199.78] Frank: and they are going to reduce the minimum weight limit for all the various requirements for
+[211.34] Frank: operator IDs and all that kind of thing from 250 grams to 100 grams.
+[218.1] Frank: So I&#x27;m expecting in the next few days for there to be an announcement for the DJI Neo99
+[227.94] Frank: flake coming out, that&#x27;s what I&#x27;m expecting, but there we go, that&#x27;s just being slightly
+[235.62] Frank: cynical about it all.
+[238.22] Frank: They have, to be fair to them, they have agreed that they&#x27;re going to rename the, because
+[245.1] Frank: there&#x27;s a lot of like letter number characters going around across all the new regulations
+[251.78] Frank: and it is quite hard to keep straight what means what, how they all relate to each other.
+[257.54] Frank: So they have decided that instead of going A1, A2, A3, they&#x27;re going to go over people,
+[265.02] Frank: near people, far from people and that they&#x27;re using over near and far instead of A1, A2,
+[272.86] Frank: A3.
+[274.3] Jack: This is really small, they&#x27;re far away.
+[284.34] Frank: Yeah, that&#x27;s pretty much it.
+[286.14] Frank: I mean, we don&#x27;t know for sure what remote ID is going to look like, but it&#x27;s probably
+[291.7] Frank: going to be the same that&#x27;s in the EU and the US where it&#x27;s like a mix of Wi-Fi stuff
+[297.78] Frank: and Bluetooth stuff.
+[300.22] Frank: You know, there&#x27;s a lot on the market already that do those that are, say, 90 or 100 local
+[310.34] Frank: currency units that have the GPS in them and the battery in them, but equally there&#x27;s 30
+[319.98] Frank: currency units that will get you a board that will take from a flight controller and it&#x27;s
+[325.26] Frank: just basically an ESP32, so you could probably end up making it yourself for fairly cheap
+[329.34] Frank: as well.
+[330.34] UNKNOWN: Where it takes the GPS location and whatever else from your flight controller, the serial
+[337.9] Frank: number and an operator ID and broadcast that out over Wi-Fi and or Bluetooth to the local
+[346.86] Frank: area so that it can be picked up with a phone and that&#x27;s what the remote ID is looking like
+[354.5] Frank: and it&#x27;s probably going to be something like that.
+[359.46] Stephen: You mentioned it was in a document.
+[360.7] Stephen: I didn&#x27;t see where the document came from, but it&#x27;s Wi-Fi neighborhood aware network
+[366.26] Stephen: or NAN.
+[368.26] UNKNOWN: Yeah, I mean, it&#x27;s a sort of Wi-Fi broadcast type thing where you might use for beacons
+[377.5] Stephen: when you&#x27;re walking around a shopping mall.
+[379.46] Stephen: Yes.
+[380.46] Stephen: If you&#x27;re in some kind of an obsessive shopper, you can be spammed with deals from your favorite
+[385.54] Stephen: stores as you walk past them and the thing about that is the thing is designed to achieve
+[392.3] Stephen: is to give you connection when you are in very close proximity like when you are walking
+[397.58] Stephen: within say five or six meters and it&#x27;s designed that if there&#x27;s a lot of people in a very
+[402.18] Stephen: dense area, devices instead of talking to an access point, which might be up the ceiling
+[407.74] Stephen: it may be quite a long way away, instead of everyone trying to talk to the access point,
+[412.1] Stephen: they kind of beacon to each other and the messages can be spread from node to node in
+[415.98] Stephen: a mesh if they need to be.
+[420.14] Stephen: What it is not specifically what it is not is a means of detecting anything from any
+[425.5] Stephen: marked distance like this is less effective than using a Wi-Fi access point, it&#x27;s a lower
+[431.9] Stephen: range than a Wi-Fi access point.
+[435.54] Stephen: If we&#x27;re flying a quad, say in a Bando and we&#x27;re struggling to get video reception,
+[442.58] Stephen: I&#x27;m struggling to keep control link with massive antennas, purpose-designed, optimized with
+[449.3] Stephen: one watt output power and our remote ID is using an ESP chip antenna with a little tiny
+[457.54] Stephen: zigzag on the PCB and 10 milliwatts of output power, there&#x27;s no way in hell that anyone
+[464.54] Stephen: is going to be able to read this, so beyond writing reams of legalese and making everyone
+[470.42] Stephen: jump through a load of BS hoops to use what, to be perfectly honest, is probably going
+[476.34] Stephen: to be a built-in function in the chips that are in Express LRS receivers by the time this
+[481.02] Stephen: gets to market, just bloody pointless because you&#x27;re going to have to walk up to the quad,
+[487.3] Stephen: have it like within touching distance before you&#x27;re going to be able to get a read on it,
+[492.1] Stephen: so why can&#x27;t we just use a bloody stiffer, I mean it&#x27;s totally, you&#x27;re accidentally
+[499.1] Curry: trying to implement logic into this, do you think it would work better if we intend to
+[502.94] Curry: wrap them in foil as well?
+[504.62] UNKNOWN: Oh yeah, I&#x27;m sure once you&#x27;ve put it in the body of the quad with your receivers the safest
+[509.18] Stephen: as opposed to out the R sticking out in the air where you put your other antennas, it&#x27;s
+[512.86] Stephen: going to be doing great, I&#x27;d recommend you put it, put all your receivers between the
+[516.86] Stephen: frame and the biggest, thickest heatsick mounted VTX you can find.
+[522.9] Stephen: Why aren&#x27;t Peter Crownes tracked?
+[525.5] Stephen: Why are we tracked?
+[528.7] UNKNOWN: I think the newspapers just find us easy pickings, I guess.
+[533.38] Frank: But the thing is, no one outside of the drone world is going to know about any of this,
+[539.54] Frank: no one&#x27;s going to care.
+[540.54] Frank: No one gives a pay.
+[542.54] UNKNOWN: I mean, ultimately, none of this matters, there&#x27;s bigger problems in the world.
+[546.98] Frank: Yeah, we&#x27;re all going to end up with a new model of receiver, whether it&#x27;s your crossfire
+[552.46] Stephen: or Express LRS, and it&#x27;s just going to use the new expressive chip, and these functions
+[558.9] Stephen: are all built in on the latest generations of ESP chips, so you&#x27;ve got your extra little
+[564.18] Stephen: Wi-Fi, your extra little Bluetooth, and it&#x27;s just going to give you a couple of dB of signal
+[570.46] Stephen: loss while it blasts out this stupid little five or 10 milliwatt signal that no one&#x27;s
+[575.14] Stephen: going to be able to bloody read because it&#x27;s going to be weak in the new telemetry link,
+[578.86] UNKNOWN: and we&#x27;ll all just move on, I hope.
+[583.3] Curry: Perhaps what we should do is just ignore it, because so far my number of runnings with people
+[588.86] Curry: being aggravated or the police are zero in about 14 years, so I might just get a little
+[596.22] Curry: box and write on it remote ID, and then have some wires coming out of it and push that
+[602.02] UNKNOWN: in.
+[603.02] Curry: In case anyone wants to inspect it, it&#x27;s a bit like the box of the internet with the
+[608.62] Curry: flashing red light.
+[610.1] UNKNOWN: Yeah.
+[611.1] Jack: For anyone not from the UK, that was an IT crowd reference.
+[617.02] Curry: I like to think that people in the US have watched the UK series of it, and not the terrible
+[621.46] Curry: attempt at a remake in the US they did.
+[623.86] Stephen: They only did the pilot, didn&#x27;t they?
+[625.38] Stephen: And then they had to just can it.
+[630.1] UNKNOWN: Again, the whole argument comes back to, okay, how&#x27;s this going to help remove bad actors
+[639.26] Curry: as they call them?
+[640.26] Curry: And it&#x27;s the same thing as when they said we need registration.
+[643.7] Curry: It&#x27;s like the baddies aren&#x27;t going to do it, so you&#x27;re not going to be able to track them.
+[649.26] Curry: You also see no one robs a bank using their own car, just in case someone sees a registration
+[654.18] Curry: number and could track them that way.
+[655.94] UNKNOWN: Yeah.
+[656.94] Frank: I mean, it does mean a bit like a license plate.
+[660.1] Frank: If you see a car without a license plate, you&#x27;re fairly confident it&#x27;s probably either
+[664.9] Frank: up to no good or they&#x27;ve smashed into something.
+[668.46] Jack: Yeah, but you just steal someone else&#x27;s number plate.
+[672.38] Jack: Does anyone here know of anyone who&#x27;s had that happen to them?
+[676.7] Jack: Yeah, of course.
+[677.7] Jack: Do you know how difficult and bullsh** it is?
+[681.46] UNKNOWN: Well, it&#x27;s very trivial to take a number plate off, isn&#x27;t it?
+[683.9] Curry: It&#x27;s like two screws.
+[684.9] UNKNOWN: Yeah.
+[685.9] Frank: Or double-sided tape, yeah.
+[687.9] UNKNOWN: Yeah, it doesn&#x27;t matter.
+[690.06] Frank: The point, you know, they clearly don&#x27;t care.
+[693.5] Frank: They&#x27;ve got the numbers saying the people who actually no one care about this have said
+[698.42] Frank: we shouldn&#x27;t do this, but we&#x27;re doing it anyway.
+[700.34] Frank: So it&#x27;s going to happen like, I mean, all the Facebook groups suggest everyone&#x27;s going
+[706.9] Frank: to ignore it anyway.
+[708.3] UNKNOWN: Yeah.
+[709.3] Stephen: I mean, it&#x27;s just a bit sad that, you know, we have to jump through all these hoops.
+[714.54] Stephen: And it&#x27;s sad that so much of what the society relies on, like security theater, like do
+[720.06] Stephen: this big clover of standing around and shining lights into corners and not really doing anything
+[725.34] Stephen: instead of actually spending money on something more useful.
+[728.58] UNKNOWN: Yeah.
+[729.58] UNKNOWN: Yeah.
+[730.58] UNKNOWN: I agree with Carol and Tyler saying you have had your 10 minutes, Google.
+[736.1] UNKNOWN: Sorry.
+[737.1] Curry: Crowds become rowdy.
+[739.62] Frank: So who&#x27;s flown this past week?
+[743.66] UNKNOWN: I&#x27;ve done some flying.
+[746.66] Frank: Yep.
+[747.66] Frank: Yep.
+[748.66] Frank: We went to Hidden Valley.
+[749.94] Frank: It was lovely.
+[751.74] Frank: It was sunny.
+[753.44] Frank: It was not too hot.
+[755.22] Frank: It was brilliant flying weather.
+[759.86] Frank: We brought more projects to the fields than we had people, and some of them even worked.
+[767.78] Frank: It was great.
+[771.58] Frank: The magic smoke stayed in the side of the things.
+[775.34] Frank: The sea mists stayed clear of our flying area.
+[781.62] Frank: The smoke we intended to release didn&#x27;t come out, but we&#x27;re working on that.
+[785.98] Frank: That&#x27;ll come later.
+[786.98] Frank: Is it still inside Jack?
+[791.82] Frank: That&#x27;s why he&#x27;s looking a bit under went out.
+[795.82] UNKNOWN: He might just press a button and his head kind of folds back and this giant jet of smoke
+[803.82] Stephen: erupts.
+[804.82] UNKNOWN: Yeah.
+[805.82] UNKNOWN: I&#x27;m struggling.
+[806.82] Jack: I&#x27;m not going to lie.
+[811.62] Frank: I got to see inside the down lab, which is a fascinating thing to see in the middle of
+[819.1] Frank: nowhere.
+[822.26] Frank: It is very industrial, very medical, very clinical.
+[826.58] Frank: Still can&#x27;t figure out how to charge this sodden thing.
+[832.54] Frank: I look forward to seeing it at many, many flying locations.
+[839.18] Curry: Is there any exciting footage you can share?
+[842.9] Frank: Is there any exciting footage I can share?
+[845.22] Frank: I might be able to.
+[847.22] Frank: Let me give it a go.
+[850.46] Jack: I didn&#x27;t use a GoPro on any of my stuff.
+[853.86] Jack: I didn&#x27;t even use my GPS card because I spend longer waiting for the GPS fixed than flying
+[861.86] Jack: it.
+[862.86] UNKNOWN: So, I&#x27;ll pass me just a couple.
+[870.38] Curry: You&#x27;re a handy runway there.
+[872.38] Curry: That&#x27;s good, isn&#x27;t it?
+[875.46] Curry: Did you bring a lawnmower with you?
+[877.62] Curry: No.
+[878.62] Frank: We just brought some clothes and blew them totally.
+[881.82] Frank: On the grass.
+[883.82] Curry: Yeah.
+[884.82] UNKNOWN: Yeah.
+[885.82] UNKNOWN: Now, as you can see, lovely day.
+[889.9] Frank: See if you can see that cloud in the sky.
+[891.86] Frank: Oh, cloud.
+[892.86] UNKNOWN: Great.
+[894.86] Stephen: Is this you, friend?
+[895.86] Stephen: You&#x27;ve been multiplying more stuff for DJI, I see.
+[898.86] UNKNOWN: Yes.
+[899.86] Frank: So, this is an OGA unit on a motion sick badass gimbal, although it&#x27;s not actually used at
+[912.06] Frank: this point.
+[913.06] Frank: It&#x27;s just pointing straight ahead, but the point is it didn&#x27;t go mental, so that&#x27;s good.
+[921.62] Frank: It&#x27;s on an FMS Cub, which is too big to bring in here, but yeah, it&#x27;s good fun.
+[931.22] Frank: I&#x27;ve been flying the Cub line of sight for ages and then prompted by Andy RC telling
+[938.14] Frank: me I should stick a gimbal and head tracking on it.
+[941.86] Frank: I have done that.
+[943.54] Frank: I didn&#x27;t get head tracking working for when we weren&#x27;t flying, but so I was just getting
+[949.98] Frank: the FPV going, making sure that was all happy.
+[953.82] Frank: This first flight, I think, is just where I was flying line of sight and Jack was in
+[961.54] Frank: the goggles making sure I hadn&#x27;t messed something up or the antennas were broken or something
+[967.18] Frank: awful like that, making sure everything was happy.
+[971.14] Frank: Looks pretty.
+[972.14] UNKNOWN: Yeah.
+[973.82] UNKNOWN: Yeah, it was good fun.
+[976.66] Frank: And then I did some flying FPV, but without the pantel or head tracking doing anything
+[982.7] Frank: useful.
+[983.7] UNKNOWN: Yeah, it&#x27;s I very much enjoyed it.
+[989.5] Frank: And the Cubs got these big bush wheels so I could actually land on the grass and like
+[994.42] Frank: taxi around and take off again.
+[996.02] Frank: It was great fun.
+[998.02] Frank: Very much enjoyed it.
+[999.26] Curry: It&#x27;s a dream of mine to land a plane with wheels and not have it fall over on its nose.
+[1003.3] Curry: I&#x27;ve never accomplished this yet.
+[1004.82] UNKNOWN: I&#x27;ve never taken off anywhere that wasn&#x27;t knee deep in grass, so it&#x27;s a bit tricksy.
+[1010.86] UNKNOWN: Yeah, I mean, I did keep to the shorter bits of grass where all the vehicles go back and
+[1016.22] Frank: forth and all the quad bikes and stuff that the farmers use.
+[1022.26] Frank: But yeah, I could take off and land.
+[1025.9] Frank: Very exciting.
+[1027.18] Stephen: So next step, you&#x27;re going to start moving your head around.
+[1029.82] Stephen: Is that on the cards?
+[1031.62] Frank: Yeah, exactly.
+[1032.62] Frank: So I after speaking with John Lancaster, I bought the motion sick head tracker, which
+[1041.7] Frank: is called something like the tally ho head tracker.
+[1047.26] Frank: And I have been fighting that to get that working.
+[1050.98] Frank: So the easiest way to do it, the most reliable way to do it is with a cable between a trainer
+[1060.22] Frank: cable, a TRS, or is it just a tip sleeve cable, three and a half mil cable anyway, between
+[1068.62] Frank: the head tracker and the DSC port, the trainer port.
+[1072.58] Frank: So I&#x27;ve got the RadioMaster TX16S and I couldn&#x27;t get it to work because this thing&#x27;s broken,
+[1080.54] Frank: it&#x27;s awful.
+[1081.54] Frank: And then I was looking around and painless has put out a video about the TX16S trainer
+[1088.46] Frank: port.
+[1089.46] UNKNOWN: In the Mark 1 TX16S, the trainer port is this very weird socket where the contacts aren&#x27;t
+[1098.3] Frank: in the right place unless you use a very, very specific cable.
+[1102.82] Frank: So the solution is to open it up and bend the contacts back so that it actually makes
+[1109.22] Frank: contact.
+[1110.22] Stephen: You don&#x27;t need to get a completely new socket, I suppose.
+[1113.5] Frank: Exactly, exactly.
+[1114.5] Frank: They do sell the replacement of the Mark 2 one, which has a normal socket, so you could
+[1120.66] Frank: do that way if you really wanted to, but for five minutes, opening it up, bending a contact
+[1126.46] Frank: and it all working.
+[1127.78] Frank: I was happy with that.
+[1129.94] Frank: And then the other challenge is that the, I mean, I haven&#x27;t entirely solved this yet.
+[1136.58] Frank: It seems like I&#x27;ve found an answer, but it sort of gets curious about something in a
+[1145.26] Frank: different direction occasionally when I was testing it, yeah, when I finally got it working.
+[1152.02] Frank: So it works and responds normally and then just 30 seconds later, for no apparent reason,
+[1161.98] Frank: it just drifts off about 45 degrees, fits there for a little bit, and then slowly wanders
+[1168.26] Curry: back.
+[1169.26] Curry: Is there a reset button on it?
+[1170.54] Curry: Because that&#x27;s what I noticed that I tried head tracking on my HD zero goggles and it&#x27;s
+[1175.26] Curry: like, this is working, this is working, then suddenly it&#x27;d go off and I have to look like
+[1178.82] Curry: that to be straight.
+[1179.82] Curry: And I was like, oh, there&#x27;s no reset.
+[1181.14] Curry: Like on the old head trackers that went in the fat sharks, I think you had like a recenter
+[1185.26] Curry: button or something where it&#x27;d just go to the middle one.
+[1188.3] Curry: That seems to be missing from other ones.
+[1190.94] Frank: This one does have a reset button, which also acts as an enable, disable button, which
+[1196.58] Frank: I didn&#x27;t realize to begin with.
+[1198.18] Frank: So I was like, oh, it&#x27;s still not outputting anything.
+[1200.62] Frank: Why is it not outputting anything?
+[1203.9] Frank: It&#x27;s a long hold and release to enable it.
+[1208.38] Frank: So that&#x27;s good to know.
+[1211.02] UNKNOWN: But yeah, it had this weird drifty thing.
+[1214.78] Frank: I couldn&#x27;t understand what was going on.
+[1218.5] Frank: Andy RC had ideas.
+[1221.34] Frank: John had ideas.
+[1222.34] Frank: Those people have loads of ideas.
+[1224.34] Frank: It seems like the most likely thing is just that it has some kind of like the gyro in
+[1233.46] Frank: it like needs to warm up.
+[1236.18] Frank: That seems to be the thing.
+[1238.26] Frank: So you just turn it on and leave it for a bit and let it go.
+[1243.3] Frank: Not calibrate, but not immediately after a period of 20 minutes stretching out in the
+[1248.18] Stephen: sun.
+[1249.18] UNKNOWN: It&#x27;ll calibrate.
+[1250.18] UNKNOWN: Yeah.
+[1251.18] Frank: Exactly.
+[1252.18] Frank: It seems a bit, which makes me a little uncomfortable with it.
+[1257.94] Frank: But the fact that it does have the disable thing does at least give a sort of a fallback.
+[1264.06] Frank: But yeah, I will be testing this out more thoroughly next week.
+[1268.34] UNKNOWN: That is the long term thing.
+[1272.78] Frank: SPV in the chat says, later versions of the code is bugs and compass drifts.
+[1279.98] Frank: Best fix is to disable compass.
+[1281.34] Frank: Well, I&#x27;ve got the version of the code that starts off with the meg disabled to begin
+[1287.46] Frank: with.
+[1288.46] Frank: So that is definitely not the problem.
+[1290.34] UNKNOWN: But we&#x27;ll use a compass for anyway, again, I kind of like point north all the time.
+[1298.9] Stephen: Right.
+[1301.89] UNKNOWN: Are you a sundial or an aircraft?
+[1304.09] Stephen: What&#x27;s going on?
+[1305.09] UNKNOWN: If I was having a problem with an accelerometer when it got hot on a little woop where if
+[1315.77] Curry: I crashed it or the board got hot, then the accelerometer would stop working completely.
+[1321.69] Curry: And this is I&#x27;m in angle mode flying a woop in my house.
+[1324.77] Curry: I arm it and I go to go up and it just flips over on the floor, which is kind of the opposite
+[1331.25] Curry: of what should be happening, which was which was diagnosed to be, we think your chip&#x27;s
+[1335.89] Curry: faulty or as a dodgy solar connection because it shouldn&#x27;t work like that.
+[1340.09] Curry: But that&#x27;s that&#x27;s kind of like some some old stuff got a bit different when it warmed up,
+[1345.05] Curry: didn&#x27;t it?
+[1346.05] Curry: The Jara&#x27;s works.
+[1347.05] UNKNOWN: Yeah, that&#x27;s that&#x27;s what slightly leaves me a bit unsatisfied about this explanation
+[1354.61] Frank: is that this sounds like a thing that used to happen 10 years ago and isn&#x27;t a thing I&#x27;m
+[1360.49] Frank: aware of happening more recently.
+[1362.17] Frank: And this is a fairly new board like it&#x27;s using the Arduino Nano 33 or something.
+[1368.81] Frank: It&#x27;s like it&#x27;s a fairly recent board.
+[1370.81] Frank: I feel like it shouldn&#x27;t have an old problem.
+[1373.45] Frank: And I feel like it would be a problem with the Arduino board, not with this particular
+[1379.53] Frank: product made with the Arduino board.
+[1381.41] Frank: So I&#x27;m slightly sensing bullshit, but we&#x27;ll, we&#x27;ll find out.
+[1388.13] Frank: I&#x27;ll continue investigating, try and pin down, but I haven&#x27;t been able to reliably replicate
+[1394.41] Frank: it, which is, you know, the most important thing we&#x27;re trying to diagnose a problem,
+[1398.81] Stephen: right?
+[1399.81] Stephen: The tracker board&#x27;s a swap of the board, so you could always find a different solution
+[1403.29] Stephen: and as long as you&#x27;ve got a nice gimbal, just find something else.
+[1406.01] Stephen: Very true.
+[1407.01] Stephen: Yeah.
+[1409.29] UNKNOWN: Easily make, make one or make the other.
+[1413.85] Frank: Well, now you&#x27;ve got those DJI goggles, you could consider what NDRC was doing.
+[1418.77] Stephen: He had one solution where he mounted kind of inside the goggles where they used to,
+[1425.17] Stephen: used to have a screw on antennas that would go on the front of those goggles.
+[1429.61] Stephen: And I think there&#x27;s a head track, a 3D print mount that clamps on there as well.
+[1434.01] UNKNOWN: The sort of where the digidaptor type stuff goes.
+[1437.45] Frank: Yeah.
+[1438.45] Stephen: Yeah.
+[1439.45] UNKNOWN: And then you do a power splutter into it.
+[1442.81] UNKNOWN: Well, this, this one&#x27;s like bolts into where the head strap goes onto the, onto the two
+[1450.37] Frank: goggles.
+[1451.37] UNKNOWN: It&#x27;s, it&#x27;s very attached to just, it has some characteristics I&#x27;m not familiar with.
+[1459.85] Stephen: With Arduino projects that kind of get abandoned or see they&#x27;ll fork to, you know, quite sure.
+[1465.33] UNKNOWN: Well, that&#x27;s the thing is it&#x27;s a very live project.
+[1468.29] Frank: Like it&#x27;s, there&#x27;s lots of people working on it right now.
+[1470.89] Frank: It&#x27;s not, it&#x27;s not an old head tracker thing that&#x27;s just been around for ages.
+[1474.89] Frank: This is new thing.
+[1475.89] UNKNOWN: So this is, it is literally just called head tracker and the, the, the product is the motion
+[1484.13] Frank: sick pallyhope, but it&#x27;s based on the Arduino thing.
+[1489.85] UNKNOWN: Yeah.
+[1490.85] Frank: Yeah.
+[1491.85] Stephen: Yeah.
+[1492.85] Stephen: The Arduino, the Arduino project is called the motion sick.
+[1495.85] UNKNOWN: No.
+[1496.85] Frank: So the, the, the, the projects using either ESP32s or nano 33s or whatever else, whatever
+[1504.65] Frank: board it is, you know, whatever board you like basically is just called head tracker.
+[1510.53] Frank: Not head tracker RX.
+[1511.85] UNKNOWN: Don&#x27;t think so.
+[1513.85] Frank: I think it&#x27;s just called head tracker.
+[1515.69] Frank: That&#x27;s definitely what the, the discord is called anyway.
+[1520.05] Stephen: There&#x27;s a whole bunch of different head tracker projects that are all forks of different
+[1523.45] Stephen: things.
+[1524.45] Stephen: So yeah, I&#x27;m not sure when you&#x27;re looking at that.
+[1528.97] Stephen: And there are a lot of them are forked from things that are forked from some guy who was
+[1532.97] Stephen: trying to do a general purpose, like Bluetooth adapter board.
+[1536.69] UNKNOWN: Yeah.
+[1537.69] Frank: There&#x27;s definitely a lot of mention of Bluetooth everywhere, but I do not need Bluetooth.
+[1545.05] UNKNOWN: Cool.
+[1546.05] UNKNOWN: Like a nice day.
+[1548.05] UNKNOWN: Yeah.
+[1549.05] Frank: It was a lovely day and yeah, it was fun flying.
+[1555.25] Frank: This episode was recorded in front of a live online audience, downloaded and edited to
+[1559.37] Frank: make sense when it played audio only sensors to please the iTunes people hosted on the
+[1564.21] Frank: internet, forwarded through to your podcast provider, downloaded playing on your device
+[1568.43] Frank: and is now playing in your ears.
+[1570.33] Frank: All thanks to our Patreons consider joining them and you&#x27;ll also get other online benefits.
+[1576.01] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
+[1580.73] Curry: I did just remember that I did actually fly something while we were out staying somewhere
+[1586.47] Curry: at devil&#x27;s punch bowl, but it was just one of the DJI camera cords.
+[1589.87] Curry: So it doesn&#x27;t really count as it&#x27;s like it&#x27;s going away from us over the trees.
+[1595.33] Curry: Here&#x27;s what&#x27;s over the top of the lip at the end.
+[1598.05] Curry: It was quite dark.
+[1599.05] UNKNOWN: Have you not had any new stuff to review yet?
+[1603.13] Jack: How are you getting on with the new goggles?
+[1605.05] UNKNOWN: Well, I&#x27;ve only got one quad that uses them.
+[1607.77] Curry: I keep like dropping hints to various companies like, Hey, you know, you wanted me to test
+[1613.73] Curry: something two years ago using DJI goggles.
+[1616.21] Curry: I have some help.
+[1618.41] Curry: Can I have it?
+[1619.41] UNKNOWN: No.
+[1620.41] Curry: Stop making all that stuff.
+[1622.81] UNKNOWN: Yeah.
+[1623.81] Curry: We&#x27;ve given up.
+[1624.81] UNKNOWN: Who?
+[1625.81] UNKNOWN: Yeah.
+[1626.97] Curry: I&#x27;ve been finishing, finishing off some, some edits for some tech stuff this week.
+[1635.64] Curry: And I got a new tiny helicopter that was, I talked about it so long ago, I had to go
+[1641.88] Curry: through my emails to find out who it was from.
+[1644.64] Curry: I think I found that, but yeah, it&#x27;s not terribly exciting.
+[1648.92] Curry: And I&#x27;ve just rebuilt my wing again after smashing into that post two times.
+[1654.52] Curry: And I&#x27;m like, I shan&#x27;t give up.
+[1656.92] Curry: I will launch it into the air or I will set a fire to it.
+[1660.2] Curry: One of the two.
+[1661.2] UNKNOWN: It&#x27;s got to that point, isn&#x27;t it?
+[1664.2] Stephen: Yes.
+[1665.2] Curry: It doesn&#x27;t need to be either, or you&#x27;ll die.
+[1668.52] Curry: It&#x27;s a threat.
+[1669.52] Curry: So now he&#x27;s like, he&#x27;s scared, a scared wing is one that flies.
+[1674.2] Curry: That&#x27;s my feeling.
+[1675.2] Curry: Yeah.
+[1676.2] Curry: I, I&#x27;ve, I realize I haven&#x27;t done any fixed wing flying for a while.
+[1679.0] Curry: So next time I go to the field, I want to make sure I take more than one wing because
+[1683.24] Curry: then if I smash that into the ground, I&#x27;ll have a different one to fly.
+[1687.32] Curry: That&#x27;d be more fun.
+[1688.32] UNKNOWN: Yeah.
+[1689.32] Frank: Uh, as a note, so numbskull in the chat has reminded me, Popem is this weekend, the Popem
+[1696.96] Frank: model air show this weekend.
+[1700.4] Frank: On Monday this week, I was helping, uh, start to set up the tent for some tiny wing flying
+[1708.24] Frank: in the big top that they have, uh, at Popem for their summer events.
+[1714.4] Frank: So there&#x27;s a big old track.
+[1716.4] Frank: I also left them with some trophies.
+[1718.56] Frank: So there&#x27;s some trophies for the tiny wing flying.
+[1721.52] UNKNOWN: So if you&#x27;re interested in some tiny whoop racing, then that is going to be there this
+[1726.32] Frank: weekend, uh, along with all sorts of water flying.
+[1730.52] Frank: Uh, I think I&#x27;ve seen some people who may be in the chat say that they were going to
+[1735.76] Frank: bring along some stuff to sell, but I don&#x27;t think there&#x27;s any official FPV, um, shops
+[1744.0] Frank: going, but it&#x27;ll all be out of the back of a, uh, out the back of a car or possibly in
+[1750.96] Frank: like some long coat and people will be sort of bringing a load of like props and motors
+[1756.64] Frank: and batteries and things.
+[1758.52] Frank: But there&#x27;ll be loads of like, uh, the sort of module stores going, just maybe not so
+[1763.92] Frank: much, uh, tiny whoop or general FPV stuff.
+[1768.64] UNKNOWN: Yes, he is in the chat.
+[1769.96] Frank: Marshall McFly has a load of stuff to buy.
+[1774.96] UNKNOWN: So if you are going to, uh, pop them this weekend and want some FPV stuff, maybe go
+[1781.52] Frank: speak to him.
+[1783.6] UNKNOWN: Any old iron, any old iron?
+[1788.52] Jack: How I imagine it to be.
+[1791.12] UNKNOWN: I&#x27;m kind of enthused about building tiny quads again.
+[1794.68] Stephen: So one upshot of this recent annoying news is that I think it&#x27;s, it&#x27;s great to build tiny
+[1802.36] Stephen: little two, two and a half inch park flyers.
+[1805.28] Stephen: So I&#x27;m probably going to try a few more of those.
+[1807.68] Stephen: I&#x27;ve got parts on the bench, so it&#x27;s going to be a summer project.
+[1812.0] UNKNOWN: Is it under a hundred grams?
+[1814.08] UNKNOWN: I think you can do it.
+[1815.04] Stephen: Yeah.
+[1815.52] Stephen: I mean, a lot of them ended up being about 120, but I fly them with like 450 mar3s.
+[1821.48] Stephen: And if you go down to like 300 3s, that&#x27;s probably going to be under a hundred.
+[1826.6] UNKNOWN: Yeah.
+[1828.36] UNKNOWN: You just got to get that walk snail in there and, um, yeah, try and make it so it
+[1832.96] Stephen: doesn&#x27;t fall apart too easily.
+[1834.28] UNKNOWN: It&#x27;s such a shit fest, isn&#x27;t there?
+[1838.16] UNKNOWN: It&#x27;s not great, but I mean, I did enjoy flying that type of quite an awful lot to
+[1842.28] Stephen: start with.
+[1842.8] Stephen: So I think there&#x27;s going to be a fun thing to fly at least.
+[1846.88] Curry: I think, um, it just depends the sort of places you&#x27;ve got.
+[1851.68] Curry: Like I love taking a whoop just in the quite dense woods and just flying it
+[1856.0] Curry: around the trees there, which you definitely can do on a five inch or you
+[1860.0] Curry: could do, but it would be quite short lived and involve a large noise standing
+[1863.84] Curry: like a saw hitting some wood.
+[1865.32] Stephen: It involves praising quads out of quite close contact with the trees
+[1870.48] Stephen: using bits of other tree.
+[1872.6] UNKNOWN: The good thing about small quads like that in forest is that they never
+[1876.24] Stephen: go fast enough to get like truly stuck into something.
+[1880.84] UNKNOWN: Like at most it, you&#x27;re just going to be able to talk to a waggle a branch
+[1884.64] Stephen: and it comes down.
+[1886.6] Jack: I&#x27;m sure I could find a way of totally screwing it up.
+[1891.52] Jack: Obviously like a professional such as yourself, Jack would be able to find
+[1895.8] Stephen: a way of getting it right up.
+[1897.6] Jack: I mean, I, I once got a chair stuck in a tree.
+[1902.0] UNKNOWN: I mean, I think finding quads when they&#x27;re small in the woods is the more
+[1912.92] Curry: difficult thing, especially if there&#x27;s leaves on the floor and your quads is
+[1916.84] Curry: this big beepers don&#x27;t really work through like leaf mulch, not when it&#x27;s
+[1924.32] Curry: those tiny little motors, you&#x27;re like, it beats.
+[1928.32] Stephen: It&#x27;s definitely around here somewhere, but is it actually in this direction?
+[1933.72] UNKNOWN: I&#x27;ve never had much luck with the whoops.
+[1936.88] Frank: I feel like they&#x27;re slightly more delicate on the electronic side than
+[1941.64] Frank: I ever expect them to be.
+[1943.8] Frank: And it always seems like I like slightly push a battery a little bit too
+[1948.36] Frank: far and something browns out and then something dies and it&#x27;s like loses all
+[1954.96] Frank: its settings and they have to like go back to flashing it like with a boot
+[1958.52] Frank: loader or something.
+[1959.24] Frank: Cause I&#x27;ve managed to wipe something very important or like the, the, the
+[1964.92] Frank: motors just burn out or just, I feel like they&#x27;re not quite as resilient.
+[1968.96] Frank: I don&#x27;t get as many packs through them per taking apart and putting them back
+[1974.2] Frank: together again.
+[1975.0] Frank: They definitely are like, this is the air 65.
+[1977.28] Curry: I was flying this about a week ago and the video system out tomorrow and
+[1981.64] Curry: it&#x27;s squishy, it flexes, but you can&#x27;t get enough like kinetic energy to
+[1988.6] Curry: actually bash it on something.
+[1989.72] Curry: But this is, this is a problem.
+[1991.08] Curry: I was like, I was flying this out and I was like, Oh, I wonder if I can reach
+[1994.08] Curry: the blue bells over there.
+[1995.04] Curry: So you start going through some trees and like hit a piece of scraggle and then
+[1998.28] Curry: you fall down upside down and then leaves and you like, Oh dear, because I&#x27;m not
+[2002.36] Curry: sure where that is and it&#x27;s quite far away.
+[2004.4] Curry: And so on this one, it&#x27;s somehow I managed to flip it over and get back.
+[2011.08] Curry: And then I had this massive leaf and like green moths all over it, but it&#x27;s
+[2015.92] Curry: like, I, I have to play like get, get my telemetry radio and look at the DB for
+[2021.72] Curry: the RSSI and you start going about trying to, it&#x27;s like, the only, the only way I
+[2028.4] Curry: can make it, make a noise is to arm it.
+[2030.56] Curry: And I can hear the motors like whizz up somewhere.
+[2032.76] Curry: It&#x27;s like, where is that must find it.
+[2035.48] Curry: I got there the other day.
+[2036.36] Curry: There was this big Hawk sat on a branch looking at it.
+[2038.64] Curry: I think he was just about to take it to his chicks, but we got it back.
+[2044.04] Curry: I do like quads that are small, light enough to feel like it&#x27;s a tiny five
+[2051.0] Curry: inch that you can fly around.
+[2052.64] Curry: I&#x27;ve had so many whoops.
+[2054.6] Curry: They&#x27;re a bit heavy and like whenever you like spin or something, you got like
+[2059.08] Curry: full power just to get it back.
+[2060.84] Curry: You can&#x27;t do a flip unless you&#x27;re like five meters up.
+[2063.44] Curry: Yeah.
+[2063.64] Curry: Yeah.
+[2064.24] Curry: This little air series, they&#x27;re only like five grams lighter than
+[2068.52] Curry: the regular one, but five grams is about like over a quarter of its weight.
+[2072.48] Curry: So they&#x27;re really fun.
+[2074.72] Curry: I like those.
+[2077.0] UNKNOWN: Yeah.
+[2077.28] Stephen: I definitely felt that the 65 mil was a challenging build.
+[2081.08] Stephen: Like you need to get a really perfect list of parts or go to a vendor that has
+[2087.0] Stephen: it down like beta FPV or probably the Mobula series.
+[2091.68] UNKNOWN: Yeah.
+[2092.48] Curry: There&#x27;s like a single board in that one.
+[2094.56] UNKNOWN: Yeah.
+[2095.0] Curry: And the camera, which is pretty easy as now.
+[2097.76] UNKNOWN: You don&#x27;t really want a separate VTX at all.
+[2100.64] Stephen: If you can on a 65 mil, I think when you get to 85 mil, like you can do a lot at
+[2105.72] Stephen: that point, but you&#x27;re not going to be under a hundred grams.
+[2108.64] Stephen: I guess an 85 mil would buy you.
+[2110.44] Stephen: It&#x27;s just not going to happen because all that plastic.
+[2113.2] UNKNOWN: No.
+[2113.48] Curry: And I suppose as you get a bit bigger, you probably want to up the power as well,
+[2117.24] Curry: which means heavier parts, which sort of destroys the under a hundred, but screw
+[2122.92] Curry: that we&#x27;re all going to learn how to, the trouble is then in just three years
+[2126.92] Stephen: time, they&#x27;ll be like, oh, 50 grams, you know?
+[2130.24] Curry: Yeah.
+[2131.4] Curry: Not going back to it, but I&#x27;m guessing there wasn&#x27;t any actual reasoning to say
+[2135.48] Curry: two 50 grams is bad.
+[2137.0] Curry: Let&#x27;s go back to a hundred because surely they would have measured like how fast
+[2142.52] Curry: can the two 50 gram go?
+[2143.64] Curry: What sort of damage can it do?
+[2145.04] Curry: No, I don&#x27;t think they did actually.
+[2146.8] Curry: It can copy.
+[2147.76] Curry: I&#x27;ve got to do it to a hundred.
+[2148.84] Stephen: You&#x27;re assuming like a lot of work on the other side of the equation.
+[2152.2] Stephen: I really don&#x27;t think, I think they just want to systematically ban people from
+[2156.04] Stephen: flying and they&#x27;re going to make it harder and harder for a number of years to
+[2159.52] Stephen: progressively strict a law enforcement and we can try and rationalize it all we
+[2163.52] Stephen: want, but that&#x27;s their agenda.
+[2165.08] Stephen: So that&#x27;s where we are.
+[2167.32] Curry: The only work they did was to cunningly ignore every comment that everybody
+[2172.12] Curry: knows.
+[2173.04] UNKNOWN: Let&#x27;s pick what 85% of people say we shouldn&#x27;t do and do that.
+[2176.84] UNKNOWN: Yeah, because we&#x27;ve got the mandate from 14% of people that either didn&#x27;t care or
+[2182.48] UNKNOWN: grudgingly admitted it.
+[2184.76] UNKNOWN: Yeah, the, the, the one I particularly didn&#x27;t have much success with was the
+[2192.28] Frank: Mobula six.
+[2193.6] Frank: That was the one that I&#x27;ve managed to, every time I fly it, I managed to, it
+[2199.8] Frank: starts becoming a thought.
+[2201.52] UNKNOWN: Yeah.
+[2203.28] UNKNOWN: It just decides I don&#x27;t like being on quite anymore.
+[2206.76] Frank: Flash me with something else.
+[2207.96] Frank: I want to, I want to be some other, some other device.
+[2212.24] UNKNOWN: I was definitely on the cheap end of the scale.
+[2215.36] Stephen: I remember that.
+[2218.28] Curry: So it&#x27;s like,
+[2219.44] Jack: what happened with that?
+[2220.64] Jack: Is it, you run the battery down really low and then it, it wipes its own memory.
+[2227.52] Frank: Yeah, it loses the, some, some EEPROM or something.
+[2232.4] Frank: And then it&#x27;s just, it ends up like wiping whatever firmware is on it.
+[2238.28] Frank: It just, it doesn&#x27;t have the firmware anymore.
+[2240.8] Frank: So the, the, the, the VTX works, but the flight controller is no longer a flight
+[2244.96] Frank: control.
+[2245.56] Curry: What you&#x27;ve got there is a Gen Z quad.
+[2248.2] Curry: It wants to identify as a tricopter or something.
+[2250.84] Stephen: So I recently heard about this with SSDs because people were, were starting to
+[2256.36] Stephen: raise sort of specters of concern that when we had, uh, HDDs, you know, spinning
+[2265.08] Stephen: disks, that they&#x27;re storing magnetic data, right?
+[2268.32] Stephen: So there&#x27;s literally a magnetic field that&#x27;s being flipped and it&#x27;s, it&#x27;s
+[2271.84] Stephen: fairly permanent, but some people recently with SSDs have been saying, well,
+[2276.48] Stephen: if you store them for a couple of years, you do get a bunch of file system errors.
+[2280.16] Stephen: And the more, where there is before you start storing it, the worse those errors
+[2285.04] Stephen: are, and because the way you&#x27;re storing data on an SSD is you&#x27;re pushing all
+[2289.6] Stephen: these electrons, charged particles into through an insulator and just hoping
+[2295.52] Stephen: that they stay there and that they don&#x27;t break through the insulator.
+[2299.6] Stephen: So you put a large voltage, which is like electric pressure and you push the
+[2303.88] Stephen: electrons through an insulator and you leave them on this charge little spot
+[2310.44] Stephen: that effectively records a bit of data.
+[2313.16] Stephen: And they can&#x27;t then get back through the insulator cause they lack the voltage,
+[2317.28] Stephen: the electric energy to push back through the insulator.
+[2319.72] Stephen: So they should stay there.
+[2321.0] Stephen: But, but what happens is that that operation by, by pushing things through
+[2324.8] Stephen: the insulator repeatedly, you do weaken it and it&#x27;s not perfect to start with.
+[2328.68] Stephen: So, so they&#x27;re more inclined to, to forget their state at the time, which
+[2333.56] Stephen: means that flash memory does have this tendency to just get a little bit senile.
+[2341.0] Stephen: Um, it&#x27;s not great.
+[2342.24] Stephen: And I think this is what we see with a lot of our quads that if the flash
+[2346.32] Stephen: isn&#x27;t amazing quality to start with, and they&#x27;re probably not price we&#x27;re paying
+[2349.88] Stephen: for them, then, um, if you leave them stored without power attached for a long
+[2355.36] Stephen: time, this will tend to not get rewritten and will tend to kind of leak to the
+[2362.92] Stephen: point where there&#x27;s some obviously bad bits that can&#x27;t be corrected by whatever
+[2367.56] Stephen: error corrections in there, and then you plug it in and it&#x27;s just like, yeah,
+[2370.52] Stephen: I don&#x27;t have the config.
+[2371.48] Stephen: Sorry.
+[2371.84] Stephen: Bye.
+[2373.68] UNKNOWN: Well, it could become self-aware, but the program degradating all of
+[2379.32] UNKNOWN: petunias or something, you never know.
+[2383.2] UNKNOWN: Back up your files offsite, everybody.
+[2386.44] Stephen: Yeah.
+[2387.12] Stephen: Just, um, back up.
+[2388.2] Stephen: So when you, when you get your quad and you think it&#x27;s fantastic and you
+[2391.56] Stephen: love the way it flies, I&#x27;ll get into the configuration and just do a backup.
+[2395.48] UNKNOWN: Put that somewhere, put that where your family photos or wherever you keep things
+[2399.16] Stephen: and just keep that with the name of the quad on it and you&#x27;ll be able to find it.
+[2402.72] UNKNOWN: And if this does happen, what you&#x27;ve got to do is get that backup, push it back
+[2405.56] Stephen: onto the quad in your own business.
+[2407.44] Frank: Well, I&#x27;ve, I&#x27;ve never got the, the WOOP into a state that I like it.
+[2411.24] Frank: So I won&#x27;t be doing that.
+[2413.96] UNKNOWN: It was, it was a, it was great value at the time.
+[2415.92] Stephen: I remember that, Frank, that was a very good, very.
+[2419.48] UNKNOWN: Well, it wasn&#x27;t even that.
+[2420.68] Frank: I just asked all the WOOP people, what should I buy as a WOOP?
+[2424.76] Frank: And everyone said buy the, the, the Mobula six.
+[2428.4] Frank: Uh, and so I did.
+[2429.84] Frank: And I think they lied.
+[2432.48] UNKNOWN: It&#x27;s probably good.
+[2432.96] Frank: I had a Mobula seven.
+[2434.68] Frank: I don&#x27;t think I ever had a six.
+[2437.56] UNKNOWN: Uh, I had a, I think I had an eight.
+[2442.48] Stephen: Or was that the one before the Mobula series?
+[2444.28] Stephen: I have like the one with the metal hoops instead of plastic, like an alloy hoops.
+[2454.71] Stephen: Yeah, they&#x27;re very delicate because you&#x27;ve got everything on the one board,
+[2458.11] Stephen: the VTX, the receiver, ESCs, flight control, everything&#x27;s just crammed into that.
+[2463.07] Stephen: So that there&#x27;s, there&#x27;s a lot can go wrong.
+[2465.99] Stephen: I&#x27;ve screwed up a couple of beta FPV ones, just trying to change that the power plug.
+[2470.31] Stephen: Cause I wanted to get a PH two.
+[2471.83] Stephen: Cause on my batteries, a PH two, I was like, Oh, I&#x27;ll just
+[2474.51] Stephen: unsold the battery lead and put another one on.
+[2476.91] Stephen: And there were a couple of passives like right next to the battery lead.
+[2479.71] Stephen: I just knocked one of them off, screwed the whole board.
+[2482.99] UNKNOWN: It&#x27;s not fair.
+[2484.15] Stephen: Yeah.
+[2484.47] Curry: I, I hate being on those tiny boards.
+[2487.79] Curry: I can&#x27;t remember what it was.
+[2488.95] Curry: It was not particularly up to date one, but there&#x27;s, there&#x27;s one where there&#x27;s
+[2493.79] Curry: like a few contacts around the sides.
+[2495.91] Curry: And then the one I want, there&#x27;s two tiny ones that are in between these chips
+[2499.91] Curry: that are like one mill apart.
+[2501.31] Curry: And I had to go down to the tiniest soldering iron just to actually work on
+[2505.63] Curry: it and then put the whole lot under a microscope and then try, try it every
+[2509.79] Curry: time on like before turning it on.
+[2511.79] Curry: And it was just pure luck that it actually worked and they didn&#x27;t show each other out.
+[2515.87] UNKNOWN: I&#x27;ve definitely had some little whoop boards where I&#x27;ve gone.
+[2518.95] Stephen: So let&#x27;s save some weight or solder the motor wires on and the space between
+[2523.47] Stephen: the motor wires is just so small that you can&#x27;t tell if they&#x27;re making contact
+[2528.15] Stephen: or not and you can&#x27;t, they&#x27;re all attached to the other end on the motor.
+[2532.15] Stephen: So you just, you just got to fire it up and like yank the power.
+[2535.15] Stephen: If anything bad happens, it&#x27;s not good.
+[2540.11] UNKNOWN: Spicy.
+[2541.71] UNKNOWN: So aside from Frank and Poppam, is anybody future plans for flying the upcoming week?
+[2550.27] UNKNOWN: Yes.
+[2551.99] Frank: Next week I, with, with my reduced employment, I&#x27;m taking the time to
+[2558.79] Frank: spend the whole week going scale FPV flying with John Lancaster and his
+[2566.31] Frank: squadron crew.
+[2567.35] UNKNOWN: Oh, nice.
+[2567.99] Frank: Exactly.
+[2569.87] Frank: Exactly.
+[2570.47] Frank: So, uh, hence working on getting the head tracking going, giving the pan tilt going.
+[2576.11] Frank: That&#x27;s why that&#x27;s, I&#x27;ve had to get that going for next week so that I can
+[2579.71] Frank: actually join in this time.
+[2583.03] Frank: So that is where I, where are we is going up to Buckminster and
+[2587.51] Frank: flying some stuff for them.
+[2589.63] UNKNOWN: That is my plan for the week.
+[2591.39] UNKNOWN: Nice.
+[2591.91] Frank: That looks solid, man.
+[2593.95] UNKNOWN: I like it.
+[2595.07] UNKNOWN: I&#x27;ve got a, I&#x27;ve got a gimbal somebody sent me.
+[2597.43] Curry: I&#x27;m thinking maybe I should put that on the plane.
+[2600.71] UNKNOWN: That might be interesting.
+[2602.39] UNKNOWN: It doesn&#x27;t really go in a quad.
+[2603.27] Curry: So I might as well go on a plane.
+[2606.07] UNKNOWN: What about you, Jack?
+[2607.35] Frank: I don&#x27;t know.
+[2608.03] Frank: I don&#x27;t know.
+[2608.95] Frank: Uh,
+[2612.22] Frank: Have you got anything on your bench that you can talk about that isn&#x27;t
+[2616.58] Frank: acetone or isopropyl?
+[2622.1] UNKNOWN: Ant powder.
+[2622.9] Jack: It&#x27;s delicious, but it gives me headaches.
+[2626.42] Stephen: Well, I&#x27;ve got sherbet, so I wouldn&#x27;t have to resort to the ant powder.
+[2629.5] Stephen: But I understand if you want that tingly taste in your app, sherbet,
+[2632.66] Stephen: ant powder is the way to go.
+[2634.74] Stephen: Makes you know that it&#x27;s there, doesn&#x27;t it?
+[2636.82] Stephen: Oh yeah.
+[2637.22] Stephen: But you&#x27;ve got to get the ant out first.
+[2638.74] Stephen: Right.
+[2639.1] Jack: I mean, really, before you start complaining about the itching.
+[2643.86] Jack: It does feel like an episode of Archer, but it&#x27;s like, you know, that&#x27;s how you get.
+[2650.62] Stephen: Um, I&#x27;ve been, Jack&#x27;s been experimenting with web dashboards, haven&#x27;t you, Jack?
+[2657.06] Jack: I&#x27;ve been, I&#x27;ve been struggling with that.
+[2658.54] Jack: Thank you.
+[2658.98] Jack: Your help is
+[2661.86] Jack: we, we were like the space bear, um,
+[2669.06] Stephen: and just flapped at the various options available in Grafana until
+[2673.26] Stephen: we enabled the correct settings.
+[2675.7] Frank: Right.
+[2676.18] Frank: Yeah.
+[2677.14] UNKNOWN: Grafana is fun.
+[2679.46] Frank: It&#x27;s good old puzzle game.
+[2680.9] UNKNOWN: Yeah.
+[2681.34] Stephen: Yeah.
+[2683.1] Stephen: I want this outcome.
+[2684.5] Stephen: I can take one of three parts.
+[2687.02] Stephen: Which one you do?
+[2687.94] Stephen: Will you go for the swinging axes?
+[2689.86] Stephen: Will you jump over the alligators or will you walk the endless desert?
+[2696.06] Jack: It seems to be the desert, the endless desert every single time where you&#x27;re
+[2700.14] Stephen: like, someone said I could do this.
+[2702.1] Stephen: It&#x27;s just a series of logical steps from now until the heat death of the universe.
+[2707.58] UNKNOWN: Yeah.
+[2707.9] Jack: And my support net turns around and says, it&#x27;ll get easier when you have all
+[2712.22] Jack: the information there and I&#x27;m like, what, we&#x27;re not recording everything.
+[2717.7] Jack: I&#x27;m like, what that&#x27;s, that&#x27;s like life, isn&#x27;t it?
+[2721.58] Jack: It&#x27;ll get easier.
+[2722.34] Jack: I don&#x27;t know.
+[2722.66] Jack: That&#x27;s all about.
+[2725.5] UNKNOWN: Oh dear.
+[2726.86] UNKNOWN: Has anyone in the chat got any other events coming up?
+[2729.98] Frank: Any builds they&#x27;re excited about?
+[2732.1] Frank: Any new releases they&#x27;ve spotted?
+[2734.18] Frank: Oh, no, it&#x27;s Caroline&#x27;s talking about, uh, for going for a flying break in Wales.
+[2739.62] Curry: That sounds fun.
+[2742.5] UNKNOWN: Careful.
+[2743.1] Jack: There&#x27;s Welsh people there.
+[2744.74] Jack: Hey, when are you doing that?
+[2747.82] Jack: Be careful.
+[2748.94] Jack: I&#x27;m going to say that I lived there for many years.
+[2752.82] Jack: So it&#x27;s a, but it was my soul.
+[2757.46] UNKNOWN: It&#x27;s not all just heard.
+[2759.82] Stephen: I&#x27;ve heard very positive things about bridge and Jack.
+[2761.94] Stephen: They say it&#x27;s the capital of Wales.
+[2764.9] Jack: Oh, it was, it was truly a happy place.
+[2769.62] Jack: Um, I do, I do struggle with my demons from that.
+[2774.94] UNKNOWN: Oh dear.
+[2776.9] UNKNOWN: We should go for a road trip.
+[2778.94] Jack: Yeah, that&#x27;s the, uh, the other side.
+[2785.1] UNKNOWN: There&#x27;s plenty of big old valleys and stuff to go flying down.
+[2789.94] UNKNOWN: Watch out for the fighter jets that occasionally come along at lower
+[2794.14] UNKNOWN: altitudes that I was flying.
+[2795.78] Curry: And I didn&#x27;t expect a jet to suddenly go, they definitely take the approach.
+[2799.94] Stephen: The altitude is measured from the lowest bit that they can find
+[2803.22] Stephen: in the surrounding area, not from say directly onto the jet.
+[2806.34] Stephen: I think that&#x27;s the, uh,
+[2808.86] Jack: last land to it, major.
+[2810.62] Jack: I heard a story once that they crashed a, like Land Rover or Jeep so
+[2816.3] Jack: badly into one of their barracks that, um, they couldn&#x27;t remove it.
+[2822.82] Jack: They had to cut the Jeep away from it.
+[2828.82] Jack: And parts of it was still, how were you born in Virginia?
+[2832.14] Jack: Clive, what the hell?
+[2834.7] Jack: I thought you English, you make no sense.
+[2836.94] Jack: We&#x27;re mystery to me.
+[2839.42] Jack: Was it a place in England called Bridget and I&#x27;m still, there was only one.
+[2845.14] Stephen: It says he had to return home to home once for Chinookan&#x27;s Snowdonia,
+[2850.54] Stephen: which sounds like a dish and maybe an elaborate dish involving some
+[2855.78] Stephen: sort of spinning pasta topped with a large amount of snowy parmesan.
+[2861.58] Stephen: I don&#x27;t know.
+[2863.1] Stephen: I&#x27;m going to imagine what Chinookan Snowdonia is like, or, or it&#x27;s, uh,
+[2868.1] Stephen: absolutely profane move that we can see Indian Chinook with an arm.
+[2873.62] Stephen: Like the Cleveland steamer.
+[2875.58] Jack: Oh, careful.
+[2877.26] Jack: Currie will name his next car.
+[2881.98] Curry: The thing about Chinook&#x27;s is, is like the most, um, well-recognized helicopter
+[2887.66] Curry: noise, it&#x27;s got that, as one comes along, it&#x27;s got a whole lot of road to go on, baby.
+[2897.42] Stephen: With all this upbeat, tippity toppity, amazing, not dead air at all.
+[2904.62] Stephen: We&#x27;ve got a lot to talk about this week.
+[2907.98] Curry: I&#x27;m so tired.
+[2911.74] Jack: I&#x27;m so sorry about me.
+[2913.3] Jack: I, um, like I did say I was dying.
+[2916.94] Jack: It&#x27;s been so bad.
+[2918.1] Jack: I&#x27;m on my second lot of laundry.
+[2919.94] Jack: That&#x27;s how bad it&#x27;s been.
+[2922.62] Jack: Quite spectacular.
+[2923.9] Jack: It&#x27;s going to save some time.
+[2925.18] Stephen: Put yourself in the bathtub and just hose yourself down and stay naked.
+[2929.14] Stephen: See any way forward.
+[2930.74] Stephen: Oh, don&#x27;t give us a visual image.
+[2938.02] Curry: This, this is going to go out there on a tangent, but I feel like we&#x27;ve run out of stuff.
+[2942.26] UNKNOWN: My, cannot visit those things.
+[2945.62] UNKNOWN: And I thought, oh, she&#x27;s a fantastic.
+[2948.7] Jack: Is that what it&#x27;s called?
+[2949.38] Jack: Yes.
+[2950.1] Jack: A fantastic, isn&#x27;t it?
+[2953.94] Frank: A Fantasia is a lack of being able to imagine something such as visual imagery.
+[2961.74] Curry: And she doesn&#x27;t believe that people can.
+[2963.46] Curry: So when you say I can close my eyes, I can see that.
+[2965.62] Curry: And she&#x27;s like, don&#x27;t be stupid.
+[2967.02] Curry: All you can see is black.
+[2968.38] Curry: There&#x27;s nothing there.
+[2970.1] Curry: I don&#x27;t, when I close.
+[2972.34] Stephen: Echoic memory, echoic memory, isn&#x27;t the same as imagination.
+[2976.18] Stephen: So if you&#x27;re looking at something and you close your eyes, you should be able to conjure
+[2979.62] Stephen: an image of the thing you&#x27;re looking at.
+[2981.02] Stephen: Just remembering.
+[2982.18] Stephen: No, she doesn&#x27;t have to talk.
+[2983.74] Curry: She can&#x27;t do that.
+[2984.46] Curry: It doesn&#x27;t work.
+[2985.58] Curry: And if you say you can, then she doesn&#x27;t believe you.
+[2988.06] Curry: She thinks everyone&#x27;s lying.
+[2989.9] Curry: And she gets occasionally sent on these like retreats with work and they&#x27;re like, okay,
+[2994.54] Curry: we&#x27;re going to do a visualization session.
+[2996.3] Curry: And she&#x27;s just like, throws her hands in here.
+[2998.06] Curry: Like, where&#x27;s the no good leaves?
+[3000.5] Jack: But when I close my eyes, I don&#x27;t see black.
+[3002.94] Jack: I get all like weird color patterns.
+[3005.1] Jack: Oh yeah.
+[3005.38] Jack: You can get like colors and stuff around the effect of things.
+[3008.1] Curry: If you really concentrate on it, you can.
+[3010.14] Jack: Yeah, but no, no, no, like when I close my eyes, I can literally see that.
+[3016.1] Jack: Like it&#x27;s like a weird sort of TV static that&#x27;s colorful.
+[3019.78] Curry: Interesting.
+[3021.06] Jack: I noticed that when it&#x27;s very dark, I can see in quite well in the dark, but there&#x27;s
+[3025.86] Stephen: like a noise that becomes quite prevalent, like color spectals.
+[3029.62] Frank: There&#x27;s a good, curious cases with Rutherford and Fry episode about aphantasia.
+[3036.82] UNKNOWN: Um, and I think that was the one as well, where I heard about this idea that there&#x27;s,
+[3043.14] Frank: there&#x27;s kind of this spectrum that everyone lies on between aphantasia and
+[3048.82] Frank: synesthesia and that they&#x27;re like.
+[3051.3] Curry: Synesthesia sounds awesome.
+[3053.46] Curry: I&#x27;d love to see music bursting out in colors of bubble wrap.
+[3058.46] Curry: And you&#x27;re like, Oh, that tastes of strawberries.
+[3060.58] Curry: Yeah.
+[3060.74] Curry: The sound of the strawberries.
+[3063.78] Curry: Caroline&#x27;s loved one.
+[3064.62] Curry: She can&#x27;t do mental images either.
+[3066.62] Curry: There&#x27;s more people than you think.
+[3069.02] UNKNOWN: Can&#x27;t visualize.
+[3071.42] Curry: It&#x27;s really weird.
+[3072.14] Curry: Cause I was like, what happens when you read a book?
+[3075.38] Curry: Because if you can&#x27;t see this thing happening before you, then it&#x27;s just a bunch of words.
+[3080.7] Curry: And she&#x27;s like, yeah, what do you see?
+[3083.18] Curry: I say, I see it like a film happening when I read a book.
+[3086.86] UNKNOWN: Weird.
+[3088.58] Stephen: Maybe this is why some people just don&#x27;t go for books and they go for comic books
+[3092.02] Stephen: instead, maybe that explains the difference.
+[3098.42] Stephen: You just need it.
+[3100.66] Jack: I find on the Fos friends, this or something.
+[3104.18] Stephen: Lost friends.
+[3106.5] Jack: Yeah, there you go.
+[3108.74] UNKNOWN: It&#x27;s kind of what I see.
+[3111.62] UNKNOWN: Like a weird.
+[3112.58] Jack: So you get like a test card essentially, like you used to think.
+[3117.3] UNKNOWN: Yeah, it&#x27;s a weird.
+[3120.02] UNKNOWN: I think everything.
+[3122.74] UNKNOWN: TV patterns.
+[3124.06] Jack: Yeah, staticky.
+[3125.14] Jack: You also get like music playing in your ears if you&#x27;re sort of left in too quiet as well.
+[3132.1] Frank: I know I do have a monologue as well.
+[3137.54] UNKNOWN: What&#x27;s his name?
+[3139.22] UNKNOWN: It&#x27;s very.
+[3144.98] UNKNOWN: And sometimes it gets really annoying because it says the things I&#x27;m saying alongside what I&#x27;m saying them.
+[3154.66] UNKNOWN: It&#x27;s just kind of weird.
+[3155.7] Jack: Yeah, it&#x27;s pretty.
+[3156.38] Jack: I&#x27;ve got like a bit of a double.
+[3159.26] UNKNOWN: Yeah.
+[3160.34] UNKNOWN: And it&#x27;s a problem sometimes because it suggests bad things to say, inappropriate things to say.
+[3167.02] Stephen: Oh, yeah.
+[3169.66] Stephen: Work when people are being useless and they just have to sort of.
+[3175.38] UNKNOWN: When he&#x27;s had an industrial accident and is bleeding everywhere.
+[3178.62] Jack: I wonder if paramedics are going to find it highly inappropriate if I start masturbating right now.
+[3184.3] UNKNOWN: Or if you draw something in the blood.
+[3189.78] Frank: Having exposed far too much of Steven and Jack&#x27;s inner psyches on the show.
+[3196.1] Frank: I think that&#x27;s about time to call it, I think, guys.
+[3200.46] Stephen: If you have an accident and you after you&#x27;ve called the ambulance for your friends, whatever you do, don&#x27;t start doing an artwork in their blood.
+[3208.82] UNKNOWN: Never looks good.
+[3210.38] UNKNOWN: They&#x27;ll just smudge it.
+[3212.18] UNKNOWN: Jack, do you want to reheat this out?
+[3218.1] Jack: I hope, Curry, you liked my hair tonight.
+[3221.5] UNKNOWN: Very good.
+[3222.02] Curry: It&#x27;s early come over just in case it starts disappearing.
+[3226.54] UNKNOWN: Yeah, it&#x27;s really gone gray.
+[3228.38] Jack: Frank took a photo of it.
+[3229.62] Jack: We want the full cure look next time, Jack, like, you know, full kind of goth face paint and, you know,
+[3236.86] UNKNOWN: yeah, really, really that one&#x27;s handy.
+[3240.1] Curry: I think you should straighten it and bring back Janet.
+[3243.86] Jack: Yeah, I can do it.
+[3247.18] Jack: Anyway, you&#x27;ve been listening to that show now.
+[3249.5] Jack: Thank you to all our lovely patrons who keep this show on the road.
+[3256.1] Jack: We desperately need your help.
+[3257.74] Jack: If you like this and you listen to it, audio only, and you like the fact it&#x27;s lovely and edited and funny and well put together and there&#x27;s no dead air and
+[3268.98] Jack: I swear it&#x27;s a beep to help.
+[3270.5] Jack: Please consider becoming a Patreon.
+[3272.86] Jack: You now and again sometimes get some bonus podcasts and interesting behind the scenes and get to a concert from the event and hair hair touch from me.
+[3284.14] Jack: And sometimes you receive artworks of mine that you can put on your fridge.
+[3288.5] Jack: Draw a free cat.
+[3291.58] Jack: Then yeah, much.
+[3294.54] Jack: And you&#x27;ve been joined by everyone&#x27;s favorite.
+[3298.5] Jack: Bye.
+[3299.54] Jack: The man will Mr.
+[3300.58] Jack: Steven.
+[3301.66] Jack: Thank you.
+[3302.06] Jack: And good night.
+[3303.74] Jack: I&#x27;ll save you Frank.
+[3305.58] UNKNOWN: Bye.
+[3307.14] Jack: And I&#x27;ve been right to my fly.
+[3309.14] Jack: Thank you.
+[3309.78] Jack: And good night.
+[3311.54] Stephen: Telemetry loss.
+</pre></body></html>

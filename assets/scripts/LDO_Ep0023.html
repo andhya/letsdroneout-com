@@ -1,0 +1,533 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0023—23 tuning your pids with Joshua Bardwell</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 23 ===
+Title: 23 tuning your pids with Joshua Bardwell
+Recorded: 2016-02-04
+Hosts: Jack &quot;Brightontillifly&quot; Nash, Jae &quot;Chipko&quot;, Tony &quot;TheTonstar1&quot; Marchant, Adam Juniper
+Guest(s): &lt;details class=&quot;guest-toggle&quot;&gt;&lt;summary&gt;&lt;span class=&quot;gt&quot;&gt;Joshua Bardwell, Simon &quot;Bra…&lt;/span&gt;&lt;span class=&quot;gf&quot;&gt;Joshua Bardwell, Simon &quot;Bradderz&quot; Bradley&lt;/span&gt;&lt;/summary&gt;&lt;/details&gt;
+Total audience: 2,897
+Platforms: SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/248189561-letsdroneout-23-tuning-your-pids-with-joshua-bardwell.mp3)
+====================================
+
+Finally We get some one who knows there pids on the show Josh covers everything to do with pid tuning and getting it right!
+
+[0.0] UNKNOWN: telemetry recovered you&#x27;re listening to let&#x27;s drone out and uh you were joined by over to my
+[8.94] Jack: furthest corner of my room tone star one and then next to him that is and then i&#x27;m bright until i fly
+[16.22] Jack: online the ozzy favorite he&#x27;s finally back again we haven&#x27;t got rid of him
+[21.9] Jack: yeah chipco yeah a good old chipco and for once someone who finally matters
+[27.42] Jack: do you want to introduce yourself uh i think you&#x27;re talking to me i&#x27;m josh
+[32.22] Joshua Bardwell: robert well i don&#x27;t have an awesome handle i just use my name no that&#x27;s fine man that&#x27;s
+[36.7] Jack: that&#x27;s legit and we are adding to the call uh hang on and maybe adam if we can get it to work
+[47.1] Jack: because he wants to come on um right so yeah thank you for joining us um josh it&#x27;s nice to
+[54.3] Jack: have you on that&#x27;s nice to be here yeah man um i follow you for anyone who&#x27;s not in the know
+[60.06] Jack: he does a really informative uh youtube video is very very full of technical and useful information
+[67.02] Jack: and he covers uh things like um b.l heli um talks about uh how like pid tuning a lot of that
+[77.74] Joshua Bardwell: useful a lot of a lot of math yeah and um useful like little tricks like light bulbs and
+[84.38] Jack: you know to stop uh you know drawing too many amps and you know if you haven&#x27;t quite got your
+[89.42] Jack: setup right little little useful things man what&#x27;s the youtube name uh it&#x27;s my uh it&#x27;s
+[96.06] Joshua Bardwell: my first and last name joshua bardwell j-o-s-h-u-a-b-a-r-d-w-e-l-l and i&#x27;m sure we can get that
+[102.86] Joshua Bardwell: linked too hopefully somewhere uh for people who can&#x27;t write real fast um but yeah it was my
+[108.86] Joshua Bardwell: youtube channel before i started doing this kind of thing it was just my youtube channel where i
+[112.94] Joshua Bardwell: put up you know pictures of my kid and then i started posting uh black box log analysis
+[118.62] Joshua Bardwell: and apparently people were interested so now that&#x27;s now it&#x27;s pretty much what i do on that
+[122.86] Joshua Bardwell: channel ah and adam should be here as well yeah but i didn&#x27;t want to interrupt someone mid-sentence
+[129.5] Adam Juniper: no no it&#x27;s fine adam&#x27;s here right we&#x27;re all here uh j you&#x27;re gonna do a lot of talking i hope you
+[134.54] Jack: got a lot of questions well i&#x27;ve got quite a few questions about pitch tuning i don&#x27;t know if we get
+[139.1] Jae: straight into it and get our teeth into it or not yeah do you want to tell everyone why you haven&#x27;t
+[143.42] Jack: been here what&#x27;s been going on as much as you want well no i mean i had a road traffic accident
+[150.06] Jae: where i was waiting at a tea junction after a lovely spa weekend retreat and yeah got smashed
+[155.5] Jae: into the back back and had a few back and neck injuries so i&#x27;ve been out of action and looking
+[161.34] Jae: after the uh other person in the car but all well i&#x27;ve been also flying a few things which is good
+[167.42] UNKNOWN: but yeah um i&#x27;m back you know for the the could hold long holes uh now so good glad you&#x27;re all
+[175.18] Tony: right yeah we missed how many times have you been rung up by random solicitors offering to uh look
+[179.9] Adam Juniper: after you so far um numerous times and it&#x27;s already going through its own channels but yeah
+[185.26] Jae: it&#x27;s amazing how quick they they pounce on the the upper to do it i i haven&#x27;t been in a traffic
+[191.34] Adam Juniper: accident and i had six of those calls yesterday yeah yeah i&#x27;ve had i&#x27;ve had a fair few of those
+[199.66] Jack: right so just before i was mentioning to josh earlier um is it right to call you that
+[207.82] Joshua Bardwell: it doesn&#x27;t really matter i&#x27;ll address you by your full title
+[214.7] Jack: right so uh good old dan upton who sorts us all out and he&#x27;s kind of like my little
+[220.38] Jack: technical go guy if like things are a little bit too hardcore but he goes yo if you do get josh
+[225.5] Jack: you&#x27;re on the show can you tell him from me i&#x27;m a big fan of his work thank you for your
+[230.14] Jack: contributions to the community with brilliantly informative videos i especially appreciate them
+[235.18] Jack: when i&#x27;m trying to explain something to someone and realize believe me yeah and realize that you&#x27;ve
+[240.38] Jack: already done a video on the subject and explains it much better than i could and i&#x27;m often directing
+[246.54] Jack: people to your videos slash channel cheers dan oh thank you thank you for that i really appreciate
+[252.94] Joshua Bardwell: always good to hear your word yeah that&#x27;s my motivation whenever i uh somebody asks a question
+[258.3] Joshua Bardwell: and i&#x27;m like uh i know i&#x27;ll make a video out of this and that way the next seven times somebody
+[262.46] Joshua Bardwell: asks the question i can just link the video and eventually i won&#x27;t ever have to say anything ever
+[266.38] Joshua Bardwell: again i can just link everybody to videos where i already said it so so would you do if you&#x27;ve got
+[272.14] Adam Juniper: a stray cat in your neighborhood right i don&#x27;t have a video for that not yet straight cat falls
+[279.1] Adam Juniper: into my trap it&#x27;s on the hip on that link right uh yeah like i said that used to be just my
+[283.9] Joshua Bardwell: personal uh youtube channel so you can see uh i&#x27;ve raised pigs i had sheep for a while
+[289.42] Joshua Bardwell: where you based i&#x27;m in i&#x27;m in tennessee ah fair enough it doesn&#x27;t sound very american
+[295.58] UNKNOWN: sounds more connected yeah there&#x27;s a lot there&#x27;s a lot going on in america a lot of wide open
+[300.78] UNKNOWN: oh man it must be nice though because you get way better flying weather than here because we
+[304.78] Jack: must seem really miserable i bet you&#x27;ve like listened to the last couple of months and you&#x27;ve
+[308.78] Jack: just been man do i really want to go on here that&#x27;s why jay&#x27;s here because he&#x27;s so chippy
+[313.5] Jack: chippy called chippy co like makes us all happier and more enthusiastic um right america&#x27;s got a
+[320.38] Adam Juniper: seattle too though you know they&#x27;ve got places which are just rain yeah i suppose um right i&#x27;ve
+[326.22] Jack: got i&#x27;ve got a question um right because i&#x27;ve noticed a few things on uh flight test released
+[333.82] Jack: a video the other uh like yesterday i think and they were doing like the basic setup of a nay so
+[340.22] Jack: they flashed it with clean flight yeah they said flash like set loop time to 1200 i talked to dan
+[350.3] Jack: and he said look if you&#x27;re doing anything basic you might as well set it to a thousand whoever&#x27;s
+[354.3] Jack: making that noise um yeah so dan said set it to a thousand and though your processor won&#x27;t be
+[360.14] Jack: synced it&#x27;s still running at the same time myself i know that 1500 is a bad sort of thing to run
+[368.22] Jack: so i go kind of in between like the the 13 or something unlucky for some uh sometimes i go as
+[374.7] Jack: low as 12 um but then if you run boris you get sub thousand anyway so right um and then i was
+[383.34] Jack: watching rotor riots um like a little 180 build kind of thing and they were saying about running
+[390.22] Jack: the you know you could not run you could turn a few things off and run the loot time as low as
+[395.5] Jack: 1200 right so a little bit of backstory i&#x27;m a technician i work for a company called um
+[403.66] Jack: radio c and we build quads and we can only do like limited tuning so i&#x27;m in you know i&#x27;m sort
+[410.46] Jack: of like in a room i can&#x27;t like throw the cord around too much and i want to set an optimal
+[415.74] Jack: loop time but i can&#x27;t flash to boris and you know i just want to set a loop time that&#x27;ll work
+[421.66] Jack: so yeah default what can you do i think uh yeah i think that 1200 loop time comes in because
+[428.62] Joshua Bardwell: somewhere around 1200 1300 is the lowest you can go on standard clean flight on an f1 board like
+[434.54] Joshua Bardwell: a nays without uh you know then that&#x27;s just as fast as it can go um but i think uh what i used
+[440.62] Joshua Bardwell: to do before i was running beta flight and we got all this acceleration and stuff is i would run a
+[445.5] Joshua Bardwell: 2000 loop time um i mean in general the faster you run the the better it&#x27;s going to change where
+[453.74] Joshua Bardwell: where you&#x27;re you know the aliasing happens i have a video on aliasing on my channel
+[458.22] Joshua Bardwell: if anybody wants to understand i&#x27;m not going to go into that just explain it a little bit
+[462.14] Jack: just touch well so alias there&#x27;s a concept called the nyquist frequency
+[466.62] Joshua Bardwell: or the nyquist limit which basically means that if you&#x27;re sampling at say 2000
+[472.22] Joshua Bardwell: hertz then any frequency below 1000 hertz is going to be captured perfectly and anything
+[478.38] Joshua Bardwell: above 1000 hertz is going to be distorted by something called aliasing and it&#x27;s going to
+[483.42] Joshua Bardwell: basically show up in your lower frequency so if you have if you&#x27;re sampling at 2000 hertz your
+[488.46] Joshua Bardwell: nyquist limit is 1000 uh and if you have a frequency at say 1010 hertz you&#x27;re going to
+[495.1] Joshua Bardwell: have a 10 hertz basically subtract it out a 10 hertz like fake frequency in your data that&#x27;s
+[500.62] Joshua Bardwell: not really there and it&#x27;s going to it&#x27;s going to confuse your PID controller yeah so the faster
+[507.66] Joshua Bardwell: you sample the higher your nyquist limit and the less aliasing there&#x27;s going to be um but
+[513.74] UNKNOWN: i mean i think there&#x27;s a little bit of a law of diminishing returns
+[517.74] Joshua Bardwell: and i always just used to set it to 2000 it&#x27;s a safe if you just i mean if you&#x27;re like you&#x27;re
+[523.1] Joshua Bardwell: in a room and you got to just crank out copters and you got nothing to do just 2000 because
+[528.46] Joshua Bardwell: those people you&#x27;re not going for like the ultimate performance anyway at that point and
+[532.38] Joshua Bardwell: it&#x27;s a safe value that&#x27;s not going to get you in any trouble oh thanks man there you go yeah
+[537.98] Joshua Bardwell: yeah but but even better even better would be to run beta flight yeah and then take advantage
+[544.62] Joshua Bardwell: of all that wonderfulness but that may not be the easiest thing from the perspective of
+[548.7] Joshua Bardwell: yeah newbies yeah right you know try and learn like nose in and it&#x27;s just going at them
+[554.7] Jack: like full full pitch and then you&#x27;ve got um have you yeah because you know have you ever heard of
+[562.22] Jack: like oskar lang&#x27;s blog i think you&#x27;d be great on there you know he&#x27;s now got a new um a new
+[570.54] Jack: forum and stuff i think maybe you should contact him and see whether you can put some a few things
+[575.18] Jack: on there as well because um that&#x27;s the other thing i wondered do you want to start a fight
+[579.98] Jack: you know or what do you think ppm do you happen it&#x27;s analog or digital i&#x27;m firmly on analog
+[585.34] Jack: okay he&#x27;s awesome his place is great yeah or make a lot of videos and he more makes
+[591.74] Joshua Bardwell: blog posts um but he has a lot of technical information he&#x27;s really good
+[597.18] Jack: yeah and he just explains it pretty well what&#x27;s up i say good old oscar yeah we yeah we get to
+[602.94] Jack: fly with him it&#x27;s pretty cool oh really he&#x27;s out there yeah yeah he&#x27;s he&#x27;s near yeah 10 miles down
+[610.46] Bradders: yeah like literally he&#x27;s like up the streets away but yeah he&#x27;s he&#x27;s such a good guy um
+[615.42] Jack: what else have i yeah analog or digital answer me
+[621.34] UNKNOWN: digital with an acceptably high sampling rate okay you&#x27;ll never know you&#x27;ll never know the
+[625.02] Joshua Bardwell: difference traitor okay jay well i clear you know as a caveat you have to have an acceptably high
+[632.54] Joshua Bardwell: sampling rate yeah jay what&#x27;s your take analog or digital i don&#x27;t know i&#x27;d probably go and decide
+[640.62] Jae: it digital but again it probably wouldn&#x27;t affect them yeah me if i just tuned in i think you&#x27;re
+[647.5] Adam Juniper: talking about records no we are it happens in the old lp debate i have no idea what we&#x27;re talking
+[655.5] Joshua Bardwell: about um yeah i had a few other like you know um yeah so um advice on tuning oh that&#x27;s pretty
+[666.88] Joshua Bardwell: open-ended yeah well let me start because tuning as people would have maybe got these
+[673.84] Jae: things from jacket built them in certain amount after a while people do want that slight bit more
+[677.84] Jae: performance in that response from their quads and i&#x27;ve come from age where i would essentially
+[685.52] Jae: search for pits that would work on a frame roughly the same size roughly the same motors
+[689.6] Jae: and everything and after a while i&#x27;d maybe find some that would work but i always thought i was
+[694.0] Jae: cheating and it&#x27;s not really the right way to do it but it&#x27;s only the way that i&#x27;ve done it for and
+[700.08] Jae: a lot of people have because it&#x27;s it&#x27;s still an art form to actually get these things yeah it&#x27;s
+[704.4] Jae: very very hard yeah it is you know um because like some people go with a black box method some
+[712.24] Jack: people just kind of feel it out and yeah i i fly with just such bad pits you know because like
+[720.48] Jack: you had tone you&#x27;ve had a go with my quads it was awful yeah and like i like it so it like
+[725.68] Jack: drifts i like honestly my quads like a drift car it&#x27;s like it just slides around and i&#x27;m like
+[733.2] UNKNOWN: but jack is it bad if that&#x27;s what you want i mean if you like the drift and it&#x27;s yeah
+[738.24] Adam Juniper: but my ese&#x27;s like catch on fire yeah that&#x27;s a kiss for you yeah i&#x27;ve always said i&#x27;ve always
+[746.72] Joshua Bardwell: said and i&#x27;m going to keep saying that if you like how it flies that&#x27;s all it matters i mean
+[751.28] Joshua Bardwell: the tuning is always in service to the flight experience except if you&#x27;re like me and you just
+[755.76] Joshua Bardwell: love tuning right for its own benefit but if you&#x27;re if you get pits off online or you throw a dice
+[762.0] Joshua Bardwell: and you just type them in if you&#x27;re happy without flies then keep doing it don&#x27;t let anybody tell
+[766.32] Joshua Bardwell: you different um but i do have uh people asking for pits like somebody will watch a video of like
+[772.4] Joshua Bardwell: schizo or steel or final glide and they&#x27;ll be like dude what&#x27;s your pits and and it&#x27;s i always
+[777.76] Joshua Bardwell: feel a little bit silly about that because i think if you&#x27;re asking for pits to learn like uh like
+[783.04] Joshua Bardwell: if you show me a copter and it&#x27;s flying uh lux float and the p gain is 6.0 i&#x27;m like well that&#x27;s
+[788.72] Joshua Bardwell: too high because i know there&#x27;s a range right and i&#x27;ve learned that range by looking at other
+[792.56] Joshua Bardwell: people&#x27;s values but if you&#x27;re just asking for them to copy them in people are like well what&#x27;s
+[797.44] Joshua Bardwell: a good pits for this frame and i&#x27;m like well i don&#x27;t know what version of bl heli are you running
+[802.0] Joshua Bardwell: because it&#x27;s different what motors do you have what props do you have there&#x27;s so many factors
+[806.88] Joshua Bardwell: that if you copy somebody&#x27;s pits and they turn out to fly good good for you but it&#x27;s just kind
+[811.36] Joshua Bardwell: of lucky and you haven&#x27;t learned anything in the process only so yeah only once did i like when i
+[817.36] Jack: very first started used some p and i because i was on the kk and that that worked pretty well
+[824.64] Jack: and then i think i just upped my eye a little bit and it was it was pretty good you know i kind of
+[829.76] Jack: i&#x27;ve got i&#x27;ve got that in the old school method of tuning but like the new sort of you know
+[834.88] Jack: smoothing out the in between the p and the i with the d i never know i almost always leave the d
+[841.76] Jack: alone and then i find myself trying to correct little bits and it&#x27;s just not doing it i&#x27;ve never
+[848.64] Jack: felt that sort of on rails feel like you have brad is his own way i&#x27;ve had josh i don&#x27;t know
+[855.28] Bradders: you any comment on it he&#x27;s probably going to take you down he&#x27;s probably going to be like yo
+[859.52] Jack: i&#x27;m going to school you drop your d to zero brad is loves the d up your p&#x27;s
+[864.64] Bradders: until you get isolation drop the p down till the isolation comes down yeah i have your eyes
+[870.08] Bradders: slightly in there oh yeah finger d yeah that&#x27;s that&#x27;s basically right i think you need to start
+[876.08] Joshua Bardwell: your tuning with your i and d relatively low especially d because if your d is way off it&#x27;s
+[881.76] Joshua Bardwell: going to change the way that p you&#x27;re not going to be able to dial in p correctly so turn d basically
+[887.36] Joshua Bardwell: off like zero to five is what i suggest and then tune p and you can look for oscillations on p
+[893.52] Joshua Bardwell: and then i use a guideline of maybe 65 of the oscillation point which sounds way lower than
+[898.72] Joshua Bardwell: most people like to run it but you&#x27;d be especially with g tune have you seen some of the things that
+[902.8] Jack: g tune come out with i&#x27;m not a fan of g tune what the hell well half the time half the time it
+[910.08] Joshua Bardwell: doesn&#x27;t work at all so it&#x27;s kind of a coin toss and then the rest of the time i don&#x27;t know i don&#x27;t
+[917.44] Joshua Bardwell: feel like it i mean i feel like if you just gave a little effort and maybe this is not true for
+[921.92] Joshua Bardwell: everyone you could probably g tune is going to get you like to 75 of your good tune maybe 80
+[927.44] Joshua Bardwell: and that&#x27;s easy you could do that in 15 minutes if you have just a little bit of knowledge you
+[931.2] Joshua Bardwell: can do it yourself i think and not screw around i think i&#x27;m going to shoot you about 65 to the
+[938.88] Jae: point where you got your oscillation because that is quite low from everything i&#x27;ve ever heard so
+[943.28] UNKNOWN: but you think that then it&#x27;s easier to tune in the rest and you know from that lower value
+[948.16] Joshua Bardwell: well actually the reason i say that and of course it&#x27;s going to be different for every setup but
+[952.24] Joshua Bardwell: the reason i say that is that if you get to the point where you have visible oscillations like
+[956.96] Joshua Bardwell: you punch the throttle and it goes it oscillates right then you turn it down to maybe 90 of that
+[963.28] Joshua Bardwell: and the visible oscillations may be mostly gone but if you look at the black box you can see that
+[968.24] Joshua Bardwell: the p term is still kind of going crazy and the motors the the signal that the esc is getting is
+[974.48] Joshua Bardwell: going crazy and that creates micro oscillations it wastes energy as heat in extreme cases it can
+[979.76] Joshua Bardwell: burn up your your escs and and doesn&#x27;t actually result in a better flight experience and usually
+[986.32] Joshua Bardwell: you get down to about say 65 or 70 percent maybe of the oscillation point you still have a very
+[992.48] Joshua Bardwell: tight very locked in copter and and you&#x27;re not having all those oscillations behind the scenes
+[998.08] Joshua Bardwell: and then maybe you could work it up a little bit you know and feel out exactly where you want it
+[1002.4] Joshua Bardwell: but there&#x27;s there&#x27;s not visible oscillations still happening under the under the hood
+[1007.36] Joshua Bardwell: and that&#x27;s why i say turn it down to like 65 percent that&#x27;s excellent yeah it&#x27;s a good one
+[1012.24] UNKNOWN: i&#x27;ll try this i&#x27;m just going to be replaying this episode over and over and being like taking in
+[1019.68] Jack: it&#x27;s like hanging out with yoda isn&#x27;t it like the p id i mean it&#x27;s i change to a transcript
+[1025.92] Adam Juniper: when you upload it like you with the youtube that does a sort of automatic transcript and it&#x27;s
+[1029.76] Adam Juniper: appalling like it&#x27;s always yeah i i think the funniest uh i was at i was at the uk drone show
+[1038.24] Jack: and uh you you were you weren&#x27;t with us but we went to this pub and um add adam was there with
+[1044.8] Jack: me and dominick clifton was on the dance floor and thomas greer just goes oh my god don clifton&#x27;s
+[1051.44] Jack: dancing and then he&#x27;s just video there was no video and then because he goes i wonder if he&#x27;s
+[1057.36] Jack: tuned his pits for that and we just died like the next 20 minutes we were crying just like oh
+[1065.12] Adam Juniper: jack did something else at that bar no no i&#x27;ve already i&#x27;ve already done that but it is still
+[1070.56] Adam Juniper: funny yeah um uh yeah what else um have you have you josh your channel reminds me of something
+[1077.6] Jack: uh i force two have you ever heard of him no um because like i would love to like recommend you
+[1084.88] Jack: because like if you guys like sort of like joined forces i think you guys could take over the world
+[1090.48] Jack: basically because like you and him are kind of like the similar but he&#x27;s only just got into um
+[1097.76] Jack: into bl heli but he&#x27;s got some fantastic kind of builds and that but you don&#x27;t really cover your
+[1103.44] Jack: builds that much like you never i hardly ever see you like do any scratch builds like where did you
+[1108.64] Jack: come from how did you get into the hobby that sort of stuff that&#x27;s what i know yeah i i built
+[1114.08] Joshua Bardwell: my first uh it was a flight test electro hub hey yeah oh man i had the wooden original from that
+[1121.2] Joshua Bardwell: yeah yeah with the with the with the poplar booms yeah man um oh my god that was in august of 2014
+[1129.12] Joshua Bardwell: and then i&#x27;ve got uh my first 250 in maybe like a year ago i guess i didn&#x27;t look it up but maybe
+[1139.04] Joshua Bardwell: like a year ago i don&#x27;t do a super lot of builds um i kind of have had a full i&#x27;m only just i&#x27;ve
+[1144.72] Joshua Bardwell: got like three builds i&#x27;m working on now and i&#x27;ll be sort of posting about them but i&#x27;ve had a kind
+[1150.0] Joshua Bardwell: of a philosophy of like i just want to like get this one really like i don&#x27;t want to just buy a new
+[1155.84] UNKNOWN: you know the guy who like owns 57 guitars but can&#x27;t play yeah i don&#x27;t want i kind of don&#x27;t want
+[1160.32] Joshua Bardwell: to be that guy i mean if you like if you like building copters i&#x27;m not trying to be judgmental
+[1164.08] Joshua Bardwell: you can fly just get good at flying this one copter yeah before i start branching out yeah
+[1170.8] Jack: because i&#x27;m i basically want to get like into tuning i&#x27;ve always kind of shied away from it
+[1176.56] Jack: a bit and i kind of i kind of just learned to work with my crummy tuning and um because like
+[1184.72] Jack: i think i&#x27;m more into acro flying and you kind of need a good tune for that um but like racing
+[1194.32] Jack: wise i struggled like to make good corrections and stuff and i was kind of every time i&#x27;d get
+[1199.76] Jack: somewhere i&#x27;d break my quad so badly because i was running a zmr for ages you know and it would just
+[1208.88] Jack: you know i changed the arms and then when i broke them i couldn&#x27;t get hold of them anymore
+[1214.24] Jack: so i&#x27;ve kind of never and i kind of want to just set myself the challenge of being able to tune
+[1220.0] Jack: a quad well enough so that um the the kiss 18 eses don&#x27;t explode on me because i ran into
+[1228.48] Jack: i i was uh i was with you jay at the uav uh thing what was it called again
+[1235.44] UNKNOWN: uh i can&#x27;t remember the name of the one at the excel yeah yeah yeah we went um commercial uav
+[1243.2] Jae: yeah it&#x27;s a good hang on good youtube channel i posted the link in the um description
+[1250.8] Jack: channel um yeah if you don&#x27;t mind checking that out uh josh i think you&#x27;ll you&#x27;ll like that um
+[1257.76] Jack: i posted it in the chat as well uh yeah and i ran into this guy and i was like you know looking is
+[1263.28] Jack: he had like a little mini 180 and it was probably some sort of diatone i was just like don&#x27;t you
+[1268.0] Jack: find these explode on you because like every kiss ese i&#x27;ve had just in flames in seconds
+[1274.16] Jack: because it&#x27;s kind of like an in thing you hear me say all the time don&#x27;t be on fire
+[1278.08] Jack: because i&#x27;m constantly on fire yeah and um the guy just said to me no if you get your tune really
+[1283.44] Jack: well they they run and i i really like the feel of kiss eses coming back they don&#x27;t know if they&#x27;re
+[1288.8] Bradders: new 32-bit chips or whatever it is yeah they&#x27;re meant to be the nuts yeah and they have the uh
+[1295.04] Joshua Bardwell: the new the new 24 uh the 24s have the uh the telemetry built-in that talks to the kiss flight
+[1302.8] Joshua Bardwell: controller and does current sensing and rpm readouts that whole that whole setup is really
+[1309.36] UNKNOWN: really well integrated and really cool it just costs so much money well right yeah because we&#x27;re
+[1315.36] Tony: we&#x27;re we change stuff every five minutes don&#x27;t we yeah i mean speaking of which tone you&#x27;re gonna
+[1320.64] Jack: love um joshua because you&#x27;re running the infamous naze 32 what red oh the blow up
+[1330.96] Tony: fall out of sky rev six yeah rev six and he&#x27;s just getting oscillations he can&#x27;t get rid of
+[1336.72] Jack: and i think you&#x27;ve created some sort of war where everyone&#x27;s slagging off the the rev six now and i
+[1342.8] Jack: i solely blame you josh i i you know and i was just repeating something that i heard i heard
+[1350.16] Joshua Bardwell: it first from moto over on the cyclone thread and he was talking about why he selected the chip
+[1355.36] Joshua Bardwell: that he put on his new board and he actually slagged off the it&#x27;s the 6500 chip i think it is
+[1361.76] Joshua Bardwell: that&#x27;s on the naze 32 rev six and i started looking at it and going well that&#x27;s interesting
+[1366.96] Joshua Bardwell: and then i did a rundown of the flight controllers all the ones on the market they don&#x27;t bit the big
+[1371.2] Joshua Bardwell: ones anyway and i one of the things i said was well look basically there&#x27;s so much choice out
+[1376.64] Joshua Bardwell: there there&#x27;s no reason to take a chance that this chip is going to work worse because you don&#x27;t
+[1382.56] Joshua Bardwell: have to settle and i think that kind of got interpreted into that this chip was bad and
+[1388.0] Joshua Bardwell: worthless and should be rejected and and then uh you know so i guess people are listening yeah
+[1394.24] Jack: because i i now time cops stopped making the rev five there&#x27;s almost like a non reliable board
+[1401.04] Jack: yeah there&#x27;s nothing out there is it yeah because like the sp3 i run it i really like that board
+[1406.64] Jack: i can get over like the headers that he&#x27;s using you know the plastic um what are they jst connectors
+[1413.84] Jack: or something micro yeah micro things i can get over that because it&#x27;s a couple of uart ports the
+[1418.96] Jack: only one you have to really deal with is the one for your receiver which is yeah it&#x27;s a little bit
+[1424.0] Jack: of a pain in the ass but you know what i can live with it and and that&#x27;s fine but you know the the
+[1429.84] Jack: manufacturing issues on here um to begin with um there&#x27;s a lot of clone boards out for everyone
+[1436.4] Jack: else now hundreds of them yeah um you know like the tornado is a pretty good board but you&#x27;ve kind
+[1442.56] Jack: of got a you know you got to modify your um the headers for your motor pin so they&#x27;re only two
+[1450.16] Jack: wide so there&#x27;s no center pin you got to add a palulu um it doesn&#x27;t and it doesn&#x27;t do bl heli
+[1456.08] Joshua Bardwell: pass through which is yeah for me i know people are like whoa i don&#x27;t want to just unplug your
+[1459.84] Joshua Bardwell: escs but it&#x27;s really a deal breaker for me yeah we all want that yeah it&#x27;s easy yeah i mean also
+[1466.48] Jack: do you want another question i saw a flight test they set their maximum throttle to 2000 yeah you
+[1471.76] Jack: should always set it to 1000 2000 on bl heli you reckon obviously if the escs are cool but
+[1480.16] Bradders: what do you feel that josh 1000 2000 yeah i feel like the number one thing you got to make sure
+[1485.52] Joshua Bardwell: is that your escs and your flight controller are in agreement and i do that by doing stick
+[1490.56] Joshua Bardwell: calibration but you can also manually enter the numbers as long as they&#x27;re in agreement the only
+[1495.04] Joshua Bardwell: thing you&#x27;re changing is the resolution of the channel yeah the difference in resolution between
+[1499.2] Joshua Bardwell: you know whatever 1050 1850 and 1000 2000 is minimal so it&#x27;s it doesn&#x27;t i like round numbers
+[1505.52] Joshua Bardwell: so i go 1000 2000 but it doesn&#x27;t really matter because we i me and dan are into this sort of
+[1512.56] Jack: habit where we we set our minimum throttle to 10 to 15 above when the motor starts spinning
+[1521.76] Jack: and apparently it&#x27;s got nothing to do with that it&#x27;s to do with the parameters of the bl heli the
+[1527.36] Jack: well but don&#x27;t don&#x27;t confuse so and this is a topic i could talk about a lot i made a like a
+[1534.0] Joshua Bardwell: half hour long video it&#x27;s gonna kick off that&#x27;s it i&#x27;ve done it but don&#x27;t i won&#x27;t i won&#x27;t no come
+[1539.2] Jack: on please there&#x27;s the input side and the output side of the flight controller and the parameters
+[1545.76] Joshua Bardwell: the parameters in clean flight are really poorly camed because it&#x27;s not it&#x27;s really easy to confuse
+[1550.32] Joshua Bardwell: them but on the input side you have um you have uh this is where he&#x27;s quickly opening configurator
+[1558.56] Jack: to have a look yeah i was saying you know on the output sides you have min command min throttle
+[1563.12] Joshua Bardwell: and max throttle and that&#x27;s from the flight controller to the escs and then on the input
+[1567.44] Joshua Bardwell: side you have your channel end points and your min check and your max check and those things
+[1572.88] Joshua Bardwell: often get mixed up and confused and they&#x27;re they&#x27;re actually completely independent of each other
+[1577.44] Joshua Bardwell: so what you said is correct i think um find the point where your motors begin to spin and add 10
+[1583.36] Joshua Bardwell: to 15 to that just to give a little bit of head room and that&#x27;s where min throttle should be
+[1587.44] Joshua Bardwell: i i agree yeah because i i found like the best because like i i set up um i set up someone uh
+[1595.6] Jack: with a dodo and um with the with a pass through arm switch and it armed and the takeoff was really
+[1604.4] Jack: not smooth until i made that modification of adding five uh you know five or ten to yeah so
+[1612.0] Jack: that it would take off really horribly who&#x27;s that on the mic i don&#x27;t know who that is uh so josh do
+[1619.52] Bradders: you check as you run 1000 to 2000 are you using min check about 120 or are you keeping default
+[1628.0] Bradders: so i i like to have min check so again uh don&#x27;t don&#x27;t mix up uh min min command and max throttle
+[1634.8] Joshua Bardwell: which are the output side on the input side your channel end points are default to 1000 2000 and
+[1641.2] Joshua Bardwell: you can change that using the rx range command but the default i like to have min check as low as
+[1646.24] Joshua Bardwell: possible because uh there&#x27;s dead band at the bottom of the throttle stick so the higher min
+[1651.2] Joshua Bardwell: check the default min check is like 1100 i think and that&#x27;s that&#x27;s the cover just ridiculously
+[1657.76] Joshua Bardwell: well basically it&#x27;s 11 percent of your it&#x27;s 11 percent of your foot exactly you don&#x27;t want that
+[1662.4] Joshua Bardwell: much dead band so i think i run something like 1025 okay um yeah back to reliable flight controllers
+[1669.28] Jack: i&#x27;m thinking about there&#x27;s a lot of clones out there especially for the dodo and i&#x27;ve probably
+[1674.0] Tony: got one yeah we&#x27;re we&#x27;re struggling with the the you know like voltage the onboard voltage um you
+[1681.44] Jack: know you plug in uh vbat to it and then it&#x27;s going to give you five volts that&#x27;s not happening
+[1687.44] Jack: some of them the throttle pass through isn&#x27;t happening uh dominic has released a new uh sp3
+[1696.0] Jack: mini um lumineers lumineers new board i don&#x27;t know much about that i don&#x27;t think i think it&#x27;s
+[1704.08] Bradders: doing pass through i don&#x27;t think it&#x27;s doing pass through i&#x27;m not 100 confirmed but if the lux
+[1707.6] Bradders: board&#x27;s not having passed through then to be honest that is a really again that&#x27;s a really
+[1712.8] Bradders: bad mood and again that chip i think josh they put the 6500 in it haven&#x27;t they it does have
+[1718.96] Joshua Bardwell: the 6500 yeah which is noisy so it&#x27;s it&#x27;s still debatable whether that is actually going to have
+[1724.48] Joshua Bardwell: a negative flight performance effect i actually have a lux uh that i&#x27;m putting in this latest
+[1729.36] Joshua Bardwell: build that i&#x27;m doing that i&#x27;m going to be doing some testing on and seeing you know what i can
+[1733.28] Joshua Bardwell: come up with um is that pause free do you know what&#x27;s that is that pause free do you know it
+[1738.96] Bradders: does have so it uses the virtual comport the vcp and so it will do pass through but you need to
+[1744.56] Joshua Bardwell: use an ftdi adapter hooked up to a uart i think it&#x27;s uart one by default yeah and so most of us
+[1751.68] Joshua Bardwell: wouldn&#x27;t call that pass through because we expect pass through through the usb port which is i think
+[1756.48] Joshua Bardwell: but i think they&#x27;re working on that in software right now that&#x27;s a software problem not a hardware
+[1760.32] Joshua Bardwell: problem and so we could see it solved in a future version of clean flight or blo heli or a beta
+[1766.0] Joshua Bardwell: flight yeah that is that is a useful thing to know as well if you rip off your usb header you can
+[1773.76] Jack: with the tx rx 5 volt and ground you can still connect to your nase board using an ftdi adapter
+[1781.2] Jack: as well through because you know the uart is shared so it&#x27;s that&#x27;s quite handy um it sucks
+[1789.76] Jack: though for when you uh when you&#x27;ve got the osd running and you plug in try and connect
+[1796.64] Jack: that&#x27;s a total pain in the butt but um any yeah what else are you looking forward to uh unlike
+[1803.52] Jack: working on new technology wise because you know other than the the luck float board
+[1810.0] UNKNOWN: yeah uh another thing i have coming up is um i have some so i&#x27;ve always been curious about these
+[1817.84] Joshua Bardwell: new high voltage lipos right uh instead of going to um graphene ones yeah no no not the actually
+[1825.68] Joshua Bardwell: not the graphene ones that&#x27;s different i actually just learned about those and they&#x27;re they seem
+[1830.32] Joshua Bardwell: exciting too i&#x27;m talking about the lipos that instead of charging to 4.2 volts per cell they
+[1834.96] Joshua Bardwell: charge to 4.35 volts per cell oh what the weird overcharged ones yeah yeah battery charger for
+[1842.32] Jack: yeah man i&#x27;ve forgotten about them i was like new battery charger what am i gonna do then for us
+[1849.84] UNKNOWN: well i mean so you have another uh 1.5 volts per cell so you know multiply that by four for a four
+[1856.32] Joshua Bardwell: cell and then so if you think about uh the the the wattage of the battery the watt hours
+[1862.56] UNKNOWN: you know watts equals amps times volts so if you have more volts you have more watts
+[1866.72] Joshua Bardwell: maths on let&#x27;s drone out man yeah what and then also you have your motor&#x27;s kv rating right so you
+[1872.48] Joshua Bardwell: have a 2000 kv motor and that means it&#x27;s 2000 rpms per volt applied which means that if you
+[1878.72] Joshua Bardwell: apply another you know 4.5 volts per cell you&#x27;re getting more rpms out of your motor so basically
+[1885.84] Joshua Bardwell: you have more power higher voltage less sag that&#x27;s the promise um and i have some of those
+[1890.4] Joshua Bardwell: coming in the mail i&#x27;m going to do a side-by-side test of a uh of a nanotech uh 1800 65c which by
+[1898.64] Joshua Bardwell: all rights should be a good battery i mean and a uh and one of the hobby king bolt uh high voltage
+[1904.8] Joshua Bardwell: 1800s and i mean the high volt one should kick the other one&#x27;s butt but we&#x27;ll see by how much
+[1909.84] Joshua Bardwell: what are you doing josh you test on the high kv did you say sorry well the high voltage one should
+[1915.76] Joshua Bardwell: make more kvs because it&#x27;s higher voltage okay cool and i&#x27;m just going to put them on i mean i
+[1921.36] Joshua Bardwell: don&#x27;t do a lot of bench testing like uh like quad mcfly does you know um or engineer x i mean i do a
+[1928.24] Joshua Bardwell: little bit but i&#x27;m probably just going to stick them on a copter and fly them around and maybe
+[1932.48] Joshua Bardwell: like do some timed laps or something i mean the difference hopefully the difference will be really
+[1936.72] Joshua Bardwell: clear if it&#x27;s not if it&#x27;s like tenths of a second well then don&#x27;t bother yeah yeah just just look
+[1943.44] Jack: you know just find one way of like keeping the consistency you know and then yeah for sure yeah
+[1949.76] Jack: for sure that&#x27;s the only thing because like a lot of reviews are like well it feels different and
+[1955.04] Jack: it&#x27;s like yeah no i try to i try and keep my stuff sort of technical and quantitative nobody wants
+[1961.04] Joshua Bardwell: to see me go you know oh yeah got a lot of punch feels good you know anybody can do that i&#x27;m not
+[1965.84] Joshua Bardwell: you know um but um i try so i&#x27;ll try and keep it like scientific it&#x27;s just probably not going to
+[1970.72] Joshua Bardwell: be like bench testing stuff because i probably i just not sit up for that and i&#x27;d probably just
+[1974.96] Joshua Bardwell: rather stick it on a copter and go out and fly but i mean things like um you know flight time
+[1980.08] Joshua Bardwell: and i think i&#x27;m i have a couple of laps i do around my place that i&#x27;m pretty good at so i
+[1984.96] Joshua Bardwell: think if i should be able to do you know like the like the um like the top gear guys you know i&#x27;ll
+[1989.92] Joshua Bardwell: just take it out to the track and do laps and see what&#x27;s faster i&#x27;m never right against the train
+[1995.36] UNKNOWN: yeah yeah or a um euro fire that&#x27;s our answer to everything that&#x27;d be cool that would be wicked
+[2002.16] Jack: um and then punch a colleague in the face of course oh um by the way tone got a nice little
+[2007.2] Jack: who half all you just to excite everyone um uh a friend of mine goes um to go kart track and stuff
+[2016.56] Jack: and uh apparently these guys are really interested in letting a few of us like rip around there
+[2020.96] Jack: awesome yeah i knew that there was some oil on your face that sounds like a good day or night
+[2025.76] Tony: or even whatever that sounds really fun so poor tony&#x27;s been sat here for the last 20 minutes
+[2030.48] Jack: looking slightly confused and we&#x27;ve been like trying to draw diagrams of like kv how fast it&#x27;s
+[2035.6] Jack: spitting i know what that is you idiot sorry can&#x27;t help but wind him up um do you do you miss
+[2043.6] Jack: multi-whee old or you know do you like multi-whee rewrite or you&#x27;re totally flux man that&#x27;s like
+[2050.72] Jack: i fly i fly rewrite um i started flying i flew lux for a little bit and i then i switched over
+[2056.96] Joshua Bardwell: to rewrite because the big thing with rewrite is that if you like if you&#x27;re using mwsd to adjust
+[2062.88] Joshua Bardwell: your PIDs with rewrite you have more resolution because it&#x27;s um like on lux float if your PID is
+[2069.04] Joshua Bardwell: 1.2 it&#x27;s going to show up as 12 in the OSD and so you can go from 12 to 13 but lux float actually
+[2076.0] Joshua Bardwell: uses a lot more decimal points than that so you don&#x27;t have a lot of granularity in your tuning
+[2080.64] Joshua Bardwell: so that was mostly just laziness that i started doing rewrite instead
+[2084.56] UNKNOWN: but then it turns out according to boris that as of today in beta flight like under the hood lux
+[2090.88] Joshua Bardwell: float and rewrite are like identical the only difference is that the numbers scale a little
+[2095.28] Joshua Bardwell: differently but in terms of flight performance they should be the same so i just stick with
+[2099.84] Joshua Bardwell: rewrite uh lux float everyone should use rewrites i&#x27;ve never not used rewrite i i love me me and j
+[2108.32] Jack: we&#x27;re like multi-wee guys man i&#x27;d have flipped 1.5 man like i started on one of those with my
+[2114.96] Joshua Bardwell: electro hub at a multi-wee yeah i went over to there but not that long but you know i really did
+[2123.12] Jack: like the multi-wee the way it flew was like nothing else you know it was just like you realize
+[2128.08] Jack: how slow kk was you know like you almost were mailing commands to it i&#x27;m waiting for it to like
+[2135.6] Jack: squawk it back to you like so yeah they were clunky but i mean i never looked back i used
+[2142.24] Jae: multi-wee for a good year or so really i loved it even setting gps up on it it was hit and miss
+[2147.52] Jae: but it was a good board very good board i um and again you had the phone issues though so
+[2154.08] UNKNOWN: yeah there was uh yeah we we just need like reliable boards and everything to get working
+[2159.2] Jack: out the woodwork we&#x27;re in a really weird time right about now but um joe you&#x27;ll be happy i&#x27;ve
+[2164.16] Jack: got managed to get a old u block six working with um a nays fall on a funny enough electro
+[2173.84] Jack: electro hub in a dead cat configuration so if you with a dead cat yeah yeah so dead cat layout
+[2182.4] Jack: if anyone wants to look that up on old flight test but yeah it&#x27;s not a real dead cat by the way
+[2188.08] Jack: yeah do you know why they don&#x27;t like that touch guy yeah yeah yeah is that why they call it a dead
+[2193.84] Joshua Bardwell: cat yeah that guy stuffed his cat into a quadcopter and that was the first time i did that layout
+[2198.88] Joshua Bardwell: yeah allville yep he wanted to fly with the birds he kept it the kind of freezer for a year though
+[2205.68] Jae: before he decided what to do with it probably yeah some people and that ran on a kk as well
+[2212.96] Jack: and the um dc 720 motors you know like the old school that&#x27;s the thing to talk about what board
+[2220.24] Adam Juniper: it used not the fact that the man decided he wanted to have a floating cat well you know
+[2225.52] Jack: yeah that&#x27;s for the mainstream media we&#x27;re on let&#x27;s go now you know what are you see sort of
+[2229.92] Jack: in that cat what was what was powering that dead cat you&#x27;re right it was the first thing i wondered
+[2234.88] Adam Juniper: yeah i want to know everything did you see the ostrich that he did indoor by the way no no i&#x27;ve
+[2242.0] Jack: seen the little tricot to wrap well they had both of them at a tv show pilot up in manchester and i&#x27;ve
+[2249.44] Jae: seen all the flesh fly but this this uh ostrich where their head actually gets attached on it&#x27;s
+[2254.4] UNKNOWN: a surreal experience to see it getting put together before it flies but it&#x27;s making ostrich fly so
+[2261.12] UNKNOWN: yeah that&#x27;s an achievement jay i&#x27;m not talking to you anymore jay i&#x27;m just saying what it&#x27;s supposed
+[2268.72] Tony: to be on my side i don&#x27;t agree with it necessarily if it died of the natural causes then it&#x27;s
+[2275.92] UNKNOWN: well when you go we&#x27;re gonna fly you around then jay if that&#x27;s all right
+[2281.44] UNKNOWN: no if i go with natural causes yeah just just to piss fabby off i&#x27;m gonna go down this route
+[2289.04] Jack: tricopter josh you haven&#x27;t flown one i have never flown a tricopter and i will tell you and i feel
+[2296.08] Joshua Bardwell: bad about this because uh i i got into rc multi rotors about the same time david vingestal
+[2303.44] Joshua Bardwell: was on flight test and i i have a real soft spot for david vingestal but he flies tricopters and
+[2309.36] Joshua Bardwell: he loves tricopters and i saw one of his videos he released which was like a highlight reel and the
+[2315.36] Joshua Bardwell: tricopter looked like it was flying terrible it had yaw wobbles all over the place like the servo
+[2321.28] Joshua Bardwell: was hunting and i just thought in this day and age i mean it used to be if you wanted yaw performance
+[2325.92] Joshua Bardwell: you got a tricopter because we didn&#x27;t have good escs with good braking and and all that stuff
+[2330.48] Joshua Bardwell: and quadcopter yaw performance was terrible and in this day and age when we had such good yaw
+[2335.76] Joshua Bardwell: performance out of quadcopters i just don&#x27;t know why anybody would fly a tri unless you just love
+[2340.08] Joshua Bardwell: it so i feel bad i&#x27;m gonna talk to those about your tri well well i&#x27;m gonna i&#x27;ve done it i need
+[2345.92] Jack: i need to know was it the norway one where he&#x27;s like flipping down a mountain stuff the school
+[2352.08] Jack: yes that was i think that was the one yeah i&#x27;m watching it going i want to love this
+[2355.92] Joshua Bardwell: because i like david i think he&#x27;s cool but the flight performance just looked terrible right so
+[2360.8] Jack: everyone chill the f*** out right that was the mini tricopter when it first come out and as you
+[2367.04] Jack: know tricopter code is never is always slower than quadcopters because everyone&#x27;s running quads
+[2376.0] Jack: in the 250s and he was basically the first yeah the first person to make a mini tricopter
+[2383.36] Jack: so now we&#x27;ve got something called uh well we&#x27;ve got a fork in the clean flight it uses boris
+[2390.4] Jack: bee&#x27;s filters and hex but it&#x27;s called tri float and we&#x27;re doing little things like running our
+[2399.28] Jack: servers servos on higher voltage who&#x27;s that noise adam is that you what yeah noise
+[2407.44] Jack: yeah it is adam eating crisps or something adam doesn&#x27;t have any crisps adam would really like
+[2411.92] Adam Juniper: some crisps is adam rubbaging in the back yeah moving around headphones or something anyway
+[2419.76] Jack: you&#x27;ve really upset you&#x27;ve upset um i&#x27;m so sorry that you&#x27;re telling me that one of the people on
+[2426.48] Joshua Bardwell: on this broadcast actually was involved in that exact video that i insulted not quite but no
+[2433.44] Joshua Bardwell: but jack loves tric
+[2456.16] Jack: it you know and everyone stepped up uh loop like lucra um worked on the code really hard and like
+[2465.36] Jack: everyone in the community agreed that you know release it and we&#x27;ll all kind of work on it
+[2470.4] Jack: submit our black boxes and it now we&#x27;re now on tri flight 4.0 but i&#x27;m gonna it&#x27;s really good
+[2476.48] UNKNOWN: i&#x27;m gonna throw it back to you then so here&#x27;s my question back to you is
+[2480.4] UNKNOWN: since y&#x27;all performance is so good on many quad copters and multi rotors now yeah why
+[2486.56] Joshua Bardwell: why fly a tricopter sell me on a tricopter what&#x27;s awesome about them um what what&#x27;s awesome about
+[2492.96] Jack: tricopters you really like replacing servos no i&#x27;m sorry well no i mean now we have got like
+[2499.44] Jack: you know protected servos now that like give out on a crash i can&#x27;t remember what what they&#x27;re
+[2505.12] Jack: called now um it&#x27;s yeah it is just the way they fly it&#x27;s they&#x27;re more sort of like a plane would
+[2512.24] Jack: you say i&#x27;d probably like them wouldn&#x27;t i yeah because i like that glidey swooshy yeah they&#x27;re
+[2517.36] Tony: quite they&#x27;re quite swoopy swooshy and that and i was the thing was i had that i was on trifly
+[2524.48] Jack: version two and i was at the fossil event with you and everyone was saying wow it flies really
+[2529.52] Jack: smooth but i still felt that sort of like finding that sort of like wiggling back and
+[2535.92] Jack: forth the tricopter through the fbv but um you know obviously they&#x27;re lighter you you&#x27;ve only got
+[2542.08] Jack: three motors three asc three ec&#x27;s um you know uh you&#x27;ve got something called like tail tune now
+[2550.0] Jack: and they flip kind of differently they act really differently and they&#x27;re not sort of
+[2555.44] Jack: they&#x27;re not on this sort of like pivoty kind of plate yeah why you can really sort of like
+[2560.88] Jack: bank them in and stuff now you have to let me have a go jack yeah please do like i&#x27;ve i&#x27;ve
+[2566.08] Jack: i&#x27;ve got it i&#x27;ve got it sorted now it&#x27;s just it is just different and when you get them going
+[2572.32] Jack: and tilting forward it&#x27;s kind of it&#x27;s scary because you they&#x27;re harder to stop okay they
+[2580.64] Jack: just they just go they&#x27;re like they&#x27;re a bit worried about that because you yeah yeah it&#x27;s it&#x27;s
+[2586.0] Jack: a commitment like you know you kind of commit to fly with the tricopter you know and i don&#x27;t know
+[2591.84] Jack: it&#x27;s just like all the adrenaline of getting behind a crashing um aircraft yeah it&#x27;s just
+[2596.88] Jack: yeah it&#x27;s on a rocket really it really is like you know it&#x27;s not you know it&#x27;s different i think the
+[2603.92] Jack: orientation of a tricopter line of sight is pretty good compared to a quad because it&#x27;s
+[2608.08] Jae: easier to lose orientation of a quad with no lights than it is a tricopter so i think that&#x27;s
+[2612.88] Jae: the other aspect you&#x27;re talking about one line of sight yeah yeah i know just uh yeah if i was you
+[2619.52] Jae: know that&#x27;s the only advantage i&#x27;ve ever seen of a tricopter over a quad and i&#x27;ve i&#x27;ve never flown
+[2624.0] Jae: tricopter in my life but i&#x27;ve always preferred quad myself but people like flying line of
+[2629.12] Tony: psychs off i think it&#x27;s yeah it&#x27;s quite enjoyable is it yeah i can&#x27;t i can&#x27;t do it either one of
+[2635.76] Joshua Bardwell: those two i mean that&#x27;s me josh i can i can hover and i can fly figure eights and very very basic
+[2642.48] UNKNOWN: my problem is that if it gets far enough away i just lose i cannot keep orientation
+[2648.16] Joshua Bardwell: and i&#x27;ve tried colored props and i&#x27;ve tried lights and i&#x27;ve tried all kinds of things
+[2652.08] Joshua Bardwell: i just can&#x27;t do it it&#x27;s something i can&#x27;t do it and i don&#x27;t find it enjoyable um well there&#x27;s that
+[2657.44] Jack: yeah i mean for mini quads no don&#x27;t bother with line of sight you can&#x27;t tell they&#x27;re just
+[2662.8] Jack: a little dot in the horizon you know they&#x27;re not designed you know i can only just do it from a
+[2669.04] Tony: phantom yeah and you see you need to keep even the really big probe gigs uh you know you know
+[2676.88] Adam Juniper: the ones like you say the phantom or the inspire lights they&#x27;re impossible to see as soon as you
+[2681.92] Adam Juniper: get what 200 meters it&#x27;s crazy not that you should be flying any further any further in this
+[2687.84] Jack: country um and also it what helps is staying with the forward momentum there&#x27;s a guy he&#x27;s got a video
+[2696.16] Jack: on youtube i think i posted it in the useful and it&#x27;s basically you keep moving forward and then
+[2703.52] Jack: like your and roll to one side and then as soon as it starts moving on that way then you know what
+[2710.0] Jack: direction it is so you kind of like bank off you just pick a direction bank off see what it does
+[2718.08] Jack: and then you know what it is but the sort of it&#x27;s the forward momentum it&#x27;s like stick memory
+[2724.48] Jack: yeah you just keep going forward and then you know that&#x27;s the direction that forward is because
+[2730.72] Jack: that&#x27;s you know you you stay on that all the time until it&#x27;s going further away yeah right
+[2738.32] UNKNOWN: well then you bring it round to you you know you just remember that you&#x27;re i always had the
+[2743.36] Joshua Bardwell: problem where if it was far enough away i would think i would not be able to tell if it was pitched
+[2748.56] Joshua Bardwell: towards me or away from me and waiting for it to get smaller or larger takes a bit of time it&#x27;s
+[2754.16] Joshua Bardwell: terrifying isn&#x27;t it and then and then i&#x27;d be like i think it&#x27;s pitched away so i&#x27;d pitch it towards
+[2758.96] Joshua Bardwell: me but then it would turn out that it was pitched towards me so now it&#x27;s coming faster yeah and then
+[2763.12] Joshua Bardwell: i would just get completely disoriented and crash um yeah my friend adams bought me a nice little
+[2770.16] Jack: present for um you know like when you fly an fpv and you kind of like lose where you are
+[2775.68] Jack: to get back home he&#x27;s bought me like a fluorescent jacket so i&#x27;ve got to like write the words like
+[2780.24] Jack: return to home jacket on the back of it which is quite funny so you just see like this fluorescent
+[2786.32] Jack: jacket um can i um just butt in here and yeah carry on and i just wanted to say the event horizon
+[2795.28] Tony: is starting to go on sale now um it was in the drone magazine this week i think it&#x27;s this month&#x27;s
+[2802.88] Tony: one get your orders in get your orders in to fossilstuff.com the your issue that was
+[2810.64] Tony: wasn&#x27;t it was a dodgy flight controller which i got so there is no your issue we found that out
+[2817.84] Tony: when we went to foster ball yeah about a couple of weeks ago maybe maybe martin can hook joshua up
+[2824.16] Jack: with uh transatlantic um uh event yeah event horizon event horizon he can do like a little
+[2831.68] Jack: yo this is how you tune something like this that&#x27;d be good good for everyone but i think the tune
+[2837.04] Tony: johnny got on his i mean he was flying fantastic that day so don&#x27;t upset him by copying his pids
+[2843.2] Jack: you&#x27;ll make him mad if you&#x27;ll never want to come on i&#x27;m just saying that i had the exact same setup
+[2851.28] UNKNOWN: if they have the exact same setup then you can copy their pids and i won&#x27;t get mad
+[2855.52] Joshua Bardwell: like the like the vortex pro and the protune well that makes sense what&#x27;s the point it&#x27;s
+[2859.76] Joshua Bardwell: got some profiles for copying pids
+[2864.72] Jack: i want to fly like boris i&#x27;ll select boris yeah
+[2869.36] Jack: instantly make you as good as whoever you&#x27;re copying them from well or as bad could be in there
+[2876.16] Jack: um yeah so josh definitely check out the i force 2 guy because he&#x27;s even he&#x27;s even made like
+[2884.8] Jack: a little motor mixing program where you can tap the arrow keys and then it&#x27;ll insert motor one
+[2895.12] Jack: and then tap it whether it goes clockwise or anti-clockwise and then all you do is measure
+[2899.76] Jack: from your center point of your craft so you can make any configuration it doesn&#x27;t work for
+[2904.72] Jack: tricopters but you know look at you i&#x27;m surrounded by bigots do you do you want to hear something
+[2911.28] Joshua Bardwell: else controversial yep uh i thought you would so i am not uh i don&#x27;t think that motor mixing is
+[2917.92] Joshua Bardwell: necessary or useful for flat quads yeah as long as your motors are rectangular yeah don&#x27;t bother
+[2923.92] Joshua Bardwell: with mixing if you have um if you have like a dead cat style or especially if you have an atail
+[2929.36] Joshua Bardwell: or a v tail or something weird like that then you need motor mixing yeah a lot of people uh with
+[2934.32] Joshua Bardwell: with just you know they just were flying an h quad and they want to do a motor mix point and i
+[2939.6] Joshua Bardwell: it&#x27;s still an x yeah but don&#x27;t you find a little bit of a difference in between your and pitch
+[2946.08] Jack: maybe well yeah but that has to do with the weight distribution not the motor spacing mr cg it&#x27;s
+[2953.04] Joshua Bardwell: because the and i to give credit i would like to give credit to the person who gave me this idea
+[2957.68] Joshua Bardwell: but i i think maybe it was quad mcfly i&#x27;m going to attribute the wrong person and i apologize
+[2962.88] Joshua Bardwell: i didn&#x27;t come up with this idea i think it was quad mcfly though he said i&#x27;ve ran all the math
+[2967.2] Joshua Bardwell: and it turns out that the further the motor is from the cg the longer the lever arm so this idea
+[2973.52] Joshua Bardwell: that you need more force when a motor is further away is negated by the fact that the lever arm is
+[2978.72] Joshua Bardwell: longer yeah and it all it all exactly cancels out pretty much and so what you&#x27;re really doing when
+[2983.44] Joshua Bardwell: you change those pits or the mixer rather is you&#x27;re adjusting you&#x27;re compensating for the
+[2987.92] Joshua Bardwell: the weight distribution it just coincidentally so happens that most of these copters that you
+[2993.04] Joshua Bardwell: it works out the same but in fact i i think you should just leave your leave use the quad x mixer
+[2998.72] Joshua Bardwell: and then just adjust your pits and your your pitch may be higher than your roll and that&#x27;s fine just
+[3003.28] Joshua Bardwell: figure it out and don&#x27;t mess with the mixer that makes a lot of sense oh look two two tellings off
+[3009.2] Jack: in one episode this is i think everyone will want you back just put it be in my place oh if i wasn&#x27;t
+[3016.56] Joshua Bardwell: a tricopter bigot yeah that&#x27;s it yeah you&#x27;re right i&#x27;m gonna get that on a t-shirt tricopter
+[3021.6] Joshua Bardwell: bigot yeah that&#x27;s a picture of a tricopter with a big slash through it yeah that&#x27;s it yeah no i&#x27;ll
+[3026.72] Jack: convert you man honestly i look forward to it i&#x27;d love to fly yeah do you want me to send you a
+[3032.16] Jack: servo because i will that&#x27;s all it will take i do own servos i used to fly fixed wing i say used to
+[3038.64] Joshua Bardwell: i mean technically i still own fixed wings i just never fly them because i&#x27;m always yeah traitor
+[3043.44] Joshua Bardwell: boy jack&#x27;s gonna start flying fixed wings well yeah i&#x27;m gonna make a wing with always a dan
+[3048.72] Tony: yeah me and dan bromance wing mance right shall we wrap up so can i just say another event horizon
+[3055.92] Tony: thing the first 20 are going to come with flight controllers and cams so if you want to order now
+[3062.88] Tony: do it because you get them two bits free for the first 20 okay we&#x27;ve all rushed to order them
+[3068.72] Adam Juniper: that&#x27;s why it&#x27;s all gone silent all right thank you for tuning in to let drone out uh i&#x27;ve been
+[3073.6] Jack: joined by in my far corner stone star one next to him that is insightful little nuggets in and there
+[3080.88] Jack: uh on the interwebs uh the happy go lucky sprighty well everyone knows come on chip
+[3090.16] UNKNOWN: ah okay yeah yeah and uh mr i write books the guide to absolutely everything thank you
+[3097.28] Jack: adam um juniper and i&#x27;m assuming with me my next book is um in amazon now by the way plugging stuff
+[3106.64] Jack: do it do it man and i&#x27;m the tricopter fag jack right until i fly i love you david said it
+[3114.24] Jack: tricopters forever let&#x27;s try it out and thanks joff yeah thank you guys for having me yep thanks
+[3121.92] Joshua Bardwell: no worries will you be back did you have fun thank you will you be back did you have fun oh
+[3127.76] Joshua Bardwell: yeah oh yeah yeah you know i love to talk uh my wife loves that i have this channel now so i
+[3133.04] Joshua Bardwell: can talk to all you guys on the internet instead of boring her so yeah i think you&#x27;ve made some
+[3139.28] Jack: friends though definitely the chat the chat&#x27;s love loving you great show i&#x27;ve learned so much
+[3145.36] Jack: yep loads of stuff man so you&#x27;re very welcome back i want you coming back crawling back being
+[3150.72] Jack: like i&#x27;m sorry about tricopters i am converted so if you want to come back get some tricopter
+[3157.6] Jack: action thank you you&#x27;ve been listening to let strone out keep flying take care thanks guys telemetry last
+</pre></body></html>

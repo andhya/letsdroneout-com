@@ -1,0 +1,974 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0244—LDO 244 - Virtualisation</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 244 ===
+Title: LDO 244 - Virtualisation
+Recorded: 2020-04-30
+Hosts: Andrew &quot;Frank&quot; Hyams, Wayne &quot;CurryKitten&quot; Andrews, Andy, Tony &quot;TheTonstar1&quot; Marchant, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): (none recorded)
+Total audience: 1,811
+Platforms: YouTube (https://www.youtube.com/watch?v=6_U9lzV1C9c); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/812076193-letsdroneout-ldo-244-virtualisation.mp3)
+=====================================
+
+Check out our merch or remix your own at our shop! http://www.letsdroneout.com
+
+[0.0] UNKNOWN: Hello and welcome to Let&#x27;s Drone Out, the best, well the only UK FPV podcast,
+[6.8] Jack: sponsored by the lovely people from our Patreon, patreon.com forward slash Let&#x27;s Drone Out.
+[12.88] Jack: In particular we&#x27;d like to thank these guys, Art Faulkner, Mikey Dredd, Wacky Wes, David Powell.
+[24.24] Jack: Thank you guys, you&#x27;re the best, we can edit our podcast, thank you.
+[59.5] UNKNOWN: Hello and welcome to another episode of Let&#x27;s Drone Out.
+[63.1] Jack: Tonight you are joined by Curry Kitten.
+[66.38] Jack: Hello.
+[67.66] UNKNOWN: Disclaimer.
+[69.42] UNKNOWN: I&#x27;m going into hand, carry on, I&#x27;ll get back to it.
+[73.02] UNKNOWN: Oh, can you flash it up?
+[74.7] Jack: Any views expressed by any guests on the show, personal or may not reflect the views of the
+[79.58] Jack: others or the show? And Andy, I&#x27;ll see.
+[82.94] Curry: We live in special times, everyone&#x27;s too busy thinking about other things.
+[86.94] UNKNOWN: It&#x27;s all right, the courts are closed.
+[89.42] Jack: Well, no, they now host legal stuff over the internet secure network,
+[96.22] Jack: and you get trialled remotely now.
+[99.5] Jack: Andy, I&#x27;ll see.
+[100.94] UNKNOWN: Hello.
+[102.78] Jack: My little Tony.
+[104.62] Jack: Bonjour.
+[106.3] UNKNOWN: And the slightly alcoholic Frank.
+[109.58] UNKNOWN: Good evening.
+[110.46] Tony: It is Frank, I&#x27;ve got a new drink here tonight.
+[112.7] Tony: Can we talk about IPA for a while?
+[114.62] Tony: I&#x27;ve got no drone topics to talk about.
+[118.06] UNKNOWN: We actually haven&#x27;t flown, nothing&#x27;s new, we&#x27;ve got nothing to do.
+[122.46] Tony: It&#x27;s crap, we&#x27;re not allowed to go to our local fields, we&#x27;re not allowed out.
+[126.14] Tony: It&#x27;s a lot of rubbish.
+[127.66] Tony: Let&#x27;s do a beer drinking channel.
+[132.06] UNKNOWN: Are they allowed to announce some good news today?
+[134.78] AndyRC: Sorry, go on, Jack.
+[136.38] AndyRC: And I&#x27;m bright until I fly, not that I matter.
+[139.02] Jack: I&#x27;ll see you later.
+[140.14] Jack: Have fun, lad.
+[141.5] AndyRC: Frank.
+[144.06] UNKNOWN: Jack was waiting to do that from the start of the show.
+[147.26] AndyRC: He was not committed, he was soldering when he joined us.
+[150.54] Curry: He&#x27;s still soldering.
+[151.74] Curry: Also, when&#x27;s the last time anybody said, hey, bright until I fly, what are you doing?
+[156.22] Curry: Do you know what, I&#x27;m going to meet mine and turn my car off until he comes back.
+[162.54] UNKNOWN: Oh, this is going to be a great show, should I do it as well?
+[166.06] Frank: Well, just want to kick us off with some very solidly drone related news.
+[172.94] Frank: It&#x27;s not exciting, but you know, the CAP1789, the guidance on the July rules in quotes.
+[184.7] Frank: Oh, I&#x27;m back, what about the July rules?
+[189.1] Frank: There&#x27;s been an updated version of the guidance released
+[193.98] Frank: yesterday, the 29th of April, and there&#x27;s some minor adjustments in there.
+[202.46] Frank: Mainly the biggest thing is that they&#x27;re kicking it back until at least 1st of November.
+[207.5] Frank: So everything stays as it is until the 1st of November.
+[211.02] Frank: That&#x27;s kind of the main things to take away from it.
+[214.14] Frank: There is also mention of remote ID in the beginning January 2022, but
+[219.98] Frank: it&#x27;s very, very vague.
+[225.18] UNKNOWN: It references another document, which looking at that is also pretty vague.
+[229.5] UNKNOWN: There&#x27;s more details on this on the LDO discord.
+[232.54] Frank: If you&#x27;re really interested in finding out some more details,
+[236.3] Frank: I was pasting some screenshots to Winterblue earlier today or yesterday.
+[241.9] Frank: Either way, in the LDO discord, if you want more information on the CAP1789 guidance.
+[250.78] UNKNOWN: There we go, solid drone news.
+[252.46] Frank: We&#x27;re still very upset about our £9.50.
+[254.38] Curry: We&#x27;re still not getting back for even longer.
+[257.82] UNKNOWN: Boom.
+[258.86] UNKNOWN: Well, they just put it on or whatever.
+[261.26] UNKNOWN: I&#x27;ve met the quota for drone news.
+[265.1] Frank: No, they&#x27;re small drone news, isn&#x27;t there?
+[266.86] Curry: Because you&#x27;ve got virtual mini air show to talk about.
+[270.46] Curry: There is virtual mini air show.
+[272.94] Frank: We&#x27;re now definitely doing this.
+[275.18] Frank: This is definitely happening.
+[276.7] Frank: The website has been updated and everything.
+[279.42] Frank: If you go to miniairshow.co.uk, it will tell you that you can go back there and find out more
+[285.98] Frank: and watch streams and stuff.
+[287.82] Frank: What it is, is we&#x27;re going to have a schedule of YouTube live streams.
+[294.3] Frank: It&#x27;s going to be happening throughout the day and on different channels, on different topics.
+[301.9] Frank: Some doing some live builds.
+[303.74] Frank: Some doing some talks and Q&amp;As.
+[307.82] Frank: Some doing simulator sessions.
+[311.1] UNKNOWN: Fingers crossed some racing, but at least some freestyle competition.
+[318.78] Frank: So that is going to be happening on the actual Saturday that there was going to be the mini air
+[325.74] Frank: show.
+[326.3] Frank: So that is the 16th of May.
+[330.14] Frank: So that&#x27;s only a couple of weeks away.
+[332.78] UNKNOWN: Was that off going to be our first all meet up?
+[337.9] Tony: Oh my God, it&#x27;s so poo that it&#x27;s not happening, isn&#x27;t it?
+[343.58] Tony: I&#x27;m really, really confident that this is going to be the best RC event of spring 2020.
+[350.22] Frank: It&#x27;s going to be the only RC event of spring 2020.
+[354.22] Frank: It&#x27;s going to be the best RC event of spring 2020.
+[357.58] Frank: Frank, who&#x27;s lined up to talk and do things so far on the streams?
+[361.66] UNKNOWN: So we&#x27;ve got Lurgie doing builds.
+[363.58] Frank: We&#x27;ve got Painless doing Q&amp;As.
+[365.5] Frank: We&#x27;ve got Tiny Woop Go is going to be involved, potentially Jesse Perkins.
+[371.26] Frank: He&#x27;s interested in co-commentating some of the Tiny Woop racing.
+[377.82] Frank: A bunch of other people talking to at the moment, talking about the things that they
+[381.5] Frank: might be doing, but we haven&#x27;t worked out exactly what or when.
+[384.86] Frank: So I don&#x27;t really want to put them on the spot until I actually got confirmation from them.
+[390.22] Frank: But yeah, there&#x27;s a huge long list of people to be working out some schedules with.
+[398.22] Frank: So hopefully we&#x27;ll have something like that about mid next week.
+[403.9] UNKNOWN: That&#x27;s what we&#x27;re aiming to do, is to firm up the schedule by then.
+[407.66] UNKNOWN: So yeah.
+[408.7] Frank: I&#x27;m glad we&#x27;re not all going to meet each other.
+[411.82] UNKNOWN: I mean, online, it&#x27;s going to be cool.
+[413.74] Tony: It&#x27;s going to be great.
+[414.62] Tony: I mean, you&#x27;re doing well, Frank.
+[416.54] Tony: Fingers crossed.
+[419.1] Tony: It&#x27;s gutting that we&#x27;re not going to all meet up and have cuddles and fly stuff and drink beer.
+[430.62] UNKNOWN: We&#x27;re going to be using a selection of simulators.
+[434.22] Frank: Different slots are going to use different simulators.
+[435.98] Frank: But the big headline one, I&#x27;m pretty sure, is going to be the Tiny Woop Go.
+[440.38] UNKNOWN: I think that&#x27;s going to be...
+[442.22] UNKNOWN: I&#x27;ve not heard of that.
+[443.66] AndyRC: Tiny Woop Go.
+[445.02] AndyRC: That one, Jesse&#x27;s...
+[446.62] UNKNOWN: Exactly, so it&#x27;s, yes, it is interesting.
+[451.82] Frank: Go take a look at it.
+[452.86] Frank: Go download it.
+[454.14] UNKNOWN: I&#x27;m just thinking for the people who want to join in.
+[457.34] AndyRC: It is free to use.
+[459.74] UNKNOWN: Yeah, that&#x27;s what I&#x27;m thinking.
+[460.94] AndyRC: You know, people need to get it in advance.
+[463.34] AndyRC: Or is that not the idea?
+[464.86] AndyRC: Because then they know all the tracks and stuff if they got it in advance.
+[469.34] UNKNOWN: Well, that&#x27;s the thing is that, speaking to them, they are potentially giving us the ability
+[475.9] Frank: to make our own track.
+[478.14] UNKNOWN: Oh, cool.
+[478.94] AndyRC: Okay.
+[482.3] AndyRC: Will that be the Rotor Brush, guys, then?
+[484.94] AndyRC: So it&#x27;s kind of...
+[486.14] Frank: It is almost a fork of Rotor Brush.
+[490.14] Frank: Specifically for the Tiny Woop stuff.
+[495.42] UNKNOWN: But yeah, it&#x27;s pretty good.
+[498.46] Frank: Having played around with it a little bit.
+[501.74] Frank: Yeah, you can have a go at that.
+[504.78] Frank: I&#x27;m sure we&#x27;ll be having a go with Currier Simulator as well,
+[509.9] UNKNOWN: which is also free.
+[511.26] Frank: So you can try a selection of free simulators.
+[515.74] UNKNOWN: I was just playing that.
+[518.06] UNKNOWN: Yeah.
+[518.54] AndyRC: Which one?
+[519.02] AndyRC: I was just playing yours, Wayne.
+[520.54] AndyRC: Very good.
+[521.1] AndyRC: Very impressed.
+[523.42] UNKNOWN: Does it fly like a real one?
+[526.46] AndyRC: I had to play around with the rates and the throttle multiplier and the gravity,
+[531.66] AndyRC: but I was very impressed.
+[533.26] AndyRC: I think if you had never flown FPV before,
+[537.18] AndyRC: you could definitely get going with it for sure.
+[541.34] UNKNOWN: Yes, you definitely need to mess around with it
+[543.82] Curry: to make it feel like you want it to feel.
+[545.9] Curry: Me and Frank were trying it.
+[546.94] Curry: We were trying the very...
+[548.7] Curry: My Wednesday, let&#x27;s see if I can write Networking a Day feature,
+[553.1] UNKNOWN: which kind of works if you don&#x27;t mind.
+[555.74] Curry: It kind of looks like someone&#x27;s got your quad on a string
+[558.38] Curry: and is doing this to it.
+[559.74] Curry: Oh, yeah.
+[560.38] Curry: It&#x27;s a bit wobbly, but we think we fixed that bit now.
+[563.26] UNKNOWN: But it was very accurate in that we could barely find each other to follow each other.
+[568.78] Frank: Barely find each other.
+[569.98] Frank: Where are you?
+[570.54] Curry: I&#x27;m by the tree.
+[571.34] Curry: Which tree?
+[572.14] Curry: By the hoop.
+[573.02] Curry: I can&#x27;t see you.
+[573.82] Curry: I&#x27;m still offering.
+[574.46] Tony: I&#x27;m running out of battery.
+[577.66] UNKNOWN: So, we&#x27;ve nailed the authenticity of quad chasing
+[581.26] Curry: and the fact you can&#x27;t find each other.
+[584.86] Frank: Oh, he&#x27;s fast.
+[588.94] UNKNOWN: The networking side of it seemed to work pretty flawlessly.
+[592.38] Frank: That was just the case of fire it up, pick a name in, and it worked.
+[597.66] Frank: So, that side of things looking pretty promising.
+[601.74] UNKNOWN: Well, hopefully I have something ready in a couple of weeks at least.
+[604.7] Frank: Yeah.
+[605.1] Frank: In case people want to virtually mess with each other.
+[608.38] Curry: And if nothing else, I&#x27;m sure we can do the FPV pre-style competition
+[614.86] Frank: that we usually do at the Mini Air shows by screen sharing from Asim, if nothing else.
+[621.58] Frank: Can we buy an NJ so people can have a chance of winning?
+[628.22] Frank: Well, he was a judge last time.
+[630.62] UNKNOWN: Oh, good.
+[631.58] Frank: He&#x27;s got the handicap of he&#x27;s spending all hours, God sends, doing
+[637.82] UNKNOWN: what we&#x27;re doing at the moment, guitar lessons.
+[640.94] Frank: Available from NJ on Cloudcake server.
+[647.58] UNKNOWN: Yeah, that&#x27;s his handicap.
+[649.5] Curry: In order to make a handicap, what we should make is some sort of guitar MIDI controller
+[655.5] Curry: to joystick input.
+[657.18] Curry: And he has to solo in order to fly quad.
+[660.94] Curry: Oh, that is hilarious.
+[663.02] UNKNOWN: Yeah, his throttle is accumulated by how many notes he can play.
+[669.98] Jack: Yeah, if he drops under 300 notes a minute, he crashes.
+[672.62] Curry: I&#x27;d say he has to keep playing.
+[673.98] Curry: But just in the chat from tailspin saying sync FPV has a new freesim as well.
+[684.7] Frank: That&#x27;s on the scene.
+[688.22] Frank: I invited you guys to the chat.
+[693.66] Jack: Is it all live stream?
+[694.7] Curry: I did.
+[694.86] Curry: Yeah, we did watch afterwards.
+[697.82] Curry: It looks amazing graphically.
+[699.82] Curry: It&#x27;s from a sort of defunct MMO where people can build their own islands and things.
+[703.98] Curry: Love the art style.
+[705.02] Curry: What&#x27;s MMO short for?
+[707.42] Curry: Massively, well, it&#x27;s a memorabrug.
+[709.98] Curry: It&#x27;s a massively multiplayer online role playing game.
+[713.58] AndyRC: A bit like, you know, the I can&#x27;t think of any now, you know,
+[719.5] Curry: World of Warcraft.
+[720.22] Curry: There we go.
+[722.46] UNKNOWN: You&#x27;re meant to be a nerd.
+[724.54] UNKNOWN: Yeah, but I never play these.
+[726.3] Curry: I cannot commit to playing a massively multiplayer online role playing game
+[730.06] Curry: because I&#x27;ll just be doing that forever instead of getting them with the hundreds
+[733.18] Curry: of other games that sat on the shelf there, which I&#x27;ll never finish.
+[735.66] Curry: I know.
+[737.02] UNKNOWN: I&#x27;m having to try and not play Minecraft constantly.
+[740.86] UNKNOWN: Well, that&#x27;s not a big game.
+[742.14] Curry: Don&#x27;t get me started on that.
+[744.06] Frank: I think the solid unique selling point of Curry Sim is that it can run on my laptop,
+[753.18] Frank: which is not built for running anything except for the end.
+[756.7] Frank: It runs on Pooh.
+[757.98] Curry: To be fair, I&#x27;m calling it a design decision.
+[760.3] Curry: It&#x27;s mainly because I can&#x27;t draw.
+[761.98] Curry: So the graphics aren&#x27;t very good.
+[765.38] UNKNOWN: Hence, it will run on stuff.
+[768.66] Frank: Brutally honest there.
+[771.06] UNKNOWN: But it works.
+[772.1] Frank: I would ask Jack to draw stuff for me, but we&#x27;ve seen his drawings
+[775.78] UNKNOWN: and not work safe at all, are they?
+[778.02] AndyRC: No.
+[778.74] UNKNOWN: I really like how it&#x27;s easy to set up on the controller.
+[784.34] AndyRC: You know, you&#x27;ve got your picture of an F-R Sky transmitter and because I fly mode one,
+[790.1] AndyRC: I lifted my throttle up and it started to do yours.
+[793.86] AndyRC: So I just did the calibrate option and just followed it along.
+[798.26] AndyRC: You have to make sure that you only put one input in.
+[800.26] AndyRC: Don&#x27;t you?
+[800.74] AndyRC: Otherwise it&#x27;ll record the second.
+[802.98] UNKNOWN: But other than that, it was like, yeah, all set up.
+[806.26] AndyRC: Great.
+[806.74] AndyRC: It did take me a couple of times to not accidentally set my pitch as the
+[815.86] Frank: reset switch somehow.
+[817.14] Frank: Yeah.
+[818.74] UNKNOWN: Oh, okay.
+[820.1] Frank: It kept taking that as like whatever it wants to do.
+[823.3] Frank: But if I literally put it down and didn&#x27;t touch it, then it was fine.
+[828.18] Frank: So that&#x27;s why I ended up doing it.
+[829.54] Frank: One thing I didn&#x27;t get around to, Wayne, is there a field of view option change?
+[833.62] AndyRC: I didn&#x27;t look that far.
+[836.9] AndyRC: No, it&#x27;s something I feel is holding it back.
+[840.66] Curry: And it&#x27;s something I want to sort out.
+[843.86] Curry: But will it run a Raspberry Pi?
+[846.5] Curry: It&#x27;ll run on Linux.
+[848.82] UNKNOWN: And depending on what distribution of Raspberry Pi, who knows?
+[853.06] Curry: I haven&#x27;t tested it.
+[856.34] UNKNOWN: Talking about Raspberry Pis, Frank, what have you been doing with your...
+[860.1] Tony: You&#x27;ve had some fingers in the Pi, haven&#x27;t you?
+[863.7] UNKNOWN: I&#x27;ve had...
+[864.74] Frank: There&#x27;s a Raspberry Pi up on my windowsill just now, just out of shot with an RTL SDR,
+[873.7] Frank: which I know is software defined radio, but I can&#x27;t remember what the RTL stands for.
+[878.58] Frank: But that&#x27;s doing ADS-B reception.
+[882.42] Frank: So the remote ID of the aircraft world that&#x27;s apparently been sort of...
+[890.66] Frank: The kind of idea of it has been...
+[893.3] UNKNOWN: Which has been sort of worked on since like the 40s, late 40s.
+[898.26] Frank: So it&#x27;s been around for quite a while.
+[902.1] UNKNOWN: But it&#x27;s on 1080 megahertz, at least in EU, they&#x27;re pinging out a message that says,
+[913.3] UNKNOWN: this is what my location is, this is what my altitude is, this is how fast I&#x27;m going,
+[919.46] Frank: what direction I&#x27;m going, all that kind of thing.
+[921.62] UNKNOWN: And a squawk code, which uses some interesting design choices.
+[926.26] Frank: But yeah, there&#x27;s that as well.
+[928.5] Frank: And then...
+[930.1] UNKNOWN: Does it let people know your intentions?
+[933.54] UNKNOWN: Kind of.
+[936.9] UNKNOWN: But yeah, so that&#x27;s being picked up on my windowsill from 100 kilometers away.
+[941.46] Frank: Can I see you?
+[943.94] Frank: You&#x27;re just listening?
+[946.18] UNKNOWN: Yeah, this is just listening.
+[947.46] Frank: And then feeds it into the internet.
+[950.98] AndyRC: Is that how things like flight radar work then?
+[954.58] AndyRC: So does it purely rely on people creating these hot spots like you have?
+[962.98] AndyRC: So hobbyists, essentially.
+[964.98] AndyRC: And then you can use something like...
+[967.38] Frank: I don&#x27;t know how flight radar do it.
+[968.9] Frank: I know you can set up a feed to feed flight radar,
+[974.58] Frank: I&#x27;ve set up this one for feeding a kind of almost open source competitor to flight radar 24,
+[982.18] Frank: which is...
+[982.66] Frank: An ADSV exchange, or is it that one?
+[985.22] Frank: Exactly, ADSV exchange.
+[986.98] Frank: And that&#x27;s what I&#x27;ve been using.
+[988.18] Frank: That&#x27;s what this is feeding it to.
+[990.42] AndyRC: So it&#x27;s a way to track aircraft as almost...
+[993.86] AndyRC: Is it used outside of a hobby?
+[996.26] AndyRC: Is it used by the aviation world as well?
+[999.62] AndyRC: Oh yeah, so anywhere where there&#x27;s air traffic control,
+[1008.58] Frank: they might have radar as well,
+[1010.74] UNKNOWN: but they won&#x27;t know from radar who it is,
+[1014.98] Frank: or where they&#x27;re going, or anything like that.
+[1019.62] UNKNOWN: So by using ADSV, it kind of annotates radar and says,
+[1025.94] UNKNOWN: this is who that is and what they&#x27;re doing.
+[1029.38] UNKNOWN: And what name you need to call if you&#x27;re calling them on the radio or whatever.
+[1034.9] UNKNOWN: Yes, so that&#x27;s kind of...
+[1037.22] Frank: And that&#x27;s interesting enough related to drones.
+[1041.06] Frank: That&#x27;s also kind of a lot of what the remote ID is kind of being based around,
+[1048.74] Frank: or at least being thought around.
+[1049.86] Frank: So there was one ping that has been around for a good three, four years.
+[1058.66] Frank: That is like an ADSV, a miniaturized ADSV,
+[1062.02] Frank: specifically for unmanned aircraft.
+[1067.86] UNKNOWN: And then there&#x27;s...
+[1069.22] Frank: I&#x27;m pretty sure this is what the DJI, the latest one,
+[1074.26] Frank: I think the Mavica 2 might even have some ADSV.
+[1078.1] Frank: That looks quite nice though,
+[1079.22] Tony: but I think that&#x27;s only in the US and Canada, isn&#x27;t it?
+[1084.18] UNKNOWN: I don&#x27;t think it&#x27;s in Europe.
+[1085.46] Tony: But anyone paid any attention to the US stuff recently?
+[1091.58] UNKNOWN: I might be wrong, but I&#x27;m pretty sure it&#x27;s only America and Canada.
+[1095.34] UNKNOWN: I was surprised they released a camera drone at a time
+[1099.26] AndyRC: when you can&#x27;t really use them.
+[1100.94] AndyRC: But perhaps...
+[1102.94] AndyRC: Maybe if I could go further.
+[1104.06] AndyRC: If I could fly on there apparently as well, yeah.
+[1108.38] AndyRC: I know there&#x27;s somebody who bought a Mavic Mini like a week ago,
+[1113.58] Frank: who messaged me like,
+[1117.34] UNKNOWN: what do you recommend?
+[1118.62] Frank: What do I need to do?
+[1119.66] Frank: Where should I learn?
+[1121.1] Frank: All that kind of stuff.
+[1122.06] Frank: And so I gave him some things.
+[1123.18] Frank: But he is in Wales,
+[1129.82] Frank: but I can&#x27;t imagine he&#x27;s as far enough into the middle of nowhere
+[1133.74] Frank: to just be able to go on flying.
+[1136.14] Tony: I was right.
+[1137.42] Tony: Mr. Shady says I was right.
+[1139.42] Tony: It&#x27;s only US and Canada.
+[1144.14] Tony: It&#x27;s weird because why wouldn&#x27;t I do it in Europe?
+[1150.62] Frank: So Winterbloo in the chat is talking to Zoe at the moment.
+[1159.58] Frank: Did she just cry at me?
+[1160.78] Frank: Have you seen Zoe&#x27;s new workshop?
+[1163.98] Frank: No, she moved into an apartment.
+[1166.22] Jack: That&#x27;s the last I saw of it.
+[1168.38] Jack: Speaking of an apartment.
+[1170.14] Tony: I thought she was still on the road.
+[1172.14] UNKNOWN: No, she was getting one, I think.
+[1175.58] UNKNOWN: Last I heard.
+[1177.58] Jack: I was on her Discord out of limits.
+[1183.82] Jack: It&#x27;s open Discord.
+[1187.42] Jack: Frank, speaking of apartments, chair or screen?
+[1195.1] UNKNOWN: I am going to watch this chair if I don&#x27;t get any chairs in.
+[1199.66] Frank: Because spending most of my day on this chair is killing me slowly.
+[1208.3] UNKNOWN: So yeah, I&#x27;m desperately in need of a new chair.
+[1212.22] UNKNOWN: You&#x27;re going to shell out then, Frank?
+[1213.9] UNKNOWN: Yeah.
+[1214.94] UNKNOWN: Always buy a new chair.
+[1215.42] Jack: Should we start a chair, Fun?
+[1217.9] Tony: Gaming chair?
+[1219.74] Tony: I just hit it on a tin thing.
+[1222.54] UNKNOWN: Folder, tin, horrible thing here.
+[1225.66] UNKNOWN: I just need to find somewhere that has an office chair in stock at the moment.
+[1229.66] Frank: Because it seems like along with webcams and keyboards,
+[1235.66] Frank: I can tell everyone has bought one for their home recently.
+[1238.94] Frank: And there aren&#x27;t many around.
+[1240.62] UNKNOWN: Interesting.
+[1241.02] Frank: Anyone has a line on not too expensive office chairs?
+[1245.34] UNKNOWN: Webcams, chairs and toilet paper.
+[1247.9] Frank: Interesting.
+[1248.46] Frank: And toilet paper, yeah.
+[1250.86] Frank: And it&#x27;s all from the same problem,
+[1251.9] Frank: which is that everyone&#x27;s spending time at home, not in the office.
+[1254.38] Frank: So they&#x27;re using toilet paper in the home and the office.
+[1256.94] Frank: They&#x27;re using chairs in the home, not in the office.
+[1259.18] Frank: Webcams in the home, not in the office.
+[1260.94] Frank: And so the supply chains have struggled to move everything
+[1267.1] Frank: that they&#x27;ve had in the office supply chains over to the commercial supply chains.
+[1271.9] UNKNOWN: I&#x27;d like a new webcam to be fair.
+[1273.9] Tony: This one I&#x27;ve got on my laptop.
+[1276.7] AndyRC: He said it freezes up just as he says it.
+[1282.06] UNKNOWN: I think we need a new computer tone.
+[1284.38] UNKNOWN: We&#x27;ve lost tunnel.
+[1285.74] UNKNOWN: Do you think we&#x27;re going to be allowed out after next week?
+[1289.5] UNKNOWN: Let&#x27;s speculate on that because it&#x27;s looked like there might be some plans
+[1293.74] UNKNOWN: for us to be able to do that.
+[1296.22] UNKNOWN: Probably you youngins will be allowed out.
+[1298.46] Jack: So that will be Frank.
+[1300.54] Jack: Can you tell me, yeah, Frank&#x27;s like...
+[1304.22] UNKNOWN: Yeah, who&#x27;s...
+[1306.06] Frank: I might be going back to work on the 11th.
+[1311.58] UNKNOWN: So that&#x27;s about it.
+[1313.18] Jack: Talk about the new folding five-inch prop.
+[1315.58] Jack: Oh, my God.
+[1316.3] Jack: Have you guys seen that?
+[1317.9] Jack: The folding...
+[1319.74] Jack: Is it...
+[1320.22] Jack: Dow...
+[1322.22] AndyRC: Yeah.
+[1322.62] Jack: Yeah.
+[1324.78] UNKNOWN: Dow five...
+[1327.1] AndyRC: Folding five-inch three tri-blade.
+[1330.38] AndyRC: Yeah, Dow prop four.
+[1331.42] AndyRC: Yeah.
+[1331.9] Curry: Can you collect it into itself in one prop ball?
+[1337.1] AndyRC: Three prop soles fold down.
+[1339.02] AndyRC: Think of like a DJI dual blade, but a tri-blade version of that.
+[1343.5] AndyRC: And it&#x27;s basically that.
+[1345.1] AndyRC: But it looks like a Dow prop.
+[1349.66] UNKNOWN: What is the point?
+[1351.18] Jack: It&#x27;s just like fidget spinners.
+[1354.54] UNKNOWN: What&#x27;s the point of these?
+[1357.74] Jack: I think someone&#x27;s had some sort of fever dream and has gone...
+[1361.1] Jack: I&#x27;m completely...
+[1362.14] Jack: As I said, everyone&#x27;s so bored that they&#x27;re just...
+[1364.86] Curry: Let&#x27;s design something that will fold up.
+[1366.86] Curry: It&#x27;s like props don&#x27;t last long enough to fold up.
+[1369.02] Curry: Don&#x27;t worry, just design it.
+[1370.78] UNKNOWN: I mean, to be fair to them, though,
+[1372.86] AndyRC: props are the most annoying thing on a quad, aren&#x27;t they,
+[1375.66] AndyRC: when it comes to, like, storage, you know?
+[1378.46] AndyRC: I mean, quads are really minimalistic when they&#x27;ve got the props off.
+[1381.98] AndyRC: You can store them in a box, but as soon as they&#x27;ve got the props on, it&#x27;s...
+[1386.06] Curry: I&#x27;m not happy with some sort of universal, sort of, quick release
+[1389.1] Curry: and put-back-on mechanism for props.
+[1391.18] Curry: They&#x27;ve already done that, and the po-po...
+[1393.26] Tony: Someone did one, but...
+[1394.22] Tony: You catch on, did they?
+[1395.82] Tony: No.
+[1397.34] Curry: If they tried everywhere, it&#x27;d be better.
+[1400.38] UNKNOWN: I mean, I took my X-Class ones off to hang it on the wall
+[1404.3] Tony: because it was taking up too much room.
+[1406.14] Tony: Well, that was where I saw it.
+[1407.66] Frank: It was in the macro quads Facebook group.
+[1413.82] Frank: There&#x27;s seven, eight, nine, ten, eleven-inch quads.
+[1419.18] Frank: And they&#x27;re kind of saying on there, like,
+[1422.7] Frank: don&#x27;t do it for five-inch, do it for, like, nine-inch.
+[1425.74] UNKNOWN: Do it for 12-inch props.
+[1428.62] Frank: Do it for big props, where that way, you know,
+[1433.98] UNKNOWN: you&#x27;re sticking it in your car or whatever,
+[1436.14] Frank: you don&#x27;t have to take the prop off to actually fit it in through a doorway or whatever.
+[1442.7] UNKNOWN: And the other thing is, you know, with the X-Class size props, how much do they cost, Tony?
+[1449.18] Frank: It&#x27;s a 50-per...
+[1453.28] Curry: It was so offensive, it might disconnect.
+[1459.6] UNKNOWN: Is that a 50-pound for a set of four, each prop? We don&#x27;t know.
+[1463.36] Frank: Stay tuned to find out.
+[1465.36] UNKNOWN: If Tony can come back.
+[1468.24] UNKNOWN: They&#x27;re very expensive.
+[1469.2] Frank: That&#x27;s got to be for a set of four, surely.
+[1472.48] UNKNOWN: Yeah, he&#x27;s back in the chat now.
+[1475.76] UNKNOWN: So if he could have, yeah, 50 pounds for four.
+[1479.2] UNKNOWN: But if he could, you know, maybe have it a little less.
+[1484.8] Frank: So it&#x27;d still probably be, like, 50 pounds for the whole lot,
+[1487.44] Frank: but at least then if you break one, you only have to replace half of one.
+[1495.52] Jack: Thing is, when those big guys crash, I mean, they crash.
+[1500.4] UNKNOWN: They really, really...
+[1501.92] Frank: Like, the thaw being stress-tested, let&#x27;s say.
+[1507.92] Frank: Like, that was a case of putting a new arm on it, which the aluminium tube,
+[1512.72] Frank: and then it was pretty much up and away from there, wasn&#x27;t it?
+[1517.04] UNKNOWN: I&#x27;ve seen it definitely crash and fly again in the same day.
+[1523.28] UNKNOWN: Which, you know, for something that size, if it&#x27;s a wing,
+[1526.96] UNKNOWN: that&#x27;s not going to be flying again the same day.
+[1531.44] UNKNOWN: It&#x27;s no hot-swapping components on a, you know, balsa model.
+[1537.44] UNKNOWN: I think it&#x27;s just for convenience, you know, shoving it in your bag or whatever.
+[1540.72] AndyRC: You know, if you can&#x27;t really shove a quad in your bag,
+[1542.88] AndyRC: because the props will either get bent or they won&#x27;t fit.
+[1545.92] AndyRC: But I can&#x27;t see it catching on, really.
+[1548.8] AndyRC: They look very heavy, those hubs do, don&#x27;t they?
+[1552.88] UNKNOWN: And then you have to think, as well.
+[1554.56] AndyRC: They&#x27;re probably going to vibrate some, as well, aren&#x27;t they?
+[1557.52] AndyRC: With them flexing, you know?
+[1559.52] AndyRC: With them, sorry, like, moving, being able to move, you would think.
+[1564.16] AndyRC: Or it&#x27;d be difficult to balance them, for sure,
+[1566.08] AndyRC: when you start putting screws and things in there that, you know,
+[1572.32] AndyRC: cheaper to bin a set of props rather than fold them each time.
+[1575.6] AndyRC: I think it&#x27;s more for storage, you know?
+[1577.68] AndyRC: It&#x27;s every time, you know, if you&#x27;re flying on a daily basis,
+[1582.96] AndyRC: then you don&#x27;t want to be taking your props off.
+[1584.88] AndyRC: Sometimes it can take, you know, maybe five minutes.
+[1589.76] AndyRC: In the UK, five minutes of the difference
+[1591.76] AndyRC: between getting a flight in and it raining, you know?
+[1596.0] UNKNOWN: It does seem a bit niche, though.
+[1597.36] Curry: It feels like they&#x27;re trying to fix a problem that may not actually exist.
+[1600.8] Curry: Oh, no, I agree with it.
+[1602.48] Curry: I&#x27;m not sure that is the solution, you know?
+[1606.32] AndyRC: The DJI propellers on the Phantom, very easy to do, you know?
+[1612.32] AndyRC: Just like a lift-on system sort of thing.
+[1617.2] AndyRC: Or is it a push-down and twist kind of thing?
+[1620.56] UNKNOWN: Well, loads of the GTIs are threaded ones as well, don&#x27;t they?
+[1624.96] Curry: Where you just thread them straight on
+[1626.88] Curry: and the way the motor turns will keep them tight
+[1629.68] Curry: and then you just unscrew them straight off again.
+[1631.68] Curry: I think since the Phantom 4, they&#x27;ve all had a couple of them.
+[1636.72] AndyRC: They&#x27;ve all had a push-on and twist system.
+[1639.84] AndyRC: So I can&#x27;t see why we can&#x27;t adapt that.
+[1643.04] Frank: Personally, quarter turns seem like a much better fastener than threads.
+[1647.68] Frank: Like threads of finicky and strip and...
+[1651.92] Frank: I&#x27;ll tell you why it&#x27;s not catching on.
+[1653.92] Curry: Probably because as soon as they say this,
+[1656.4] Curry: the racers will say, oh, no, that weighs an extra gram.
+[1658.64] Curry: We can&#x27;t have that as the winner fly.
+[1661.68] Curry: Our prongs weigh one.
+[1662.56] Curry: And then everybody says, oh, fair enough.
+[1664.16] UNKNOWN: Well, that&#x27;s where it is, is that rather than racers,
+[1667.76] Frank: for freestylers, bandos, you know, people,
+[1673.2] Frank: like you say, Andy, chucking them in the backpack,
+[1675.92] UNKNOWN: going to a spot, pulling it out,
+[1679.28] Frank: putting it around for a pack or even half a pack
+[1681.52] Frank: and then chucking it back in the bag
+[1684.4] Frank: and walking onto the next spot.
+[1686.32] UNKNOWN: Yeah, exactly.
+[1688.16] UNKNOWN: This episode was recorded in front of a live online audience,
+[1691.68] Frank: downloaded and edited to make sense when it played audio only,
+[1695.2] Frank: censored to please the iTunes people,
+[1697.04] Frank: hosted on the internet,
+[1698.08] Frank: forwarded through to your podcast provider,
+[1699.92] Frank: downloaded, playing on your device
+[1701.76] Frank: and is now playing in your ears.
+[1703.68] Frank: All thanks to our Patreons.
+[1705.76] Frank: Consider joining them and you&#x27;ll also get other online benefits.
+[1709.2] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
+[1714.0] UNKNOWN: But, Jack, have you tried to carry a symbiote, Jack?
+[1719.52] UNKNOWN: No.
+[1720.4] UNKNOWN: Why not?
+[1720.88] Frank: What&#x27;s your excuse?
+[1722.24] UNKNOWN: Very good.
+[1723.28] UNKNOWN: Just a friendly little cat porn
+[1726.24] Curry: and threatening to rape hedgehogs.
+[1729.68] Curry: Rake hedgehogs, I&#x27;ll have you know.
+[1733.6] Jack: It&#x27;s the mind it goes into.
+[1739.28] UNKNOWN: Wasn&#x27;t the mind you were talking about?
+[1741.6] UNKNOWN: Poor hedgehogs.
+[1743.92] UNKNOWN: Hey, Mike, it dreads in the chat.
+[1747.52] UNKNOWN: Make me laugh.
+[1748.96] UNKNOWN: I tried curry sim.
+[1750.24] Jack: Super cool.
+[1751.52] UNKNOWN: Make me try it and then he opened up an issue
+[1756.48] Frank: which he&#x27;s quite welcome to
+[1757.68] Curry: and then discovered he made a mistake.
+[1759.2] Curry: So that was the kind of issue I liked
+[1760.96] Curry: because we could close it straight off again.
+[1764.56] UNKNOWN: It adds to your issues closed.
+[1766.88] Frank: My issues closed is looking good.
+[1768.88] UNKNOWN: You&#x27;re talking about getting the field of view changed
+[1772.0] AndyRC: I think when people went up tangent.
+[1773.76] AndyRC: So where are you at with that?
+[1776.8] UNKNOWN: It&#x27;s my thing to do after networking in Steam.
+[1781.2] Curry: There&#x27;s this thing in the game engine
+[1783.2] Curry: where I can say this is the angle of the camera.
+[1785.84] Curry: And what&#x27;s happening is if I increase the view of the camera,
+[1789.68] Curry: it looks like everything gets stretched out like that.
+[1794.08] Curry: When we increase the field of view in an FPV camera,
+[1796.48] Curry: basically we get that distortion at the sides
+[1798.72] Curry: and things goes away at the sides
+[1800.48] Curry: and that&#x27;s where they distort.
+[1801.84] Curry: In this one, by default, it&#x27;s going away in the center.
+[1805.04] Curry: So what you end up with is the arms stretching out like that.
+[1809.04] Curry: And I was like, that&#x27;s not the look I&#x27;m looking for here.
+[1811.44] Curry: So basically I have to write a shader
+[1814.56] Curry: to install my own sort of field of view thing somehow,
+[1818.48] Curry: which I don&#x27;t know how to do because it&#x27;s in shader language.
+[1820.56] Curry: So it&#x27;s another thing to learn.
+[1821.6] Curry: Hence, I&#x27;ve left it to one of the last things.
+[1824.32] Curry: But I agree.
+[1825.84] Curry: The field of view is a problem
+[1827.2] Curry: because when you&#x27;re approaching a gap,
+[1830.72] UNKNOWN: it feels like you&#x27;re a massive quad and the gap&#x27;s not very big.
+[1834.48] Curry: When me and Frank just messed around following each other,
+[1838.4] Curry: we&#x27;re like, we&#x27;re tiny.
+[1839.76] Curry: This is like following that.
+[1841.04] Curry: So you see Frank go through like the gap under the building,
+[1846.72] Curry: which he crashed into, by the way, because it was so messy.
+[1849.2] Curry: Yeah, I saw that when you were in...
+[1850.64] Curry: He looked absolutely tiny.
+[1852.64] Curry: But from his point of view, it would look,
+[1854.96] Curry: because the field of view is not as big as I want it,
+[1857.2] Curry: it looks like there&#x27;s not that much space.
+[1860.08] Curry: So that&#x27;s definitely one of the things I want to fix.
+[1863.6] Curry: But yeah, I have to go away and think about
+[1865.36] Curry: how to write a specific shader for it,
+[1867.2] Curry: which basically takes the image that we&#x27;ve got
+[1870.64] Curry: and rearranges it in a situation
+[1872.4] Curry: where we can basically emulate a sort of wide angle lens.
+[1878.24] Curry: And then I have to think about how I can change that
+[1880.4] Curry: through various things, which looks complicated.
+[1886.08] Frank: Until the networking is actually released,
+[1889.12] Frank: the best, well, the two best parts are hitting spacebar
+[1893.76] Frank: and getting some cars or planes to chase.
+[1900.08] Frank: Or the other bit is the wind turbines.
+[1904.08] UNKNOWN: I spent like a whole morning yesterday,
+[1906.8] Frank: I think it was, just chasing blades of wind turbines,
+[1910.64] UNKNOWN: just trying to match them.
+[1912.32] Frank: I need to download this, don&#x27;t I?
+[1914.0] Curry: Oh, I definitely like chasing the planes
+[1915.6] Curry: and the cars around most,
+[1916.8] Curry: because chasing planes is exactly the sort of thing
+[1919.6] Curry: I like to do when I go out flying with friends.
+[1923.52] Curry: I remember we tried to do it with your plane
+[1925.28] Curry: when you came to my spot,
+[1926.24] Curry: but you were flying line of sight
+[1927.44] Curry: and that wasn&#x27;t as successful.
+[1930.64] Curry: You&#x27;d have to pull it into the ground.
+[1935.28] Curry: And yeah, I never got a chance to chase drift cars
+[1939.04] Curry: like Tony has, so I wanted to put something in there.
+[1941.44] Curry: That was fun.
+[1943.44] Curry: Yeah, looks fun.
+[1945.36] UNKNOWN: The following the plane is good fun.
+[1950.08] Frank: I was trying to form up with it
+[1952.96] Frank: in like a flight test formation
+[1955.28] Frank: of just below it looking backwards
+[1957.04] Frank: and flying backwards.
+[1960.0] UNKNOWN: And yeah, it&#x27;s good fun.
+[1963.76] Curry: One of your challenges is,
+[1964.72] Curry: and it&#x27;s possible to do, I&#x27;ve done it,
+[1966.16] Curry: if you hit the plane hard enough,
+[1968.24] Curry: you can crash it into the ground.
+[1969.84] Frank: Really?
+[1971.04] Frank: I did discover that it had a collider on it,
+[1973.36] Frank: it&#x27;s got a collider.
+[1974.8] Curry: Although it&#x27;s on a flight path,
+[1977.28] Curry: it works on waypoints.
+[1978.4] Curry: So it says fly to here, fly to here.
+[1980.72] Curry: The how it does it,
+[1982.0] Curry: is it interprets the waypoints
+[1985.04] Curry: is like I have to turn into turn,
+[1986.32] Curry: I have to like do this.
+[1987.76] Curry: So if you whack it hard enough,
+[1990.0] Curry: it will screw up the point.
+[1991.12] Curry: And if you like, for example,
+[1992.48] Curry: when it&#x27;s going towards the buildings
+[1993.76] Curry: where it&#x27;s quite tight,
+[1994.64] Curry: if you give it a good whack there,
+[1995.92] Curry: you can get it to fly into a building, no problem.
+[1999.68] UNKNOWN: It&#x27;s one of the challenge things to do.
+[2003.2] UNKNOWN: Yes, it does work on a Mac.
+[2004.32] Curry: I developed it on a Mac,
+[2005.28] Curry: and it works on Windows,
+[2006.32] Curry: and it works on,
+[2008.08] UNKNOWN: what&#x27;s that other, Linux.
+[2011.12] UNKNOWN: Works everything, except Pi.
+[2014.72] UNKNOWN: Because I&#x27;ve just remembered
+[2015.84] Curry: that it&#x27;s on an ARM chip,
+[2016.96] Curry: so that&#x27;s probably not going to work.
+[2019.36] UNKNOWN: I think as well,
+[2021.6] AndyRC: for me when I was playing it,
+[2023.04] AndyRC: because I haven&#x27;t flown for probably about a week,
+[2027.04] AndyRC: it&#x27;s really a good way to get your FPV fixed.
+[2029.92] AndyRC: I was like, oh, I&#x27;ll probably be,
+[2032.24] AndyRC: I don&#x27;t know, five minutes on this,
+[2033.92] AndyRC: and then, you know, 40 minutes later,
+[2035.92] AndyRC: I&#x27;m like, where did that five minutes go?
+[2039.04] UNKNOWN: Well, I think it was fun.
+[2041.2] UNKNOWN: But yeah, that&#x27;s why I wanted to,
+[2043.12] Curry: that&#x27;s why I&#x27;ve skipped ahead a few things
+[2045.76] Curry: to work on the networking,
+[2047.2] Curry: because I thought it&#x27;s always fun
+[2049.36] Curry: to fly with your friends, isn&#x27;t it?
+[2050.48] Curry: Because if we were out in the field together,
+[2052.56] UNKNOWN: we wouldn&#x27;t sort of like,
+[2053.44] Curry: everybody stop and watch Tony,
+[2054.64] Curry: everybody stop and watch Andy,
+[2055.6] Curry: we&#x27;d all sort of get up together,
+[2057.52] Curry: and then see how things were like,
+[2058.48] Curry: where are you by the tree?
+[2059.68] Curry: What tree?
+[2060.4] Curry: No, that tree.
+[2061.28] Curry: Other tree.
+[2061.92] Curry: And then we&#x27;d land where we had no battery
+[2063.76] Curry: and not find each other,
+[2065.28] Curry: but you know, it&#x27;s the same sort of thing.
+[2068.56] UNKNOWN: Will it be possible to fly the plane or the cars?
+[2071.04] Curry: Sorry, I&#x27;ve got a comment coming out from Neil Jones there.
+[2074.56] Curry: It will be possible to fly the plane.
+[2077.44] Curry: There&#x27;s a feature there to add it in
+[2080.0] Curry: that needs just a bit more restructuring.
+[2082.08] Curry: There&#x27;s an issue.
+[2083.28] Curry: I&#x27;ve opened myself up my own issue to say,
+[2085.68] Curry: be able to fly the plane.
+[2087.76] UNKNOWN: The codes all there,
+[2089.12] Curry: it just needs some messing about with.
+[2091.52] Curry: Because of course, one of the things I want to do,
+[2095.04] Curry: and we&#x27;ve talked about before,
+[2096.56] Curry: and Frank especially had some ideas about this,
+[2101.28] Curry: when you&#x27;re learning to fly,
+[2103.04] Curry: the idea is that you sort of take people&#x27;s minds off
+[2106.64] Curry: flying and put them on something else.
+[2108.16] Curry: So if you can make a game out of it,
+[2109.76] Curry: like one person fly the plane,
+[2111.92] Curry: the other people crash into the plane and make him crash,
+[2114.4] Curry: how long can you last?
+[2115.52] Curry: Or stuff like the beach ball,
+[2117.44] Curry: what if we turn that into like,
+[2118.88] Curry: who can score a goal against each other?
+[2120.88] Curry: Are all things where you&#x27;re sort of developing skill
+[2123.04] Curry: and you&#x27;re not thinking about your thumbs and stuff,
+[2125.12] Curry: and you&#x27;re just getting on with it,
+[2126.16] Curry: and that then translates into real life.
+[2128.08] Curry: Although you won&#x27;t go out necessarily
+[2129.84] Curry: and hit planes or hit beach balls,
+[2133.52] Curry: you&#x27;ll have that muscle memory,
+[2135.28] Curry: and you&#x27;ll be more confident about flying in real life.
+[2137.68] Curry: That&#x27;s the plan.
+[2141.31] UNKNOWN: So I&#x27;ve got a news flash of an airshow
+[2144.19] Frank: that I&#x27;ve just been notified about in the chat.
+[2149.07] Frank: That potentially sounds like we&#x27;ll have a nurk there.
+[2154.59] UNKNOWN: Wow.
+[2155.07] Frank: First one.
+[2156.51] Tony: That&#x27;d be cool.
+[2157.55] Tony: Nice.
+[2160.67] Tony: Numskull was talking about the Ender 3, I think, printer.
+[2165.47] Tony: One of my close friends has just bought six of them from France,
+[2169.87] Tony: and they were here in England within three days.
+[2174.91] Tony: So I could find out if he really wanted to know.
+[2181.23] Tony: It sounds like he&#x27;s ordered a new seven-inch frame instead.
+[2183.87] Curry: He got fed up with the idea of waiting, I think.
+[2186.51] Tony: Okay.
+[2188.03] UNKNOWN: Well, as I say, my mate got six of them in three days.
+[2194.03] Tony: He&#x27;s printing out loads of face mask stuff for the NHS.
+[2197.87] Tony: He&#x27;s been on TV.
+[2199.23] Tony: Well, his stuff&#x27;s been on TV and stuff.
+[2203.23] UNKNOWN: So yeah.
+[2205.07] UNKNOWN: Wings and Wheels is cancelled till next year, too.
+[2207.87] Tony: Oh, man, that was my favourite last year.
+[2211.23] UNKNOWN: Has it really been cancelled?
+[2212.67] Tony: That&#x27;s because I&#x27;m not on Facebook.
+[2216.83] UNKNOWN: I think it&#x27;s going to be a non-meetup year then, isn&#x27;t it?
+[2220.91] Tony: I think Weston Park&#x27;s still going ahead so far in October and November.
+[2225.47] AndyRC: I don&#x27;t think they&#x27;ve got it.
+[2226.59] AndyRC: It&#x27;d be minus 12 and raining odd.
+[2229.31] UNKNOWN: It will, yeah.
+[2230.91] AndyRC: No, I&#x27;d go anyway.
+[2232.43] AndyRC: I believe that the reason why they pushed it...
+[2235.07] AndyRC: I think it might be November.
+[2236.75] AndyRC: I think my friend was telling me that the fireworks at Weston Park
+[2241.87] AndyRC: started on Bonfire Night doing a special fireworks display
+[2246.27] AndyRC: and they built it into the summer show.
+[2249.07] AndyRC: So it&#x27;s not something they haven&#x27;t done before.
+[2253.23] AndyRC: But there&#x27;s nothing to say that the events will happen in October.
+[2258.35] AndyRC: We accept all Mini Airshow, which you&#x27;ll be able to join in live.
+[2263.55] Frank: MiniAirshow.co.uk on the 16th of April.
+[2266.19] Frank: We&#x27;re bringing 2020 back, people, with Mini Airshow Virtual Edition.
+[2270.99] Curry: Yep.
+[2273.79] UNKNOWN: Exciting.
+[2274.43] UNKNOWN: You&#x27;re missing all the events.
+[2276.51] Frank: This will be the best event of Spring 2020 by far.
+[2282.51] Frank: Did anybody actually manage to fly anything this week?
+[2285.63] Curry: Not this week, no.
+[2288.54] AndyRC: We&#x27;ve had the rain set up here.
+[2291.66] AndyRC: I don&#x27;t know about you guys, but we&#x27;ve had...
+[2294.22] AndyRC: Yes, it&#x27;s about Saturday.
+[2296.06] AndyRC: Yeah, and then I won&#x27;t be able to fly at the weekend.
+[2299.82] AndyRC: But I&#x27;ve got the Diatom Tina to check out.
+[2304.06] AndyRC: I don&#x27;t know if you&#x27;re aware of that one.
+[2306.62] UNKNOWN: No.
+[2307.26] AndyRC: It&#x27;s an interesting one because it&#x27;s got the Flight One firmware on it.
+[2312.62] AndyRC: Oh, I didn&#x27;t know that.
+[2314.62] UNKNOWN: Oh, I didn&#x27;t know that.
+[2315.98] Curry: I&#x27;m supposed to get in that, but it was quite a different design, wasn&#x27;t it?
+[2319.82] Curry: Because it&#x27;s like it&#x27;s got an upper and lower frame part where it&#x27;s all sort of enclosed.
+[2326.14] UNKNOWN: Very similar to the...
+[2327.74] AndyRC: I mean, there is a company, FlexRC, Dimitri from FlexRC.
+[2332.06] AndyRC: He&#x27;s been making those kind of designs for years and years.
+[2335.66] AndyRC: But as these small models become more populous for flying indoors,
+[2341.98] AndyRC: they&#x27;ve sort of taken that design and made it smaller.
+[2346.78] AndyRC: Yeah, it comes with the Flight One.
+[2349.66] AndyRC: Is it called the Falcor?
+[2351.1] AndyRC: Not Falcor.
+[2351.58] AndyRC: It&#x27;s not Falcor.
+[2353.02] AndyRC: Falcor&#x27;s a camera, isn&#x27;t it?
+[2354.7] Curry: From...
+[2355.9] Curry: No, no.
+[2356.86] Curry: Falcor was a camera.
+[2358.78] Curry: No, it wasn&#x27;t.
+[2359.66] Tony: It was a massive thing that you used to ride on in NeverEnd in Story, wasn&#x27;t it?
+[2367.58] UNKNOWN: Game, right?
+[2368.94] Tony: All right.
+[2369.5] Tony: But it was also a...
+[2370.38] Tony: Falcor was a camera.
+[2374.3] UNKNOWN: Falcor X.
+[2375.1] AndyRC: You see, they know up to more stuff than...
+[2377.58] AndyRC: Yeah, Falcor X, I believe it&#x27;s a firmware-like beta flight,
+[2380.86] AndyRC: but all of the settings are done through the on-screen display.
+[2383.66] AndyRC: They aren&#x27;t done through...
+[2387.34] UNKNOWN: As far as I&#x27;m aware, they aren&#x27;t done through an interface.
+[2391.74] AndyRC: But there&#x27;s been some problems with it, apparently.
+[2393.98] AndyRC: It&#x27;s got an auto-turtle mode, and apparently that&#x27;s causing the ESCs to catch fire.
+[2399.9] AndyRC: So they&#x27;re switching to beta flight.
+[2402.62] UNKNOWN: So, yeah, I got it.
+[2404.14] Curry: Can I just do a Tony impression?
+[2405.58] Curry: Falco, that was a character from Star Fox, wasn&#x27;t it?
+[2409.02] Curry: It&#x27;s like something irrelevant.
+[2411.42] Tony: Right, Falcor&#x27;s from NeverEnd in Story.
+[2414.62] AndyRC: No, I&#x27;m just going to say, yeah, it&#x27;s self-set up, you know?
+[2418.78] AndyRC: It&#x27;d be an interesting thing.
+[2420.7] AndyRC: I kind of want to try the flight...
+[2424.22] AndyRC: Is it called Flight 1?
+[2425.42] AndyRC: And then Falco X is the firmware.
+[2431.1] UNKNOWN: I want to try it, but they&#x27;re saying they&#x27;re moving to beta flight with it
+[2433.82] AndyRC: because their ESCs keep catching fire.
+[2435.9] AndyRC: And with it being like an indoor model as well,
+[2438.54] AndyRC: you don&#x27;t want your carpet on fire, do you?
+[2442.22] UNKNOWN: It&#x27;s a kitchen fly, this one, just in case.
+[2444.86] UNKNOWN: Yeah, maybe.
+[2445.98] AndyRC: But I could fly it outside if we get some decent weather
+[2448.94] AndyRC: and then see what that&#x27;s like.
+[2450.22] AndyRC: But they&#x27;re saying they&#x27;ve had that many ESC issues
+[2453.1] AndyRC: that they&#x27;re switching to beta flight anyway,
+[2455.02] AndyRC: so that makes it kind of pointy.
+[2457.82] Tony: All I want to do is buy the 360Go Insta360Go 20-gram camera
+[2464.22] Tony: with really good...
+[2469.34] UNKNOWN: What do we call it, innit?
+[2471.02] UNKNOWN: Stabilization.
+[2471.9] Tony: Stabilization, thank you.
+[2473.9] UNKNOWN: Looks really good, and it&#x27;s 20 grams and tiny,
+[2477.1] Tony: but it&#x27;s 180 quid, and I&#x27;m trying to save money at the money.
+[2480.94] Frank: Doing some targeted advertising, haven&#x27;t they?
+[2483.18] Frank: I&#x27;ve seen, like, this is perfect for FPV.
+[2488.38] Tony: I saw it a couple of months ago, and I was like,
+[2491.34] Tony: I&#x27;m going to put this on something tiny,
+[2493.9] UNKNOWN: and it&#x27;ll be fun to fly around the house and stuff on the outside.
+[2498.86] Tony: Stabilization looks pretty good.
+[2500.38] Tony: It doesn&#x27;t have a limited runtime.
+[2501.98] Tony: Five minutes.
+[2502.78] Tony: Yeah, it&#x27;s not very limited.
+[2503.82] Tony: It was 30 seconds, but they&#x27;ve put it up to five minutes now.
+[2507.18] Tony: To be fair, it&#x27;s not enough as long as the battery, is it?
+[2509.9] Tony: It&#x27;s not quite, yeah.
+[2511.58] UNKNOWN: I&#x27;ve had it with, like, 60 seconds,
+[2513.02] Frank: but maybe, yeah, maybe it&#x27;s not good.
+[2514.78] Tony: They&#x27;ve changed something, and it&#x27;s five minutes now.
+[2518.54] UNKNOWN: What resolution is it?
+[2519.74] AndyRC: Because it looks like it&#x27;s going to be small.
+[2521.58] AndyRC: I think it&#x27;s 108060.
+[2523.58] UNKNOWN: Yeah, that&#x27;s not enough for 360.
+[2526.06] AndyRC: I don&#x27;t know.
+[2526.46] AndyRC: No, no, it&#x27;s not a 360 camera.
+[2528.38] Frank: Oh, it&#x27;s not a 360. What is it, then?
+[2530.22] AndyRC: Nice. The Insta360 Go is just a little action camera,
+[2534.7] Frank: but it&#x27;s basically, like, if you took the Insta360 One X
+[2538.38] Frank: and, like, chopped it in half so that you only had one camera,
+[2543.02] Frank: and then you used that, and it just used that wide field of view
+[2547.74] Frank: but cropped it down so that you got a 1080p stabilized footage.
+[2553.5] Frank: That&#x27;s kind of what it&#x27;s all about.
+[2556.38] UNKNOWN: Yeah.
+[2557.66] UNKNOWN: Well, it&#x27;s 180 quid, and I&#x27;m trying to save money.
+[2561.42] UNKNOWN: That&#x27;s practically a set of props.
+[2564.38] Curry: Those Tony things that are very loud.
+[2566.62] Curry: I thought maybe you were taking a piss
+[2570.14] Curry: when you said it&#x27;s, like, 620 grams,
+[2572.62] Curry: which is exactly what this came out to
+[2574.3] Curry: when I stuck a battery on it.
+[2575.82] Curry: It&#x27;s like, is that really going to take off?
+[2578.3] Curry: I have to wait till, like, the rest of my family is away somehow.
+[2582.94] Tony: I can even hover it in the garden,
+[2584.86] Curry: and all my neighbors have, like, moved out or something.
+[2587.18] Curry: They&#x27;re good at doing their jobs.
+[2588.62] Tony: I can&#x27;t even imagine it.
+[2591.26] Tony: Well, I went out for a bike ride and took the quad
+[2593.9] Tony: and flew through the bluebells the other day
+[2595.74] Tony: and got some really good shots of it.
+[2597.9] Tony: Flew it up a stream and flew some bluebells and stuff.
+[2603.58] Tony: I like what they do.
+[2605.34] UNKNOWN: I look forward to flying it.
+[2606.54] Curry: It&#x27;s kind of interesting because when I got it out
+[2609.66] Curry: before I put, like, the GoPro on it, which weighs a ton,
+[2612.62] Curry: because this is foam, it&#x27;s not as heavy as I thought.
+[2615.98] Curry: And then you put the stuff on it and you&#x27;re like,
+[2617.42] Curry: Jesus Christ, it is literally a pig.
+[2620.14] Curry: It&#x27;s going to be a flying brick, isn&#x27;t it?
+[2622.22] Curry: But it&#x27;d be interesting.
+[2623.98] UNKNOWN: Don&#x27;t worry.
+[2624.54] AndyRC: It compensates with in power and noise.
+[2629.9] UNKNOWN: But you&#x27;re right.
+[2630.38] Curry: The weather&#x27;s been so bad because I flew a quad I reviewed,
+[2635.02] Curry: which I&#x27;ve already forgotten, the Sector 1 Frito.
+[2636.62] Curry: I think I did that on Friday.
+[2638.14] Curry: And I basically went around the garden and in the house
+[2641.02] Curry: because it wasn&#x27;t too big.
+[2642.38] Curry: But then, today, I managed to get out for two minutes
+[2646.94] Curry: to do a GPS test, which is the extent of my testing for part one.
+[2650.46] Curry: I kept doing it in the middle of my road in my pyjamas,
+[2654.14] Jack: my GPS testing and my neighbors.
+[2656.94] UNKNOWN: I got dressed especially just to go outside
+[2659.26] Curry: because I was, like, being filmed.
+[2661.18] Curry: Otherwise, the HGLRC are sort of doing stand-alone GPS&#x27;s
+[2667.58] Curry: and GPS with compasses as well.
+[2669.9] Tony: I was putting a HGLRC group today.
+[2673.9] UNKNOWN: I was like, what&#x27;s going on in here?
+[2676.06] UNKNOWN: I don&#x27;t know.
+[2676.54] Tony: There&#x27;s loads of pilots in there.
+[2680.86] Frank: It was on Saturday, wasn&#x27;t it?
+[2682.78] Frank: There was a winter blues stream.
+[2686.06] Frank: Ice stream?
+[2686.78] Jack: Yeah, with...
+[2689.58] UNKNOWN: Syncfb.
+[2690.86] Jack: Yeah, sync, that&#x27;s it.
+[2691.9] Jack: Yeah. For a minute, then, I keep thinking of the bathroom sink
+[2696.06] Jack: or the kitchen sink, not, like, stink-on-luma, you know?
+[2702.14] Jack: Oh, my gosh.
+[2704.06] UNKNOWN: I&#x27;m going mad.
+[2705.58] Jack: I popped in and said, like, I&#x27;m on the stream.
+[2707.9] UNKNOWN: Yeah, I missed you guys.
+[2709.1] Tony: I had it on the background, but I was busy with it.
+[2712.7] Frank: I didn&#x27;t say anything in the chat, so I was just lurking.
+[2716.46] Curry: Raciously, he hadn&#x27;t heard of LDO before.
+[2719.26] UNKNOWN: I know. That&#x27;s why...
+[2720.3] Tony: You&#x27;re going to set her off.
+[2721.26] Tony: Exactly when I left.
+[2722.22] Tony: Yeah, totally. I was like, I&#x27;m done.
+[2725.34] Jack: I was like, open the chat.
+[2726.7] Jack: I was like, don&#x27;t listen to it.
+[2727.66] Jack: It&#x27;s a load of ****.
+[2732.54] Curry: That&#x27;s how Spokesman put an ad line out there.
+[2735.26] Curry: Yeah.
+[2735.66] Curry: I listened to it.
+[2736.22] Curry: I think it&#x27;s hard to talk about his background and stuff.
+[2740.22] AndyRC: Sounds quite interesting.
+[2741.5] AndyRC: He&#x27;s a game developer, so...
+[2743.34] UNKNOWN: Yeah, and he&#x27;s got RT misses as well.
+[2747.26] UNKNOWN: So...
+[2747.74] Jack: You all go there when you do that.
+[2749.82] Jack: You can also draw off.
+[2752.54] Jack: Well, yeah.
+[2753.34] Jack: I was like, draw a different artist to Drew.
+[2756.78] AndyRC: Drew?
+[2759.82] UNKNOWN: Very good.
+[2760.3] AndyRC: I don&#x27;t know what they meant to do that, or it was a mistake,
+[2762.22] AndyRC: but either way, it was funny.
+[2764.54] UNKNOWN: I know. I just gave the hassle.
+[2766.3] Jack: Also, Sync FPV has got the coolest hair ever.
+[2769.9] UNKNOWN: I mean, look how cool his hair is.
+[2771.9] Jack: What color? It&#x27;s like grime.
+[2773.42] Tony: Yeah, he&#x27;s got a silver back.
+[2775.82] Tony: Is he like...
+[2776.3] Tony: He&#x27;s got a silver...
+[2778.22] Tony: Should we call him Scofield?
+[2779.9] Tony: Scofield.
+[2780.54] AndyRC: So I missed Scofield.
+[2783.18] UNKNOWN: Look at him.
+[2783.66] AndyRC: Look at the beard hair and the rubbing.
+[2786.86] Jack: And also, I don&#x27;t know what preamps he&#x27;s using,
+[2789.1] Jack: but he sounds good.
+[2791.34] UNKNOWN: Do you want to call us out then, Jack?
+[2794.22] Jack: You&#x27;ve been listening to Thursday Night.
+[2797.9] Jack: What&#x27;s it called again?
+[2799.98] UNKNOWN: What are we doing?
+[2800.78] Tony: Oh, what is it called, Jack?
+[2802.54] Tony: That&#x27;s because no one&#x27;s flown for like weeks.
+[2805.5] Tony: It&#x27;s a soft left hand corner, just so you know.
+[2808.62] UNKNOWN: Oh, really?
+[2810.06] Frank: Where am I? What am I doing?
+[2812.3] Jack: It says it in both the top left hand corner for us
+[2814.78] Frank: and the top right hand corner for everyone watching as well.
+[2818.78] Jack: I&#x27;ve got Steve Gadlin&#x27;s squad,
+[2820.78] Jack: so you might be able to get the build videos.
+[2823.82] Jack: Hello. You&#x27;ve been watching and listening too.
+[2828.46] UNKNOWN: Let&#x27;s drone out.
+[2829.98] UNKNOWN: Yay!
+[2832.06] Jack: Tonight, there&#x27;s been hosts and people on the show have been.
+[2837.5] UNKNOWN: Curry Kitten.
+[2839.02] UNKNOWN: Goodbye.
+[2840.78] Jack: Everyone&#x27;s favourite liability Andy RC.
+[2843.58] UNKNOWN: Good evening.
+[2845.42] UNKNOWN: My little Tony.
+[2846.94] UNKNOWN: How do.
+[2848.94] UNKNOWN: And I must say, I much prefer that Andy RC&#x27;s not saying how do anymore.
+[2855.5] Jack: And everyone&#x27;s favourite virtual Mini Air Show organiser, Andrew Stashrang.
+[2861.02] UNKNOWN: Join us on the 16th at minearshow.co.uk.
+[2864.22] Frank: Bye.
+[2865.66] UNKNOWN: And I&#x27;ve been bright until I fly.
+[2868.54] Jack: Thank you guys and good night.
+[2870.7] UNKNOWN: Telemetry lost.
+[2874.11] UNKNOWN: Thumbs up, please.
+</pre></body></html>

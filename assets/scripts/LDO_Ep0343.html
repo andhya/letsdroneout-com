@@ -1,0 +1,819 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0343—LDO 343 - Featuring Stingers Swarm</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 343 ===
+Title: LDO 343 - Featuring Stingers Swarm
+Recorded: 2022-03-24
+Hosts: Stephen &quot;Belrik&quot; Howell, Jack &quot;Brightontillifly&quot; Nash, Wayne &quot;CurryKitten&quot; Andrews, Koel &quot;Koala&quot; Anderson, Tony &quot;TheTonstar1&quot; Marchant, Andrew &quot;Frank&quot; Hyams
+Guest(s): Kevin &quot;StingerSwarm&quot; Dougherty
+Total audience: 2,385
+Platforms: YouTube (https://www.youtube.com/watch?v=A4g3SX8yo9w); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1238819104-letsdroneout-ldo-343-featuring-stingers-swarm.mp3)
+=====================================
+
+Check out Stingers Swarm on YouTube &amp; Instagram: 
+https://www.youtube.com/user/stingersswarm
+https://www.instagram.com/stingersswarm
+
+#LetsDroneOut #LDO #StingersSwarm #KevinDougherty #podcast #drone #mulitrotor #quadcopter #fatshark #DeadliestCatch #impulseRC #ethix #brightontillifly #TeamBlackSheep #FPVUK #BLHeli #lipo #KISSULTRA #KissESC #esc #FlyDuino #JoshuaBardwell #Skitzo #Alien5  #FPVRacing #MiniAirShow #LondonFPV #UKFPV #betaflight #fpvdrones #FPVRacing #MiniQuad #podcast #fpvwing
+
+[0.0] UNKNOWN: Hello and you&#x27;re listening to Let&#x27;s Drone Out and special thank you to our lovely patrons that help donate so that we can pay the editor to remove the swear words and silly things we say. Massive thank you too.
+[14.0] Jack: Carlos Campos.
+[16.0] Jack: Art Faulkner.
+[18.0] Jack: Sam Dahmer.
+[20.0] Kevin: Mikey Dread.
+[22.0] Jack: On with the show.
+[24.0] Kevin: Let&#x27;s Drone Out now.
+[54.54] Jack: And welcome back to Let&#x27;s Drone Out. Tonight you are joined by everyone&#x27;s favourite curry kitten.
+[60.54] Jack: Hello.
+[62.54] UNKNOWN: Everyone&#x27;s favourite man with moustache.
+[66.54] Jack: Stephen.
+[68.54] UNKNOWN: Hello.
+[70.54] UNKNOWN: My buddy from Canada, Carl.
+[72.54] Jack: Hello.
+[74.54] Jack: Who does the socials.
+[76.54] Jack: My darling and adoring wife.
+[78.54] Jack: I suppose I&#x27;d better say hello.
+[82.54] Tony: And tonight&#x27;s guest we are joined by Stinger Sworn.
+[88.54] UNKNOWN: Hey.
+[90.54] UNKNOWN: Stinger is driving home at the moment. He&#x27;s left early for work to come chat with us.
+[97.54] Jack: So we will talk among ourselves whilst Kevin safely drives home.
+[103.54] UNKNOWN: And then when he gets in the door we can ask him some questions.
+[108.54] Jack: Stephen have you got any topics for us?
+[111.54] UNKNOWN: Not a whole lot. Although I did notice the curry kitten had a bit on the new fusion thing that he was experimenting with.
+[118.54] UNKNOWN: Oh, is that how you&#x27;re supposed to say it? I thought it was a Chinese name and I was calling it the Fuzhong.
+[125.54] UNKNOWN: You can put whatever other accent you want. Yeah, go for it.
+[129.54] Curry: Yeah.
+[131.54] Curry: Well, I hadn&#x27;t released a video yet. But yeah, the Fuzhong is a combination E LRS board and an open VTX board.
+[140.54] Curry: In one little board which you can put in your whoop or bigger quad, I suppose, and have two things at once.
+[147.54] Curry: Although I was having interesting problems with it, I found another interesting thing that I didn&#x27;t know,
+[152.54] Curry: which I like finding out things through errors and crashing, which is E LRS VTX administrator is in charge.
+[160.54] Curry: So should you decide to set your VTX power level via your OSD and then go and do something,
+[168.54] Curry: it might change it back, which I wasn&#x27;t expecting in mid flight. So I would take off thinking I was in 25 milliwatt mode,
+[176.54] Curry: go fly for a bit. And then it would say, oh, I&#x27;m swapping back to RC mode. And I would just get a pure goggle full of static.
+[185.54] Curry: And then I have to go find the quad again, which is different. I found out more about how you should let Lua just do its thing
+[192.54] Curry: and not try and basically do it on the OSD or do it via Lua, but don&#x27;t try and do both, else they will fight and one will win.
+[201.54] UNKNOWN: Which is an interesting thing.
+[203.54] Curry: Isn&#x27;t it the old save and reboot, like settings?
+[206.54] Jack: No, because as soon as you start up your quad, your radio says, hello, you&#x27;re running E LRS, are you?
+[213.54] Curry: And it says, yes, I am. It&#x27;s like this is your power level. And for some reason, normally this is instant.
+[218.54] Curry: If you go and change your band or channel or anything using that Lua script or start up, it&#x27;s like that.
+[225.54] Curry: For some reason, I don&#x27;t know if it&#x27;s a bug somewhere in one of the many different open source things, or it&#x27;s the flight controller or something else.
+[233.54] Curry: There was a delay. So when I was first setting it, I was like, I&#x27;m going to set this to 25 milliwatts to see what happens.
+[240.54] Curry: It&#x27;s like, oh, it&#x27;s still at 400. It&#x27;s not working. I&#x27;ll set it through the OSD.
+[245.54] Curry: And then for some reason, a minute later, it said, oh, I&#x27;ve changed power for you.
+[252.54] UNKNOWN: PS, you&#x27;re now on this race setting, which has effectively turned off your VTX.
+[258.54] Curry: Hit mode. Yeah, that&#x27;s not good.
+[261.54] UNKNOWN: No, it&#x27;s bad.
+[262.54] UNKNOWN: Did you find out that the weird open VTX thing where you can use either smart audio or Tramp, you no longer have to remember which one to select?
+[271.54] UNKNOWN: Yes. I mean, I&#x27;d forgotten about it because I was conversing a quad that was already set for smart audio.
+[277.54] Curry: So I just didn&#x27;t touch it. But yeah, you could equally just say use Tramp and it would just work because it detects what protocol you&#x27;re using, which is quite clever.
+[286.54] Curry: But open VTX, I kind of think, is a fix to a problem that doesn&#x27;t exist.
+[291.54] Curry: Open Express RS was there because it&#x27;s like, oh, now you can use all these different manufacturers&#x27; modules with all these other different manufacturers&#x27; receivers, and they all get interchanged and it&#x27;s fine.
+[303.54] Curry: We&#x27;ve never had a problem with VTXs because it&#x27;s not like I&#x27;ve got Fat Shark goggles, therefore I can only use Fat Shark VTXs.
+[309.54] Curry: It&#x27;s like any to any. It&#x27;s not really a problem.
+[311.54] Curry: So in some ways, I don&#x27;t really understand why open VTX is there, but, you know, it&#x27;s not a bad thing to have, I guess.
+[319.54] Curry: It&#x27;s good for noobs. If you&#x27;re building a quad and you kind of don&#x27;t appreciate that Tramp and smart audio are different, then it just works with whatever you set it to.
+[329.54] UNKNOWN: Yeah. Although they still have to fill out the VTX table with something.
+[333.54] UNKNOWN: I guess, yeah.
+[335.54] UNKNOWN: I&#x27;m not sure. Is open VTX analog or is that something else?
+[340.54] UNKNOWN: No, it&#x27;s analog.
+[342.54] UNKNOWN: OK, so a bunch of people who decided to make a controller for those little rich wave video encoders that wasn&#x27;t a proprietary one.
+[351.54] UNKNOWN: I see. Yeah, because there&#x27;s another project that&#x27;s like the Wi-Fi broadcast based like HD video that seems really sketch.
+[363.54] Curry: It&#x27;s all about that. That&#x27;s called Open HD, which was. Yeah, it came from the Wi-Fi broadcast stuff, which I have been playing with, which is sketchy if we were doing your sort of flying because the round trip latency right now is about 120 milliseconds.
+[379.54] Curry: So you&#x27;d be in the side of a shopping center before you could think about it.
+[384.54] Curry: But the idea is that they&#x27;re building some hardware which is going to bring that down. I think they&#x27;re talking about 40 milliseconds for this new piece of hardware, which hopefully will come out and we&#x27;ll get to test out and see what that&#x27;s like.
+[397.54] UNKNOWN: It&#x27;s also sketchy if you try and put a USB extension lead in the middle of it all. Right. Yeah. Or, you know, some things in general are going to be very sketchy.
+[407.54] UNKNOWN: Or if you try and feed the Wi-Fi card through the props, for example, stuff like that.
+[412.54] UNKNOWN: Yeah, I always find that&#x27;s bad. I end up with many antennas of many different things tuned up by props at some various reasons.
+[421.54] UNKNOWN: Looks like Kevin&#x27;s home. Anytime almost. Yeah.
+[427.02] Curry: I mean, I also found out this week a lot about shielding GPSes, which I found quite useful. Again, success through failure. My GPS doesn&#x27;t work anymore.
+[436.02] Curry: And then we learned about how copper tape put around it and then grounded with a piece of wire can shield your GPS perfectly and make it work.
+[446.02] Curry: I still can&#x27;t believe that&#x27;s the thing. I&#x27;m just I&#x27;m so confused as to what it was being shielded from because it&#x27;s not like you ever need to shield a receiver, but you need to shield GPS.
+[456.02] Stephen: I know it&#x27;s crazy. And this is this is something I had in that quad and was working. And then as soon as I put this other flight controlling, it doesn&#x27;t work.
+[466.02] Curry: But when I was doing my research, I found so, so many videos about I think it was called the Roma four inch, this long range quad, which had a GPS.
+[474.02] Curry: And it turned out from the factory, the GPS was disabled. And that&#x27;s because it was too close to the other stuff to work. So everybody turned it on. It&#x27;s like, it doesn&#x27;t work.
+[485.49] Curry: And they all had to come up with various different ways of pushing it further apart or shielding it in some other way or replacing it with something better.
+[492.49] Curry: Was wasn&#x27;t that a thing with like moon tape or whatever for like, DJI V2 or something?
+[501.49] Jack: The DJI, the V2 is in the tape, the goggles, or are you talking about the old fashioned stuff?
+[510.74] Curry: The NASA tape on the NASA. Yeah, what was that for? On the NASA, it had a really interesting problem where people were finding occasionally the quad wouldn&#x27;t know its height anymore.
+[523.74] Curry: And it would even go way up or way down. And what it was is the side of the box, the NASA was like a little box with like plugs, you could plug server leads into.
+[532.74] Curry: But one of the sides was a little bit too translucent. So the sun could come through and affect the barometer. So you had to put a piece of masking tape on it to block the sun else you&#x27;d be flying along.
+[545.74] Curry: And then you called you to say I&#x27;m landing now because I don&#x27;t know my height anymore. And it just come down.
+[549.74] Curry: Do you use any long range stuff like that, Kevin? Any long range GPS blocks?
+[558.74] Kevin: The NASA.
+[562.74] Kevin: Not the NASA on your freestyle quads.
+[566.74] UNKNOWN: Oh, yeah, obviously. No, I do have one four inch set up that has a GPS. It&#x27;s the newbie drone or early gig that has GPS and rescue mode and all of that.
+[579.74] Kevin: But I don&#x27;t use it a ton.
+[582.74] UNKNOWN: You never like fly over water and think I&#x27;m going to put GPS on this just in case.
+[589.05] UNKNOWN: No, I don&#x27;t for the most. If I&#x27;m going to fly over water, I&#x27;m more like zip tie empty water bottle on a type of guy.
+[599.05] UNKNOWN: Can&#x27;t go wrong.
+[601.05] Jack: See, this was what I was talking about. If you remember, there&#x27;s Kevin there.
+[607.05] UNKNOWN: Do you remember the Phantom 2? And then in the top shell, it would have the copper sandwich tape.
+[616.05] UNKNOWN: I remember that.
+[618.05] UNKNOWN: Oh, yeah.
+[620.05] UNKNOWN: I can&#x27;t. And that would shield the GPS from the rest of the crap.
+[629.05] Jack: Everything else. Yeah. See, I knew that was a thing.
+[632.05] Jack: The weird thing is you&#x27;re not shielding the actual GPS antenna. The antenna is not shielded.
+[637.05] Stephen: What you&#x27;re shielding is the bit of wire that connects the GPS to the flight controller, which is just like you never need to do that with any other bit of wire in your quad.
+[645.05] Stephen: You don&#x27;t like, oh, my crossfire is getting low LQ. I better wrap the cable between the RX and the flight controller and a bit of copper tape.
+[655.05] Stephen: Well, perhaps the receiver is on the top in that on that drone, right? Yeah, correct.
+[661.05] UNKNOWN: Yeah. And honestly, it&#x27;s not about shielding that receiver.
+[665.05] Kevin: The issue is that those receivers typically also have the magnetometer.
+[670.05] Kevin: The magnetometer is extremely susceptible to electrical noise.
+[674.05] Kevin: So you&#x27;re really shielding it from the magnetometer.
+[677.05] UNKNOWN: Ah, right. Yeah.
+[680.05] UNKNOWN: So that&#x27;s a different setup to Currys then, because Betaflight can&#x27;t even use a magnetometer, right?
+[685.05] Stephen: Correct. GPS or nothing. Correct. Yeah.
+[688.05] Curry: I don&#x27;t know if the reason we don&#x27;t need it on receivers is because receivers are built to a much better spec.
+[694.05] Curry: One thing when I was researching about why is this going wrong, one of the videos popped up from Pavel.
+[700.05] Curry: And he said, the reason this is so bad is because it&#x27;s badly shielded.
+[705.05] Curry: He put like a Maytec GPS slash compass on the same point where he couldn&#x27;t get a signal.
+[711.05] Curry: And that one of the Beechan compasses. And it was absolutely fine.
+[715.05] Curry: And that&#x27;s because that&#x27;s built to a higher spec and their own sort of shielding is better.
+[719.05] Curry: So it could just be that the receivers we&#x27;re using are just like made to handle this stuff.
+[724.05] Curry: And these GPS&#x27;s are a bit, I don&#x27;t know, not as good.
+[728.05] Curry: So the noise attenuation on the UART is just for crap.
+[735.05] UNKNOWN: It doesn&#x27;t work properly on the Beechan ones. Yeah.
+[738.05] UNKNOWN: I remember Powell&#x27;s test and he did a whole bunch of tests for the lock on time.
+[743.05] Stephen: And those Maytec ones came out way ahead.
+[746.05] Stephen: Everything except for the really, really large Beechan one that no one uses.
+[750.05] Stephen: The 8 series, 880, which is just giant and doesn&#x27;t fit on anything.
+[756.05] Curry: Yeah, that&#x27;s got a compass in as well. You wouldn&#x27;t use it for regular stuff.
+[761.05] Jack: Stingy, what gear are you using now? Because I thanked you before the show for like going out and flying with Skitzo.
+[772.05] Jack: It was lovely to see. I&#x27;ve missed him dearly. He&#x27;s my favorite pilot.
+[778.05] Jack: And it was great to see. And you kind of exposed him to the world of DJI HD video.
+[787.05] Jack: It must have been like luring some sort of cave dweller out.
+[792.05] Jack: And he came out with all this Flintstone stuff.
+[796.05] Jack: And he had like race-shite board. They don&#x27;t even exist anymore.
+[803.05] UNKNOWN: He&#x27;s only been not flying for like a year. So it&#x27;s not like everybody makes a big deal out of it.
+[809.05] Kevin: Yes, the tech moves fast, but it does not move that fast. So yeah, he had a race flight flight controller,
+[816.05] Kevin: which oddly enough, they are still selling air quotes.
+[821.05] UNKNOWN: They still have for sale a Skitzo edition flight controller, which he has not authorized at all and which is not shipping.
+[829.05] Kevin: They do not give them money for such things. And he&#x27;s not signed off on it like that whole press situation.
+[836.05] Kevin: It&#x27;s pretty sketch. I&#x27;m not trying to throw anybody under the bus here. But anyways, yeah.
+[841.05] Kevin: So what am I flying these days? I am pretty much committed to moving over to Express LRS.
+[850.05] Kevin: I&#x27;m not like I like it mostly because it is open source.
+[856.05] UNKNOWN: I like the lower latency of it. I like the performance of it.
+[861.05] Kevin: The user experience was easier on Tracer with over-the-air updates, et cetera.
+[867.05] UNKNOWN: Yeah, I don&#x27;t know. I like it, but I&#x27;m not in love with it.
+[872.05] Kevin: Currently using the RadioMaster TX16S. I tested out the Zorro.
+[880.05] Kevin: I made a whole video about all these radios, but then so many issues and technical issues.
+[888.05] Kevin: I had the beta FPV receiver with the flat antennas that I had range issues with.
+[894.05] Kevin: And the video production just went into this rabbit hole of like, wait, what&#x27;s the problem? Blah, blah, blah.
+[901.05] UNKNOWN: So one day I will finish editing this video of my journey from the TBS Mambo into Express LRS and RadioMaster radios.
+[913.05] Kevin: But it&#x27;s just a it&#x27;s a mess. So that&#x27;s kind of where I&#x27;m at on the controlling side.
+[918.05] Kevin: I am flying the DJI Vista with the video transmitter on frames. I&#x27;ve got TBS source ones.
+[927.05] Kevin: I&#x27;ve got like three of those built up. I was testing out the axis flying Manta for a minute, but that broke on me pretty quick.
+[935.05] Kevin: And then I&#x27;m always testing a slew of flight controllers. So one that has the axis flying stack.
+[941.05] Kevin: One&#x27;s got Talon H7 from who is that? I&#x27;m drawing a blank.
+[952.05] UNKNOWN: And then another one with the Maytek H743. So just a little bit of everything.
+[958.05] Kevin: Okay. No, I&#x27;ve you know, I&#x27;ve not. I went full in on KISS a long time ago and the performance level was it was just inconsistent.
+[977.39] Kevin: And everything that I&#x27;m hearing about, you know, KISS Ultra, FETTEC, blah, blah, blah.
+[982.39] Kevin: Like I don&#x27;t like being on closed source systems like that. The amount of testing that goes on.
+[987.39] Kevin: I have friends that are in those like alpha test groups and all this.
+[992.39] Kevin: Like you got to same thing when I was flying flight one for a period of time.
+[996.39] Kevin: It&#x27;s like, oh, you got to find this firmware that works for you and everything&#x27;s like gravy and then don&#x27;t change anything.
+[1003.39] Kevin: And like every time a lot of times when the closed source products like make moves, they end up breaking things.
+[1010.39] Kevin: And that&#x27;s part of the reason that I&#x27;m just moving away from the TBS radios to like I hate to say it.
+[1018.39] Kevin: I love you, Trappie. But yeah. Yeah.
+[1022.39] Stephen: They&#x27;re scheduled to get into Edge TX in that they&#x27;ve been pushed back like two or three releases now.
+[1028.39] Stephen: It&#x27;s going to be the summer before they get into Edge TX with the Tango 2 and the Mambo.
+[1033.39] UNKNOWN: It&#x27;s just kind of disappointing to see the pace of development on those, unfortunately.
+[1038.39] UNKNOWN: If you want to use them with any modern software except the Edge TX, you know, they&#x27;ve come out with from Freedom TX.
+[1045.39] UNKNOWN: Missing out a lot of features. It&#x27;s a shame.
+[1048.39] UNKNOWN: Yeah. Are you talking more about you moved to Tracer right at some point?
+[1053.39] Jack: I did go to Tracer for a while.
+[1056.39] Kevin: And I did. I had a pre-production model that I had issues with that kind of got ironed.
+[1061.39] Kevin: They did get ironed out and I was happy with it.
+[1065.39] Kevin: But then the more I saw with where Edge TX and Express LRS were headed, I was like, you know, I just want to be on something that&#x27;s fully supported by those open source projects.
+[1077.39] UNKNOWN: They kind of shot themselves in the foot a bit with that CRSF V3 stuff recently as well.
+[1082.39] Stephen: They tried to push that out and they were auto-negotiating the speed of the connection and causing random fail safes.
+[1090.39] Stephen: And it&#x27;s just not what you want from Crossfire, is it?
+[1092.39] Stephen: You want Crossfire to be the boring guy in the room.
+[1094.39] Stephen: Yeah. It&#x27;s not much better with a ghost because I missed the Lua script tuning.
+[1101.39] Jack: I actually had to go back and use Crossfire with like a, you know, a little brushless whoop HD whoop because, yeah, no, no tuning with the LRS script.
+[1118.39] UNKNOWN: So it looks like Andy&#x27;s hit the Crossfire problems as well.
+[1122.39] Stephen: They&#x27;ve tried to push out a bunch of like, let&#x27;s make this faster fixes, but it all feels like a bit of a knee jerk because a lot of this is causing instability.
+[1132.39] UNKNOWN: Yeah.
+[1133.39] Jack: I advise Cole.
+[1136.39] Jack: It boiled down to like just the size of the teams that are working on it and the size of the test like group, you know.
+[1146.39] UNKNOWN: Not enough test pilots, you mean, fundamentally?
+[1150.39] Kevin: Yeah.
+[1151.39] Stephen: Yeah.
+[1152.39] Jack: Yeah.
+[1153.39] UNKNOWN: Yeah.
+[1154.39] Jack: Yeah.
+[1155.39] Jack: Cole&#x27;s got a tango too and he was flying and literally he was still line of sight and it just totally disconnected.
+[1166.39] Jack: Would you crash on like a roof or something?
+[1169.39] Koel: Yeah.
+[1170.39] Koel: I mean, I could pull up a clip or whatever, but yeah, it was like...
+[1173.39] Koel: That would be amazing.
+[1174.39] UNKNOWN: Let me see if I can find it here.
+[1175.39] Koel: It was scary because it was my first time fail-saving and it was just very strange.
+[1184.39] Koel: Is that of this latest firmware or is this a historic thing?
+[1188.39] Stephen: This was...
+[1189.39] Stephen: No, this wasn&#x27;t...
+[1191.39] Koel: Early days of the tango too.
+[1194.39] UNKNOWN: Yeah.
+[1195.39] Koel: It&#x27;s not like that time that Jack claimed to fail safe after he flew backwards into a hill, is it?
+[1199.39] Curry: And then blamed Crossfire.
+[1201.39] UNKNOWN: No, I definitely failed.
+[1202.39] Jack: It was on the ground.
+[1203.39] Jack: It was my radio link.
+[1205.39] UNKNOWN: I did fail safe.
+[1206.39] Jack: It went beep, beep, beep.
+[1208.39] UNKNOWN: So you guys can see this here, right?
+[1210.39] Koel: No?
+[1211.39] Jack: Okay.
+[1212.39] UNKNOWN: Yeah, got it.
+[1213.39] Jack: I wasn&#x27;t beeping like crazy.
+[1214.39] Koel: Sorry.
+[1215.39] UNKNOWN: No, no, no.
+[1216.39] Jack: Like that&#x27;s what...
+[1217.39] Jack: I proved that I failed safe.
+[1222.02] Jack: Still fine.
+[1223.02] Jack: Still fine.
+[1224.02] Jack: Then all of a sudden out of nowhere, just zing and then I&#x27;m stuck on a roof.
+[1229.02] Koel: Like I was so close to myself too.
+[1232.02] Koel: It&#x27;s very strange.
+[1234.02] UNKNOWN: That&#x27;s you in front of the building.
+[1236.02] Koel: Yeah.
+[1237.02] Stephen: That&#x27;s what?
+[1238.02] Stephen: 200 meters maybe?
+[1239.02] Koel: Actually, I was right beside my quad right here.
+[1244.02] Koel: This is...
+[1245.02] UNKNOWN: I mean, it&#x27;s close.
+[1246.02] Koel: She&#x27;s right over one building over another.
+[1248.02] Stephen: I mean, they are metal sheets, which is pretty bad, but yeah, even so.
+[1252.02] UNKNOWN: But I wasn&#x27;t over anything when I failed safe.
+[1254.02] Koel: Look, I wasn&#x27;t even over anything.
+[1255.02] Koel: Oh, yeah.
+[1256.02] Tony: The link quality only cuts out when you&#x27;re hitting the ground.
+[1260.02] UNKNOWN: Yeah, the link quality is still fine.
+[1262.02] Koel: Like if you...
+[1263.02] Koel: 99%.
+[1264.02] Koel: Yeah.
+[1265.02] Koel: So what was it?
+[1266.02] Koel: Yeah, I don&#x27;t know, but...
+[1268.02] Koel: Weird.
+[1269.02] Koel: Yeah.
+[1270.02] Tony: I don&#x27;t think it was cross floor or something.
+[1272.02] Tony: It looked like...
+[1273.02] Tony: Could have been a prop.
+[1274.02] UNKNOWN: Something else.
+[1275.02] Tony: It&#x27;s me.
+[1276.02] Tony: No, he flew it back down.
+[1278.02] UNKNOWN: Yeah, yeah.
+[1279.02] Koel: Obviously I had to walk closer and then I was able to rearm and get it back down.
+[1284.02] Koel: But yeah, it was weird.
+[1288.02] Curry: I did like the fact that it failed safe to giving you a link quality of 99%.
+[1292.02] Curry: And then when you&#x27;re on the roof, it&#x27;s like zero.
+[1295.02] Curry: I told you I was ill.
+[1298.02] Koel: But the weird thing is I haven&#x27;t gotten any fail safes since then.
+[1302.02] UNKNOWN: Well, you&#x27;ve updated now.
+[1305.02] Koel: Well, yeah, but it&#x27;s just weird.
+[1308.02] Koel: I don&#x27;t know.
+[1309.02] Koel: A lot of metal there though.
+[1312.02] UNKNOWN: Yeah.
+[1313.02] UNKNOWN: Steve, how was your trip to Poland, your last video?
+[1320.02] UNKNOWN: I had a great trip.
+[1322.02] Kevin: I was visiting family.
+[1323.02] Kevin: My wife is from Poland.
+[1325.02] Kevin: And so we were visiting her parents and brothers and sisters, et cetera.
+[1329.02] Kevin: And we had a great time.
+[1331.02] Kevin: Got a little bit of a cold.
+[1332.02] Kevin: I don&#x27;t know.
+[1333.02] Kevin: Anytime I&#x27;m traveling internationally like that, just lack of sleep and exposure to germs
+[1338.02] Kevin: and all of that.
+[1339.02] Kevin: So I&#x27;ve got a bit of a cough and a horse right now.
+[1343.02] Kevin: Apologies.
+[1344.02] UNKNOWN: But we had a great time.
+[1346.02] UNKNOWN: It wasn&#x27;t any of the local liquor then.
+[1348.02] Stephen: You aren&#x27;t drinking like Beckerovka or something?
+[1351.02] UNKNOWN: No, no.
+[1352.02] Kevin: I didn&#x27;t do a whole lot of drinking.
+[1355.02] Stephen: It&#x27;s just over in Slovakia doing some snowboarding and they&#x27;ve got some fierce mountain liquor there.
+[1361.02] UNKNOWN: Funny herbal aperitifs and things, digestives.
+[1365.02] UNKNOWN: Oh, yeah.
+[1367.02] UNKNOWN: That sounds terrifying.
+[1370.02] UNKNOWN: I wanted to ask you, in your equipment, Kevin, I noticed you were doing some videos about using Juroflow
+[1377.02] Curry: to make the GGI Action 2 look good, which looks interesting, but it&#x27;s a very long process about,
+[1383.02] Curry: especially when you&#x27;re using BlackBox to get your Juro data.
+[1386.02] Curry: Are you using that instead of a GoPro?
+[1388.02] Curry: And if so, why?
+[1391.02] UNKNOWN: Yes, I am using the Action 2 instead of a GoPro.
+[1395.02] Kevin: And the reason is 100 grams lighter.
+[1399.02] Kevin: So that&#x27;s what it all boils down to, is going back to a lighter weight setup that&#x27;s more nimble
+[1405.02] Kevin: and more fun to fly aggressively for proximity FPV.
+[1410.02] Kevin: Yeah, so I originally moved to the Action 2, was super excited about it,
+[1419.02] UNKNOWN: but then slowly noticed issues with the rock steady stabilization.
+[1423.02] Kevin: It just does like a little jitter here and there that was getting on my nerves like crazy.
+[1430.02] UNKNOWN: So I started experimenting with Jiroflow, and if you need something stabilized, it is a viable option.
+[1438.02] Kevin: It&#x27;s just the workflow is not ideal.
+[1442.02] Kevin: If they support the Jirodata from the Action 2, that&#x27;ll be a much more viable option.
+[1450.02] UNKNOWN: But as of right now, like the last video I put out, I didn&#x27;t have any stabilization.
+[1455.02] Kevin: I just turned everything off and went for it.
+[1457.02] UNKNOWN: Looks like a pretty complex workflow, having to get those sync points.
+[1461.02] Stephen: And it&#x27;ll tell you, well, I think this synced about here and you have to validate and adjust.
+[1467.02] Stephen: Honestly, once I figured out how to use it, like knowing the general offset,
+[1473.02] Kevin: like you go to the point in the video where your motor&#x27;s armed and you&#x27;re like, okay, that&#x27;s 20 seconds.
+[1478.02] UNKNOWN: Drop in the 20 second offset and then hit sync.
+[1481.02] UNKNOWN: It is pretty straightforward.
+[1484.02] Kevin: I haven&#x27;t actually had to adjust a sync yet in using it, and I&#x27;ve done maybe a dozen flights or so.
+[1492.02] UNKNOWN: So now you&#x27;re making sure all of your flight controllers have a microSD for black box as well, then?
+[1497.02] Stephen: Well, that&#x27;s the downside because like the axis flying stack, that thing has like an eight megabyte flash.
+[1505.02] UNKNOWN: The Talon H7 has a 16 megabyte flash.
+[1508.02] Kevin: The only thing that I have that takes an SD card is the H743.
+[1513.02] UNKNOWN: So it&#x27;s just not really.
+[1515.02] UNKNOWN: And plus trying to keep track of which black box is which video.
+[1522.02] UNKNOWN: God, it&#x27;s just going to be like I have another video from Poland that I have to edit and I did do some gyro flow stuff in that.
+[1531.02] UNKNOWN: And the like I had to say, you know, like this set up first flight of the day.
+[1539.02] UNKNOWN: Go. And then you got to do a little bit of remembering like, oh, I armed it to check that everything was working beforehand or oh, I had a turtle mode here.
+[1548.02] UNKNOWN: Yeah. So if you&#x27;re flying a bunch of packs, like after every pack, are you getting your phone out and plugging in the phone and copying the black box data off?
+[1556.02] UNKNOWN: I&#x27;m not going to that level.
+[1558.02] Kevin: I just did like a couple of flights to do the gyro flow on that day.
+[1563.02] Kevin: And that&#x27;s the only other time that I&#x27;ve tried to use gyro flow other than the test data that I posted the video from.
+[1569.02] UNKNOWN: Got to say that the unstabilized footage looks pretty good.
+[1572.02] Curry: I suppose it&#x27;s like if you&#x27;re looking for something really, really smooth and nice, you do it.
+[1577.02] Curry: But for a sort of general fun flying freestyle stuff, it&#x27;s looking pretty good.
+[1585.02] Stephen: I&#x27;ve got fail safe in the chat and he posted a couple of bits of that with no stabilization.
+[1589.02] Stephen: And yeah, Chris, I think honestly, if you are going for stabilized footage, the GoPro just makes a ton more sense, especially the hero 10 because you&#x27;ve got that 5.7 K so it can crop in for stabilization and still have like a true 4K output.
+[1607.02] Kevin: The action too, it&#x27;s more of just like a novelty.
+[1611.02] Kevin: Like I was curious, hey, what can I get out of this system?
+[1615.02] UNKNOWN: And I may still do like a video where I do like a horizon lock or the, you know, the adjustable zoom where it like totally rips off like the whole real steady look.
+[1626.02] Kevin: But yeah, it&#x27;s just that&#x27;s not something that I do.
+[1629.02] Kevin: Typically, I was just curious what was possible with the tech.
+[1633.02] Kevin: I like trying new things and geeking out on things.
+[1636.02] UNKNOWN: Like I was saying before we even got started, I&#x27;ve been using the A74 and that has gyro data embedded in the video files and there&#x27;s software from Sony that does essentially the same thing that real steady and gyro flow does.
+[1649.02] UNKNOWN: It&#x27;s called Catalyst Browse and I&#x27;ve been running all of my vlog footage through that lately and bcam.
+[1657.02] Kevin: It&#x27;d be nice if we get to the point where all cameras that have a gyro have just one app so you don&#x27;t have to learn how all these different confusing apps work.
+[1666.02] Stephen: You just like, yeah, take my file, take my gyro data, put it into gyro flow.
+[1670.02] Stephen: As a matter of fact, it&#x27;s Runcam 5, Lauren, Gero, GoPro, Insta360, your action just goes in there and off you go. That&#x27;d be neat.
+[1679.02] UNKNOWN: I mean, they could always just do it in camera.
+[1681.02] Curry: I think gyro flow is really the only product.
+[1684.02] UNKNOWN: Yeah, no, I think gyro flow is like the best candidate for that because all the like real steady that&#x27;s owned by GoPro.
+[1692.02] UNKNOWN: DJI is probably going to put out their own thing.
+[1694.02] Kevin: Catalyst Browse is a Sony piece of software.
+[1696.02] Kevin: So all of these others are, you know, trying to do this proprietary closed box thing, whereas gyro flow has the potential to do like all the things.
+[1707.02] Kevin: But it&#x27;s going to be a more difficult workflow because you&#x27;re going to have like a lens profile, et cetera.
+[1712.02] UNKNOWN: So, yeah, I don&#x27;t know.
+[1714.02] UNKNOWN: There&#x27;s a ton of lens profiles out there, though.
+[1716.02] Stephen: So once you figured out which ones you need, it&#x27;s too bad.
+[1721.02] UNKNOWN: And you can make your own. You can make your own.
+[1724.02] UNKNOWN: It&#x27;s going to test card and film it.
+[1727.02] UNKNOWN: Yeah. Yeah, I just just love a GoPro on and go for sure with everything else.
+[1734.02] UNKNOWN: It&#x27;s nice to be able to tweak it a bit afterwards because you can like say, oh, how smooth do I want to make it?
+[1739.02] Stephen: Do I want to go for that real cine feel or just take out some of the jello bumps?
+[1743.02] UNKNOWN: I mean, on a GoPro 10, you can film it with hypersmooth and then you can still go and use gyro flow if you want to.
+[1750.02] Curry: Although a GoPro 10, it&#x27;s like it&#x27;s hurting my arm just holding it in the air, let alone putting on a quad.
+[1755.02] Curry: It&#x27;s so heavy. It&#x27;s like I&#x27;d have to get new motors and stuff to fly with it.
+[1760.02] UNKNOWN: This episode was recorded in front of a live online audience, downloaded and edited to make sense when it played audio only,
+[1767.02] Frank: censored to please the iTunes people hosted on the Internet,
+[1770.02] Frank: forwarded through to your podcast provider, downloaded, playing on your device and is now playing in your ears.
+[1775.02] Frank: All thanks to our Patreons. Consider joining them and you&#x27;ll also get other online benefits.
+[1781.02] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
+[1785.02] Frank: Back to fail safe&#x27;s question here.
+[1787.02] Stephen: He was mentioning that he uses the action to and there&#x27;s a lack of dynamic range.
+[1793.02] Stephen: You kind of lose stuff in the shadows a bit.
+[1795.02] Stephen: What&#x27;s your take? Yeah, you 100 percent do it depending on the lighting environment.
+[1803.02] Kevin: It can be it can be acceptable or it can be pretty bad.
+[1808.02] Kevin: The what I have honestly been doing, I found that like really early on trying to color grade it using the flat profile that the shadows were just crushed.
+[1819.02] Kevin: And so I have mindset depending on the day set to plus point three to point seven EV exposure compensation to just bring up the shadows because I can bring it.
+[1834.02] Kevin: It will blow out the highlights, but that&#x27;s usually like the sun.
+[1837.02] Kevin: It&#x27;s going to be blown out anyways.
+[1840.02] UNKNOWN: And so, yeah, I find that if I do just use a little bit of exposure compensation to bring the shadows up, it&#x27;s a little bit more workable, but it is.
+[1848.02] Kevin: It&#x27;s an issue.
+[1850.02] UNKNOWN: Do you think it&#x27;s something they&#x27;re going to change or is that just what it&#x27;s going to be stuck with?
+[1854.02] Stephen: I think that&#x27;s just what it is.
+[1856.02] Kevin: For me, I&#x27;m still holding out hope that there may be another session style form factor camera.
+[1864.02] Kevin: That&#x27;s what everyone&#x27;s telling us.
+[1865.02] Kevin: The room is going around.
+[1866.02] Stephen: They&#x27;re going to get this here are 10 guts and now it&#x27;s been out there a while.
+[1870.02] Stephen: Refine it and squeeze it into a session body and hope so.
+[1875.02] Stephen: I don&#x27;t know exactly what the guts will be.
+[1877.02] Kevin: But you know, for my two cents, I vote with my dollars.
+[1881.02] Kevin: And if I just keep buying the GoPro 10, then you&#x27;re telling GoPro, hey, this is fine.
+[1886.02] Kevin: We will make it work.
+[1887.02] Kevin: This is fine.
+[1888.02] Kevin: If you don&#x27;t start buying something else, then they&#x27;re not going to get the message.
+[1892.02] Kevin: So that&#x27;s why I&#x27;m switching to the action to you.
+[1895.02] Kevin: It&#x27;s just like a, hey, please fix this message.
+[1898.02] Stephen: So it was a wallet.
+[1900.02] UNKNOWN: Yeah.
+[1901.02] Jack: How are you how are you finding like, you know, moving the data off the external SD card?
+[1908.4] UNKNOWN: Well, I run two cameras.
+[1911.4] Kevin: And then because the battery life, the battery life won&#x27;t make it through a full day of flying,
+[1918.4] UNKNOWN: nor will the internal storage.
+[1920.4] UNKNOWN: So I fly two or three batteries and then I take the camera off the quad,
+[1925.4] Kevin: put it on the little second screen and start dumping footage to the SD card.
+[1930.4] UNKNOWN: And then depending on how long of a fly day,
+[1933.4] Kevin: I may put that on a battery bank to keep the base charged as well.
+[1938.4] UNKNOWN: And just keep dumping footage as I go.
+[1942.4] Kevin: Just save you one day.
+[1944.4] Tony: That could save you one day.
+[1946.4] UNKNOWN: How many times have we all done a smart way to go and then crashed or lost.
+[1954.4] Tony: Well, this is my solution for GoPro is I just have a bunch of SD cards.
+[1960.4] Kevin: This lives in my wallet.
+[1962.4] Kevin: And then when, you know, once I fill up an SD card, I swap it in.
+[1968.4] UNKNOWN: That&#x27;s what I used to do with the GoPros.
+[1970.4] Kevin: Now with the action twos, I just have a large SD card.
+[1974.4] Kevin: But yeah, that&#x27;s going to I have broken SD cards.
+[1977.4] Kevin: I have smashed GoPros that then shorted out and fried SD cards.
+[1982.4] UNKNOWN: I have lost GoPros.
+[1984.4] Kevin: There is always an opportunity to lose the footage.
+[1987.4] UNKNOWN: So moving it off the camera that you&#x27;re flying around is not a bad idea.
+[1992.4] Koel: Yeah, the sooner, the better.
+[1993.4] Koel: Dump it and, you know, have it in the archives, basically.
+[1998.4] Koel: One is none.
+[1999.4] Stephen: You&#x27;ve got to copy that data.
+[2002.4] Stephen: So kind of where you started with this, you were saying, oh, it&#x27;s just too heavy.
+[2006.4] Stephen: The GoPro is getting too heavy.
+[2007.4] Stephen: Oh, it&#x27;s the action, too.
+[2009.4] Stephen: You&#x27;re not one of these guys that&#x27;s going up to like 25 millimeter motors and just getting bigger and bigger.
+[2014.4] Stephen: You&#x27;re trying to stay on the lighter quads and just deal with cameras.
+[2019.4] UNKNOWN: Yes, because the problem with going heavier, like when I designed the Xover Stingy V2,
+[2025.4] Kevin: we were running hero sessions and we were running 4S batteries.
+[2030.4] Kevin: And then, you know, we got to the 6 and the 7 and the 8 and the cameras were getting heavier and heavier.
+[2036.4] Kevin: We&#x27;ve moved to the 6S batteries that were heavier.
+[2038.4] Kevin: And so my builds when the Stingy came out were like 600 grams, 625 grams.
+[2045.4] Kevin: My builds at the end of me running the Stingy with the 6S and using the hero 8, I was like 750 grams.
+[2056.4] UNKNOWN: And you know what?
+[2057.4] Kevin: I was breaking a ton more carbon fiber because the frame just wasn&#x27;t designed around that.
+[2061.4] Kevin: So you&#x27;re in this feedback loop, like, okay, well, I can&#x27;t fly as aggressively.
+[2066.4] Kevin: So bigger motors.
+[2067.4] Kevin: Well, now the whole thing&#x27;s heavier.
+[2068.4] UNKNOWN: And now I&#x27;m breaking more carbon fiber.
+[2070.4] Kevin: So let&#x27;s thicken everything up.
+[2071.4] Kevin: And now it&#x27;s heavier again.
+[2072.4] Kevin: Well, now I need more power.
+[2074.4] Kevin: So let&#x27;s get more aggressive props.
+[2076.4] Kevin: Like, it&#x27;s a feedback loop and more is not always the answer.
+[2082.4] Stephen: You&#x27;re just chasing your tail.
+[2084.4] Stephen: You end up building like this 6-inch tank rather than a regular 5-inch freestyle quad.
+[2091.4] Kevin: So I just nixed all that and went back to, you know, I&#x27;m still running a fairly heavy
+[2097.4] Kevin: setup compared to where I was back in 2017 or whatever.
+[2102.4] Kevin: But the weight is that 6S battery for it.
+[2107.4] Kevin: And shedding 100 grams and having that same powertrain, the thing is just a monster.
+[2113.4] Kevin: Like, look at the pole in one pack that I put out.
+[2115.4] Kevin: It&#x27;s the acceleration in saying.
+[2120.4] UNKNOWN: So is that 100 grams, including like a battery removal mod on the GoPro?
+[2125.4] Stephen: Were you already doing that?
+[2128.4] UNKNOWN: No, 100 grams is like the weight difference of the Hero 10 versus the Action 2.
+[2134.4] UNKNOWN: Okay.
+[2135.4] Stephen: Did you try and run any of those little, like, 5-volt converters off the balance lead and all that?
+[2141.4] Stephen: Yeah, I have some of those, but I have never, I bought some and then never actually used it.
+[2150.4] UNKNOWN: Right.
+[2152.4] UNKNOWN: I&#x27;ve got some for my long-range stuff.
+[2155.4] Tony: I suppose if you&#x27;re freestyling really heavily, it&#x27;s just another wire that can get ripped out, isn&#x27;t it?
+[2162.71] UNKNOWN: That&#x27;s the thing is it&#x27;s just another failure point for the GoPro.
+[2166.71] Kevin: And it is going to break because you are going to crash.
+[2170.71] Kevin: You are going to tumble.
+[2171.71] Kevin: You are going to go flying into a tree and it&#x27;s going to get ripped out.
+[2175.71] Kevin: And that&#x27;s part of the reason I never actually used it.
+[2183.71] Kevin: I had it like with the intent of testing and then never did.
+[2187.71] UNKNOWN: Yeah, fair enough.
+[2191.06] UNKNOWN: And to be fair, like the Action 2 that I&#x27;ve had, I have not killed one yet.
+[2198.06] UNKNOWN: The protective lens has been smashed, but I have like plowed that thing in from the moon, upside down, like full power into the ground.
+[2207.06] Kevin: And I just cannot kill that camera.
+[2210.06] Kevin: I&#x27;m not saying it&#x27;s impossible.
+[2212.06] Kevin: Now you said it.
+[2213.06] Kevin: Now you said it the next time you fly, it&#x27;s just going to...
+[2220.06] Kevin: To be clear, the screen on it doesn&#x27;t work anymore.
+[2224.06] Kevin: But it comes with a second screen that you don&#x27;t ever fly with.
+[2227.06] Kevin: So, yeah.
+[2230.06] UNKNOWN: So you can just adjust settings on that second screen, put it on the quad, good to go.
+[2236.06] UNKNOWN: Yep.
+[2238.06] UNKNOWN: It&#x27;s good because when I first saw that, the immediate thing was that lens is just there.
+[2244.06] Curry: And it&#x27;s like if that&#x27;s going to break, it&#x27;s going to break.
+[2246.06] Curry: But just a basic sort of lens protector will stop it from being smashed.
+[2250.06] Curry: And it&#x27;s just the lens protector getting smashed.
+[2253.06] Kevin: I have a TPU, like 3D printed case, and if it hits face first on a flat surface, the TPU is going to hit first.
+[2261.06] Kevin: But if you go into a pole, there&#x27;s nothing to protect a GoPro lens if it goes straight into a pole either, you know, or a rock or any number of things.
+[2272.06] UNKNOWN: It&#x27;s not going to be invincible forever.
+[2276.34] Stephen: Very few cameras.
+[2277.34] Stephen: With Stranda, full throttle power loop.
+[2279.34] Stephen: It&#x27;s just not going to happen.
+[2280.34] Stephen: Yeah.
+[2282.34] UNKNOWN: That&#x27;s why I like still running the seven because you can literally just break the lens off and put a new one on, 12 quid.
+[2291.34] Tony: Here&#x27;s the issue I have with the seven.
+[2293.34] Tony: I was a bigger fan of the eight than the seven because with the seven, the little twist on thing would always come off.
+[2301.34] Kevin: And then there was no rim around the lens.
+[2304.34] Kevin: And so once that thing popped off, if you don&#x27;t have spares, it will hit the ground.
+[2309.34] Kevin: It will scratch the lens and then you&#x27;re done.
+[2312.34] Kevin: Whereas with the eight, if I break the lens protector, I just smash out the glass and I still have like a metal or plastic frame that protects it from skidding when I hit the ground.
+[2321.34] Kevin: Now, there&#x27;s an argument to be made that like, oh, you just buy a bunch of these like $12 things.
+[2326.34] Kevin: But it&#x27;s like, I think those are $12.
+[2329.34] Kevin: I could be wrong.
+[2330.34] Kevin: It&#x27;s been a minute.
+[2331.34] Kevin: But that $12 versus, you know, 40 or sometimes even free for us in the state to go to Best Buy and be like, hey, my GoPro is broken and get a new one.
+[2341.34] Kevin: Like, I&#x27;d rather just go get a new one.
+[2343.34] UNKNOWN: Yeah.
+[2344.34] UNKNOWN: We don&#x27;t have that luxury here unless we do it ourselves.
+[2347.34] Tony: Yeah.
+[2348.34] Kevin: Sorry.
+[2350.34] Stephen: I know.
+[2351.34] Stephen: I have been talking about environmental regulations actually resulted in camera manufacturers making something that was serviceable and user repairable rather than just using glue to put all the parts on.
+[2361.34] Stephen: They actually went out there and acknowledged like, hey, it&#x27;s designed for action sports.
+[2365.34] Stephen: Maybe we want to make it repairable.
+[2368.34] UNKNOWN: That&#x27;d be nice to see.
+[2371.34] Jack: The thing that I&#x27;ve got like I run a GoPro Hero 7.
+[2376.34] Jack: But a lot of the time I crash so hard that the internal lens smashes light out and moves and then I&#x27;m out of focus.
+[2385.34] UNKNOWN: I don&#x27;t know whether anyone else.
+[2388.34] Jack: Yeah.
+[2389.34] Jack: I&#x27;ve done two now.
+[2391.34] Jack: It&#x27;s a nightmare.
+[2393.34] Jack: I had that issue with the 7 and the 8.
+[2397.34] UNKNOWN: Yeah.
+[2398.34] Jack: Oh, man.
+[2399.34] UNKNOWN: Yeah.
+[2400.34] Jack: Can I like sort of bring you back to the sort of timeline?
+[2408.34] Jack: Because say like the end of Rotoriah, that finished.
+[2413.34] Jack: You&#x27;re flying with the guys in Atlanta.
+[2415.34] Jack: You&#x27;ve done some stuff with cricket.
+[2417.34] Jack: Because you stopped being a pilot.
+[2422.34] Jack: Is that right?
+[2423.34] Jack: And commercial flying.
+[2426.34] Jack: Can you just fill us in on your timeline?
+[2429.34] Jack: Because like you came back about a year ago, didn&#x27;t you, to YouTube and then started doing the hops and props and popcorn.
+[2438.34] UNKNOWN: Yeah.
+[2439.34] Kevin: So there was, you know, I left the airline world to work for Rotoriah.
+[2446.34] Kevin: We tried to make a run of quad camp, but like that are different training aspects, which never really made a profit.
+[2455.34] Kevin: And so that opportunity came to an end.
+[2458.34] Kevin: And then I was just full time with, you know, YouTube and travel on my own for a period of time.
+[2470.34] UNKNOWN: And as that like that was stressful, just trying to, you know, what&#x27;s next?
+[2478.65] Kevin: So this product, oh, this, you know, different projects.
+[2482.65] UNKNOWN: And then I basically was decided that it just wasn&#x27;t for me and went and got like a typical nine to five whole thing at the same time that I met, like, got in a relationship with my wife, got married, had a kid, you know.
+[2500.65] Kevin: Congratulations.
+[2501.65] Kevin: Like all of the life changes all at once, bought a house.
+[2506.65] UNKNOWN: And, you know, so now, you know, life is starting to settle back down a little bit and have a bit more of a routine.
+[2515.65] Kevin: The baby isn&#x27;t like just a itty bitty newborn anymore and getting back into FPV content creation as a hobby.
+[2527.65] UNKNOWN: Do you find it a bit more chill to just have it as a hobby instead of trying to trying to have to make a living from doing that?
+[2535.65] UNKNOWN: Well, that&#x27;s yes, definitely.
+[2538.65] Kevin: It&#x27;s less stressful.
+[2540.65] Kevin: However, I am not good at doing things.
+[2544.65] Kevin: Chill.
+[2546.65] Kevin: I can&#x27;t help but like gamify the whole thing and like look at the metrics and what type of content do I want to do and like plotting out and I want to do this video.
+[2559.65] Kevin: I want to do that video. I want to test this thing.
+[2560.65] Kevin: I want to talk about this thing.
+[2562.65] UNKNOWN: So I tend to just like die like I&#x27;m 80 B and I will go like full fixation deep dive on it real quick.
+[2572.65] UNKNOWN: Is it still fun when it&#x27;s a job or is it more fun when it&#x27;s a hobby?
+[2577.65] UNKNOWN: More fun when it&#x27;s a hobby.
+[2579.65] UNKNOWN: I did notice a trend.
+[2580.65] Stephen: A lot of people a while ago were talking about how trying to manage a YouTube channel and kind of turn it into a business was just becoming a pretty tough situation.
+[2589.65] Stephen: Pretty tough situation to be in.
+[2591.65] Stephen: Wonder if you found that.
+[2594.65] UNKNOWN: I mean, personally, for me, there was.
+[2597.65] Kevin: FPV YouTube is a weird space to be in a lot of the things that youtubers talk about don&#x27;t really apply because it&#x27;s not like it&#x27;s it&#x27;s a passing hobby.
+[2613.65] Kevin: So many people get into it as a hobby and get out of it.
+[2616.65] UNKNOWN: So like trying to meet the metrics of views as a percentage of your subscribers is just like out the door because a huge chunk of my subscribers.
+[2626.65] Kevin: I guarantee you do not fly FPV anymore.
+[2629.65] Kevin: This was a passing hobby.
+[2631.65] Kevin: They picked it up for a while.
+[2632.65] Kevin: They either got really into it or just kind of thought about buying a drone even and now they&#x27;ve moved on.
+[2638.65] UNKNOWN: So when I wasn&#x27;t making content regularly, if I put out a video and it was like the only thing I did for two months, the only thing I would see is a loss of subscribers because it was just like a notification go into a bunch of people that don&#x27;t do FPV anymore.
+[2651.65] Kevin: And they&#x27;re like, I forgot.
+[2653.65] Kevin: I don&#x27;t even want to follow that guy anymore.
+[2655.65] UNKNOWN: But now that I&#x27;m making content more regularly, like I see, you know, increases in subscribers, increases in viewer count because, you know, the YouTube algorithms are putting that that content in front of more people who may have gotten into FPV since I was active.
+[2673.65] Kevin: You know what I mean?
+[2675.65] Stephen: Yeah. So a complex situation to manage.
+[2677.65] Stephen: And it&#x27;s not the same as being someone who&#x27;s, I don&#x27;t know, doing something for kids or cookery or something that&#x27;s more widely applicable.
+[2686.65] Stephen: It&#x27;s a totally different game.
+[2687.65] Stephen: Yeah. Yeah.
+[2688.65] UNKNOWN: Yeah. But it&#x27;s it is a different game.
+[2691.65] Kevin: But at the same time, like it&#x27;s a more tightly knit community, I would say, you know, if it was up to me, I would definitely choose to be in FPV, not only because FPV is something that I love, but because.
+[2704.65] Kevin: It is such a small community.
+[2705.65] Kevin: Like I have been interacting with the same people on YouTube, commenting, et cetera, for years now.
+[2711.65] Kevin: And, you know, go to different events and see them meet in person and hang out and fly.
+[2717.65] Kevin: And like it&#x27;s an awesome community to be a part of.
+[2722.65] UNKNOWN: Indeed. I&#x27;ve made lots of friends.
+[2727.65] UNKNOWN: It&#x27;s crazy how much it all revolves around YouTube, though.
+[2731.65] Stephen: That is the crux of it, isn&#x27;t it?
+[2732.65] Stephen: For a lot of it, there&#x27;s a little bit of Instagram stuff, mainly YouTube, TikTok these days.
+[2739.65] Kevin: I hear there&#x27;s like TikTok famous FPV pilots now.
+[2744.65] UNKNOWN: No way.
+[2746.65] UNKNOWN: We have that. It&#x27;s Ken FPV.
+[2747.65] Koel: He&#x27;s one of those guys, I think.
+[2749.65] Koel: Yeah, that Eric Konaisti was talking about last week.
+[2754.65] Koel: I&#x27;m too much of a boomer to go on those things.
+[2758.65] Jack: I thought it was just for tweens who want to share dance routines.
+[2764.65] Stephen: Yeah, Tony flossing.
+[2767.65] Jack: Can you imagine it?
+[2771.65] UNKNOWN: I mean, I feel like TikTok nowadays is more for like it could be anybody who wants to promote something because there&#x27;s so many users on it.
+[2778.65] Koel: But it&#x27;s all about dialing it into, you know, working for you, I guess.
+[2783.65] Koel: But yeah, it&#x27;s definitely weird for some people.
+[2787.65] UNKNOWN: Different platforms have different users and those different users have different expectations as well.
+[2792.65] Stephen: Like I&#x27;d never go onto Instagram expecting to watch any kind of tutorial or informational content.
+[2799.65] Stephen: It was just like brief distraction.
+[2801.65] Stephen: Whereas on YouTube, you can do something that&#x27;s longer form.
+[2804.65] Stephen: I have no idea what TikTok&#x27;s like because personally, I just bounced off it.
+[2808.65] Stephen: Probably showed me it and I&#x27;ve been like, OK, fine.
+[2813.65] UNKNOWN: Yeah, not my cup of tea.
+[2816.65] Tony: I think that&#x27;s probably why FPV is so focused on YouTube is because there&#x27;s such a steep learning curve.
+[2824.65] Kevin: You need tutorials.
+[2825.65] Kevin: You need to learn how like these radios work and all this different open source software like what connects to what if you need tutorials.
+[2837.65] Kevin: So everybody has to go and find that info somewhere.
+[2840.65] Kevin: There&#x27;s also not, you know, RC groups anymore.
+[2846.09] UNKNOWN: Sorry for interrupting.
+[2847.09] Stephen: I was going to say there&#x27;s a few top flight pilots who can put out like a five second like eyeball grabbing routine.
+[2853.09] Stephen: But there&#x27;s a lot of people who are doing content that just naturally is longer than that.
+[2858.09] Stephen: It&#x27;s kind of a sit down and watch experience.
+[2861.09] UNKNOWN: I was going to say you were testing out the guessing the control link speed with the Express LRS with Joshua Bardwell.
+[2872.09] Jack: And I wondered if did you move over to Express LRS?
+[2877.09] Jack: So I have moved over to Express LRS, but we were using the ghost system in that test.
+[2884.34] Kevin: But yeah, OK.
+[2887.34] UNKNOWN: Yeah.
+[2888.34] Jack: Did you? Yeah.
+[2889.34] Jack: How well did you get guess it?
+[2891.34] Jack: I think you guys done pretty well.
+[2894.34] UNKNOWN: We were both 50 50 no better than chance.
+[2897.34] UNKNOWN: Oh, wow.
+[2899.34] UNKNOWN: That&#x27;s funny.
+[2903.61] UNKNOWN: Do you think if you&#x27;ve got a couple of teenagers in, they have noticed the difference, you know?
+[2910.61] UNKNOWN: I think the top race pilots is what I&#x27;m saying.
+[2916.61] UNKNOWN: If you did several flights, I think that if you gave me like a 500 Hertz set up and I got used to flying it and then you were like, all right, on one random pack today, I&#x27;m going to put it at a lower frequency.
+[2933.27] UNKNOWN: Tell me when it is.
+[2935.27] Kevin: I think that that would be discernible going like back and forth, like, which is it?
+[2939.27] Kevin: And I didn&#x27;t know what was fast out the gate.
+[2943.27] UNKNOWN: It&#x27;s kind of it&#x27;s so subjective.
+[2946.27] UNKNOWN: I don&#x27;t think that there&#x27;s a big enough difference to like say definitively this one&#x27;s the faster and this one&#x27;s the slow one.
+[2953.27] Kevin: But I think I could put my finger on something doesn&#x27;t feel right this time.
+[2958.27] UNKNOWN: I think also like people sense memory isn&#x27;t that great, like to be able to compare how this feels compared to how something else feels and hold that all in your head.
+[2970.27] UNKNOWN: And to go because like it&#x27;s a video and sort of magic of editing, it was like back to back.
+[2976.27] Kevin: But in reality, it&#x27;s like fly.
+[2978.27] Kevin: All right.
+[2979.27] Kevin: Now wait three minutes.
+[2980.27] Kevin: Yeah, batteries.
+[2981.27] Kevin: Exactly.
+[2982.27] Kevin: So you weren&#x27;t changing the middle of a flight.
+[2983.27] Kevin: You&#x27;re having to go again.
+[2985.27] Kevin: Yeah.
+[2986.27] UNKNOWN: Yeah.
+[2987.27] Stephen: So you&#x27;re flying an entire radio, not a whole pack, but like fly for till you make an assessment and land and hand the control over.
+[2996.27] Kevin: Then he punches a bunch of buttons, then power cycles the drone and then hand it back to you.
+[3001.27] Kevin: And like two minutes later, you&#x27;re flying again.
+[3004.27] Kevin: So like trying to remember that.
+[3005.27] Kevin: Yeah.
+[3006.27] Kevin: No.
+[3007.27] UNKNOWN: So you&#x27;ve got to hold on to that that picture for two minutes and then be like, all right.
+[3010.27] Stephen: And now.
+[3011.27] Stephen: Yeah.
+[3012.27] UNKNOWN: Yeah.
+[3013.27] UNKNOWN: Yeah.
+[3015.71] Stephen: How far do you think you&#x27;d have to take it until it was really obvious, like down to 25 hertz?
+[3020.71] Stephen: There&#x27;s going to be a point where you&#x27;re like, this feels like crap.
+[3022.71] Stephen: Surely.
+[3023.71] UNKNOWN: Yes.
+[3025.71] UNKNOWN: Definitely.
+[3026.71] Kevin: And I don&#x27;t know where that would be.
+[3029.71] UNKNOWN: It might be interesting to see how far you can go down down the signal speed before.
+[3035.71] UNKNOWN: You could repeat it with some some people who are, you know, like twitchy FPS gamer teenagers as well.
+[3043.71] Stephen: I have a feeling that the younger you get, the better your reflexes are.
+[3046.71] Stephen: No, no offense to us old guys.
+[3048.71] Stephen: We&#x27;ve all got a few years on us.
+[3049.71] Stephen: But a lot of these teenagers seem to be the ones that are saying, oh, yeah, you need a 120 hertz monitor.
+[3055.71] Stephen: You need 200 hertz monitor for these games.
+[3059.71] UNKNOWN: Yeah.
+[3061.71] UNKNOWN: Well, it&#x27;s like Linus Tech Tips doing the FPS shooter and seeing the delay reaction of, you know, like the mouse and the keyboard and then the refresh rate of the screen.
+[3077.71] Jack: I think there&#x27;s just so many factors in everything, really, especially like for you, Kevin, you&#x27;re flying DGI anyway, aren&#x27;t you?
+[3088.71] Jack: So, you know, that&#x27;s what&#x27;s the what is the delay on on that?
+[3093.71] Jack: It&#x27;s quite a bit.
+[3094.71] Jack: I think the minimal is still the minimum is 20 something more seconds.
+[3100.71] UNKNOWN: Yeah, that&#x27;s crazy.
+[3104.02] Jack: I can&#x27;t even tell the difference really between HQ and LQ on DJI.
+[3108.02] Stephen: Like I flick back and forth and eventually I just like whatever.
+[3113.02] Stephen: I don&#x27;t need low latency.
+[3114.02] Stephen: I&#x27;m not that good.
+[3116.02] UNKNOWN: Your brain like maps to it, you know, up to a certain level.
+[3122.02] Kevin: And honestly, flying DJI with Express LRS now is, you know, you have to keep in mind, it&#x27;s not about the latency of the control link or the latency of the video or like which one is the highest.
+[3137.02] Kevin: That&#x27;s not it.
+[3138.02] Kevin: It&#x27;s the latency of the entire system.
+[3140.02] Kevin: From the time I move my thumb, that has to go through the gimbal into open TX or ex TX and then into the Express LRS radio and then to the receiver and then out to the flight controller that has to run the PID loop that then has to decide to spend the motor faster, which then sends it to the ESC and you&#x27;ve got the delay there.
+[3161.02] Kevin: And then the ESC needs to spend the motor up, which may be a factor of like how big is the prop and is the prop motor spec to properly to one another that it can spin it up fast enough, which moves the aircraft.
+[3173.02] Kevin: Then the camera reads that, encodes that, sends that to the video transmitter, which then packetizes it, sends it to your goggles, which then breaks it up and reassembles it and provides it to your eyeballs.
+[3186.02] Kevin: So it&#x27;s the total time from when I move my stick till I see the drone move in the video that is really what matters.
+[3194.02] Kevin: And if you look at where we were with analog, where you had a camera that was, you know, 10 milliseconds of latency and crossfire, which was up to 30 milliseconds of latency back in the day, and then you compare that to going to Express LRS now, which is, you know, six milliseconds of latency and DJI, which is 30 milliseconds of latency.
+[3213.02] Kevin: The overall system latency is still about the same. So me running Express LRS and DJI is about the equivalent of me running crossfire and analog video back in the day.
+[3225.02] UNKNOWN: Hmm.
+[3226.02] UNKNOWN: That nice thing.
+[3228.02] Jack: The chain.
+[3240.02] Stephen: Yeah.
+[3241.02] UNKNOWN: Me and Tony are just the same.
+[3243.02] Stephen: You slice it up differently.
+[3244.02] Stephen: Crying and rocking back and forth in the corner.
+[3248.02] Jack: Back to the days of open pilot, don&#x27;t you just want to go back to the good old flight?
+[3263.02] Stephen: No, even before that.
+[3266.02] UNKNOWN: We&#x27;re going back.
+[3267.02] Tony: We&#x27;ve got to go back and fly our own stuff.
+[3270.02] Tony: Yeah.
+[3271.02] UNKNOWN: KK2, where you can see the configurator screen on the controller.
+[3277.02] Jack: No GUI.
+[3279.02] UNKNOWN: Me and Tony can&#x27;t even spell GUI.
+[3281.02] Jack: Oh, you.
+[3283.02] UNKNOWN: You had the fancy KK2 then.
+[3285.02] Kevin: You didn&#x27;t even have the one with just the screws.
+[3287.02] UNKNOWN: No, that was Currykins.
+[3289.02] Jack: Oh, my God, man.
+[3291.02] Jack: Yeah.
+[3292.02] Jack: We&#x27;ve gone full circle.
+[3295.02] Jack: Now that the beat of flight has sliders, you might as well just put those up.
+[3299.02] Jack: I bet there&#x27;s going to be a model and someone will put potentiometers on a flight controller now.
+[3303.02] Stephen: So you can just go and like.
+[3305.02] Stephen: Yeah.
+[3307.02] Stephen: Oh, my God.
+[3308.02] Kevin: I want it.
+[3309.02] Kevin: I want it right now.
+[3312.02] UNKNOWN: Steve, what was your first build?
+[3316.02] Jack: What was your first rig?
+[3317.02] Jack: Can you remember back?
+[3322.02] UNKNOWN: Yes.
+[3323.02] Kevin: The first thing I built was QAV 250 with the Naze 32 running base.
+[3332.02] UNKNOWN: Well, actually, by the time I got it, it was on clean flight.
+[3336.02] Kevin: But I did mess around with base flight while I was waiting because I ordered everything in the middle of Chinese New Year and it took forever.
+[3342.02] Kevin: Oh, yeah.
+[3343.02] Kevin: It was like 1806 motors, 3S with.
+[3347.02] Kevin: 1806.
+[3348.02] Kevin: 1806.
+[3349.02] Kevin: These were Simon.
+[3353.02] UNKNOWN: No, it wasn&#x27;t Simon K.
+[3355.02] Kevin: I don&#x27;t think.
+[3356.02] Kevin: But yeah, it was definitely by blade.
+[3358.02] UNKNOWN: Okay, I&#x27;ll be down in just a minute.
+[3361.02] Tony: Yeah.
+[3362.02] UNKNOWN: And the PZO 420 camera, that huge circuit board of a camera that I ran like RC fuel line to give myself.
+[3373.02] Kevin: Like if you don&#x27;t know, it was like a 30 by 30 board.
+[3376.02] Kevin: Yeah.
+[3377.02] Kevin: And if you wanted camera tilt, then on the four screws on the two top ones, you would put fuel lines to tilt it back.
+[3384.02] Kevin: You could get some camera tilt and you had to like file out the carbon fiber hole so that it would mount tilted.
+[3392.02] Kevin: Like, yeah.
+[3394.02] UNKNOWN: I don&#x27;t know what they&#x27;ve got these stars nowadays, did I?
+[3398.02] UNKNOWN: Oh, yeah.
+[3400.02] UNKNOWN: Don&#x27;t get me talking about trying to flash BL Heli on an ESC back when you had to make your own adapter with Arduino.
+[3408.02] Kevin: And look at this.
+[3411.02] UNKNOWN: Do do do do do do do do do do do do do do do.
+[3419.02] Kevin: Before there was a run cam on the edges of the board off to fit in.
+[3428.02] Jack: Yeah.
+[3429.02] Jack: Yeah.
+[3430.02] UNKNOWN: Yeah.
+[3431.02] Jack: File them off.
+[3432.02] UNKNOWN: Yeah.
+[3433.02] UNKNOWN: Snap them.
+[3434.02] Jack: Snap them off.
+[3435.02] Jack: Snap them off.
+[3436.02] Jack: Yeah.
+[3437.02] UNKNOWN: The flyers.
+[3438.02] Tony: We better let you go.
+[3439.02] Tony: Kevin.
+[3440.02] Tony: I see someone keeps saying.
+[3441.02] Tony: Yeah.
+[3442.02] Tony: Yeah.
+[3443.02] Tony: Yeah.
+[3444.02] UNKNOWN: All right.
+[3446.02] Jack: Let&#x27;s wrap it up.
+[3448.02] Jack: Let&#x27;s do an outro.
+[3449.02] Jack: You&#x27;ve been listening to let thrown out.
+[3452.02] Jack: Thank you for showing up.
+[3455.02] Jack: It shows live every Thursday 8 p.m. on YouTube.
+[3460.02] Jack: So come and hang out if you&#x27;re an audio listener on the podcast.
+[3463.02] Jack: We have got a patron as well.
+[3465.02] Jack: We&#x27;re supported by those lovely people.
+[3467.02] Jack: So you get an unbiased opinion.
+[3471.02] Jack: We&#x27;re not shilling for other people.
+[3474.02] Jack: So we can say stuff like Tracer&#x27;s crap and ghost needs lure and stuff like that.
+[3484.02] Jack: Express LRS is not as good as open the LRS.
+[3490.02] Jack: Oh.
+[3491.02] Jack: Stephen Twitch then.
+[3492.02] Stephen: Everyone should be using F R Sky is the best.
+[3495.02] Jack: Yeah.
+[3496.02] Jack: D4 R2 baby.
+[3497.02] Jack: D4 R2.
+[3498.02] Jack: Here we go.
+[3500.02] Kevin: Yeah.
+[3501.02] Jack: I thought you just released a new radio running F R Sky.
+[3506.02] Kevin: What was that?
+[3507.02] Kevin: Oh my God.
+[3509.02] Jack: Kill it with fire.
+[3511.02] UNKNOWN: You&#x27;ve been joined by everyone.
+[3514.02] UNKNOWN: Yeah.
+[3515.02] Jack: You&#x27;ve been joined by everyone&#x27;s favorite man with a mustache.
+[3518.02] Jack: Stephen.
+[3519.02] Jack: Cheers.
+[3520.02] UNKNOWN: Thanks everyone.
+[3521.02] Jack: The man who does the socials and thumbnails.
+[3523.02] Jack: Cole.
+[3524.02] UNKNOWN: See you.
+[3525.02] UNKNOWN: My darling wife, Tony.
+[3528.02] UNKNOWN: Bye.
+[3530.02] UNKNOWN: Curry kitten had to slip off.
+[3532.02] Jack: So he&#x27;s gone.
+[3533.02] Jack: All right.
+[3534.02] Jack: Bye.
+[3535.02] Jack: And if you like the channel, please like and subscribe.
+[3539.02] Jack: Curry kitchen.
+[3541.02] Jack: And we have been joined by our special guest.
+[3544.02] Jack: Kevin sing a song.
+[3546.02] UNKNOWN: Bye.
+[3547.02] UNKNOWN: I&#x27;ve been bright until I fly.
+[3549.02] Jack: Thank you.
+[3550.02] Jack: Good night.
+[3551.02] UNKNOWN: Bye.
+[3552.02] Kevin: Telemetry lost.
+</pre></body></html>

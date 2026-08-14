@@ -1,0 +1,1126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LDO Ep 0435—LDO 435</title></head>
+<body><pre>=== Let&#x27;s Drone Out — Episode 435 ===
+Title: LDO 435
+Recorded: 2023-12-28
+Hosts: Stephen &quot;Belrik&quot; Howell, Koel &quot;Koala&quot; Anderson, Andrew &quot;Frank&quot; Hyams, Jack &quot;Brightontillifly&quot; Nash
+Guest(s): (none recorded)
+Total audience: 1,148
+Platforms: YouTube (https://www.youtube.com/watch?v=EfsXMwJsECA); SoundCloud (http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/1703068284-letsdroneout-ldo-435.mp3)
+=====================================
+
+Subscribe to weekly edited episodes of Let’s Drone Out on your favorite podcast platform
+Help support LDO on Patreon: https://www.patreon.com/letsdroneout 
+Join our Discord: https://discord.com/invite/8hEVqkM
+Get our merch here: https://letsdroneout.com/shop  
+Email us at letsdroneout@gmail.com
+Follow us on Facebook: https://fb.com/letsdroneout
+
+[0.0] UNKNOWN: Hello and you&#x27;re listening to Let&#x27;s Drone Out and special thank you to our lovely patrons that helped donate so that we could pay the editor to remove the swear words and silly things we say. Massive thank you to.
+[14.0] Jack: Carlos Campos.
+[16.0] Jack: Art Faulkner.
+[18.0] Jack: Sam Dahmer.
+[20.0] Stephen: On with the show.
+[22.0] Koel: Let&#x27;s Drone Out.
+[52.26] Stephen: Hello and welcome to another episode of Let&#x27;s Drone Out.
+[56.26] Stephen: Episode 435, that awkward time between Christmas and New Year, brought to you by our overlord and master Frank.
+[65.26] Stephen: Good evening.
+[67.26] Stephen: And of course, our helpful long range Canadian, Cole.
+[72.26] Stephen: Howdy.
+[73.26] Stephen: And myself, Stephen, with a dumb mustache.
+[76.26] Stephen: With a slightly out of focus camera.
+[79.26] Stephen: Let me just let me just do that. We were just focusing on Kat before the show. So Kat got a focal.
+[86.26] Stephen: Yeah, I&#x27;ve I&#x27;ve been enjoying covered.
+[91.26] Stephen: The new seasonal craze that just keeps coming back.
+[95.26] Stephen: I think I&#x27;m just about out of the woods now.
+[97.26] Stephen: But my word, it was a long Christmas.
+[100.26] Stephen: It was a slug to get through.
+[102.26] UNKNOWN: What have you guys been up to?
+[104.26] Koel: Beautiful present. Yeah, I&#x27;m giving.
+[108.26] UNKNOWN: Yeah, I seem to be the only person I know who doesn&#x27;t have covered at the moment.
+[112.26] Frank: So I was hunkering down and avoiding everyone avoiding human contact.
+[117.26] UNKNOWN: That&#x27;s a very good plan.
+[120.26] Frank: I&#x27;ve been through that. I&#x27;ve done it before. I don&#x27;t want to do it again.
+[123.26] UNKNOWN: Probably should have done a bunch more of that before Christmas.
+[127.26] Stephen: A lot easier.
+[128.26] Stephen: I think I only went out once to meet some buddies in town for a beer and some chicken wings.
+[133.26] Stephen: And they must have got me then. I work from home normally.
+[137.26] UNKNOWN: So I got it.
+[140.26] Koel: Yeah, I&#x27;ve had it like three or four times now. It sucks.
+[143.26] Koel: Oh, my gosh. Yeah, that&#x27;s what happens when you work in a nightclub, I guess.
+[149.26] UNKNOWN: Yeah. Yeah. Yeah.
+[151.26] Koel: But I&#x27;m you know, knock on wood.
+[154.26] UNKNOWN: All good right now. So, yeah.
+[156.26] Koel: It&#x27;s it&#x27;s I guess it&#x27;s it&#x27;s weird. That&#x27;s a weird time of year, right?
+[159.26] Koel: It&#x27;s not really flying season in lots of parts of the world, especially UK, Canada.
+[164.26] Koel: And yeah, it&#x27;s it&#x27;s been just pissing down here for the last couple of days.
+[170.26] Koel: And I&#x27;m just like, OK, well, all my parts haven&#x27;t showed up yet.
+[174.26] Koel: So I guess that&#x27;s a good thing. Yeah.
+[177.26] Koel: It&#x27;s build weather for sure. Definitely build weather.
+[180.26] Frank: Yeah, there&#x27;s a few bits and pieces.
+[182.26] Stephen: I grabbed one of those speedy be wing controllers a while back and that arrived.
+[187.26] Stephen: Thanks. Under 30 pounds.
+[190.26] Stephen: 30 pounds shipped for an F405.
+[194.26] Stephen: Like it&#x27;s a dual board with the PDB included.
+[197.26] Stephen: And so far, it looks good.
+[200.26] Stephen: It&#x27;s got like Bluetooth support and everything.
+[202.26] Stephen: And I&#x27;ve never had working Bluetooth support.
+[204.26] Stephen: I&#x27;ve had a couple of off brand things with Bluetooth that never quite worked.
+[208.26] Stephen: But I&#x27;d be interested to try this out.
+[210.26] Stephen: And as you noticed in the northern hemisphere, it&#x27;s definitely not flying whether it&#x27;s a bit rough.
+[215.26] Stephen: But down under, they&#x27;re celebrating Christmases on the beach or out on the grill without grilling in mittens.
+[223.26] Stephen: You know, the peak of their summer.
+[225.26] Stephen: So a lot of people down there have been flying.
+[228.26] Stephen: And Betaflight has just pushed out the release candidate for four point five after a lot of testing into GPS and other features.
+[238.26] UNKNOWN: So that&#x27;s just dropped a couple of days ago.
+[241.26] Stephen: So things have been a little bit noisier than usual in Betaflight land, at least.
+[246.26] Koel: OK, so so what is the new and improved version?
+[250.26] Koel: What does it have exactly in there? Do you know that the big ones are stuff like support for that F435 chip,
+[258.26] Stephen: the artillery tech chip, which was incredibly good value.
+[263.26] Stephen: Apparently, if you are looking at wholesale prices, it costs less than an F411, which is just pretty amazing,
+[273.26] Stephen: because a lot of people have been stuck with F411 on these low end boards for a long, long time,
+[279.26] Stephen: because there&#x27;s not really enough room for manufacturers to get anything fancier in the price bracket that you&#x27;re looking at for your basic tiny whoop, the low, low end stuff.
+[291.26] Stephen: And it&#x27;s also really small, whereas the larger F7 chips were in larger packages.
+[298.26] Stephen: This is kind of like an advanced, highly efficient overclocked F405.
+[305.26] Stephen: So instead of 168 megahertz, it&#x27;s 288 megahertz.
+[309.26] Stephen: So that&#x27;s like a 50 to 60 percent overclock they managed.
+[315.26] Stephen: And they did it by obviously having newer process nodes that they&#x27;re building the chip on.
+[320.26] Stephen: Because when STMicroelectronics kicked out the F405, what, like 10 years ago or something,
+[327.26] UNKNOWN: they would have been using pretty contemporary chip technologies for that time 10 years ago.
+[332.26] Stephen: But artillery tech are building with much smaller transistors, smaller gates and everything.
+[338.26] Stephen: And that means that they can run this thing a lot faster, have less power usage,
+[343.26] Stephen: and that lets them run it faster.
+[345.26] Stephen: And I think it&#x27;s available in a bunch of different packages down to, I think it might go down to kind of similar package sizes to the F411.
+[357.26] Stephen: So it could be, it wouldn&#x27;t be a drop in replacement because it&#x27;s got different pin configuration,
+[362.26] UNKNOWN: but you could fit it on the same sort of board layout, an F411.
+[366.26] Stephen: So good for everyone, basically.
+[368.26] Stephen: And hopefully we can get rid of that F411 with only two UArts,
+[372.26] Stephen: which has just been a thorn in so many people&#x27;s sides for so long.
+[377.26] UNKNOWN: Oh, there&#x27;s some cool stuff with GPS as well.
+[381.26] Stephen: So Return to Home has been slowly being optimized for many releases now.
+[388.26] Stephen: But this is a substantial overhaul with the UBlocks code getting lots of attention
+[396.26] Stephen: and people slowly moving out the older NMEA units.
+[400.26] Stephen: So UBlocks is the kind of go-to chipset for GPS receivers.
+[405.26] Stephen: It gives you the best quality that people have been doubling down on using that,
+[409.26] Stephen: been looking at how to optimize the board rate, make it more reliable,
+[413.26] UNKNOWN: ensure that the flight controller isn&#x27;t spending more time working with GPS data than it has to,
+[420.26] Stephen: and kind of counter-intuitively, running a slower board rate is better,
+[425.26] Stephen: because when the flight controller doesn&#x27;t want to have to jump away from PID control
+[431.26] Stephen: to go and sort out the GPS data, it wants to kind of do it at its leisure.
+[438.26] Stephen: And if you have very fast board rate, then it fills up the buffer quite quickly
+[442.26] Stephen: and causes the flight controller to have to jump out and empty the buffer.
+[447.26] Stephen: So a slower board rate, so long as you don&#x27;t actually have that much data,
+[450.26] Stephen: transfer is better because you end up just filling the buffer more fully and slowly over time.
+[455.26] Stephen: And then the flight controller can get round to it once in a while,
+[458.26] Stephen: rather than just like slamming the buffer full of data and the flight controller having to drop out and go and do that.
+[466.26] UNKNOWN: So some task timing and scheduling stuff around that as well, obviously,
+[470.26] Stephen: with tweaks to the board rate and magnetometer support.
+[473.26] Stephen: So it&#x27;s not up there with some of the other, like, autopilot and iNav,
+[479.26] Stephen: in terms of, like, fully calibrating the MAG, but it probably supports MAGs now.
+[484.26] Stephen: So that&#x27;s useful to kind of add an additional data point.
+[488.26] Stephen: And you can take the GPS data in BlackBox Explorer and map it as well.
+[492.26] Stephen: So previously, it was quite hard to look at where you&#x27;ve been.
+[496.26] Stephen: You had to get, like, third-party apps.
+[498.26] Stephen: Now you can export GPX data from BlackBox Explorer.
+[502.26] Stephen: And so you can create a map of your flight directly from the BlackBox Explorer.
+[508.26] Stephen: Something I&#x27;ve been monkeying with and Curry as well has been the color font support.
+[514.26] Stephen: We would have typically just black and white with the analog OSD, right?
+[519.26] UNKNOWN: But in the way that the font information was actually conveyed to be rendered,
+[525.26] Stephen: there was the possibility to set a couple of flags.
+[528.26] UNKNOWN: And those were used to switch pages.
+[530.26] Stephen: In iNav, they always had two pages.
+[532.26] Stephen: Betaflight just stuck on one.
+[535.26] UNKNOWN: And what&#x27;s happened, instead of using the extra pages for extended data,
+[540.26] Stephen: Betaflight&#x27;s chosen to use the extended pages to indicate different colored fonts.
+[546.26] Stephen: So you just double up the first page, but make it green and then orange and then red.
+[552.26] Stephen: So now if you set an alert level for some data points,
+[556.26] Stephen: say ESC current or your milliamp hours used,
+[561.26] Stephen: when it hits that warning threshold, the numerals will turn first to orange and then to red.
+[567.26] Stephen: And messages will come up in orange or red.
+[571.26] UNKNOWN: So if you&#x27;ve got some really bad message like RX link loss instead of it being a white,
+[576.26] Stephen: it&#x27;ll flash up in red.
+[579.26] UNKNOWN: That&#x27;s some cool stuff.
+[581.26] UNKNOWN: Yeah, bits and pieces.
+[582.26] Stephen: There&#x27;s some animations for LEDs.
+[585.26] Stephen: There&#x27;s a rainbow effect that&#x27;s now added to the kind of blink effects
+[590.26] Stephen: and the kind of cyclone scanner effect they had before as well.
+[598.26] UNKNOWN: And they&#x27;ve made that bit more efficient on CPU.
+[602.26] UNKNOWN: Something I think that we talked about a bit before, but not much,
+[606.26] Stephen: was that when you do angle mode now,
+[609.26] Stephen: any time you do yaw, it&#x27;s yaw relative to the angle of the craft.
+[615.26] UNKNOWN: I think rather than, or it&#x27;s an earth act.
+[619.26] Stephen: They&#x27;ve changed the way that yaw orientates because it used to be that yaw,
+[624.26] Stephen: when you did a yaw move, it would like pull it out of alignment on the other axes.
+[629.26] Stephen: And then they snap back in.
+[631.26] Stephen: Yeah, yeah.
+[632.26] Stephen: So now it like does the yaw move in line with the other axes.
+[636.26] Stephen: So when you do a yaw, it doesn&#x27;t like first do a yaw and then snap back your pitch
+[641.26] Stephen: to where it was before.
+[642.26] Stephen: It actually keeps it kind of used.
+[644.26] Stephen: Yeah, keeps it.
+[645.26] Koel: Oh, okay.
+[646.26] UNKNOWN: Yeah.
+[647.26] Stephen: So there&#x27;s a whole bunch of bits and bobs.
+[649.26] Stephen: Obviously, as time goes on, it&#x27;s becoming more a case of tweaking,
+[652.26] Stephen: but yeah, there&#x27;s, oh, easy landing as well.
+[656.26] Stephen: So this actually produces air mode bouncing.
+[662.26] Stephen: So when you go into land, it&#x27;s going to not let the PID controller go nuts.
+[667.26] Stephen: Everyone&#x27;s done this, right?
+[668.26] Stephen: You come in and you&#x27;re like, you&#x27;ve had a beautiful smooth pack in your CineQuad
+[671.26] Stephen: and you like just touch down on some concrete and it goes, flips upside down.
+[676.26] Stephen: And you&#x27;re like, my camera lens.
+[680.26] Stephen: So there&#x27;s a special thing that like dials down the PID controller.
+[683.26] Stephen: So now when you go low throttle, air mode doesn&#x27;t try and like punch you sideways
+[689.26] Stephen: and flip the quad over.
+[691.26] Koel: That&#x27;s weird.
+[692.26] Koel: I&#x27;ve actually never had that happen to me before with like the, I mean,
+[695.26] Koel: I guess I don&#x27;t know if I run throttle up or idle up, I guess you could say.
+[699.26] Koel: So I don&#x27;t know if air mode is the same as that, but I never, I&#x27;ve seen it in
+[702.26] Koel: videos where people could come to land and they&#x27;re kind of like, you know,
+[704.26] Koel: bobbling on the ground a bit, but I&#x27;ve never had that happen to me before.
+[707.26] UNKNOWN: If it&#x27;s really highly tuned and you&#x27;ve got air mode enabled,
+[711.26] Stephen: then you&#x27;ve kind of, it would think that the ground touching it was like prop
+[716.26] Stephen: wash or something and it would try and fight against it and it would have
+[719.26] Stephen: enough authority to just completely flip the quad out.
+[722.26] Stephen: So yeah, this stops that happening.
+[725.26] Stephen: That&#x27;s cool.
+[727.26] Koel: So I know you&#x27;re talking about like the, the you blocks and the GPS
+[730.26] Koel: optimization stuff, right?
+[733.26] UNKNOWN: So, cause I was actually recently cause I&#x27;m doing my homework on GPS right now,
+[737.26] Koel: just getting everything working for my long range set up with kiss.
+[741.26] Koel: And I actually came across Oscar Lang&#x27;s website.
+[744.26] Koel: Actually at the start of this year,
+[745.26] Koel: he was talking about optimizing like GPS settings in you center or I guess
+[751.26] Koel: there&#x27;s probably different programs you can use, but yeah,
+[755.26] UNKNOWN: it looks like there&#x27;s a lot of stuff you can go in and change in that,
+[758.26] Koel: in that software and whatnot.
+[760.26] Koel: But then I was asking in the kiss discord,
+[762.26] Koel: I was talking to Alexander and basically he said like,
+[765.26] Koel: you don&#x27;t even really need to mess around with that.
+[767.26] Koel: Like it&#x27;ll like, at least this is maybe from the kiss side of things.
+[770.26] Koel: Like although you don&#x27;t need to, but if you want to make it fast,
+[774.26] Stephen: to lock on, or if you&#x27;re in some territories,
+[777.26] Stephen: a lot of the times GPS units can come configured to use,
+[781.26] Stephen: say North American satellites,
+[783.26] Stephen: but they won&#x27;t listen to the European ones.
+[785.26] Stephen: And so you used to have to go in and like use you center to,
+[790.26] Stephen: to set those and enable it these days,
+[794.26] Stephen: be to fly it and probably kiss as well.
+[796.26] Stephen: They run a GPS initialization routine that takes those common settings.
+[800.26] Stephen: Like let&#x27;s enable the ability to listen to all satellites.
+[803.26] Stephen: Let&#x27;s set the update rate to 10 Hertz.
+[806.26] Stephen: You know, let&#x27;s make it as sensitive as it can be
+[809.26] Stephen: and try and get as many satellites as quickly as possible
+[812.26] Stephen: and just turn on all these optimal settings.
+[814.26] Stephen: And so part of the work that beta flights been doing in previous releases
+[818.26] Stephen: and a little bit in this has been to take those commands
+[821.26] Stephen: instead of running them in you center.
+[823.26] Stephen: It just takes those commands and runs them when you boot the flight controller
+[826.26] Stephen: and fires them all at the GPS unit
+[828.26] Stephen: to make sure it&#x27;s properly configured each and every time.
+[831.26] UNKNOWN: Yeah, that&#x27;s cool.
+[832.26] Koel: Because like one of the things,
+[834.26] Koel: like you&#x27;re talking about the baud rate and stuff, right?
+[836.26] Koel: And like going through that article
+[838.26] Koel: that Oscar Lang was talking about at the start of this year,
+[841.26] Koel: because there&#x27;s auto bodding,
+[843.26] Koel: but then you can also set a custom baud rate, I guess, right?
+[846.26] Koel: And yeah, so if you,
+[849.26] Koel: some people are saying you want higher or something,
+[851.26] Koel: but then you were kind of saying you want lower, right?
+[854.26] Koel: So it&#x27;s within reason, like you don&#x27;t want typically,
+[858.26] Stephen: unless you&#x27;ve got an H seven, in which case,
+[860.26] Stephen: maybe you don&#x27;t want to go higher than fifty seven six hundred baud.
+[864.26] Stephen: Fifty seven six hundred is the default.
+[866.26] Stephen: And I was trying to do some experiments,
+[868.26] Stephen: then the weather became terrible.
+[870.26] Stephen: Because I think I&#x27;ve got a bunch of H sevens
+[872.26] Stephen: and I think I should run it higher
+[874.26] Stephen: just to screen through that GPS task as quickly as possible,
+[878.26] Stephen: because I think the H sevens got spare cycles.
+[881.26] Stephen: It&#x27;s got enough gas in the tank kind of thing, right?
+[885.26] Koel: Yeah, because there&#x27;s like an interplay between
+[888.26] Stephen: you either run a slower baud rate,
+[891.26] Stephen: in which case you have to maybe spend a little bit more overall time
+[896.26] Stephen: going back and grabbing data,
+[898.26] UNKNOWN: or you run a fast baud rate and you have less time on the UART,
+[902.26] Stephen: but I think it&#x27;s all hardware offloaded on the UART anyway.
+[906.26] Stephen: Yeah, you&#x27;ve got to have enough of a baud rate
+[909.26] Stephen: that the incoming satellite data can all fit on the wire, right?
+[913.26] Stephen: So it&#x27;s got to be fast enough that you&#x27;ve got the bandwidth
+[915.26] Stephen: to get all the satellite data through,
+[917.26] Stephen: but people are saying you can have like 20 to 30 SATs at 57, 600
+[922.26] Stephen: and you&#x27;re going to be okay.
+[924.26] Stephen: If you&#x27;re only doing really basic stuff,
+[927.26] Stephen: you can turn the speed down,
+[929.26] Stephen: but you need to reduce the update rate.
+[931.26] Stephen: So you&#x27;ve got to tell the GPS unit to not do 10 Hertz updates,
+[935.26] Stephen: but maybe go down to 5 Hertz or even 1 Hertz updates.
+[938.26] Stephen: And that will allow you to use a slower baud rate,
+[941.26] Stephen: which means there&#x27;s less room on the line for data,
+[945.26] Stephen: but so long as you also have less data to send, that&#x27;s okay.
+[949.26] Stephen: And that will cut the flight controller some slack.
+[952.26] Stephen: So if you do still have an F411
+[954.26] Stephen: and you absolutely want to use GPS to give you a speedo,
+[957.26] Stephen: or maybe just print out the coordinates on your radio.
+[960.26] Stephen: So if it ditches, you can walk over and find it.
+[965.26] UNKNOWN: You can do that, but you should lower the baud rate
+[970.26] Stephen: and be careful with it as well.
+[972.26] Stephen: Something else, just scrolling through some of the links here.
+[974.26] Stephen: I remember reading this PR, there&#x27;s something cool with GPS
+[977.26] Stephen: where you can do a GPS lap timer.
+[980.26] Stephen: So there&#x27;s this thing where you can, if you&#x27;re flying a circuit,
+[984.26] Stephen: say you set up a bunch of gates in a field
+[987.26] Stephen: and you&#x27;re trying to fly a circuit,
+[989.26] UNKNOWN: you can have a switch that tells the quad,
+[994.26] Stephen: this is the position of the start finish gate.
+[996.26] Stephen: And as you fly through the gate, you can hit it.
+[999.26] Stephen: And then every time you go through that gate,
+[1002.26] Stephen: it&#x27;s going to do like a lap timer reset,
+[1005.26] Stephen: and it&#x27;ll print out the lap times.
+[1009.26] Stephen: So you can just go and fly laps and keep an eye on
+[1012.26] UNKNOWN: what each lap is and sit on the Earth.
+[1015.26] Frank: That&#x27;s pretty snazzy.
+[1016.26] Frank: Yeah, that&#x27;s a pretty cool idea.
+[1018.26] UNKNOWN: Yeah, and for crossfire as well, there&#x27;s a CLI binding.
+[1022.26] Stephen: So if you put your crossfire receiver way inside the model
+[1025.26] Stephen: and you can&#x27;t reach the little button,
+[1027.26] UNKNOWN: if you ever need to rebind it,
+[1029.26] Stephen: there&#x27;s now someone managed to reverse engineer
+[1031.26] Stephen: the CRSF commands and find out this undocumented command.
+[1036.26] Stephen: And they did it, hopefully did a PR and lo and behold,
+[1039.26] Stephen: it triggers the crossfire receiver to go into binding mode.
+[1043.26] Stephen: So you no longer need to get like your selection of chopsticks
+[1047.26] Stephen: and try and like bring them into your model.
+[1051.26] UNKNOWN: Yeah, it&#x27;s always a pain in the ass having to rebind stuff.
+[1054.26] Koel: It&#x27;s not that hard, but it&#x27;s like,
+[1056.26] Koel: you get out the tweezers, like reach in,
+[1059.26] Koel: make sure you, I don&#x27;t know.
+[1061.26] Koel: It&#x27;s really not that hard, but yeah,
+[1063.26] Koel: I guess if you can do it through the software now,
+[1065.26] Koel: it&#x27;s kind of cool.
+[1066.26] Koel: Although I can&#x27;t because I feel like it&#x27;s ultra.
+[1070.26] Stephen: I&#x27;m sure Alexander can read this code and be like,
+[1073.26] Stephen: oh yeah, I just send that packet, put it in as well, you know.
+[1076.26] UNKNOWN: Yeah, but I&#x27;m guessing with the keeping it simple way is like,
+[1079.26] Koel: press the damn button.
+[1082.26] Koel: If you&#x27;re flying a freestyle quad,
+[1084.26] Stephen: you can probably reach it, can&#x27;t you?
+[1086.26] Stephen: Yeah, really complex stuff with plastic panels all over them.
+[1089.26] Stephen: For sure.
+[1090.26] Stephen: Yeah, yeah.
+[1091.26] UNKNOWN: Yeah.
+[1092.26] UNKNOWN: Anyway, there&#x27;s a whole bunch of stuff going on there.
+[1094.26] Stephen: So yeah, a little bit of something for everyone.
+[1097.26] Stephen: I think it&#x27;s going to shape up to be a decent release.
+[1100.26] Stephen: And I&#x27;m really just looking forward to getting rid of the F-411 stuff.
+[1104.26] Stephen: It needs to go away.
+[1105.26] Stephen: And especially in winter whoop season,
+[1108.26] Stephen: I think we have beta FPV with an F-435 board and an F-405 board.
+[1115.26] UNKNOWN: But if you can grab one of those, they&#x27;re pretty good.
+[1117.26] Stephen: And I think we&#x27;re going to start seeing them replace the F-411 at the low end
+[1122.26] Stephen: in the next couple of years.
+[1123.26] Stephen: And yeah, it can&#x27;t happen soon enough.
+[1126.26] Koel: No doubt.
+[1128.26] UNKNOWN: Yeah, I guess on the,
+[1130.26] Koel: if we&#x27;re talking about sort of like updates and whatnot for flight controllers
+[1133.26] Koel: or whatever, back at the start of November,
+[1136.26] Koel: there&#x27;s like the latest version of Kiss Ultra.
+[1140.26] Koel: It&#x27;s a B54.
+[1142.26] Koel: They added a few new little features too.
+[1144.26] Koel: Like I guess they&#x27;ve changed like the return to home
+[1148.26] Koel: like throttle logic or something like that.
+[1151.26] Koel: I don&#x27;t know a whole lot about that.
+[1153.26] Koel: But yeah, it looks like they added some, what is it?
+[1159.26] Koel: Added configurable MSP disarm delays.
+[1163.26] Koel: Added configurable PID boost for fast throttle movements.
+[1167.26] Koel: Configurable RPM assistance and change the PID controller.
+[1171.26] Koel: Yeah, I guess, you know, a bunch of little things
+[1174.26] Koel: that probably actually make a big difference for some.
+[1177.26] Koel: But I actually have to update my stuff.
+[1179.26] Koel: I&#x27;m really bad at updating.
+[1183.26] UNKNOWN: It takes a lot of time now.
+[1185.26] UNKNOWN: How&#x27;s the long range build going?
+[1187.26] Stephen: Has it started coalescing?
+[1191.26] UNKNOWN: No, so I&#x27;m still waiting on motors and ESC
+[1195.26] Koel: that were ordered on November the 26th, which is really great.
+[1200.26] UNKNOWN: Really, really cool, really great stuff.
+[1203.26] Koel: We&#x27;re both from China.
+[1205.26] UNKNOWN: Yeah, although it says flight departed and whatever,
+[1209.26] Koel: I&#x27;m not going to get into my frustrations.
+[1211.26] Koel: But yeah, I mean, I have everything else that I need, I think.
+[1216.26] Koel: I mean, I&#x27;m literally waiting for this ESC so I can put an XT60 on it
+[1219.26] Koel: and start the, you know, start from the base up.
+[1222.26] Koel: I mean, without the ESC, without the motors, I mean,
+[1225.26] Koel: I&#x27;m kind of like sitting here with my hands in my lap
+[1227.26] Koel: just twiddling my thumbs.
+[1230.26] Koel: But I mean, I updated my crossfire diversity.
+[1235.26] Koel: I got GPS working on just a flight controller
+[1239.26] Koel: just hooked up to 5 volt through USB.
+[1242.26] Koel: So I did a bit of experimenting because of my first time using GPS.
+[1246.26] Koel: And I was able to get seven SATs locked on my balcony.
+[1249.26] Koel: Pretty cool.
+[1250.26] Koel: I was happy about that.
+[1253.26] Koel: So yeah, flight controller&#x27;s ready.
+[1256.26] UNKNOWN: Crossfire diversity is ready.
+[1258.26] Koel: GPS is ready.
+[1259.26] Koel: Just need that.
+[1260.26] Koel: You have all the mounts and things.
+[1262.26] Stephen: It&#x27;s a 3D printing to get the GPS attached.
+[1265.26] Stephen: Yep.
+[1266.26] Koel: I got all my 3D prints done.
+[1267.26] Koel: Literally, I&#x27;m just waiting on this damn ESC and motors.
+[1272.26] Koel: Yeah.
+[1273.26] Koel: So oh, it looks like EBR is saying,
+[1276.26] Koel: so B54 also has an upgrade on flight performance.
+[1279.26] Koel: And he&#x27;s saying, you must update.
+[1282.26] Koel: Don&#x27;t worry, EBR.
+[1284.26] Koel: I will.
+[1285.26] Koel: Definitely update, especially for all.
+[1287.26] Koel: Well, I mean, any of my quads that have a KISS Ultra V2 in it,
+[1290.26] Koel: I&#x27;m going to put on the latest because I keep seeing people in the
+[1293.26] Koel: Discord being like, it&#x27;s so much better.
+[1295.26] Koel: And they notice a difference in flight performance and stuff.
+[1297.26] Koel: So yeah, the only thing is, is like, it&#x27;s been raining.
+[1300.26] Koel: And so I haven&#x27;t even really been in quad mode, I guess.
+[1303.26] Koel: Although, I guess that&#x27;s the perfect time to be doing upgrades or updates.
+[1306.26] Koel: So yeah, I will definitely get around to it.
+[1310.26] UNKNOWN: Yeah.
+[1311.26] UNKNOWN: And we have tailspin trolling us saying that he flies every day on
+[1315.26] Stephen: beta flight 357, which is like five years old.
+[1319.26] Stephen: Yeah.
+[1320.26] Stephen: Never do you, mate.
+[1321.26] Stephen: You do you.
+[1322.26] Stephen: But yeah, it doesn&#x27;t fly as good as the new stuff.
+[1325.26] Stephen: If that&#x27;s what you want, if you&#x27;ve got an F3, you can knock yourself out.
+[1330.26] Stephen: Yeah.
+[1331.26] UNKNOWN: Having RPM filtering makes everything a little bit better.
+[1336.26] UNKNOWN: Did you have any success sorting out Tony&#x27;s X-Class?
+[1341.26] Frank: One of the big quads on a newer version?
+[1345.26] Frank: Because there&#x27;s a classic holdout for old flight control software.
+[1349.26] Frank: It&#x27;s people who&#x27;ve got that.
+[1350.26] Frank: That&#x27;s Jack.
+[1351.26] Stephen: And I think he actually went out of his way to buy some ancient flight
+[1355.26] Stephen: controller that still supported the old version because these days,
+[1361.26] Stephen: even if you buy, say, an F405 or an older 722, they may not actually
+[1368.26] Stephen: have been made when beta flight 357 was available.
+[1373.26] Stephen: So a lot of them don&#x27;t have targets.
+[1375.26] Stephen: And I remember him hunting around trying to find one specifically
+[1378.26] Stephen: so they could fly that.
+[1380.26] Stephen: I don&#x27;t know.
+[1381.26] UNKNOWN: I&#x27;ve limited patience, to be honest.
+[1383.26] Stephen: I think people just should read the manual and update.
+[1387.26] Stephen: But I mean, with the X-Class stuff, with the really big stuff,
+[1391.26] Frank: even the races there, like Clive in the chat is mentioning it.
+[1395.26] Frank: 357 is the classic one that they kind of say, this one works for X-Class,
+[1401.26] Frank: more recent ones.
+[1402.26] Frank: It&#x27;s a tuning problem, right?
+[1403.26] Frank: No one&#x27;s been brave enough to tune it, right?
+[1405.26] Frank: It&#x27;s a tuning problem, right.
+[1407.26] Stephen: Just read the manual and tune it like everyone else does
+[1410.26] Stephen: instead of keep some magic numbers from 357.
+[1413.26] Stephen: I have zero patience, I think.
+[1415.26] UNKNOWN: It&#x27;s highly achievable.
+[1417.26] Stephen: Even 8-inch, I know someone who&#x27;s recently, very recently built an 8-inch,
+[1425.26] Frank: put the latest beast bite on it.
+[1427.26] Frank: And he&#x27;s not shy about tuning things.
+[1432.26] Frank: He&#x27;s fairly on the ball, but he&#x27;s managed to sort of have a little mini
+[1437.26] Frank: tornado of death after hovering for a little bit.
+[1440.26] UNKNOWN: Numskull built a beast class, and he was using the latest on that,
+[1444.26] Stephen: so far as I know, and it worked fine.
+[1447.26] Stephen: I mean, if you have a tornado of death, you&#x27;re just doing something wrong, right?
+[1453.26] Stephen: You have a tornado of death because you&#x27;ve overtuned it.
+[1457.26] UNKNOWN: If you started out with a very, very gentle tune
+[1461.26] Stephen: and take black box and look at what it&#x27;s doing
+[1464.26] Stephen: and then tune it appropriately carefully,
+[1466.26] Stephen: you&#x27;re not going to have this type of problem.
+[1469.26] UNKNOWN: If people just slap on defaults that are meant for like a spicy 5-inch
+[1474.26] Stephen: and put it on like a 10-inch quad, yeah, it&#x27;s not going to fly well.
+[1479.26] UNKNOWN: If you&#x27;ve got a lot more power or if you&#x27;ve got different frame resonance issues
+[1485.26] Stephen: than you have on a 5-inch, it&#x27;s going to fly very differently
+[1488.26] Stephen: and it could be dangerous.
+[1490.26] Jack: But just because you got lucky because 357 had a really loose tune by default
+[1497.26] Stephen: and you just learn to tune it, just learn to tune it, right?
+[1501.26] Stephen: It doesn&#x27;t need to be super scientist level of doing black box to the nth degree,
+[1507.26] Stephen: but just back off the authority a little bit for a test hover,
+[1513.26] Stephen: make sure it hovers okay and then look at the filtering,
+[1517.26] Stephen: look at how much vibration you&#x27;re getting, sort that out,
+[1521.26] Stephen: sort out any mechanical issues and then tighten it up until it snaps.
+[1527.26] UNKNOWN: Until it&#x27;s snappy.
+[1529.26] Stephen: Yes, I&#x27;m basically spoiled in the KISS Ultra world
+[1536.26] Koel: because Crunked has put together some of these really amazing
+[1539.26] Koel: sort of like starting points as well as like, okay, start here,
+[1542.26] Koel: maybe bump it up to the next one, see how it goes
+[1544.26] Koel: and if your build&#x27;s really clean, then you can try the next one.
+[1548.26] Koel: And with 5-inch quads with KISS Ultra, I feel like, I mean,
+[1552.26] Koel: I run Apexes and I mean, they just, they fly so good,
+[1556.26] Koel: I mean, from what I can tell.
+[1558.26] Koel: I&#x27;ve never really had to go in and do anything,
+[1561.26] Koel: although with the 7-inch that I&#x27;m building,
+[1564.26] Koel: the recommendations that I&#x27;ve got are, you know,
+[1567.26] Koel: try it out on default and then go from there,
+[1569.26] Koel: but then there&#x27;s a few people that have been in the KISS Ultra Discord
+[1574.26] Koel: and then just like some other random sort of Ultra guys.
+[1579.26] UNKNOWN: Basically what they&#x27;re saying is like, you know,
+[1581.26] Koel: P-values are going to be considerably lower on a 7-inch tune,
+[1586.26] Koel: but I don&#x27;t know.
+[1588.26] Koel: Again, like I don&#x27;t know a ton about tuning myself
+[1591.26] Koel: just because I&#x27;ve been, like I said, I&#x27;ve been spoiled,
+[1593.26] Koel: but I don&#x27;t know, it&#x27;s going to be a learning experience.
+[1596.26] Koel: This whole 7-inch quad for me is going to be a learning thing,
+[1598.26] Koel: which I&#x27;m actually excited about.
+[1600.26] Koel: And yeah, oh, sorry guys, I&#x27;m actually getting an important call.
+[1605.26] Koel: Give me one sec.
+[1606.26] Koel: I&#x27;ll be right back.
+[1608.26] UNKNOWN: No worries.
+[1609.26] Stephen: Ooh.
+[1610.26] UNKNOWN: Mysterious.
+[1611.26] Frank: Not a mystery.
+[1613.26] UNKNOWN: Yeah, so I love these times.
+[1615.26] Stephen: I think that the defaults should fly fine.
+[1618.26] Stephen: One of the problems that these firmwares do run into
+[1623.26] Stephen: is if you&#x27;re aiming to perform really well,
+[1626.26] Stephen: say for a crowd who are very fussy about their performance like racers,
+[1633.26] Stephen: who really want very aggressive, fast-moving, fast-responding quads,
+[1639.26] Stephen: they don&#x27;t want any hint of hesitation when they&#x27;re sticking,
+[1643.26] Stephen: but they want that thing just to spin around on a dime,
+[1647.26] UNKNOWN: that you can&#x27;t necessarily have loose defaults.
+[1652.26] Stephen: And if you&#x27;ve got loose defaults,
+[1654.26] Stephen: it&#x27;s going to be really easy to build like a lazy freestyle bird, you know,
+[1659.26] UNKNOWN: so long as you can deal with the prop wash,
+[1662.26] UNKNOWN: a loose tune will be just fine.
+[1666.26] Stephen: It&#x27;ll make everything look a little bit smoother.
+[1669.26] Stephen: But for a racer, that&#x27;s terrible.
+[1671.26] Stephen: And I think what happened going from 3.57 onwards
+[1674.26] Stephen: is that they started trying to tighten up the defaults
+[1677.26] Stephen: so that it was good for racing.
+[1679.26] Stephen: And you can look at the, you know, the Champions League stuff
+[1683.26] Stephen: that just came out like everyone&#x27;s flying beta flight.
+[1686.26] Stephen: And they&#x27;re all on the 4.x release.
+[1688.26] Stephen: No, there&#x27;s not a single person showing up on the 3.x release series.
+[1694.26] Stephen: And I don&#x27;t think there&#x27;s anyone below 4.3 either.
+[1697.26] Stephen: They&#x27;re either 4.3, 4.4 or something, that ilk.
+[1702.26] Stephen: So it can work, but it&#x27;s just, yeah, I&#x27;m not saying it&#x27;s super easy.
+[1708.26] Stephen: And if I had an X-Craft that was already flying,
+[1711.26] Stephen: I&#x27;d be worried about it for sure.
+[1713.26] UNKNOWN: But one of the things that I do with problem birds
+[1717.26] Stephen: is that I have to fly them on a lower cell count.
+[1720.26] Stephen: So if I&#x27;ve got something that I know is a little bit spicy
+[1724.26] Stephen: on, say, 5 and 6S, I might just put a 4S pack in it
+[1729.26] Stephen: and try and tune it on 4S instead.
+[1732.26] UNKNOWN: And when I know I can get a good tune on 4S,
+[1735.26] Stephen: I&#x27;ll take what I&#x27;ve learned,
+[1737.26] UNKNOWN: but dial down the overall, like, pit multiplier
+[1742.26] Stephen: and a couple of notches and try that on 6S.
+[1746.26] Stephen: And then if I&#x27;m starting to get acceptable results on 6S,
+[1751.26] Stephen: then I can take that 4S point and relax it back
+[1756.26] Stephen: and then try and see how much I can move that back
+[1760.26] Stephen: to where it was on 4S before things start to act out.
+[1763.26] Stephen: And they will act out because a tune that&#x27;s good on 4S
+[1767.26] UNKNOWN: doesn&#x27;t have the motor RPM going as high
+[1772.26] Stephen: as it would when it&#x27;s on 6S, right?
+[1774.26] Stephen: So it doesn&#x27;t have that quick response
+[1777.26] Stephen: that the motors can provide on 6S.
+[1779.26] Stephen: So the tune is having to work a lot harder
+[1782.26] Stephen: and everything&#x27;s going to be cranked up a little bit higher.
+[1786.26] UNKNOWN: So with B2Flight, the latest release is you&#x27;ve got sliders, right?
+[1791.26] Stephen: So you can literally just use the master slider
+[1794.26] Stephen: and say, I&#x27;m going to turn everything down a couple of notches.
+[1797.26] Stephen: And if you drag that master slider down from, say, 1.0 to 0.7,
+[1803.26] UNKNOWN: then you&#x27;re turning your P term, I term, D term all the way down.
+[1810.26] Stephen: And that can help a lot, right?
+[1812.26] Stephen: If you get something working on a 4S
+[1815.26] Stephen: that you thought was untunable on 6S,
+[1818.26] Stephen: then you can use that 4S as a starting point
+[1821.26] Stephen: and see, well, where was that problem
+[1823.26] Stephen: where 6S was suddenly like demon quad?
+[1828.26] UNKNOWN: But 4S flies.
+[1829.26] Stephen: How do I slowly get up to where I was,
+[1833.26] UNKNOWN: where it should be at 6S from that 4S starting point?
+[1860.73] Frank: I brought up next class, even if it is slightly contentious,
+[1869.73] Frank: because we&#x27;ve got Cerberus coming on next week
+[1874.73] Frank: talking about his stint as the chairman
+[1879.73] Frank: of the British Drone Racing Association.
+[1881.73] Frank: And he&#x27;s come in fairly recently.
+[1885.73] Frank: He&#x27;s changing up things a little bit.
+[1887.73] Frank: And he&#x27;s started a Discord server for the BDRA,
+[1892.73] Frank: where I noticed today, because I joined him and had a look,
+[1895.73] Frank: he&#x27;s got channels for Whoops, he&#x27;s got channels for X-Class,
+[1899.73] Frank: got channels for Wings, which is quite a big departure
+[1903.73] Frank: from what the BDRA has generally been,
+[1906.73] Frank: which has usually been laser-focused on the 250-size racers.
+[1910.73] Frank: So I&#x27;m very interested to see
+[1914.73] Frank: what he&#x27;s going to talk about next week,
+[1917.73] UNKNOWN: what else he has perhaps in store for BDRA
+[1921.73] Frank: and events that he might be thinking about.
+[1924.73] Frank: So I&#x27;m very interested in that.
+[1926.73] Frank: That&#x27;s what&#x27;s got me excited for 2024,
+[1929.73] Frank: talking to Serb and finding out his plans with the BDRA.
+[1934.73] UNKNOWN: That&#x27;s on next week.
+[1936.73] UNKNOWN: Oh, it looks like Alexander has popped up saying,
+[1939.73] Koel: you have full crossfire tool on Ultra in it through the OSD.
+[1943.73] Koel: You just didn&#x27;t find the button, Cole.
+[1945.73] Koel: You didn&#x27;t find the button.
+[1946.73] Koel: I know.
+[1947.73] Koel: You know what?
+[1948.73] Koel: I&#x27;m lacking and toying and prodding around
+[1951.73] Koel: and all the OSD stuff.
+[1952.73] Koel: There&#x27;s honestly probably a lot of stuff
+[1954.73] Koel: that if I just spent maybe half an hour
+[1957.73] Koel: going through each subsection through the OSD,
+[1959.73] Koel: I could probably figure out a lot more,
+[1961.73] Koel: and then I wouldn&#x27;t have to ask these stupid questions.
+[1963.73] Koel: That&#x27;s cool.
+[1966.73] Koel: So I guess, Steven, it looks like there&#x27;s already been done,
+[1971.73] Koel: already been figured, already been sorted out.
+[1975.73] UNKNOWN: That&#x27;s very cool.
+[1976.73] Koel: Yeah.
+[1977.73] Koel: So I guess he&#x27;s ahead of Betaflight then on that,
+[1980.73] Koel: if that just came out on Betaflight.
+[1984.73] Koel: It&#x27;s in here, VTX control.
+[1987.73] Stephen: Kiss is on the ball.
+[1989.73] Koel: Kiss Ultra.
+[1990.73] Koel: So this is like CRSF dev navigation.
+[1993.73] Stephen: Yeah.
+[1994.73] Stephen: Yeah.
+[1995.73] Stephen: It was mainly the bind button that I was looking at.
+[1997.73] UNKNOWN: It&#x27;s interesting because he&#x27;s looking at it from,
+[2000.73] Stephen: I thought this stuff was only navigable from the OpenTX side,
+[2004.73] Stephen: but he&#x27;s got all the stuff you&#x27;d see on an OpenTX firmware.
+[2009.73] UNKNOWN: That&#x27;s curious.
+[2010.73] Stephen: It&#x27;s kind of odd.
+[2014.48] Stephen: So it looks like you can configure your transmitter
+[2017.48] Stephen: from the receiver.
+[2019.48] UNKNOWN: I don&#x27;t know why you&#x27;d want to do that, but yeah.
+[2023.48] Stephen: It&#x27;s got like the transmitter menus there,
+[2026.48] UNKNOWN: because normally you have that Lua script on OpenTX,
+[2030.48] Stephen: but it looks like you&#x27;re getting the Lua script from the receiver side
+[2035.48] Stephen: instead of from the transmitter side, which is interesting.
+[2038.48] Frank: Well, that&#x27;s where you&#x27;re looking most of the time, I guess, right?
+[2040.48] Frank: Yeah.
+[2041.48] Stephen: Yeah.
+[2042.48] Stephen: I&#x27;ve never seen that before.
+[2043.48] Stephen: That&#x27;s interesting.
+[2045.48] UNKNOWN: If your radio has no Lua and you need to change something.
+[2049.48] Stephen: Huh.
+[2050.48] UNKNOWN: Yeah.
+[2051.48] Stephen: I&#x27;ve looked at this from kind of deviation TX.
+[2054.48] Stephen: So I&#x27;m kind of familiar with how crossfire surfaces that,
+[2057.48] Stephen: but I&#x27;ve never seen anyone driving it from the receiver side.
+[2060.48] Stephen: Very interesting.
+[2061.48] Frank: It does make sense as well with the increasing number of radios
+[2064.48] Frank: that are like kind of the gamepad style that don&#x27;t have any screens on them.
+[2067.48] Frank: Yeah.
+[2068.48] Frank: That makes a lot of sense.
+[2069.48] Frank: Funky.
+[2073.33] Stephen: Okay.
+[2074.33] UNKNOWN: That&#x27;s interesting.
+[2076.33] UNKNOWN: Someone should yoink some of that code out of the Express LRS Lua
+[2083.33] Stephen: and try and port that into B2Flight then.
+[2085.33] Stephen: It could be interesting.
+[2086.33] Stephen: Although I think these days people, I say,
+[2089.33] UNKNOWN: people don&#x27;t use the OSD menus that much.
+[2092.33] UNKNOWN: It&#x27;s kind of, it&#x27;s there, but when I&#x27;m on the ground, I&#x27;m like,
+[2097.33] Stephen: I&#x27;m overheating.
+[2098.33] Stephen: I&#x27;m overheating.
+[2099.33] Stephen: Gotta take off.
+[2100.33] Stephen: Gotta take off.
+[2101.33] UNKNOWN: Gotta take off.
+[2102.33] UNKNOWN: Yeah.
+[2103.33] Stephen: That doesn&#x27;t sound fun.
+[2105.33] Koel: That sounds stressful.
+[2107.33] UNKNOWN: Yeah.
+[2108.33] Stephen: When you&#x27;ve got those HD VTXs, you&#x27;re looking at it and there&#x27;s like a little
+[2113.33] UNKNOWN: temperature readout at the bottom and you know if it gets to like 90 degrees,
+[2117.33] Stephen: it&#x27;s just going to like shut down to save itself.
+[2120.33] Stephen: And so you&#x27;re like, okay, 83, change, change, change, 84, change, change,
+[2125.33] Stephen: 85 faster.
+[2126.33] Stephen: Even in pit mode, like even in lowest output, it&#x27;ll still overheat.
+[2132.33] Koel: That&#x27;s crazy.
+[2133.33] Koel: Yeah.
+[2134.33] Koel: Yeah.
+[2135.33] Koel: See, that&#x27;s why I like to fly analogs.
+[2136.33] Koel: I don&#x27;t have to worry too much.
+[2137.33] UNKNOWN: Well, I mean, it will still overheat, but you just like, I think that the
+[2142.33] Stephen: throttling is better on analog because when you get to a certain temperature
+[2145.33] Stephen: with analog, it just like ditches the output power right down, right.
+[2149.33] Stephen: And I have had some analog stuff cut out on me because it gets too hot.
+[2153.33] Stephen: Typically, whoop boards will do that.
+[2156.33] UNKNOWN: Yeah.
+[2157.33] Koel: I think I saw, was it one of Curry&#x27;s videos or something or somebody&#x27;s
+[2160.33] Koel: video where they were, you know, they&#x27;re toying around with the output power
+[2165.33] Koel: levels and all of a sudden, like, you know, once it got to a certain heat
+[2169.33] Koel: level, yeah, then it just kind of gone.
+[2172.33] Koel: Yeah.
+[2173.33] Koel: Yeah.
+[2174.33] Koel: It still showed that it was on and working, but nothing was actually
+[2177.33] Koel: displaying or anything.
+[2179.33] UNKNOWN: Yeah.
+[2180.33] Frank: Yeah.
+[2181.33] Frank: It is definitely an issue with analog, but not as much as it seems to be
+[2185.33] Frank: currently with HD.
+[2187.33] Frank: In my day job at the moment, I&#x27;ve been playing around with a Peltier
+[2192.33] Frank: elements.
+[2193.33] Frank: Oh, yeah.
+[2194.33] Frank: I&#x27;ve come across these before.
+[2195.33] Frank: How&#x27;s the cool things down by making more heat?
+[2198.33] Frank: Yeah.
+[2199.33] Frank: It&#x27;s like a little solid state thing that you put some current in and it
+[2203.33] Frank: pushes the heat from one side to the other, which is quite fun.
+[2207.33] Frank: While it&#x27;s pushing the heat, what does it do?
+[2210.33] UNKNOWN: Oh, it makes more heat.
+[2211.33] Frank: Yeah.
+[2212.33] Frank: It&#x27;s like it pushes like three or four times as much heat as you&#x27;re
+[2219.33] Frank: making, which is pretty good.
+[2221.33] Frank: But it means you end up with a really, really hot surface on the other
+[2224.33] Frank: side.
+[2225.33] Frank: So, you know, it&#x27;s good fun.
+[2231.33] Frank: I mean, we&#x27;re also arguing with the guys that are selling them who are
+[2236.33] Frank: saying that because when you make one side of it really hot, one side of
+[2241.33] Frank: it really cold, it also generates electricity.
+[2246.33] Frank: You can short it and it will move lots of heat from one side to the other
+[2253.33] Frank: because it will power itself, which we&#x27;re very unhappy about.
+[2259.33] UNKNOWN: It seems like a free energy, cold fusion type thing going on here.
+[2264.33] Frank: Perpetual motion.
+[2266.33] Frank: Yeah.
+[2267.33] UNKNOWN: But it&#x27;s still going from a hot place to a cold place.
+[2270.33] Frank: So it&#x27;s kind of okay, but it feels very wrong to be like you can short it
+[2274.33] Frank: and it will work.
+[2275.33] Frank: That&#x27;s weird.
+[2276.33] Stephen: Yeah.
+[2277.33] UNKNOWN: Tuesday, first law of thermodynamics.
+[2284.33] UNKNOWN: Oh, we got the whole altar gang in here today.
+[2287.33] Koel: We got EBR.
+[2288.33] Koel: We got Alexander.
+[2289.33] Koel: I believe that&#x27;s crunked if I&#x27;m not mistaken.
+[2291.33] Koel: I think the last name I think pretty sure.
+[2294.33] Koel: Yeah.
+[2295.33] Stephen: Must be right.
+[2298.99] UNKNOWN: Very cool.
+[2300.99] Stephen: Yeah.
+[2303.85] Koel: I wish I could have some hafties and weather so I could actually get out
+[2306.85] Koel: and fly more before.
+[2309.85] UNKNOWN: Before the when the fully winter comes in, we haven&#x27;t really gotten any
+[2312.85] Koel: snow yet.
+[2314.85] Koel: We&#x27;ve got little bits of snow here, but you know, I anytime it&#x27;s like
+[2319.85] Koel: minus two, minus three or below, I&#x27;m like, I don&#x27;t think I&#x27;m going outside.
+[2323.85] Koel: I don&#x27;t think I&#x27;m going to do that.
+[2326.85] Koel: So yeah.
+[2328.85] Frank: Yeah.
+[2329.85] Frank: While it&#x27;s been blowing a gale here and it&#x27;s been very much more build
+[2334.85] Frank: weapon than flying weather, I&#x27;ve been working towards having
+[2339.85] Frank: somewhere to build by hanging up all my planes.
+[2344.85] Frank: I&#x27;ve been following a painless 360 video like years ago about using coat
+[2351.85] Frank: hangers to hang up your planes.
+[2353.85] Frank: So I dug out a load of slightly manky coat hangers and hung them all
+[2359.85] Frank: planes up.
+[2360.85] Frank: So they&#x27;re now not on the floor.
+[2362.85] Frank: You&#x27;ve got covering every available service.
+[2364.85] Frank: Yeah, exactly.
+[2365.85] Frank: Just everything is covered with just planes.
+[2368.85] Frank: Well, I just got a wardrobe and you can just open the wardrobe and be like,
+[2371.85] Stephen: Oh, which plane for today?
+[2374.85] UNKNOWN: Exactly.
+[2375.85] Frank: Exactly.
+[2376.85] Frank: He&#x27;s like, yeah, just one of the clothes rails.
+[2378.85] Frank: They have like backstage at the theater.
+[2382.85] UNKNOWN: All the fantastical garments.
+[2384.85] UNKNOWN: Yeah, exactly.
+[2385.85] Frank: Which glorious raiment for today?
+[2387.85] Frank: A sea plane?
+[2388.85] Stephen: No, no, no.
+[2390.85] Stephen: Sea plane on the day like today.
+[2392.85] Stephen: No, no, no.
+[2395.85] UNKNOWN: I haven&#x27;t quite got around to hanging out my quads or my tricopter or
+[2401.85] Frank: such things.
+[2402.85] Frank: But that&#x27;s that&#x27;s on the list.
+[2404.85] Frank: I want to get a couple of bits of pegboard and mount those up there.
+[2411.85] Stephen: And it has kind of saved me from madness because I thought to start with,
+[2417.85] Stephen: I&#x27;ll put everything in the box that came in.
+[2419.85] Stephen: But that just ended up with now the corner of the room is a mountain of
+[2424.85] Stephen: boxes.
+[2426.85] Stephen: Yeah.
+[2427.85] Stephen: And I don&#x27;t know where anything is anymore.
+[2429.85] UNKNOWN: Like, wow, look, each of these boxes is very neat and tidy.
+[2432.85] Stephen: But then if you put plenty of them together, it&#x27;s a nightmare.
+[2435.85] Stephen: And then you need like the one that&#x27;s at the bottom.
+[2437.85] Frank: So all the rest obviously get removed into a slightly less tidy pile.
+[2442.85] Frank: And that happens a couple of times.
+[2443.85] Frank: All of a sudden you just surround.
+[2446.85] Frank: Yeah.
+[2447.85] Koel: Yeah.
+[2448.85] Koel: I&#x27;ve actually been on a donating role lately.
+[2450.85] Koel: I&#x27;m like going through all these, all these accumulated boxes.
+[2453.85] Koel: I&#x27;m like, do I need this crappy laptop stand that&#x27;s been sitting around
+[2458.85] Koel: for two years that I haven&#x27;t used?
+[2461.85] UNKNOWN: Goodwill.
+[2463.85] Koel: Yeah.
+[2464.85] Koel: It&#x27;s I don&#x27;t know.
+[2465.85] Koel: It&#x27;s really weird.
+[2466.85] Koel: I don&#x27;t know about you guys, but I have a really hard time getting rid of
+[2468.85] Koel: things that I&#x27;ve paid for.
+[2470.85] Koel: Even if I don&#x27;t use them, I&#x27;m like, yeah, it&#x27;s just one of those things
+[2475.85] Koel: where you&#x27;re like, I spent money on this.
+[2477.85] Koel: Can&#x27;t get rid of it.
+[2479.85] UNKNOWN: I mean, I have a hanging up to my right, a plane that I paid about five
+[2487.85] Frank: pounds for and like I should throw it away.
+[2490.85] Frank: Like it needs throwing away, but I can&#x27;t throw it away.
+[2494.85] Frank: Yeah.
+[2495.85] Frank: Did you get one of those planes that I have that little thing that&#x27;s hanging
+[2499.85] Stephen: up behind you there?
+[2501.85] UNKNOWN: I haven&#x27;t got around to flying properly.
+[2503.85] Stephen: Yeah.
+[2504.85] Stephen: That one&#x27;s a flying fish.
+[2506.85] Frank: Yeah.
+[2507.85] Frank: The flying fish.
+[2508.85] Frank: Yeah, that&#x27;s good.
+[2509.85] Frank: It&#x27;s fun.
+[2510.85] Frank: I enjoy that.
+[2511.85] UNKNOWN: I need to get out and actually try and fly that thing.
+[2514.85] Frank: I haven&#x27;t actually beat it.
+[2516.85] Frank: It definitely would benefit from FPV because it&#x27;s small and fast.
+[2521.85] Frank: Yeah.
+[2522.85] Frank: I heard it&#x27;s got a decent power to weight ratio.
+[2524.85] Stephen: You can just like and launch it.
+[2526.85] Stephen: Oh, yeah.
+[2527.85] Frank: You just let go and it will disappear off into the distance quite quickly.
+[2534.85] UNKNOWN: Yeah.
+[2535.85] Frank: Flying one on a site.
+[2536.85] Frank: It&#x27;s a slight challenge because it is very fast and it very quickly ends up
+[2540.85] Frank: being a small dot in the distance.
+[2542.85] Stephen: Yeah.
+[2543.85] Stephen: FPV for me.
+[2546.85] UNKNOWN: Yeah.
+[2547.85] Stephen: I was a bit worried about that because I was thinking I was small first plane.
+[2551.85] Stephen: Yeah.
+[2552.85] Stephen: Yeah.
+[2553.85] Stephen: I&#x27;ll get that.
+[2554.85] Stephen: But yeah, I kind of thought because I saw some guy test fly it and he just
+[2557.85] Stephen: like held it like vertically out in front of him, not even making it pretense.
+[2562.85] Stephen: He just held it vertically out in front of him, wang the throttle up and it
+[2566.85] Stephen: just went.
+[2568.85] UNKNOWN: Yeah.
+[2569.85] Frank: Yeah.
+[2570.85] Frank: But it&#x27;s definitely the sort of flying that it is good for.
+[2573.85] Frank: It&#x27;s just a little mini rocket ship.
+[2576.85] UNKNOWN: Yeah.
+[2577.85] UNKNOWN: Yeah.
+[2578.85] Koel: But it&#x27;s kind of like when you see those racer guys do the hand launches and
+[2580.85] Koel: they&#x27;re just like, you know, in the blink of an eye, you can&#x27;t see these damn
+[2583.85] Koel: things anymore.
+[2584.85] Koel: Right.
+[2586.85] UNKNOWN: Yeah.
+[2588.85] Koel: So it looks like Alexander on the chase.
+[2590.85] Koel: I&#x27;m looking forward to my footage from the trip for my trip coming up.
+[2593.85] Koel: Yeah.
+[2594.85] Koel: I&#x27;m I can&#x27;t wait to fly out in Taiwan, man.
+[2596.85] Koel: I&#x27;m going to get some sweet long range footage out there.
+[2599.85] Koel: And hopefully have a quad come back to me to be able to show the footage.
+[2604.85] Koel: Yeah.
+[2605.85] UNKNOWN: Yeah.
+[2607.85] UNKNOWN: Should be fine though.
+[2608.85] Koel: Should be good.
+[2609.85] Koel: I&#x27;m looking forward to it.
+[2612.85] UNKNOWN: Making it to the mountain and back.
+[2614.85] Koel: Oh, yeah.
+[2615.85] Koel: Well, you know what?
+[2616.85] Koel: Because I had this in my mind that I was going to do a success two piece set
+[2620.85] Koel: up with lithium ions on my on my seven inch.
+[2623.85] Koel: But I was actually watching Curry&#x27;s video recently where he was flying
+[2628.85] Koel: a six S one P and with a lithium ion, he was getting like 18 minute flight
+[2634.85] Koel: times.
+[2635.85] Koel: And I was like, well, I think, okay, when I flew in, um, in Taiwan last year
+[2641.85] Koel: with a five inch, I mean, I was getting almost halfway to the top of this
+[2645.85] Koel: mountain peak within maybe like two or three minutes.
+[2648.85] Koel: So I might not even need to do a success two piece set up because it&#x27;s going to
+[2652.85] Koel: be double the weight and probably going to be weird for the tune.
+[2655.85] Koel: So, you know, how about you just take an adapter plug so that you can plug two
+[2660.85] Stephen: packs in parallel if you want to.
+[2662.85] Stephen: I really wanted to exactly.
+[2663.85] Koel: Yeah.
+[2664.85] Koel: Yeah.
+[2665.85] Koel: I mean, what I&#x27;m going to do, I&#x27;m going to do a bit of experimenting.
+[2667.85] Koel: I&#x27;m going to do success one P with the lithium ion cell cells and see how that
+[2672.85] Koel: goes.
+[2673.85] Koel: Maybe get that, that sort of joiner plug.
+[2675.85] Koel: See how that goes.
+[2676.85] Koel: If I really need, you know, 25 plus minute flight times.
+[2679.85] Koel: Um, and then I also was going to see if I can just grab a big lipo and just,
+[2684.85] Koel: you know, see what works.
+[2685.85] Koel: See, you know, see if a, the extra sort of juice with the lipo would be nice
+[2689.85] Koel: because I know, um, so Mike acts one of the kiss ultra, um, you know, pilots
+[2695.85] Koel: test guys, uh, he does a lot of, I think like section six inch stuff with, um,
+[2701.85] Koel: with lipos and he gets pretty decent flight times and range and stuff.
+[2705.85] Koel: So I mean, do I need to fly for 25 minutes?
+[2709.85] Koel: You know what I mean?
+[2710.85] Koel: Like, yeah.
+[2713.85] UNKNOWN: Oh, wow.
+[2715.85] Koel: Yeah.
+[2716.85] UNKNOWN: So FPV Victor 21 kilometers, low flow six inch.
+[2720.85] Koel: That&#x27;s, that&#x27;s pretty awesome.
+[2722.85] Koel: Maybe lithium ion.
+[2724.85] Koel: Yeah.
+[2725.85] Koel: I don&#x27;t know.
+[2726.85] UNKNOWN: Um, I mean, I don&#x27;t know.
+[2728.85] Koel: Like, does it get boring after all?
+[2730.85] Koel: Cause I know we&#x27;re playing like a Mavic.
+[2731.85] Koel: It gets pretty damn boring after the first like 10, 15 minutes.
+[2735.85] Koel: But I wonder how, uh, you know, FPV would go for that.
+[2738.85] Koel: If you&#x27;re dying to get that shot.
+[2740.85] Stephen: Perfect.
+[2741.85] Stephen: And to get that shot requires climbing for three or four minutes up a mountain
+[2746.85] Stephen: and then turning round, you might need a bit of capacity.
+[2750.85] Stephen: Yep.
+[2752.85] UNKNOWN: True.
+[2753.85] Frank: I can imagine as well as like, if you&#x27;re, if you&#x27;re doing the test flight and making
+[2756.85] Frank: sure you know what your available flight time duration is and you&#x27;re just doing
+[2760.85] Frank: laps to your local field, you&#x27;re going to be, you know, there&#x27;s no jeopardy here.
+[2765.85] Frank: It&#x27;s all fairly dull.
+[2766.85] Frank: It&#x27;s like, I know all of this.
+[2768.85] Frank: It&#x27;s all fine.
+[2769.85] Frank: And then I can imagine like the moment you take off to go up a mountain, it&#x27;s
+[2774.85] Frank: going to be a slight, like, especially when you got like jungle underneath it.
+[2777.85] Frank: Yeah.
+[2778.85] Frank: And it&#x27;s like the stakes are a bit higher.
+[2781.85] Stephen: Yeah.
+[2782.85] Frank: I can imagine it&#x27;s going to be a bit more.
+[2784.85] Stephen: Really, really happy to land.
+[2785.85] Stephen: It&#x27;s like 30% of the pack left over.
+[2787.85] Stephen: You&#x27;ll be like, oh, that&#x27;s good.
+[2789.85] Stephen: That&#x27;s what I needed.
+[2790.85] UNKNOWN: Yeah.
+[2791.85] Koel: Yeah.
+[2792.85] Koel: That&#x27;s fine.
+[2794.85] UNKNOWN: There was, um, let me see if I can pull this up here.
+[2796.85] Koel: Cause I was, there was a couple of things that I would, I keep reviewing my
+[2800.85] Koel: footage and if I can from before, um, let me see if I can pull it up here.
+[2805.85] Koel: Um, and I&#x27;ve been trying to figure out like the most optimal starting point.
+[2809.85] Koel: Cause I&#x27;m like, this is me just kind of flying from, from where I&#x27;m staying.
+[2813.85] Koel: But, um, I am like right there.
+[2816.85] Koel: I basically, let me see.
+[2818.85] Koel: You could cruise along that river.
+[2819.85] Stephen: That would be my first instinct.
+[2821.85] Stephen: Like you&#x27;ve got a river and it&#x27;s got bridges,
+[2823.85] Stephen: which you could totally fly under like that bridge in the right side.
+[2827.85] Stephen: Yeah.
+[2828.85] Stephen: Yep.
+[2829.85] Stephen: So you could start off just like way up following the course of the river
+[2833.85] Stephen: round.
+[2834.85] Stephen: You could come in, you could go onto the bridge and then you could go up the
+[2837.85] Stephen: hill.
+[2838.85] Koel: Well, so, okay.
+[2839.85] Koel: So you see this, like this housing little complex thing right in front of me,
+[2841.85] Koel: right?
+[2842.85] Koel: Like I&#x27;m basically standing or you can see where I&#x27;m sitting for this flight,
+[2845.85] Koel: but I, I actually get really good line of sight to that top peak from here.
+[2851.85] Koel: So like I could go just straight at it.
+[2854.85] Koel: Um, and I don&#x27;t think I should have a problem with that, but, um, this was
+[2859.85] Koel: actually my first flight at it, but this bridge right here would be really
+[2863.85] Koel: sweet.
+[2864.85] Koel: Or this little sort of like, I want to, I would love to fly under that, but I
+[2867.85] Koel: would have to be standing cause I fly analog, right?
+[2869.85] Koel: I&#x27;d have to be standing somewhere line of sight ish.
+[2872.85] Koel: Um, climb on the roof.
+[2874.85] Stephen: Can I climb on the roof?
+[2876.85] Koel: Like the furthest I get up this way is like, okay, that&#x27;s the end of it.
+[2880.85] Koel: But I mean, like, hello, understanding FPV family members, please fetch me a
+[2885.85] Stephen: ladder.
+[2886.85] Stephen: I will be standing on your roof the next 20 minutes.
+[2888.85] Stephen: Yeah.
+[2889.85] Stephen: And maybe swearing.
+[2890.85] UNKNOWN: I mean the tops of those, like that&#x27;s totally doable within a few minutes
+[2894.85] Koel: easily, man.
+[2895.85] Koel: Like, like I should usually get to the top of that.
+[2897.85] Koel: Um, but as far as going the other way, I think it would be pretty cool to, to
+[2902.85] Koel: maybe push it into those far ones, but I need a better spot to stand because all
+[2907.85] Koel: the trees kind of in the way, unless I just fly really high up.
+[2909.85] Koel: So you probably want to do a flight where you look around and you look for
+[2914.85] Stephen: some like peak nearby that you can sit on.
+[2918.85] Stephen: That&#x27;s had the trees removed.
+[2921.85] Stephen: There&#x27;s going to be some point somewhere where you can stand where there are no
+[2925.85] Stephen: trees.
+[2926.85] Stephen: That&#x27;s not going to like take a three day hike to get there.
+[2928.85] Stephen: Well, so do you see this other little, um, this little group of like houses and
+[2933.85] Koel: whatnot right there, right?
+[2934.85] Koel: So I was looking on Google maps and it looks like, let me see if I can get it
+[2938.85] UNKNOWN: this little road near the bottom here.
+[2940.85] Koel: If I, if I kind of go and stand, I don&#x27;t know if you guys can see my cursor or
+[2944.85] Koel: not, but if I go and stand somewhere along this road, you go and hide in the
+[2949.85] Koel: bushes near these people&#x27;s houses with your goggles.
+[2952.85] Stephen: Well, I mean, like, look at that.
+[2954.85] Koel: Like if see that little road at the bottom middle, that gives me even really
+[2958.85] Koel: good line of sight to the top of that one, um, in the far left, but I don&#x27;t know.
+[2963.85] Koel: It&#x27;s going to be an experiment, right?
+[2965.85] Koel: Like it&#x27;s, um, yeah.
+[2968.85] UNKNOWN: And that&#x27;s why you have the return time switch, right?
+[2970.85] Stephen: So if you do screw up your video signals, you can just hit the oopsie button
+[2975.85] Stephen: and get it back.
+[2977.85] Koel: Well, and what Alex was saying too was, um, with, with kiss ultra and Alex,
+[2982.85] Koel: correct me if I&#x27;m wrong, but I guess you only really need to have six Sats
+[2985.85] Koel: locked to get a good return to home.
+[2987.85] Koel: And, and, uh, but I was talking to some beta flight guys and does beta flight
+[2994.85] UNKNOWN: show all Sats or does it show all Sats that you&#x27;re locked to?
+[2998.85] Koel: It only shows locked.
+[2999.85] Koel: Okay.
+[3000.85] Koel: Yeah.
+[3001.85] Stephen: You can&#x27;t use them if they&#x27;re not locked.
+[3003.85] Stephen: And the more you have the more accurate that 3d position is going to be.
+[3007.85] Stephen: Yeah.
+[3009.85] UNKNOWN: You six is okay.
+[3012.85] Stephen: But if you&#x27;re doing long range, then having more than 10 for peace of mind.
+[3017.85] UNKNOWN: Yeah.
+[3018.85] Stephen: Is a good idea because you don&#x27;t want to.
+[3022.85] UNKNOWN: You don&#x27;t want to get to a situation where the number of Sats you&#x27;ve got is
+[3027.85] Stephen: all of a sudden insufficient to tell you your position and the quad doesn&#x27;t
+[3032.85] Stephen: know where to go.
+[3033.85] Stephen: And I don&#x27;t know what the ultra behavior is, but in beta flight and I have
+[3037.85] Stephen: another, if you&#x27;re trying to do a GPS based task and you no longer have your
+[3041.85] Stephen: GPS based position, it&#x27;s a fail safe.
+[3044.85] Stephen: Like you don&#x27;t have, you don&#x27;t have that information anymore.
+[3047.85] Stephen: So well, six is, is enough.
+[3051.85] UNKNOWN: Obviously if you, if you do kind of, uh, if you think about it, it&#x27;s triggered
+[3057.85] Stephen: 3d, so you&#x27;d need three to triangulate position normally, but for an extra
+[3063.85] Stephen: dimension, you technically only need four, but six is six is not more than
+[3069.85] Stephen: enough.
+[3070.85] Stephen: Alex six is like Brown trouser return to home.
+[3073.85] Stephen: I&#x27;m sorry.
+[3074.85] Stephen: Well, so what I, what I, um, I mean, when I was doing my testing, just putting my
+[3082.85] Koel: putting a flight controller with GPS on my balcony, I was able to lock seven Sats
+[3087.85] Koel: like within, you know, no time.
+[3089.85] Koel: So I feel like if I&#x27;m in the middle of nowhere, well, maybe not the middle of
+[3092.85] Koel: nowhere, but you should be in double digits easily and then you&#x27;ll be fine.
+[3096.85] Stephen: Yeah.
+[3097.85] Koel: Yeah.
+[3098.85] UNKNOWN: You don&#x27;t want to, you don&#x27;t want to get to a point where you don&#x27;t have
+[3102.85] Stephen: enough GPS status to tell you what your location is enough.
+[3109.85] Koel: But if you&#x27;re down at six and you end up on four, what happens if you go down
+[3113.85] Stephen: to four or three Alex?
+[3115.85] Stephen: Yeah.
+[3116.85] UNKNOWN: Because this isn&#x27;t, this isn&#x27;t a constant static number.
+[3119.85] Stephen: If you&#x27;re on six, you could end up on four or three.
+[3123.85] UNKNOWN: And then what&#x27;s the quad going to do if it sees only three Sats?
+[3127.85] Stephen: That&#x27;s the thing you want enough that you can afford to lose a substantial
+[3131.85] Stephen: count of those because of someone&#x27;s poor, unshielded electrical equipment
+[3136.85] Stephen: or occluded by something, you know, or just dumb luck.
+[3141.85] UNKNOWN: So my question then is though, so because, you know, I&#x27;m coming from a place of
+[3146.85] Koel: ignorance, um, basically say you&#x27;re in a, you know, that sort of area that I was
+[3152.85] Koel: showing you guys out in Taiwan, right?
+[3154.85] Koel: Like what types of things would interfere with GPS satellites?
+[3158.85] Koel: Or, um, is it noise from the quad?
+[3160.85] Koel: Is it stuff from the environment?
+[3162.85] Koel: Is it like, like what, because I don&#x27;t know this stuff, like what actually,
+[3167.85] Koel: you know, either improves or hinders GPS quality or lock or whatever.
+[3174.85] UNKNOWN: You can get some noise from some VTXs.
+[3176.85] Stephen: Some of the HD VTXs are kind of, uh, renowned for this.
+[3181.85] Stephen: The walks now struggled a bit with lack of shielding.
+[3185.85] UNKNOWN: Yeah. The Chinese army.
+[3187.85] UNKNOWN: Um, and anyone that&#x27;s doing like a radio towers of any sort.
+[3192.85] Stephen: So GPS is 800 and 1500 megahertz, I believe.
+[3197.85] Stephen: Right. Frank.
+[3198.85] Stephen: So anything that might be in those bands?
+[3202.85] UNKNOWN: Uh, it&#x27;s clear at 1.5, 1.6 gigahertz, I think, uh, somewhere around there.
+[3208.85] Frank: Uh, I mean, I guess it depends what, what you&#x27;re using as well.
+[3213.85] Frank: But, uh, so yeah, I mean, but you can, you can, you still get like, uh,
+[3221.85] Frank: but you have the intermodulation distortion and things like that where like
+[3225.85] UNKNOWN: different frequencies can interfere with each other and make new ones.
+[3228.85] Frank: Yeah. Yeah.
+[3229.85] Stephen: So that&#x27;s why I walked out was falling foul, I believe.
+[3232.85] Stephen: Hmm.
+[3233.85] Stephen: That would make sense.
+[3234.85] Frank: So that&#x27;s, that&#x27;s why, you know, the, the,
+[3238.85] Frank: the idea is to try and get your GPS antenna as far away from everything else
+[3242.85] Frank: as you can. Um, especially if you&#x27;ve got the magnetometer on there,
+[3246.85] Frank: that&#x27;s going to get like stuff from your quad anyway.
+[3251.85] UNKNOWN: I&#x27;m going to mind the GPS maps can be over the entire horizon to horizon sky.
+[3256.85] Stephen: So if you&#x27;re flying along and you&#x27;ve got your high up and you&#x27;ve got massive
+[3261.85] Stephen: viewpoint, and then you dive down into like a trench or something,
+[3265.85] UNKNOWN: then all of a sudden you&#x27;re like limiting what&#x27;s visible.
+[3268.85] Stephen: You&#x27;re a visible window of the sky and that can,
+[3271.85] Stephen: but if you&#x27;re walking through a city, you traditionally have terrible GPS
+[3274.85] Stephen: reception because of tall buildings.
+[3277.85] Stephen: You don&#x27;t see anything but a tiny slit of the sky above you.
+[3281.85] Stephen: And that impacts GPS performance.
+[3283.85] Stephen: Well, that makes sense because when I&#x27;m driving downtown Toronto,
+[3286.85] Koel: when I&#x27;m under a bunch of underpasses or overpasses, um,
+[3290.85] UNKNOWN: like it doesn&#x27;t actually know where I am.
+[3292.85] Koel: It&#x27;s like, you&#x27;re here. And then like, I&#x27;ll drive a bit and it&#x27;ll be like,
+[3295.85] Koel: actually, no, you&#x27;re here. And then it&#x27;s like, uh, yeah.
+[3300.85] UNKNOWN: Yeah. I don&#x27;t think the BN two 20 has Meg on it.
+[3304.85] Koel: No, I&#x27;ve got one of those. No.
+[3308.85] UNKNOWN: I guess. Yeah. Water in the sky. So clouds are not good, I guess too.
+[3313.85] UNKNOWN: But, but genuinely like military applications can spell over.
+[3318.85] Frank: We&#x27;ve seen that, uh, in Poland in the past sort of few days, uh,
+[3323.85] Frank: that, uh, GPS has been interfered with, with, you know,
+[3327.85] UNKNOWN: military exercises going on and things.
+[3329.85] Frank: So it may well be worth going to something like GPS,
+[3334.85] Frank: jam.org and having a look at the sort of live, live ish map.
+[3339.85] Frank: I think it&#x27;s sort of outdated daily of like what,
+[3342.85] Frank: what GPS interference is going on, which you can see kind of like,
+[3346.85] Frank: Oh, maybe today is not the day for a GPS reliant mission.
+[3351.85] UNKNOWN: Yeah. Fair enough. Yeah. Yeah.
+[3355.85] UNKNOWN: It should be fine. I mean, it&#x27;s just like we said before,
+[3358.85] UNKNOWN: you&#x27;re doing something that&#x27;s inherently risky.
+[3360.85] Stephen: So build your confidence and prove your equipment works,
+[3365.85] UNKNOWN: learn the local area,
+[3367.85] Stephen: maybe do a couple of flights where you&#x27;re just going up in the air and doing
+[3371.85] Stephen: like 50 meters around,
+[3373.85] Stephen: making sure there&#x27;s no weird signal interference and,
+[3377.85] Stephen: and then just push it slowly.
+[3379.85] Stephen: But you know, the other thing I thought about too is, um,
+[3382.85] Koel: cause I got about halfway up to the top with just my five inch freestyle
+[3386.85] Koel: quad, right? I&#x27;m like, Hmm, maybe I&#x27;ll just get a bigger battery and, and,
+[3390.85] Koel: and, uh, you may get lucky in there.
+[3392.85] Stephen: Genuinely is absolutely sweet FA out there.
+[3395.85] Stephen: In which case, you know, more power to you, man. Good luck. Yeah.
+[3398.85] Stephen: Yeah. Yeah.
+[3400.85] UNKNOWN: Oh, yeah. I think it&#x27;s, uh, honestly, I, I,
+[3403.85] Koel: I&#x27;m fairly confident that I should be okay. I guess, I don&#x27;t know.
+[3408.85] Koel: I mean, I guess it&#x27;s all speaking from hypothetical place,
+[3411.85] Koel: but like if I can build my quad the way that I&#x27;ve built my other quads,
+[3415.85] Koel: then, and I&#x27;ve got a better VTX, I&#x27;ve got diversity, I&#x27;ve got, you know, GPS.
+[3421.85] Koel: I mean, I don&#x27;t see why I should have any problems, right?
+[3423.85] Koel: Like it&#x27;s a plus the testing is obviously an important phase, but yeah.
+[3430.85] UNKNOWN: That diversity crossfire should be bulletproof. So if you&#x27;re putting out
+[3434.85] Stephen: like 500 milliwatts or more on the TX,
+[3438.85] Stephen: that crossfire diversity should go so much further than your analog video
+[3443.85] Stephen: that punch out and, you know,
+[3446.85] Stephen: wait till you&#x27;re 70 meters in the air and you probably got signal again for
+[3450.85] Stephen: your VTX. Yeah. Yeah. Well, I mean, Falcon rad,
+[3453.85] Koel: I was watching his stuff and he&#x27;s saying he&#x27;s never set his, uh,
+[3456.85] Koel: crossfire a transmitter to more than like 250 milliwatts.
+[3459.85] Koel: And he&#x27;s gone out like, you know, insane amounts of kilometers. So yeah.
+[3466.85] UNKNOWN: I mean, I&#x27;ve only needed the high power transmitters where I&#x27;ve had,
+[3469.85] Stephen: I&#x27;m running on 2.4 gig and I&#x27;ve got those tiny little ceramic antennas
+[3474.85] Stephen: that are like on a 10 mil by 10 mil VTX all on one board.
+[3479.85] Stephen: That&#x27;s the only time I really needed to increase power.
+[3482.85] Stephen: Otherwise I could stay on a max of 100 milliwatts and it&#x27;d be fine.
+[3487.85] UNKNOWN: Yeah. I think the, the scariest part for me is like, you know,
+[3490.85] Koel: stretching that elastic with the video when you&#x27;re going out, you&#x27;re like,
+[3493.85] Koel: how much can I go out? Okay. When I, when I start turning, you know,
+[3498.85] Koel: how&#x27;s it going to be? Right? It&#x27;s like, I want to keep going further,
+[3502.85] Koel: but I also want to be able to see once I turn around and then I&#x27;m like, okay,
+[3506.85] Koel: maybe I&#x27;m just going to have to pitch up and fly backwards to myself.
+[3510.85] Koel: Yeah. And do you, I mean, the, if you look at the express LRS guys,
+[3515.85] Stephen: they did range tests and I think Wesley Varti had actually, uh,
+[3519.85] Stephen: attached some secondhand satellite dish to his VTX and he used it to do a
+[3524.85] Stephen: high gain antenna on the VTX and he only lost video signal on 5.8 gigahertz
+[3530.85] Stephen: when he was at the 90 something kilometer mark. Wow. Wow.
+[3536.85] Stephen: Yeah. I, I know the distance that I&#x27;m planning on going is like,
+[3542.85] Koel: it&#x27;s like, it&#x27;s like, it&#x27;s like, it&#x27;s like peanuts.
+[3545.85] Koel: It&#x27;s like peanuts compared to what these real like long range guys should be
+[3548.85] Koel: fine, man. Like you,
+[3549.85] Koel: you&#x27;ve probably got a really nice location to fly there and I&#x27;m honestly pretty
+[3553.85] Stephen: jealous because it looks like there&#x27;s basically no one out there apart from you
+[3557.85] Stephen: and a bunch of beautiful scenery. So that&#x27;s it. I know.
+[3561.85] Stephen: I know it&#x27;s, I feel very, very fortunate and lucky because it&#x27;s like,
+[3568.85] Koel: how could you not want to fly at a place like that? You know what I mean?
+[3571.85] UNKNOWN: Like it&#x27;s, it&#x27;s pretty incredible. Oh,
+[3575.85] Koel: I just noticed we have got to the top of the hour.
+[3577.85] Koel: Thank you to everyone who has joined us this week.
+[3579.85] Stephen: We&#x27;re going to bounce over to the other stream now.
+[3581.85] Stephen: So thank you to our wonderful Patreons.
+[3584.85] Stephen: We&#x27;ll be joining you shortly. And thank you for joining us.
+[3588.85] Stephen: This week and Cole, see you and myself,
+[3593.85] Stephen: Stephen with a silly mustache. See you next time.
+[3597.85] Stephen: Thanks for tuning in.
+</pre></body></html>
