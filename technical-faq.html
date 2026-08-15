@@ -24,6 +24,16 @@
     height: 48px;
     border-radius: 50%;
   }
+  .home-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .home-link:hover h1 {
+    text-decoration: underline;
+  }
   header h1 {
     font-size: 1.3rem;
     margin: 0;
@@ -147,8 +157,10 @@
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Let's Drone Out logo">
-    <h1>Let's Drone Out</h1>
+    <a class="home-link" href="index.html">
+      <img src="logo.jpg" alt="Let's Drone Out logo">
+      <h1>Let's Drone Out</h1>
+    </a>
   </header>
   <main>
     <p class="note">This is what the producers had to walk every guest through before each show, back in the years before Zoom and Teams had made webcams, headsets and home internet second nature to everyone. Reproduced as-is from the show-notes template, sent ahead of each episode so guests could prep rather than troubleshoot live on air.</p>
