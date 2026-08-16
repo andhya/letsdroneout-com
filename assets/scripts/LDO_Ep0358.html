@@ -11,168 +11,168 @@ Platforms: YouTube (https://www.youtube.com/watch?v=dyotaoEfTN0); SoundCloud (ht
 
 #LetsDroneOut #LDO #podcast #drone #mulitrotor #ExpressLRS #ELRS #ELRSV3 #quadcopter #fatshark #impulseRC #ethix #brightontillifly #TeamBlackSheep #FPVUK #BLHeli #lipo #KISSULTRA #KissESC #esc #FlyDuino #JoshuaBardwell #Skitzo #Alien5 #MrSteele #FPVRacing #MiniAirShow #LondonFPV #UKFPV #betaflight #fpvdrones #FPVRacing #MiniQuad #podcast #fpvwing
 
-[0.0] UNKNOWN: Hello and you&#x27;re listening to what&#x27;s drawn out and special thank you to our lovely patrons that help donate so that we can pay the editor to remove the swear words and silly things we say massive thank you to kolos campos art folk now sam dharma on with the show.
-[20.58] Frank: Hello, and welcome to episode 358 of let&#x27;s drone out with everyone&#x27;s favorite curry kitten. Hello, up there with our new social media expert, Cole.
+[0.0] Jack: Hello and you&#x27;re listening to what&#x27;s drawn out and special thank you to our lovely patrons that help donate so that we can pay the editor to remove the swear words and silly things we say massive thank you to kolos campos art folk now sam dharma on with the show.
+[20.58] Stephen: Hello, and welcome to episode 358 of let&#x27;s drone out with everyone&#x27;s favorite curry kitten. Hello, up there with our new social media expert, Cole.
 [69.09] Stephen: Hello, and joining us this week as our guest commander guy mr 3001 a forum helper and expert on express lrs who&#x27;s been helping people get up and running for some time and who will be joining us this week to talk about the upcoming express lrs version three release and it&#x27;s many new features.
-[89.93] Stephen: Hi, I&#x27;ve been active in the community for about, I don&#x27;t know, three quarters of years something like that. Now, I guess something like that. And yeah, I&#x27;ve been able helping out a lot of people doing a lot of support. Yeah, that&#x27;s basically it.
-[116.93] UNKNOWN: And there is a lot of support that needs doing right because there is no paid team that there is no support. Yeah, yeah. I mean, I&#x27;m glad like the devs that a lot of good work, getting the configurator working pretty well. And well, the docs are meh, but currently worked on so I&#x27;ll hope they&#x27;ll get better sooner.
-[140.93] commanderguy3001: Actually, the focus of a Google Summer of Summer of documentation this year, instead of summer. Exactly. The help afforded on the discord channel for express lrs I keep sending people there because it&#x27;s so good. And they can answer the questions way better than me. And it is a little bit scary when you get into it for the first time, because it does look like you&#x27;re just compiling something weird.
+[89.93] commanderguy3001: Hi, I&#x27;ve been active in the community for about, I don&#x27;t know, three quarters of years something like that. Now, I guess something like that. And yeah, I&#x27;ve been able helping out a lot of people doing a lot of support. Yeah, that&#x27;s basically it.
+[116.93] commanderguy3001: And there is a lot of support that needs doing right because there is no paid team that there is no support. Yeah, yeah. I mean, I&#x27;m glad like the devs that a lot of good work, getting the configurator working pretty well. And well, the docs are meh, but currently worked on so I&#x27;ll hope they&#x27;ll get better sooner.
+[140.93] Curry: Actually, the focus of a Google Summer of Summer of documentation this year, instead of summer. Exactly. The help afforded on the discord channel for express lrs I keep sending people there because it&#x27;s so good. And they can answer the questions way better than me. And it is a little bit scary when you get into it for the first time, because it does look like you&#x27;re just compiling something weird.
 [164.93] Curry: And so it&#x27;s not quite as straightforward as some other things, but it&#x27;s certainly worth persevering with because as soon as you&#x27;ve done it a few times, it&#x27;s just second nature, it just clicks in like, oh, right, I&#x27;m just doing it.
-[177.93] Curry: It gets easier, the more you do it. Yeah, that&#x27;s that&#x27;s sure. One, one thing that&#x27;s pretty unfortunate is also that many people just don&#x27;t find the official docs.
-[190.93] UNKNOWN: And then don&#x27;t know what to do. And then it&#x27;s pretty intimidating, having that weird configurator thingy, and you have to do something with it. And then it cries on you that it didn&#x27;t work for no apparent reason.
-[207.93] UNKNOWN: You press the button, and you think you&#x27;re going to upload firmware, and then you get like 3000 lines of confusing printout that mean nothing to you. Exactly. Exactly. You&#x27;re suddenly on Mr. Robot or something, and you wonder what&#x27;s going to happen.
+[177.93] commanderguy3001: It gets easier, the more you do it. Yeah, that&#x27;s that&#x27;s sure. One, one thing that&#x27;s pretty unfortunate is also that many people just don&#x27;t find the official docs.
+[190.93] commanderguy3001: And then don&#x27;t know what to do. And then it&#x27;s pretty intimidating, having that weird configurator thingy, and you have to do something with it. And then it cries on you that it didn&#x27;t work for no apparent reason.
+[207.93] Stephen: You press the button, and you think you&#x27;re going to upload firmware, and then you get like 3000 lines of confusing printout that mean nothing to you. Exactly. Exactly. You&#x27;re suddenly on Mr. Robot or something, and you wonder what&#x27;s going to happen.
 [220.93] Stephen: So yeah, there are there are still a couple of things that aren&#x27;t perfect. But yeah, so that that configurator part, that&#x27;s essentially the result of needing to compile the firmware targets, right, which is both a blessing and a curse.
 [234.93] Stephen: Up until now, it&#x27;s allowed for very rapid iteration, and people could make massive changes and add new features in. But going forward, I understand they&#x27;re actually going to be uploading the firmware and having something a bit more like what beta flight does with its unified targets, right?
-[250.93] Stephen: Yeah, it is already implemented in the release candidate. From what I know, it&#x27;s basically a unified target system, quite like beta flight has.
-[264.93] UNKNOWN: They just have a single firmware, and no options are similar or compiled into the firmware. So for example, what the firmware internally has to store is like, on which pins on the controller are the is the the RF chip located and stuff like that.
+[250.93] commanderguy3001: Yeah, it is already implemented in the release candidate. From what I know, it&#x27;s basically a unified target system, quite like beta flight has.
+[264.93] commanderguy3001: They just have a single firmware, and no options are similar or compiled into the firmware. So for example, what the firmware internally has to store is like, on which pins on the controller are the is the the RF chip located and stuff like that.
 [286.93] commanderguy3001: Something the user has never, never has to care about, but which is really important for the software itself. And stuff like that has always been compiled into the firmware directly and yeah, won&#x27;t be from now on, but is rather a runtime option.
 [307.93] commanderguy3001: So basically, think of it as a file where you have one line for every thing that you have to have to configure. So like, I don&#x27;t know, I, let me think of a good example.
-[324.93] commanderguy3001: So up until now, for example, you want to set a binding phrase that actually got built into firmware. Exactly. Right.
+[324.93] Stephen: So up until now, for example, you want to set a binding phrase that actually got built into firmware. Exactly. Right.
 [334.93] Stephen: So you&#x27;d want to build in things like, which pins are the RF chip connected, which pins is that is the you are that the MCU expects me to flash it on and things like this that are kind of the same for almost all targets, but you might want to allow provision for hey, this one&#x27;s got an RGB LED or
-[352.93] Stephen: exactly stuff like that RGB LEDs.
-[356.93] UNKNOWN: And then there&#x27;s the user stuff like, here&#x27;s my passphrase or here&#x27;s my telemetry ratio. So exactly.
-[363.93] UNKNOWN: That&#x27;s, I mean, telemetry ratio is still an option that&#x27;s sent by the by the transmitter, which is not based on the receiver. Right. But yeah.
+[352.93] commanderguy3001: exactly stuff like that RGB LEDs.
+[356.93] Stephen: And then there&#x27;s the user stuff like, here&#x27;s my passphrase or here&#x27;s my telemetry ratio. So exactly.
+[363.93] commanderguy3001: That&#x27;s, I mean, telemetry ratio is still an option that&#x27;s sent by the by the transmitter, which is not based on the receiver. Right. But yeah.
 [378.93] commanderguy3001: Bind phrase is the best example of the unified targets that you can just basically edit it right from the web UI on the receiver or transmitter.
-[390.93] UNKNOWN: So you just let it go into Wi-Fi mode or put in a Wi-Fi mode from the Louis script, as you would also for updating on water and whatnot.
+[390.93] commanderguy3001: So you just let it go into Wi-Fi mode or put in a Wi-Fi mode from the Louis script, as you would also for updating on water and whatnot.
 [398.93] commanderguy3001: And then you just connect to the web page and can change the password is there, which is quite useful and makes.
-[410.93] UNKNOWN: So just a little clip through. Sorry, go ahead. Finish that bit and I was going to do a little rewind on the Wi-Fi part.
+[410.93] Stephen: So just a little clip through. Sorry, go ahead. Finish that bit and I was going to do a little rewind on the Wi-Fi part.
 [417.93] commanderguy3001: Yeah, it makes like, I mean, there&#x27;s there&#x27;s also I was just about to say, making like sharing something way simpler. But well, that&#x27;s even simpler with the learning model or the the learning feature.
 [435.93] commanderguy3001: That&#x27;s also new in a large three three.
-[440.93] UNKNOWN: So they&#x27;ve done an actual pump to share, right? You can select something you want to share with someone. You can actually hit your transmitter module to theirs or something like that.
-[448.93] Stephen: That was some novel. Yeah, that that is a thing, unfortunately, only with the with the what is it?
-[459.93] UNKNOWN: Give me a second. It needs like an IMU in the TX, I guess. Yeah, exactly. And that&#x27;s that&#x27;s only by the same model.
+[440.93] Stephen: So they&#x27;ve done an actual pump to share, right? You can select something you want to share with someone. You can actually hit your transmitter module to theirs or something like that.
+[448.93] commanderguy3001: That was some novel. Yeah, that that is a thing, unfortunately, only with the with the what is it?
+[459.93] Stephen: Give me a second. It needs like an IMU in the TX, I guess. Yeah, exactly. And that&#x27;s that&#x27;s only by the same model.
 [470.93] commanderguy3001: That&#x27;s a very expensive one. The X is flying. X is flying. Yeah, right. Can&#x27;t remember the name sometimes.
 [478.93] Stephen: So if you&#x27;re lucky enough to have a really expensive transmitter, then you can show off by by bumping transmitters with other people who also bought the really expensive transmitter and they can basically borrow your model and they&#x27;ll get control of it for a flight.
-[494.93] UNKNOWN: So basically, we&#x27;re encouraging people to do dry humping with their expensive transmitters.
+[494.93] Curry: So basically, we&#x27;re encouraging people to do dry humping with their expensive transmitters.
 [500.93] Stephen: It&#x27;s the lexological progression from illuminated grinds, Curry. First, the groin LEDs, then the dry humping. That sounds fair. Yeah, makes sense.
 [509.93] Stephen: We&#x27;ll check it out. You mentioned Wi-Fi there. So I was just going to go on this brief kind of rewind through Wi-Fi. Originally, these things didn&#x27;t have Wi-Fi.
 [517.93] Stephen: They started out with the R9 module like Curry has, and people very quickly discovered that STM32 chips were flying up in price. So they got this little ESP chip and that was super cheap.
 [527.93] Stephen: And as a bonus, it had Wi-Fi. So people thought, oh, well, I guess we could just do a Wi-Fi upload and they made it do a little access point. You could do Wi-Fi on it.
 [536.93] Stephen: And then someone said, well, if we&#x27;re going to do that, I suppose when we do the PWM configuration, we can pop that on there.
-[546.93] UNKNOWN: And now it sounds like with V3, I hadn&#x27;t checked it out myself, but it includes the model ID for the transmitter. It&#x27;s had that on before.
+[546.93] Stephen: And now it sounds like with V3, I hadn&#x27;t checked it out myself, but it includes the model ID for the transmitter. It&#x27;s had that on before.
 [553.93] Stephen: And with V3, we&#x27;re getting a whole bunch of extra Wi-Fi features, not least the thing you just mentioned, which I&#x27;ve completely blanked on.
-[561.93] UNKNOWN: Yeah, I mean, a lot like the whole configuration thingy, except bindphrase usually, is something that the user doesn&#x27;t really has to care about because what is connected to what pin and stuff like that.
+[561.93] commanderguy3001: Yeah, I mean, a lot like the whole configuration thingy, except bindphrase usually, is something that the user doesn&#x27;t really has to care about because what is connected to what pin and stuff like that.
 [577.93] commanderguy3001: I mean, yeah, power users or users that like build their own receivers right now or whatever, they might care about it.
 [590.93] commanderguy3001: But every normal user won&#x27;t have to care about it.
-[594.93] UNKNOWN: And rumors I have heard with the unified targets, as they don&#x27;t have any compiled firmware options, you could technically do OTA updates by now.
-[616.37] UNKNOWN: So that means you could send it from the TX to the RX, right?
-[622.37] UNKNOWN: Yeah, or from RX to RX. I don&#x27;t exactly know yet how it would look. And I have only heard rumors so far, but from what I know, it should be a lot easier to do.
+[594.93] commanderguy3001: And rumors I have heard with the unified targets, as they don&#x27;t have any compiled firmware options, you could technically do OTA updates by now.
+[616.37] Stephen: So that means you could send it from the TX to the RX, right?
+[622.37] commanderguy3001: Yeah, or from RX to RX. I don&#x27;t exactly know yet how it would look. And I have only heard rumors so far, but from what I know, it should be a lot easier to do.
 [636.37] commanderguy3001: Because until now, you couldn&#x27;t necessarily move the firmware from one receiver to another without...
-[650.37] UNKNOWN: Because you had 20 different options for receivers, so you couldn&#x27;t possibly have all of those loaded onto your transmitter. There wasn&#x27;t enough space.
-[657.37] Stephen: Yeah, exactly. That&#x27;s part of the problem. And the other problem is you could take one.
+[650.37] Stephen: Because you had 20 different options for receivers, so you couldn&#x27;t possibly have all of those loaded onto your transmitter. There wasn&#x27;t enough space.
+[657.37] commanderguy3001: Yeah, exactly. That&#x27;s part of the problem. And the other problem is you could take one.
 [666.37] commanderguy3001: In theory, and flash it to all, but it wouldn&#x27;t be guaranteed to work because some receivers like, I don&#x27;t know, B2FPV has some and Maytek has the receivers with PA and LNA for better telemetry and better range.
 [687.37] commanderguy3001: Those need extra pins to work. And a lot of the receivers are basically the same and use the same layout and the same pins, etc. And internally also use the same targets, really.
-[706.37] UNKNOWN: But they just fudge it so that you can have the manufacturer&#x27;s name on so everyone&#x27;s happy.
-[711.37] UNKNOWN: Yeah, exactly. That&#x27;s basically what the configurator does in many cases.
-[719.37] UNKNOWN: Okay, so you&#x27;re basically putting all the core options into the firmware, and then there&#x27;s just going to be a bunch of little configuration files that say, oh yeah, this one&#x27;s got an LNA on it.
+[706.37] Stephen: But they just fudge it so that you can have the manufacturer&#x27;s name on so everyone&#x27;s happy.
+[711.37] commanderguy3001: Yeah, exactly. That&#x27;s basically what the configurator does in many cases.
+[719.37] Stephen: Okay, so you&#x27;re basically putting all the core options into the firmware, and then there&#x27;s just going to be a bunch of little configuration files that say, oh yeah, this one&#x27;s got an LNA on it.
 [732.22] Stephen: This one&#x27;s got an RGB on it. And then another configuration file that sits on top of that, which says...
-[738.22] Stephen: Yeah, you can think of it like configuration files. Yeah, it&#x27;s not really technically not really a file.
-[748.22] commanderguy3001: I think that might be going to a low level. But yeah, I know what you mean.
-[752.22] Stephen: Yeah, you can think of it like a file.
+[738.22] commanderguy3001: Yeah, you can think of it like configuration files. Yeah, it&#x27;s not really technically not really a file.
+[748.22] Stephen: I think that might be going to a low level. But yeah, I know what you mean.
+[752.22] commanderguy3001: Yeah, you can think of it like a file.
 [756.22] commanderguy3001: So there&#x27;s magic stuff.
-[758.22] Curry: Speaking of getting too low level, and maybe losing a few people there, we&#x27;ve got a question from Lurgy who says, so a question from a computer illiterate guy, what&#x27;s so great about ELRS to make it worth all that messing around to make it work?
-[772.22] Stephen: Well, I can give you my opinion first off before we get everybody else&#x27;s. From my point of view, the receivers are very cheap. You can have any receiver to any module, so you don&#x27;t have to buy one brand of anything.
+[758.22] Stephen: Speaking of getting too low level, and maybe losing a few people there, we&#x27;ve got a question from Lurgy who says, so a question from a computer illiterate guy, what&#x27;s so great about ELRS to make it worth all that messing around to make it work?
+[772.22] Curry: Well, I can give you my opinion first off before we get everybody else&#x27;s. From my point of view, the receivers are very cheap. You can have any receiver to any module, so you don&#x27;t have to buy one brand of anything.
 [789.17] Curry: And the range is good, and it&#x27;s very low latency if you want it to be. And what I keep saying, because people are saying, oh, why should I do this instead of R9, for example, because people still ask that question.
 [801.17] Curry: I say, well, how many people have asked that? More than one.
 [805.17] Curry: And I&#x27;m like, well, R9 hasn&#x27;t been touched in many years, and Express LRS is being developed all the time, and new features are coming, like what we&#x27;re talking about today. So that&#x27;s a good reason to stick around.
-[816.17] UNKNOWN: Yeah, I&#x27;d say versus Crossfire, you&#x27;ve got Crossfire at 150 hertz, and everyone knows it doesn&#x27;t really stay there for long. Express LRS can do 500 hertz, so it gives you like super hardcore race performance at the same sort of range that Crossfire 900 megahertz to give you.
+[816.17] Stephen: Yeah, I&#x27;d say versus Crossfire, you&#x27;ve got Crossfire at 150 hertz, and everyone knows it doesn&#x27;t really stay there for long. Express LRS can do 500 hertz, so it gives you like super hardcore race performance at the same sort of range that Crossfire 900 megahertz to give you.
 [833.17] Stephen: And Crossfire in the UK is about £30 a receiver. Express LRS I can get for about £11, so a third the price and about the same performance in range and much faster response points.
 [848.17] Stephen: Commander Guy?
-[850.17] UNKNOWN: Yeah, I think you named pretty much all the big advantages of Express LRS there.
+[850.17] commanderguy3001: Yeah, I think you named pretty much all the big advantages of Express LRS there.
 [860.17] commanderguy3001: Yeah, it&#x27;s really cheap. It&#x27;s actually not that hard to do.
 [867.17] commanderguy3001: Yeah, there are many options for different receivers and transmitters that basically all work together.
 [875.17] commanderguy3001: The only big advantage or the only big good thing that R9 has, you can flash it to Express LRS.
 [885.17] Stephen: Yes, I&#x27;ve already done that.
-[887.17] UNKNOWN: The Wi-Fi stuff is kind of funky as well. I&#x27;ve also been enjoying the Bluetooth, like being able to use the module as a Bluetooth joystick was a neat trick.
-[895.17] Stephen: Yeah, that sure is a nice thing. Only unfortunate about that is that sometimes it doesn&#x27;t seem to work with iPhones and it doesn&#x27;t always work with Android phones.
-[912.17] commanderguy3001: I did raise an issue. The Android thing wasn&#x27;t working. It&#x27;s never going to work with iPhones because iPhone won&#x27;t let you.
-[922.17] UNKNOWN: Yeah, iPhone is iPhone, so what do you expect?
-[926.17] UNKNOWN: Yeah, Android, Bluetooth is Bluetooth, so it&#x27;s already hard to find a joystick library.
-[941.17] UNKNOWN: I think there&#x27;s a single joystick library for Bluetooth out there for the ESP32.
+[887.17] Stephen: The Wi-Fi stuff is kind of funky as well. I&#x27;ve also been enjoying the Bluetooth, like being able to use the module as a Bluetooth joystick was a neat trick.
+[895.17] commanderguy3001: Yeah, that sure is a nice thing. Only unfortunate about that is that sometimes it doesn&#x27;t seem to work with iPhones and it doesn&#x27;t always work with Android phones.
+[912.17] Curry: I did raise an issue. The Android thing wasn&#x27;t working. It&#x27;s never going to work with iPhones because iPhone won&#x27;t let you.
+[922.17] commanderguy3001: Yeah, iPhone is iPhone, so what do you expect?
+[926.17] commanderguy3001: Yeah, Android, Bluetooth is Bluetooth, so it&#x27;s already hard to find a joystick library.
+[941.17] commanderguy3001: I think there&#x27;s a single joystick library for Bluetooth out there for the ESP32.
 [952.17] commanderguy3001: A single one that I know.
 [954.17] Stephen: I&#x27;ve improved it for a few years.
-[957.17] UNKNOWN: I&#x27;m not sure, but yeah, it can&#x27;t be that much.
-[964.17] UNKNOWN: It was a little bit iffy. It worked in most games, but what I got really great results with was after I put this little gizmo together, if I can just get rid of what I did.
+[957.17] commanderguy3001: I&#x27;m not sure, but yeah, it can&#x27;t be that much.
+[964.17] Stephen: It was a little bit iffy. It worked in most games, but what I got really great results with was after I put this little gizmo together, if I can just get rid of what I did.
 [975.17] Stephen: I had a DI with my Express LRS receiver sitting around because it had bad telemetry range. It just wasn&#x27;t really worth it for me.
 [983.17] Stephen: I wanted something that did good telemetry range, but hey, it&#x27;s still a receiver.
 [987.17] Stephen: It was a bit bigger than some of the happy model ones, so I thought, what can I use it for?
 [991.17] Stephen: And the answer came to me in this little box where I put it in there with one of these Raspberry Pi RP2040 devices with a USB-C plug.
 [1003.17] Stephen: And that&#x27;s now a USB joystick receiver, so I plug that into USB-C and it shows up as a joystick.
 [1010.17] Stephen: And then I turn on my radio and voila, I&#x27;ve got whatever radio I pick up is just appearing as a joystick.
-[1019.17] Stephen: I&#x27;ve got just a couple of questions coming. I&#x27;m just going to highlight on the screen here.
+[1019.17] Curry: I&#x27;ve got just a couple of questions coming. I&#x27;m just going to highlight on the screen here.
 [1024.17] Curry: So, Drone3Droid is saying, how is 2.4 GHz outperforming 900 MHz? Well, it doesn&#x27;t in range, but it can go much faster in speed.
 [1034.17] Curry: So, is 900... what, is it still max of...?
 [1037.17] Curry: Well, is it 100 Hz in RS?
-[1039.17] Curry: 200 Hz is the maximum for 900 MHz radio, I think. And with 2.4 GHz, yeah, we&#x27;re up to 1000 Hz now.
-[1051.17] UNKNOWN: So...
+[1039.17] commanderguy3001: 200 Hz is the maximum for 900 MHz radio, I think. And with 2.4 GHz, yeah, we&#x27;re up to 1000 Hz now.
+[1051.17] commanderguy3001: So...
 [1052.17] Curry: Yes. And you can fly 900 MHz on Express RS as well, so you&#x27;re not limited to 2.4.
-[1058.17] UNKNOWN: So, all other things being equal, 900 MHz is obviously a better choice because it&#x27;s going to go further, it&#x27;s going to punch through more objects.
-[1066.17] UNKNOWN: But, because the chief 900 MHz system is Crossfire, and Crossfire has very large bits of data.
+[1058.17] Stephen: So, all other things being equal, 900 MHz is obviously a better choice because it&#x27;s going to go further, it&#x27;s going to punch through more objects.
+[1066.17] Stephen: But, because the chief 900 MHz system is Crossfire, and Crossfire has very large bits of data.
 [1073.17] Stephen: When Crossfire sends its data, it&#x27;s like throwing this huge block of radio data out there all at once.
 [1079.17] Stephen: And that means there&#x27;s more chance of some of it getting lost, and what turns up at the other end can&#x27;t be read, it&#x27;s just useless.
-[1085.17] UNKNOWN: The Express RS is sending very small little chunks.
-[1089.17] UNKNOWN: And that means the likelihood of them getting through and arriving at the other end is larger, it&#x27;s less prone to interference.
+[1085.17] Stephen: The Express RS is sending very small little chunks.
+[1089.17] Stephen: And that means the likelihood of them getting through and arriving at the other end is larger, it&#x27;s less prone to interference.
 [1098.17] Stephen: It&#x27;s making better use of the available bandwidth.
 [1101.17] Stephen: So, whereas Crossfire might flake out at a certain LQ, I don&#x27;t fly Crossfire, I flew Tracer, and that would go down to maybe sort of 50, but below 50 it gets quite flaky.
 [1111.17] Stephen: People doing long range on Express RS are flying down to single digit LQ numbers before that actually drops out and loses connection.
 [1119.17] Stephen: So, it&#x27;s making much better use of the available link bandwidth.
 [1124.17] commanderguy3001: The other thing with 2.4 GHz versus 900 MHz is, even with 2.4 GHz at just 100 milliwatts of TX power, and 500 Hz you get, if with good conditions like 20 kilometers of range with 500 Hz, and go outperform that first, and then go talk about 900 MHz being better.
 [1152.17] Stephen: Yeah, a lot of people who fly Crossfire, they&#x27;re flying a Bando, and they&#x27;re probably never more than 200 meters from their quad, right?
-[1160.17] UNKNOWN: So, the absolute range isn&#x27;t a problem as much as kind of convenience in the ecosystem, and so long as you can meet a decent amount of range, that&#x27;s what matters.
-[1170.17] UNKNOWN: Yeah, and technically 900 MHz in terms of penetration and range is just better, that&#x27;s just physics, but the advantages are pretty negligible, I think.
+[1160.17] Stephen: So, the absolute range isn&#x27;t a problem as much as kind of convenience in the ecosystem, and so long as you can meet a decent amount of range, that&#x27;s what matters.
+[1170.17] commanderguy3001: Yeah, and technically 900 MHz in terms of penetration and range is just better, that&#x27;s just physics, but the advantages are pretty negligible, I think.
 [1190.17] Curry: And the other question we got there, and I think there&#x27;s discussion going on about this, is, is Mavlink working over ERS?
 [1198.17] Curry: Which is quite a specific question.
 [1201.17] Curry: No, it is not.
 [1203.17] Curry: And Willy, I suppose is the follow-up question for there, is anything being developed there, or was that not on the radar at the moment?
-[1210.17] UNKNOWN: Well, the devs have mentioned numerous times by now that they will not do Mavlink support for many reasons.
+[1210.17] commanderguy3001: Well, the devs have mentioned numerous times by now that they will not do Mavlink support for many reasons.
 [1222.17] commanderguy3001: I&#x27;d have to look them all up, but there are quite a few reasons not to do Mavlink, mostly because it would make Express LRS not express and not long range anymore.
-[1238.58] commanderguy3001: Which only leaves RS.
+[1238.58] Curry: Which only leaves RS.
 [1243.58] Curry: As I understand it, this is anecdotal evidence, I don&#x27;t use it myself, but my info was that although Crossfire does this, it does it in some weird way that isn&#x27;t right.
 [1258.58] Curry: This is very anecdotal from people that have tried doing it, and it&#x27;s all a bit weird.
 [1264.58] Curry: I&#x27;m going to say over-engineered protocol, there&#x27;s a lot to it, isn&#x27;t there? There&#x27;s much there.
 [1272.58] commanderguy3001: I&#x27;ve also heard about Mavlink being quite weird on Crossfire a couple times already, so I do believe that.
-[1286.58] UNKNOWN: I think it works on OpenHD, doesn&#x27;t it?
-[1289.58] UNKNOWN: Yeah, Mavlink&#x27;s very popular for OpenHD.
-[1293.58] UNKNOWN: Exactly how much?
-[1296.58] Stephen: I don&#x27;t know. You&#x27;ve got loads of chatty space to talk about.
-[1301.58] Curry: Mavlink&#x27;s less of a low-latency control protocol and more of a messaging protocol, really, isn&#x27;t it?
-[1307.58] Stephen: Yeah, I&#x27;d say so, yeah.
+[1286.58] Stephen: I think it works on OpenHD, doesn&#x27;t it?
+[1289.58] Curry: Yeah, Mavlink&#x27;s very popular for OpenHD.
+[1293.58] Stephen: Exactly how much?
+[1296.58] Curry: I don&#x27;t know. You&#x27;ve got loads of chatty space to talk about.
+[1301.58] Stephen: Mavlink&#x27;s less of a low-latency control protocol and more of a messaging protocol, really, isn&#x27;t it?
+[1307.58] commanderguy3001: Yeah, I&#x27;d say so, yeah.
 [1312.82] Curry: Yes, as far as I can tell, all it does is keep telling me Compass is crazy whenever I&#x27;ve tried to fly anything remotely to do with...
-[1320.82] UNKNOWN: I can&#x27;t even remember the name of the blaster.
+[1320.82] Curry: I can&#x27;t even remember the name of the blaster.
 [1323.82] Curry: What&#x27;s the flight controller? R2Pilot, it just says Compass is crazy, Mavlink message is coming in.
 [1328.82] Curry: And if you look at what the Mavlink message you are, you&#x27;re presented with what looks like an Excel spreadsheet, which you have to scroll down from about 50 pages to find the message you&#x27;re looking at.
 [1337.82] Curry: It reminds me of back in the old days in IBM working on SNA protocol and X25 and looking up all these messages in mainframe books and trying to work stuff out.
-[1346.82] Curry: PTSD, basically, or the IT equivalent thereof.
-[1350.82] UNKNOWN: Exactly.
-[1352.82] UNKNOWN: In particular, to get back to the original question with Mavlink real quick, I think there is a project out there somewhere that basically forked the Express LRS and made it Mavlink compatible.
+[1346.82] Stephen: PTSD, basically, or the IT equivalent thereof.
+[1350.82] Stephen: Exactly.
+[1352.82] commanderguy3001: In particular, to get back to the original question with Mavlink real quick, I think there is a project out there somewhere that basically forked the Express LRS and made it Mavlink compatible.
 [1368.82] commanderguy3001: It&#x27;s just, yeah, it&#x27;s not obviously not keeping up with the main project.
 [1373.82] commanderguy3001: So you could get Mavlink with something Express LRS-like similar thingy, but you obviously do lose some features.
-[1388.82] UNKNOWN: I think it&#x27;s called MLRS.
-[1390.82] commanderguy3001: Yeah, I remember seeing a fork. There was also a fork for someone who implemented full range servo stuff.
+[1388.82] commanderguy3001: I think it&#x27;s called MLRS.
+[1390.82] Stephen: Yeah, I remember seeing a fork. There was also a fork for someone who implemented full range servo stuff.
 [1399.26] Stephen: I know with amusement that in the V3 release, we&#x27;ve actually got a bunch of fixed wing modes for fixed wing people.
 [1409.74] Stephen: So you can, instead of doing four channels at up to 500 hertz, you can now do four channels at 1000 hertz with FLRC because someone wanted to see how fast they could run the FLRC modem.
 [1425.74] Stephen: You can also scale that back to a more sedate 333 hertz and get, I think, eight channels at last 333.
 [1435.74] Stephen: Or you can scale it back a bit further and get like, is it eight channels at 166 and another eight channels at 100?
-[1446.74] UNKNOWN: Or 60 and another 100, something like this. Anyway, it can do up to 16 channels with 10-bit precision on those channels.
-[1455.74] UNKNOWN: Yeah, we have all AOX channelers in full res now as an option.
-[1463.74] UNKNOWN: So if you want to twiddle your flaps and get them just so you find that 128 positions weren&#x27;t enough and you needed just to help with that.
+[1446.74] Stephen: Or 60 and another 100, something like this. Anyway, it can do up to 16 channels with 10-bit precision on those channels.
+[1455.74] commanderguy3001: Yeah, we have all AOX channelers in full res now as an option.
+[1463.74] Stephen: So if you want to twiddle your flaps and get them just so you find that 128 positions weren&#x27;t enough and you needed just to help with that.
 [1472.74] Stephen: And now you&#x27;re able to.
-[1474.74] UNKNOWN: To be fair, flaps are normally 0, 50, 100, but things like Pantil was a real popular one that fixed wing pilots were doing.
+[1474.74] Curry: To be fair, flaps are normally 0, 50, 100, but things like Pantil was a real popular one that fixed wing pilots were doing.
 [1482.74] Curry: I don&#x27;t like this jerkiness, especially if you like head tracking and stuff.
 [1485.74] Curry: No, it wants to be the robot.
 [1487.74] Curry: No, exactly.
 [1489.74] Curry: So I suppose we should ask, what are the big features that you want people to know about in version three?
 [1497.74] Curry: Because, of course, the release candidate is out and people can try it.
-[1501.74] Curry: I think the biggest ones are definitely FLRC and 1000 hertz.
+[1501.74] commanderguy3001: I think the biggest ones are definitely FLRC and 1000 hertz.
 [1511.74] commanderguy3001: Obviously, you mentioned it already, multiple or more than just the four standard full res channels.
 [1520.74] commanderguy3001: Digiview Diversity 8 is also a big one.
-[1527.98] UNKNOWN: If you&#x27;ve heard about that already.
-[1530.98] commanderguy3001: Is this the idea of the proper diversity receivers?
+[1527.98] commanderguy3001: If you&#x27;ve heard about that already.
+[1530.98] Curry: Is this the idea of the proper diversity receivers?
 [1535.98] Curry: So like independent, is it going to be like that&#x27;s slightly different to normal?
 [1539.98] Curry: I think of something else.
 [1541.98] Curry: Yeah, come on.
-[1543.98] UNKNOWN: It&#x27;s part of it.
-[1546.98] commanderguy3001: Specifically, that&#x27;s the real.
+[1543.98] commanderguy3001: It&#x27;s part of it.
+[1546.98] Stephen: Specifically, that&#x27;s the real.
 [1551.55] Stephen: So DVDA in general.
 [1554.55] commanderguy3001: So if I talk about DVDA, I mean, Digiview Diversity 8 is basically you use FLRC 1000 hertz mode in the background.
 [1569.55] commanderguy3001: And then you send every packet twice.
@@ -183,151 +183,151 @@ Platforms: YouTube (https://www.youtube.com/watch?v=dyotaoEfTN0); SoundCloud (ht
 [1588.55] commanderguy3001: But gives you, in some circumstances, much higher LQ and much more consistent inequality.
 [1597.55] commanderguy3001: Which definitely is a big thing you want to have, for example, for racing.
 [1603.55] commanderguy3001: You want the more inequality you can get, the better.
-[1609.55] UNKNOWN: And also, yeah, Digiview Diversity 8 also has the option to use multiple RF chips.
+[1609.55] commanderguy3001: And also, yeah, Digiview Diversity 8 also has the option to use multiple RF chips.
 [1622.12] commanderguy3001: From what I know.
-[1625.12] UNKNOWN: And basically, then if we send every packet twice, and we have two RF chips,
+[1625.12] commanderguy3001: And basically, then if we send every packet twice, and we have two RF chips,
 [1633.12] commanderguy3001: we try to use one for the first packet and the other one for the second packet to receive it.
 [1641.12] commanderguy3001: Which probably helps.
 [1647.12] commanderguy3001: I don&#x27;t think anyone really has fully tested that yet or put it to its limits.
-[1654.12] UNKNOWN: So this is all about keeping that rock-solid 100-link quality for all the racers.
+[1654.12] Stephen: So this is all about keeping that rock-solid 100-link quality for all the racers.
 [1659.12] Stephen: Exactly.
 [1660.12] Stephen: To think that things are going to slip slightly out of whack and feel funny if it drops below 100.
 [1665.12] Stephen: Yeah.
 [1666.12] Curry: So is there any possibility of the messages arriving out of order, if you&#x27;re sending things twice?
 [1674.12] Curry: Or is that not how RF stuff works?
-[1676.12] Curry: Basically, simple answer to that is no.
+[1676.12] commanderguy3001: Basically, simple answer to that is no.
 [1681.12] commanderguy3001: Would it be like bullets?
 [1683.12] commanderguy3001: The next answer is...
 [1684.12] commanderguy3001: How about fundamentally?
 [1685.12] commanderguy3001: Well, it&#x27;s basically like reflection with an analog video feed.
 [1695.85] commanderguy3001: There you see it quite often.
-[1699.85] UNKNOWN: But that&#x27;s just the RF part and that&#x27;s not really important because that&#x27;s a very negligible effect.
+[1699.85] commanderguy3001: But that&#x27;s just the RF part and that&#x27;s not really important because that&#x27;s a very negligible effect.
 [1710.85] commanderguy3001: So a simple answer to that is no.
-[1714.85] UNKNOWN: Unless you&#x27;re up for what it&#x27;s moving at relativistic speeds, in which case you&#x27;ve probably got other issues.
-[1719.85] UNKNOWN: Yeah.
-[1721.85] UNKNOWN: So is it still fair to say that Express LRS is mainly focused on speed?
+[1714.85] Stephen: Unless you&#x27;re up for what it&#x27;s moving at relativistic speeds, in which case you&#x27;ve probably got other issues.
+[1719.85] Curry: Yeah.
+[1721.85] Curry: So is it still fair to say that Express LRS is mainly focused on speed?
 [1729.85] Curry: If I&#x27;m right, it was developed about we need the ultimate link quality for our racing and we want that ultra-low latency.
 [1737.85] Curry: Is that what still pushes it forwards?
 [1742.61] commanderguy3001: I mean, well, the long range part we&#x27;ve pretty much perfectly achieved by now.
 [1748.61] commanderguy3001: So, I mean, let me give the calculator a spin for a second.
 [1755.61] commanderguy3001: If we go for full 1W output power.
 [1759.61] Stephen: Flash up the long range charts and see what the record&#x27;s currently at, because last time it was pretty ludicrous.
-[1766.61] Stephen: Because there&#x27;s always some guy that&#x27;s flying at like 10 milliwatts and is doing 50 kilometers, isn&#x27;t there?
-[1771.61] UNKNOWN: Yeah.
+[1766.61] Curry: Because there&#x27;s always some guy that&#x27;s flying at like 10 milliwatts and is doing 50 kilometers, isn&#x27;t there?
+[1771.61] Curry: Yeah.
 [1772.61] Curry: We have a couple of people actually.
 [1775.61] commanderguy3001: Wes is, I think, the current record holder for 10 milliwatts.
 [1780.61] commanderguy3001: At 10 milliwatts, 900 megahertz.
 [1783.61] commanderguy3001: I think 50 hertz is it?
 [1785.61] commanderguy3001: And he did 40 kilometers on that.
 [1788.61] commanderguy3001: Or was it 35?
-[1790.61] UNKNOWN: So yeah.
+[1790.61] commanderguy3001: So yeah.
 [1791.61] commanderguy3001: So I think that that&#x27;s so he didn&#x27;t fail safe at that distance.
-[1798.61] UNKNOWN: And I think he had to return because his battery was about to die.
-[1804.61] commanderguy3001: Was that one of the suboptimal landings where he had to go and fish it out of a lake or something?
+[1798.61] commanderguy3001: And I think he had to return because his battery was about to die.
+[1804.61] Stephen: Was that one of the suboptimal landings where he had to go and fish it out of a lake or something?
 [1812.61] commanderguy3001: I&#x27;m not sure.
 [1813.61] commanderguy3001: We have to take a look at the DVR.
-[1816.61] UNKNOWN: A couple of people have also done 10K on 10 milliwatt.
+[1816.61] Stephen: A couple of people have also done 10K on 10 milliwatt.
 [1821.61] Stephen: One person did 10K at 500 hertz on 10 milliwatt.
-[1825.61] UNKNOWN: So this is why I always say when people look at 1W transmitters, just don&#x27;t bother.
+[1825.61] Stephen: So this is why I always say when people look at 1W transmitters, just don&#x27;t bother.
 [1831.61] Stephen: I&#x27;ve got something that can do 500 milliwatt and I&#x27;ve never taken them beyond 250.
 [1836.61] Stephen: And when I had it on 250, I only needed that because it turned out I&#x27;d forgotten to screw the antenna on properly.
-[1842.61] UNKNOWN: Oh.
+[1842.61] Stephen: Oh.
 [1844.61] Stephen: Well, I was flying across the field of Mac and it turns out, oh yeah, I had like an RP SMA and an SMA and there was no pin.
 [1854.61] Curry: Oh, yeah.
-[1856.61] Curry: Yeah, wrong antenna.
+[1856.61] Stephen: Yeah, wrong antenna.
 [1858.61] Stephen: I took it off, put a pin in it.
 [1859.61] Stephen: That&#x27;s better.
-[1861.61] UNKNOWN: And now I only need 50 milliwatt.
-[1864.61] UNKNOWN: Almost too forgiving.
+[1861.61] Stephen: And now I only need 50 milliwatt.
+[1864.61] Stephen: Almost too forgiving.
 [1867.18] Stephen: Yeah, I mean, the hardware didn&#x27;t burn out.
-[1869.18] Stephen: Usually people are like, yeah, I want to do long range, 5, 10 kilometers, whatever.
+[1869.18] commanderguy3001: Usually people are like, yeah, I want to do long range, 5, 10 kilometers, whatever.
 [1876.18] commanderguy3001: And I want to get a 1W transmitter.
 [1879.18] commanderguy3001: What for?
-[1882.18] UNKNOWN: Like you&#x27;re planning to be on all sorts of submarines while you do this?
-[1885.18] Stephen: Yeah, that&#x27;s basically it.
+[1882.18] Stephen: Like you&#x27;re planning to be on all sorts of submarines while you do this?
+[1885.18] commanderguy3001: Yeah, that&#x27;s basically it.
 [1889.18] commanderguy3001: The thing is like, 1W does have its advantages.
 [1894.18] commanderguy3001: For example, if you&#x27;re, I don&#x27;t know, in a big concrete building or whatnot.
-[1899.18] commanderguy3001: And you&#x27;re coupling it with a video system at 5.8.
+[1899.18] Stephen: And you&#x27;re coupling it with a video system at 5.8.
 [1902.18] Stephen: You say, you know, 900 is better than 2.4.
 [1904.18] Stephen: Well, 2.4 is a lot better than 5.8.
 [1906.18] Stephen: So if your video system is on 5.8 and your video system is at 3W, you&#x27;re at 500 milliwatt on 2.4.
 [1914.18] Stephen: You&#x27;re probably doing all right.
 [1917.18] Stephen: How many people are flying with more than a 1.5W system on their video?
 [1922.18] Stephen: Not many.
-[1924.18] UNKNOWN: Phew.
+[1924.18] Curry: Phew.
 [1925.18] Curry: People do just become obsessed with this.
 [1926.18] Curry: I remember Beater FPV bringing out their 1W, and I was like, what&#x27;s this for?
-[1931.18] UNKNOWN: And they&#x27;re like, oh, people want it.
+[1931.18] Curry: And they&#x27;re like, oh, people want it.
 [1933.18] Curry: But then again, Beater FPV didn&#x27;t understand why people were flying at 500 Hertz.
 [1937.18] Curry: They&#x27;re like, why would you go above 150?
-[1940.18] UNKNOWN: I was like, it&#x27;s what the racers do.
-[1942.18] UNKNOWN: So yeah, fingers not quite on the pulse over there at that company, but, you know.
-[1948.18] UNKNOWN: Which is often the case because it&#x27;s like...
+[1940.18] Curry: I was like, it&#x27;s what the racers do.
+[1942.18] Curry: So yeah, fingers not quite on the pulse over there at that company, but, you know.
+[1948.18] Curry: Which is often the case because it&#x27;s like...
 [1950.18] Curry: I mean, one thing we keep hearing about is when manufacturers don&#x27;t talk to the devs in Express RS and just do their own thing.
 [1957.18] Curry: And it&#x27;s Express RS guys sort of catch the flack for it and have to kind of code around the problems that other manufacturers are doing
 [1967.18] Curry: because they haven&#x27;t given the hardware over and says, this is what we&#x27;ve done.
 [1971.18] Curry: Is it OK?
 [1972.18] Curry: Yeah.
 [1973.18] Curry: Which it often isn&#x27;t.
-[1975.18] UNKNOWN: This episode was recorded in front of a live online audience, downloaded and edited to make sense when it played audio only,
+[1975.18] Frank: This episode was recorded in front of a live online audience, downloaded and edited to make sense when it played audio only,
 [1982.18] Frank: censored to please the iTunes people, hosted on the internet, forwarded through to your podcast provider,
 [1986.18] Frank: downloaded, playing on your device, and is now playing in your ears.
 [1990.18] Frank: All thanks to our Patreons.
 [1992.18] Frank: Consider joining them and you&#x27;ll also get other online benefits.
 [1996.18] Frank: Find out more at patreon.com forward slash let&#x27;s drone out.
 [2001.18] commanderguy3001: Which V3 mode gives you good range but gives a good link for flying through Bandos, et cetera.
-[2009.18] UNKNOWN: I think it depends.
+[2009.18] commanderguy3001: I think it depends.
 [2011.18] commanderguy3001: You&#x27;ll have to try it out yourself.
 [2015.18] commanderguy3001: You can just start what I usually do when scouting out of places.
 [2022.18] commanderguy3001: I just stand or sit down wherever I&#x27;ll be for flying and then let a friend walk around with my quad everywhere where I&#x27;ll be flying
 [2033.18] commanderguy3001: and then see where I get a link and how good my link is.
 [2038.18] commanderguy3001: And then based on that, I decide on what I&#x27;m going to use, which has always worked out pretty well for me.
-[2047.18] commanderguy3001: What&#x27;s your go-to mode for general purpose flying? Do you stick it on 500 Hz and leave it at that or do you pick it up and down?
-[2055.18] Stephen: I personally, for freestyle, I just put it at 500 Hz and leave it at that because it works and it&#x27;s well good enough.
+[2047.18] Stephen: What&#x27;s your go-to mode for general purpose flying? Do you stick it on 500 Hz and leave it at that or do you pick it up and down?
+[2055.18] commanderguy3001: I personally, for freestyle, I just put it at 500 Hz and leave it at that because it works and it&#x27;s well good enough.
 [2068.18] commanderguy3001: Obviously, I have dynamic power enabled. That&#x27;s one thing I would definitely recommend you to do.
-[2076.18] UNKNOWN: Should we just pause and double-click on that a little bit? Dynamic power?
+[2076.18] Stephen: Should we just pause and double-click on that a little bit? Dynamic power?
 [2081.18] Stephen: So people might have seen that setting. What does it do exactly?
-[2085.18] UNKNOWN: Dynamic power basically, as the name says, it dynamically adjusts the transmitter output power based on link quality and RSSI.
+[2085.18] commanderguy3001: Dynamic power basically, as the name says, it dynamically adjusts the transmitter output power based on link quality and RSSI.
 [2096.18] commanderguy3001: So if either link quality or RSSI gets below a certain threshold, then it ups the power of the transmitter to get better link quality and better RSSI.
-[2114.18] UNKNOWN: The threshold is weird in the code. It&#x27;s a huge construct of not quite nicely written code and weird edge cases.
-[2135.18] UNKNOWN: This is good, right? Because the thing that kicks other projects in the butt tends to be that the weird edge cases are only discovered after it&#x27;s been released.
-[2148.95] UNKNOWN: Yeah, but in that case, it&#x27;s edge case. I think if you would actually think about how you really want to do it, you could crunch those 30 lines of code or something like that down to half of that and still have the exact same functionality.
-[2169.95] commanderguy3001: We don&#x27;t form your PR.
-[2172.95] UNKNOWN: Yeah, sure. Let me just pull up the code.
+[2114.18] commanderguy3001: The threshold is weird in the code. It&#x27;s a huge construct of not quite nicely written code and weird edge cases.
+[2135.18] Stephen: This is good, right? Because the thing that kicks other projects in the butt tends to be that the weird edge cases are only discovered after it&#x27;s been released.
+[2148.95] commanderguy3001: Yeah, but in that case, it&#x27;s edge case. I think if you would actually think about how you really want to do it, you could crunch those 30 lines of code or something like that down to half of that and still have the exact same functionality.
+[2169.95] Stephen: We don&#x27;t form your PR.
+[2172.95] commanderguy3001: Yeah, sure. Let me just pull up the code.
 [2179.95] Stephen: This brings us to something that another guy said, I think it&#x27;s Captain Bri, who freely admitted the code wasn&#x27;t great.
 [2186.95] Stephen: And that was one of the things that made it kind of difficult to interact with other projects.
 [2191.95] Stephen: There&#x27;s this large morass of changing code with lots of interdependencies, and that caused it to be pretty difficult to integrate with Betaflight, Betaflight, Betaflight, Betaflight, we don&#x27;t know.
 [2204.95] Stephen: Betaflight, we do know.
 [2206.95] Stephen: Betaflight, yeah. Okay.
 [2211.95] Curry: What language are we speaking and where are we from, Cole?
-[2215.95] UNKNOWN: Canadian. Canadian English.
-[2218.95] UNKNOWN: It sounded quite Australian there for a second.
-[2223.46] Stephen: Yeah, I have no idea what I was doing my voice for a second.
-[2228.46] UNKNOWN: Yeah, so it made it pretty difficult to integrate into Betaflight, which has caused some consternation with V3, right, that they&#x27;ve got to V3 and said, well, we&#x27;ve changed the way we structure the data when we send it over the air.
+[2215.95] Curry: Canadian. Canadian English.
+[2218.95] Stephen: It sounded quite Australian there for a second.
+[2223.46] Jack: Yeah, I have no idea what I was doing my voice for a second.
+[2228.46] Stephen: Yeah, so it made it pretty difficult to integrate into Betaflight, which has caused some consternation with V3, right, that they&#x27;ve got to V3 and said, well, we&#x27;ve changed the way we structure the data when we send it over the air.
 [2244.46] Stephen: We&#x27;ve changed a lot of the features.
-[2246.46] UNKNOWN: It&#x27;s a different code base now, but Betaflight 4.3 has released with version 2 for the FBI receiver.
+[2246.46] Stephen: It&#x27;s a different code base now, but Betaflight 4.3 has released with version 2 for the FBI receiver.
 [2256.46] Stephen: And now Express LRS is about to drop version 3 all of a sudden.
-[2261.46] UNKNOWN: Quite a while after V2 was released, but unfortunately very soon after Betaflight 4.3 was released.
+[2261.46] Stephen: Quite a while after V2 was released, but unfortunately very soon after Betaflight 4.3 was released.
 [2268.46] Stephen: And it&#x27;s got itself into a bit of a pickle because it&#x27;s kind of waiting some kind soul on the Betaflight side to take a huge amount of Express LRS changes and condense them down.
 [2281.46] Stephen: And there&#x27;s an awareness on the Express LRS side that all these fantastic new link modes like deja vu diversity are not going to feature in Betaflight because they would literally crucify the F411 processor and leave it with no cycles.
 [2297.46] Stephen: To do anything like run a pit loop, for example, which it kind of...
-[2301.46] UNKNOWN: Yeah, definitely not anytime soon, I&#x27;m sure about that.
+[2301.46] commanderguy3001: Yeah, definitely not anytime soon, I&#x27;m sure about that.
 [2306.46] commanderguy3001: Unless someone comes out with like an H7 SBI receiver or EIO, but I doubt that.
-[2315.46] UNKNOWN: Well, we have one right, there&#x27;s Hydra and everyone else is running F411s.
+[2315.46] Stephen: Well, we have one right, there&#x27;s Hydra and everyone else is running F411s.
 [2319.46] Stephen: So there&#x27;s one that can absolutely do it with cycles to spare and then there&#x27;s 45% of ports that are out in the market, which can&#x27;t.
 [2329.8] commanderguy3001: But yeah, you&#x27;re talking about an important port there.
 [2332.8] commanderguy3001: SBI receivers in general are a pretty... well, a mess, basically.
 [2340.8] commanderguy3001: You can&#x27;t put it any different, really.
 [2344.8] commanderguy3001: The problem is with SBI receivers, first, you&#x27;ve got to have a Betaflight release for every change that Express LRS makes through the OTA protocol.
-[2358.8] UNKNOWN: Because otherwise it can&#x27;t talk to the TX, right?
-[2361.8] UNKNOWN: Exactly.
+[2358.8] Stephen: Because otherwise it can&#x27;t talk to the TX, right?
+[2361.8] commanderguy3001: Exactly.
 [2365.8] commanderguy3001: You can think of it like a language barrier, basically.
 [2369.8] commanderguy3001: Every time we change the OTA protocol, we are basically speaking in a different language.
 [2376.8] commanderguy3001: And well, if you don&#x27;t learn that language, you can&#x27;t understand it.
-[2383.8] UNKNOWN: That&#x27;s a pretty nice analogy, I think.
+[2383.8] commanderguy3001: That&#x27;s a pretty nice analogy, I think.
 [2388.8] commanderguy3001: The problem was...
-[2389.8] commanderguy3001: The problem was misinterpret it and take it to inside.
-[2392.8] Stephen: Exactly, exactly.
+[2389.8] Stephen: The problem was misinterpret it and take it to inside.
+[2392.8] commanderguy3001: Exactly, exactly.
 [2394.8] commanderguy3001: And that does happen if you have a flight controller that&#x27;s on Betaflight 4.3 RC2 or earlier, I think it is, or if...
 [2407.8] commanderguy3001: So definitely on RC1.
 [2410.8] commanderguy3001: And I think 3 RC2, basically.
@@ -337,89 +337,89 @@ Platforms: YouTube (https://www.youtube.com/watch?v=dyotaoEfTN0); SoundCloud (ht
 [2436.8] Stephen: Yes.
 [2437.8] Stephen: To be reborn as EMU Flight once they&#x27;ve finished merging in all the PRs that make up Betaflight 4.3, maybe at some point in 2023, when Betaflight 4.5 will be released.
 [2449.8] Stephen: We&#x27;ll see.
-[2451.8] UNKNOWN: I doubt that 4.5 will be released in 2023.
+[2451.8] commanderguy3001: I doubt that 4.5 will be released in 2023.
 [2456.8] commanderguy3001: Six months?
-[2457.8] commanderguy3001: Six months, that&#x27;s what they&#x27;re saying.
-[2461.8] UNKNOWN: Scheduled schedule.
+[2457.8] Stephen: Six months, that&#x27;s what they&#x27;re saying.
+[2461.8] Stephen: Scheduled schedule.
 [2462.8] Curry: Yeah.
 [2463.8] Curry: 4.3 has been going for like two years, hasn&#x27;t it?
 [2465.8] Curry: Yeah, exactly.
-[2468.8] UNKNOWN: Detour into the weeds.
+[2468.8] Stephen: Detour into the weeds.
 [2470.8] Stephen: There&#x27;s been a lot of personal changes through the 4.3 release, I think.
 [2474.8] Stephen: And some people have come on board, others have left.
 [2477.8] Stephen: And yeah, I think the next release is going to be a hell of a lot quicker than 4.3 was.
 [2485.8] Stephen: They&#x27;re preparing the features to go in it right now, and there&#x27;s appetite to do it quickly.
 [2492.8] Stephen: We shall see.
-[2494.8] UNKNOWN: Well, where were we?
+[2494.8] commanderguy3001: Well, where were we?
 [2495.8] commanderguy3001: SBI receivers, right.
 [2499.8] commanderguy3001: The thing with SBI receivers is support there is depending on Betaflight.
 [2506.8] commanderguy3001: If Betaflight doesn&#x27;t update the code for basically interpreting Eloris packets, then yeah, it won&#x27;t work.
 [2519.8] commanderguy3001: And the dev who implemented it in the first place is only a single person, which basically everyone has.
-[2531.8] UNKNOWN: Was that Phobos?
-[2533.8] UNKNOWN: It might be, yeah.
+[2531.8] Stephen: Was that Phobos?
+[2533.8] Stephen: It might be, yeah.
 [2537.8] Stephen: So the idea there was the original incentive was to save on Bill of Materials, right?
 [2542.8] Stephen: That by simply attaching the SX-1280, which is the radiant.
-[2546.8] Stephen: And board space on AIs, which is a big thing you have to consider when bringing AIs.
-[2556.8] UNKNOWN: Yeah, you&#x27;re trying to get fit ESCs on there at the same time.
+[2546.8] commanderguy3001: And board space on AIs, which is a big thing you have to consider when bringing AIs.
+[2556.8] Stephen: Yeah, you&#x27;re trying to get fit ESCs on there at the same time.
 [2560.8] Stephen: But it means they lose out on cool things like there&#x27;s no Wi-Fi because there&#x27;s no ESP on there, which has the Wi-Fi on it.
 [2567.8] commanderguy3001: Yep.
-[2569.8] UNKNOWN: You do lose out on a couple interesting features.
+[2569.8] commanderguy3001: You do lose out on a couple interesting features.
 [2574.8] commanderguy3001: And obviously you lose out on Eloris V3 going forward, probably, likely.
-[2582.8] commanderguy3001: So is there no appetite from Betaflight to sort of always take the latest the next time they do a release?
+[2582.8] Curry: So is there no appetite from Betaflight to sort of always take the latest the next time they do a release?
 [2592.8] Curry: I don&#x27;t know.
-[2594.8] UNKNOWN: As I said, that one dev, yeah, Phobos, well, basically everyone depends on him and has to wait for him to decide if he wants to do it.
+[2594.8] commanderguy3001: As I said, that one dev, yeah, Phobos, well, basically everyone depends on him and has to wait for him to decide if he wants to do it.
 [2607.8] commanderguy3001: I mean, someone else could pick it up, basically, theoretically, but I doubt anyone will because, yeah, it would be a huge amount of work to do.
-[2619.8] UNKNOWN: And honestly, if the community and the manufacturers could shift to simply attaching via a UART, they would gain access to these Wi-Fi features, which are possibly useful.
+[2619.8] Stephen: And honestly, if the community and the manufacturers could shift to simply attaching via a UART, they would gain access to these Wi-Fi features, which are possibly useful.
 [2633.4] Stephen: And with V3, we&#x27;ve got another really useful Wi-Fi feature that&#x27;s relevant to Betaflight, right?
-[2639.4] UNKNOWN: Yeah, right. We have a Betaflight configuration via Wi-Fi now.
-[2648.4] UNKNOWN: That means no USB.
-[2650.4] UNKNOWN: Awesome idea for everybody that&#x27;s used the sort of things like, is it the Speedy B? They did the adapters, didn&#x27;t they?
+[2639.4] commanderguy3001: Yeah, right. We have a Betaflight configuration via Wi-Fi now.
+[2648.4] Curry: That means no USB.
+[2650.4] Curry: Awesome idea for everybody that&#x27;s used the sort of things like, is it the Speedy B? They did the adapters, didn&#x27;t they?
 [2657.4] Curry: Yeah, Speedy B.
 [2658.4] Curry: Yeah, basically make it on your phone, but without silly adapters.
 [2662.4] Curry: Yeah, just for your receiver.
 [2664.4] commanderguy3001: Just your standard Express wireless receiver.
 [2667.4] commanderguy3001: That&#x27;s also one big disadvantage of PPU receivers or STM32-based receivers.
 [2675.4] commanderguy3001: They don&#x27;t support Wi-Fi and obviously lose out or miss out on those features, which is quite unfortunate, but at least no one makes them anymore from what I know.
-[2687.4] commanderguy3001: So it&#x27;s just the R9 hardware, really.
-[2691.4] UNKNOWN: Yeah, really.
-[2693.4] UNKNOWN: Don&#x27;t worry about that.
+[2687.4] Stephen: So it&#x27;s just the R9 hardware, really.
+[2691.4] Stephen: Yeah, really.
+[2693.4] Curry: Don&#x27;t worry about that.
 [2695.4] Curry: That&#x27;s going to go away and die eventually.
-[2697.4] UNKNOWN: People stop messaging me to ask why they should bother converting, please.
+[2697.4] Curry: People stop messaging me to ask why they should bother converting, please.
 [2704.4] Stephen: So I tried this and it was surprisingly easy.
 [2707.4] Stephen: I flashed my radio and receiver to version 3 and I connected them, switched on the radio, switched on the quad, and I went into the lower script and said,
-[2720.4] UNKNOWN: Wi-Fi, turn on RX Wi-Fi, and then I opened Betaflight Configurator, the build where this is included, and it just appears in the dropdown like you would next to the USB port.
+[2720.4] Stephen: Wi-Fi, turn on RX Wi-Fi, and then I opened Betaflight Configurator, the build where this is included, and it just appears in the dropdown like you would next to the USB port.
 [2731.4] Stephen: You click dropdown and all of a sudden it&#x27;s detected that there&#x27;s a Wi-Fi connected to Betaflight instance there and you go, oh, yeah, that address, and there you are.
 [2743.4] Stephen: It just works.
 [2745.4] Stephen: It&#x27;s magic.
-[2747.4] UNKNOWN: For all the people out there thinking that they can do everything via Wi-Fi, unfortunately, I have to say not everything works over Wi-Fi.
+[2747.4] commanderguy3001: For all the people out there thinking that they can do everything via Wi-Fi, unfortunately, I have to say not everything works over Wi-Fi.
 [2760.4] commanderguy3001: For example, you cannot do or use the standard CLI via Wi-Fi, and obviously you cannot update Betaflight via Wi-Fi.
 [2773.4] Stephen: Those are your RX channels either.
 [2776.4] Stephen: So if you&#x27;re trying to see your mapping to make sure your channels are mapped, that&#x27;s not going to work because it turns off the radio.
-[2786.06] UNKNOWN: So, yeah, it&#x27;s kind of a shame that the things that would really benefit this are the tiny little whoops where you can never get a USB cable in without those awful 90-degree adapters that just bend and break because they&#x27;ve got SPI, and that would be really cool just to be able to connect easily, wouldn&#x27;t it?
-[2804.06] UNKNOWN: Yeah, I mean, from to my knowledge, there are a couple of UART-based AIOs out there that actually have the ESP8285 built-in and basically have a full express LRS receiver.
-[2826.06] UNKNOWN: Rabbit Ambulance&#x27;s favorite GHEMCU, of course.
+[2786.06] Curry: So, yeah, it&#x27;s kind of a shame that the things that would really benefit this are the tiny little whoops where you can never get a USB cable in without those awful 90-degree adapters that just bend and break because they&#x27;ve got SPI, and that would be really cool just to be able to connect easily, wouldn&#x27;t it?
+[2804.06] commanderguy3001: Yeah, I mean, from to my knowledge, there are a couple of UART-based AIOs out there that actually have the ESP8285 built-in and basically have a full express LRS receiver.
+[2826.06] Stephen: Rabbit Ambulance&#x27;s favorite GHEMCU, of course.
 [2830.06] Stephen: The GF405S is a 1-2S board with UART connected.
 [2837.06] Stephen: And there were a phase of these before SPI was bigged up as being this amazing feature for pilots that would save hardware vendors 20 cents, which was, of course, amazing for pilots.
-[2849.06] UNKNOWN: Yeah, there were a rash of boards from B to FPV and others that were connected via UART, but unfortunately, they were super simple.
-[2858.06] UNKNOWN: Yeah, and I actually hope that we&#x27;ll see those come back at some point because they are just superior for many things.
+[2849.06] Stephen: Yeah, there were a rash of boards from B to FPV and others that were connected via UART, but unfortunately, they were super simple.
+[2858.06] commanderguy3001: Yeah, and I actually hope that we&#x27;ll see those come back at some point because they are just superior for many things.
 [2874.76] commanderguy3001: SPI-based receivers were good while version 2, LRS version 2, was in, basically.
 [2883.76] commanderguy3001: But as soon as version 3 is out of the RC phase now, yeah.
-[2892.0] UNKNOWN: It&#x27;s a ticking clock. Expect some updates, and you&#x27;ll probably be able to continue running 500 Hz mode on them, but they&#x27;re not going to get the fancy modes.
+[2892.0] Stephen: It&#x27;s a ticking clock. Expect some updates, and you&#x27;ll probably be able to continue running 500 Hz mode on them, but they&#x27;re not going to get the fancy modes.
 [2900.0] Stephen: And like we said, trying to run 1,000 Hz updates on an F411 is going to be a problem.
 [2906.0] commanderguy3001: That&#x27;s an entirely different problem, yeah.
 [2912.18] Curry: It&#x27;s okay. If you fly anything like me, you can&#x27;t tell the difference between 150 and 500.
 [2917.18] Curry: So I don&#x27;t think I&#x27;m going to be able to tell 1,000 from 500 somewhere.
 [2921.18] Curry: It&#x27;s just like, yeah, my fun moves. It does a wiggle. That&#x27;s good enough.
-[2926.18] UNKNOWN: Just talking to young teenagers with Ninja-like reflexes, they&#x27;re the market for that.
+[2926.18] Stephen: Just talking to young teenagers with Ninja-like reflexes, they&#x27;re the market for that.
 [2932.18] Curry: It&#x27;s all in their imagination. They can&#x27;t tell. Give me a blind test. I want to see it.
 [2937.18] Stephen: Oh, no, we did get, was it Limon and Mr. Nice? They did a test a while ago, and they guessed it right eight out of ten times.
 [2946.18] Stephen: But then Stinger Swarm and Bardwell did it, and they were no better than 50-50.
 [2951.18] Stephen: So basically, old guys who don&#x27;t race can&#x27;t tell the difference. If you&#x27;re a racer, maybe you can.
-[2958.18] UNKNOWN: Old guy doesn&#x27;t race. You&#x27;re looking at him. I&#x27;m the target market for a slope.
-[2964.18] UNKNOWN: We know how long it takes to do a snap roll on the sticks. We&#x27;re not looking at has the quad finished rotating.
+[2958.18] Curry: Old guy doesn&#x27;t race. You&#x27;re looking at him. I&#x27;m the target market for a slope.
+[2964.18] Stephen: We know how long it takes to do a snap roll on the sticks. We&#x27;re not looking at has the quad finished rotating.
 [2971.18] Stephen: It&#x27;s just muscle memory snap roll, isn&#x27;t it? That&#x27;s nothing more.
-[2974.18] UNKNOWN: Yeah, I need a new fork called Retired at LRS. I think that would be my source speed.
-[2981.18] UNKNOWN: So the question I was asking before we came on board, and I don&#x27;t know if Command Guys have been able to research it since,
+[2974.18] Curry: Yeah, I need a new fork called Retired at LRS. I think that would be my source speed.
+[2981.18] Curry: So the question I was asking before we came on board, and I don&#x27;t know if Command Guys have been able to research it since,
 [2988.18] Curry: is that we&#x27;ve had these, this is going back to the fixed-wing people with old types of aircraft.
 [2995.18] Curry: For fixed-wing people, the fact you&#x27;ve got all these full-range channel means if you&#x27;re using iNav, you can just put the receiver into iNav.
 [3002.18] Curry: You&#x27;ve got all these full-range channels, you&#x27;re golden.
@@ -429,9 +429,9 @@ Platforms: YouTube (https://www.youtube.com/watch?v=dyotaoEfTN0); SoundCloud (ht
 [3026.18] Curry: And I was asking, are they going to have receivers with more channels?
 [3032.18] Curry: And Command Guy wasn&#x27;t sure if there were enough pins on the chips to actually do this.
 [3037.18] Curry: I don&#x27;t know if you had an answer about that.
-[3039.18] Curry: More channels, definitely yes. I just don&#x27;t know how many exactly.
+[3039.18] commanderguy3001: More channels, definitely yes. I just don&#x27;t know how many exactly.
 [3047.18] commanderguy3001: I&#x27;ve not yet been able to count through all of it, but I&#x27;m pretty sure there will be quite a lot more channels.
-[3057.18] UNKNOWN: So even if you get to like eight, that covers most people when they&#x27;re getting a bit fancy with their gliders,
+[3057.18] Curry: So even if you get to like eight, that covers most people when they&#x27;re getting a bit fancy with their gliders,
 [3064.18] Curry: and they want like crow breaking and flaperons and stuff like that, that can happen in the future, which is nice.
 [3073.18] commanderguy3001: So to give some credit, some more credit to Matek for a second here,
 [3079.18] commanderguy3001: I think the easiest option right now for people who want to do fixed wings and really need those eight or whatever channels,
@@ -443,101 +443,101 @@ Platforms: YouTube (https://www.youtube.com/watch?v=dyotaoEfTN0); SoundCloud (ht
 [3130.18] Curry: But Eagle Tree went out of business, so they haven&#x27;t come around to the idea of CRSF.
 [3136.18] Curry: So you can do S bus, but at the moment I&#x27;ve got, who remembers the FreeSky LR9?
 [3142.18] Curry: I&#x27;ve got one of those receivers in it, and I&#x27;ve always thinking I&#x27;d like to replace that because then I can go past that six kilometer threshold where it ran out of RSSI.
-[3151.18] Curry: Yeah, so Matek do a ready made one called a Vario receiver, which is a seven channel, but they also do breakout boards up to 10 channel,
+[3151.18] Stephen: Yeah, so Matek do a ready made one called a Vario receiver, which is a seven channel, but they also do breakout boards up to 10 channel,
 [3162.18] Stephen: and that just takes a CRSF signal and breaks it out onto pins.
-[3168.18] UNKNOWN: Yeah, and I think until many features start actually producing more than just the standard five or Matek seven channel PWM output receiver,
+[3168.18] commanderguy3001: Yeah, and I think until many features start actually producing more than just the standard five or Matek seven channel PWM output receiver,
 [3180.18] commanderguy3001: I think that&#x27;s actually the best option to just get a standard express alerts receiver and then get the crossfire or CRSF to PWM converter
-[3192.18] UNKNOWN: and use that to have all those juicy channels.
+[3192.18] commanderguy3001: and use that to have all those juicy channels.
 [3198.18] commanderguy3001: Nice.
-[3200.18] commanderguy3001: Yeah, and then you also get nice things like it includes a current meter and includes a GPS reader.
+[3200.18] Stephen: Yeah, and then you also get nice things like it includes a current meter and includes a GPS reader.
 [3207.18] Stephen: I think the fancy one has that as well.
 [3209.18] Stephen: So you can see the voltage, the current and GPS location without needing a flood controller.
-[3214.18] Stephen: Yeah, they are definitely a lot of neat features.
-[3218.18] commanderguy3001: Okie dokie.
+[3214.18] commanderguy3001: Yeah, they are definitely a lot of neat features.
+[3218.18] Stephen: Okie dokie.
 [3220.18] Stephen: So I feel like we&#x27;ve covered quite a few of the features there.
 [3224.18] Stephen: I was going to talk a bit more about the community because I feel like where you&#x27;ve added a huge amount of value.
 [3230.18] Stephen: And I should also mention maybe your partner in crime and the ever present deadbite as well, who has basically kept it ticking.
-[3240.18] UNKNOWN: He doesn&#x27;t sleep.
+[3240.18] Stephen: He doesn&#x27;t sleep.
 [3242.18] Stephen: He just answers questions.
 [3244.18] Stephen: I do wonder if he&#x27;s a robot.
 [3245.18] Stephen: If he&#x27;s not a robot, then he&#x27;s taken some monastic vow to help express LRS. It&#x27;s incredible.
-[3251.18] UNKNOWN: Well, the big problem is that deadbite actually does sleep from time to time.
+[3251.18] commanderguy3001: Well, the big problem is that deadbite actually does sleep from time to time.
 [3259.18] commanderguy3001: And that there are some dead times at some points when I&#x27;m not there and deadbite also isn&#x27;t there.
 [3268.18] commanderguy3001: And yeah, when support requests pile up in the support channel.
 [3272.18] commanderguy3001: We used to call it an ITF follow the sun support model.
 [3279.18] Stephen: So we need someone who&#x27;s awake when you two are asleep, right?
-[3283.18] Stephen: Some guy in England and then some guy, I don&#x27;t know, let&#x27;s go to US and then Australia and there&#x27;s always going to be someone there.
+[3283.18] Curry: Some guy in England and then some guy, I don&#x27;t know, let&#x27;s go to US and then Australia and there&#x27;s always going to be someone there.
 [3290.18] Curry: And you&#x27;re Europe? Does that mean that we need America?
 [3295.18] commanderguy3001: Yes, something like that.
 [3298.18] commanderguy3001: So deadbite usually goes to sleep like three hours ago from now.
 [3306.18] commanderguy3001: And I go to sleep about two hours.
-[3311.87] commanderguy3001: I suppose the question is, are you getting a commonality in the requests where you can actually say, oh, we need to fix this?
+[3311.87] Curry: I suppose the question is, are you getting a commonality in the requests where you can actually say, oh, we need to fix this?
 [3319.87] Curry: Or are you just getting the typical and I get this in YouTube all the time where someone says, I tried it and it didn&#x27;t work.
-[3327.87] UNKNOWN: It&#x27;s like that&#x27;s that&#x27;s the amount of detail you&#x27;re given. It&#x27;s like, well, let me let me fix that for you because I know exactly what you mean.
+[3327.87] Curry: It&#x27;s like that&#x27;s that&#x27;s the amount of detail you&#x27;re given. It&#x27;s like, well, let me let me fix that for you because I know exactly what you mean.
 [3333.87] Curry: Of course, you don&#x27;t because people are terrible at diagnosing their own problems.
 [3337.87] Curry: So I&#x27;m guessing if you get a commonality of like, oh, everybody&#x27;s stuck on this, you fix it as opposed to like, don&#x27;t work, pressed button.
-[3346.87] UNKNOWN: That was bad.
+[3346.87] Curry: That was bad.
 [3347.87] Curry: That was bad.
-[3350.87] UNKNOWN: Well, both both happen. So sometimes or often there are people that so that just ask if someone is around to help with what do you need help and what&#x27;s your problem is always like the first question that comes to mind with those people.
+[3350.87] commanderguy3001: Well, both both happen. So sometimes or often there are people that so that just ask if someone is around to help with what do you need help and what&#x27;s your problem is always like the first question that comes to mind with those people.
 [3373.87] commanderguy3001: And then there are the people that go right to the help and support channel and say, hey, I have this problem.
 [3382.87] commanderguy3001: This doesn&#x27;t work. Configurator tells me to do this. So here it is. And I need help.
 [3388.87] commanderguy3001: And the the second type of fuel is definitely easier to work with usually.
 [3396.87] commanderguy3001: But yeah, it&#x27;s a challenge.
-[3399.87] UNKNOWN: It&#x27;s a challenge. But the worst is people who come in support channels and go, can I get any support here? Yes, you are in the help and support channel.
-[3408.87] UNKNOWN: Yeah, fortunately, we don&#x27;t have too many of those usually.
-[3413.87] UNKNOWN: Basically, it&#x27;s not fun to work in support. Well, it&#x27;s OK. Depending on your user base, when I used to work in support professionally, the users that called me had to pass an exam to say they were up to this sort of specification.
+[3399.87] Stephen: It&#x27;s a challenge. But the worst is people who come in support channels and go, can I get any support here? Yes, you are in the help and support channel.
+[3408.87] commanderguy3001: Yeah, fortunately, we don&#x27;t have too many of those usually.
+[3413.87] Curry: Basically, it&#x27;s not fun to work in support. Well, it&#x27;s OK. Depending on your user base, when I used to work in support professionally, the users that called me had to pass an exam to say they were up to this sort of specification.
 [3425.18] Curry: So you could talk in the same language when you&#x27;ve got all in sundry, just asking any question you like. I can imagine that can get interesting.
-[3435.18] UNKNOWN: So I mean, I do have to admit, sport is quite hard and sometimes a little annoying to do, but it is really rewarding.
+[3435.18] commanderguy3001: So I mean, I do have to admit, sport is quite hard and sometimes a little annoying to do, but it is really rewarding.
 [3449.18] commanderguy3001: And it it does have its own like. I don&#x27;t know how to describe it.
 [3460.18] Curry: I suppose you have a sense of educating people and set them off cleverer than they were before.
-[3468.18] Curry: Yeah, that&#x27;s part of it. I don&#x27;t I don&#x27;t quite. I&#x27;m missing the vocabulary to describe that.
+[3468.18] commanderguy3001: Yeah, that&#x27;s part of it. I don&#x27;t I don&#x27;t quite. I&#x27;m missing the vocabulary to describe that.
 [3479.5] commanderguy3001: But yeah, if if if you if you know how to do sport and if you if you like know all the common problems and things like that, then it&#x27;s actually not that hard to support people because you&#x27;re just coming up with a library.
-[3503.55] Stephen: Well, yeah, you you kind of have like a list in the mind of things that usually are problems for or issue or the the roots of some problem.
+[3503.55] commanderguy3001: Well, yeah, you you kind of have like a list in the mind of things that usually are problems for or issue or the the roots of some problem.
 [3518.55] commanderguy3001: And then you just check it if that&#x27;s if all the the.
 [3526.55] Curry: Like I hear typing. Are you searching for the translation? Yeah. Yeah.
 [3532.55] Stephen: He supported you a lot of pre-written fixes and you&#x27;re just like, oh, yeah, these are the top 10 things that people break. You have an answer ready to go for each.
-[3542.55] UNKNOWN: Yeah, kind of. So a couple of things that like one of one of those sentences I pretty much perfected, I think, by now is when people send an image of the red arrow box in the configurator, which tells them to send the arrow log above.
+[3542.55] commanderguy3001: Yeah, kind of. So a couple of things that like one of one of those sentences I pretty much perfected, I think, by now is when people send an image of the red arrow box in the configurator, which tells them to send the arrow log above.
 [3565.55] commanderguy3001: And, yeah, well, obviously, people didn&#x27;t read it, which is quite funny. But, yeah, I do pretty much have a single two line sentence by now that I can just write every time.
 [3584.55] commanderguy3001: And it&#x27;s impossible to use a keyboard now. So it&#x27;s just a key combo you do. Please, please. Yeah, no, I&#x27;m I&#x27;m working on too many different computers for that to be of any usefulness.
-[3602.55] commanderguy3001: So and working from phone sometimes too. So, yeah, but it is interesting because I think manufacturers can we laugh at beta FBV, but they&#x27;re probably one of the easier manufacturers to get an answer from.
+[3602.55] Stephen: So and working from phone sometimes too. So, yeah, but it is interesting because I think manufacturers can we laugh at beta FBV, but they&#x27;re probably one of the easier manufacturers to get an answer from.
 [3620.55] Stephen: We&#x27;re looking at a lot of manufacturers here whose supply Express LRS hardware and most of them would never respond to questions. So I think it is people like you in the support channel that pretty much allow the project to work without you.
 [3635.55] Stephen: It would peter out because people would never be able to get into it to get started.
-[3639.55] UNKNOWN: I mean, what&#x27;s what&#x27;s quite interesting is to see and think about how many people are needing support versus just like doing doing a little bit of math and like interpolating it up and thinking about how many people actually did get it to work without needing help.
+[3639.55] commanderguy3001: I mean, what&#x27;s what&#x27;s quite interesting is to see and think about how many people are needing support versus just like doing doing a little bit of math and like interpolating it up and thinking about how many people actually did get it to work without needing help.
 [3669.55] commanderguy3001: Which is quite interesting if you think about it because, yeah, there are quite a lot of people that need help and support every day.
 [3679.55] commanderguy3001: But way more people do for way more people. It just works and they read the rocks or I don&#x27;t know, whatever.
 [3689.55] commanderguy3001: And for them it just works and they never come to the discord. And yeah, I think we&#x27;ve got at least 10 different manufacturers.
 [3699.55] Stephen: Listed on the website and I think they&#x27;ve forgotten to mention a few like I flight isn&#x27;t here. So there&#x27;s something like, well, and yeah, the one I bought there either. So there&#x27;s at least like 12, 13 different manufacturers alone.
-[3713.55] Stephen: I mean, the best the best thing we can look it up is to open the configurator and then look through all the device categories that they are.
-[3727.8] UNKNOWN: And I can see X is flying beta FPV. Obviously, DIY. That&#x27;s how the project has started.
+[3713.55] commanderguy3001: I mean, the best the best thing we can look it up is to open the configurator and then look through all the device categories that they are.
+[3727.8] commanderguy3001: And I can see X is flying beta FPV. Obviously, DIY. That&#x27;s how the project has started.
 [3735.8] commanderguy3001: Flyboo, FrSky, Happy Model, HGLRC, HighYounger, iFlight, ImmersionRC, JHEMQ, Jumper, Matek, Nememno, NeutronRC, Quadcopters, Radiomaster, Seawee, Skystars and Vantec.
-[3753.8] UNKNOWN: Yeah, so that&#x27;s like 20... Vantec. Vantec. The NMI brand.
+[3753.8] Stephen: Yeah, so that&#x27;s like 20... Vantec. Vantec. The NMI brand.
 [3764.4] Curry: Yeah, for saying Nememno so well, I always stumble over that word. It&#x27;s very hard to say. Oh, really? Okay.
-[3770.4] UNKNOWN: I recorded videos of myself saying Nememno about 10 times. There&#x27;s a lot of editing involved in that video. Okay.
-[3778.4] UNKNOWN: Yeah, I don&#x27;t really have a problem with it somehow. I don&#x27;t know. All right, don&#x27;t load it over, mate. Geez, man.
-[3785.4] Curry: I&#x27;m just using FOSC. I am making these things, but just under a slightly different name. I think that&#x27;s priceless.
+[3770.4] Curry: I recorded videos of myself saying Nememno about 10 times. There&#x27;s a lot of editing involved in that video. Okay.
+[3778.4] Curry: Yeah, I don&#x27;t really have a problem with it somehow. I don&#x27;t know. All right, don&#x27;t load it over, mate. Geez, man.
+[3785.4] Stephen: I&#x27;m just using FOSC. I am making these things, but just under a slightly different name. I think that&#x27;s priceless.
 [3792.4] commanderguy3001: Yeah. All in all, it&#x27;s like, I don&#x27;t know, 20 or so different manufacturers producing 2.4 gigahertz and some also 900 megahertz gears.
 [3804.4] commanderguy3001: So yeah, there&#x27;s a lot of possible hardware you can use.
-[3810.4] UNKNOWN: And yeah, there might be a couple of people, maybe what, 50 people coming to help and support a day?
-[3817.4] UNKNOWN: Oh, I can check.
-[3820.4] UNKNOWN: Oh, okay. Probably. Collect unique messages by user ID.
-[3826.4] UNKNOWN: Yeah, something like that. I don&#x27;t know.
-[3829.4] commanderguy3001: Yeah, but then considering the number of models that are on sale, it&#x27;s a fairly impressive statistic. And yeah, congratulations on helping the project out.
-[3838.4] UNKNOWN: Yeah, thanks.
+[3810.4] Stephen: And yeah, there might be a couple of people, maybe what, 50 people coming to help and support a day?
+[3817.4] commanderguy3001: Oh, I can check.
+[3820.4] Stephen: Oh, okay. Probably. Collect unique messages by user ID.
+[3826.4] commanderguy3001: Yeah, something like that. I don&#x27;t know.
+[3829.4] Stephen: Yeah, but then considering the number of models that are on sale, it&#x27;s a fairly impressive statistic. And yeah, congratulations on helping the project out.
+[3838.4] Curry: Yeah, thanks.
 [3840.4] Curry: Well done for Steven for managing to get live SQL queries on voice somehow into this podcast.
-[3847.4] UNKNOWN: Yeah, make you happy there.
+[3847.4] Curry: Yeah, make you happy there.
 [3849.4] Curry: It&#x27;s getting geekier by the second, isn&#x27;t it?
-[3852.4] Curry: Yeah, unfortunately, it cannot use SQL queries and the Discord search menu. That doesn&#x27;t quite work.
-[3861.4] UNKNOWN: Well, we&#x27;ve been we&#x27;ve been going for over an hour. So shall we wrap it up there, guys? Have we covered everything we wanted to cover?
-[3868.4] UNKNOWN: Yeah, I think that&#x27;s pretty much everything, at least from the outside.
-[3872.4] UNKNOWN: Yeah, well, I&#x27;m gonna I&#x27;m just trying to get the time to actually instill it on something so I can give it a go and see what happens.
+[3852.4] commanderguy3001: Yeah, unfortunately, it cannot use SQL queries and the Discord search menu. That doesn&#x27;t quite work.
+[3861.4] Curry: Well, we&#x27;ve been we&#x27;ve been going for over an hour. So shall we wrap it up there, guys? Have we covered everything we wanted to cover?
+[3868.4] commanderguy3001: Yeah, I think that&#x27;s pretty much everything, at least from the outside.
+[3872.4] Curry: Yeah, well, I&#x27;m gonna I&#x27;m just trying to get the time to actually instill it on something so I can give it a go and see what happens.
 [3878.4] Curry: Thanks so much to our patrons who support us and keep us going. And I suppose we should say thank you to Frank, who found some of the money that&#x27;s missing from somewhere and transferred it.
 [3890.4] Curry: So we&#x27;re good. We&#x27;re good. We can keep going this week. Hooray. Hooray for us.
 [3894.4] Curry: Anyway, this week, we&#x27;ve been joined by special thanks to Commander Guy 3001, who told us some excellent stuff about ERS and what&#x27;s coming.
 [3906.4] Curry: And everyone should go and check it out. If you haven&#x27;t already, give it a go because it&#x27;s cheap and it&#x27;s good. Down here.
 [3912.4] Curry: We&#x27;ve got Steven. Thank you. Put this together.
 [3916.4] Curry: Thank you. Goodbye.
-[3918.4] UNKNOWN: Canadian bacon over the side here, Cole.
-[3921.4] UNKNOWN: See ya.
+[3918.4] Curry: Canadian bacon over the side here, Cole.
+[3921.4] Curry: See ya.
 [3923.4] Curry: And I&#x27;ve been everybody&#x27;s favorite. Carrie Kitten. And you&#x27;ve been watching Let&#x27;s Try It Out. So see you next week all. Thanks for joining.
 [3931.4] UNKNOWN: Telemetry lost.
 </pre></body></html>
